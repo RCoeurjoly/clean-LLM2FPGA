@@ -1,6 +1,0 @@
-{
-  "PATH": "/nix/store/9img7k11vlgg1i0nl7lqqljjzvjvvgbp-prjxray-bdbc665852b82f589ff775a8f6498542dbec0a07/bin:/nix/store/m3vslizk95knrl7jgq00r2bkhpwrvr3q-python3-3.12.7-env/bin:/usr/bin:/bin",
-  "PYTHONPATH": "/nix/store/7j2rkf62s1dngm6bgd2aw1f9a3dkq11y-python3.12-fasm/lib/python3.12/site-packages:/nix/store/m3vslizk95knrl7jgq00r2bkhpwrvr3q-python3-3.12.7-env/lib/python3.12/site-packages:/nix/store/9img7k11vlgg1i0nl7lqqljjzvjvvgbp-prjxray-bdbc665852b82f589ff775a8f6498542dbec0a07/usr/share/python3",
-  "PRJXRAY_PYTHON_DIR": "/nix/store/9img7k11vlgg1i0nl7lqqljjzvjvvgbp-prjxray-bdbc665852b82f589ff775a8f6498542dbec0a07/usr/share/python3",
-  "PRJXRAY_DB_DIR": "/nix/store/0jk4x541qr111wgcj44gcbdd5f7s1qrj-task6-bram-prjxray-db-lioi3-compat/kintex7"
-}

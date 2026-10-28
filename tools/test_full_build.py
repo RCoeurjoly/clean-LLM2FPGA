@@ -1,50 +1,81 @@
-"""Checks that a full build cannot silently fall back to archived intermediates."""
+"""Exercise the build runner without invoking model compilation or routing."""
+import contextlib
+import io
+import hashlib
+import json
+from pathlib import Path
+import sys
 import tempfile
 import unittest
-from pathlib import Path
-from tools.full_build import check_generated_inputs
+from unittest.mock import patch
+
+import build
 
 
-class GeneratedInputsTest(unittest.TestCase):
-    def test_missing_generated_input_is_rejected(self):
-        with tempfile.TemporaryDirectory() as directory:
+class StageTest(unittest.TestCase):
+    def test_missing_input_stops_before_command(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / 'out'
+            spec = {'argv': [sys.executable, '-c', 'raise AssertionError()'],
+                    'inputs': [str(Path(tmp) / 'missing')], 'expected_outputs': {}}
             with self.assertRaises(FileNotFoundError):
-                check_generated_inputs(Path(directory), {'controller/loops.mlir': '0' * 64})
+                build.run_stage(spec, out)
+            self.assertFalse(out.exists())
 
-    def test_changed_generated_input_is_rejected(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            (root / 'loops.mlir').write_text('changed computation')
+    def test_stage_consumes_declared_input_and_records_output(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / 'input'
+            source.write_text('generated model')
+            out = root / 'out'
+            spec = {'argv': [sys.executable, '-c',
+                            'from pathlib import Path; import sys; '
+                            'Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())',
+                            str(source), '@OUTPUT@/result'],
+                    'inputs': [str(source)], 'expected_outputs': {'result': '0' * 64},
+                    'timeout_seconds': 10, 'environment': {}}
+            build.run_stage(spec, out)
+            report = json.loads((out / 'build-result.json').read_text())
+            self.assertEqual((out / 'result').read_text(), 'generated model')
+            self.assertEqual(report['outputs']['result'], hashlib.sha256(source.read_bytes()).hexdigest())
+            self.assertEqual(report['historical_matches']['result'], False)
+
+    def test_missing_output_fails(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            spec = {'argv': [sys.executable, '-c', 'pass'], 'inputs': [],
+                    'expected_outputs': {'missing': '0' * 64}, 'timeout_seconds': 10}
+            with self.assertRaises(FileNotFoundError):
+                build.run_stage(spec, Path(tmp) / 'out')
+
+    def test_failed_command_reports_compiler_log(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            spec = {'argv': [sys.executable, '-c',
+                            'from pathlib import Path; '
+                            'Path("native.log").write_text("native router diagnostic"); '
+                            'print("compiler diagnostic", flush=True); raise SystemExit(1)'],
+                    'inputs': [], 'expected_outputs': {}, 'timeout_seconds': 10}
+            diagnostic = io.StringIO()
+            with contextlib.redirect_stderr(diagnostic):
+                with self.assertRaises(build.subprocess.CalledProcessError):
+                    build.run_stage(spec, Path(tmp) / 'out')
+            self.assertIn('compiler diagnostic', diagnostic.getvalue())
+            self.assertIn('native router diagnostic', diagnostic.getvalue())
+
+    def test_wrong_fasm_fails_before_conversion(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            route = Path(tmp) / 'route.fasm'
+            route.write_text('wrong route')
+            with patch('build.subprocess.run') as run:
+                with self.assertRaises(ValueError):
+                    build.assemble({'fasm': str(route)}, Path(tmp) / 'out')
+                run.assert_not_called()
+
+    def test_wrong_final_bitstream_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            bit = Path(tmp) / 'model.bit'
+            bit.write_bytes(b'incorrect bitstream')
             with self.assertRaises(ValueError):
-                check_generated_inputs(root, {'loops.mlir': '0' * 64})
-
-    def test_matching_generated_input_is_accepted(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            (root / 'loops.mlir').write_bytes(b'')
-            check_generated_inputs(root, {'loops.mlir':
-                'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'})
-
-class RuntimeInputsTest(unittest.TestCase):
-    def test_missing_runtime_path_is_rejected_before_build(self):
-        from tools.full_build import require_runtime_paths
-        with tempfile.TemporaryDirectory() as directory:
-            with self.assertRaises(FileNotFoundError):
-                require_runtime_paths([str(Path(directory) / 'missing-runtime')])
-
-    def test_flow_uses_only_prior_generated_outputs(self):
-        import json
-        root = Path(__file__).resolve().parents[1]
-        flow = json.loads((root / 'pipeline/flow.json').read_text())
-        paths = json.loads((root / 'toolchain/paths.json').read_text())
-        self.assertNotIn(flow['core_store_path'], paths)
-        produced = {'core/' + name: identity for name, identity
-                    in flow['core']['expected_outputs'].items()}
-        for stage in flow['stages']:
-            for name, identity in stage['generated_inputs'].items():
-                self.assertEqual(produced[name], identity, name)
-            produced.update({'tree/' + stage['directory'] + '/' + name: identity
-                             for name, identity in stage['expected_outputs'].items()})
+                build.require_hash(bit, build.EXPECTED)
 
 
 if __name__ == '__main__':

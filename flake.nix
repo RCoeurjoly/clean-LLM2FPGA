@@ -32,37 +32,17 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, flake-utils, ... }:
+  outputs = inputs@{ nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
       let
         pkgs = import nixpkgs { inherit system; };
         tools = import ./nix/selected-toolchain.nix { inherit inputs system; };
-        flow = builtins.fromJSON (builtins.readFile ./pipeline/flow.json);
-        nativeToolDirs = pkgs.lib.unique (map builtins.dirOf
-          (builtins.filter (path: pkgs.lib.hasPrefix "/nix/store/" path
-            && !(pkgs.lib.hasSuffix "/python3" path))
-            (map (stage: builtins.head stage.argv) flow.stages)));
-        bitstreamEnvironment = builtins.fromJSON (builtins.readFile ./pipeline/bitstream.json);
-        # Run outside a Nix build sandbox: the recorded host compiler and
-        # bubblewrap namespace are required by the exact-image flow.
-        runner = name: command: pkgs.writeShellApplication {
-          inherit name;
-          runtimeInputs = [ pkgs.python312 pkgs.bubblewrap pkgs.nix pkgs.gzip ];
-          text = command;
-        };
-        reproduce = runner "reproduce-bitstream" ''
-          exec python3 ${self}/build.py all --output "$PWD/build/full" "$@"
-        '';
-        verify = runner "verify-bitstream-build" ''
-          exec python3 ${self}/build.py verify "$@"
-        '';
-        importTools = runner "import-bitstream-toolchain" ''
-          gzip -dc ${self}/toolchain/closure.nar.gz | nix-store --import
-        '';
+        pipeline = import ./nix/bitstream.nix { inherit pkgs tools; };
         driverSource = pkgs.lib.fileset.toSource {
           root = ./.;
           fileset = pkgs.lib.fileset.unions [
-            ./build.py ./tools ./pipeline/flow.json ./toolchain/paths.json
+            ./build.py ./tools/bit_header.py ./tools/verify_decoded_frames.py
+            ./tools/test_full_build.py ./tools/test_bit_header.py
           ];
         };
         driverTests = pkgs.runCommand "bitstream-build-driver-tests" {
@@ -74,26 +54,12 @@
           touch "$out"
         '';
       in {
-        packages = tools // {
-          default = reproduce;
-          reproduce-bitstream = reproduce;
-        };
-        apps = {
-          default = { type = "app"; program = "${reproduce}/bin/reproduce-bitstream"; meta.description = "Reproduce the selected bitstream"; };
-          build = { type = "app"; program = "${reproduce}/bin/reproduce-bitstream"; meta.description = "Reproduce the selected bitstream"; };
-          verify = { type = "app"; program = "${verify}/bin/verify-bitstream-build"; meta.description = "Verify pinned build inputs"; };
-          import-toolchain = { type = "app"; program = "${importTools}/bin/import-bitstream-toolchain"; meta.description = "Import the recorded toolchain archive"; };
+        packages = tools // pipeline // {
+          default = pipeline.bitstream;
         };
         checks.build-driver = driverTests;
         devShells.default = pkgs.mkShell {
-          packages = [ pkgs.python312 pkgs.bubblewrap pkgs.nix pkgs.gzip ];
-          shellHook = ''
-            export PRJXRAY_DB_DIR=${pkgs.lib.escapeShellArg bitstreamEnvironment.PRJXRAY_DB_DIR}
-            export PRJXRAY_PYTHON_DIR=${pkgs.lib.escapeShellArg bitstreamEnvironment.PRJXRAY_PYTHON_DIR}
-            export PYTHONPATH=${pkgs.lib.escapeShellArg bitstreamEnvironment.PYTHONPATH}
-            export LLM2FPGA_PYTORCH_PYTHON=${pkgs.lib.escapeShellArg (builtins.head flow.core.argv)}
-            export PATH=${pkgs.lib.escapeShellArg (builtins.concatStringsSep ":" nativeToolDirs)}:${pkgs.lib.escapeShellArg bitstreamEnvironment.PATH}:"$PATH"
-          '';
+          packages = [ pkgs.python312 pkgs.nix ];
         };
       });
 }

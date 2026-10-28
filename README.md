@@ -1,114 +1,95 @@
 # clean-LLM2FPGA
 
-Minimal build inputs for the selected TinyStories-1M PyTorch-to-bitstream flow
-on XC7K480Tffg1156-1 (YPCB-00338-1P1, intended core clock 2.5 MHz).
+Minimal source build of the selected TinyStories-1M PyTorch-to-bitstream flow
+for XC7K480Tffg1156-1 (YPCB-00338-1P1, intended core clock 2.5 MHz).
 
-Required final SHA-256:
+## Build
+
+On x86_64 Linux with Nix:
+
+```sh
+nix build .#bitstream -L
+# Equivalent default:
+# nix build -L
+```
+
+Nix builds the pinned compiler/tool dependencies and model inputs, captures the
+model with PyTorch, compiles its sixteen context specializations and controller,
+then runs the 31 selected native stages through RTL synthesis, placement,
+routing and bitstream assembly. The two Yosys plugins use a Nix-provided C++
+compiler. No toolchain import, host GCC, old checkout, or archived build outputs
+are required. Each stage is a separate derivation so completed stages can be
+reused after a later failure.
+
+The result is `result/model.bit`. A successful build **requires** this SHA-256:
 
 ```
 13c0159a9cc94be2c457afdbaa25e65832f095779bf6925df002e2a443599f00
 ```
 
-The full rebuild is **prepared but not yet verified end to end**. Its execution
-was deferred by request. Short checks are recorded in `verification/`.
-
-## Build later
-
-Use x86_64 Linux and Nix. The restored flake uses the selected build's original
-locked inputs and tool/model recipes. The exact-image flow also requires the
-matching host GCC 13 compiler/headers in `toolchain/host-files.json`.
+Check it independently:
 
 ```sh
-# Once, if the recorded tools and model inputs are absent:
-nix run .#import-toolchain
-
-nix run .#verify
-nix develop
-python3 build.py list-stages
-
-# Full reproduction, when ready for the long run:
-nix run .#build -- --output "$PWD/build/full"
+echo '13c0159a9cc94be2c457afdbaa25e65832f095779bf6925df002e2a443599f00  result/model.bit' | sha256sum --check
 ```
 
-`nix run .#build` launches the complete hash-checked flow in a writable output
-directory. It runs outside Nix's build sandbox because the recorded host compiler
-and bubblewrap namespace are required. `nix build` installs that launcher; it
-does not start routing.
+The build also checks the original routed FASM hash and independently decodes
+the final bitstream to compare its configuration frames. `result/result.json`
+contains the acceptance receipt; `result/SHA256SUMS` contains the final hash.
+No command programs hardware.
 
-The original source recipes are available as explicit packages, including
+**The new source-built Nix pipeline has not yet been verified end to end.**
+That long run was deferred by request. The original routing alone took about
+10 hours 40 minutes; this flow allows 12 hours for routing. Building uncached
+LLVM/CIRCT and other compiler dependencies adds substantial time and disk use.
+The hash checks reject a differing image; the existence of the build recipe
+does not prove it will reproduce until the full build succeeds.
+
+## Short checks
+
+```sh
+nix flake check --no-build  # Evaluate packages without compiling them
+nix flake check            # Build/run the lightweight driver tests
+nix build .#mux-plugin .#clock-plugin -L  # Compile the Yosys plugins
+```
+
+`nix develop` provides Python and Nix for editing and testing the build driver.
+Individual source tool/model packages remain exposed by the flake, including
 `graph-torch-opt`, `graph-calyx-opt`, `graph-calyx-backend`, `graph-yosys`,
 `graph-core-1m-stable-scratch`, `nextpnr-xilinx`, `nextpnr-xilinx-chipdb`,
-`prjxray`, `prjxray-db`, `model-snapshot` and `model-package`. Their required
-install-check sources are retained under `source/toolchain/`. Rebuilding these
-packages does not silently replace the executable versions recorded in
-`pipeline/flow.json`; exact reproduction uses the authenticated archive.
-
-For short checks without a model or route build:
-
-```sh
-nix flake check --no-build
-nix build .#checks.x86_64-linux.build-driver
-```
-
-The direct Python commands remain available after importing the archive:
-
-```sh
-python3 build.py verify
-python3 build.py all --output build/full
-```
-
-The output directory must be new. Logs and hash receipts stay beneath it,
-including on failure. The final image is `build/full/bitstream/model.bit`.
-The original routing run took about 10 hours 40 minutes; routing is allowed
-12 hours. No command programs hardware.
-
-`all` captures the model in PyTorch, compiles its sixteen context
-specializations and controller, then executes the selected 31 native stages:
-MLIR/Calyx optimization and memory binding, RTL emission, Yosys mapping,
-clock/MUX lowering, packing, placement and routing. It finally assembles and
-decodes the bitstream. A missing or changed generated input stops the build;
-the final SHA-256 must match the value above.
-
-The build exposes fresh outputs at their original virtual paths so compiler
-locations and native commands do not change. The old checkout and cached
-compiled core are unavailable inside that namespace. Only pinned runtime
-store paths are mounted. Archived compiler intermediates, routed FASM and
-reference bitstreams are not build inputs or shipped in this tree.
+`prjxray`, `prjxray-db`, `model-snapshot`, and `model-package`.
 
 ## Manual review order
 
-1. `source/upstream/compiler/frontend/`: exact historical input loader,
-   fixed-point PyTorch model and graph capture source.
+1. `source/upstream/compiler/frontend/`: input loader, fixed-point PyTorch model,
+   and graph capture.
 2. `source/upstream/compiler/build_core.py`, `generation_driver.py`, and
-   `pipeline.py`: context compilation, controller and pass ordering.
-3. `pipeline/flow.json`: selected commands, tool identities, generated-input
-   dependencies and expected output hashes, in execution order.
-4. `snapshot/`: only selected FPGA RTL, XDC, memory configuration and native
-   helpers. Long paths are retained because the recorded commands use them.
-5. `tools/full_build.py` and `build.py`: orchestration, isolation and acceptance.
-   `tools/bit_header.py` fixes only the Xilinx container date/time to
-   `2026/10/28 10:02:51`; configuration words are independently decoded and
-   compared by `tools/verify_decoded_frames.py`.
+   `pipeline.py`: context compilation, controller, and compiler pass ordering.
+3. `nix/selected-toolchain.nix`, `source/toolchain/nix/`, and `flake.lock`:
+   pinned source recipes, compiler patches, and their required build tests.
+4. `pipeline/flow.json`: original commands, dependency order, and reference
+   output hashes. `snapshot/` contains the static RTL, constraints, memory
+   configuration, and native helper scripts those commands need.
+5. `nix/bitstream.nix`: maps recorded paths to declared Nix dependencies and
+   creates the stage derivations. `build.py` executes a stage and enforces final
+   image acceptance.
 
-`source/toolchain/` retains native compiler sources and patches for review.
-The exact-image pipeline runs the pinned executables supplied in the Nix archive;
-the flake exposes their source recipes separately. `pipeline/files.json` authenticates the retained
-source/configuration/archive files. `pipeline/origin.json` identifies their
-origin. Historical experiments, admission drivers, reports and cached compilation outputs
-have been removed. The retained tool build tests are inputs to the restored Nix
-recipes.
+New Nix store paths and compiler build IDs can change intermediate file hashes.
+Each stage records actual hashes and comparisons with the historical hashes in
+its `build-result.json`; intermediate matches are diagnostic. Required generated
+inputs and outputs must exist. The original FASM and final bitstream hashes are
+mandatory. `tools/bit_header.py` fixes only the Xilinx header date/time to
+`2026/10/28 10:02:51`; configuration words are independently checked by
+`tools/verify_decoded_frames.py`.
 
-For an isolated assembly check of an already generated route:
-
-```sh
-python3 build.py bitstream --fasm /path/to/route.fasm --output build/assembly
-python3 -m unittest tools.test_full_build tools.test_bit_header
-```
+`pipeline/files.json` records the retained source/configuration hashes.
+`pipeline/origin.json` identifies their origin. Historical experiments,
+admission drivers, binary toolchain archives, and cached model/route outputs
+are not build inputs.
 
 ## Hardware status
 
-This reproduces the image from a failing hardware experiment. Routing finished,
+The original image came from a failing hardware experiment. Routing finished,
 but a post-route clock-topology check failed. SRAM programming reported DONE;
-JTAG reset failed and inference never started. The direct flow preserves the
-actual native routing command and checks image identity; it does not claim
-working hardware or turn the failed topology check into a pass.
+JTAG reset failed and inference never started. Matching the original image
+establishes byte identity, not working hardware.
