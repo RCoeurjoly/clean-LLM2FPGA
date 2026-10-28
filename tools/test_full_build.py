@@ -78,5 +78,18 @@ class StageTest(unittest.TestCase):
                 build.require_hash(bit, build.EXPECTED)
 
 
+class PortabilityTest(unittest.TestCase):
+    def test_build_inputs_have_no_machine_specific_paths(self):
+        import re
+        root = Path(__file__).resolve().parents[1]
+        files = [root / 'flake.nix', root / 'pipeline/flow.json']
+        files += list((root / 'nix').glob('*.nix'))
+        files += list((root / 'source/toolchain/tests').glob('*.py'))
+        for path in files:
+            with self.subTest(path=str(path.relative_to(root))):
+                self.assertIsNone(re.search(r'/nix/store/[a-z0-9]{32}-|/home/roland/|/usr/bin/(?!env)',
+                                            path.read_text()))
+
+
 if __name__ == '__main__':
     unittest.main()

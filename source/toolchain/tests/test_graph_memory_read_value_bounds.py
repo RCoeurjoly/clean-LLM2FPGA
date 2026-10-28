@@ -69,7 +69,8 @@ class NativeReadBoundsTests(unittest.TestCase):
         source = source.replace('(%done: i1 {done})', '(%done: i1 {done}, %out: i8)')
         source = source.replace('calyx.wires {', 'calyx.wires { calyx.assign %out = %m.read_data : i8')
         source = source.replace('calyx.assign %m.addr0 = %addr', 'calyx.assign %m.addr0 = %index')
-        iverilog = shutil.which('iverilog') or '/nix/store/smablxy777s8dd47vcm36qzhl1npjw7m-iverilog-12.0/bin/iverilog'
+        iverilog = shutil.which('iverilog')
+        self.assertIsNotNone(iverilog, 'iverilog must be supplied by the Nix build')
         vvp = str(Path(iverilog).with_name('vvp'))
         for signed, image in ((True, b'01\nff\n07\n'), (False, b'01\n0f\n07\n')):
             with self.subTest(signed=signed), tempfile.TemporaryDirectory() as directory:

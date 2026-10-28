@@ -2,7 +2,7 @@
 import os, re, subprocess, unittest
 import test_graph_sequential_scratch as scratch_tests
 
-TOOL='/nix/store/mmx06q8pffc0dswcv4wkwrzrl39mf171-llm2fpga-typed-torch-driver-0.1.0/bin/llm2fpga-torch-opt'
+TOOL='llm2fpga-torch-opt'
 SOURCE='''module {
 func.func @main() -> i64 {
  %zero = arith.constant 0 : index

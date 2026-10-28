@@ -8,7 +8,7 @@ for XC7K480Tffg1156-1 (YPCB-00338-1P1, intended core clock 2.5 MHz).
 On x86_64 Linux with Nix:
 
 ```sh
-nix build .#bitstream -L
+nix build .#bitstream -L --option sandbox true
 # Equivalent default:
 # nix build -L
 ```
@@ -45,6 +45,19 @@ LLVM/CIRCT and other compiler dependencies adds substantial time and disk use.
 The hash checks reject a differing image; the existence of the build recipe
 does not prove it will reproduce until the full build succeeds.
 
+## Portability checklist
+
+- Supported platform: **x86_64 Linux**; ARM64 is not currently a flake target.
+- All toolchains, interpreters, model inputs, libraries, and native stages are
+  declared Nix dependencies, with upstream revisions/hashes pinned.
+- The build uses symbolic input references, not fixed store hashes, host GCC,
+  user checkout paths, or manually imported binaries.
+- Build with sandboxing enabled as above. Downloading uncached pinned inputs
+  requires network access; ordinary compilation stages run without it.
+- The build enforces the original FASM and bitstream hashes. Full reproduction
+  and a separate clean-machine run have not yet passed; portability is a build
+  requirement, not an already established result.
+
 ## Short checks
 
 ```sh
@@ -67,10 +80,11 @@ Individual source tool/model packages remain exposed by the flake, including
    `pipeline.py`: context compilation, controller, and compiler pass ordering.
 3. `nix/selected-toolchain.nix`, `source/toolchain/nix/`, and `flake.lock`:
    pinned source recipes, compiler patches, and their required build tests.
-4. `pipeline/flow.json`: original commands, dependency order, and reference
+4. `pipeline/flow.json`: selected commands with symbolic tool/input references,
+   dependency order, and reference
    output hashes. `snapshot/` contains the static RTL, constraints, memory
    configuration, and native helper scripts those commands need.
-5. `nix/bitstream.nix`: maps recorded paths to declared Nix dependencies and
+5. `nix/bitstream.nix`: resolves symbolic references to declared Nix dependencies and
    creates the stage derivations. `build.py` executes a stage and enforces final
    image acceptance.
 

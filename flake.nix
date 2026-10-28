@@ -43,6 +43,7 @@
           fileset = pkgs.lib.fileset.unions [
             ./build.py ./tools/bit_header.py ./tools/verify_decoded_frames.py
             ./tools/test_full_build.py ./tools/test_bit_header.py
+            ./flake.nix ./nix ./pipeline/flow.json ./source/toolchain/tests
           ];
         };
         driverTests = pkgs.runCommand "bitstream-build-driver-tests" {

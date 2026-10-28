@@ -11,17 +11,17 @@ let
   };
   snapshot = builtins.path { path = ../snapshot; name = "fpga-inputs"; };
   core = tools.graph-core-1m-stable-scratch;
-  # Old paths identify commands in the recorded flow, never store dependencies.
+  # Symbolic references resolve only to declared Nix dependencies.
   toolPaths = {
-    "/nix/store/597n2w1fmpslnd0iqzgln8fk9x4s0gdr-python3-3.11.14-env" = pkgs.python311;
-    "/nix/store/xdzybdpp29qkji1szwlsz0mcqyidk2lh-llm2fpga-typed-torch-driver-0.1.0" = tools.graph-torch-opt;
-    "/nix/store/gbk2cpjqx7pba2sl9wagygbk26rjxms1-llm2fpga-typed-calyx-driver-0.1.0" = tools.graph-calyx-opt;
-    "/nix/store/b3m8c75hw6hhswbky443nfk0b1rm8fx3-calyx-0.7.1" = tools.graph-calyx-backend;
-    "/nix/store/npgvbi2bx2w52q8saa350n3sbr99hg3v-llm2fpga-yosys-sdp72-parity" = tools.graph-yosys;
-    "/nix/store/wwmfz02wyiy4gvav7n76jmhnpiyfj3q9-nextpnr-xilinx-kintex-bram-mode-fix-0.8.2" = tools.nextpnr-xilinx;
-    "/nix/store/9rm81392klk28gvfaycd33ka8ckcd5sl-nextpnr-xilinx-chipdb-0.8.2" = tools.nextpnr-xilinx-chipdb;
-    ${flow.core_store_path} = core;
-    ${flow.source_store_path} = core.compilerSource;
+    "@python@" = pkgs.python311;
+    "@torch@" = tools.graph-torch-opt;
+    "@memory@" = tools.graph-calyx-opt;
+    "@calyx@" = tools.graph-calyx-backend;
+    "@yosys@" = tools.graph-yosys;
+    "@nextpnr@" = tools.nextpnr-xilinx;
+    "@chipdb@" = tools.nextpnr-xilinx-chipdb;
+    "@core@" = core;
+    "@yosys-config@" = tools.graph-yosys.upstream;
   };
   # Match the most specific path first; replacing the checkout root first would
   # incorrectly send generated inputs to the static snapshot.
@@ -29,12 +29,16 @@ let
     let
       keys = lib.sort (a: b: builtins.stringLength a > builtins.stringLength b)
         (builtins.filter (key: lib.hasInfix key text) (builtins.attrNames paths));
-    in builtins.replaceStrings keys (map (key: toString paths.${key}) keys) text;
+      resolved = builtins.replaceStrings keys (map (key: toString paths.${key}) keys) text;
+    in assert lib.assertMsg
+      (!(lib.hasInfix "@" (builtins.replaceStrings [ "@OUTPUT@" ] [ "" ] resolved)))
+      "Unresolved build input reference: ${text}";
+      resolved;
   makeStage = state: stage:
     let
-      oldDirectory = "${flow.original_root}/${stage.directory}";
+      oldDirectory = "@tree@/${stage.directory}";
       paths = toolPaths // state.paths // {
-        ${flow.original_root} = snapshot;
+        "@tree@" = snapshot;
         ${oldDirectory} = "@OUTPUT@";
       };
       generatedPath = name:
@@ -44,12 +48,7 @@ let
       plugin = state.index < 2;
       # yosys-config supplies headers/ABI flags from the declared Yosys build.
       # Its g++ comes from stdenv.cc, not /usr/bin or the recorded host.
-      argv = if plugin then [
-        "${tools.graph-yosys.upstream}/bin/yosys-config"
-        "--exec" "--cxx" "--cxxflags" "-shared" "-o"
-        (builtins.head (builtins.attrNames stage.expected_outputs))
-        (rewrite paths (lib.last stage.argv))
-      ] else map (rewrite paths) stage.argv;
+      argv = map (rewrite paths) stage.argv;
       spec = pkgs.writeText "stage-${toString state.index}.json" (builtins.toJSON ({
         inherit argv;
         inherit (stage) name expected_outputs timeout_seconds;
@@ -87,7 +86,7 @@ let
   graph = builtins.foldl' makeStage {
     index = 0; paths = {}; stages = [];
     outputs = lib.mapAttrs' (name: _: lib.nameValuePair "core/${name}" "${core}/${name}")
-      flow.core.expected_outputs;
+      flow.core_outputs;
   } flow.stages;
   route = lib.last graph.stages;
   environment = {
