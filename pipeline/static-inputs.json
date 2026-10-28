@@ -1,0 +1,18 @@
+[
+  "snapshot/artifacts/task6/board-fit-2026-10-25/clock2p5_native_hook_v2.py",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/clock2p5_policy.py",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/clock5_policy.py",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/clock_divide2.cc",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/mux_to_lut.cc",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/native_divided_clock_runner.py",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/native_physical_runner.py",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/probe/bram-return-62-v1/bindings.json",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/probe/lut-candidate-131072/closure_memory.sv",
+  "snapshot/artifacts/task6/board-fit-2026-10-25/select_native_router.py",
+  "snapshot/deliverables/tasks-4-5-6/fpga/constraints/tinystories_1m_ypcb_bram_production.xdc",
+  "snapshot/deliverables/tasks-4-5-6/rtl/graph_onchip_runtime.sv",
+  "snapshot/deliverables/tasks-4-5-6/rtl/graph_tinystories_ypcb_top.sv",
+  "snapshot/deliverables/tasks-4-5-6/rtl/tinystories_1m_jtag_csr.sv",
+  "snapshot/deliverables/tasks-4-5-6/rtl/tinystories_1m_ypcb_clock.sv",
+  "snapshot/deliverables/tasks-4-5-6/scripts/pipeline/build_and_validate_xc7_bitstream.sh"
+]

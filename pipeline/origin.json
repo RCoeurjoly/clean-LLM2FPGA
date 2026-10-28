@@ -1,0 +1,8 @@
+{
+  "original_root": "/home/roland/LLM2FPGA/.worktrees/tasks-4-5-6-closure-repairs",
+  "original_commit": "f411204a802ddd263bee4070463d3fa0dc606a56",
+  "bitstream_sha256": "13c0159a9cc94be2c457afdbaa25e65832f095779bf6925df002e2a443599f00",
+  "scope": "Direct PyTorch-to-bitstream build; full verification deferred by user",
+  "hardware_status": "SRAM programming succeeded; JTAG reset response failed; no inference tokens compared",
+  "extraction_commit": "836c990d7e8bc079811fa1e465b9aa565f7fbf84"
+}

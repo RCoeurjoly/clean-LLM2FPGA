@@ -1,7 +1,0 @@
-{
-  "schema_version": 1,
-  "original_path": "src/matmul.py",
-  "last_original_change_commit": "b45382baf8761df85ee02439d875c8b31f97d372",
-  "sha256": "4b1761405f245b8bcd7d02dd31bfab5e5417c6b6f73d874b2702f9bb1b6452ca",
-  "scope": "Byte-identical original Task 2 PyTorch input; no expected outputs"
-}

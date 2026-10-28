@@ -1,0 +1,51 @@
+{
+  "scope": "Short checks only; full PyTorch-to-bitstream build deferred by user",
+  "pytorch_context_04": {
+    "status": "matched",
+    "program_sha256": "760b3168a49302bc078c803b946d01c5a64b179d45783a69cd26d47c8911adfc",
+    "archived_core_hidden": true
+  },
+  "native_stages": [
+    {
+      "name": "full-model-shared-range8-logic",
+      "status": "matched",
+      "output_hashes": {
+        "calyx.mlirbc": "f894f77e75ffeecde60b372d72b2db0199578f1c96b89216d166e71e83b70fdf"
+      },
+      "seconds": 1.6727173040853813
+    },
+    {
+      "name": "full-model-shared-range8-memory-contracts",
+      "status": "matched",
+      "output_hashes": {
+        "calyx.mlirbc": "0fd0c76c552086fe3e8edd8f9d2458847036f6e1bacf159916c2ffe79fa6e7f3"
+      },
+      "seconds": 1.876445531961508
+    },
+    {
+      "name": "native-clock-divide2-plugin-build",
+      "status": "matched",
+      "output_hashes": {
+        "clock_divide2.so": "b246a50cf77d91618f4c51cc4a7b0fbb5c56d4edb0d05a38ad85bf1a78d386cb"
+      },
+      "seconds": 2.1729901479557157
+    },
+    {
+      "name": "native-mux-to-lut-build",
+      "status": "matched",
+      "output_hashes": {
+        "mux_to_lut.so": "23da8711274160e28b11292d63b0e28ac1ccc29b48135be5306b51142a17796a"
+      },
+      "seconds": 1.7718872339464724
+    }
+  ],
+  "unit_tests": {
+    "passed": 8
+  },
+  "end_to_end_verified": false,
+  "toolchain_archive": {
+    "imported_paths": 314,
+    "bytes": 2071636341,
+    "status": "imported"
+  }
+}
