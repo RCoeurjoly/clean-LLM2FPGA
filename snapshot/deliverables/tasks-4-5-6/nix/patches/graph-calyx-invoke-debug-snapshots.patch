@@ -1,0 +1,36 @@
+--- a/calyx/opt/src/passes/compile_invoke.rs
++++ b/calyx/opt/src/passes/compile_invoke.rs
+@@ -351,11 +351,13 @@
+         comps: &[ir::Component],
+     ) -> VisResult {
+         let timing_enabled = log::log_enabled!(log::Level::Info);
++        // mallinfo2 scans allocator bins; never pay this per invoke at INFO.
++        let snapshots_enabled = log::log_enabled!(log::Level::Debug);
+         let snapshot_start = std::time::Instant::now();
+-        let snapshot_start_ns = if timing_enabled {
++        let snapshot_start_ns = if snapshots_enabled {
+             let snapshot = calyx_utils::compiler_memory::snapshot();
+             let elapsed = snapshot_start.elapsed().as_nanos();
+-            log::info!("memory:compile-invoke:{}:invoke:start {:?}", comp.name, snapshot);
++            log::debug!("memory:compile-invoke:{}:invoke:start {:?}", comp.name, snapshot);
+             elapsed
+         } else { 0 };
+         let lowering_start = std::time::Instant::now();
+@@ -439,10 +441,13 @@
+ 
+         if timing_enabled {
+             let lowering_ns = lowering_start.elapsed().as_nanos();
+-            let snapshot_end = std::time::Instant::now();
+-            let snapshot = calyx_utils::compiler_memory::snapshot();
+-            let snapshot_end_ns = snapshot_end.elapsed().as_nanos();
+-            log::info!("memory:compile-invoke:{}:invoke:end {:?}", comp.name, snapshot);
++            let snapshot_end_ns = if snapshots_enabled {
++                let snapshot_end = std::time::Instant::now();
++                let snapshot = calyx_utils::compiler_memory::snapshot();
++                let elapsed = snapshot_end.elapsed().as_nanos();
++                log::debug!("memory:compile-invoke:{}:invoke:end {:?}", comp.name, snapshot);
++                elapsed
++            } else { 0 };
+             log::info!("compile-invoke:timing:{} snapshot_start_ns={} lowering_ns={} snapshot_end_ns={}",
+                 comp.name, snapshot_start_ns, lowering_ns, snapshot_end_ns);
+         }

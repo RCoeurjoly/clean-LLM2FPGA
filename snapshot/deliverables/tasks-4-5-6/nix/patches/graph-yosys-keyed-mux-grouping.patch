@@ -1,0 +1,30 @@
+--- a/passes/opt/opt_reduce.cc
++++ b/passes/opt/opt_reduce.cc
+@@ -112,6 +112,13 @@
+ 		RTLIL::SigSpec new_sig_b, new_sig_s;
+ 		pool<RTLIL::SigSpec> handled_sig;
+ 
++		// Collect controls once, retaining selector order and first-occurrence order.
++		dict<RTLIL::SigSpec, RTLIL::SigSpec> grouped_controls;
++		for (int i = 0; i < sig_s.size(); i++) {
++			RTLIL::SigSpec data = sig_b.extract(i * sig_a.size(), sig_a.size());
++			if (data != sig_a)
++				grouped_controls[data].append(sig_s.extract(i, 1));
++		}
+ 		handled_sig.insert(sig_a);
+ 		for (int i = 0; i < sig_s.size(); i++)
+ 		{
+@@ -119,12 +126,7 @@
+ 			if (handled_sig.count(this_b) > 0)
+ 				continue;
+ 
+-			RTLIL::SigSpec this_s = sig_s.extract(i, 1);
+-			for (int j = i+1; j < sig_s.size(); j++) {
+-				RTLIL::SigSpec that_b = sig_b.extract(j*sig_a.size(), sig_a.size());
+-				if (this_b == that_b)
+-					this_s.append(sig_s.extract(j, 1));
+-			}
++			RTLIL::SigSpec this_s = grouped_controls.at(this_b);
+ 
+ 			if (this_s.size() > 1)
+ 			{

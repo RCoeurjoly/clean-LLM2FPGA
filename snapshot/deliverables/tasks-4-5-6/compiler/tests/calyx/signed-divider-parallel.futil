@@ -1,0 +1,27 @@
+import "primitives/core.futil";
+import "primitives/binary_operators.futil";
+component main(left0: 8, right0: 8, left1: 8, right1: 8) -> (first_result: 8, second_result: 8) {
+  cells {
+    first_div = std_sdiv_pipe(8); second_div = std_sdiv_pipe(8);
+    first_out = std_reg(8); second_out = std_reg(8);
+  }
+  wires {
+    first_result = first_out.out;
+    second_result = second_out.out;
+    group first {
+      first_div.left = left0; first_div.right = right0;
+      first_div.go = !first_div.done ? 1'd1;
+      first_out.in = first_div.out_quotient;
+      first_out.write_en = first_div.done;
+      first[done] = first_out.done;
+    }
+    group second {
+      second_div.left = left1; second_div.right = right1;
+      second_div.go = !second_div.done ? 1'd1;
+      second_out.in = second_div.out_quotient;
+      second_out.write_en = second_div.done;
+      second[done] = second_out.done;
+    }
+  }
+  control { par { first; second; } }
+}

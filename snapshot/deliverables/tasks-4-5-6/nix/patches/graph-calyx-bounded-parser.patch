@@ -1,0 +1,226 @@
+--- a/calyx/frontend/src/parser.rs
++++ b/calyx/frontend/src/parser.rs
+@@ -31,6 +31,8 @@
+ struct UserData {
+     /// Index to the current file
+     pub file: FileIdx,
++    /// Absolute byte offset of this grammar item in the retained source.
++    pub offset: usize,
+ }
+ 
+ // user data is the input program so that we can create Id's
+@@ -54,92 +56,93 @@
+ pub struct CalyxParser;
+ 
+ impl CalyxParser {
+-    /// Parse a Calyx program into an AST representation.
++    /// Parse a file while releasing PEG tokens after each top-level item.
+     pub fn parse_file(path: &Path) -> CalyxResult<ast::NamespaceDef> {
+         let time = std::time::Instant::now();
+-        let content = &fs::read(path).map_err(|err| {
++        let bytes = fs::read(path).map_err(|err| {
+             calyx_utils::Error::invalid_file(format!(
+-                "Failed to read {}: {err}",
+-                path.to_string_lossy(),
+-            ))
++                "Failed to read {}: {err}", path.to_string_lossy()))
+         })?;
+-        // Add a new file to the position table
+-        let string_content = std::str::from_utf8(content)?.to_string();
+-        let file = GlobalPositionTable::add_file(
+-            path.to_string_lossy().to_string(),
+-            string_content,
+-        );
+-        let user_data = UserData { file };
+-
++        let content = std::str::from_utf8(&bytes)?.to_string();
++        drop(bytes);
++        let file = GlobalPositionTable::add_file(path.to_string_lossy().to_string(), content);
++        let out = Self::parse_namespace(file)?;
++        log::info!("Parsed `{}` in {}ms", path.to_string_lossy(), time.elapsed().as_millis());
++        Ok(out)
++    }
++
++    pub fn parse<R: Read>(mut r: R) -> CalyxResult<ast::NamespaceDef> {
++        let mut content = String::new();
++        r.read_to_string(&mut content).map_err(|err| {
++            calyx_utils::Error::invalid_file(format!("Failed to parse buffer: {err}"))
++        })?;
++        let file = GlobalPositionTable::add_file("<stdin>".to_string(), content);
++        Self::parse_namespace(file)
++    }
++
++    fn parse_namespace(file: FileIdx) -> CalyxResult<ast::NamespaceDef> {
+         let content = GlobalPositionTable::get_source(file);
+-
+-        // Parse the file
+-        let inputs =
+-            CalyxParser::parse_with_userdata(Rule::file, content, user_data)
+-                .map_err(|e| e.with_path(&path.to_string_lossy()))
+-                .map_err(|e| {
+-                    calyx_utils::Error::parse_error(e.variant.message())
+-                        .with_pos(&Self::error_span(&e, file))
+-                })?;
+-        let input = inputs.single().map_err(|e| {
++        let parse_at = |rule, offset| -> CalyxResult<Node> {
++            let nodes = Self::parse_with_userdata(rule, &content[offset..], UserData { file, offset })
++                .map_err(|e| calyx_utils::Error::parse_error(e.variant.message())
++                    .with_pos(&Self::error_span(&e, file, offset)))?;
++            nodes.single().map_err(|e| calyx_utils::Error::parse_error(e.variant.message())
++                .with_pos(&Self::error_span(&e, file, offset)))
++        };
++        let prefix = parse_at(Rule::file_prefix, 0)?;
++        let mut offset = prefix.as_span().end();
++        let imports = Self::file_prefix(prefix).map_err(|e|
+             calyx_utils::Error::parse_error(e.variant.message())
+-                .with_pos(&Self::error_span(&e, file))
+-        })?;
+-        let out = CalyxParser::file(input).map_err(|e| {
+-            calyx_utils::Error::parse_error(e.variant.message())
+-                .with_pos(&Self::error_span(&e, file))
+-        })?;
+-        log::info!(
+-            "Parsed `{}` in {}ms",
+-            path.to_string_lossy(),
+-            time.elapsed().as_millis()
+-        );
+-        Ok(out)
+-    }
+-
+-    pub fn parse<R: Read>(mut r: R) -> CalyxResult<ast::NamespaceDef> {
+-        let mut buf = String::new();
+-        r.read_to_string(&mut buf).map_err(|err| {
+-            calyx_utils::Error::invalid_file(format!(
+-                "Failed to parse buffer: {err}",
+-            ))
+-        })?;
+-        // Save the input string to the position table
+-        let file = GlobalPositionTable::add_file("<stdin>".to_string(), buf);
+-        let user_data = UserData { file };
+-        let content = GlobalPositionTable::get_source(file);
+-
+-        // Parse the input
+-        let inputs =
+-            CalyxParser::parse_with_userdata(Rule::file, content, user_data)
+-                .map_err(|e| {
+-                    calyx_utils::Error::parse_error(e.variant.message())
+-                        .with_pos(&Self::error_span(&e, file))
+-                })?;
+-        let input = inputs.single().map_err(|e| {
+-            calyx_utils::Error::parse_error(e.variant.message())
+-                .with_pos(&Self::error_span(&e, file))
+-        })?;
+-        let out = CalyxParser::file(input).map_err(|e| {
+-            calyx_utils::Error::parse_error(e.variant.message())
+-                .with_pos(&Self::error_span(&e, file))
+-        })?;
+-        Ok(out)
++                .with_pos(&Self::error_span(&e, file, 0)))?;
++        let mut namespace = ast::NamespaceDef {
++            imports, components: Vec::new(), externs: Vec::new(),
++            metadata: None, source_info_table: None,
++        };
++        loop {
++            let input = parse_at(Rule::file_item, offset)?;
++            let consumed = input.as_span().end();
++            let item = Self::file_item(input).map_err(|e|
++                calyx_utils::Error::parse_error(e.variant.message())
++                    .with_pos(&Self::error_span(&e, file, offset)))?;
++            // No Node/Pairs survive this iteration: only the typed AST does.
++            match item {
++                FileItem::Member(ExtOrComp::Comp(component)) => namespace.components.push(component),
++                FileItem::Member(ExtOrComp::Ext(externs)) => namespace.externs.push(externs),
++                FileItem::Member(ExtOrComp::PrimInline(primitive)) => {
++                    if let Some((_, primitives)) = namespace.externs.iter_mut().find(|(file, _)| file.is_none()) {
++                        primitives.push(primitive);
++                    } else {
++                        namespace.externs.push((None, vec![primitive]));
++                    }
++                }
++                FileItem::Info((metadata, source_info_table)) => {
++                    namespace.metadata = metadata.filter(|value| !value.is_empty());
++                    namespace.source_info_table = source_info_table;
++                    break;
++                }
++                FileItem::End => break,
++            }
++            if consumed == 0 {
++                return Err(calyx_utils::Error::parse_error("parser item consumed no input"));
++            }
++            offset += consumed;
++        }
++        Ok(namespace)
+     }
+ 
+     fn get_span(node: &Node) -> GPosIdx {
+         let ud = node.user_data();
+         let sp = node.as_span();
+-        let pos = GlobalPositionTable::add_pos(ud.file, sp.start(), sp.end());
++        let pos = GlobalPositionTable::add_pos(ud.file, ud.offset + sp.start(), ud.offset + sp.end());
+         GPosIdx(pos)
+     }
+ 
+-    fn error_span(error: &pest::error::Error<Rule>, file: FileIdx) -> GPosIdx {
++    fn error_span(error: &pest::error::Error<Rule>, file: FileIdx, offset: usize) -> GPosIdx {
+         let (start, end) = match error.location {
+             pest::error::InputLocation::Pos(off) => (off, off + 1),
+             pest::error::InputLocation::Span((start, end)) => (start, end),
+         };
+-        let pos = GlobalPositionTable::add_pos(file, start, end);
++        let pos = GlobalPositionTable::add_pos(file, offset + start, offset + end);
+         GPosIdx(pos)
+     }
+ 
+@@ -204,6 +207,7 @@
+             input,
+             UserData {
+                 file: GlobalPositionTable::add_file("".into(), "".into()),
++                offset: 0,
+             },
+         )?;
+         let input = inputs.single()?;
+@@ -212,6 +216,12 @@
+ }
+ 
+ #[allow(clippy::large_enum_variant)]
++enum FileItem {
++    Member(ExtOrComp),
++    Info((Option<String>, Option<SourceInfoTable>)),
++    End,
++}
++
+ enum ExtOrComp {
+     Ext((Option<PosString>, Vec<Primitive>)),
+     Comp(ComponentDef),
+@@ -1456,6 +1466,18 @@
+         ))
+     }
+ 
++    fn file_prefix(input: Node) -> ParseResult<Vec<PosString>> {
++        Ok(match_nodes!(input.into_children(); [imports(imports)] => imports))
++    }
++
++    fn file_item(input: Node) -> ParseResult<FileItem> {
++        Ok(match_nodes!(input.into_children();
++            [extern_or_component(member)] => FileItem::Member(member),
++            [extra_info(info), EOI(_)] => FileItem::Info(info),
++            [EOI(_)] => FileItem::End,
++        ))
++    }
++
+     fn file(input: Node) -> ParseResult<ast::NamespaceDef> {
+         Ok(match_nodes!(
+             input.into_children();
+--- a/calyx/frontend/src/syntax.pest
++++ b/calyx/frontend/src/syntax.pest
+@@ -61,6 +61,10 @@
+       ~ extra_info?
+       ~ EOI
+ }
++
++// Parse one item, retaining original whole-file ordering and EOF checks.
++file_prefix = { SOI ~ imports }
++file_item = { SOI ~ (extern_or_component | (extra_info ~ EOI) | EOI) }
+ 
+ extern_or_component = {
+   component | ext | prim_inline

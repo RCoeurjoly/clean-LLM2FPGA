@@ -1,0 +1,111 @@
+#+TITLE: Pipeline review preparation — current findings
+#+DATE: 2026-10-09
+
+This records preparation, not manual approval or complete pipeline closure.
+The review loop and reading order are in [[file:pipeline-review.org][pipeline-review.org]].
+
+* Graph-derived frontend
+The authenticated fixed-point PyTorch module can be exported. Its logits,
+checkpoints, Q/DQ boundaries, serial GEMV accumulators and nonlinear boundaries
+match eager execution at the frozen four-token prompt. This export contains
+28,632 nodes, 36 operator kinds and 49 serial-GEMV operations. It does not
+establish graph coverage for all sixteen generation contexts.
+
+The exploration receipt is
+[[file:artifacts/pipeline-review/graph-route-exploration.json][graph-route-exploration.json]]. Local diagnostic intermediates live in the
+repair worktree's ignored progress directory; hashes are in the receipt.
+They are not production dependencies or substitute board evidence.
+
+Required frontend/backend repairs identified by native tools:
+- Legalize the custom serial-GEMV operation before Torch backend conversion.
+  A cached native pass can create an IR descriptor, but is not itself a full
+  lowering. Its printed-type parsing must be replaced by typed IR access
+  before adopting its source for the reviewable production pipeline.
+- Make plugin registration reproducible: the cached pass registers with the
+  shared-MLIR Torch-MLIR executable, not the statically linked executable.
+- Lower integer bit shifts: after custom-op legalization the first native
+  backend failure is =torch.aten.bitwise_right_shift.Tensor_Scalar=.
+- Lower SCF loop-carried reductions using =mlir-opt --scf-for-to-while= before
+  CIRCT's =--lower-scf-to-calyx=.
+- Resolve the memory-read contract in CIRCT IR or compiler source: emitted
+  read groups drive =write_en= with zero but omit =write_data=; native Calyx
+  rejects this under its =write_together= requirement. Do not patch emitted
+  Futil or bypass the verifier to declare this fixed.
+- Support multiple components and =invoke= when applying further structured
+  transformations to CIRCT export. The current Python phase frontend supports
+  one component and explicitly rejects the unsupported form.
+
+The small SCF serial reduction reached CIRCT Calyx and native Futil export.
+It did not pass native Calyx compilation because of the memory-port contract.
+Neither that probe nor full-model export is a completed PyTorch-to-RTL path.
+
+* Structured backend repairs completed so far
+- Control is a tree of sequences, parallel blocks, loops, branches and enables.
+  Scheduling insertion selects actual enable nodes, checks uniqueness and
+  preserves ordering inside parallel/conditional bodies.
+- LayerNorm geometry/division scheduling, causal addressing and denominator
+  splitting are named IR passes. Tests check address equations at both row
+  capacities and all five family widths, including width 768.
+- The migrated 50 phase variants and full16 canonical program match their
+  preceding structures. Native Calyx compiles the full16 comparison candidate.
+- Final model lowering now validates primitive parameters, references, port
+  directions and widths, literal fit and control targets before serialization.
+  These checks establish well-formedness, not numerical equivalence or complete
+  dynamic address bounds.
+
+* Outstanding comparison-backend issues
+Semantic MLP/orchestration substitutions and generated-SV memory/initializer
+rewrites remain active. Explicit initialized memory primitives are tested but
+not yet bound into the complete production path. The model-specific generator
+remains a comparison baseline and cannot satisfy the mandatory graph frontend.
+
+The new IR validator exposes an existing diagnostic mismatch for generation
+steps=1 with audit checkpoints enabled: the concatenated checkpoint address
+is wider than the declared =model_embedding.addr0=. Production modes 1/2/16
+without audit checkpoints validate; audit modes 2/16 also validate. Audit
+mode 16 still needs a dynamic checkpoint-address bound/layout review: a width
+check does not establish that concatenated addresses fit a non-power-of-two
+memory depth. Do not weaken validation to accept the one-step mismatch.
+
+* Verification at commit a49bdb3
+Commands run from =deliverables/tasks-4-5-6= with the pinned PyTorch Python and
+pinned Icarus/Yosys paths supplied through =LLM2FPGA_IVERILOG= and
+=LLM2FPGA_YOSYS=:
+- =python -m unittest discover -s tests -q=: 63 run, 52 passed, 11 historical
+  optional-input skips; no failures.
+- =calyx validated-full16.futil -l <pinned-library> -d cell-share -b verilog --synthesis --nested -o validated-full16.sv=: passed.
+- =nix-instantiate --parse flake.nix=: passed.
+- =git diff --check=: passed before commit.
+
+No new full-model RTL replay, FPGA implementation or board test was run for
+these structural changes. No chunk has been manually approved. Nothing was
+merged into main.
+
+* Graph-derived native integer passes: execution checkpoint
+The repair branch now has a pure compilation frontend and graph capture/raw import,
+followed by native C++ typed passes. Compilation inputs are authenticated package
+weights/scales/configuration and explicit arithmetic rules; historical oracle
+loaders are confined to separate verification commands.
+
+Executable native fixtures found three upstream correctness issues: signed division
+produced wrong negative/extreme results, remainder(-3,256) returned -3, and
+neg(INT64_MAX) lost precision. Explicit signed integer division, sign-corrected
+remainder and wrapping integer negation repair these cases. The full four-token
+model reaches standard tensor/Linalg/arith IR with a native check rejecting any
+remaining Torch/custom dialect or floating-point type. Native helpers inspect
+Torch tensor shapes/dtypes through the shared library's typed API, without printed
+type parsing. No generated IR or RTL is textually repaired.
+
+Evidence: =artifacts/pipeline-review/graph-model-reference.json= (all sixteen CPU
+contexts and 257 materialized buffers), =graph-model-isolation.json= (compile-only
+source/input directory), =graph-capture.json= (changed-token replay/raw import),
+=graph-integer-lowering.json= (standard integer boundary), and
+=graph-rounding-native.json= (64 composed eager/compiled cases). Combined local
+suite: 79 tests, 68 passed, 11 preserved historical optional skips.
+
+This is an execution checkpoint, not pipeline closure or user code approval.
+Task 3 SDK/Nix integration remains open. The raw importer retains 257 model buffers
+as function arguments, whose immutable initializer bindings must be made explicit
+in Task 5. Graph-to-Calyx/SV, complete sixteen-context RTL inference, common
+production wiring, physical implementation and the complete manual review index
+remain pending. The historical production pipeline has not been switched yet.

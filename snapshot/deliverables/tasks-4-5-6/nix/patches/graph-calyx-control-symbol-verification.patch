@@ -1,0 +1,102 @@
+--- a/include/circt/Dialect/Calyx/CalyxControl.td
++++ b/include/circt/Dialect/Calyx/CalyxControl.td
+@@ -49,6 +49,7 @@
+ }
+ 
+ def IfOp : CalyxContainer<"if", [
++    DeclareOpInterfaceMethods<SymbolUserOpInterface>,
+     ControlLike,
+     DeclareOpInterfaceMethods<IfOpInterface>
+   ]> {
+@@ -82,7 +83,6 @@
+   }];
+ 
+   let assemblyFormat = "$cond (`with` $groupName^)? $thenRegion (`else` $elseRegion^)? attr-dict";
+-  let hasVerifier = 1;
+   let hasCanonicalizer = true;
+   let skipDefaultBuilders = true;
+   let builders = [
+@@ -266,6 +266,7 @@
+ 
+ 
+ def EnableOp : CalyxOp<"enable", [
++    DeclareOpInterfaceMethods<SymbolUserOpInterface>,
+     ControlLike
+   ]> {
+   let summary = "Calyx Enable";
+@@ -294,10 +295,10 @@
+     }]>
+   ];
+   let assemblyFormat = "$groupName attr-dict";
+-  let hasVerifier = 1;
+ }
+ 
+ def WhileOp : CalyxContainer<"while", [
++    DeclareOpInterfaceMethods<SymbolUserOpInterface>,
+     ControlLike
+   ]> {
+   let summary = "Calyx While";
+@@ -327,7 +328,6 @@
+   }];
+   let hasCanonicalizeMethod = true;
+   let assemblyFormat = "$cond (`with` $groupName^)? $body attr-dict";
+-  let hasVerifier = 1;
+   let skipDefaultBuilders = true;
+   let builders = [
+     OpBuilder<(ins
+--- a/lib/Dialect/Calyx/CalyxOps.cpp
++++ b/lib/Dialect/Calyx/CalyxOps.cpp
+@@ -2300,12 +2300,13 @@
+ //===----------------------------------------------------------------------===//
+ // EnableOp
+ //===----------------------------------------------------------------------===//
+-LogicalResult EnableOp::verify() {
++LogicalResult EnableOp::verifySymbolUses(SymbolTableCollection &symbolTable) {
+   auto component = (*this)->getParentOfType<ComponentOp>();
+   auto wiresOp = component.getWiresOp();
+   StringRef name = getGroupName();
+ 
+-  auto groupOp = wiresOp.lookupSymbol<GroupInterface>(name);
++  auto groupOp = dyn_cast_or_null<GroupInterface>(
++      symbolTable.lookupSymbolIn(wiresOp, getGroupNameAttr()));
+   if (!groupOp)
+     return emitOpError() << "with group '" << name
+                          << "', which does not exist.";
+@@ -2321,7 +2322,7 @@
+ // IfOp
+ //===----------------------------------------------------------------------===//
+ 
+-LogicalResult IfOp::verify() {
++LogicalResult IfOp::verifySymbolUses(SymbolTableCollection &symbolTable) {
+   std::optional<StringRef> optGroupName = getGroupName();
+   if (!optGroupName) {
+     // No combinational group was provided.
+@@ -2330,7 +2331,8 @@
+   auto component = (*this)->getParentOfType<ComponentOp>();
+   WiresOp wiresOp = component.getWiresOp();
+   StringRef groupName = *optGroupName;
+-  auto groupOp = wiresOp.lookupSymbol<GroupInterface>(groupName);
++  auto groupOp = dyn_cast_or_null<GroupInterface>(
++      symbolTable.lookupSymbolIn(wiresOp, getGroupNameAttr()));
+   if (!groupOp)
+     return emitOpError() << "with group '" << groupName
+                          << "', which does not exist.";
+@@ -2592,7 +2594,7 @@
+ //===----------------------------------------------------------------------===//
+ // WhileOp
+ //===----------------------------------------------------------------------===//
+-LogicalResult WhileOp::verify() {
++LogicalResult WhileOp::verifySymbolUses(SymbolTableCollection &symbolTable) {
+   auto component = (*this)->getParentOfType<ComponentOp>();
+   auto wiresOp = component.getWiresOp();
+ 
+@@ -2602,7 +2604,8 @@
+     return success();
+   }
+   StringRef groupName = *optGroupName;
+-  auto groupOp = wiresOp.lookupSymbol<GroupInterface>(groupName);
++  auto groupOp = dyn_cast_or_null<GroupInterface>(
++      symbolTable.lookupSymbolIn(wiresOp, getGroupNameAttr()));
+   if (!groupOp)
+     return emitOpError() << "with group '" << groupName
+                          << "', which does not exist.";

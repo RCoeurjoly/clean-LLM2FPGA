@@ -1,0 +1,14 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -2771,6 +2771,11 @@
+       : SCFToCalyxBase<SCFToCalyxPass>(), partialPatternRes(success()) {
+     this->topLevelFunctionOpt = topLevelFunction;
+   }
++  void getDependentDialects(DialectRegistry &registry) const override {
++    SCFToCalyxBase<SCFToCalyxPass>::getDependentDialects(registry);
++    // Rewrite patterns may emit cf.br even when the input has no CF.
++    registry.insert<mlir::cf::ControlFlowDialect>();
++  }
+   void runOnOperation() override;
+ 
+   LogicalResult setTopLevelFunction(mlir::ModuleOp moduleOp,

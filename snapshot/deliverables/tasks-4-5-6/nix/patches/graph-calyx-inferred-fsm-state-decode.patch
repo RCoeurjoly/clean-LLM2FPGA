@@ -1,0 +1,34 @@
+--- a/calyx/backend/src/verilog.rs
++++ b/calyx/backend/src/verilog.rs
+@@ -938,24 +938,18 @@
+                 end\n  end\n";
+     writeln!(f, "{}", always_comb_header)?;
+ 
+-    // Begin emitting the FSM's transitions and updates
++    // State outputs are combinational decodes, including invalid encodings.
++    // Emit each once instead of an incomplete, quadratic case assignment table.
++    for st in 0..num_states {
++        writeln!(f, "  assign s{st}_out = (state_reg == s{st});")?;
++    }
++
++    // Begin emitting the FSM's transitions and updates.
+     let case_header = "  always @(*) begin\n    state_next = s0;\n\
+         case ( state_reg )";
+     writeln!(f, "{}", case_header)?;
+-    // At each state, write the updates to the state and the outward-facing
+-    // wires to make high / low
+     for (case, trans) in fsm.borrow().transitions.iter().enumerate() {
+         writeln!(f, "        s{case}: begin")?;
+-
+-        // Outward-facing wires
+-        for st in 0..num_states {
+-            writeln!(
+-                f,
+-                "{}s{st}_out = 1'b{};",
+-                " ".repeat(10),
+-                if st == case { 1 } else { 0 }
+-            )?;
+-        }
+ 
+         // Updates to state
+         emit_fsm_transtions(trans, f)?;

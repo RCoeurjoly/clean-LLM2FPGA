@@ -1,0 +1,47 @@
+From: LLM2FPGA diagnostics
+Subject: [PATCH] xilinx: import the wire-to-wire PIP names emitted in routed JSON
+
+getPipName emits arrows for non-SITEPIP resources, but getPipByName
+previously understood only SITEPIP and legacy tile/numeric-dot names.
+This prevents reloading routed checkpoints without placing/routing again.
+Keep the legacy parsers; resolve emitted names through canonical wire IDs.
+Refuse ambiguous names instead of silently selecting a different route.
+
+diff --git a/xilinx/arch.cc b/xilinx/arch.cc
+--- a/xilinx/arch.cc
++++ b/xilinx/arch.cc
+@@ -260,6 +260,10 @@ WireId Arch::getWireByName(IdString name) const
+         }
+     }
+ 
++    // getWireName spells node wires using their first tile-wire member.
++    // Restore the canonical node, not a disconnected tile-local alias.
++    if (ret != WireId())
++        ret = canonicalWireId(chip_info, ret.tile, ret.index);
+     wire_by_name_cache[name] = ret;
+ 
+     return ret;
+@@ -295,6 +295,23 @@ PipId Arch::getPipByName(IdString name) const
+                 break;
+             }
+         }
++    } else if (s.find("->") != std::string::npos) {
++        // Inverse of getPipName's wire-to-wire spelling. Downhill iteration
++        // also handles canonical node wires spanning multiple tiles.
++        const auto arrow = s.find("->");
++        const WireId src = getWireByName(id(s.substr(0, arrow)));
++        const WireId dst = getWireByName(id(s.substr(arrow + 2)));
++        if (src == WireId() || dst == WireId())
++            log_error("Invalid wire-to-wire PIP name '%s'\n", s.c_str());
++        for (PipId pip : getPipsDownhill(src)) {
++            if (getPipDstWire(pip) != dst || getPipName(pip) != name)
++                continue;
++            if (ret != PipId() && ret != pip)
++                log_error("Ambiguous wire-to-wire PIP name '%s'\n", s.c_str());
++            ret = pip;
++        }
++        if (ret == PipId())
++            log_error("Unknown wire-to-wire PIP name '%s'\n", s.c_str());
+     } else {
+         auto sp = split_identifier_name(s);
+         int tile = tile_by_name.at(sp.first);

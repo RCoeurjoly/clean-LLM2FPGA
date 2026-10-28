@@ -1,0 +1,105 @@
+From: LLM2FPGA diagnostics
+Subject: [PATCH] xilinx: resolve ordinary INT checkpoint aliases from original FASM
+
+Only select a unique independently configured ordinary INT routing switch.
+Reject missing/conflicting evidence; leave unsupported selectors fail-closed.
+Routing/placement behavior and the production package remain unchanged.
+
+diff --git a/xilinx/arch.h b/xilinx/arch.h
+--- a/xilinx/arch.h
++++ b/xilinx/arch.h
+@@ -29,1 +29,2 @@
+-#include <iostream>
++#include <iostream>
++#include <unordered_set>
+@@ -727,1 +727,4 @@
+-    Arch(ArchArgs args);
++    Arch(ArchArgs args);
++    std::unordered_set<std::string> checkpoint_fasm_features;
++    bool checkpoint_fasm_loaded = false;
++    void loadCheckpointFasm(const std::string &filename);
+diff --git a/xilinx/arch.cc b/xilinx/arch.cc
+--- a/xilinx/arch.cc
++++ b/xilinx/arch.cc
+@@ -26,1 +26,3 @@
+-#include <cstring>
++#include <cstring>
++#include <fstream>
++#include <sstream>
+@@ -276,1 +276,32 @@
+-PipId Arch::getPipByName(IdString name) const
++void Arch::loadCheckpointFasm(const std::string &filename)
++{
++    std::ifstream input(filename);
++    if (!input)
++        log_error("Failed to open checkpoint FASM '%s'\n", filename.c_str());
++    std::string line;
++    while (std::getline(input, line)) {
++        line.erase(line.find('#') == std::string::npos ? line.size() : line.find('#'));
++        std::istringstream fields(line);
++        std::string feature, token, value;
++        if (!(fields >> feature))
++            continue;
++        if (!boost::starts_with(feature, "INT_L_X") && !boost::starts_with(feature, "INT_R_X"))
++            continue;
++        const auto dot = feature.find('.');
++        const auto second_dot = feature.find('.', dot == std::string::npos ? feature.size() : dot + 1);
++        if (dot == std::string::npos || second_dot == std::string::npos ||
++            feature.find('.', second_dot + 1) != std::string::npos)
++            log_error("Unsupported checkpoint INT FASM feature '%s'\n", feature.c_str());
++        if (fields >> token) {
++            if (token != "=" || !(fields >> value) || value != "1" || (fields >> token))
++                log_error("Unsupported checkpoint FASM assignment for '%s'\n", feature.c_str());
++        }
++        checkpoint_fasm_features.insert(feature);
++    }
++    if (!input.eof())
++        log_error("Failed to finish reading checkpoint FASM '%s'\n", filename.c_str());
++    checkpoint_fasm_loaded = true;
++    log_info("Loaded %zu original INT routing features for checkpoint recovery.\n", checkpoint_fasm_features.size());
++}
++
++PipId Arch::getPipByName(IdString name) const
+@@ -385,1 +385,28 @@
+-        if (candidates.size() == 1) {
++        if (candidates.size() > 1 && checkpoint_fasm_loaded) {
++            bool ordinary_int = true;
++            for (PipId candidate : candidates) {
++                const auto &pd = locInfo(candidate).pip_data[candidate.index];
++                const std::string tile = chip_info->tile_insts[candidate.tile].name.get();
++                ordinary_int &= pd.flags == PIP_TILE_ROUTING && pd.extra_data == 0 &&
++                                (boost::starts_with(tile, "INT_L_X") || boost::starts_with(tile, "INT_R_X"));
++            }
++            if (ordinary_int) {
++                PipId evidenced;
++                for (PipId candidate : candidates) {
++                    const auto &info = locInfo(candidate);
++                    const auto &pd = info.pip_data[candidate.index];
++                    const std::string feature = std::string(chip_info->tile_insts[candidate.tile].name.get()) +
++                        "." + IdString(info.wire_data[pd.dst_index].name).str(this) +
++                        "." + IdString(info.wire_data[pd.src_index].name).str(this);
++                    if (checkpoint_fasm_features.count(feature) == 0)
++                        continue;
++                    if (evidenced != PipId())
++                        log_error("Ambiguous wire-to-wire PIP name '%s' (multiple original FASM switches)\n", s.c_str());
++                    evidenced = candidate;
++                }
++                if (evidenced == PipId())
++                    log_error("Ambiguous wire-to-wire PIP name '%s' (no original FASM switch)\n", s.c_str());
++                candidates.assign(1, evidenced);
++            }
++        }
++        if (candidates.size() == 1) {
+diff --git a/xilinx/main.cc b/xilinx/main.cc
+--- a/xilinx/main.cc
++++ b/xilinx/main.cc
+@@ -52,1 +52,2 @@
+-    specific.add_options()("fasm", po::value<std::string>(), "fasm bitstream file to write");
++    specific.add_options()("fasm", po::value<std::string>(), "fasm bitstream file to write");
++    specific.add_options()("checkpoint-fasm", po::value<std::string>(), "original FASM evidence for legacy routed checkpoint recovery");
+@@ -73,1 +73,4 @@
+-    return std::unique_ptr<Context>(new Context(chipArgs));
++    auto ctx = std::unique_ptr<Context>(new Context(chipArgs));
++    if (vm.count("checkpoint-fasm"))
++        ctx->loadCheckpointFasm(vm["checkpoint-fasm"].as<std::string>());
++    return ctx;

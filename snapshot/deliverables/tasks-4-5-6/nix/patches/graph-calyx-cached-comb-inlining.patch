@@ -1,0 +1,132 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -29,6 +29,7 @@
+ #include "mlir/Pass/Pass.h"
+ #include "mlir/Support/LogicalResult.h"
+ #include "mlir/Transforms/GreedyPatternRewriteDriver.h"
++#include "llvm/ADT/DenseSet.h"
+ #include "llvm/ADT/TypeSwitch.h"
+ #include "llvm/Support/LogicalResult.h"
+ #include "llvm/Support/raw_os_ostream.h"
+@@ -65,6 +66,112 @@
+   return "bb" + std::to_string(ordinal);
+ }
+ 
++
++// BuildControl finishes before this pattern starts. This pattern changes only
++// wires, so control symbol uses remain immutable for its entire lifetime.
++// Keep the cache local to this pattern: no cross-pass or cross-module state.
++class CachedInlineCombGroups
++    : public calyx::PartialLoweringPattern<calyx::GroupInterface,
++                                          mlir::OpInterfaceRewritePattern> {
++public:
++  CachedInlineCombGroups(MLIRContext *context, LogicalResult &resRef,
++                        calyx::PatternApplicationState &patternState,
++                        calyx::CalyxLoweringState &cls)
++      : PartialLoweringPattern(context, resRef, patternState), cls(cls) {}
++
++  LogicalResult partiallyLower(calyx::GroupInterface originGroup,
++                               PatternRewriter &rewriter) const override {
++    auto component = originGroup->getParentOfType<calyx::ComponentOp>();
++    auto found = controlUsers.find(component.getOperation());
++    if (found == controlUsers.end()) {
++      std::optional<llvm::DenseSet<StringAttr>> names;
++      // ControlOp is a symbol table. Query its body, rather than the operation,
++      // so the query visits the schedule inside that symbol table.
++      auto uses = SymbolTable::getSymbolUses(
++          &component.getControlOp()->getRegion(0));
++      if (uses) {
++        names.emplace();
++        for (const auto &use : *uses)
++          names->insert(use.getSymbolRef().getRootReference());
++      }
++      found = controlUsers.try_emplace(component.getOperation(),
++                                       std::move(names)).first;
++    }
++    // Unknown symbol-table operations retain the upstream conservative rule:
++    // the group may be used, so do not skip its inlining.
++    if (found->second &&
++        !found->second->contains(originGroup.symName()))
++      return success();
++    auto *state = cls.getState(component);
++    llvm::SmallSetVector<Operation *, 8> inlinedGroups;
++    inlinedGroups.insert(originGroup);
++    recurseInlineCombGroups(rewriter, *state, inlinedGroups, originGroup,
++                            originGroup, /*doInline=*/false);
++    return success();
++  }
++
++private:
++  void recurseInlineCombGroups(
++      PatternRewriter &rewriter, calyx::ComponentLoweringStateInterface &state,
++      llvm::SmallSetVector<Operation *, 8> &inlinedGroups,
++      calyx::GroupInterface originGroup, calyx::GroupInterface recGroup,
++      bool doInline) const;
++  calyx::CalyxLoweringState &cls;
++  mutable llvm::DenseMap<Operation *,
++                        std::optional<llvm::DenseSet<StringAttr>>> controlUsers;
++};
++
++void CachedInlineCombGroups::recurseInlineCombGroups(
++    PatternRewriter &rewriter, calyx::ComponentLoweringStateInterface &state,
++    llvm::SmallSetVector<Operation *, 8> &inlinedGroups,
++    calyx::GroupInterface originGroup, calyx::GroupInterface recGroup,
++    bool doInline) const {
++  inlinedGroups.insert(recGroup);
++  for (auto assignOp : recGroup.getBody()->getOps<calyx::AssignOp>()) {
++    if (doInline) {
++      /// Inline the assignment into the originGroup.
++      auto *clonedAssignOp = rewriter.clone(*assignOp.getOperation());
++      clonedAssignOp->moveBefore(originGroup.getBody(),
++                                 originGroup.getBody()->end());
++    }
++    Value src = assignOp.getSrc();
++
++    // Things which stop recursive inlining (or in other words, what
++    // breaks combinational paths).
++    // - Component inputs
++    // - Register and memory reads
++    // - Constant ops (constant ops are not evaluated by any group)
++    // - Multiplication pipelines are sequential.
++    // - 'While' return values (these are registers, however, 'while'
++    //   return values have at the current point of conversion not yet
++    //   been rewritten to their register outputs, see comment in
++    //   LateSSAReplacement)
++    if (isa<BlockArgument>(src) ||
++        isa<calyx::RegisterOp, calyx::MemoryOp, calyx::SeqMemoryOp,
++            hw::ConstantOp, mlir::arith::ConstantOp, calyx::MultPipeLibOp,
++            calyx::DivUPipeLibOp, calyx::DivSPipeLibOp, calyx::RemSPipeLibOp,
++            calyx::RemUPipeLibOp, mlir::scf::WhileOp, calyx::InstanceOp,
++            calyx::ConstantOp, calyx::AddFOpIEEE754, calyx::MulFOpIEEE754,
++            calyx::CompareFOpIEEE754, calyx::FpToIntOpIEEE754,
++            calyx::IntToFpOpIEEE754, calyx::DivSqrtOpIEEE754>(
++            src.getDefiningOp()))
++      continue;
++
++    if (state.isSeqGuardCmpLibOp(src.getDefiningOp())) {
++      continue;
++    }
++
++    auto srcCombGroup = dyn_cast<calyx::CombGroupOp>(
++        state.getEvaluatingGroup(src).getOperation());
++    if (!srcCombGroup)
++      continue;
++    if (inlinedGroups.count(srcCombGroup))
++      continue;
++
++    recurseInlineCombGroups(rewriter, state, inlinedGroups, originGroup,
++                            srcCombGroup, /*doInline=*/true);
++  }
++}
+ 
+ //===----------------------------------------------------------------------===//
+ // Utility types
+@@ -3062,7 +3169,7 @@
+ 
+   /// This pass recursively inlines use-def chains of combinational logic (from
+   /// non-stateful groups) into groups referenced in the control schedule.
+-  addOncePattern<calyx::InlineCombGroups>(loweringPatterns, patternState,
++  addOncePattern<CachedInlineCombGroups>(loweringPatterns, patternState,
+                                           *loweringState);
+ 
+   /// This pattern performs various SSA replacements that must be done

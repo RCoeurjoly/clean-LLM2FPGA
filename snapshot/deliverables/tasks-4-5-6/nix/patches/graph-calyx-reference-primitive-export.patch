@@ -1,0 +1,20 @@
+--- a/CalyxEmitter.cpp
++++ b/CalyxEmitter.cpp
+@@ -805,7 +805,16 @@
+ }
+ 
+ void Emitter::emitPrimitive(PrimitiveOp op) {
+-  indent() << getAttributes(op, /*atFormat=*/true) << op.instanceName()
++  auto referenceAttribute = op->getAttr("llm2fpga.ref");
++  auto reference = dyn_cast_or_null<BoolAttr>(referenceAttribute);
++  if (referenceAttribute && !reference) {
++    emitOpError(op, "llm2fpga.ref must be boolean");
++    return;
++  }
++  indent();
++  if (reference && reference.getValue())
++    os << "ref ";
++  os << getAttributes(op, /*atFormat=*/true) << op.instanceName()
+            << space() << equals() << space() << op.getPrimitiveName()
+            << LParen();
+ 

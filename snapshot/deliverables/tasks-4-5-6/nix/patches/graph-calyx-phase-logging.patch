@@ -1,0 +1,126 @@
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -56,12 +56,18 @@
+     }
+ 
+     // Construct the namespace.
++    log::info!("phase:workspace:start");
+     let mut ws = frontend::Workspace::construct(&opts.file, &opts.lib_path)?;
++    log::info!("phase:workspace:end");
++    log::info!("memory:workspace:end {:?}", calyx_utils::compiler_memory::snapshot());
+ 
+     let imports = ws.original_imports.drain(..).collect_vec();
+ 
+     // Build the IR representation
++    log::info!("phase:ir:start");
+     let mut ctx = ir::from_ast::ast_to_ir(ws)?;
++    log::info!("phase:ir:end");
++    log::info!("memory:ir:end {:?}", calyx_utils::compiler_memory::snapshot());
+     // Configuration for the backend
+     ctx.bc = ir::BackendConf {
+         synthesis_mode: opts.enable_synthesis,
+@@ -73,6 +77,7 @@
+     ctx.extra_opts = opts.extra_opts.drain(..).collect();
+ 
+     // Run all passes specified by the command line
++    log::info!("phase:passes:start");
+     pm.execute_plan(
+         &mut ctx,
+         &opts.pass,
+@@ -80,6 +85,9 @@
+         &opts.insertions,
+         opts.dump_ir,
+     )?;
++
++    log::info!("phase:passes:end");
++    log::info!("phase:backend:start");
+ 
+     // Print out the Calyx program after transformation.
+     if opts.backend == BackendOpt::Calyx {
+@@ -97,8 +105,11 @@
+             out,
+         )?;
+ 
++        log::info!("phase:backend:end");
+         Ok(())
+     } else {
+-        Ok(opts.run_backend(ctx)?)
++        let result = opts.run_backend(ctx)?;
++        log::info!("phase:backend:end");
++        Ok(result)
+     }
+ }
+--- a/calyx/opt/src/pass_manager.rs
++++ b/calyx/opt/src/pass_manager.rs
+@@ -282,7 +282,9 @@
+             if cfg!(not(target_family = "wasm")) {
+                 if !excl_set.contains(&name) {
+                     let start = Instant::now();
++                    log::info!("pass:{name}:start");
+                     pass(ctx)?;
++                    log::info!("pass:{name}:end");
+                     if dump_ir {
+                         ir::Printer::write_context(
+                             ctx,
+@@ -301,7 +303,9 @@
+                     log::info!("{name}: Ignored")
+                 }
+             } else if !excl_set.contains(&name) {
++                log::info!("pass:{name}:start");
+                 pass(ctx)?;
++                log::info!("pass:{name}:end");
+             }
+         }
+ 
+--- a/calyx/opt/src/passes/cell_share.rs
++++ b/calyx/opt/src/passes/cell_share.rs
+@@ -327,7 +327,10 @@
+         sigs: &ir::LibrarySignatures,
+         _comps: &[ir::Component],
+     ) -> VisResult {
++        log::info!("cell-share:{}:liveness:start", comp.name);
+         self.initialize(comp, sigs);
++        log::info!("cell-share:{}:liveness:end", comp.name);
++        log::info!("cell-share:{}:graphs:start", comp.name);
+ 
+         let cells = comp.cells.iter().filter(|c| self.cell_filter(&c.borrow()));
+ 
+@@ -353,6 +356,9 @@
+                     (key, GraphColoring::from(cell_names.into_iter()))
+                 })
+                 .collect();
++
++        log::info!("cell-share:{}:graphs:end", comp.name);
++        log::info!("cell-share:{}:control-data:start", comp.name);
+ 
+         // We assume unique ids have already been computed by LiveRangeAnalysis
+ 
+@@ -374,6 +380,9 @@
+             &HashSet::new(),
+             &comp.control.borrow(),
+         );
++
++        log::info!("cell-share:{}:control-data:end", comp.name);
++        log::info!("cell-share:{}:conflicts:start", comp.name);
+ 
+         // Adding the conflicts
+         for (cell_type, cells) in &cells_by_type {
+@@ -432,6 +441,9 @@
+             }
+         }
+ 
++        log::info!("cell-share:{}:conflicts:end", comp.name);
++        log::info!("cell-share:{}:coloring:start", comp.name);
++
+         // perform graph coloring to rename the cells
+         let mut coloring: rewriter::RewriteMap<ir::Cell> = HashMap::new();
+         let mut comp_share_freqs: HashMap<ir::CellType, HashMap<i64, i64>> =
+@@ -475,6 +487,8 @@
+             }
+         }
+ 
++        log::info!("cell-share:{}:coloring:end", comp.name);
++
+         // add the sharing freqs for the component we just analyzed
+         if self.print_share_freqs.is_some() {
+             // must accumulate sharing numbers for share_freqs

@@ -1,0 +1,19 @@
+--- a/passes/techmap/deminout.cc
++++ b/passes/techmap/deminout.cc
+@@ -56,6 +56,16 @@
+ 
+ 			for (auto module : design->selected_modules())
+ 			{
++                bool has_inout = false;
++                for (auto wire : module->selected_wires())
++                    if (wire->port_input && wire->port_output) {
++                        has_inout = true;
++                        break;
++                    }
++                if (!has_inout) {
++                    log("Skipping connection analysis for %s: no selected inout ports\n", log_id(module));
++                    continue;
++                }
+ 				SigMap sigmap(module);
+ 				pool<SigBit> bits_written, bits_used, bits_inout, bits_tribuf;
+ 				dict<SigBit, int> bits_numports;

@@ -1,0 +1,50 @@
+--- a/calyx/opt/src/passes/merge_assign.rs
++++ b/calyx/opt/src/passes/merge_assign.rs
+@@ -37,23 +37,41 @@
+     // Map from (dst, src) -> Assignment
+     let mut map: LinkedHashMap<
+         (ir::Canonical, ir::Canonical),
+-        ir::Assignment<T>,
++        (ir::Assignment<T>, Vec<Box<ir::Guard<T>>>),
+     > = LinkedHashMap::new();
+ 
+-    for assign in assigns {
++    for mut assign in assigns {
+         let src_key = assign.src.borrow().canonical();
+         let dst_key = assign.dst.borrow().canonical();
+         let key = (dst_key, src_key);
+-        if let Some(asgn) = map.get_mut(&key) {
+-            *asgn.guard |= *assign.guard;
++        let guard = std::mem::replace(&mut assign.guard, Box::new(ir::Guard::True));
++        if let Some((_, guards)) = map.get_mut(&key) {
++            guards.push(guard);
+         } else {
+-            map.insert(key, assign);
++            map.insert(key, (assign, vec![guard]));
+         }
+     }
+ 
+     map.into_iter()
+         .sorted_by(|(k1, _), (k2, _)| Ord::cmp(k1, k2))
+-        .map(|(_, v)| v)
++        .map(|(_, (mut assignment, mut guards))| {
++            // OR is associative in four-state guard logic. Retain leaf order,
++            // source/destination ordering and the native Guard simplifications,
++            // but avoid creating a linear dependency chain during this pass.
++            while guards.len() > 1 {
++                let mut next = Vec::with_capacity(guards.len().div_ceil(2));
++                let mut iter = guards.into_iter();
++                while let Some(left) = iter.next() {
++                    next.push(match iter.next() {
++                        Some(right) => Box::new(*left | *right),
++                        None => left,
++                    });
++                }
++                guards = next;
++            }
++            assignment.guard = guards.pop().expect("assignment has a guard");
++            assignment
++        })
+         .collect::<Vec<_>>()
+ }
+ 

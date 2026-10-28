@@ -1,0 +1,55 @@
+--- a/calyx/opt/src/passes/static_promotion.rs
++++ b/calyx/opt/src/passes/static_promotion.rs
+@@ -1,6 +1,7 @@
+ use crate::analysis::{
+     CompactionAnalysis, InferenceAnalysis, PromotionAnalysis,
+ };
++use crate::passes::DeadGroupRemoval;
+ use crate::traversal::{
+     Action, ConstructVisitor, Named, Order, ParseVal, PassOpt, VisResult,
+     Visitor,
+@@ -45,6 +46,8 @@
+     cycle_limit: Option<u64>,
+     /// Whether to perform compaction. True by default
+     compaction: bool,
++    /// Retire unused dynamic originals after a completed component rewrite.
++    retire_dead_groups: bool,
+ }
+ 
+ // Override constructor to build latency_data information from the primitives
+@@ -60,6 +63,7 @@
+             if_diff_limit: opts["if-diff-limit"].pos_num(),
+             cycle_limit: opts["cycle-limit"].pos_num(),
+             compaction: opts["compaction"].bool(),
++            retire_dead_groups: opts["retire-dead-groups"].bool(),
+         })
+     }
+ 
+@@ -81,6 +85,12 @@
+ 
+     fn opts() -> Vec<PassOpt> {
+         vec![
++            PassOpt::new(
++                "retire-dead-groups",
++                "retire unused groups after each completed promotion rewrite",
++                ParseVal::Bool(false),
++                PassOpt::parse_bool,
++            ),
+             PassOpt::new(
+                 "threshold",
+                 "minimum number of groups needed to promote a dynamic control program to static",
+@@ -392,6 +402,14 @@
+         InferenceAnalysis::remove_promotable_attribute(
+             &mut comp.control.borrow_mut(),
+         );
++        if self.retire_dead_groups {
++            let mut cleanup = DeadGroupRemoval::default();
++            cleanup.traverse_component(comp, _lib, _comps)?;
++            log::info!("static-promotion:{}:cleanup:end", comp.name);
++            log::info!("memory:static-promotion:{}:after-cleanup {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++            calyx_utils::compiler_memory::reclaim_free_pages();
++            log::info!("memory:static-promotion:{}:after-reclamation {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        }
+         Ok(Action::Continue)
+     }
+ 

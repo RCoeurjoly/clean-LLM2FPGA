@@ -1,0 +1,59 @@
+--- a/calyx/opt/src/passes/cell_share.rs
++++ b/calyx/opt/src/passes/cell_share.rs
+@@ -2,6 +2,7 @@
+     AssignmentAnalysis, GraphColoring, LiveRangeAnalysis, ShareSet,
+     StaticParTiming,
+ };
++use crate::passes::DeadCellRemoval;
+ use crate::traversal::{
+     Action, ConstructVisitor, Named, ParseVal, PassOpt, VisResult, Visitor,
+ };
+@@ -134,6 +135,9 @@
+     /// sharing, and only sharing registers and combinational components
+     calyx_2020: bool,
+ 
++    /// Run native dead-cell removal after each component is rewritten.
++    retire_dead_cells: bool,
++
+     /// whether or not to print the share_freqs
+     print_share_freqs: Option<OutputFile>,
+     print_par_timing: Option<OutputFile>,
+@@ -154,6 +158,12 @@
+ 
+     fn opts() -> Vec<PassOpt> {
+         vec![
++            PassOpt::new(
++                "retire-dead-cells",
++                "run native dead-cell removal after sharing each component",
++                ParseVal::Bool(false),
++                PassOpt::parse_bool,
++            ),
+             PassOpt::new(
+                 "print-share-freqs",
+                 "print sharing frequencies",
+@@ -204,6 +214,7 @@
+             main: ctx.entrypoint,
+             share_freqs: HashMap::new(),
+             calyx_2020: opts["calyx-2020"].bool(),
++            retire_dead_cells: opts["retire-dead-cells"].bool(),
+             bounds: opts["bounds"].num_list_exact::<3>(),
+             print_par_timing: opts["print-par-timing"].not_null_outstream(),
+             print_share_freqs: opts["print-share-freqs"].not_null_outstream(),
+@@ -510,6 +521,17 @@
+         // Rewrite control uses of ports
+         rewriter.rewrite_control(&mut comp.control.borrow_mut());
+ 
++        if self.retire_dead_cells {
++            log::info!("cell-share:{}:cleanup:start", comp.name);
++            let mut cleanup = DeadCellRemoval::default();
++            cleanup.traverse_component(comp, sigs, _comps)?;
++            log::info!("cell-share:{}:cleanup:end", comp.name);
++            log::info!("memory:cell-share:{}:after-cleanup {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++            let reclaimed = calyx_utils::compiler_memory::reclaim_free_pages();
++            log::info!("cell-share:{}:allocator-reclamation {:?}", comp.name, reclaimed);
++            log::info!("memory:cell-share:{}:after-reclamation {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        }
++
+         Ok(Action::Stop)
+     }
+ 

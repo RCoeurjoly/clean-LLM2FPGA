@@ -1,0 +1,50 @@
+--- a/calyx/utils/src/lib.rs
++++ b/calyx/utils/src/lib.rs
+@@ -6,6 +6,7 @@
+ mod pos_string;
+ mod position;
+ mod weight_graph;
++pub mod packed_conflict_graph;
+ 
+ pub mod math;
+ pub mod math_utilities;
+--- a/calyx/utils/src/weight_graph.rs
++++ b/calyx/utils/src/weight_graph.rs
+@@ -1,6 +1,6 @@
+ use itertools::Itertools;
+-use petgraph::matrix_graph::{MatrixGraph, NodeIndex, UnMatrix, Zero};
+-use petgraph::visit::IntoEdgeReferences;
++use petgraph::matrix_graph::Zero;
++use crate::packed_conflict_graph::{NodeIndex, PackedConflictGraph};
+ use std::{collections::HashMap, fmt::Display, hash::Hash};
+ 
+ /// Index into a [WeightGraph]
+@@ -37,14 +37,14 @@
+     /// Mapping from T to a unique identifier.
+     pub index_map: HashMap<T, NodeIndex>,
+     /// Graph representating using identifier.
+-    pub graph: UnMatrix<(), BoolIdx>,
++    pub graph: PackedConflictGraph,
+ }
+ 
+ impl<T: Eq + Hash + Clone + Ord> Default for WeightGraph<T> {
+     fn default() -> Self {
+         WeightGraph {
+             index_map: HashMap::new(),
+-            graph: MatrixGraph::new_undirected(),
++            graph: PackedConflictGraph::new_undirected(),
+         }
+     }
+ }
+@@ -55,9 +55,10 @@
+     C: Iterator<Item = T>,
+ {
+     fn from(nodes: C) -> Self {
+-        let mut graph = MatrixGraph::new_undirected();
++        let mut graph = PackedConflictGraph::new_undirected();
+         let index_map: HashMap<_, _> =
+             nodes.map(|node| (node, graph.add_node(()))).collect();
++        graph.reserve_node_domain();
+         WeightGraph { index_map, graph }
+     }
+ }

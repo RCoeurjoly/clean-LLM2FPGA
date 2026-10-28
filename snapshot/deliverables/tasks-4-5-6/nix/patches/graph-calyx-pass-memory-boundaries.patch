@@ -1,0 +1,24 @@
+--- a/calyx/opt/src/pass_manager.rs
++++ b/calyx/opt/src/pass_manager.rs
+@@ -283,8 +283,10 @@
+                 if !excl_set.contains(&name) {
+                     let start = Instant::now();
+                     log::info!("pass:{name}:start");
++                    log::info!("memory:pass:{name}:start {:?}", calyx_utils::compiler_memory::snapshot());
+                     pass(ctx)?;
+                     log::info!("pass:{name}:end");
++                    log::info!("memory:pass:{name}:end {:?}", calyx_utils::compiler_memory::snapshot());
+                     if dump_ir {
+                         ir::Printer::write_context(
+                             ctx,
+@@ -304,8 +306,10 @@
+                 }
+             } else if !excl_set.contains(&name) {
+                 log::info!("pass:{name}:start");
++                log::info!("memory:pass:{name}:start {:?}", calyx_utils::compiler_memory::snapshot());
+                 pass(ctx)?;
+                 log::info!("pass:{name}:end");
++                log::info!("memory:pass:{name}:end {:?}", calyx_utils::compiler_memory::snapshot());
+             }
+         }
+ 

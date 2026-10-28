@@ -1,0 +1,59 @@
+--- a/passes/hierarchy/flatten.cc
++++ b/passes/hierarchy/flatten.cc
+@@ -19,6 +19,7 @@
+ 
+ #include "kernel/yosys.h"
+ #include "kernel/utils.h"
++#include "kernel/celltypes.h"
+ #include "kernel/sigtools.h"
+ 
+ #include <stdlib.h>
+@@ -499,4 +500,48 @@
+  }
+ } ConnectionHelper;
+ 
++struct WholeAlias : Pass {
++ WholeAlias():Pass("opt_whole_wire_aliases","retire uniquely driven whole-wire aliases"){}
++ void execute(std::vector<std::string> args,RTLIL::Design *design) override {
++  extra_args(args,1,design);CellTypes types;types.setup(design);
++  for(auto module:design->selected_whole_modules_warn()) {
++   if(!module->processes.empty())continue;
++   dict<Wire*,int> drivers;pool<Wire*> blocked;
++   for(auto wire:module->wires())
++    if(wire->port_id || wire->get_bool_attribute(ID::keep) || wire->has_attribute(ID::init))blocked.insert(wire);
++   for(auto cell:module->cells())for(auto &port:cell->connections())
++    if(!types.cell_known(cell->type) || types.cell_output(cell->type,port.first))
++     for(auto chunk:port.second.chunks())if(chunk.wire)blocked.insert(chunk.wire);
++   for(auto &connection:module->connections())for(auto chunk:connection.first.chunks())if(chunk.wire)drivers[chunk.wire]++;
++   dict<Wire*,Wire*> candidates, replacements;
++   for(auto &connection:module->connections()) {
++    auto left=connection.first.chunks(),right=connection.second.chunks();
++    if(left.size()!=1 || right.size()!=1)continue;
++    auto a=(*left.begin()),b=(*right.begin());
++    if(!a.wire || !b.wire || a.wire==b.wire || a.offset || b.offset ||
++       a.width!=a.wire->width || b.width!=b.wire->width || a.width!=b.width ||
++       blocked.count(a.wire) || drivers.at(a.wire)!=1)continue;
++    candidates[a.wire]=b.wire;
++   }
++   for(auto &item:candidates) {
++    pool<Wire*> visited;Wire *target=item.first;
++    while(candidates.count(target) && !visited.count(target)){visited.insert(target);target=candidates.at(target);}
++    if(!visited.count(target))replacements[item.first]=target;
++   }
++   if(replacements.empty())continue;
++   auto rewrite=[&](SigSpec &sig){std::vector<SigChunk> chunks=sig.chunks();for(auto &chunk:chunks)if(chunk.wire && replacements.count(chunk.wire))chunk.wire=replacements.at(chunk.wire);sig=chunks;};
++   std::vector<SigSig> connections;
++   for(auto &connection:module->connections()) {
++    auto left=connection.first.chunks();
++    if(left.size()==1 && replacements.count((*left.begin()).wire))continue;
++    auto copy=connection;rewrite(copy.first);rewrite(copy.second);connections.push_back(copy);
++   }
++   module->connections_=connections;
++   for(auto cell:module->cells())cell->rewrite_sigspecs(rewrite);
++   pool<Wire*> retired;for(auto &item:replacements)retired.insert(item.first);
++   log("Retired %d whole-wire aliases in %s.\n",GetSize(retired),log_id(module));module->remove(retired);
++  }
++ }
++} WholeAlias;
++
+ PRIVATE_NAMESPACE_END

@@ -1,0 +1,47 @@
+--- a/CalyxEmitter.cpp
++++ b/CalyxEmitter.cpp
+@@ -647,11 +647,23 @@
+ 
+ /// Emit an entire program.
+ void Emitter::emitModule(ModuleOp op) {
++  SmallVector<Attribute> emittedFiles;
+   for (auto &bodyOp : *op.getBody()) {
+     if (auto componentOp = dyn_cast<ComponentInterface>(bodyOp))
+       emitComponent(componentOp);
+-    else if (auto hwModuleExternOp = dyn_cast<hw::HWModuleExternOp>(bodyOp))
+-      emitPrimitiveExtern(hwModuleExternOp);
++    else if (auto hwModuleExternOp = dyn_cast<hw::HWModuleExternOp>(bodyOp)) {
++      Attribute filename = hwModuleExternOp->getAttr("filename");
++      if (llvm::is_contained(emittedFiles, filename))
++        continue;
++      emittedFiles.push_back(filename);
++      indent() << "extern " << filename << space() << LBraceEndL();
++      addIndent();
++      for (auto declaration : op.getOps<hw::HWModuleExternOp>())
++        if (declaration->getAttr("filename") == filename)
++          emitPrimitiveExtern(declaration);
++      reduceIndent();
++      os << RBraceEndL();
++    }
+     else
+       emitOpError(&bodyOp, "Unexpected op");
+   }
+@@ -742,9 +754,6 @@
+ 
+ /// Emit a primitive extern
+ void Emitter::emitPrimitiveExtern(hw::HWModuleExternOp op) {
+-  Attribute filename = op->getAttrDictionary().get("filename");
+-  indent() << "extern " << filename << space() << LBraceEndL();
+-  addIndent();
+   indent() << "primitive " << op.getName();
+ 
+   if (!op.getParameters().empty()) {
+@@ -759,8 +768,6 @@
+   // Emit the ports.
+   emitPrimitivePorts(op);
+   os << semicolonEndL();
+-  reduceIndent();
+-  os << RBraceEndL();
+ }
+ 
+ /// Emit the ports of a component.

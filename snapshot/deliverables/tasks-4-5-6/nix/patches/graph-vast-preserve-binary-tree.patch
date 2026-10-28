@@ -1,0 +1,15 @@
+--- a/src/subset/pretty_print.rs
++++ b/src/subset/pretty_print.rs
+@@ -87,7 +87,11 @@
+                 .append(op.to_doc())
+                 .append(RcDoc::space())
+                 .append(print_expr(rhs, ctx));
+-            if cur_ctx > ctx {
++            // Preserve the typed expression tree, including equal-precedence
++            // children. Flattening a balanced associative guard into one line
++            // makes downstream parsers rebuild a linear, deeply recursive AST.
++            // Parentheses serialize the existing AST; no operation is changed.
++            if cur_ctx >= ctx {
+                 doc.parens()
+             } else {
+                 doc

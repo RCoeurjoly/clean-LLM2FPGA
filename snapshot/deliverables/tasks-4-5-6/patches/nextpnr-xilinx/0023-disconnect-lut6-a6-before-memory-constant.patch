@@ -1,0 +1,10 @@
+--- a/xilinx/arch_place.cc
++++ b/xilinx/arch_place.cc
+@@ -666,1 +666,2 @@ void Arch::fixupPlacement()
+-                    connect_port(getCtx(), nets[id("$PACKER_VCC_NET")].get(), lut6, id_A6);
++                    disconnect_port(getCtx(), lut6, id_A6);
++                    connect_port(getCtx(), nets[id("$PACKER_VCC_NET")].get(), lut6, id_A6);
+@@ -727,1 +728,2 @@ void Arch::fixupPlacement()
+-                connect_port(getCtx(), nets[id("$PACKER_VCC_NET")].get(), lut6, id_A6);
++                disconnect_port(getCtx(), lut6, id_A6);
++                connect_port(getCtx(), nets[id("$PACKER_VCC_NET")].get(), lut6, id_A6);

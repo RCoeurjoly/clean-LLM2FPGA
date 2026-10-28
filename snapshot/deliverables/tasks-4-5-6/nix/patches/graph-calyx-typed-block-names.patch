@@ -1,0 +1,45 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -36,6 +36,7 @@
+ #include <algorithm>
+ #include <filesystem>
+ #include <fstream>
++#include <iterator>
+ 
+ #include <locale>
+ #include <numeric>
+@@ -56,6 +57,14 @@
+ namespace scftocalyx {
+ 
+ static constexpr std::string_view unrolledParallelAttr = "calyx.unroll";
++
++// Supported source regions use MLIR's default block names. Obtain that ordinal
++// from typed IR, without constructing an AsmState for the unfinished module.
++static std::string sourceBlockName(Block *block) {
++  auto ordinal = std::distance(block->getParent()->begin(), block->getIterator());
++  return "bb" + std::to_string(ordinal);
++}
++
+ 
+ //===----------------------------------------------------------------------===//
+ // Utility types
+@@ -595,7 +604,7 @@
+   TGroupOp createGroupForOp(PatternRewriter &rewriter, Operation *op) const {
+     Block *block = op->getBlock();
+     auto groupName = getState<ComponentLoweringState>().getUniqueName(
+-        loweringState().blockName(block));
++        sourceBlockName(block));
+     return calyx::createGroup<TGroupOp>(
+         rewriter, getState<ComponentLoweringState>().getComponentOp(),
+         op->getLoc(), groupName);
+@@ -1548,8 +1557,8 @@
+     if (succOperands.empty())
+       continue;
+     // Create operand passing group
+-    std::string groupName = loweringState().blockName(srcBlock) + "_to_" +
+-                            loweringState().blockName(succBlock.value());
++    std::string groupName = sourceBlockName(srcBlock) + "_to_" +
++                            sourceBlockName(succBlock.value());
+     auto groupOp = calyx::createGroup<calyx::GroupOp>(rewriter, getComponent(),
+                                                       brOp.getLoc(), groupName);
+     // Fetch block argument registers associated with the basic block

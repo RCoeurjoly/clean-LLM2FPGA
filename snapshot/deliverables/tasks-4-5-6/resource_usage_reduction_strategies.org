@@ -1,0 +1,123 @@
+#+TITLE: Task 6 — TinyStories-1M resource reduction and FPGA fit
+#+DATE: 2026-09-29
+
+This is the donor's Task 6 strategy report imported at =37b2d6c=. Donor-only
+diagnostic paths cited below are historical references, not active build inputs.
+
+* Scope and decision
+
+Task 3 reported approximately 143x resource overutilization. Task 6's
+engineering objective is to obtain a functionally valid compiler-generated
+TinyStories-1M implementation that fits the YPCB Kintex-7 FPGA. The measured
+on-chip candidate has now legally routed and run the authenticated full
+16-token continuation on the board. Its fit evidence and limitations are
+audited in [[file:docs/results/2026-09-29-task6-fit-audit.md][the Task 6 fit audit]]. Stop the strategy search here; a campaign of five
+more experiments would not advance the agreed objective.
+
+On 2026-10-09 the user assured us that the accepted Task 6 scope is to explore
+5–10 strategies toward FPGA fit and stop evaluating new strategies once fit
+is achieved. We rely on that assurance; no separate written acceptance was
+provided. Accordingly, the strategy count in
+[[file:../../docs/project-plan_v2.org][project-plan_v2.org]] does not require further experiments after successful
+fit. TinyStories-1M is the fit target documented in this report. The original
+deliverables remain a survey, usage/reproduction references, and a
+before/after comparison. This report does not assert that fit alone proves
+Task 4 board-inference packaging or full timing qualification.
+
+* Strategy inventory and viability
+
+| Strategy or route | Actual evidence | Resource comparison | Viability |
+|-
+| Quantized/fixed-point full-model contract | The authenticated oracle uses per-output INT8 weights, per-channel INT8 activations, Q16.16 values, Q8.24 scales, signed-64-bit serial MAC, and an eight-layer shared compiler schedule; the accepted full16 board result matches that oracle. See =artifacts/reference/tinystories-1m-fixed-point-continuation-oracle.json= and [[file:docs/results/2026-09-29-compiler-full16-bram-board-acceptance.md][board acceptance]]. | Not isolated from schedule and memory changes. The Task 3 FP32/early PT2E flows used different graph, arithmetic, memory visibility and tool boundaries. No defensible LUT/FF/BRAM/DSP, Fmax, runtime or peak-memory delta can be assigned to quantization alone. | Valid as part of the fitting system; standalone savings unquantified. Do not substitute this oracle for the earlier PT2E W8A8/INT32 oracle without stating the changed numerical contract. |
+| Serial/shared compiler datapath | The accepted compiler provenance reports one shared transformer-block datapath across eight layers; it is not copied kev-gpt RTL. See the route receipt =/nix/store/vl799qzyilfyjyiysvz06klrz487h13n-compiler-full16-two-rom-placement-route-90m/receipt.json=. | No otherwise-identical unshared full-model synthesis/route was found; isolated resource and iteration-cost deltas are unavailable. | Present in the fitting system, but not a measured single-variable reduction. Calyx adoption itself is a backend choice, not an additional strategy count. |
+| Immutable =c_proj= projection ROM: LUTRAM to BRAM | The same full16 compiler candidate and authenticated image are compared with only that primitive mapping changed. See [[file:docs/results/2026-09-28-ramb36-odd-width-configuration.md][mapping report]] and =/nix/store/fm9bk4ynkh7rzzcd1rdbh5w475dl0q88-compiler-full16-two-rom-native-resource-comparison/receipt.json=. | Direct native-cell before/after below. The two-ROM candidate routes and passes board inference; the one-ROM profile did not obtain an equivalent accepted route. | Measured, beneficial, accepted in the fitting implementation. |
+| Externalize immutable weights to DDR3 | The donor-only =docs/results/2026-09-15-ddr3-feasibility.md= and =docs/results/2026-09-16-projection-memory-equivalence.md= provide access and memory-contract evidence. The later donor-only =docs/results/2026-09-22-compiler-ddr3-full-accelerator-route.md= did not produce a qualified full-accelerator bitstream. | No same-contract BRAM-versus-routed-DDR3 full-model before/after pair. Full-model timing/resource deltas and board inference are unavailable. | Investigated alternative, not a successful Task 6 implementation; further DDR3 work is deferred. |
+
+Historical PT2E W8A8/direct-Linalg and generic Calyx attempts are not counted
+as additional successful reductions. The full-model direct-Linalg path stopped
+before Calyx/SystemVerilog and has no FPGA-utilization result
+in donor =docs/results/2026-07-15-full-w8a8-direct-linalg-scout.md=. The PT2E W8A8 Calyx memory-blackbox diagnostic retained an
+unimplemented memory service; its provisional counts are not comparable to
+the fitted complete design (donor =docs/adr/2026-07-13-calyx-memory-blackbox-diagnostic.md=).
+
+* Controlled before/after resource table
+
+The one-ROM and two-ROM versions have the same full16 compiler control and
+static image. Counts below are actual native Yosys cell counts from the
+[[file:docs/results/2026-09-28-ramb36-odd-width-configuration.md][mapping report]] and machine-readable comparison receipt. LUT means the
+sum of =LUT1= through =LUT6= cells; FF means =FDRE+FDCE+FDPE+FDSE=. Neither
+number includes RAM64M as ordinary LUTs or asserts a datasheet six-LUT count.
+Rebuild both sides and regenerate these counts from committed sources with
+=nix build .#task6-bram-one-rom-comparison --no-link --print-out-paths=;
+the output =receipt.json= checks the same image and every listed native-cell
+count. The placed-Fmax row is historical evidence from the mapping report,
+not regenerated by this synthesis-only comparison. No routed or board-tested
+one-ROM baseline is claimed.
+
+| Metric | One-ROM baseline | Two-ROM candidate | Candidate minus baseline |
+|-
+| LUT1–LUT6 | 44,906 | 37,793 | -7,113 |
+| FF | 16,783 | 16,780 | -3 |
+| RAMB36E1 | 784 | 813 | +29 |
+| RAMB18E1 | 89 | 89 | 0 |
+| RAM64M | 15,150 | 9,688 | -5,462 |
+| DSP48E1 | 190 | 190 | 0 |
+| Placed accelerator-clock estimate | 35.33 MHz | 41.70 MHz | +6.37 MHz |
+| Routed accelerator-clock report | no accepted comparable route | 55.08 MHz, covered paths only | not comparable |
+| Full route runtime | no accepted comparable route | 1,717.42 s | not comparable |
+| Compiler postpass runtime | not recorded comparably | 3.015 s | not comparable |
+| Peak host memory | not recorded comparably | not recorded comparably | unavailable |
+
+The accepted route ends with zero overused wires and zero architecture
+failures at 30 MHz. BRAM/DSP internal timing coverage remains incomplete.
+The LUTRAM-to-BRAM mapping is not the entire Task 3-to-Task 6 improvement:
+numeric, scheduling, memory-lifetime and backend changes differ from that
+historical flow, so assigning its reported 143x reduction to one pass would
+be false precision.
+
+* Reproduction and source closure
+
+- The stable reference and compiler entry points are committed under
+  =artifacts/reference/tinystories-1m-fixed-point-continuation-oracle.json=,
+  =scripts/pipeline/lower_fixed_point_model_to_calyx.py=,
+  =scripts/pipeline/lower_fixed_point_model_bram_production.py=, and
+  =scripts/pipeline/run_bram_production_sv.py=. Separately, the fit audit
+  rehashed the three compiler modules named in the accepted postpass
+  provenance: =lower_fixed_point_block_composition_to_calyx.py=,
+  =lower_fixed_point_attention_crossing_to_calyx.py=, and
+  =lower_fixed_point_mlp_crossing_to_calyx.py=, all under =scripts/pipeline/=.
+- From a checkout of this branch with its pinned flake inputs available,
+  run =nix build .#task6-bram-bitstream --no-link --print-out-paths=. The
+  committed stages =task6-bram-postpass=, =task6-bram-image=,
+  =task6-bram-synthesis=, =task6-bram-placement=, =task6-bram-route=, and
+  =task6-bram-bitstream= can also be built individually to inspect their
+  receipts. The model snapshot and exact 1M data package are Nix-pinned;
+  no kev-gpt accelerator RTL is used.
+- For the controlled ROM-mapping ablation, build
+  =.#task6-bram-one-rom-comparison=. Its committed one-ROM image and synthesis
+  stages use the same postpass control and all 89 model images as the accepted
+  two-ROM candidate; its receipt computes the before/after table from both
+  source-rebuilt native netlists.
+- The source-rebuilt compiler SV and all 89 model images match their archived
+  hashes. Its native netlist matches structurally after excluding Yosys source
+  paths embedded in metadata/net names. The legal route has the same sorted
+  FASM feature multiset; configuration frames and bitread-decoded bits match
+  the board-tested image byte-for-byte. The rebuilt =.bit= file itself has a
+  different SHA-256 because xc7frames2bit writes the output path and date/time
+  in the header. See the [[file:docs/results/2026-09-29-task6-fit-audit.md][fit audit]] for exact hashes and limits.
+
+* Conclusion
+
+The measured full-model system fits, legally routes and performs exact
+on-board autoregressive inference, so Task 6 is complete under the approved
+TinyStories-1M baseline and early-stop rule. The ROM-mapping ablation is the
+defensible quantitative single-variable resource result. The numerical and
+shared-datapath contributions are real parts of the accepted system but lack
+isolated deltas. DDR3 externalization was investigated and deferred. The
+committed Nix recipe reproduces the accepted FPGA configuration without
+relying on historical ad hoc store derivations. It does not establish full
+BRAM/DSP timing coverage or constitute a new hardware run. The early-stop
+scope rests on the user's acceptance assurance recorded above; this report
+does not independently establish a written funder decision. That assurance
+does not resolve the separate review of graph-derived lowering, numerical
+correctness, or removal of active textual RTL transformations.

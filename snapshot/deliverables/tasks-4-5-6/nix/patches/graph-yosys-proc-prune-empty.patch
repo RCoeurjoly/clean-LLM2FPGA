@@ -1,0 +1,13 @@
+--- a/passes/proc/proc_prune.cc
++++ b/passes/proc/proc_prune.cc
+@@ -128,6 +128,10 @@
+ 		extra_args(args, 1, design);
+ 
+ 		for (auto mod : design->all_selected_modules()) {
++            if (mod->processes.empty()) {
++                log("Skipping alias analysis for %s: no processes\n", log_id(mod));
++                continue;
++            }
+ 			PruneWorker worker(mod);
+ 			for (auto proc : mod->selected_processes())
+ 				worker.do_process(proc);

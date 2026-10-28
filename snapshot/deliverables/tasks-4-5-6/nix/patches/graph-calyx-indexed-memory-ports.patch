@@ -1,0 +1,91 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -195,6 +195,79 @@
+ 
+ private:
+   ControlGroupUses controlUses;
++};
++
++// All memory interfaces registered by this pinned SCF conversion are typed
++// SeqMemoryOp cells (buildAllocOp and BuildOpGroups for memref arguments).
++// Index their actual input ports once. MemoryOp is included for the matching
++// upstream physical-memory interface. No memory is created in this phase;
++// only SliceLibOp and PadLibOp are added by the unchanged width-conversion rule.
++class IndexedRewriteMemoryAccesses
++    : public calyx::PartialLoweringPattern<calyx::AssignOp> {
++public:
++  IndexedRewriteMemoryAccesses(MLIRContext *context, LogicalResult &resRef,
++                              calyx::PatternApplicationState &patternState,
++                              calyx::CalyxLoweringState &cls)
++      : PartialLoweringPattern(context, resRef, patternState), cls(cls) {}
++
++  LogicalResult partiallyLower(calyx::AssignOp assignOp,
++                               PatternRewriter &rewriter) const override {
++    auto component = assignOp->getParentOfType<calyx::ComponentOp>();
++    auto found = inputPorts.find(component.getOperation());
++    if (found == inputPorts.end()) {
++      llvm::DenseSet<Value> ports;
++      for (Operation &op : component.getBody().getOps()) {
++        std::optional<calyx::MemoryInterface> memory;
++        if (auto cell = dyn_cast<calyx::SeqMemoryOp>(&op))
++          memory.emplace(cell);
++        else if (auto cell = dyn_cast<calyx::MemoryOp>(&op))
++          memory.emplace(cell);
++        if (!memory)
++          continue;
++        ports.insert(memory->writeEn());
++        ports.insert(memory->writeData());
++        for (Value address : memory->addrPorts())
++          ports.insert(address);
++      }
++      found = inputPorts.try_emplace(component.getOperation(),
++                                     std::move(ports)).first;
++    }
++    Value dest = assignOp.getDest();
++    if (!found->second.contains(dest))
++      return success();
++    auto *state = cls.getState(component);
++    Value src = assignOp.getSrc();
++    unsigned srcBits = src.getType().getIntOrFloatBitWidth();
++    unsigned dstBits = dest.getType().getIntOrFloatBitWidth();
++    if (srcBits == dstBits)
++      return success();
++
++    SmallVector<Type> types = {
++        rewriter.getIntegerType(srcBits),
++        rewriter.getIntegerType(dstBits),
++    };
++    mlir::Location loc = assignOp.getLoc();
++    Operation *newOp;
++    if (srcBits > dstBits)
++      newOp =
++          state->getNewLibraryOpInstance<calyx::SliceLibOp>(rewriter, loc, types);
++    else
++      newOp =
++          state->getNewLibraryOpInstance<calyx::PadLibOp>(rewriter, loc, types);
++
++    rewriter.setInsertionPoint(assignOp->getBlock(),
++                               assignOp->getBlock()->begin());
++    calyx::AssignOp::create(rewriter, assignOp->getLoc(), newOp->getResult(0),
++                            src);
++    assignOp.setOperand(1, newOp->getResult(1));
++
++    return success();
++  }
++
++
++private:
++  calyx::CalyxLoweringState &cls;
++  mutable llvm::DenseMap<Operation *, llvm::DenseSet<Value>> inputPorts;
+ };
+ 
+ //===----------------------------------------------------------------------===//
+@@ -3213,7 +3286,7 @@
+ 
+   /// This pattern rewrites accesses to memories which are too wide due to
+   /// index types being converted to a fixed-width integer type.
+-  addOncePattern<calyx::RewriteMemoryAccesses>(loweringPatterns, patternState,
++  addOncePattern<IndexedRewriteMemoryAccesses>(loweringPatterns, patternState,
+                                                *loweringState);
+ 
+   /// This pattern removes the source FuncOp which has now been converted into

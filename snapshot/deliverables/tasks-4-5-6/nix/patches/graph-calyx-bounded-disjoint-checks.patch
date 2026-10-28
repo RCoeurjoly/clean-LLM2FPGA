@@ -1,0 +1,147 @@
+--- a/calyx/backend/src/verilog.rs
++++ b/calyx/backend/src/verilog.rs
+@@ -630,8 +630,7 @@
+         })
+         .collect();
+ 
+-    if flat_assign {
+-        // Reserve component identifiers before introducing priority wires.
++    // Reserve component identifiers before introducing private backend wires.
+         let mut names: HashSet<calyx_utils::Id> = cells
+             .iter().map(|(name, _, _)| name.as_str().into()).collect();
+         names.extend(sig.ports.iter().map(|port| port.borrow().name));
+@@ -647,6 +646,7 @@
+             names.insert(VerilogGuardRef(idx).to_string().into());
+         }
+         let mut names = calyx_utils::NameGenerator::with_prev_defined_names(names);
++    if flat_assign {
+         // Emit "flattened" assignments as ANF statements.
+         // Emit Verilog for the flattened guards.
+         for (idx, guard) in pool.iter() {
+@@ -660,9 +660,10 @@
+             emit_assignment_flat(dst, asgns, &mut names, f)?;
+ 
+             if enable_verification {
+-                if let Some(check) =
+-                    emit_guard_disjoint_check(dst, asgns, &pool, true)
++                if let Some((wires, check)) =
++                    emit_guard_disjoint_check(dst, asgns, &pool, true, &mut names)
+                 {
++                    for (name, expr) in wires { writeln!(f, "wire {name} = {expr};")?; }
+                     writeln!(f, "always_comb begin")?;
+                     writeln!(f, "  {check}")?;
+                     writeln!(f, "end")?;
+@@ -680,9 +681,10 @@
+             writeln!(f, "{stmt}")?;
+ 
+             if enable_verification {
+-                if let Some(check) =
+-                    emit_guard_disjoint_check(dst, &asgns, &pool, false)
++                if let Some((wires, check)) =
++                    emit_guard_disjoint_check(dst, &asgns, &pool, false, &mut names)
+                 {
++                    for (name, expr) in wires { writeln!(f, "wire {name} = {expr};")?; }
+                     checks.add_seq(check);
+                 }
+             }
+@@ -1013,6 +1015,60 @@
+     io::Result::Ok(())
+ }
+ 
++/// Lower guard-disjointness to bounded typed Verilog AST expressions.
++/// `$onehot0` counts known one bits (X/Z do not count). Each chunk must
++/// therefore be locally disjoint, and at most one chunk may contain a known
++/// one. `$countones(chunk) > 0` gives a known one-bit presence summary even
++/// when the original guards contain X/Z. Repeat on summaries to bound every
++/// concatenation, without changing the failure condition or dropping checks.
++fn lower_bounded_disjoint_check(mut guards: Vec<v::Expr>, names: &mut calyx_utils::NameGenerator) -> (Vec<(calyx_utils::Id, v::Expr)>, v::Expr) {
++    const MAX_GUARDS: usize = 128;
++    let mut wires = Vec::new();
++    let mut checks = Vec::new();
++    let mut share = |expr: v::Expr| {
++        let name = names.gen_name("_calyx_guard_check");
++        let reference = v::Expr::new_ref(name.to_string());
++        wires.push((name, expr));
++        reference
++    };
++    while guards.len() > MAX_GUARDS {
++        let mut summaries = Vec::with_capacity(guards.len().div_ceil(MAX_GUARDS));
++        for chunk in guards.chunks(MAX_GUARDS) {
++            let mut concat = v::ExprConcat::default();
++            for guard in chunk {
++                concat.add_expr(guard.clone());
++            }
++            let expression = v::Expr::Concat(concat);
++            checks.push(share(v::Expr::new_call("$onehot0", vec![expression.clone()])));
++            summaries.push(share(v::Expr::new_gt(
++                v::Expr::new_call("$countones", vec![expression]),
++                v::Expr::new_int(0),
++            )));
++        }
++        guards = summaries;
++    }
++    let mut concat = v::ExprConcat::default();
++    for guard in guards {
++        concat.add_expr(guard);
++    }
++    let final_check = v::Expr::new_call("$onehot0", vec![v::Expr::Concat(concat)]);
++    if checks.is_empty() { return (wires, final_check); }
++    checks.push(share(final_check));
++    // Balance the conjunction as well as bounding the vector operations.
++    while checks.len() > 1 {
++        let mut next = Vec::with_capacity(checks.len().div_ceil(2));
++        let mut iter = checks.into_iter();
++        while let Some(left) = iter.next() {
++            next.push(match iter.next() {
++                Some(right) => share(v::Expr::new_logical_and(left, right)),
++                None => left,
++            });
++        }
++        checks = next;
++    }
++    (wires, checks.pop().expect("a guard check contains a vector"))
++}
++
+ /// Generates an always block that checks of the guards are disjoint when the
+ /// length of assignments is greater than 1:
+ /// ```verilog
+@@ -1027,23 +1083,22 @@
+     assignments: &[(RRC<ir::Port>, GuardRef)],
+     pool: &ir::GuardPool,
+     flat: bool,
+-) -> Option<v::Sequential> {
++    names: &mut calyx_utils::NameGenerator,
++) -> Option<(Vec<(calyx_utils::Id, v::Expr)>, v::Sequential)> {
+     if assignments.len() < 2 {
+         return None;
+     }
+-    // Construct concat with all guards.
+-    let mut concat = v::ExprConcat::default();
+-    assignments.iter().for_each(|(_, gr)| {
++    let guards = assignments.iter().map(|(_, gr)| {
+         let expr = if flat {
+             v::Expr::new_ref(VerilogGuardRef(*gr).to_string())
+         } else {
+             let guard = pool.get(*gr);
+             guard_to_expr(guard, pool)
+         };
+-        concat.add_expr(expr);
+-    });
+-
+-    let onehot0 = v::Expr::new_call("$onehot0", vec![v::Expr::Concat(concat)]);
++        expr
++    }).collect();
++
++    let (wires, onehot0) = lower_bounded_disjoint_check(guards, names);
+     let not_onehot0 = v::Expr::new_not(onehot0);
+     let mut check = v::SequentialIfElse::new(not_onehot0);
+ 
+@@ -1055,7 +1110,7 @@
+         vec![v::Expr::new_int(2), v::Expr::Str(msg)],
+     ));
+     check.add_seq(err);
+-    Some(v::Sequential::If(check))
++    Some((wires, v::Sequential::If(check)))
+ }
+ 
+ /// Checks if:

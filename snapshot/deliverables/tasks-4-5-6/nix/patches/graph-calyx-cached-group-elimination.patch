@@ -1,0 +1,111 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -67,9 +67,33 @@
+ }
+ 
+ 
+-// BuildControl finishes before this pattern starts. This pattern changes only
+-// wires, so control symbol uses remain immutable for its entire lifetime.
+-// Keep the cache local to this pattern: no cross-pass or cross-module state.
++// Each consumer owns its own cache. BuildControl has finished, and neither
++// combinational inlining nor unused-group elimination changes control uses.
++class ControlGroupUses {
++public:
++  bool isKnownUnused(calyx::ComponentOp component, StringAttr name) const {
++    auto found = users.find(component.getOperation());
++    if (found == users.end()) {
++      std::optional<llvm::DenseSet<StringAttr>> names;
++      // ControlOp is a symbol table: query its body to visit the schedule.
++      auto uses = SymbolTable::getSymbolUses(
++          &component.getControlOp()->getRegion(0));
++      if (uses) {
++        names.emplace();
++        for (const auto &use : *uses)
++          names->insert(use.getSymbolRef().getRootReference());
++      }
++      found = users.try_emplace(component.getOperation(), std::move(names)).first;
++    }
++    // Preserve conservative behavior for unknown symbol-table operations.
++    return found->second && !found->second->contains(name);
++  }
++
++private:
++  mutable llvm::DenseMap<Operation *,
++                        std::optional<llvm::DenseSet<StringAttr>>> users;
++};
++
+ class CachedInlineCombGroups
+     : public calyx::PartialLoweringPattern<calyx::GroupInterface,
+                                           mlir::OpInterfaceRewritePattern> {
+@@ -82,25 +106,7 @@
+   LogicalResult partiallyLower(calyx::GroupInterface originGroup,
+                                PatternRewriter &rewriter) const override {
+     auto component = originGroup->getParentOfType<calyx::ComponentOp>();
+-    auto found = controlUsers.find(component.getOperation());
+-    if (found == controlUsers.end()) {
+-      std::optional<llvm::DenseSet<StringAttr>> names;
+-      // ControlOp is a symbol table. Query its body, rather than the operation,
+-      // so the query visits the schedule inside that symbol table.
+-      auto uses = SymbolTable::getSymbolUses(
+-          &component.getControlOp()->getRegion(0));
+-      if (uses) {
+-        names.emplace();
+-        for (const auto &use : *uses)
+-          names->insert(use.getSymbolRef().getRootReference());
+-      }
+-      found = controlUsers.try_emplace(component.getOperation(),
+-                                       std::move(names)).first;
+-    }
+-    // Unknown symbol-table operations retain the upstream conservative rule:
+-    // the group may be used, so do not skip its inlining.
+-    if (found->second &&
+-        !found->second->contains(originGroup.symName()))
++    if (controlUses.isKnownUnused(component, originGroup.symName()))
+       return success();
+     auto *state = cls.getState(component);
+     llvm::SmallSetVector<Operation *, 8> inlinedGroups;
+@@ -117,8 +123,7 @@
+       calyx::GroupInterface originGroup, calyx::GroupInterface recGroup,
+       bool doInline) const;
+   calyx::CalyxLoweringState &cls;
+-  mutable llvm::DenseMap<Operation *,
+-                        std::optional<llvm::DenseSet<StringAttr>>> controlUsers;
++  ControlGroupUses controlUses;
+ };
+ 
+ void CachedInlineCombGroups::recurseInlineCombGroups(
+@@ -172,6 +177,25 @@
+                             srcCombGroup, /*doInline=*/true);
+   }
+ }
++
++// The deletion rule is unchanged; only the repeated control query is shared.
++class CachedEliminateUnusedCombGroups
++    : public mlir::OpRewritePattern<calyx::CombGroupOp> {
++public:
++  using OpRewritePattern::OpRewritePattern;
++
++  LogicalResult matchAndRewrite(calyx::CombGroupOp group,
++                               PatternRewriter &rewriter) const override {
++    auto component = group->getParentOfType<calyx::ComponentOp>();
++    if (!controlUses.isKnownUnused(component, group.getSymNameAttr()))
++      return failure();
++    rewriter.eraseOp(group);
++    return success();
++  }
++
++private:
++  ControlGroupUses controlUses;
++};
+ 
+ //===----------------------------------------------------------------------===//
+ // Utility types
+@@ -3185,7 +3209,7 @@
+   /// Eliminate any unused combinational groups. This is done before
+   /// calyx::RewriteMemoryAccesses to avoid inferring slice components for
+   /// groups that will be removed.
+-  addGreedyPattern<calyx::EliminateUnusedCombGroups>(loweringPatterns);
++  addGreedyPattern<CachedEliminateUnusedCombGroups>(loweringPatterns);
+ 
+   /// This pattern rewrites accesses to memories which are too wide due to
+   /// index types being converted to a fixed-width integer type.

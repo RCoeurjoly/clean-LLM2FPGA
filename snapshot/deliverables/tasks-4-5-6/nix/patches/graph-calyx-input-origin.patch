@@ -1,0 +1,15 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -1987,6 +1987,12 @@
+         auto memOp = calyx::SeqMemoryOp::create(
+             rewriter, funcOp.getLoc(), memName,
+             memtype.getElementType().getIntOrFloatBitWidth(), sizes, addrSizes);
++        if (auto origin = funcOp.getArgAttrOfType<DictionaryAttr>(
++                arg.index(), "llm2fpga.input_origin"))
++          memOp->setAttr("llm2fpga.input_origin", origin);
++        if (auto role = funcOp.getArgAttrOfType<StringAttr>(
++                arg.index(), "llm2fpga.runtime_port"))
++          memOp->setAttr("llm2fpga.runtime_port", role);
+         // we don't set the memory to "external", which implies it's a reference
+ 
+         compState->registerMemoryInterface(arg.value(),

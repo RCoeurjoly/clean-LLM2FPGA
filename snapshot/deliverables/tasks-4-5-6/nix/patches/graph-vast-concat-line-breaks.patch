@@ -1,0 +1,12 @@
+--- a/src/subset/pretty_print.rs
++++ b/src/subset/pretty_print.rs
+@@ -149,9 +149,10 @@
+         intersperse(
+             self.exprs().iter().rev().map(|x| x.to_doc()),
+-            RcDoc::text(",").append(RcDoc::space()),
++            RcDoc::text(",").append(RcDoc::line()),
+         )
+         .braces()
++        .group()
+     }
+ }

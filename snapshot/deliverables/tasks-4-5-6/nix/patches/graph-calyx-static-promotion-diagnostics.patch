@@ -1,0 +1,25 @@
+--- a/calyx/opt/src/passes/static_promotion.rs
++++ b/calyx/opt/src/passes/static_promotion.rs
+@@ -345,6 +345,7 @@
+         _lib: &LibrarySignatures,
+         _comps: &[ir::Component],
+     ) -> VisResult {
++        log::info!("memory:static-promotion:{}:finish {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         if comp.name != "main" {
+             let comp_sig = comp.signature.borrow();
+             if comp.control.borrow().is_static() {
+@@ -400,11 +401,14 @@
+         _sigs: &LibrarySignatures,
+         _comps: &[ir::Component],
+     ) -> VisResult {
++        log::info!("memory:static-promotion:{}:start {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         // Re-infer static timing based on the components we have updated in
+         // this pass.
+         self.inference_analysis.fixup_timing(comp);
++        log::info!("memory:static-promotion:{}:timing:end {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         // Update the continuous reads and writes
+         self.compaction_analysis.update_cont_read_writes(comp);
++        log::info!("memory:static-promotion:{}:continuous-access:end {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         Ok(Action::Continue)
+     }
+ 

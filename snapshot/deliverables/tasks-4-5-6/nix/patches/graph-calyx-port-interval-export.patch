@@ -1,0 +1,14 @@
+--- a/CalyxEmitter.cpp
++++ b/CalyxEmitter.cpp
+@@ -58,9 +58,9 @@
+ static constexpr std::string_view metadataRBrace() { return "}#\n"; }
+ 
+ /// A list of integer attributes supported by the native Calyx compiler.
+-constexpr std::array<StringRef, 7> integerAttributes{
++constexpr std::array<StringRef, 8> integerAttributes{
+     "external",       "static",        "share", "bound",
+-    "write_together", "read_together", "pos",
++    "write_together", "read_together", "pos", "interval",
+ };
+ 
+ /// A list of boolean attributes supported by the native Calyx compiler.

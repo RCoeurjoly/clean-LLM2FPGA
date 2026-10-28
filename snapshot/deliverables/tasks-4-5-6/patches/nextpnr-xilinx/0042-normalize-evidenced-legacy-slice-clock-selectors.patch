@@ -1,0 +1,129 @@
+From: LLM2FPGA diagnostics
+Subject: [PATCH] xilinx: normalize evidenced legacy input inversion selectors
+
+Require explicit FASM-validated selections for slice, BUFGCTRL, BRAM, DSP and MMCM
+input inversion pairs. Unsupported ambiguities still fail closed. This normalizes physical
+configuration; it does not claim recovery of lost historical PIP identity.
+
+diff --git a/xilinx/arch.cc b/xilinx/arch.cc
+--- a/xilinx/arch.cc
++++ b/xilinx/arch.cc
+@@ -349,7 +349,111 @@ PipId Arch::getPipByName(IdString name) const
+-        for (PipId pip : getPipsDownhill(src)) {
+-            if (getPipDstWire(pip) != dst)
+-                continue;
+-            if (ret != PipId() && ret != pip)
+-                log_error("Ambiguous wire-to-wire PIP name '%s'\n", s.c_str());
+-            ret = pip;
+-        }
++        std::vector<PipId> candidates;
++        for (PipId pip : getPipsDownhill(src)) {
++            if (getPipDstWire(pip) == dst)
++                candidates.push_back(pip);
++        }
++        if (candidates.size() > 1) {
++            const PipId first = candidates.front();
++            const auto &info = locInfo(first);
++            const auto &base = info.pip_data[first.index];
++            bool mixed_variants = false;
++            bool same_site = base.flags == PIP_SITE_INTERNAL && base.site >= 0;
++            for (PipId candidate : candidates) {
++                const auto &pd = locInfo(candidate).pip_data[candidate.index];
++                same_site &= candidate.tile == first.tile && pd.site == base.site &&
++                             pd.flags == base.flags && pd.src_index == base.src_index &&
++                             pd.dst_index == base.dst_index;
++                mixed_variants |= pd.site_variant != base.site_variant;
++            }
++            if (same_site && mixed_variants) {
++                // Cell BELs are restored before routes. Use their actual site
++                // variant, never the default for an unoccupied site.
++                int placed_variant = -1;
++                for (int bel = 0; bel < info.num_bels; ++bel) {
++                    const auto &bd = info.bel_data[bel];
++                    if (bd.site != base.site || tileStatus[first.tile].boundcells[bel] == nullptr)
++                        continue;
++                    if (placed_variant >= 0 && placed_variant != bd.site_variant)
++                        log_error("Ambiguous wire-to-wire PIP name '%s' (conflicting placed variants)\n", s.c_str());
++                    placed_variant = bd.site_variant;
++                }
++                if (placed_variant >= 0) {
++                    candidates.erase(std::remove_if(candidates.begin(), candidates.end(), [&](PipId candidate) {
++                        return locInfo(candidate).pip_data[candidate.index].site_variant != placed_variant;
++                    }), candidates.end());
++                }
++            }
++        }
++        if (candidates.size() == 1) {
++            ret = candidates.front();
++        } else if (candidates.size() > 1) {
++            // Only independently evidenced input inversion pairs
++            // are supported. Never guess among other same-endpoint resources.
++            const PipId first = candidates.front();
++            const auto &a = locInfo(first).pip_data[first.index];
++            if (candidates.size() != 2 || a.flags != PIP_SITE_INTERNAL ||
++                a.site < 0)
++                log_error("Ambiguous wire-to-wire PIP name '%s' (unsupported selector)\n", s.c_str());
++            const PipId second = candidates[1];
++            const auto &b = locInfo(second).pip_data[second.index];
++            if (second.tile != first.tile || b.flags != a.flags || b.bel != a.bel ||
++                b.site != a.site || b.site_variant != a.site_variant ||
++                b.src_index != a.src_index || b.dst_index != a.dst_index ||
++                b.timing_class != a.timing_class)
++                log_error("Ambiguous wire-to-wire PIP name '%s' (non-equivalent pair)\n", s.c_str());
++            const std::string site = chip_info->tile_insts[first.tile].site_insts[a.site].name.get();
++            const std::string pin_a = IdString(a.extra_data).str(this);
++            const std::string pin_b = IdString(b.extra_data).str(this);
++            const std::string bel = IdString(a.bel).str(this);
++            const bool bram = site.substr(0, 7) == "RAMB18_" || site.substr(0, 7) == "RAMB36_";
++            if (!bram && a.site_variant != 0)
++                log_error("Ambiguous wire-to-wire PIP name '%s' (unsupported site variant)\n", s.c_str());
++            std::string input;
++            if (site.substr(0, 6) == "SLICE_" && bel == "CLKINV")
++                input = "CLK";
++            else if (site.substr(0, 9) == "BUFGCTRL_" &&
++                     (bel == "IGNORE0INV" || bel == "IGNORE1INV" || bel == "CE0INV" ||
++                      bel == "CE1INV" || bel == "S0INV" || bel == "S1INV"))
++                input = bel.substr(0, bel.size() - 3);
++            else if (bram) {
++                for (const std::string &pin : {"CLKARDCLK", "CLKBWRCLK", "ENARDEN", "ENBWREN",
++                                               "RSTRAMARSTRAM", "RSTRAMB", "RSTREGARSTREG", "RSTREGB"}) {
++                    for (const std::string &suffix : (site.substr(0, 7) == "RAMB36_"
++                            ? std::vector<std::string>{"L", "U"} : std::vector<std::string>{""})) {
++                        if (bel == pin + suffix + "INV")
++                            input = pin + suffix;
++                    }
++                }
++                if (input.empty())
++                    log_error("Ambiguous wire-to-wire PIP name '%s' (unsupported BRAM selector)\n", s.c_str());
++            }
++            else if (site.substr(0, 6) == "DSP48_") {
++                if (bel == "CLKINV" || bel == "CARRYININV")
++                    input = bel.substr(0, bel.size() - 3);
++                for (const auto &bus : std::vector<std::pair<std::string, int>>{
++                        {"ALUMODE", 4}, {"INMODE", 5}, {"OPMODE", 7}}) {
++                    for (int bit = 0; bit < bus.second; ++bit) {
++                        const std::string pin = bus.first + std::to_string(bit);
++                        if (bel == pin + "INV")
++                            input = pin;
++                    }
++                }
++                if (input.empty())
++                    log_error("Ambiguous wire-to-wire PIP name '%s' (unsupported DSP selector)\n", s.c_str());
++            }
++            else if (boost::starts_with(site, "MMCME2_ADV_") &&
++                     (bel == "CLKINSELINV" || bel == "RSTINV" || bel == "PWRDWNINV" ||
++                      bel == "PSENINV" || bel == "PSINCDECINV"))
++                input = bel.substr(0, bel.size() - 3);
++            else
++                log_error("Ambiguous wire-to-wire PIP name '%s' (unsupported selector)\n", s.c_str());
++            if (!((pin_a == input && pin_b == input + "_B") ||
++                  (pin_a == input + "_B" && pin_b == input)))
++                log_error("Ambiguous wire-to-wire PIP name '%s' (unsupported inputs)\n", s.c_str());
++            const std::string key = "checkpoint/selector/" + site + "/" + bel;
++            const std::string selected = str_or_default(settings, id(key), "");
++            if (selected != input && selected != input + "_B")
++                log_error("Ambiguous wire-to-wire PIP name '%s' (missing or invalid explicit selection)\n", s.c_str());
++            ret = selected == pin_a ? first : second;
++            log_info("Normalized legacy selector %s to %s using explicit configuration evidence.\n",
++                     site.c_str(), selected.c_str());
++        }

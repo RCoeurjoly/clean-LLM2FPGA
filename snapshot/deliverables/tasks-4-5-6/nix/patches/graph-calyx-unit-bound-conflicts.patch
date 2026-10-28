@@ -1,0 +1,32 @@
+--- a/calyx/opt/src/passes/cell_share.rs
++++ b/calyx/opt/src/passes/cell_share.rs
+@@ -277,6 +277,16 @@
+             return false;
+         }
+         if let Some(ref name) = cell.type_name() {
++            // Bound one permits only singleton colors: no cell of this class
++            // can be rewritten. Avoid building its quadratic conflict matrix.
++            // Keep the original path when frequency diagnostics are requested.
++            if !self.calyx_2020
++                && self.shareable.contains(name)
++                && self.bounds[0] == Some(1)
++                && self.print_share_freqs.is_none()
++            {
++                return false;
++            }
+             self.state_shareable.contains(name) || self.shareable.contains(name)
+         } else {
+             false
+@@ -377,6 +387,12 @@
+ 
+         // Adding the conflicts
+         for (cell_type, cells) in &cells_by_type {
++            log::info!(
++                "cell-share:{}:conflicts:type:{}:nodes:{}",
++                comp.name,
++                cell_type_to_string(cell_type),
++                cells.len()
++            );
+             // Run remove_dead_cells before this cell-share pass.
+             let g = graphs_by_type.get_mut(cell_type).unwrap();
+ 

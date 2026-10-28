@@ -1,0 +1,29 @@
+From: LLM2FPGA
+Subject: [PATCH] xilinx: emit RAMB36 odd-width mode configuration
+
+RAMB36 widths 1 and 9 require macro-level mode bits in addition to the
+RAMB18 half widths. Omitting them misconfigures odd-address/parity reads.
+Emit each read/write port's mode once, without changing INIT or routing.
+See Project X-Ray documentation, RAMB36 features (PDF page 58).
+
+diff --git a/xilinx/fasm.cc b/xilinx/fasm.cc
+--- a/xilinx/fasm.cc
++++ b/xilinx/fasm.cc
+@@ -1507,6 +1507,17 @@
+                 }
+                 write_bram_half(tile, 0, l);
+                 write_bram_half(tile, 1, u);
++                if (l != nullptr && l->type == id_RAMB36E1_RAMB36E1) {
++                    push(name);
++                    push("RAMB36");
++                    for (const std::string &parameter : {"READ_WIDTH_A", "READ_WIDTH_B", "WRITE_WIDTH_A", "WRITE_WIDTH_B"}) {
++                        const int width = int_or_default(l->params, ctx->id(parameter), 0);
++                        if (width == 1 || width == 9)
++                            write_bit("BRAM36_" + parameter + "_1");
++                    }
++                    pop();
++                    pop();
++                }
+                 blank();
+             }
+         }

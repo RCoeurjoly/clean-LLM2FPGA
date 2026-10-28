@@ -1,0 +1,31 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+Subject: [PATCH] xilinx_dsp: initialize pattern-detect parameter
+
+The Xilinx DSP pattern matcher reads USE_PATTERN_DETECT from DSP48E1 cells,
+including cells inferred before addDsp() creates new cells. Such cells may not
+carry the optional parameter, so Yosys aborts with "Accessing non existing
+parameter \\USE_PATTERN_DETECT". Initialize new cells and normalize existing
+XC7 DSP cells before the matcher runs.
+
+---
+ techlibs/xilinx/xilinx_dsp.cc | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/techlibs/xilinx/xilinx_dsp.cc b/techlibs/xilinx/xilinx_dsp.cc
+--- a/techlibs/xilinx/xilinx_dsp.cc
++++ b/techlibs/xilinx/xilinx_dsp.cc
+@@ -47,5 +47,6 @@ static Cell* addDsp(Module *module) {
+ 	cell->setParam(ID(PREG), 0);
+ 	cell->setParam(ID(USE_MULT), Const("NONE"));
+ 	cell->setParam(ID(USE_SIMD), Const("ONE48"));
++	cell->setParam(ID(USE_PATTERN_DETECT), Const("NO_PATDET"));
+ 	cell->setParam(ID(USE_DPORT), Const("FALSE"));
+ 
+@@ -810,4 +810,7 @@
+ 			// Match for all features ([ABDMP][12]?REG, pre-adder,
+ 			// post-adder, pattern detector, etc.) except for CREG
+ 			if (family == "xc7") {
++				for (auto cell : module->selected_cells())
++					if (cell->type == ID(DSP48E1) && !cell->hasParam(ID(USE_PATTERN_DETECT)))
++						cell->setParam(ID(USE_PATTERN_DETECT), Const("NO_PATDET"));
+ 				xilinx_dsp_pm pm(module, module->selected_cells());

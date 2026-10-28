@@ -1,0 +1,11 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -106,3 +106,8 @@
+   find_package(MLIR REQUIRED CONFIG)
++  if(DEFINED LLM2FPGA_MLIR_TABLEGEN)
++    # The split Nix SDK exposes its executable separately from its CMake config.
++    set(MLIR_TABLEGEN_EXE "${LLM2FPGA_MLIR_TABLEGEN}")
++    set(MLIR_TABLEGEN_TARGET "${LLM2FPGA_MLIR_TABLEGEN}")
++  endif()
+   message(STATUS "Using MLIRConfig.cmake in: ${MLIR_DIR}")
+   message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")

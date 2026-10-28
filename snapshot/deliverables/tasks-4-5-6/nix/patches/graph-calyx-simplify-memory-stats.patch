@@ -1,0 +1,31 @@
+--- a/calyx/opt/src/passes/simplify_with_control.rs
++++ b/calyx/opt/src/passes/simplify_with_control.rs
+@@ -85,8 +85,11 @@
+         sigs: &LibrarySignatures,
+         _comps: &[ir::Component],
+     ) -> VisResult {
++        log::info!("memory:simplify-with-control:{}:start {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         let mut used_ports =
+             analysis::ControlPorts::<false>::from(&*comp.control.borrow());
++
++        log::info!("memory:simplify-with-control:{}:control-ports:end {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+ 
+         // Early return if there are no combinational groups
+         if comp.comb_groups.is_empty() {
+@@ -166,6 +169,8 @@
+         for group in groups {
+             comp.get_static_groups_mut().add(group)
+         }
++
++        log::info!("memory:simplify-with-control:{}:conversion:end {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+ 
+         // Restore the combinational groups
+         comp.comb_groups = comb_groups;
+@@ -252,6 +257,7 @@
+         _sigs: &LibrarySignatures,
+         _comps: &[ir::Component],
+     ) -> VisResult {
++        log::info!("memory:simplify-with-control:{}:finish {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         if comp.is_static() {
+             let msg = format!(
+                 "Static Component {} has combinational groups which is not supported",

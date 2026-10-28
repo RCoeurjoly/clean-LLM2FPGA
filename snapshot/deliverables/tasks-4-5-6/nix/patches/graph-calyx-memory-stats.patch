@@ -1,0 +1,59 @@
+--- a/calyx/utils/src/lib.rs
++++ b/calyx/utils/src/lib.rs
+@@ -1,4 +1,5 @@
+ //! Shared utilities for the Calyx compiler.
++pub mod compiler_memory;
+ mod errors;
+ mod id;
+ mod namegenerator;
+--- a/calyx/opt/src/passes/cell_share.rs
++++ b/calyx/opt/src/passes/cell_share.rs
+@@ -328,6 +328,7 @@
+         _comps: &[ir::Component],
+     ) -> VisResult {
+         log::info!("cell-share:{}:liveness:start", comp.name);
++        log::info!("memory:cell-share:{}:before-liveness {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         self.initialize(comp, sigs);
+         log::info!("cell-share:{}:liveness:end", comp.name);
+         log::info!("cell-share:{}:graphs:start", comp.name);
+@@ -389,4 +390,13 @@
+         log::info!("cell-share:{}:control-data:end", comp.name);
++        // Derived control maps own all data needed by conflict construction.
++        log::info!("memory:cell-share:{}:before-live-analysis-retirement {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        self.live = LiveRangeAnalysis::default();
++        log::info!("memory:cell-share:{}:after-live-analysis-retirement {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        if self.retire_dead_cells {
++            let reclaimed = calyx_utils::compiler_memory::reclaim_free_pages();
++            log::info!("cell-share:{}:early-allocator-reclamation {:?}", comp.name, reclaimed);
++            log::info!("memory:cell-share:{}:after-live-analysis-reclamation {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        }
+         log::info!("cell-share:{}:conflicts:start", comp.name);
+ 
+         // Adding the conflicts
+@@ -441,9 +451,26 @@
+             }
++            // Each type's owned live maps have no consumers after its conflicts.
++            log::info!("memory:cell-share:{}:before-type-analysis-retirement:{} {:?}", comp.name, cell_type_to_string(cell_type), calyx_utils::compiler_memory::snapshot());
++            live_cell_map.remove(cell_type);
++            live_once_map.remove(cell_type);
++            log::info!("memory:cell-share:{}:after-type-analysis-retirement:{} {:?}", comp.name, cell_type_to_string(cell_type), calyx_utils::compiler_memory::snapshot());
++
+         }
+ 
+         log::info!("cell-share:{}:conflicts:end", comp.name);
+         log::info!("cell-share:{}:coloring:start", comp.name);
+ 
++        log::info!("memory:cell-share:{}:before-coloring {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        // Conflict construction is the last consumer of these analyses.
++        // Keep conflict graphs and diagnostic sharing state for coloring.
++        drop(live_cell_map);
++        drop(live_once_map);
++        drop(par_thread_map);
++        drop(cells_by_type);
++        self.par_timing_map = StaticParTiming::default();
++        log::info!("memory:cell-share:{}:after-analysis-retirement {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++
++
+         // perform graph coloring to rename the cells
+         let mut coloring: rewriter::RewriteMap<ir::Cell> = HashMap::new();
+         let mut comp_share_freqs: HashMap<ir::CellType, HashMap<i64, i64>> =

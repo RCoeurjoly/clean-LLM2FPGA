@@ -1,0 +1,55 @@
+--- a/passes/hierarchy/flatten.cc
++++ b/passes/hierarchy/flatten.cc
+@@ -451,4 +451,52 @@
+ 	}
+ } FlattenPass;
+ 
++struct ConnectionHelper : Pass {
++ ConnectionHelper() : Pass("opt_connection_helpers", "inline proven connection-only modules") {}
++ void execute(std::vector<std::string> args, RTLIL::Design *design) override {
++  extra_args(args,1,design);
++  for (auto module : design->selected_modules()) {
++   for (auto cell : module->selected_cells()) {
++    auto tpl=design->module(cell->type);
++    if (!tpl || tpl==module || tpl->get_blackbox_attribute() ||
++        tpl->get_bool_attribute(ID::whitebox) || tpl->get_bool_attribute(ID::keep_hierarchy) ||
++        cell->get_bool_attribute(ID::keep_hierarchy) || tpl->cells().begin()!=tpl->cells().end() ||
++        !tpl->processes.empty() || !tpl->memories.empty()) continue;
++    bool valid=true;
++    for (auto wire : tpl->wires())
++     if (wire->has_attribute(ID::init) || (wire->port_input && wire->port_output)) valid=false;
++    if (!valid) continue;
++    SigMap canonical(tpl);
++    dict<SigBit,SigBit> inputs;
++    for (auto wire : tpl->wires()) if (wire->port_input) {
++     if (!cell->hasPort(wire->name) || GetSize(cell->getPort(wire->name))!=wire->width) {valid=false;break;}
++     auto connected=cell->getPort(wire->name);
++     for (int i=0;i<wire->width;i++) {
++      SigBit original(wire,i), key=canonical(original);
++      // Input aliases/constant-driven inputs imply constraints, not a function.
++      if (key!=original || inputs.count(key)) {valid=false;break;}
++      inputs[key]=connected[i];
++     }
++    }
++    std::vector<SigSig> connections;
++    for (auto wire : tpl->wires()) if (valid && wire->port_output) {
++     if (!cell->hasPort(wire->name) || GetSize(cell->getPort(wire->name))!=wire->width) {valid=false;break;}
++     SigSpec source;
++     for (int i=0;i<wire->width;i++) {
++      SigBit bit=canonical(SigBit(wire,i));
++      if (!bit.wire) source.append(bit);
++      else if (inputs.count(bit)) source.append(inputs.at(bit));
++      else {valid=false;break;}
++     }
++     if (valid) connections.emplace_back(cell->getPort(wire->name),source);
++    }
++    if (!valid || connections.empty()) continue;
++    for (auto &connection : connections) module->connect(connection);
++    log("Directly connected %s.%s from proven module %s.\n",log_id(module),log_id(cell),log_id(tpl));
++    module->remove(cell);
++   }
++  }
++ }
++} ConnectionHelper;
++
+ PRIVATE_NAMESPACE_END

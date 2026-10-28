@@ -1,0 +1,46 @@
+--- a/lib/Dialect/Calyx/CalyxOps.cpp
++++ b/lib/Dialect/Calyx/CalyxOps.cpp
+@@ -27,6 +27,7 @@
+ #include "mlir/Interfaces/FunctionImplementation.h"
+ #include "mlir/Support/LLVM.h"
+ #include "llvm/ADT/DenseMap.h"
++#include "llvm/ADT/DenseSet.h"
+ #include "llvm/ADT/PriorityQueue.h"
+ #include "llvm/ADT/STLExtras.h"
+ #include "llvm/ADT/SmallSet.h"
+@@ -619,8 +620,10 @@
+   auto *body = op.getBodyBlock();
+   // We verify there is a single WiresOp and ControlOp,
+   // so this is safe.
+-  auto opIt = body->getOps<Op>().begin();
+-  return *opIt;
++  for (Operation &operation : llvm::reverse(body->getOperations()))
++    if (auto result = dyn_cast<Op>(&operation))
++      return result;
++  llvm_unreachable("component must contain control and wires operations");
+ }
+ 
+ /// Returns the Block argument with the given name from a ComponentOp.
+@@ -1009,13 +1012,21 @@
+     auto component = llvm::cast<ComponentOp>(componentInterface);
+     auto control = component.getControlOp();
+ 
++    // Collect uses once. Unknown symbol-table operations retain the original
++    // conservative behavior: absence of a use cannot then be proven.
++    auto uses = mlir::SymbolTable::getSymbolUses(&control->getRegion(0));
++    llvm::DenseSet<StringAttr> usedGroups;
++    if (uses)
++      for (const auto &use : *uses)
++        usedGroups.insert(use.getSymbolRef().getRootReference());
++
+     // Verify each group is referenced in the control section.
+     for (auto &&op : *getBodyBlock()) {
+       if (!isa<GroupInterface>(op))
+         continue;
+       auto group = cast<GroupInterface>(op);
+       auto groupName = group.symName();
+-      if (mlir::SymbolTable::symbolKnownUseEmpty(groupName, control))
++      if (uses && !usedGroups.contains(groupName))
+         return op.emitOpError()
+                << "with name: " << groupName
+                << " is unused in the control execution schedule";

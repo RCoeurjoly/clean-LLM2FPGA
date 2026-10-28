@@ -1,0 +1,81 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+Subject: [PATCH] verilog: stream external Morty closure without parsing generated component
+
+Large compiler-generated components can contain millions of SystemVerilog
+statements. Morty does not need the generated component's AST to pickle the
+external Calyx/HardFloat primitive closure. Keep the historical path as the
+default and add an opt-in CALYX_STREAM_MORTY path that parses only external
+files, then prepends that closure to the generated component verbatim.
+
+---
+ calyx/backend/src/verilog.rs | 53 ++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 52 insertions(+), 1 deletion(-)
+
+diff --git a/calyx/backend/src/verilog.rs b/calyx/backend/src/verilog.rs
+index 87fb565b..597396cb 100644
+--- a/calyx/backend/src/verilog.rs
++++ b/calyx/backend/src/verilog.rs
+@@ -414,7 +414,60 @@ impl Backend for VerilogBackend {
+             let library_bundle =
+                 build_library_bundle(ctx, &temp_file, &handlers)?;
+ 
+-            let file_list = derive_file_list(ctx, &temp_file, &handlers)?;
++            let mut file_list = derive_file_list(ctx, &temp_file, &handlers)?;
++            if env::var_os("CALYX_STREAM_MORTY").is_some() {
++                // The generated component is already valid SV. Parse only
++                // external primitive files with Morty, then prepend its
++                // dependency closure to the generated component verbatim.
++                // This avoids constructing a multi-gigabyte AST for a large
++                // compiler-generated component.
++                let generated_path = temp_file.path().to_string_lossy().into_owned();
++                for bundle in &mut file_list {
++                    bundle.files.retain(|path| path != &generated_path);
++                }
++                let syntax_trees = morty::build_syntax_tree(
++                    &file_list, false, false, true, false,
++                )
++                .map_err(|err| Error::write_error(format!(
++                    "Failed to build external syntax tree with Morty: {}",
++                    err
++                )))?;
++                let external_temp = NamedTempFile::new().map_err(|_| {
++                    Error::write_error("Failed to create Morty output".to_string())
++                })?;
++                morty::do_pickle(
++                    None,
++                    None,
++                    HashSet::new(),
++                    HashSet::new(),
++                    library_bundle,
++                    syntax_trees,
++                    Box::new(external_temp.reopen()?) as Box<dyn Write>,
++                    None,
++                    true,
++                    true,
++                    false,
++                )
++                .map_err(|err| Error::write_error(format!("{}", err)))?;
++                temp_writer.seek(SeekFrom::Start(0)).map_err(|_| {
++                    Error::write_error("Failed to rewind generated SV".to_string())
++                })?;
++                let mut generated = String::new();
++                temp_writer.read_to_string(&mut generated).map_err(|_| {
++                    Error::write_error("Failed to read generated SV".to_string())
++                })?;
++                let external = std::fs::read(external_temp.path()).map_err(|_| {
++                    Error::write_error("Failed to read Morty external SV".to_string())
++                })?;
++                let mut final_writer = file.get_write();
++                final_writer.write_all(&external).map_err(|err| {
++                    Error::write_error(format!("Failed to write external SV: {}", err))
++                })?;
++                final_writer.write_all(generated.as_bytes()).map_err(|err| {
++                    Error::write_error(format!("Failed to write generated SV: {}", err))
++                })?;
++                return Ok(());
++            }
+             let syntax_trees =
+                 morty::build_syntax_tree(&file_list, false, false, true, false)
+                     .map_err(|err| {
+--
+2.43.0

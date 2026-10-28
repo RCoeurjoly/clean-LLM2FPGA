@@ -1,0 +1,104 @@
+--- a/calyx/opt/src/passes/cell_share.rs
++++ b/calyx/opt/src/passes/cell_share.rs
+@@ -369,16 +369,6 @@
+         // List of cell maps
+         let mut cell_map_list = Vec::new();
+ 
+-        // Maps cell type to conflict graph (will be used to perform coloring)
+-        let mut graphs_by_type: HashMap<ir::CellType, GraphColoring<ir::Id>> =
+-            cells_by_type
+-                .clone()
+-                .into_iter()
+-                .map(|(key, cell_names)| {
+-                    (key, GraphColoring::from(cell_names.into_iter()))
+-                })
+-                .collect();
+-
+         log::info!("cell-share:{}:graphs:end", comp.name);
+         log::info!("cell-share:{}:control-data:start", comp.name);
+ 
+@@ -415,6 +405,14 @@
+         }
+         log::info!("cell-share:{}:conflicts:start", comp.name);
+ 
++        // perform graph coloring to rename the cells
++        let mut coloring: rewriter::RewriteMap<ir::Cell> = HashMap::new();
++        let mut comp_share_freqs: HashMap<ir::CellType, HashMap<i64, i64>> =
++            HashMap::new();
++        let [comb_bound, reg_bound, other_bound] = &self.bounds;
++
++        // Each type is independent. Complete and release its graph before
++        // allocating another type; defer all IR rewrites until the loop ends.
+         // Adding the conflicts
+         for (cell_type, cells) in &cells_by_type {
+             log::info!(
+@@ -424,7 +422,9 @@
+                 cells.len()
+             );
+             // Run remove_dead_cells before this cell-share pass.
+-            let g = graphs_by_type.get_mut(cell_type).unwrap();
++            log::info!("cell-share:{}:type-graph:start:{}", comp.name, cell_type_to_string(cell_type));
++            let mut graph = GraphColoring::from(cells.iter().copied());
++            let g = &mut graph;
+ 
+             // mapping from cell names to the enables/invokes in which it is live
+             let cell_to_nodes =
+@@ -482,28 +482,6 @@
+             live_once_map.remove(cell_type);
+             log::info!("memory:cell-share:{}:after-type-analysis-retirement:{} {:?}", comp.name, cell_type_to_string(cell_type), calyx_utils::compiler_memory::snapshot());
+ 
+-        }
+-
+-        log::info!("cell-share:{}:conflicts:end", comp.name);
+-        log::info!("cell-share:{}:coloring:start", comp.name);
+-
+-        log::info!("memory:cell-share:{}:before-coloring {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+-        // Conflict construction is the last consumer of these analyses.
+-        // Keep conflict graphs and diagnostic sharing state for coloring.
+-        drop(live_cell_map);
+-        drop(live_once_map);
+-        drop(par_thread_map);
+-        drop(cells_by_type);
+-        self.par_timing_map = StaticParTiming::default();
+-        log::info!("memory:cell-share:{}:after-analysis-retirement {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+-
+-
+-        // perform graph coloring to rename the cells
+-        let mut coloring: rewriter::RewriteMap<ir::Cell> = HashMap::new();
+-        let mut comp_share_freqs: HashMap<ir::CellType, HashMap<i64, i64>> =
+-            HashMap::new();
+-        let [comb_bound, reg_bound, other_bound] = &self.bounds;
+-        for (cell_type, mut graph) in graphs_by_type {
+             // getting bound, based on self.bounds and cell_type
+             let bound = {
+                 if let Some(ref name) = cell_type.get_name() {
+@@ -536,10 +514,27 @@
+                 // only generate share-freqs if we're going to use them.
+                 if self.print_share_freqs.is_some() {
+                     // must accumulate sharing numbers for share_freqs
+-                    comp_share_freqs.insert(cell_type, graph.get_share_freqs());
++                    comp_share_freqs.insert(cell_type.clone(), graph.get_share_freqs());
+                 }
+             }
+-        }
++            drop(graph);
++            log::info!("cell-share:{}:type-graph:released:{}", comp.name, cell_type_to_string(cell_type));
++
++        }
++
++        log::info!("cell-share:{}:conflicts:end", comp.name);
++        log::info!("cell-share:{}:coloring:start", comp.name);
++
++        log::info!("memory:cell-share:{}:before-coloring {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        // Conflict construction is the last consumer of these analyses.
++        // Keep conflict graphs and diagnostic sharing state for coloring.
++        drop(live_cell_map);
++        drop(live_once_map);
++        drop(par_thread_map);
++        drop(cells_by_type);
++        self.par_timing_map = StaticParTiming::default();
++        log::info!("memory:cell-share:{}:after-analysis-retirement {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++
+ 
+         log::info!("cell-share:{}:coloring:end", comp.name);
+ 

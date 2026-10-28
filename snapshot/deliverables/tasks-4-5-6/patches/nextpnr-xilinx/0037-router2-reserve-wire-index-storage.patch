@@ -1,0 +1,11 @@
+--- a/common/router2.cc
++++ b/common/router2.cc
+@@ -226,6 +226,10 @@
+     {
+         // Set up per-wire structures, so that MT parts don't have to do any memory allocation
+         // This is possibly quite wasteful and not cache-optimal; further consideration necessary
++        size_t wire_count = 0;
++        for (auto wire : ctx->getWires())
++            (void)wire, ++wire_count;
++        wire_to_idx.reserve(wire_count);
+         for (auto wire : ctx->getWires()) {

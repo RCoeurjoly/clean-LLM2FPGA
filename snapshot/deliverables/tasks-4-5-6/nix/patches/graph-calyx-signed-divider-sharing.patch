@@ -1,0 +1,22 @@
+--- a/primitives/binary_operators.futil
++++ b/primitives/binary_operators.futil
+@@ -124,7 +124,7 @@
+     @done done: 1
+   );
+ 
+-  primitive std_sdiv_pipe[WIDTH](
++  primitive std_sdiv_pipe<"state_share"=1>[WIDTH](
+     @clk clk: 1,
+     @reset reset: 1,
+     @write_together(1) @go go: 1,
+@@ -132,8 +132,8 @@
+     @write_together(1) @data left: WIDTH,
+     @write_together(1) @data right: WIDTH
+   ) -> (
+-    out_quotient: WIDTH,
+-    out_remainder: WIDTH,
++    @stable out_quotient: WIDTH,
++    @stable out_remainder: WIDTH,
+     @done done: 1
+   );
+ 

@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "operators": {
+    "aten.__lshift__.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.__rshift__.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten._assert_tensor_metadata.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.abs.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.add.Tensor": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.alias.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.amax.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.argmax.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "signed int64 last-row logits; maximum selects the first index on ties; native lowering remains a separate gate"
+    },
+    "aten.arange.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.bitwise_and.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.bitwise_left_shift.Tensor_Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.bitwise_right_shift.Tensor_Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.cat.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.clamp.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.div.Tensor_mode": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.eq.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.full_like.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.ge.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.ge.Tensor": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.index.Tensor": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.lt.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.matmul.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "PyTorch matmul; Task 2 regression uses rank-1 length-16 int32 inputs and an int32 result. Other lowering domains remain unverified."
+    },
+    "aten.minimum.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.mul.Tensor": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.ne.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.ne.Tensor": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.neg.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.remainder.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.reshape.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.rsub.Scalar": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.select.int": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.slice.Tensor": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.stack.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.sub.Tensor": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.sum.dim_IntList": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.to.dtype": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.unsqueeze.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.where.self": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "aten.zeros_like.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "typed upstream Torch operation; exact lowering must be verified"
+    },
+    "llm2fpga.serial_gemv.default": {
+      "capture": "supported",
+      "lowering": "pending",
+      "semantics": "ascending i64 wrapping serial reduction"
+    }
+  }
+}

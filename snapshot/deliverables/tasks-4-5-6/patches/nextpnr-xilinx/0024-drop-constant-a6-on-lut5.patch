@@ -1,0 +1,10 @@
+--- a/xilinx/arch_place.cc
++++ b/xilinx/arch_place.cc
+@@ -728,1 +728,7 @@ void Arch::fixupPlacement()
+             }
++            if (lut5->ports.count(id_A6)) {
++                NetInfo *a6_net = lut5->ports.at(id_A6).net;
++                if (a6_net == nets[id("$PACKER_GND_NET")].get() ||
++                    a6_net == nets[id("$PACKER_VCC_NET")].get())
++                    disconnect_port(getCtx(), lut5, id_A6);
++            }

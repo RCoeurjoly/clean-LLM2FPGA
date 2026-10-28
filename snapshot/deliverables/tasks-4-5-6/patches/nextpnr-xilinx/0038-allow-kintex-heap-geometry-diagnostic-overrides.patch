@@ -1,0 +1,23 @@
+diff --git a/xilinx/arch.cc b/xilinx/arch.cc
+--- a/xilinx/arch.cc
++++ b/xilinx/arch.cc
+@@ -660,13 +660,13 @@ bool Arch::place()
+         cfg.ioBufTypes.insert(id("IOB_OUTBUF"));
+         cfg.ioBufTypes.insert(id_PSEUDO_GND);
+         cfg.ioBufTypes.insert(id_PSEUDO_VCC);
+-        cfg.alpha = 0.08;
+-        cfg.beta = 0.4;
++        cfg.alpha = getCtx()->setting<float>("kintexHeap/alpha", 0.08f);
++        cfg.beta = getCtx()->setting<float>("kintexHeap/beta", 0.4f);
+         cfg.placeAllAtOnce = true;
+-        cfg.hpwl_scale_x = 1;
+-        cfg.hpwl_scale_y = 2;
+-        cfg.spread_scale_x = 2;
+-        cfg.spread_scale_y = 1;
++        cfg.hpwl_scale_x = getCtx()->setting<int>("kintexHeap/hpwlScaleX", 1);
++        cfg.hpwl_scale_y = getCtx()->setting<int>("kintexHeap/hpwlScaleY", 2);
++        cfg.spread_scale_x = getCtx()->setting<int>("kintexHeap/spreadScaleX", 2);
++        cfg.spread_scale_y = getCtx()->setting<int>("kintexHeap/spreadScaleY", 1);
+         cfg.netShareWeight = 0.2;
+         cfg.solverTolerance = 0.6e-6;
+         cfg.cellGroups.emplace_back();

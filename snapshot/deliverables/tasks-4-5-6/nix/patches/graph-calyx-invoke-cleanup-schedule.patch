@@ -1,0 +1,18 @@
+--- a/calyx/opt/src/default_passes.rs
++++ b/calyx/opt/src/default_passes.rs
+@@ -108,6 +108,7 @@
+                 CellShare,       // LiveRangeAnalaysis should handle comb groups
+                 SimplifyWithControl, // Must run before compile-invoke
+                 CompileInvoke,   // creates dead comb groups
++                DeadGroupRemoval, // Retire invoke leftovers before static analysis.
+                 StaticInference,
+                 StaticPromotion,
+                 CompileRepeat,
+@@ -132,6 +133,7 @@
+                 CellShare,
+                 SimplifyWithControl,
+                 CompileInvoke,
++                DeadGroupRemoval, // Retire invoke leftovers before static analysis.
+                 StaticInference,
+                 StaticPromotion,
+                 DeadGroupRemoval,

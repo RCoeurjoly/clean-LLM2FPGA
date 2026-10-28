@@ -1,0 +1,69 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -356,7 +356,7 @@
+                              AddFOp, SubFOp, MulFOp, CmpFOp, FPToSIOp, SIToFPOp,
+                              DivFOp, math::SqrtOp, math::AbsFOp,
+                              /// others
+-                             SelectOp, IndexCastOp, BitcastOp, CallOp>(
++                             SelectOp, IndexCastOp, IndexCastUIOp, BitcastOp, CallOp>(
+                   [&](auto op) { return buildOp(rewriter, op).succeeded(); })
+               .template Case<FuncOp, scf::ConditionOp>([&](auto) {
+                 /// Skip: these special cases will be handled separately.
+@@ -436,6 +436,7 @@
+   LogicalResult buildOp(PatternRewriter &rewriter, ExtSIOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, ReturnOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, IndexCastOp op) const;
++  LogicalResult buildOp(PatternRewriter &rewriter, IndexCastUIOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, BitcastOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, memref::AllocOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, memref::AllocaOp op) const;
+@@ -1725,6 +1726,35 @@
+   return res;
+ }
+ 
++// Unsigned index casts use the pinned Calyx index type from normalizeType.
++// Slice on truncation and zero-pad on widening; do not sign-extend high bits.
++LogicalResult BuildOpGroups::buildOp(PatternRewriter &rewriter,
++                                     IndexCastUIOp op) const {
++  Type sourceType = calyx::normalizeType(rewriter, op.getOperand().getType());
++  Type targetType = calyx::normalizeType(rewriter, op.getResult().getType());
++  if (!isa<IntegerType>(sourceType) || !isa<IntegerType>(targetType))
++    return op.emitOpError("requires scalar integer/index types for Calyx lowering");
++  unsigned targetBits = targetType.getIntOrFloatBitWidth();
++  unsigned sourceBits = sourceType.getIntOrFloatBitWidth();
++  LogicalResult res = success();
++
++  if (targetBits == sourceBits) {
++    /// Drop the index cast and replace uses of the target value with the source
++    /// value.
++    op.getResult().replaceAllUsesWith(op.getOperand());
++  } else {
++    /// pad/slice the source operand.
++    if (sourceBits > targetBits)
++      res = buildLibraryOp<calyx::CombGroupOp, calyx::SliceLibOp>(
++          rewriter, op, {sourceType}, {targetType});
++    else
++      res = buildLibraryOp<calyx::CombGroupOp, calyx::PadLibOp>(
++          rewriter, op, {sourceType}, {targetType});
++  }
++  rewriter.eraseOp(op);
++  return res;
++}
++
+ // The Calyx language treats values as bit vectors, i.e., there is no type
+ // system, so this is essentially a no-op.
+ LogicalResult BuildOpGroups::buildOp(PatternRewriter &rewriter,
+@@ -2717,6 +2747,13 @@
+         DivUIOp, DivSIOp, RemUIOp, RemSIOp, ReturnOp, arith::ConstantOp,
+         IndexCastOp, BitcastOp, FuncOp, ExtSIOp, CallOp, AddFOp, SubFOp, MulFOp,
+         CmpFOp, FPToSIOp, SIToFPOp, DivFOp, math::SqrtOp>();
++
++    // Reject unsupported shaped casts before creating partial Calyx state.
++    // Returning failure from BuildOpGroups alone does not stop later patterns.
++    target.addDynamicallyLegalOp<IndexCastUIOp>([](IndexCastUIOp op) {
++      return isa<IntegerType, IndexType>(op.getOperand().getType()) &&
++             isa<IntegerType, IndexType>(op.getType());
++    });
+ 
+     RewritePatternSet legalizePatterns(&getContext());
+     legalizePatterns.add<DummyPattern>(&getContext());

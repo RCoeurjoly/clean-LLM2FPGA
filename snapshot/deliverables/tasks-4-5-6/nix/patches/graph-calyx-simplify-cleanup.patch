@@ -1,0 +1,61 @@
+--- a/calyx/opt/src/passes/simplify_with_control.rs
++++ b/calyx/opt/src/passes/simplify_with_control.rs
+@@ -1,11 +1,11 @@
+ use crate::analysis;
+-use crate::traversal::{Action, Named, VisResult, Visitor};
++use crate::passes::DeadGroupRemoval;
++use crate::traversal::{Action, ConstructVisitor, Named, ParseVal, PassOpt, VisResult, Visitor};
+ use calyx_ir::{self as ir, GetAttributes, LibrarySignatures, RRC, structure};
+ use calyx_utils::{CalyxResult, Error};
+ use std::collections::HashMap;
+ use std::rc::Rc;
+ 
+-#[derive(Default)]
+ /// Transforms combinational groups into normal groups by registering the values
+ /// read from the ports of cells used within the combinational group.
+ ///
+@@ -61,6 +61,7 @@
+ /// }
+ /// ```
+ pub struct SimplifyWithControl {
++    retire_dead_groups: bool,
+     // Mapping from (group_name, (cell_name, port_name)) -> (port, static_group).
+     port_rewrite: HashMap<PortInGroup, (RRC<ir::Port>, RRC<ir::StaticGroup>)>,
+ }
+@@ -75,6 +76,22 @@
+ 
+     fn description() -> &'static str {
+         "Transforms if-with and while-with to if and while"
++    }
++    fn opts() -> Vec<PassOpt> {
++        vec![PassOpt::new("retire-dead-groups",
++            "run native dead-group removal after each control rewrite",
++            ParseVal::Bool(false), PassOpt::parse_bool)]
++    }
++
++}
++
++impl ConstructVisitor for SimplifyWithControl {
++    fn from(ctx: &ir::Context) -> CalyxResult<Self> {
++        let opts = Self::get_opts(ctx);
++        Ok(Self { port_rewrite: HashMap::new(), retire_dead_groups: opts["retire-dead-groups"].bool() })
++    }
++    fn clear_data(&mut self) {
++        self.port_rewrite = HashMap::new();
+     }
+ }
+ 
+@@ -266,6 +283,13 @@
+             return Err(Error::pass_assumption(Self::name(), msg)
+                 .with_pos(&comp.attributes));
+         }
++        if self.retire_dead_groups {
++            log::info!("simplify-with-control:{}:cleanup:start", comp.name);
++            let mut cleanup = DeadGroupRemoval::default();
++            cleanup.traverse_component(comp, _sigs, _comps)?;
++            log::info!("simplify-with-control:{}:cleanup:end", comp.name);
++            log::info!("memory:simplify-with-control:{}:after-cleanup {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        }
+         Ok(Action::Continue)
+     }
+ }

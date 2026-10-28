@@ -1,0 +1,54 @@
+--- a/kernel/gzip.h
++++ b/kernel/gzip.h
+@@ -13,8 +13,7 @@
+ }
+ 
+ /*
+-An output stream that uses a stringbuf to buffer data internally,
+-using zlib to write gzip-compressed data every time the stream is flushed.
++An output stream with a bounded buffer, flushed to zlib when full or synced.
+ */
+ class gzip_ostream : public std::ostream {
+ public:
+@@ -25,11 +24,12 @@
+ 		return outbuf.open(filename);
+ 	}
+ private:
+-	class obuf : public std::stringbuf {
++	class obuf : public std::streambuf {
+ 	public:
+ 		obuf();
+ 		bool open(const std::string &filename);
+ 		virtual int sync() override;
++		virtual int_type overflow(int_type ch) override;
+ 		virtual ~obuf();
+ 	private:
+ 		static const int buffer_size = 4096;
+--- a/kernel/gzip.cc
++++ b/kernel/gzip.cc
+@@ -18,7 +18,7 @@
+ #ifdef YOSYS_ENABLE_ZLIB
+ 
+ gzip_ostream::obuf::obuf() {
+-    setp(buffer, buffer + buffer_size - 1);
++    setp(buffer, buffer + buffer_size);
+ }
+ 
+ bool gzip_ostream::obuf::open(const std::string &filename) {
+@@ -35,6 +35,16 @@
+         pbump(-num);
+     }
+     return 0;
++}
++
++gzip_ostream::obuf::int_type gzip_ostream::obuf::overflow(int_type ch) {
++    if (sync() != 0)
++        return traits_type::eof();
++    if (!traits_type::eq_int_type(ch, traits_type::eof())) {
++        *pptr() = traits_type::to_char_type(ch);
++        pbump(1);
++    }
++    return traits_type::not_eof(ch);
+ }
+ 
+ gzip_ostream::obuf::~obuf() {

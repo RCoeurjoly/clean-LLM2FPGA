@@ -1,0 +1,62 @@
+--- a/calyx/opt/src/analysis/mod.rs
++++ b/calyx/opt/src/analysis/mod.rs
+@@ -14,6 +14,7 @@
+ mod graph;
+ mod graph_coloring;
+ mod inference_analysis;
++pub(crate) mod live_control_set;
+ mod live_range_analysis;
+ mod port_interface;
+ mod promotion_analysis;
+--- a/calyx/opt/src/analysis/live_range_analysis.rs
++++ b/calyx/opt/src/analysis/live_range_analysis.rs
+@@ -1,3 +1,4 @@
++use crate::analysis::live_control_set::LiveControlSet;
+ use crate::analysis::{
+     AssignmentAnalysis, ControlId, ReadWriteSet, ShareSet, VariableDetection,
+ };
+@@ -13,6 +14,8 @@
+ type CellsByType = HashMap<ir::CellType, HashSet<ir::Id>>;
+ // maps cell type to maps that map cell name to control statement
+ type LiveMapByType = HashMap<ir::CellType, HashMap<ir::Id, HashSet<u64>>>;
++// Exact live node sets compact contiguous control IDs without changing conflicts.
++type LiveCellMapByType = HashMap<ir::CellType, HashMap<ir::Id, LiveControlSet>>;
+ type ReadWriteInfo = (
+     HashSet<(ir::CellType, ir::Id)>,
+     HashSet<(ir::CellType, ir::Id)>,
+@@ -390,7 +393,7 @@
+         &self,
+         id: u64,
+         live_once_map: &mut LiveMapByType,
+-        live_cell_map: &mut LiveMapByType,
++        live_cell_map: &mut LiveCellMapByType,
+         parents: &HashSet<u64>,
+     ) {
+         let live_set = self.live.get(&id).unwrap().map.clone();
+@@ -409,7 +412,7 @@
+         id: u64,
+         (cell_type, cell_name): &(ir::CellType, ir::Id),
+         live_once_map: &mut LiveMapByType,
+-        live_cell_map: &mut LiveMapByType,
++        live_cell_map: &mut LiveCellMapByType,
+         parents: &HashSet<u64>,
+     ) {
+         // add cell as live within whichever direct children of
+@@ -438,7 +441,7 @@
+         &self,
+         live_once_map: &mut LiveMapByType,
+         par_thread_map: &mut HashMap<u64, u64>,
+-        live_cell_map: &mut LiveMapByType,
++        live_cell_map: &mut LiveCellMapByType,
+         parents: &HashSet<u64>,
+         sc: &ir::StaticControl,
+     ) {
+@@ -546,7 +549,7 @@
+         &self,
+         live_once_map: &mut LiveMapByType,
+         par_thread_map: &mut HashMap<u64, u64>,
+-        live_cell_map: &mut LiveMapByType,
++        live_cell_map: &mut LiveCellMapByType,
+         parents: &HashSet<u64>,
+         c: &ir::Control,
+     ) {

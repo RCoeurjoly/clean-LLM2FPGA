@@ -1,0 +1,20 @@
+--- a/calyx/backend/src/verilog.rs
++++ b/calyx/backend/src/verilog.rs
+@@ -659,7 +659,7 @@
+         for (dst, asgns) in &grouped_asgns {
+             emit_assignment_flat(dst, asgns, &mut names, f)?;
+ 
+-            if enable_verification {
++            if enable_verification && !synthesis_mode {
+                 if let Some((wires, check)) =
+                     emit_guard_disjoint_check(dst, asgns, &pool, true, &mut names)
+                 {
+@@ -680,7 +680,7 @@
+                 v::Stmt::new_parallel(emit_assignment(dst, &asgns, &pool));
+             writeln!(f, "{stmt}")?;
+ 
+-            if enable_verification {
++            if enable_verification && !synthesis_mode {
+                 if let Some((wires, check)) =
+                     emit_guard_disjoint_check(dst, &asgns, &pool, false, &mut names)
+                 {

@@ -1,0 +1,91 @@
+--- a/calyx/opt/src/passes/compile_invoke.rs
++++ b/calyx/opt/src/passes/compile_invoke.rs
+@@ -88,6 +88,8 @@
+ pub struct CompileInvoke {
+     /// Mapping from component to the canonical port name of ref cell o
+     port_names: RefPortMap,
++    /// Used reference signature ports of completed, immutable callees.
++    used_ref_ports: HashMap<ir::Id, HashSet<ir::Id>>,
+     /// Mapping from the ports of cells that were removed to the new port on the
+     /// component signature.
+     removed: LinkedHashMap<ir::Canonical, ir::RRC<ir::Port>>,
+@@ -102,6 +104,7 @@
+     {
+         Ok(CompileInvoke {
+             port_names: RefPortMap::default(),
++            used_ref_ports: HashMap::new(),
+             removed: LinkedHashMap::new(),
+             ref_cells: Vec::new(),
+         })
+@@ -159,36 +162,17 @@
+                 )
+             };
+ 
+-            // tracks ports used in assigments of the invoked component
+-            let mut used_ports: HashSet<ir::Id> = HashSet::new();
+-            if let Some(invoked_comp) = invoked_comp {
+-                invoked_comp.iter_assignments(|a| {
+-                    for port in a.iter_ports() {
+-                        used_ports.insert(port.borrow().name);
+-                    }
+-                });
+-                invoked_comp.iter_static_assignments(|a| {
+-                    for port in a.iter_ports() {
+-                        used_ports.insert(port.borrow().name);
+-                    }
+-                });
+-            // If the `invoked_comp` passed to the function is `None`,
+-            // then the component being invoked is a primitive.
+-            } else {
++            // Post-order traversal has already rewritten the callee. Its
++            // assignments remain immutable while callers are being lowered.
++            if invoked_comp.is_none() {
+                 unreachable!(
+                     "Primitives should not have ref cells passed into them at invocation. However ref cells were found at the invocation of {}.",
+                     inv_comp_id
+                 );
+             }
+-
+-            //contains the newly added ports that result from ref cells removal/dump_ports
+-            let new_comp_ports = comp_ports
+-                .values()
+-                .map(|p| p.borrow().name)
+-                .collect::<HashSet<_>>();
+-
+-            let to_assign: HashSet<&ir::Id> =
+-                new_comp_ports.intersection(&used_ports).collect();
++            let to_assign = self.used_ref_ports.get(&inv_comp_id).expect(
++                "invoked reference-cell component must have a completed port-use summary",
++            );
+ 
+             // We expect each canonical port in `comp_ports` to exactly match with a port in
+             //`concrete_cell` based on well-formedness subtype checks.
+@@ -547,6 +531,28 @@
+             ..Default::default()
+         };
+         rw.rewrite(comp);
++        if !rw.port_map.is_empty() {
++            // Preserve the original intersection of assignment port *names*
++            // and newly exported reference signature names, including static
++            // assignments and guards. Summarize once, after ref-port rewriting.
++            let names: HashSet<ir::Id> = rw.port_map.values()
++                .map(|port| port.borrow().name).collect();
++            let mut used = HashSet::new();
++            comp.iter_assignments(|assignment| {
++                for port in assignment.iter_ports() {
++                    let name = port.borrow().name;
++                    if names.contains(&name) { used.insert(name); }
++                }
++            });
++            comp.iter_static_assignments(|assignment| {
++                for port in assignment.iter_ports() {
++                    let name = port.borrow().name;
++                    if names.contains(&name) { used.insert(name); }
++                }
++            });
++            log::info!("compile-invoke:ref-port-summary:{} ports={}", comp.name, used.len());
++            self.used_ref_ports.insert(comp.name, used);
++        }
+         self.port_names.insert(comp.name, rw.port_map);
+         log::info!("memory:compile-invoke:{}:finish {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         Ok(Action::Continue)

@@ -1,0 +1,69 @@
+--- a/calyx/backend/src/verilog.rs
++++ b/calyx/backend/src/verilog.rs
+@@ -631,6 +631,22 @@
+         .collect();
+ 
+     if flat_assign {
++        // Reserve component identifiers before introducing priority wires.
++        let mut names: HashSet<calyx_utils::Id> = cells
++            .iter().map(|(name, _, _)| name.as_str().into()).collect();
++        names.extend(sig.ports.iter().map(|port| port.borrow().name));
++        names.extend(comp.cells.iter().map(|cell| cell.borrow().name()));
++        for fsm in comp.fsms.iter() {
++            let fsm = fsm.borrow();
++            names.insert(fsm.name());
++            for state in 0..fsm.assignments.len() {
++                names.insert(format!("{}_s{state}_out", fsm.name()).into());
++            }
++        }
++        for (idx, _) in pool.iter() {
++            names.insert(VerilogGuardRef(idx).to_string().into());
++        }
++        let mut names = calyx_utils::NameGenerator::with_prev_defined_names(names);
+         // Emit "flattened" assignments as ANF statements.
+         // Emit Verilog for the flattened guards.
+         for (idx, guard) in pool.iter() {
+@@ -641,7 +657,7 @@
+ 
+         // Emit assignments using these guards.
+         for (dst, asgns) in &grouped_asgns {
+-            emit_assignment_flat(dst, asgns, f)?;
++            emit_assignment_flat(dst, asgns, &mut names, f)?;
+ 
+             if enable_verification {
+                 if let Some(check) =
+@@ -1134,6 +1150,7 @@
+ fn emit_assignment_flat<F: io::Write>(
+     dst: &RRC<ir::Port>,
+     assignments: &[(RRC<ir::Port>, GuardRef)],
++    names: &mut calyx_utils::NameGenerator,
+     f: &mut F,
+ ) -> io::Result<()> {
+     let data = is_data_port(dst);
+@@ -1170,6 +1187,26 @@
+         }
+     }
+ 
++    // Each wire is exactly a suffix of the original priority cascade. Keep
++    // four-state ternary behavior; an OR-selected tree is not equivalent.
++    const CHUNK_SIZE: usize = 128;
++    if assignments.len() > CHUNK_SIZE {
++        let chunks: Vec<_> = assignments.chunks(CHUNK_SIZE).collect();
++        let mut suffix = if data { "'x".to_string() }
++            else { format!("{}'d0", dst.borrow().width) };
++        for chunk in chunks.iter().rev() {
++            let name = names.gen_name("_calyx_priority");
++            writeln!(f, "wire [{}:0] {name};", dst.borrow().width - 1)?;
++            writeln!(f, "assign {name} =")?;
++            for (src, guard) in *chunk {
++                writeln!(f, "  {} ? {} :", VerilogGuardRef(*guard), VerilogPortRef(src))?;
++            }
++            writeln!(f, "  {suffix};")?;
++            suffix = name.to_string();
++        }
++        return writeln!(f, "assign {} = {suffix};", VerilogPortRef(dst));
++    }
++
+     // Use a cascade of ternary expressions to assign the right RHS to dst.
+     writeln!(f, "assign {} =", VerilogPortRef(dst))?;
+     for (src, guard) in assignments {

@@ -1,0 +1,6 @@
+{
+  "archive_sha256": "2f4e69ac54df4e5865ea67a89bd01d36034b39dd1dec0da663b0bbdd139cd98b",
+  "archive_bytes": 3219585666,
+  "restore_command": "gzip -dc toolchain/closure.nar.gz | nix-store --import",
+  "import_exit_code": 0
+}

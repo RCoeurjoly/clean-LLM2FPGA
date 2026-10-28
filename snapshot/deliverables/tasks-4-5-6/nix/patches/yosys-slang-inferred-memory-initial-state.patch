@@ -1,0 +1,25 @@
+--- a/src/procedural.cc
++++ b/src/procedural.cc
+@@ -262,16 +262,18 @@ void ProceduralContext::update_variable_state(slang::SourceLocation loc, VariableBits lvalue,
+ 				}
+ 				break;
+ 			case Variable::Static: {
+-				for (uint64_t i = 0; i < size; i++) {
+-					netlist.initial_state[chunk[i]] = rvalue[(int)(base + i)].data;
+-				}
+ 				const ast::Symbol &symbol = *chunk.variable.get_symbol();
+-				if (netlist.is_inferred_memory(symbol)) {
++				bool inferred_memory = netlist.is_inferred_memory(symbol);
++				if (inferred_memory) {
+ 					bool big_endian = !symbol.as<ast::ValueSymbol>()
+ 											   .getType()
+ 											   .getFixedRange()
+ 											   .isLittleEndian();
+ 					netlist.add_memory_init(netlist.id(symbol), chunk.base, big_endian,
+ 							rvalue.extract((int)base, (int)size).as_const());
++				} else {
++					for (uint64_t i = 0; i < size; i++) {
++						netlist.initial_state[chunk[i]] = rvalue[(int)(base + i)].data;
++					}
+ 				}
+ 			} break;

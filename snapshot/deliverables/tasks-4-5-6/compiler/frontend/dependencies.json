@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "compilation_sources": [
+    "compiler/frontend/package_inputs.py",
+    "compiler/frontend/package_model.py",
+    "compiler/frontend/fixed_point_ops.py",
+    "compiler/generation.py",
+    "compiler/contracts/tinystories-1m-fixed-point.json",
+    "TinyStories/serial_gemv_boundary.py"
+  ],
+  "snapshot_files": ["config.json", "pytorch_model.bin"],
+  "package_files": ["manifest.json", "weights.bin", "scales.bin"],
+  "python_dependencies": ["torch"],
+  "verification_entry_point": "scripts/comparison/verify_graph_model.py"
+}

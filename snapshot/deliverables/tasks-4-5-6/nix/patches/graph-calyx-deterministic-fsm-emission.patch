@@ -1,0 +1,17 @@
+--- a/calyx/backend/src/verilog.rs
++++ b/calyx/backend/src/verilog.rs
+@@ -830,7 +830,13 @@
+     }
+ 
+     // dump all assignments dependent on fsm state
+-    for collection in dest2mergedassigns.into_values() {
++    // Hash iteration changes output bytes across identical native builds.
++    // Sort destinations only; retain the assignment order and priority within
++    // each destination exactly as constructed by the FSM lowering.
++    for (_, collection) in dest2mergedassigns
++        .into_iter()
++        .sorted_by_key(|(destination, _)| destination.clone())
++    {
+         let num_merged_assigns = collection.len();
+         let destination = ir::RRC::clone(&collection.first().unwrap().2.dst);
+         writeln!(f, "assign {} =", VerilogPortRef(&destination))?;

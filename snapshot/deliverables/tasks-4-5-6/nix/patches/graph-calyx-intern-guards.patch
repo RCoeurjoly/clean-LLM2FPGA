@@ -1,0 +1,82 @@
+--- a/calyx/ir/src/flat_guard.rs
++++ b/calyx/ir/src/flat_guard.rs
+@@ -1,7 +1,8 @@
+ use crate::Nothing;
++use std::collections::HashMap;
+ 
+ use super::guard::{Guard, PortComp};
+-use super::{Port, RRC};
++use super::{Canonical, Port, RRC};
+ 
+ #[derive(Debug, Copy, Clone)]
+ pub struct GuardRef(u32);
+@@ -48,15 +49,44 @@
+ ///   they refer to smaller indices than the current `FlatGuard`.
+ /// * The first `FlatGuard` is always `FlatGuard::True`.
+ ///
+-/// This could be used to do some interesting hash-consing/deduplication; it currently does the
+-/// weakest possible form of that: deduplicating `True` guards only.
+-pub struct GuardPool(Vec<FlatGuard>);
++/// Exact structural interning shares typed nodes, without Boolean rewrites or
++/// reordering operands. Canonical ports are scoped to this component's pool.
++pub struct GuardPool(Vec<FlatGuard>, HashMap<GuardKey, GuardRef>);
++
++#[derive(PartialEq, Eq, Hash)]
++enum GuardKey {
++    Or(u32, u32),
++    And(u32, u32),
++    Not(u32),
++    Comp(u8, Canonical, Canonical),
++    Port(Canonical),
++}
++
++impl GuardKey {
++    fn from_guard(guard: &FlatGuard) -> Self {
++        match guard {
++            FlatGuard::Or(left, right) => Self::Or(left.index(), right.index()),
++            FlatGuard::And(left, right) => Self::And(left.index(), right.index()),
++            FlatGuard::Not(child) => Self::Not(child.index()),
++            FlatGuard::CompOp(op, left, right) => {
++                let opcode = match op {
++                    PortComp::Eq => 0, PortComp::Neq => 1,
++                    PortComp::Lt => 2, PortComp::Leq => 3,
++                    PortComp::Gt => 4, PortComp::Geq => 5,
++                };
++                Self::Comp(opcode, left.borrow().canonical(), right.borrow().canonical())
++            }
++            FlatGuard::Port(port) => Self::Port(port.borrow().canonical()),
++            FlatGuard::True => unreachable!("true is the pool's reserved first node"),
++        }
++    }
++}
+ 
+ impl GuardPool {
+     pub fn new() -> Self {
+         let mut vec = Vec::<FlatGuard>::with_capacity(1024);
+         vec.push(FlatGuard::True);
+-        Self(vec)
++        Self(vec, HashMap::new())
+     }
+ 
+     fn add(&mut self, guard: FlatGuard) -> GuardRef {
+@@ -65,12 +95,18 @@
+             return GuardRef(0);
+         }
+ 
++        let key = GuardKey::from_guard(&guard);
++        if let Some(reference) = self.1.get(&key) {
++            return *reference;
++        }
+         self.0.push(guard);
+-        GuardRef(
++        let reference = GuardRef(
+             (self.0.len() - 1)
+                 .try_into()
+                 .expect("too many guards in the pool"),
+-        )
++        );
++        self.1.insert(key, reference);
++        reference
+     }
+ 
+     pub fn flatten(&mut self, old: &Guard<Nothing>) -> GuardRef {

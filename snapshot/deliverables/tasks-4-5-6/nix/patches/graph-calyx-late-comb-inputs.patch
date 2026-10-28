@@ -1,0 +1,51 @@
+--- a/calyx/opt/src/passes/mod.rs
++++ b/calyx/opt/src/passes/mod.rs
+@@ -1,6 +1,7 @@
+ //! Passes for the Calyx compiler.
+ mod canonical;
+ mod cell_share;
++mod late_comb_inputs;
+ mod clk_insertion;
+ mod collapse_control;
+ mod comb_prop;
+@@ -47,5 +48,6 @@
+ pub use canonical::Canonicalize;
+ pub use cell_share::CellShare;
++pub use late_comb_inputs::LateCombInputs;
+ pub use clk_insertion::ClkInsertion;
+ pub use collapse_control::CollapseControl;
+ pub use comb_prop::CombProp;
+--- a/calyx/opt/src/default_passes.rs
++++ b/calyx/opt/src/default_passes.rs
+@@ -2,6 +2,7 @@
+ use crate::pass_manager::PassResult;
+ use crate::passes::{
+     AddGuard, Canonicalize, CellShare, ClkInsertion, CollapseControl, CombProp,
++    LateCombInputs,
+     CompileInvoke, CompileRepeat, CompileStatic, ComponentInliner,
+     ConstantPortProp, DataPathInfer, DeadAssignmentRemoval, DeadCellRemoval,
+     DeadGroupRemoval, DefaultAssigns, Externalize, GoInsertion, GroupToInvoke,
+@@ -39,6 +40,7 @@
+         pm.register_pass::<GroupToSeq>()?;
+         pm.register_pass::<InferShare>()?;
+         pm.register_pass::<CellShare>()?;
++        pm.register_pass::<LateCombInputs>()?;
+         pm.register_pass::<StaticInference>()?;
+         pm.register_pass::<StaticPromotion>()?;
+         pm.register_pass::<SimplifyStaticGuards>()?;
+@@ -106,6 +108,7 @@
+                 ConstantPortProp,
+                 DeadCellRemoval, // Clean up dead wires left by CombProp
+                 CellShare,       // LiveRangeAnalaysis should handle comb groups
++                LateCombInputs,  // Opt-in; must follow register allocation
+                 SimplifyWithControl, // Must run before compile-invoke
+                 CompileInvoke,   // creates dead comb groups
+                 StaticInference,
+@@ -130,6 +133,7 @@
+                 CombProp,
+                 DeadCellRemoval,
+                 CellShare,
++                LateCombInputs,
+                 SimplifyWithControl,
+                 CompileInvoke,
+                 StaticInference,

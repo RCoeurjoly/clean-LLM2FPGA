@@ -1,0 +1,42 @@
+--- a/calyx/opt/src/passes/compile_invoke.rs
++++ b/calyx/opt/src/passes/compile_invoke.rs
+@@ -317,6 +317,7 @@
+         _sigs: &LibrarySignatures,
+         _comps: &[ir::Component],
+     ) -> VisResult {
++        log::info!("memory:compile-invoke:{}:start {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         log::debug!("Visiting `{}`", comp.name);
+         // For all subcomponents that had a `ref` cell in them, we need to
+         // update their cell to have the new ports added from inlining the
+@@ -365,6 +366,7 @@
+         ctx: &LibrarySignatures,
+         comps: &[ir::Component],
+     ) -> VisResult {
++        log::info!("memory:compile-invoke:{}:invoke:start {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         let mut builder = ir::Builder::new(comp, ctx);
+         let invoke_group = builder.add_group("invoke");
+ 
+@@ -443,6 +445,7 @@
+             en.attributes.insert(ir::NumAttr::Promotable, time);
+         }
+ 
++        log::info!("memory:compile-invoke:{}:invoke:end {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         Ok(Action::change(ir::Control::Enable(en)))
+     }
+ 
+@@ -535,6 +538,7 @@
+         _sigs: &LibrarySignatures,
+         _comps: &[ir::Component],
+     ) -> VisResult {
++        log::info!("memory:compile-invoke:{}:rewrite:start {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         let port_map = std::mem::take(&mut self.removed);
+         // Add the newly added port to the global port map
+         // Rewrite all of the ref cell ports
+@@ -544,6 +548,7 @@
+         };
+         rw.rewrite(comp);
+         self.port_names.insert(comp.name, rw.port_map);
++        log::info!("memory:compile-invoke:{}:finish {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
+         Ok(Action::Continue)
+     }
+ }

@@ -1,0 +1,5 @@
+{
+  "command": "python3 -m unittest tools.test_bit_header -v",
+  "tests": 3,
+  "status": "pass"
+}

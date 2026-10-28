@@ -1,0 +1,49 @@
+From: LLM2FPGA diagnostics
+Subject: [PATCH] xilinx: omit unused post-route LUT input timing dependencies
+
+Post-routing legalisation connects shared physical LUT inputs to both LUTs,
+but preserves each LUT's functional inputs in X_ORIG_PORT mappings. The FASM
+writer uses those mappings to construct the truth table. Considering unmapped
+inputs as timing dependencies introduces false loops on reloaded checkpoints.
+Only omit such arcs after routing, for an ordinary LUT with complete logical
+input mappings and its output mapping present. Keep A6 dependencies because
+that physical input can select between paired LUT5/LUT6 functions.
+Real mapped feedback and
+incomplete metadata continue to fail; no net, route or configuration changes.
+
+diff --git a/xilinx/arch.cc b/xilinx/arch.cc
+--- a/xilinx/arch.cc
++++ b/xilinx/arch.cc
+@@ -1209,4 +1209,32 @@ bool Arch::getCellDelay(const CellInfo *cell, IdString fromPort, IdString toPort, DelayInfo &delay) const
+     if (cell->type == id_SLICE_LUTX) {
++        // fixupRouting shares physical pins but keeps functional mappings.
++        // Match the FASM writer, not the incidental physical connectivity.
++        if (bool_or_default(settings, id("route"), false) &&
++            (toPort == id_O5 || toPort == id_O6) &&
++            (fromPort == id_A1 || fromPort == id_A2 || fromPort == id_A3 ||
++             fromPort == id_A4 || fromPort == id_A5) &&
++            cell->attrs.count(id("X_ORIG_PORT_" + toPort.str(this))) &&
++            !cell->attrs.count(id("X_ORIG_PORT_" + fromPort.str(this)))) {
++            const std::string type = str_or_default(cell->attrs, id("X_ORIG_TYPE"));
++            int inputs = 0;
++            if (type.size() == 4 && type.substr(0, 3) == "LUT" && type[3] >= '1' && type[3] <= '6')
++                inputs = type[3] - '0';
++            else if (type == "LUT6_2")
++                inputs = 6;
++            pool<std::string> mapped;
++            for (int i = 1; i <= 6; ++i) {
++                const std::string mapping = str_or_default(cell->attrs, id("X_ORIG_PORT_A" + std::to_string(i)));
++                std::istringstream tokens(mapping);
++                std::string token;
++                while (tokens >> token)
++                    mapped.insert(token);
++            }
++            bool complete = inputs != 0;
++            for (int i = 0; i < inputs; ++i)
++                complete = complete && mapped.count("I" + std::to_string(i));
++            if (complete)
++                return false;
++        }
+         if (xc7 && inst_id != -1) {
+             int z = locInfo(cell->bel).bel_data[cell->bel.index].z;
+             IdString tiletype = getBelTileType(cell->bel);

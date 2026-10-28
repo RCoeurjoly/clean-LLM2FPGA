@@ -1,0 +1,36 @@
+--- a/calyx/opt/src/passes/compile_invoke.rs
++++ b/calyx/opt/src/passes/compile_invoke.rs
+@@ -350,7 +350,15 @@
+         ctx: &LibrarySignatures,
+         comps: &[ir::Component],
+     ) -> VisResult {
+-        log::info!("memory:compile-invoke:{}:invoke:start {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        let timing_enabled = log::log_enabled!(log::Level::Info);
++        let snapshot_start = std::time::Instant::now();
++        let snapshot_start_ns = if timing_enabled {
++            let snapshot = calyx_utils::compiler_memory::snapshot();
++            let elapsed = snapshot_start.elapsed().as_nanos();
++            log::info!("memory:compile-invoke:{}:invoke:start {:?}", comp.name, snapshot);
++            elapsed
++        } else { 0 };
++        let lowering_start = std::time::Instant::now();
+         let mut builder = ir::Builder::new(comp, ctx);
+         let invoke_group = builder.add_group("invoke");
+ 
+@@ -429,7 +437,15 @@
+             en.attributes.insert(ir::NumAttr::Promotable, time);
+         }
+ 
+-        log::info!("memory:compile-invoke:{}:invoke:end {:?}", comp.name, calyx_utils::compiler_memory::snapshot());
++        if timing_enabled {
++            let lowering_ns = lowering_start.elapsed().as_nanos();
++            let snapshot_end = std::time::Instant::now();
++            let snapshot = calyx_utils::compiler_memory::snapshot();
++            let snapshot_end_ns = snapshot_end.elapsed().as_nanos();
++            log::info!("memory:compile-invoke:{}:invoke:end {:?}", comp.name, snapshot);
++            log::info!("compile-invoke:timing:{} snapshot_start_ns={} lowering_ns={} snapshot_end_ns={}",
++                comp.name, snapshot_start_ns, lowering_ns, snapshot_end_ns);
++        }
+         Ok(Action::change(ir::Control::Enable(en)))
+     }
+ 

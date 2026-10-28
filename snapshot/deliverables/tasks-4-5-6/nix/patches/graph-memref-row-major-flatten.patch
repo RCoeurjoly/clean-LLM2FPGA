@@ -1,0 +1,31 @@
+--- a/FlattenMemRefs.cpp
++++ b/FlattenMemRefs.cpp
+@@ -69,8 +69,7 @@
+                        type.getElementType(), uniqueID);
+ }
+ 
+-// Flatten indices by generating the product of the i'th index and the [0:i-1]
+-// shapes, for each index, and then summing these.
++// Flatten row-major indices with Horner recurrence: prefix * nextDim + index.
+ static Value flattenIndices(ConversionPatternRewriter &rewriter, Operation *op,
+                             ValueRange indices, MemRefType memrefType) {
+   assert(memrefType.hasStaticShape() && "expected statically shaped memref");
+@@ -85,14 +84,10 @@
+   Value finalIdx = indices.front();
+   for (auto memIdx : llvm::enumerate(indices.drop_front())) {
+     Value partialIdx = memIdx.value();
+-    int64_t indexMulFactor = 1;
+-
+-    // Calculate the product of the i'th index and the [0:i-1] shape dims.
+-    for (unsigned i = memIdx.index() + 1; i < memrefType.getShape().size();
+-         ++i) {
+-      int64_t dimSize = memrefType.getShape()[i];
+-      indexMulFactor *= dimSize;
+-    }
++    // Horner recurrence: extend the accumulated prefix by exactly the next
++    // dimension. Multiplying by its entire suffix would apply strides twice
++    // for ranks above two (e.g. [2,3,4], [1,2,3] must yield23, not59).
++    int64_t indexMulFactor = memrefType.getShape()[memIdx.index() + 1];
+ 
+     // Multiply product by the current index operand.
+     if (llvm::isPowerOf2_64(indexMulFactor)) {

@@ -1,0 +1,20 @@
+diff --git a/tools/torch-mlir-opt/CMakeLists.txt b/tools/torch-mlir-opt/CMakeLists.txt
+index 9eb4a022..c5d7a0c8 100644
+--- a/tools/torch-mlir-opt/CMakeLists.txt
++++ b/tools/torch-mlir-opt/CMakeLists.txt
+@@ -11,10 +11,13 @@ if(TORCH_MLIR_ENABLE_STABLEHLO)
+ endif()
+
+ target_link_libraries(torch-mlir-opt PRIVATE
+-  MLIROptLib
+-  MLIRTransforms
+   TorchMLIRInitAll
+   TorchMLIRTorchDialect
+   TorchMLIRTorchPasses
+   ${dependency_libraries}
+ )
++
++mlir_target_link_libraries(torch-mlir-opt PRIVATE
++  MLIROptLib
++  MLIRTransforms
++)
