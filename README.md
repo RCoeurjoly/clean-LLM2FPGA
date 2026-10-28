@@ -14,15 +14,46 @@ was deferred by request. Short checks are recorded in `verification/`.
 
 ## Build later
 
-Use x86_64 Linux, Python 3.11+, Nix, bubblewrap, and the matching host GCC 13
-compiler/headers recorded in `toolchain/host-files.json`.
+Use x86_64 Linux and Nix. The restored flake uses the selected build's original
+locked inputs and tool/model recipes. The exact-image flow also requires the
+matching host GCC 13 compiler/headers in `toolchain/host-files.json`.
 
 ```sh
-# Once, if the pinned tools and model inputs are absent:
-gzip -dc toolchain/closure.nar.gz | nix-store --import
+# Once, if the recorded tools and model inputs are absent:
+nix run .#import-toolchain
 
-python3 build.py verify
+nix run .#verify
+nix develop
 python3 build.py list-stages
+
+# Full reproduction, when ready for the long run:
+nix run .#build -- --output "$PWD/build/full"
+```
+
+`nix run .#build` launches the complete hash-checked flow in a writable output
+directory. It runs outside Nix's build sandbox because the recorded host compiler
+and bubblewrap namespace are required. `nix build` installs that launcher; it
+does not start routing.
+
+The original source recipes are available as explicit packages, including
+`graph-torch-opt`, `graph-calyx-opt`, `graph-calyx-backend`, `graph-yosys`,
+`graph-core-1m-stable-scratch`, `nextpnr-xilinx`, `nextpnr-xilinx-chipdb`,
+`prjxray`, `prjxray-db`, `model-snapshot` and `model-package`. Their required
+install-check sources are retained under `source/toolchain/`. Rebuilding these
+packages does not silently replace the executable versions recorded in
+`pipeline/flow.json`; exact reproduction uses the authenticated archive.
+
+For short checks without a model or route build:
+
+```sh
+nix flake check --no-build
+nix build .#checks.x86_64-linux.build-driver
+```
+
+The direct Python commands remain available after importing the archive:
+
+```sh
+python3 build.py verify
 python3 build.py all --output build/full
 ```
 
@@ -60,11 +91,12 @@ reference bitstreams are not build inputs or shipped in this tree.
    compared by `tools/verify_decoded_frames.py`.
 
 `source/toolchain/` retains native compiler sources and patches for review.
-The pipeline runs the pinned executables supplied in the Nix archive; it does
-not rebuild that toolchain. `pipeline/files.json` authenticates the retained
+The exact-image pipeline runs the pinned executables supplied in the Nix archive;
+the flake exposes their source recipes separately. `pipeline/files.json` authenticates the retained
 source/configuration/archive files. `pipeline/origin.json` identifies their
-origin. Historical experiments, admission drivers, reports, unrelated tests
-and cached compilation outputs have been removed.
+origin. Historical experiments, admission drivers, reports and cached compilation outputs
+have been removed. The retained tool build tests are inputs to the restored Nix
+recipes.
 
 For an isolated assembly check of an already generated route:
 

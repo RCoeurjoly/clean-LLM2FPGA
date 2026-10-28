@@ -1,0 +1,25 @@
+// INIT_ID is numeric so image binding survives the Calyx primitive ABI.
+// Both source files are materialized together in the core output directory.
+extern "closure_memory.sv" {
+  primitive closure_register_memory[WIDTH, SIZE, IDX_SIZE, INIT_ID, WRITABLE](
+    @clk clk: 1, @reset reset: 1,
+    @write_together(1) @data addr0: IDX_SIZE,
+    @write_together(1) @interval(1) @go(1) content_en: 1,
+    @write_together(2) write_en: 1,
+    @write_together(2) @data write_data: WIDTH
+  ) -> (@stable read_data: WIDTH, @done(1) done: 1);
+  primitive closure_bram_memory[WIDTH, SIZE, IDX_SIZE, INIT_ID, WRITABLE](
+    @clk clk: 1, @reset reset: 1,
+    @write_together(1) @data addr0: IDX_SIZE,
+    @write_together(1) @interval(2) @go(1) content_en: 1,
+    @write_together(2) write_en: 1,
+    @write_together(2) @data write_data: WIDTH
+  ) -> (@stable read_data: WIDTH, @done(1) done: 1);
+  primitive closure_lutram_memory[WIDTH, SIZE, IDX_SIZE, INIT_ID, WRITABLE](
+    @clk clk: 1, @reset reset: 1,
+    @write_together(1) @data addr0: IDX_SIZE,
+    @write_together(1) @interval(2) @go(1) content_en: 1,
+    @write_together(2) write_en: 1,
+    @write_together(2) @data write_data: WIDTH
+  ) -> (@stable read_data: WIDTH, @done(1) done: 1);
+}
