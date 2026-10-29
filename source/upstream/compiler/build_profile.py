@@ -53,7 +53,6 @@ class CoreBuildProfile:
                     'compiler/pipeline.py', 'compiler/stages.py', 'compiler/generation_driver.py',
                     'compiler/graph_images.py', 'compiler/build_profile.py',
                     'compiler/build_core.py', 'compiler/compile_core.py']
-        sources += ['nix/graph-core-source.nix', 'nix/graph-core-data.nix', 'nix/graph-core.nix']
         paths = [manifest, self.numerical_contract, *(root / name for name in sources)]
         dependencies = {str(path): digest(path) for path in paths}
         tool_hashes = {name: tool.identities() for name, tool in sorted(self.tools.items())}

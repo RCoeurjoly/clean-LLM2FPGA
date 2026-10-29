@@ -74,6 +74,16 @@
           LLM2FPGA_TORCH_PASS_TOOL = "${tools.graph-torch-opt}/bin/llm2fpga-torch-opt";
           LLM2FPGA_MLIR_RUNNER = "${tools.graph-torch-mlir-sdk}/bin/mlir-runner";
         } ''
+          python3 - <<'PYTHON'
+from pathlib import Path
+import os
+from compiler.build_profile import CoreBuildProfile
+from compiler.pipeline import CompilerTool
+CoreBuildProfile(
+    Path("${tools.graph-core-1m-stable-scratch.compilerSource}/compiler/contracts/tinystories-1m-fixed-point.json"),
+    {"torch": CompilerTool(Path(os.environ["LLM2FPGA_TORCH_PASS_TOOL"]))},
+).validate()
+PYTHON
           mkdir tests
           cp ${./source/toolchain/tests/test_graph_pointwise_fusion.py} tests/test_graph_pointwise_fusion.py
           python3 -m unittest discover -s tests -v
