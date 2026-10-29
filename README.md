@@ -38,25 +38,15 @@ the final bitstream to compare its configuration frames. `result/result.json`
 contains the acceptance receipt; `result/SHA256SUMS` contains the final hash.
 No command programs hardware.
 
-**The new source-built Nix pipeline has not yet been verified end to end.**
-That long run was deferred by request. The original routing alone took about
-10 hours 40 minutes; this flow allows 12 hours for routing. Building uncached
-LLVM/CIRCT and other compiler dependencies adds substantial time and disk use.
-The hash checks reject a differing image; the existence of the build recipe
-does not prove it will reproduce until the full build succeeds.
+**Full sandboxed PyTorch-to-bitstream reproduction succeeded on 2026-10-29**,
+including the original FASM hash, final bitstream hash, and decoded-frame checks.
+A separate clean-machine reproduction has not yet been tested.
 
-## Portability checklist
-
-- Supported platform: **x86_64 Linux**; ARM64 is not currently a flake target.
-- All toolchains, interpreters, model inputs, libraries, and native stages are
-  declared Nix dependencies, with upstream revisions/hashes pinned.
-- The build uses symbolic input references, not fixed store hashes, host GCC,
-  user checkout paths, or manually imported binaries.
-- Build with sandboxing enabled as above. Downloading uncached pinned inputs
-  requires network access; ordinary compilation stages run without it.
-- The build enforces the original FASM and bitstream hashes. Full reproduction
-  and a separate clean-machine run have not yet passed; portability is a build
-  requirement, not an already established result.
+The supported platform is x86_64 Linux. Tools, libraries, and model inputs are
+pinned Nix dependencies; no host GCC or manual toolchain import is required.
+Uncached inputs require network access. Original routing took about 10 hours
+40 minutes; this flow allows 12 hours. Uncached compiler builds add time and
+disk use.
 
 ## Short checks
 
@@ -81,8 +71,7 @@ Individual source tool/model packages remain exposed by the flake, including
 3. `nix/selected-toolchain.nix`, `source/toolchain/nix/`, and `flake.lock`:
    pinned source recipes, compiler patches, and their required build tests.
 4. `pipeline/flow.json`: selected commands with symbolic tool/input references,
-   dependency order, and reference
-   output hashes. `snapshot/` contains the static RTL, constraints, memory
+   dependency order, and reference output hashes. `snapshot/` contains the static RTL, constraints, memory
    configuration, and native helper scripts those commands need.
 5. `nix/bitstream.nix`: resolves symbolic references to declared Nix dependencies and
    creates the stage derivations. `build.py` executes a stage and enforces final
@@ -95,11 +84,6 @@ inputs and outputs must exist. The original FASM and final bitstream hashes are
 mandatory. `tools/bit_header.py` fixes only the Xilinx header date/time to
 `2026/10/28 10:02:51`; configuration words are independently checked by
 `tools/verify_decoded_frames.py`.
-
-`pipeline/files.json` records the retained source/configuration hashes.
-`pipeline/origin.json` identifies their origin. Historical experiments,
-admission drivers, binary toolchain archives, and cached model/route outputs
-are not build inputs.
 
 ## Hardware status
 

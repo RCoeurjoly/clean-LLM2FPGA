@@ -11,6 +11,38 @@ let
   };
   snapshot = builtins.path { path = ../snapshot; name = "fpga-inputs"; };
   core = tools.graph-core-1m-stable-scratch;
+  bindingManifest = "artifacts/task6/board-fit-2026-10-25/probe/bram-return-62-v1/bindings.json";
+  # The compiler resolves initializer filenames relative to the manifest.
+  bindingInputs = pkgs.runCommand "model-memory-bindings" {
+    nativeBuildInputs = [ pkgs.python312 ];
+  } ''
+    python3 - "${core}" "${snapshot}/${bindingManifest}" "$out" <<'PYTHON'
+import hashlib, json, shutil, sys
+from pathlib import Path
+core, manifest, output = map(Path, sys.argv[1:])
+output.mkdir()
+shutil.copyfile(manifest, output / 'bindings.json')
+images = {}
+for binding in json.loads(manifest.read_text())['bindings']:
+    name = binding.get('init_file')
+    if name is None:
+        continue
+    if Path(name).name != name:
+        raise ValueError('Initializer must be a local filename: ' + name)
+    expected = binding['init_sha256']
+    if name in images and images[name] != expected:
+        raise ValueError('Conflicting initializer hashes: ' + name)
+    images[name] = expected
+for name, expected in images.items():
+    source = core / name
+    with source.open('rb') as stream:
+        actual = hashlib.file_digest(stream, 'sha256').hexdigest()
+    if actual != expected:
+        raise ValueError('Generated initializer identity mismatch: ' + name)
+    (output / name).symlink_to(source)
+print(f'Verified {len(images)} model initializer files')
+PYTHON
+  '';
   # Symbolic references resolve only to declared Nix dependencies.
   toolPaths = {
     "@python@" = pkgs.python311;
@@ -21,6 +53,7 @@ let
     "@nextpnr@" = tools.nextpnr-xilinx;
     "@chipdb@" = tools.nextpnr-xilinx-chipdb;
     "@core@" = core;
+    "@tree@/${bindingManifest}" = "${bindingInputs}/bindings.json";
     "@yosys-config@" = tools.graph-yosys.upstream;
   };
   # Match the most specific path first; replacing the checkout root first would
@@ -52,7 +85,7 @@ let
       spec = pkgs.writeText "stage-${toString state.index}.json" (builtins.toJSON ({
         inherit argv;
         inherit (stage) name expected_outputs timeout_seconds;
-        inputs = map generatedPath (builtins.attrNames stage.generated_inputs);
+        inputs = map generatedPath stage.generated_inputs;
         environment = lib.mapAttrs (_: rewrite paths) (stage.environment or {});
       } // lib.optionalAttrs (stage.stage_model_images or false) {
         model_images = toString core;
@@ -85,8 +118,8 @@ let
     };
   graph = builtins.foldl' makeStage {
     index = 0; paths = {}; stages = [];
-    outputs = lib.mapAttrs' (name: _: lib.nameValuePair "core/${name}" "${core}/${name}")
-      flow.core_outputs;
+    outputs = builtins.listToAttrs (map (name: lib.nameValuePair "core/${name}" "${core}/${name}")
+      flow.core_outputs);
   } flow.stages;
   route = lib.last graph.stages;
   environment = {
