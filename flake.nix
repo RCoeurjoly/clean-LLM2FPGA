@@ -37,7 +37,8 @@
       let
         pkgs = import nixpkgs { inherit system; };
         tools = import ./nix/selected-toolchain.nix { inherit inputs system; };
-        pipeline = import ./nix/bitstream.nix { inherit pkgs tools; };
+        pipeline = import ./nix/pipeline.nix { inherit pkgs tools; };
+        bitstream = import ./nix/bitstream.nix { inherit pkgs tools; inherit (pipeline) fasm; };
         driverSource = pkgs.lib.fileset.toSource {
           root = ./.;
           fileset = pkgs.lib.fileset.unions [
@@ -55,9 +56,17 @@
         '';
       in {
         packages = tools // pipeline // {
-          default = pipeline.bitstream;
+          inherit bitstream;
+          default = bitstream;
+          route = pipeline.fasm;
         };
         checks.build-driver = driverTests;
+        checks.graph-torch-opt = tools.graph-torch-opt.tests;
+        checks.graph-calyx-opt = tools.graph-calyx-opt.tests;
+        checks.graph-calyx-backend = tools.graph-calyx-backend.tests;
+        checks.graph-yosys = tools.graph-yosys.tests;
+        checks.graph-four-state-verifier = tools.graph-four-state-verifier.tests;
+
         checks.pytorch-equivalence = pkgs.runCommand "pytorch-equivalence-tests" {
           nativeBuildInputs = tools.graph-core-1m-stable-scratch.nativeBuildInputs;
           PYTHONPATH = tools.graph-core-1m-stable-scratch.PYTHONPATH;

@@ -2,7 +2,8 @@
 
 # Apply reviewed native guard/AST lowering and serializer source patches
 # before compiling the backend. Generated RTL is never opened or rewritten.
-calyx.overrideAttrs (old: {
+let
+  package = calyx.overrideAttrs (old: {
   patches = (old.patches or []) ++ [
     ./patches/graph-calyx-component-file-emission.patch
     ./patches/graph-calyx-inferred-fsm-state-decode.patch
@@ -39,23 +40,42 @@ calyx.overrideAttrs (old: {
     cp ${../compiler/native/calyx/CompilerMemory.rs} calyx/utils/src/compiler_memory.rs
     cp ${../compiler/native/calyx/LateCombInputs.rs} calyx/opt/src/passes/late_comb_inputs.rs
   '';
-  postBuild = (old.postBuild or "") + ''
-    rustc --edition=2024 --test calyx/opt/src/analysis/live_control_set.rs -o live-control-set-tests
-    ./live-control-set-tests
-    cargo test --offline --profile release -p calyx-utils packed_conflict
-  '';
-  postInstall = (old.postInstall or "") + ''
-    mkdir -p signed-divider-tests/compiler/tests/calyx
-    cp ${../tests/test_graph_calyx_signed_divider_sharing.py} signed-divider-tests/test_signed_divider.py
-    cp ${../tests/test_graph_calyx_late_comb_inputs.py} signed-divider-tests/test_late_comb_inputs.py
-    cp ${../compiler/tests/calyx/signed-divider-sharing.futil} signed-divider-tests/compiler/tests/calyx/signed-divider-sharing.futil
-    cp ${../compiler/tests/calyx/signed-divider-parallel.futil} signed-divider-tests/compiler/tests/calyx/signed-divider-parallel.futil
-    export LLM2FPGA_CALYX_TOOL="$out/bin/calyx"
-    export LLM2FPGA_TEST_SUPPORT="$PWD/signed-divider-tests"
-    export LLM2FPGA_IVERILOG="${fourStateVerifier}/bin/iverilog"
-    ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_signed_divider.py -v
-    ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_late_comb_inputs.py -v
-  '';
+  passthru = (old.passthru or {}) // {
+    tests = package.overrideAttrs (built: {
+      pname = "llm2fpga-calyx-backend-tests";
+      postPatch = built.postPatch + ''
+        chmod u+w calyx/opt/src/analysis/live_control_set.rs calyx/utils/src/packed_conflict_graph.rs
+        cat ${../compiler/native/calyx/LiveControlSetTests.rs} >> calyx/opt/src/analysis/live_control_set.rs
+        cat ${../compiler/native/calyx/PackedConflictGraphTests.rs} >> calyx/utils/src/packed_conflict_graph.rs
+      '';
+      # Retain Cargo's source/vendor setup for the native Rust unit tests.
+      buildPhase = ''
+        runHook preBuild
+        rustc --edition=2024 --test calyx/opt/src/analysis/live_control_set.rs -o live-control-set-tests
+        ./live-control-set-tests
+        cargo test --offline --profile release -p calyx-utils packed_conflict
+      '';
+      postBuild = "";
+      doCheck = false;
+      installPhase = ''
+        mkdir -p signed-divider-tests/compiler/tests/calyx
+        cp ${../tests/test_graph_calyx_signed_divider_sharing.py} signed-divider-tests/test_signed_divider.py
+        cp ${../tests/test_graph_calyx_late_comb_inputs.py} signed-divider-tests/test_late_comb_inputs.py
+        cp ${../compiler/tests/calyx/signed-divider-sharing.futil} signed-divider-tests/compiler/tests/calyx/signed-divider-sharing.futil
+        cp ${../compiler/tests/calyx/signed-divider-parallel.futil} signed-divider-tests/compiler/tests/calyx/signed-divider-parallel.futil
+        export LLM2FPGA_CALYX_TOOL="${package}/bin/calyx"
+        export LLM2FPGA_TEST_SUPPORT="$PWD/signed-divider-tests"
+        export LLM2FPGA_IVERILOG="${fourStateVerifier}/bin/iverilog"
+        ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_signed_divider.py -v
+        ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_late_comb_inputs.py -v
+        touch "$out"
+      '';
+      postInstall = "";
+      doInstallCheck = false;
+      dontFixup = true;
+      passthru = {};
+    });
+  };
   # cargoSetupHook copies this basename; its generated config refers to it.
   cargoDeps = runCommand "cargo-vendor-dir" {
     nativeBuildInputs = [ python3 ];
@@ -81,4 +101,5 @@ checksum['files'][relative] = hashlib.sha256((crate / relative).read_bytes()).he
 path.write_text(json.dumps(checksum, sort_keys=True))
 PY
   '';
-})
+});
+in package

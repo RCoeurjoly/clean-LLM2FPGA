@@ -35,11 +35,8 @@ def verify_frames(frames,decoded):
     # They must have the full frame width and may contain no configuration bits.
     if any(len(words)!=101 for words in observed.values()):raise ValueError('Invalid decoded XC7 frame width')
     if any(any(observed[a]) for a in extra):raise ValueError('Unrequested nonzero decoded frame')
-    nonzero=setbits=0
+    nonzero=0
     for address,words in expected.items():
         if observed[address]!=words:raise ValueError('Decoded frame payload differs at '+hex(address))
-        nonzero+=sum(w!=0 for w in words);setbits+=sum(w.bit_count() for w in words)
+        nonzero+=sum(w!=0 for w in words)
     if nonzero==0:raise ValueError('All-zero bitstream configuration')
-    return dict(frame_count=len(observed),assembled_frame_count=len(expected),zero_filled_frames=len(extra),word_count=len(observed)*101,
-        nonzero_words=nonzero,set_configuration_bits=setbits,all_frame_words_match=True,
-        hardware_programmed=False)

@@ -1,6 +1,5 @@
 """Freeze only the two timestamp fields in the Xilinx .bit container header."""
 from pathlib import Path
-import hashlib
 
 DATE=b'2026/10/28\x00'
 TIME=b'10:02:51\x00'
@@ -33,13 +32,5 @@ def normalized(data):
     return bytes(out)
 
 def normalize_file(path):
-    path=Path(path);before=path.read_bytes();after=normalized(before)
-    raw=path.with_name('model.wallclock.bit')
-    if raw.exists():raise ValueError('Timestamp normalization already performed')
-    raw.write_bytes(before);path.write_bytes(after)
-    p=fields(before);start,end=p['e']
-    return dict(scope='Xilinx container timestamp only; configuration payload unchanged',
-                old_date=before[slice(*p['c'])].rstrip(b'\0').decode('ascii'),
-                old_time=before[slice(*p['d'])].rstrip(b'\0').decode('ascii'),
-                fixed_date=DATE.rstrip(b'\0').decode(),fixed_time=TIME.rstrip(b'\0').decode(),
-                payload_sha256=hashlib.sha256(before[start:end]).hexdigest())
+    path = Path(path)
+    path.write_bytes(normalized(path.read_bytes()))

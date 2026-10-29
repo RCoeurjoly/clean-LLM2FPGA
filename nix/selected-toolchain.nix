@@ -51,11 +51,9 @@ let
     package = "${inputs.kev-gpt-src}/model_packages/tinystories-1m";
   };
   core = pkgs.callPackage ../source/upstream/nix/graph-core.nix {
-    inherit python modelInputs circt;
+    inherit python modelInputs;
     torchMlir = torch.torchMlir;
     torchDriver = torch.driver;
-    memoryDriver = calyxDriver;
-    calyx = backend;
     recoverRestoringSqrtLoops = true;
     coalescePointwisePingpong = true;
     fuseGemvEpilogues = true;
@@ -140,6 +138,7 @@ in {
   graph-calyx-opt = calyxDriver;
   graph-calyx-backend = backend;
   graph-yosys = yosys;
+  graph-four-state-verifier = verifier;
   graph-core-1m-stable-scratch = core;
   model-snapshot = modelInputs.snapshot;
   model-package = modelInputs.package;
