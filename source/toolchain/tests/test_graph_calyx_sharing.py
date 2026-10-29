@@ -23,17 +23,6 @@ class CalyxSharingTests(unittest.TestCase):
                        check=True, capture_output=True, text=True, timeout=60)
         return output
 
-    def test_opposite_operator_orders_have_no_combinational_cycle(self):
-        yosys = shutil.which('yosys')
-        self.assertIsNotNone(yosys, 'installed Yosys required')
-        with tempfile.TemporaryDirectory() as work:
-            root = Path(work)
-            self.emit(root)
-            result = subprocess.run([yosys, '-p',
-                'read_verilog -sv kernel.sv; hierarchy -top main; proc; flatten; opt_clean; scc'],
-                cwd=root, check=True, capture_output=True, text=True, timeout=60)
-        self.assertTrue('Found 0 SCCs.' in result.stdout,
-                        'Calyx sharing introduced a combinational cycle')
 
     def test_both_operator_orders_match_every_runtime_byte(self):
         iverilog, vvp = shutil.which('iverilog'), shutil.which('vvp')

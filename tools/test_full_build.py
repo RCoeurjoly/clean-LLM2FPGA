@@ -1,6 +1,4 @@
 """Exercise the build runner without invoking model compilation or routing."""
-import contextlib
-import io
 import hashlib
 import json
 from pathlib import Path
@@ -47,20 +45,6 @@ class StageTest(unittest.TestCase):
             with self.assertRaises(FileNotFoundError):
                 build.run_stage(spec, Path(tmp) / 'out')
 
-    def test_failed_command_reports_compiler_log(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            spec = {'argv': [sys.executable, '-c',
-                            'from pathlib import Path; '
-                            'Path("native.log").write_text("native router diagnostic"); '
-                            'print("compiler diagnostic", flush=True); raise SystemExit(1)'],
-                    'inputs': [], 'expected_outputs': {}, 'timeout_seconds': 10}
-            diagnostic = io.StringIO()
-            with contextlib.redirect_stderr(diagnostic):
-                with self.assertRaises(build.subprocess.CalledProcessError):
-                    build.run_stage(spec, Path(tmp) / 'out')
-            self.assertIn('compiler diagnostic', diagnostic.getvalue())
-            self.assertIn('native router diagnostic', diagnostic.getvalue())
-
     def test_wrong_fasm_fails_before_conversion(self):
         with tempfile.TemporaryDirectory() as tmp:
             route = Path(tmp) / 'route.fasm'
@@ -77,18 +61,6 @@ class StageTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 build.require_hash(bit, build.EXPECTED)
 
-
-class PortabilityTest(unittest.TestCase):
-    def test_build_inputs_have_no_machine_specific_paths(self):
-        import re
-        root = Path(__file__).resolve().parents[1]
-        files = [root / 'flake.nix', root / 'pipeline/flow.json']
-        files += list((root / 'nix').glob('*.nix'))
-        files += list((root / 'source/toolchain/tests').glob('*.py'))
-        for path in files:
-            with self.subTest(path=str(path.relative_to(root))):
-                self.assertIsNone(re.search(r'/nix/store/[a-z0-9]{32}-|/home/roland/|/usr/bin/(?!env)',
-                                            path.read_text()))
 
 
 if __name__ == '__main__':

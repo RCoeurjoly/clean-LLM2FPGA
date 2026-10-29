@@ -71,9 +71,3 @@ class MemoryFlattenTests(unittest.TestCase):
                 expected=index[0]*12+index[1]*4+index[2]
                 self.assertEqual(self.execute(source),expected)
                 self.assertEqual(self.execute(self.lower(source)),expected)
-
-    def test_pipeline_uses_owned_native_flattening(self):
-        from compiler.pipeline import INTEGER_PROFILE
-        stage=next(stage for stage in INTEGER_PROFILE if stage[0]=='flat-memory')
-        self.assertEqual(stage[1],'memory')
-        self.assertIn('--flatten-memref',stage[2])

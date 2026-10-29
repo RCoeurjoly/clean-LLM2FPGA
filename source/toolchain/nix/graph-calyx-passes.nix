@@ -1,5 +1,5 @@
 # The Calyx driver must use CIRCT's SDK, independently of the Torch SDK.
-{ lib, stdenv, cmake, ninja, python3, zlib, circt, circtSource, calyx, baselineCalyx, fourStateVerifier, yosys, mlir, libllvm }:
+{ lib, stdenv, cmake, ninja, python3, zlib, circt, circtSource, calyx, baselineCalyx, fourStateVerifier, mlir, libllvm }:
 let
   installTests = lib.fileset.toSource {
     root = ../tests;
@@ -68,7 +68,7 @@ in stdenv.mkDerivation {
     export PYTHONDONTWRITEBYTECODE=1
     export PYTHONPATH="${testSupport}"
     export LLM2FPGA_TEST_SUPPORT="${testSupport}"
-    export PATH="${yosys}/bin:${fourStateVerifier}/bin:$PATH"
+    export PATH="${fourStateVerifier}/bin:$PATH"
     export LLM2FPGA_CALYX_PASS_TOOL="$out/bin/llm2fpga-calyx-opt"
     export LLM2FPGA_MEMORY_TOOL="$out/bin/llm2fpga-calyx-opt"
     export LLM2FPGA_FLATTEN_MLIR_TOOL="${mlir}/bin/mlir-opt"

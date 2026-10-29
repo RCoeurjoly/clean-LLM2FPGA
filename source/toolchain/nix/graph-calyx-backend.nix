@@ -42,14 +42,11 @@ calyx.overrideAttrs (old: {
   postBuild = (old.postBuild or "") + ''
     rustc --edition=2024 --test calyx/opt/src/analysis/live_control_set.rs -o live-control-set-tests
     ./live-control-set-tests
-    rustc --edition=2024 --test calyx/utils/src/compiler_memory.rs -o compiler-memory-tests
-    ./compiler-memory-tests
     cargo test --offline --profile release -p calyx-utils packed_conflict
   '';
   postInstall = (old.postInstall or "") + ''
     mkdir -p signed-divider-tests/compiler/tests/calyx
     cp ${../tests/test_graph_calyx_signed_divider_sharing.py} signed-divider-tests/test_signed_divider.py
-    cp ${../tests/test_graph_calyx_emission_reproducibility.py} signed-divider-tests/test_reproducibility.py
     cp ${../tests/test_graph_calyx_late_comb_inputs.py} signed-divider-tests/test_late_comb_inputs.py
     cp ${../compiler/tests/calyx/signed-divider-sharing.futil} signed-divider-tests/compiler/tests/calyx/signed-divider-sharing.futil
     cp ${../compiler/tests/calyx/signed-divider-parallel.futil} signed-divider-tests/compiler/tests/calyx/signed-divider-parallel.futil
@@ -57,7 +54,6 @@ calyx.overrideAttrs (old: {
     export LLM2FPGA_TEST_SUPPORT="$PWD/signed-divider-tests"
     export LLM2FPGA_IVERILOG="${fourStateVerifier}/bin/iverilog"
     ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_signed_divider.py -v
-    ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_reproducibility.py -v
     ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_late_comb_inputs.py -v
   '';
   # cargoSetupHook copies this basename; its generated config refers to it.

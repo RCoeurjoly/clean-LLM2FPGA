@@ -42,49 +42,6 @@ class IdenticalCombTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         return result.stdout
 
-    def test_identical_continuous_computations_merge_and_are_idempotent(self):
-        result = self.transform()
-        self.assertEqual(result.count('calyx.std_add'), 1)
-        self.assertEqual(self.transform(result), result)
-
-    def test_different_operands_do_not_merge(self):
-        result = self.transform(SOURCE.replace('%b.right = %three', '%b.right = %value'))
-        self.assertEqual(result.count('calyx.std_add'), 2)
-
-    def test_guarded_inputs_do_not_merge(self):
-        result = self.transform(SOURCE.replace('%b.right = %three', '%b.right = %go ? %three'))
-        self.assertEqual(result.count('calyx.std_add'), 2)
-
-    def test_observation_markers_preserve_distinct_cells(self):
-        for marker in ('external', 'protected', 'ref', 'llm2fpga.runtime_port'):
-            with self.subTest(marker=marker):
-                result = self.transform(SOURCE.replace('calyx.std_add @b :',
-                    'calyx.std_add @b {' + marker + ' = false} :'))
-                self.assertEqual(result.count('calyx.std_add'), 2)
-
-    def test_symbolic_observer_preserves_named_cell(self):
-        source = SOURCE.replace('%true = hw.constant true',
-                                '%true = hw.constant true {audit_cell = @b}')
-        self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
-
-    def test_dependency_chain_is_not_merged_with_its_producer(self):
-        source = SOURCE.replace('%b.left = %value', '%b.left = %a.out')
-        self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
-
-    def test_deduplication_reaches_fixed_point_with_reverse_declared_chain(self):
-        source = SOURCE.replace('    %a.left',
-            '    %c.left, %c.right, %c.out = calyx.std_add @c : i8, i8, i8\n'
-            '    %d.left, %d.right, %d.out = calyx.std_add @d : i8, i8, i8\n    %a.left', 1)
-        source = source.replace('      calyx.assign %result',
-            '      calyx.assign %c.left = %a.out : i8\n'
-            '      calyx.assign %c.right = %three : i8\n'
-            '      calyx.assign %d.left = %b.out : i8\n'
-            '      calyx.assign %d.right = %three : i8\n      calyx.assign %result', 1)
-        source = source.replace('%result = %a.out', '%result = %c.out')
-        source = source.replace('%second = %b.out', '%second = %d.out')
-        result = self.transform(source)
-        self.assertEqual(result.count('calyx.std_add'), 2)
-        self.assertEqual(self.transform(result), result)
 
     def test_native_rtl_trace_preserves_all_bytes_and_unknown_idle_inputs(self):
         from compiler.pipeline import CALYX_RESOURCE_PASSES

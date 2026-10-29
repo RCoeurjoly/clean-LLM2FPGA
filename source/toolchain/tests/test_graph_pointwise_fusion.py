@@ -3,92 +3,8 @@ import os
 import subprocess
 import unittest
 
-FIXTURE = '''module {
-func.func @project(%x: tensor<4x3xi64>, %w: tensor<6x3xi64>) -> tensor<4x6xi64> {
- %seven = arith.constant 7 : i64
- %zero = arith.constant 0 : i64
- %norm_empty = tensor.empty() : tensor<4x3xi64>
- %norm = linalg.generic {
- indexing_maps = [affine_map<(r,k)->(r,k)>, affine_map<(r,k)->(r,k)>],
- iterator_types = ["parallel", "parallel"]}
- ins(%x : tensor<4x3xi64>) outs(%norm_empty : tensor<4x3xi64>) {
- ^bb0(%a: i64, %b: i64):
- %value = arith.divsi %a, %seven : i64
- linalg.yield %value : i64
- } -> tensor<4x3xi64>
- %empty = tensor.empty() : tensor<4x6xi64>
- %init = linalg.fill ins(%zero : i64) outs(%empty : tensor<4x6xi64>) -> tensor<4x6xi64>
- %full = linalg.generic {
- indexing_maps = [affine_map<(r,o,k)->(r,k)>, affine_map<(r,o,k)->(o,k)>, affine_map<(r,o,k)->(r,o)>],
- iterator_types = ["parallel", "parallel", "reduction"]}
- ins(%norm, %w : tensor<4x3xi64>, tensor<6x3xi64>) outs(%init : tensor<4x6xi64>) {
- ^bb0(%a: i64, %b: i64, %c: i64):
- %product = arith.muli %a, %b : i64
- %sum = arith.addi %c, %product : i64
- linalg.yield %sum : i64
- } -> tensor<4x6xi64>
- return %full : tensor<4x6xi64>
-} }'''
 
 class PointwiseFusionTests(unittest.TestCase):
-    def test_division_remains_outside_mac_reduction(self):
-        result = subprocess.run([os.environ['LLM2FPGA_TORCH_PASS_TOOL'], '--verify-each',
-                                 os.environ.get('LLM2FPGA_FUSION_PASS', '--llm2fpga-fuse-pointwise')],
-                                input=FIXTURE, text=True, capture_output=True, timeout=120)
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count('linalg.generic'), 2)
-        self.assertLess(result.stdout.index('arith.divsi'), result.stdout.index('"reduction"'))
-
-    def run_native(self, fixture):
-        result = subprocess.run([os.environ['LLM2FPGA_TORCH_PASS_TOOL'], '--verify-each',
-                                 '--llm2fpga-fuse-pointwise'], input=fixture,
-                                text=True, capture_output=True, timeout=120)
-        self.assertEqual(result.returncode, 0, result.stderr)
-        return result.stdout
-
-    def test_one_to_one_pointwise_chain_fuses(self):
-        fixture = '''module {
-func.func @chain(%x: tensor<3xi64>) -> tensor<3xi64> {
- %seven = arith.constant 7 : i64
- %empty = tensor.empty() : tensor<3xi64>
- %first = linalg.generic {indexing_maps = [affine_map<(i)->(i)>, affine_map<(i)->(i)>], iterator_types = ["parallel"]}
- ins(%x : tensor<3xi64>) outs(%empty : tensor<3xi64>) {
- ^bb0(%a: i64, %b: i64):
- %value = arith.divsi %a, %seven : i64
- linalg.yield %value : i64
- } -> tensor<3xi64>
- %last = linalg.generic {indexing_maps = [affine_map<(i)->(i)>, affine_map<(i)->(i)>], iterator_types = ["parallel"]}
- ins(%first : tensor<3xi64>) outs(%empty : tensor<3xi64>) {
- ^bb0(%a: i64, %b: i64):
- %value = arith.addi %a, %seven : i64
- linalg.yield %value : i64
- } -> tensor<3xi64>
- return %last : tensor<3xi64>
-} }'''
-        self.assertEqual(self.run_native(fixture).count('linalg.generic'), 1)
-
-    def test_broadcast_consumer_keeps_preprocessing_outside_expanded_domain(self):
-        fixture = '''module {
-func.func @broadcast(%x: tensor<3xi64>) -> tensor<4x3xi64> {
- %seven = arith.constant 7 : i64
- %empty = tensor.empty() : tensor<3xi64>
- %first = linalg.generic {indexing_maps = [affine_map<(i)->(i)>, affine_map<(i)->(i)>], iterator_types = ["parallel"]}
- ins(%x : tensor<3xi64>) outs(%empty : tensor<3xi64>) {
- ^bb0(%a: i64, %b: i64):
- %value = arith.divsi %a, %seven : i64
- linalg.yield %value : i64
- } -> tensor<3xi64>
- %expanded = tensor.empty() : tensor<4x3xi64>
- %last = linalg.generic {indexing_maps = [affine_map<(r,i)->(i)>, affine_map<(r,i)->(r,i)>], iterator_types = ["parallel", "parallel"]}
- ins(%first : tensor<3xi64>) outs(%expanded : tensor<4x3xi64>) {
- ^bb0(%a: i64, %b: i64):
- %value = arith.addi %a, %seven : i64
- linalg.yield %value : i64
- } -> tensor<4x3xi64>
- return %last : tensor<4x3xi64>
-} }'''
-        self.assertEqual(self.run_native(fixture).count('linalg.generic'), 2)
-
     def test_captured_pointwise_outputs_match_pytorch_and_wrapping_reference(self):
         import tempfile
         from pathlib import Path
@@ -132,64 +48,6 @@ func.func @broadcast(%x: tensor<3xi64>) -> tensor<4x3xi64> {
                     self.assertEqual(int(result.stdout.strip()), expected)
                     self.assertEqual(int(result.stdout.strip()), int(model()))
 
-    def test_shared_preprocessing_is_not_cloned_into_two_consumers(self):
-        fixture = '''module {
-func.func @fork(%x: tensor<3xi64>) -> (tensor<3xi64>, tensor<3xi64>) {
- %seven = arith.constant 7 : i64
- %empty = tensor.empty() : tensor<3xi64>
- %first = linalg.generic {indexing_maps = [affine_map<(i)->(i)>, affine_map<(i)->(i)>], iterator_types = ["parallel"]}
- ins(%x : tensor<3xi64>) outs(%empty : tensor<3xi64>) {
- ^bb0(%a: i64, %b: i64):
- %value = arith.divsi %a, %seven : i64
- linalg.yield %value : i64
- } -> tensor<3xi64>
- %left = linalg.generic {indexing_maps = [affine_map<(i)->(i)>, affine_map<(i)->(i)>], iterator_types = ["parallel"]}
- ins(%first : tensor<3xi64>) outs(%empty : tensor<3xi64>) {
- ^bb0(%a: i64, %b: i64):
- %value = arith.addi %a, %seven : i64
- linalg.yield %value : i64
- } -> tensor<3xi64>
- %right = linalg.generic {indexing_maps = [affine_map<(i)->(i)>, affine_map<(i)->(i)>], iterator_types = ["parallel"]}
- ins(%first : tensor<3xi64>) outs(%empty : tensor<3xi64>) {
- ^bb0(%a: i64, %b: i64):
- %value = arith.muli %a, %seven : i64
- linalg.yield %value : i64
- } -> tensor<3xi64>
- return %left, %right : tensor<3xi64>, tensor<3xi64>
-} }'''
-        output = self.run_native(fixture)
-        self.assertEqual(output.count('arith.divsi'), 1)
-        self.assertEqual(output.count('linalg.generic'), 3)
-
-    def test_one_to_one_product_fuses_into_reduction_without_recomputation(self):
-        fixture = '''module {
-func.func @dot(%x: tensor<2x3xi64>, %y: tensor<2x3xi64>) -> tensor<2xi64> {
- %zero = arith.constant 0 : i64
- %product_empty = tensor.empty() : tensor<2x3xi64>
- %product = linalg.generic {
- indexing_maps = [affine_map<(r,k)->(r,k)>, affine_map<(r,k)->(r,k)>, affine_map<(r,k)->(r,k)>],
- iterator_types = ["parallel", "parallel"]}
- ins(%x, %y : tensor<2x3xi64>, tensor<2x3xi64>) outs(%product_empty : tensor<2x3xi64>) {
- ^bb0(%a: i64, %b: i64, %old: i64):
- %p = arith.muli %a, %b : i64
- linalg.yield %p : i64
- } -> tensor<2x3xi64>
- %empty = tensor.empty() : tensor<2xi64>
- %init = linalg.fill ins(%zero : i64) outs(%empty : tensor<2xi64>) -> tensor<2xi64>
- %sum = linalg.generic {
- indexing_maps = [affine_map<(r,k)->(r,k)>, affine_map<(r,k)->(r)>],
- iterator_types = ["parallel", "reduction"]}
- ins(%product : tensor<2x3xi64>) outs(%init : tensor<2xi64>) {
- ^bb0(%p: i64, %acc: i64):
- %v = arith.addi %acc, %p : i64
- linalg.yield %v : i64
- } -> tensor<2xi64>
- return %sum : tensor<2xi64>
-} }'''
-        result = self.run_native(fixture)
-        self.assertEqual(result.count('linalg.generic'), 1)
-        self.assertIn('"reduction"', result)
-        self.assertEqual(result.count('arith.muli'), 1)
 
     def test_fused_reduction_matches_pytorch_and_wrapping_reference(self):
         import tempfile

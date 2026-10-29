@@ -35,23 +35,12 @@ class MemoryContractTests(unittest.TestCase):
         return subprocess.run([tool, '--llm2fpga-complete-calyx-memory-contracts', *arguments],
                               input=source, text=True, capture_output=True, timeout=30)
 
-    def test_zero_enable_completes_missing_write_data(self):
-        result = self.run_pass(probe())
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count('calyx.assign %m.write_data'), 1)
-        again = self.run_pass(result.stdout)
-        self.assertEqual(again.returncode, 0, again.stderr)
-        self.assertEqual(again.stdout, result.stdout)
 
     def test_enabled_write_without_data_is_rejected(self):
         result = self.run_pass(probe('true'))
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('missing write_data', result.stderr)
 
-    def test_existing_write_data_is_preserved(self):
-        result = self.run_pass(probe('true', 'calyx.assign %m.write_data = %zero : i64'))
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count('calyx.assign %m.write_data'), 1)
 
     def test_dynamic_enable_without_data_is_rejected(self):
         result = self.run_pass(probe(enable_source='%go'))

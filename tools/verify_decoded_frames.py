@@ -1,6 +1,4 @@
 """Compare every native assembled frame word with independently decoded bitstream data."""
-import argparse
-import json
 from pathlib import Path
 import re
 
@@ -45,13 +43,3 @@ def verify_frames(frames,decoded):
     return dict(frame_count=len(observed),assembled_frame_count=len(expected),zero_filled_frames=len(extra),word_count=len(observed)*101,
         nonzero_words=nonzero,set_configuration_bits=setbits,all_frame_words_match=True,
         hardware_programmed=False)
-
-
-def main():
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--frames',type=Path,required=True)
-    parser.add_argument('--decoded',type=Path,required=True)
-    args=parser.parse_args();print(json.dumps(verify_frames(args.frames,args.decoded)))
-
-
-if __name__=='__main__':main()

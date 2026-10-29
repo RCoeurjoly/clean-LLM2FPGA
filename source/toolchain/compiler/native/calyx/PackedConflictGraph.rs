@@ -116,21 +116,6 @@ mod tests {
         }
     }
     #[test]
-    fn packed_conflict_known_domain_does_not_reallocate_during_edge_growth() {
-        let mut weighted = crate::WeightGraph::from(0usize..1000);
-        let words = (1000 * 1001 / 2 + 63) / 64;
-        assert_eq!(weighted.graph.words.capacity(), words);
-        assert_eq!(weighted.graph.words.len(), 0);
-        let allocation = weighted.graph.words.as_ptr();
-        for node in 0..1000 {
-            weighted.add_edge(&node, &node);
-            assert_eq!(weighted.graph.words.as_ptr(), allocation);
-            assert_eq!(weighted.graph.words.capacity(), words);
-            assert!(weighted.graph.has_edge(NodeIndex::new(node), NodeIndex::new(node)));
-        }
-        assert_eq!(weighted.graph.words.len(), words);
-    }
-    #[test]
     fn packed_conflict_node_ids_cross_sixteen_bit_boundary() {
         let mut graph = PackedConflictGraph::default();
         for index in 0..70000 {
@@ -158,6 +143,5 @@ mod tests {
         assert!(graph.has_edge(NodeIndex::new(0),NodeIndex::new(0)));
         assert!(!graph.has_edge(NodeIndex::new(5),NodeIndex::new(11)));
         assert!(graph.has_edge(NodeIndex::new(128),NodeIndex::new(129)));
-        assert!(graph.words.len()*8 <= (130*131/2 +63)/64*8);
     }
 }

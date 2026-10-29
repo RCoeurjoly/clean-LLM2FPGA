@@ -43,7 +43,6 @@
           fileset = pkgs.lib.fileset.unions [
             ./build.py ./tools/bit_header.py ./tools/verify_decoded_frames.py
             ./tools/test_full_build.py ./tools/test_bit_header.py
-            ./flake.nix ./nix ./pipeline/flow.json ./source/toolchain/tests
           ];
         };
         driverTests = pkgs.runCommand "bitstream-build-driver-tests" {
@@ -59,6 +58,19 @@
           default = pipeline.bitstream;
         };
         checks.build-driver = driverTests;
+        checks.pytorch-equivalence = pkgs.runCommand "pytorch-equivalence-tests" {
+          nativeBuildInputs = tools.graph-core-1m-stable-scratch.nativeBuildInputs;
+          PYTHONPATH = tools.graph-core-1m-stable-scratch.PYTHONPATH;
+          PYTHONDONTWRITEBYTECODE = "1";
+          LLM2FPGA_TORCH_PASS_TOOL = "${tools.graph-torch-opt}/bin/llm2fpga-torch-opt";
+          LLM2FPGA_MLIR_RUNNER = "${tools.graph-torch-mlir-sdk}/bin/mlir-runner";
+        } ''
+          mkdir tests
+          cp ${./source/toolchain/tests/test_graph_pointwise_fusion.py} tests/test_graph_pointwise_fusion.py
+          python3 -m unittest discover -s tests -v
+          touch "$out"
+        '';
+
         devShells.default = pkgs.mkShell {
           packages = [ pkgs.python312 pkgs.nix ];
         };

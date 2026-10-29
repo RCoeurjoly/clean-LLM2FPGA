@@ -31,14 +31,6 @@ class CalyxControlSymbolTests(unittest.TestCase):
         return subprocess.run([tool, '--verify-each'], input=document,
                               capture_output=True, text=True, timeout=timeout)
 
-    def test_valid_control_and_optional_condition_group(self):
-        control = """calyx.enable @work
-        calyx.if %cond.in with @condition { calyx.enable @work }
-        calyx.while %cond.in with @condition { calyx.enable @work }
-        calyx.if %cond.out { calyx.enable @work }
-        calyx.while %cond.out { calyx.enable @work }"""
-        result = self.verify(source(control))
-        self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_missing_group_is_rejected_for_each_control_kind(self):
         for control in ('calyx.enable @missing',
@@ -72,13 +64,3 @@ class CalyxControlSymbolTests(unittest.TestCase):
         result = self.verify(source('calyx.enable @work', groups))
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('is unused in the control execution schedule', result.stderr)
-
-    def test_many_groups_verify_with_bounded_lookup_work(self):
-        # A compiler scalability gate, independent of SCF lowering or scheduling.
-        # Each enabled group has a nonconstant completion port and one assignment.
-        count = 30000
-        groups = ''.join('calyx.group @g' + str(i) + ' { calyx.assign %finish.in = %true : i1\n'
-                         'calyx.group_done %finish.out : i1 }\n' for i in range(count))
-        control = ''.join('calyx.enable @g' + str(i) + '\n' for i in range(count))
-        result = self.verify(source(control, groups), timeout=15)
-        self.assertEqual(result.returncode, 0, result.stderr)

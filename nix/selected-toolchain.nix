@@ -28,7 +28,7 @@ let
   };
   yosys = pkgs.callPackage (recipes + /graph-yosys.nix) {};
   calyxDriver = pkgs.callPackage (recipes + /graph-calyx-passes.nix) {
-    inherit yosys circt;
+    inherit circt;
     fourStateVerifier = verifier;
     baselineCalyx = calyx;
     calyx = backend;

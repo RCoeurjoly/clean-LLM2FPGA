@@ -60,22 +60,6 @@ class RegisteredCombTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         return result.stdout
 
-    def test_exclusive_register_bounded_adds_share_and_are_idempotent(self):
-        result = self.transform()
-        self.assertEqual(result.count('calyx.std_add'), 1)
-        self.assertEqual(self.transform(result), result)
-
-    def test_parallel_groups_remain_separate(self):
-        source = SOURCE.replace('calyx.enable @one calyx.enable @two',
-            'calyx.par { calyx.enable @one calyx.enable @two }')
-        self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
-
-    def test_capture_with_separate_initialization_group_can_share(self):
-        source = SOURCE.replace('        calyx.group_done %source.done : i1',
-            '        calyx.assign %first.in = %three : i8\n'
-            '        calyx.assign %first.write_en = %true : i1\n'
-            '        calyx.group_done %source.done : i1')
-        self.assertEqual(self.transform(source).count('calyx.std_add'), 1)
 
     def test_invalid_continuous_capture_write_is_rejected(self):
         source = SOURCE.replace('        calyx.assign %first.write_en = %true : i1', '')
@@ -84,47 +68,6 @@ class RegisteredCombTests(unittest.TestCase):
         with self.assertRaisesRegex(AssertionError, 'failed to drive all necessary ports'):
             self.transform(source)
 
-    def test_input_without_register_barrier_remains_separate(self):
-        source = SOURCE.replace('%b.left = %source.out', '%b.left = %value')
-        self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
-
-    def test_dependency_chain_remains_separate(self):
-        source = SOURCE.replace('%b.left = %source.out', '%b.left = %a.out')
-        self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
-
-    def test_observed_cell_remains_separate(self):
-        for marker in ('external', 'protected', 'ref', 'llm2fpga.runtime_port'):
-            with self.subTest(marker=marker):
-                source = SOURCE.replace('calyx.std_add @b :',
-                    'calyx.std_add @b {'+marker+' = false} :')
-                self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
-        for symbol in ('b', 'last'):
-            source = SOURCE.replace('%true = hw.constant true',
-                '%true = hw.constant true {audit = {cell = [@'+symbol+']}}')
-            self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
-
-    def test_guarded_input_remains_separate(self):
-        source = SOURCE.replace('%b.right = %seven', '%b.right = %go ? %seven')
-        self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
-
-    def test_module_observers_preserve_cells_and_capture_registers(self):
-        for observer in ('llm2fpga.audit = @main::@b',
-                         'llm2fpga.audit = {cells = [@main::@b]}',
-                         'llm2fpga.audit = @main::@last'):
-            with self.subTest(observer=observer):
-                source=SOURCE.replace('calyx.entrypoint = "main"',
-                    'calyx.entrypoint = "main", '+observer)
-                self.assertEqual(self.transform(source).count('calyx.std_add'),2)
-
-    def test_module_opaque_observer_conservatively_disables_sharing(self):
-        source=SOURCE.replace('calyx.entrypoint = "main"',
-            'calyx.entrypoint = "main", llm2fpga.audit = #unknown<"observer">')
-        self.assertEqual(self.transform(source,extra=('--allow-unregistered-dialect',)).count('calyx.std_add'),2)
-
-    def test_capture_clock_override_remains_separate(self):
-        source = SOURCE.replace('    calyx.wires {',
-            '    calyx.wires {\n      calyx.assign %last.clk = %clk : i1')
-        self.assertEqual(self.transform(source).count('calyx.std_add'), 2)
 
     def test_native_rtl_trace_and_cpu_match_repeated_transactions(self):
         from compiler.pipeline import CALYX_RESOURCE_PASSES

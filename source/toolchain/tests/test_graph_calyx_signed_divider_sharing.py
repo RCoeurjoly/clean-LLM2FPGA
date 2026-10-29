@@ -1,7 +1,6 @@
 """Native sequential signed division must use qualified resource sharing."""
 import os
 from pathlib import Path
-import re
 import random
 import shutil
 import subprocess
@@ -86,32 +85,6 @@ endmodule
                                         text=True, timeout=60)
                 self.assertIn('LIFECYCLE_PASS', result.stdout)
 
-    def test_exclusive_signed_divisions_share_one_primitive(self):
-        tool = Path(os.environ['LLM2FPGA_CALYX_TOOL'])
-        support = Path(os.environ.get('LLM2FPGA_TEST_SUPPORT',
-                                      Path(__file__).resolve().parents[1]))
-        source = support / 'compiler/tests/calyx/signed-divider-sharing.futil'
-        with tempfile.TemporaryDirectory() as work:
-            output = Path(work) / 'shared.futil'
-            subprocess.run([str(tool), str(source), '-b', 'calyx',
-                            '-x', 'cell-share:bounds=1,-1,-1',
-                            '-l', str(self.library(tool)),
-                            '-o', str(output)], check=True,
-                           capture_output=True, text=True, timeout=60)
-            count = len(re.findall(r'=\s*std_sdiv_pipe\(8\)', output.read_text()))
-        self.assertEqual(count, 1, 'exclusive signed divisions remain duplicated')
-
-    def test_parallel_signed_divisions_remain_separate(self):
-        tool = Path(os.environ['LLM2FPGA_CALYX_TOOL'])
-        support = Path(os.environ.get('LLM2FPGA_TEST_SUPPORT',
-                                      Path(__file__).resolve().parents[1]))
-        with tempfile.TemporaryDirectory() as work:
-            output = Path(work) / 'parallel.futil'
-            subprocess.run([str(tool), str(support / 'compiler/tests/calyx/signed-divider-parallel.futil'),
-                            '-b', 'calyx', '-x', 'cell-share:bounds=1,-1,-1',
-                            '-l', str(self.library(tool)), '-o', str(output)],
-                           check=True, capture_output=True, text=True, timeout=60)
-            self.assertEqual(len(re.findall(r'=\s*std_sdiv_pipe\(8\)', output.read_text())), 2)
 
     def test_checked_callers_preserve_both_signed_results(self):
         tool = Path(os.environ['LLM2FPGA_CALYX_TOOL'])

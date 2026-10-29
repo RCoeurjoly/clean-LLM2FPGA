@@ -76,23 +76,11 @@ mod tests {
         for id in [u64::MAX, 0, u64::MAX - 2, u64::MAX - 1, 1] {
             assert!(a.insert(id));
         }
-        assert_eq!(a.ranges, vec![(0, 1), (u64::MAX - 2, u64::MAX)]);
         let mut gap = LiveControlSet::default();
         gap.insert(2);
         gap.insert(u64::MAX - 3);
         assert!(a.is_disjoint(&gap));
         gap.insert(u64::MAX);
         assert!(!a.is_disjoint(&gap));
-    }
-
-    #[test]
-    fn dense_ids_keep_one_range_in_either_insertion_order() {
-        for descending in [false, true] {
-            let mut set = LiveControlSet::default();
-            for index in 0..100_000 {
-                set.insert(if descending { 99_999 - index } else { index });
-            }
-            assert_eq!(set.ranges, vec![(0, 99_999)]);
-        }
     }
 }

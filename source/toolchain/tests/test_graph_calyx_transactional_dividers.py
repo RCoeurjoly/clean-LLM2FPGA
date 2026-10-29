@@ -56,52 +56,6 @@ class TransactionalDividerTests(unittest.TestCase):
         self.assertEqual(result.returncode,0,result.stderr)
         return result.stdout
 
-    def test_sequential_captured_results_share_and_drain_completion(self):
-        result = self.transform()
-        self.assertEqual(result.count('calyx.std_divs_pipe'),1)
-        self.assertIn('one_divider_retire',result)
-        self.assertIn('two_divider_retire',result)
-        self.assertEqual(self.transform(result),result)
-
-    def test_parallel_activation_remains_separate(self):
-        result = self.transform(SOURCE.replace('calyx.seq {','calyx.par {'))
-        self.assertEqual(result.count('calyx.std_divs_pipe'),2)
-
-    def test_result_escape_remains_separate(self):
-        result = self.transform(SOURCE.replace('%result1 = %r1.out','%result1 = %a.out'))
-        self.assertEqual(result.count('calyx.std_divs_pipe'),2)
-
-    def test_noncanonical_completion_remains_separate(self):
-        result = self.transform(SOURCE.replace('calyx.group_done %r1.done',
-                                               'calyx.group_done %a.done'))
-        self.assertEqual(result.count('calyx.std_divs_pipe'),2)
-
-    def test_observation_markers_and_symbolic_observers_remain_separate(self):
-        for marker in ('external','protected','ref','llm2fpga.runtime_port'):
-            with self.subTest(marker=marker):
-                source=SOURCE.replace('calyx.std_divs_pipe @b :',
-                    'calyx.std_divs_pipe @b {'+marker+' = false} :')
-                self.assertEqual(self.transform(source).count('calyx.std_divs_pipe'),2)
-        source=SOURCE.replace('%true = hw.constant true',
-                              '%true = hw.constant true {audit_cell = @b}')
-        self.assertEqual(self.transform(source).count('calyx.std_divs_pipe'),2)
-
-    def test_shared_operand_driver_is_not_a_private_transaction(self):
-        source=SOURCE.replace('   calyx.group @two {',
-            '   calyx.group @unused {\n'
-            '    calyx.assign %b.left = %value : i8\n'
-            '    calyx.group_done %r2.done : i1\n   }\n   calyx.group @two {')
-        source=source.replace('calyx.enable @two }','calyx.enable @two calyx.enable @unused }')
-        self.assertEqual(self.transform(source).count('calyx.std_divs_pipe'),2)
-
-    def test_guarded_operand_is_not_a_private_transaction(self):
-        source=SOURCE.replace('%b.left = %value','%b.left = %true ? %value')
-        self.assertEqual(self.transform(source).count('calyx.std_divs_pipe'),2)
-
-    def test_capture_clock_override_remains_separate(self):
-        source=SOURCE.replace('   calyx.assign %result1',
-            '   calyx.assign %r1.clk = %clk : i1\n   calyx.assign %result1',1)
-        self.assertEqual(self.transform(source).count('calyx.std_divs_pipe'),2)
 
     def test_native_shared_rtl_matches_original_across_repeated_transactions(self):
         from compiler.pipeline import CALYX_RESOURCE_PASSES

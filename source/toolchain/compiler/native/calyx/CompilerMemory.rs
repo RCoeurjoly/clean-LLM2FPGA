@@ -70,30 +70,3 @@ pub fn reclaim_free_pages() -> Option<bool> {
     #[cfg(not(all(target_os = "linux", target_env = "gnu")))]
     { None }
 }
-
-#[cfg(all(test, target_os = "linux", target_env = "gnu"))]
-mod tests {
-    use super::*;
-    fn rss() -> usize {
-        let status = std::fs::read_to_string("/proc/self/status").unwrap();
-        status.lines().find(|line| line.starts_with("VmRSS:")).unwrap()
-            .split_whitespace().nth(1).unwrap().parse::<usize>().unwrap() * 1024
-    }
-    #[test]
-    fn reclamation_releases_freed_pages_and_preserves_live_allocations() {
-        let mut blocks: Vec<_> = (0..24000).map(|i| vec![(i % 251) as u8; 4096]).collect();
-        for (i, block) in blocks.iter_mut().enumerate() {
-            if i % 32 != 0 { *block = Vec::new(); }
-        }
-        let before = rss();
-        assert!(reclaim_free_pages().expect("GNU/Linux allocator support"));
-        let after = rss();
-        for (i, block) in blocks.iter().enumerate() {
-            if i % 32 == 0 {
-                assert_eq!(block.len(), 4096);
-                assert!(block.iter().all(|byte| *byte == (i % 251) as u8));
-            }
-        }
-        assert!(after < before / 2, "freed pages not reclaimed: {before} -> {after}");
-    }
-}

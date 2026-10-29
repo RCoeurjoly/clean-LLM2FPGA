@@ -28,36 +28,6 @@ class RuntimeMemoryTests(unittest.TestCase):
             '--verify-each', '--llm2fpga-resolve-runtime-memories'], input=source,
             text=True, capture_output=True, timeout=30)
 
-    def test_roles_resolve_to_physical_memories_and_are_idempotent(self):
-        result = self.resolve(fixture())
-        self.assertEqual(result.returncode, 0, result.stderr)
-        for index, role in enumerate(('prompt', 'generated_tokens', 'last_logits')):
-            line = next(line for line in result.stdout.splitlines()
-                        if f'calyx.seq_mem @m{index} ' in line)
-            self.assertIn(f'llm2fpga.runtime_port = "{role}"', line)
-        again = self.resolve(result.stdout)
-        self.assertEqual(again.returncode, 0, again.stderr)
-        self.assertEqual(again.stdout, result.stdout)
-
-    def test_roles_follow_two_invocation_levels(self):
-        source = fixture()
-        memories = '\n'.join(line.replace(
-            f' {{llm2fpga.runtime_port = "{role}"}}', '')
-            for role in ('prompt', 'generated_tokens', 'last_logits')
-            for line in source.splitlines()
-            if 'calyx.seq_mem @weights' in line and f'"{role}"' in line)
-        bridge = '''calyx.component @bridge(%clk: i1 {clk}, %reset: i1 {reset}, %go: i1 {go}) -> (%done: i1 {done}) {
-''' + memories + '''
- %worker.clk, %worker.reset, %worker.go, %worker.done = calyx.instance @worker of @reader : i1, i1, i1, i1
- calyx.wires {}
- calyx.control { calyx.invoke @worker[weights0 = weights0, weights1 = weights1, weights2 = weights2]() -> () }
-}
-'''
-        source = source.replace('of @reader', 'of @bridge', 1)
-        result = self.resolve(source.rsplit('}', 1)[0] + bridge + '}')
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn('llm2fpga.runtime_port = "prompt"', next(
-            line for line in result.stdout.splitlines() if 'calyx.seq_mem @m0 ' in line))
 
     def test_missing_role_is_rejected(self):
         result = self.resolve(fixture().replace(

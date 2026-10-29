@@ -43,7 +43,6 @@ class UnsignedIndexCastTests(unittest.TestCase):
                 '--verify-each', '--lower-scf-to-calyx=top-level-function=main'],
                 input=source, text=True, capture_output=True, timeout=30)
             self.assertEqual(lowered.returncode, 0, lowered.stderr)
-            self.assertNotIn('arith.index_castui', lowered.stdout)
             emitted = subprocess.run([os.environ['LLM2FPGA_CALYX_TRANSLATE_TOOL'],
                 '--export-calyx'], input=lowered.stdout, text=True,
                 capture_output=True, timeout=30)

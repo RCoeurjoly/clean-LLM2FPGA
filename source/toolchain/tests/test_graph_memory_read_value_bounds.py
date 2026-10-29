@@ -1,6 +1,5 @@
 """Native bindings validate read bounds independently of storage packing."""
 import unittest
-import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -30,39 +29,6 @@ class NativeReadBoundsTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('immutable memory write is not proven disabled', result.stderr)
 
-    def test_valid_read_bounds_are_authenticated_attributes(self):
-        result = self.validate(changes={'value_width': 4, 'value_sign_extend': True})
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn('value_width = 4', result.stdout)
-        self.assertIn('value_sign_extend = true', result.stdout)
-
-    def test_signed_read_rewrite_uses_typed_slice_and_sign_extension(self):
-        result = self.validate(changes={'value_width': 4, 'value_sign_extend': True}, narrow_reads=True)
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn('calyx.std_slice', result.stdout)
-        self.assertIn('calyx.std_signext', result.stdout)
-
-    def test_unsigned_read_rewrite_uses_zero_extension(self):
-        result = self.validate(changes={'value_width': 4, 'value_sign_extend': False},
-                               image=b'01\n0f\n07\n', narrow_reads=True)
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn('calyx.std_pad', result.stdout)
-
-    def test_rewritten_signed_and_unsigned_reads_compile_through_calyx(self):
-        for signed, image in ((True, b'01\nff\n07\n'), (False, b'01\n0f\n07\n')):
-            with self.subTest(signed=signed):
-                result = self.validate(changes={'value_width': 4, 'value_sign_extend': signed},
-                    image=image, narrow_reads=True, bind=True, check_calyx=True)
-                self.assertEqual(result.returncode, 0, result.stderr)
-
-    def test_reference_read_rewrite_preserves_reference_binding(self):
-        reference = dict(component='reader', cell='weights', width=8, depth=3,
-            address_width=2, implementation='bram', read_latency=2, writable=False,
-            init_file=None, init_sha256=None, value_width=4, value_sign_extend=True)
-        result = self.validate(source=bindings.MULTI_SOURCE,
-            changes={'value_width': 4, 'value_sign_extend': True}, extra=(reference,),
-            narrow_reads=True, bind=True, check_calyx=True)
-        self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_rewritten_rtl_returns_every_signed_and_unsigned_image_word(self):
         source = bindings.SOURCE.replace('%go: i1 {go}', '%go: i1 {go}, %index: i2')

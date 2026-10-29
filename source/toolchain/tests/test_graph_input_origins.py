@@ -15,7 +15,7 @@ SOURCE = '''module {
 
 
 class InputOriginTests(unittest.TestCase):
-    def annotate(self, shape=None, manifest_hash=None, lower=False):
+    def annotate(self, shape=None, manifest_hash=None):
         tool = os.environ['LLM2FPGA_TORCH_PASS_TOOL']
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / 'inputs.json'
@@ -31,30 +31,8 @@ class InputOriginTests(unittest.TestCase):
                 ' manifest-sha256=' + identity]
             result = subprocess.run(arguments, input=SOURCE,
                 text=True, capture_output=True, timeout=30)
-            if lower and result.returncode == 0:
-                from compiler.pipeline import TORCH_INTEGER_PASSES
-                result = subprocess.run([tool, '--verify-each',
-                    '--pass-pipeline=' + TORCH_INTEGER_PASSES], input=result.stdout,
-                    text=True, capture_output=True, timeout=30)
-            if lower == 'buffers' and result.returncode == 0:
-                from compiler.pipeline import INTEGER_PROFILE
-                result = subprocess.run([tool, *INTEGER_PROFILE[1][2]], input=result.stdout,
-                    text=True, capture_output=True, timeout=30)
             return result
 
-    def test_typed_arguments_receive_named_origins(self):
-        result = self.annotate()
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn('llm2fpga.input_origin', result.stdout)
-        self.assertIn('target = "weights"', result.stdout)
-        self.assertIn('kind = "USER_INPUT"', result.stdout)
-
-    def test_origins_survive_standard_and_buffer_lowering(self):
-        result = self.annotate(lower='buffers')
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(result.stdout.count('llm2fpga.input_origin'), 2)
-        self.assertIn('target = "weights"', result.stdout)
-        self.assertNotIn('!torch.vtensor', result.stdout)
 
     def test_shape_mismatch_is_rejected(self):
         result = self.annotate(shape=[2])

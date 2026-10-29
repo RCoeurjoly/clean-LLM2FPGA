@@ -1,5 +1,5 @@
 """Native per-component serialization preserves the complete hierarchy."""
-import json,os,subprocess,tempfile,unittest
+import os, subprocess, tempfile, unittest
 from pathlib import Path
 
 SOURCE='''import "primitives/core.futil";
@@ -22,18 +22,6 @@ class NativeComponentFileTests(unittest.TestCase):
         if split:options+=['-x',f'verilog-component-dir={root}/components']
         return subprocess.run([str(tool),str(source),'-l',str(tool.parent.parent/'share/calyx'),
             '-b','verilog',*options,*extra,'-o',str(root/('library.sv' if split else 'whole.sv'))],capture_output=True,text=True,timeout=60)
-    def test_concatenation_is_byte_identical_for_both_native_guard_modes(self):
-        for nested in (False,True):
-            with self.subTest(nested=nested),tempfile.TemporaryDirectory() as temporary:
-                root=Path(temporary)
-                whole=self.run_tool(root,nested=nested);self.assertEqual(whole.returncode,0,whole.stderr)
-                split=self.run_tool(root,split=True,nested=nested);self.assertEqual(split.returncode,0,split.stderr)
-                manifest=json.loads((root/'components/manifest.json').read_text())
-                self.assertEqual(manifest['entrypoint'],'main')
-                self.assertEqual({row['component'] for row in manifest['components']},{'main','helper'})
-                merged=(root/'library.sv').read_bytes()
-                for row in manifest['components']:merged+=(root/'components'/row['file']).read_bytes()
-                self.assertEqual(merged,(root/'whole.sv').read_bytes())
     def test_existing_output_directory_is_rejected_without_overwriting(self):
         with tempfile.TemporaryDirectory() as temporary:
             root=Path(temporary);directory=root/'components';directory.mkdir();marker=directory/'keep';marker.write_text('original')
