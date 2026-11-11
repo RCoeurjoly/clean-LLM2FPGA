@@ -1,0 +1,2600 @@
+{
+  "api_url": "https://api.github.com/repos/YosysHQ/yosys/git/trees/28ba3cb926fe376fa05ebfc1b921747d011d4557?recursive=1",
+  "sha": "28ba3cb926fe376fa05ebfc1b921747d011d4557",
+  "truncated": false,
+  "total_entries": 3524,
+  "source_cpp_blobs": [
+    {
+      "path": "backends/aiger/aiger.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1320937a096ffd70a30f2f9755ba9667546d7905",
+      "size": 28885,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1320937a096ffd70a30f2f9755ba9667546d7905"
+    },
+    {
+      "path": "backends/aiger/xaiger.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "522929c5047d45915e817a95d1775249ee0bb292",
+      "size": 24078,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/522929c5047d45915e817a95d1775249ee0bb292"
+    },
+    {
+      "path": "backends/aiger2/aiger.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7acbe43fd8647dcf55bfb06ada222e4fb5e8fe56",
+      "size": 54134,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7acbe43fd8647dcf55bfb06ada222e4fb5e8fe56"
+    },
+    {
+      "path": "backends/blif/blif.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac2e4eddeda7a176b5eb79776fddff1835a81f02",
+      "size": 24223,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/ac2e4eddeda7a176b5eb79776fddff1835a81f02"
+    },
+    {
+      "path": "backends/btor/btor.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b15222a3b647763460ce8120357e881ee7e1744d",
+      "size": 46460,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b15222a3b647763460ce8120357e881ee7e1744d"
+    },
+    {
+      "path": "backends/cxxrtl/cxxrtl_backend.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c13a4e5a0091df61d3438434516e2c304d8fa3c0",
+      "size": 137493,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c13a4e5a0091df61d3438434516e2c304d8fa3c0"
+    },
+    {
+      "path": "backends/cxxrtl/runtime/cxxrtl/capi/cxxrtl_capi.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34801c2d1188caae0f0e0286fe6835489d43ff32",
+      "size": 4559,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/34801c2d1188caae0f0e0286fe6835489d43ff32"
+    },
+    {
+      "path": "backends/cxxrtl/runtime/cxxrtl/capi/cxxrtl_capi_vcd.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0949a9363ebcc652494f35762d0bae051531d56c",
+      "size": 2815,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0949a9363ebcc652494f35762d0bae051531d56c"
+    },
+    {
+      "path": "backends/edif/edif.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51abc98bd400e28b7a0a3fc50f4e5a68c2121964",
+      "size": 20553,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/51abc98bd400e28b7a0a3fc50f4e5a68c2121964"
+    },
+    {
+      "path": "backends/firrtl/firrtl.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25fc7a2a73aef2a06520e061de7a707de7850f8a",
+      "size": 41412,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/25fc7a2a73aef2a06520e061de7a707de7850f8a"
+    },
+    {
+      "path": "backends/functional/cxx.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20d374d2db6035b806e1544a16f22c305f9756f2",
+      "size": 11390,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/20d374d2db6035b806e1544a16f22c305f9756f2"
+    },
+    {
+      "path": "backends/functional/smtlib.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f376da04542def352514bac1953967b1c8365ba9",
+      "size": 11694,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f376da04542def352514bac1953967b1c8365ba9"
+    },
+    {
+      "path": "backends/functional/smtlib_rosette.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ed91fac592bbe1d63279c1ccd86d002aab46366",
+      "size": 14009,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7ed91fac592bbe1d63279c1ccd86d002aab46366"
+    },
+    {
+      "path": "backends/functional/test_generic.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6a1ce4af685ae82bdb08ba6ad68e6f7f5ce90e5",
+      "size": 5633,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d6a1ce4af685ae82bdb08ba6ad68e6f7f5ce90e5"
+    },
+    {
+      "path": "backends/intersynth/intersynth.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1704ba42978e198e4713c2d3bfcaa648233ee1cf",
+      "size": 8119,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1704ba42978e198e4713c2d3bfcaa648233ee1cf"
+    },
+    {
+      "path": "backends/jny/jny.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f6899f4a1d56df1aea84c525cb7e9f120f3e38f",
+      "size": 17882,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2f6899f4a1d56df1aea84c525cb7e9f120f3e38f"
+    },
+    {
+      "path": "backends/json/json.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23d18fb15ba26e8924f25acbd184f6b803b74697",
+      "size": 23970,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/23d18fb15ba26e8924f25acbd184f6b803b74697"
+    },
+    {
+      "path": "backends/rtlil/rtlil_backend.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "860f2fb46dbdf8a1f29f2327de3048441ae39709",
+      "size": 15570,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/860f2fb46dbdf8a1f29f2327de3048441ae39709"
+    },
+    {
+      "path": "backends/simplec/simplec.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baf5aa0060d76531da8f628ce0f0da01b3a485f4",
+      "size": 25609,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/baf5aa0060d76531da8f628ce0f0da01b3a485f4"
+    },
+    {
+      "path": "backends/smt2/smt2.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "348eab12a44a3b60a670287bfdf29c7023769819",
+      "size": 73358,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/348eab12a44a3b60a670287bfdf29c7023769819"
+    },
+    {
+      "path": "backends/smv/smv.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5b735d5e0d31c8b232af2ee5c138c282487d8b5",
+      "size": 26377,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b5b735d5e0d31c8b232af2ee5c138c282487d8b5"
+    },
+    {
+      "path": "backends/spice/spice.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f14a2a66654227765e08c5daf9513ceb988f995",
+      "size": 8692,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/5f14a2a66654227765e08c5daf9513ceb988f995"
+    },
+    {
+      "path": "backends/table/table.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbb533965b573b2097621c6f7e7a7a740538c2b5",
+      "size": 3515,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/bbb533965b573b2097621c6f7e7a7a740538c2b5"
+    },
+    {
+      "path": "backends/verilog/verilog_backend.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fde68e67ae2b7e09a1e8b4ba3528d2a984dd45a8",
+      "size": 86611,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/fde68e67ae2b7e09a1e8b4ba3528d2a984dd45a8"
+    },
+    {
+      "path": "frontends/aiger/aigerparse.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "940ee01ae6d49fc09b558696c8a2ec381d43333b",
+      "size": 31286,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/940ee01ae6d49fc09b558696c8a2ec381d43333b"
+    },
+    {
+      "path": "frontends/ast/ast.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64f9e69c339122e565ec5f0df580a0101ecc3da1",
+      "size": 58793,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/64f9e69c339122e565ec5f0df580a0101ecc3da1"
+    },
+    {
+      "path": "frontends/ast/dpicall.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b1d13b09e1ef5f6e1d0a47a19ec8323e626a023",
+      "size": 6306,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/3b1d13b09e1ef5f6e1d0a47a19ec8323e626a023"
+    },
+    {
+      "path": "frontends/ast/genrtlil.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "783acb40b6affffb367e2c54094202853a3bc047",
+      "size": 83300,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/783acb40b6affffb367e2c54094202853a3bc047"
+    },
+    {
+      "path": "frontends/ast/simplify.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa15127caa94f3a8d3adffb6a2afce37febeabbd",
+      "size": 230293,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/fa15127caa94f3a8d3adffb6a2afce37febeabbd"
+    },
+    {
+      "path": "frontends/blif/blifparse.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "856e50de962743b22ca66f68c80e0ec7f82f6b8a",
+      "size": 20094,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/856e50de962743b22ca66f68c80e0ec7f82f6b8a"
+    },
+    {
+      "path": "frontends/json/jsonparse.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69557e25c23335f68a0b613b7010ca15bcba2d62",
+      "size": 19270,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/69557e25c23335f68a0b613b7010ca15bcba2d62"
+    },
+    {
+      "path": "frontends/liberty/liberty.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "844df084fdede89a4b93de04295bebef10912106",
+      "size": 25234,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/844df084fdede89a4b93de04295bebef10912106"
+    },
+    {
+      "path": "frontends/rpc/rpc_frontend.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc5ef013df6a9c837d4e94b24787c2b595e0ff0f",
+      "size": 22022,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/bc5ef013df6a9c837d4e94b24787c2b595e0ff0f"
+    },
+    {
+      "path": "frontends/rtlil/rtlil_frontend.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85dd744a9d872f923464426d1fbd5f2a591a4d23",
+      "size": 26197,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/85dd744a9d872f923464426d1fbd5f2a591a4d23"
+    },
+    {
+      "path": "frontends/verific/verific.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec513d4e5a8368acad6485afc08044975114fb3c",
+      "size": 150840,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/ec513d4e5a8368acad6485afc08044975114fb3c"
+    },
+    {
+      "path": "frontends/verific/verificsva.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e0a4f4cf862cb99b399d764e70c3818d2e69bf7",
+      "size": 52686,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0e0a4f4cf862cb99b399d764e70c3818d2e69bf7"
+    },
+    {
+      "path": "frontends/verilog/const2ast.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e61b0e72cc5b8a860cabec87f33db12cac938496",
+      "size": 8262,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e61b0e72cc5b8a860cabec87f33db12cac938496"
+    },
+    {
+      "path": "frontends/verilog/preproc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afd3b6fb034692ca2f62fc80a36fc4476b194c99",
+      "size": 26017,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/afd3b6fb034692ca2f62fc80a36fc4476b194c99"
+    },
+    {
+      "path": "frontends/verilog/verilog_error.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c9b5fb50ade3804afd3fe0f89859fe796bb498f",
+      "size": 1502,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/5c9b5fb50ade3804afd3fe0f89859fe796bb498f"
+    },
+    {
+      "path": "frontends/verilog/verilog_frontend.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a83e60a561bcf087e3b24194ddfbb77de460fd3",
+      "size": 25441,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4a83e60a561bcf087e3b24194ddfbb77de460fd3"
+    },
+    {
+      "path": "kernel/calc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "685326f82844639be89564d3ed0039fc64260cb4",
+      "size": 24912,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/685326f82844639be89564d3ed0039fc64260cb4"
+    },
+    {
+      "path": "kernel/cellaigs.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce351514ba7117c7b98d76fd1fdc479f092d73e3",
+      "size": 13916,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/ce351514ba7117c7b98d76fd1fdc479f092d73e3"
+    },
+    {
+      "path": "kernel/celledges.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "780e25eba0584cca6a4a70f3e1de0f846b6e0c29",
+      "size": 18018,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/780e25eba0584cca6a4a70f3e1de0f846b6e0c29"
+    },
+    {
+      "path": "kernel/compressor_tree.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83d98c6d98a89ac59475e477c28563488e41abac",
+      "size": 9288,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/83d98c6d98a89ac59475e477c28563488e41abac"
+    },
+    {
+      "path": "kernel/cost.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "230afdeb1f2b59de0cd20ab1a06f6b9e99c7409c",
+      "size": 6423,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/230afdeb1f2b59de0cd20ab1a06f6b9e99c7409c"
+    },
+    {
+      "path": "kernel/driver.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66299c2c64b479b3c31b22727c7235ad72243818",
+      "size": 28815,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/66299c2c64b479b3c31b22727c7235ad72243818"
+    },
+    {
+      "path": "kernel/drivertools.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55616dea1dbf076cc8ad9f5a9094f08a52752ae0",
+      "size": 23757,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/55616dea1dbf076cc8ad9f5a9094f08a52752ae0"
+    },
+    {
+      "path": "kernel/ff.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727a9d9cb37bf08497b620eeb716008b6a37decb",
+      "size": 25638,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/727a9d9cb37bf08497b620eeb716008b6a37decb"
+    },
+    {
+      "path": "kernel/ffmerge.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "709549e4d6c3e93fda04a9a8225d9c7cf53bd516",
+      "size": 10050,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/709549e4d6c3e93fda04a9a8225d9c7cf53bd516"
+    },
+    {
+      "path": "kernel/fmt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13f2f7560fa1130a5e99d4dc5a2b920abcd128fb",
+      "size": 25878,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/13f2f7560fa1130a5e99d4dc5a2b920abcd128fb"
+    },
+    {
+      "path": "kernel/fstdata.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27903edc58a61f6f62ff8b79cce21b71824a11e9",
+      "size": 8232,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/27903edc58a61f6f62ff8b79cce21b71824a11e9"
+    },
+    {
+      "path": "kernel/functional.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "345ecebc66cfcca99b2e15c1c7422c79fa4bbe8e",
+      "size": 35130,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/345ecebc66cfcca99b2e15c1c7422c79fa4bbe8e"
+    },
+    {
+      "path": "kernel/gzip.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "433c359021b93a8e91b8153ba772df2d2da191a2",
+      "size": 3590,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/433c359021b93a8e91b8153ba772df2d2da191a2"
+    },
+    {
+      "path": "kernel/io.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d16832e6cf165699da56971525f94ee126c86437",
+      "size": 19491,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d16832e6cf165699da56971525f94ee126c86437"
+    },
+    {
+      "path": "kernel/json.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc3a110cf3f71f8c307d8e66b26d2a6b49d44cfd",
+      "size": 4130,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/dc3a110cf3f71f8c307d8e66b26d2a6b49d44cfd"
+    },
+    {
+      "path": "kernel/log.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71f2901ae88872fe9815c4addb37f0a82ebe8239",
+      "size": 19868,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/71f2901ae88872fe9815c4addb37f0a82ebe8239"
+    },
+    {
+      "path": "kernel/log_compat.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3553913e018a23c989af9e3dd4a23b660b8a34cc",
+      "size": 2706,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/3553913e018a23c989af9e3dd4a23b660b8a34cc"
+    },
+    {
+      "path": "kernel/log_help.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13f8f36fc6301d7e0e7819c8dc0bc42f1b8f38c9",
+      "size": 5149,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/13f8f36fc6301d7e0e7819c8dc0bc42f1b8f38c9"
+    },
+    {
+      "path": "kernel/mem.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63f07aad0245146faae1d6ab1af4686a67429f62",
+      "size": 67454,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/63f07aad0245146faae1d6ab1af4686a67429f62"
+    },
+    {
+      "path": "kernel/qcsat.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1b62d15060841b00f50c057632f0e3988806561",
+      "size": 4374,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d1b62d15060841b00f50c057632f0e3988806561"
+    },
+    {
+      "path": "kernel/register.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa93b548874872fd08c975171d845d2852df5803",
+      "size": 37970,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aa93b548874872fd08c975171d845d2852df5803"
+    },
+    {
+      "path": "kernel/rtlil.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fb32fbbd1a610e009e9601181ee687f4b49f4e2",
+      "size": 176342,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0fb32fbbd1a610e009e9601181ee687f4b49f4e2"
+    },
+    {
+      "path": "kernel/rtlil_bufnorm.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c43a3e9ca3513794b6a44dac5a4496b02c586bb6",
+      "size": 23502,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c43a3e9ca3513794b6a44dac5a4496b02c586bb6"
+    },
+    {
+      "path": "kernel/satgen.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dafbf35d50000f1ea702a00486e67a5f85068f2a",
+      "size": 51717,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/dafbf35d50000f1ea702a00486e67a5f85068f2a"
+    },
+    {
+      "path": "kernel/scopeinfo.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aac83d5640e49beffe1d9ddce75034ed22ffc007",
+      "size": 3758,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aac83d5640e49beffe1d9ddce75034ed22ffc007"
+    },
+    {
+      "path": "kernel/sexpr.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08dc8fd30ffa8b8d3333c37f225dab5f74fb9ab1",
+      "size": 4914,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/08dc8fd30ffa8b8d3333c37f225dab5f74fb9ab1"
+    },
+    {
+      "path": "kernel/tclapi.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47c1303a11b9df39b58455bfc11c57f15cf87127",
+      "size": 15853,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/47c1303a11b9df39b58455bfc11c57f15cf87127"
+    },
+    {
+      "path": "kernel/threading.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3189a7bf9441fed63f27c3a2c89fdc4dd59c56a",
+      "size": 4148,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a3189a7bf9441fed63f27c3a2c89fdc4dd59c56a"
+    },
+    {
+      "path": "kernel/yosys.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfd7f2f68b1534c74df97f5268fb3124d7ac5e3e",
+      "size": 34763,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/cfd7f2f68b1534c74df97f5268fb3124d7ac5e3e"
+    },
+    {
+      "path": "kernel/yw.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "560f7dd388a962494d3d7bd30026b039310dacca",
+      "size": 6310,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/560f7dd388a962494d3d7bd30026b039310dacca"
+    },
+    {
+      "path": "passes/cmds/abstract.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd4285cb7f96442467569b6ac5585f3e715ec727",
+      "size": 18779,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/cd4285cb7f96442467569b6ac5585f3e715ec727"
+    },
+    {
+      "path": "passes/cmds/add.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1011a093cfef930b6d09969011e898ebdd718a18",
+      "size": 7204,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1011a093cfef930b6d09969011e898ebdd718a18"
+    },
+    {
+      "path": "passes/cmds/autoname.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "134d36ee6bf41f2c7310d0b42bfcf0fe9243abfe",
+      "size": 8377,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/134d36ee6bf41f2c7310d0b42bfcf0fe9243abfe"
+    },
+    {
+      "path": "passes/cmds/blackbox.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43670efaf24bb8f7b5a852b291df37c3b1deb36b",
+      "size": 1873,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/43670efaf24bb8f7b5a852b291df37c3b1deb36b"
+    },
+    {
+      "path": "passes/cmds/box_derive.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d5ee24401d155de25590bc695d048cd550d34d6",
+      "size": 4901,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2d5ee24401d155de25590bc695d048cd550d34d6"
+    },
+    {
+      "path": "passes/cmds/bugpoint.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a630ca4b469bef451428bd67af0b306892c2c66",
+      "size": 21053,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/6a630ca4b469bef451428bd67af0b306892c2c66"
+    },
+    {
+      "path": "passes/cmds/check.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "213969ab5cdbd440c1434f13575d0b0e4163df0e",
+      "size": 21124,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/213969ab5cdbd440c1434f13575d0b0e4163df0e"
+    },
+    {
+      "path": "passes/cmds/chformal.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fca943d8656992e7e3645c3825ee13b300ef68cb",
+      "size": 13386,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/fca943d8656992e7e3645c3825ee13b300ef68cb"
+    },
+    {
+      "path": "passes/cmds/chtype.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb194f3e33a8e400a2697d84d2ff5c92322a9af5",
+      "size": 3276,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/eb194f3e33a8e400a2697d84d2ff5c92322a9af5"
+    },
+    {
+      "path": "passes/cmds/clean_zerowidth.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d48d3a9587da629691e883ceae6e92e8c0803270",
+      "size": 7118,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d48d3a9587da629691e883ceae6e92e8c0803270"
+    },
+    {
+      "path": "passes/cmds/connect.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8a61d5321b762b6b375c6ba0c36a3bb26447f25",
+      "size": 7041,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b8a61d5321b762b6b375c6ba0c36a3bb26447f25"
+    },
+    {
+      "path": "passes/cmds/connwrappers.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcc6f00042b930e91938485b119ea38f27ba7c27",
+      "size": 6636,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/dcc6f00042b930e91938485b119ea38f27ba7c27"
+    },
+    {
+      "path": "passes/cmds/copy.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a5835a4302edafa64febc54858c835896168ebd",
+      "size": 2024,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/5a5835a4302edafa64febc54858c835896168ebd"
+    },
+    {
+      "path": "passes/cmds/delete.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e341f29d601cd394bd4d23caf0d75a7cbbfd97e4",
+      "size": 3793,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e341f29d601cd394bd4d23caf0d75a7cbbfd97e4"
+    },
+    {
+      "path": "passes/cmds/design.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dff6fa455f2418aef77597c2329e6300ae0c6f4",
+      "size": 11949,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/9dff6fa455f2418aef77597c2329e6300ae0c6f4"
+    },
+    {
+      "path": "passes/cmds/design_equal.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1912a823e27d737d6ff26abd1f453f5a5c2451d9",
+      "size": 16744,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1912a823e27d737d6ff26abd1f453f5a5c2451d9"
+    },
+    {
+      "path": "passes/cmds/dft_tag.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "216f66b2cbd9b68e6c0d7fe29b7fbaf234aa4980",
+      "size": 29919,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/216f66b2cbd9b68e6c0d7fe29b7fbaf234aa4980"
+    },
+    {
+      "path": "passes/cmds/edgetypes.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f100d724780fe95d11bfc2f609317e0b855e2ee",
+      "size": 3913,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2f100d724780fe95d11bfc2f609317e0b855e2ee"
+    },
+    {
+      "path": "passes/cmds/example_dt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbea984e38700a0e09284e3e606e9acc2ad962cb",
+      "size": 7431,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/bbea984e38700a0e09284e3e606e9acc2ad962cb"
+    },
+    {
+      "path": "passes/cmds/exec.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7a5bf8f7c615d6d89f0f44291ab73bb2dab2150",
+      "size": 6693,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f7a5bf8f7c615d6d89f0f44291ab73bb2dab2150"
+    },
+    {
+      "path": "passes/cmds/future.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15f4b8bd1dfe6ed2e61fcd8a5aaf12fb7bc739d0",
+      "size": 4263,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/15f4b8bd1dfe6ed2e61fcd8a5aaf12fb7bc739d0"
+    },
+    {
+      "path": "passes/cmds/glift.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d906c241dbe1818624f5ecbceac77f4079624a80",
+      "size": 30172,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d906c241dbe1818624f5ecbceac77f4079624a80"
+    },
+    {
+      "path": "passes/cmds/icell_liberty.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a73d08f22ddc5de26946e0a84d6247ad655319",
+      "size": 6123,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e0a73d08f22ddc5de26946e0a84d6247ad655319"
+    },
+    {
+      "path": "passes/cmds/internal_stats.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65e74cc044b33814ffe120690c4b004c6e10fead",
+      "size": 3624,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/65e74cc044b33814ffe120690c4b004c6e10fead"
+    },
+    {
+      "path": "passes/cmds/linecoverage.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a65667f38fe6a807a8878b294946dacb81ceecc0",
+      "size": 4932,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a65667f38fe6a807a8878b294946dacb81ceecc0"
+    },
+    {
+      "path": "passes/cmds/linux_perf.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79047883490996dc6353ffe3074aba3f83e25489",
+      "size": 3397,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/79047883490996dc6353ffe3074aba3f83e25489"
+    },
+    {
+      "path": "passes/cmds/logcmd.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd2d708d85d9bba37ac251ad8a9df988bde2b13c",
+      "size": 3959,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/dd2d708d85d9bba37ac251ad8a9df988bde2b13c"
+    },
+    {
+      "path": "passes/cmds/logger.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7fbcb93f1236a86b8665f5da449b4c6c6c2d0a8",
+      "size": 6914,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b7fbcb93f1236a86b8665f5da449b4c6c6c2d0a8"
+    },
+    {
+      "path": "passes/cmds/ltp.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "862768858b6fdbf3a6dee9024a54488f61d7ba5f",
+      "size": 5807,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/862768858b6fdbf3a6dee9024a54488f61d7ba5f"
+    },
+    {
+      "path": "passes/cmds/optbarriers.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ff1c11abea2077de8cf61a27532a5cd2cb67ada",
+      "size": 18505,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0ff1c11abea2077de8cf61a27532a5cd2cb67ada"
+    },
+    {
+      "path": "passes/cmds/plugin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dec53cf37d6800717136c54462ef2faa7e2493bc",
+      "size": 7002,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/dec53cf37d6800717136c54462ef2faa7e2493bc"
+    },
+    {
+      "path": "passes/cmds/portarcs.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06c4412a74ef8695642a634fada6a16fb9120e80",
+      "size": 9618,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/06c4412a74ef8695642a634fada6a16fb9120e80"
+    },
+    {
+      "path": "passes/cmds/portlist.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c28e6962fea3cff2b79bd11260a5ae8c68ff06d",
+      "size": 3059,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/6c28e6962fea3cff2b79bd11260a5ae8c68ff06d"
+    },
+    {
+      "path": "passes/cmds/printattrs.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6de2ffee36e656e995542936b433006f23b80d75",
+      "size": 3111,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/6de2ffee36e656e995542936b433006f23b80d75"
+    },
+    {
+      "path": "passes/cmds/rename.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0da1325217b0041bab70cfb7007bbce633e153fe",
+      "size": 19722,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0da1325217b0041bab70cfb7007bbce633e153fe"
+    },
+    {
+      "path": "passes/cmds/scatter.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "017600a46f7d6e92716ebf3ebe3d07a666f62e78",
+      "size": 2497,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/017600a46f7d6e92716ebf3ebe3d07a666f62e78"
+    },
+    {
+      "path": "passes/cmds/scc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80d884e25d2ff86d46648d2246f0ba21985936ae",
+      "size": 11685,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/80d884e25d2ff86d46648d2246f0ba21985936ae"
+    },
+    {
+      "path": "passes/cmds/scratchpad.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24ab5cfd8eefab593e9a10d40f7a023e22523ee6",
+      "size": 5862,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/24ab5cfd8eefab593e9a10d40f7a023e22523ee6"
+    },
+    {
+      "path": "passes/cmds/sdc/sdc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd3d5e3dd2060fcd9174a44a211383c08653f81a",
+      "size": 24136,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/fd3d5e3dd2060fcd9174a44a211383c08653f81a"
+    },
+    {
+      "path": "passes/cmds/select.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0086409a876fd158005c5b0e22d7cdd94d45c6dd",
+      "size": 62061,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0086409a876fd158005c5b0e22d7cdd94d45c6dd"
+    },
+    {
+      "path": "passes/cmds/setattr.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aae6983e2c63cdcb99ae74f2f07b39c887a0229e",
+      "size": 8562,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aae6983e2c63cdcb99ae74f2f07b39c887a0229e"
+    },
+    {
+      "path": "passes/cmds/setenv.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb071b2710ab0a9dae99f5a338e9a03bb2d8304f",
+      "size": 2071,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/bb071b2710ab0a9dae99f5a338e9a03bb2d8304f"
+    },
+    {
+      "path": "passes/cmds/setundef.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99a223bdc7773f517f06c14e815b7efa58061925",
+      "size": 15414,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/99a223bdc7773f517f06c14e815b7efa58061925"
+    },
+    {
+      "path": "passes/cmds/show.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa0add9929bc6d099ab05e3d1c952b9aeaf50508",
+      "size": 34475,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aa0add9929bc6d099ab05e3d1c952b9aeaf50508"
+    },
+    {
+      "path": "passes/cmds/sort.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab058880ee5fd8e7f879e1fd85d669d1a121476e",
+      "size": 638,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/ab058880ee5fd8e7f879e1fd85d669d1a121476e"
+    },
+    {
+      "path": "passes/cmds/splice.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9439a3a2e28a2cb5ce27ed8e24b45830bb92d35a",
+      "size": 11262,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/9439a3a2e28a2cb5ce27ed8e24b45830bb92d35a"
+    },
+    {
+      "path": "passes/cmds/splitcells.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a99e4d2681f04e2e5963cffec8c199e04a362deb",
+      "size": 8843,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a99e4d2681f04e2e5963cffec8c199e04a362deb"
+    },
+    {
+      "path": "passes/cmds/splitnets.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d61a99ec049e6463308f2f32f2733ed2529d833e",
+      "size": 8613,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d61a99ec049e6463308f2f32f2733ed2529d833e"
+    },
+    {
+      "path": "passes/cmds/sta.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "259794d3236b4e5a5a071730c436bf1c19a43a5b",
+      "size": 10106,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/259794d3236b4e5a5a071730c436bf1c19a43a5b"
+    },
+    {
+      "path": "passes/cmds/stat.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0e463831c86dbac9f332731811b40554aa58b06",
+      "size": 40567,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b0e463831c86dbac9f332731811b40554aa58b06"
+    },
+    {
+      "path": "passes/cmds/symfpu.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c227266a6fef7562875af51617e5e28dff5dff3b",
+      "size": 28072,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c227266a6fef7562875af51617e5e28dff5dff3b"
+    },
+    {
+      "path": "passes/cmds/tee.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "456bc221c1df2a7b4a304a8bee4f0a78cd56e553",
+      "size": 3397,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/456bc221c1df2a7b4a304a8bee4f0a78cd56e553"
+    },
+    {
+      "path": "passes/cmds/test_select.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a3bbc5394cf5dd39bc0b8dab9be091e23cae058",
+      "size": 4856,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4a3bbc5394cf5dd39bc0b8dab9be091e23cae058"
+    },
+    {
+      "path": "passes/cmds/timeest.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7efdec5e5b9f057b2398dfdcb9924c99924b6878",
+      "size": 13645,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7efdec5e5b9f057b2398dfdcb9924c99924b6878"
+    },
+    {
+      "path": "passes/cmds/torder.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35e3a0942b68497f2301f77916990a6bded4da11",
+      "size": 4058,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/35e3a0942b68497f2301f77916990a6bded4da11"
+    },
+    {
+      "path": "passes/cmds/trace.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8bbd58409e0815558e9593efa56b43866e98ffa",
+      "size": 4588,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e8bbd58409e0815558e9593efa56b43866e98ffa"
+    },
+    {
+      "path": "passes/cmds/viz.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0519744f7c3fe742026fd3f057c6dc66109b644",
+      "size": 31039,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b0519744f7c3fe742026fd3f057c6dc66109b644"
+    },
+    {
+      "path": "passes/cmds/wrapcell.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "067e19c0adc46a6389eb6b632164771e6069a577",
+      "size": 8813,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/067e19c0adc46a6389eb6b632164771e6069a577"
+    },
+    {
+      "path": "passes/cmds/write_file.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a22fdaf2ad0b48731ee767f5bb80e60648cabe27",
+      "size": 2708,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a22fdaf2ad0b48731ee767f5bb80e60648cabe27"
+    },
+    {
+      "path": "passes/cmds/xprop.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25c1a7320b3cebaeb926542ed9e68ec1eb7b6339",
+      "size": 37358,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/25c1a7320b3cebaeb926542ed9e68ec1eb7b6339"
+    },
+    {
+      "path": "passes/equiv/equiv_add.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3c97fa8087c401348d5f5bcc01b2255de98e0a2",
+      "size": 5499,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b3c97fa8087c401348d5f5bcc01b2255de98e0a2"
+    },
+    {
+      "path": "passes/equiv/equiv_induct.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a13a69abffd0880e1569086ffd532dd3fb7f292",
+      "size": 7833,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7a13a69abffd0880e1569086ffd532dd3fb7f292"
+    },
+    {
+      "path": "passes/equiv/equiv_make.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33f8b76fccef3d3a2ad7c80879a6600f4de07b3a",
+      "size": 16040,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/33f8b76fccef3d3a2ad7c80879a6600f4de07b3a"
+    },
+    {
+      "path": "passes/equiv/equiv_mark.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f355af4e6aeb04521dee0a9c879f842099e5da2",
+      "size": 5955,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0f355af4e6aeb04521dee0a9c879f842099e5da2"
+    },
+    {
+      "path": "passes/equiv/equiv_miter.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8372ceb0a506f82c3c2f37e2bf53d3f0b024c16",
+      "size": 9349,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b8372ceb0a506f82c3c2f37e2bf53d3f0b024c16"
+    },
+    {
+      "path": "passes/equiv/equiv_opt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13dbc23b5f111e0c18891bb45b179ffefa2b5ab7",
+      "size": 6803,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/13dbc23b5f111e0c18891bb45b179ffefa2b5ab7"
+    },
+    {
+      "path": "passes/equiv/equiv_purge.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4062161bb2114efca590b4026f2b52fbb595fc2b",
+      "size": 5366,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4062161bb2114efca590b4026f2b52fbb595fc2b"
+    },
+    {
+      "path": "passes/equiv/equiv_remove.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c871cd9ef168132d969902835396f118c9e95c2b",
+      "size": 2682,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c871cd9ef168132d969902835396f118c9e95c2b"
+    },
+    {
+      "path": "passes/equiv/equiv_simple.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "213e478577eb2db7a35a5d71fb8158cf490cfadf",
+      "size": 15279,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/213e478577eb2db7a35a5d71fb8158cf490cfadf"
+    },
+    {
+      "path": "passes/equiv/equiv_status.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da53c60a27bab20f7746ec9cc0e7733e0f837528",
+      "size": 3160,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/da53c60a27bab20f7746ec9cc0e7733e0f837528"
+    },
+    {
+      "path": "passes/equiv/equiv_struct.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f8d8d282bdd550f287b454227254af2d9961773",
+      "size": 11829,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7f8d8d282bdd550f287b454227254af2d9961773"
+    },
+    {
+      "path": "passes/fsm/fsm.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e7e09d4c24bf82416c18c77907305a6cc060fa6",
+      "size": 5167,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/8e7e09d4c24bf82416c18c77907305a6cc060fa6"
+    },
+    {
+      "path": "passes/fsm/fsm_detect.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f5107ce98f29eb362c9ce823e825ad3d509752e",
+      "size": 11545,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7f5107ce98f29eb362c9ce823e825ad3d509752e"
+    },
+    {
+      "path": "passes/fsm/fsm_expand.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a688bbf6659bad539af0314feb710d29f35920a9",
+      "size": 9526,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a688bbf6659bad539af0314feb710d29f35920a9"
+    },
+    {
+      "path": "passes/fsm/fsm_export.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b06b18c2d2cb23c2b580c1e28209a308853cb9a",
+      "size": 6332,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1b06b18c2d2cb23c2b580c1e28209a308853cb9a"
+    },
+    {
+      "path": "passes/fsm/fsm_extract.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ec65b7b05bfeba595e4b0211ebd49bfc37eeff4",
+      "size": 16989,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4ec65b7b05bfeba595e4b0211ebd49bfc37eeff4"
+    },
+    {
+      "path": "passes/fsm/fsm_info.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b3b59ee9ddf9d7a8dfd50a4761f24326d67630e",
+      "size": 2197,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7b3b59ee9ddf9d7a8dfd50a4761f24326d67630e"
+    },
+    {
+      "path": "passes/fsm/fsm_map.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c19edcc889e9f86f1cad88af4abb8050063811e8",
+      "size": 11654,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c19edcc889e9f86f1cad88af4abb8050063811e8"
+    },
+    {
+      "path": "passes/fsm/fsm_opt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae91488f276f2b13c5a9ad288fcc3fffca17e68",
+      "size": 9934,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/eae91488f276f2b13c5a9ad288fcc3fffca17e68"
+    },
+    {
+      "path": "passes/fsm/fsm_recode.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa96ec6dec068d1dc332bcabee2332754dc7b1fb",
+      "size": 7247,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aa96ec6dec068d1dc332bcabee2332754dc7b1fb"
+    },
+    {
+      "path": "passes/hierarchy/flatten.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27832b2f25d9427e666f182c7f6a3284401fbed1",
+      "size": 17893,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/27832b2f25d9427e666f182c7f6a3284401fbed1"
+    },
+    {
+      "path": "passes/hierarchy/hierarchy.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2193ca5c277f7ddd98f81945cd3cf8337986405a",
+      "size": 53283,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2193ca5c277f7ddd98f81945cd3cf8337986405a"
+    },
+    {
+      "path": "passes/hierarchy/keep_hierarchy.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa3ac72e3ae0ba077e6f909b7fa152ea43d60fba",
+      "size": 4332,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aa3ac72e3ae0ba077e6f909b7fa152ea43d60fba"
+    },
+    {
+      "path": "passes/hierarchy/submod.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf135386c66f78562f9b36e6530eb9b1a371712f",
+      "size": 13895,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/bf135386c66f78562f9b36e6530eb9b1a371712f"
+    },
+    {
+      "path": "passes/hierarchy/uniquify.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "941f4dce8f301e7b2c16e5f572a24e89cbd6082e",
+      "size": 3370,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/941f4dce8f301e7b2c16e5f572a24e89cbd6082e"
+    },
+    {
+      "path": "passes/memory/memlib.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11c9f9074ffa48faf1342d5a9d790517c761916b",
+      "size": 32604,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/11c9f9074ffa48faf1342d5a9d790517c761916b"
+    },
+    {
+      "path": "passes/memory/memory.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5dec61987920245dc03e8c7de956af800feea7b",
+      "size": 4227,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d5dec61987920245dc03e8c7de956af800feea7b"
+    },
+    {
+      "path": "passes/memory/memory_bmux2rom.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3fc5a7fc5974ea2ff3218c1851ee5d2f93d5bbf",
+      "size": 2689,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a3fc5a7fc5974ea2ff3218c1851ee5d2f93d5bbf"
+    },
+    {
+      "path": "passes/memory/memory_bram.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f077f6dd02e97b1ddc3909f2dffe03fc82cb6c0b",
+      "size": 44432,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f077f6dd02e97b1ddc3909f2dffe03fc82cb6c0b"
+    },
+    {
+      "path": "passes/memory/memory_collect.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "157042c9c2fb6fe3a08c0370dbf3bc29236a08dd",
+      "size": 1875,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/157042c9c2fb6fe3a08c0370dbf3bc29236a08dd"
+    },
+    {
+      "path": "passes/memory/memory_dff.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cda7f5411d365c16d3af3688b7b28bed5bea1c17",
+      "size": 22699,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/cda7f5411d365c16d3af3688b7b28bed5bea1c17"
+    },
+    {
+      "path": "passes/memory/memory_libmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d7091c42f047b7ce18e0a6404210a6a793b9066",
+      "size": 76436,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7d7091c42f047b7ce18e0a6404210a6a793b9066"
+    },
+    {
+      "path": "passes/memory/memory_map.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc8dce13e8897b8cc81b86e3c4f03d15e898047d",
+      "size": 16074,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/cc8dce13e8897b8cc81b86e3c4f03d15e898047d"
+    },
+    {
+      "path": "passes/memory/memory_memx.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54c71a0e83a9af8243fa787749830a51b37547f4",
+      "size": 2960,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/54c71a0e83a9af8243fa787749830a51b37547f4"
+    },
+    {
+      "path": "passes/memory/memory_narrow.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46c538bab1e8950504c1c4609a4e0459c10ce39b",
+      "size": 2141,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/46c538bab1e8950504c1c4609a4e0459c10ce39b"
+    },
+    {
+      "path": "passes/memory/memory_nordff.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3253c8f608018e49b1e4506d2221b33f8ddfbc14",
+      "size": 2359,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/3253c8f608018e49b1e4506d2221b33f8ddfbc14"
+    },
+    {
+      "path": "passes/memory/memory_share.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbe41431a21d0df4552e9e16ef8ef5c8a7d7dd17",
+      "size": 18206,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/fbe41431a21d0df4552e9e16ef8ef5c8a7d7dd17"
+    },
+    {
+      "path": "passes/memory/memory_unpack.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "422d6fe15437b2cdef5337f90671268f6eaecf0f",
+      "size": 1894,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/422d6fe15437b2cdef5337f90671268f6eaecf0f"
+    },
+    {
+      "path": "passes/opt/clean/cells_all.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c4eccf5984d68e788e75a63183ee45a1545d847",
+      "size": 13745,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0c4eccf5984d68e788e75a63183ee45a1545d847"
+    },
+    {
+      "path": "passes/opt/clean/cells_temp.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbe3ea78f5d333ad96503da4eb3c4c173f0439d7",
+      "size": 3702,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/fbe3ea78f5d333ad96503da4eb3c4c173f0439d7"
+    },
+    {
+      "path": "passes/opt/clean/inits.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "962164b3734a8ffb2dfd24272ae7f010d009110e",
+      "size": 4379,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/962164b3734a8ffb2dfd24272ae7f010d009110e"
+    },
+    {
+      "path": "passes/opt/clean/opt_clean.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bc5f0a340ceb392cee34610226659d7708f4af8",
+      "size": 5350,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7bc5f0a340ceb392cee34610226659d7708f4af8"
+    },
+    {
+      "path": "passes/opt/clean/wires.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "616426f9db0ca2ceb7bc4e75532849c1d57573ae",
+      "size": 19452,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/616426f9db0ca2ceb7bc4e75532849c1d57573ae"
+    },
+    {
+      "path": "passes/opt/dff/constbits.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4345c17b8baae83cc59126c59f2e39893d70d4cb",
+      "size": 11016,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4345c17b8baae83cc59126c59f2e39893d70d4cb"
+    },
+    {
+      "path": "passes/opt/dff/eqbits.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0b8d8dbefcc961990761d5a4df39f34e921659e",
+      "size": 15180,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c0b8d8dbefcc961990761d5a4df39f34e921659e"
+    },
+    {
+      "path": "passes/opt/dff/opt_dff.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d684c5f7c12279f9fdb32d5db7680acaaa0c40f",
+      "size": 5461,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/3d684c5f7c12279f9fdb32d5db7680acaaa0c40f"
+    },
+    {
+      "path": "passes/opt/dff/simple.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d6905cb45f1709de0984e91ae48b9e945cac7c1",
+      "size": 22944,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0d6905cb45f1709de0984e91ae48b9e945cac7c1"
+    },
+    {
+      "path": "passes/opt/muxpack.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2bfc5134a243dbdb800ba4fb1e1e7a1be9bf2d3",
+      "size": 10267,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a2bfc5134a243dbdb800ba4fb1e1e7a1be9bf2d3"
+    },
+    {
+      "path": "passes/opt/opt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "983437e6411fd030716c82c2a116ba0f5642b847",
+      "size": 6434,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/983437e6411fd030716c82c2a116ba0f5642b847"
+    },
+    {
+      "path": "passes/opt/opt_balance_tree.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa1a44de27d01a6fa16a079c36cfb7413a38dc7c",
+      "size": 13927,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aa1a44de27d01a6fa16a079c36cfb7413a38dc7c"
+    },
+    {
+      "path": "passes/opt/opt_demorgan.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34d96023224401f01beb1d2abb83548b7e11c82e",
+      "size": 6038,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/34d96023224401f01beb1d2abb83548b7e11c82e"
+    },
+    {
+      "path": "passes/opt/opt_expr.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a91baf55ca6508bc490fc22062bd3cc051a853f",
+      "size": 83881,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/3a91baf55ca6508bc490fc22062bd3cc051a853f"
+    },
+    {
+      "path": "passes/opt/opt_ffinv.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d6da49b8c25d5ee80b41bebb055b3ed1e29948",
+      "size": 7192,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/42d6da49b8c25d5ee80b41bebb055b3ed1e29948"
+    },
+    {
+      "path": "passes/opt/opt_hier.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "878ccfe0af3dd46790ca34025122c72ae4783f40",
+      "size": 14670,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/878ccfe0af3dd46790ca34025122c72ae4783f40"
+    },
+    {
+      "path": "passes/opt/opt_lut.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67dd9d43d9b84d38cc7e1c266fb8136fffaa0b9d",
+      "size": 18287,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/67dd9d43d9b84d38cc7e1c266fb8136fffaa0b9d"
+    },
+    {
+      "path": "passes/opt/opt_lut_ins.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d96c269ce87a7317cdec8b6a2db15c318bde2f16",
+      "size": 9126,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d96c269ce87a7317cdec8b6a2db15c318bde2f16"
+    },
+    {
+      "path": "passes/opt/opt_mem.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bd97f5f9bc721d3c0704118a0a95c87e9cb746c",
+      "size": 6996,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0bd97f5f9bc721d3c0704118a0a95c87e9cb746c"
+    },
+    {
+      "path": "passes/opt/opt_mem_feedback.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f25eb8a8c4a078bd905ecfa466b274f42e242a84",
+      "size": 10413,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f25eb8a8c4a078bd905ecfa466b274f42e242a84"
+    },
+    {
+      "path": "passes/opt/opt_mem_priority.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "352a3f91903f61f20be61b55295c85bb29fa8d68",
+      "size": 4010,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/352a3f91903f61f20be61b55295c85bb29fa8d68"
+    },
+    {
+      "path": "passes/opt/opt_mem_widen.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f642666db5695cc4c91feb48a6457c40536ac404",
+      "size": 3649,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f642666db5695cc4c91feb48a6457c40536ac404"
+    },
+    {
+      "path": "passes/opt/opt_merge.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60c4fbea42a15562098b399d4da398612b24a89f",
+      "size": 19253,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/60c4fbea42a15562098b399d4da398612b24a89f"
+    },
+    {
+      "path": "passes/opt/opt_muxtree.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61d8772a363f7a40abe41b51b77df7cdf24f628e",
+      "size": 20641,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/61d8772a363f7a40abe41b51b77df7cdf24f628e"
+    },
+    {
+      "path": "passes/opt/opt_reduce.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e26830e2057598e716c7b6a0e98a91a975c15ed3",
+      "size": 18747,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e26830e2057598e716c7b6a0e98a91a975c15ed3"
+    },
+    {
+      "path": "passes/opt/opt_share.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1836806cc8187a32c4794b525c17d788e2a47f98",
+      "size": 17677,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1836806cc8187a32c4794b525c17d788e2a47f98"
+    },
+    {
+      "path": "passes/opt/peepopt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac5b571f7bac36056639f84d9eb9506b9cc0e869",
+      "size": 4804,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/ac5b571f7bac36056639f84d9eb9506b9cc0e869"
+    },
+    {
+      "path": "passes/opt/pmux2shiftx.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6668ff2de9673671e059030bd96aa5adacec5807",
+      "size": 23566,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/6668ff2de9673671e059030bd96aa5adacec5807"
+    },
+    {
+      "path": "passes/opt/rmports.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d88b2666b1ffd6fb7ac99cb3b4182e473a01a96",
+      "size": 8876,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/6d88b2666b1ffd6fb7ac99cb3b4182e473a01a96"
+    },
+    {
+      "path": "passes/opt/share.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "368349efcf9a3657010ce66bc8e73687ac85b94a",
+      "size": 53838,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/368349efcf9a3657010ce66bc8e73687ac85b94a"
+    },
+    {
+      "path": "passes/opt/wreduce.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f8c11ba6f8f08f676624e968584079795bb8627",
+      "size": 20830,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1f8c11ba6f8f08f676624e968584079795bb8627"
+    },
+    {
+      "path": "passes/pmgen/test_pmgen.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18bc123463fc7c92e005a98fcf9ffd88701da162",
+      "size": 7225,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/18bc123463fc7c92e005a98fcf9ffd88701da162"
+    },
+    {
+      "path": "passes/proc/proc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f25c56081756103f42d104b13824f870592c41a",
+      "size": 4280,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1f25c56081756103f42d104b13824f870592c41a"
+    },
+    {
+      "path": "passes/proc/proc_arst.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f754bc9482762eaa2d19033f39824572e4663463",
+      "size": 11774,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f754bc9482762eaa2d19033f39824572e4663463"
+    },
+    {
+      "path": "passes/proc/proc_clean.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0df9fc0b208da4e227391833e58646af1e5d7c55",
+      "size": 6955,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0df9fc0b208da4e227391833e58646af1e5d7c55"
+    },
+    {
+      "path": "passes/proc/proc_dff.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc556948bb780f805f033481bec51b95082ce4dc",
+      "size": 11503,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/bc556948bb780f805f033481bec51b95082ce4dc"
+    },
+    {
+      "path": "passes/proc/proc_dlatch.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be6cf31e11549e0af0d9e06f197ff8caf073a5cd",
+      "size": 18623,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/be6cf31e11549e0af0d9e06f197ff8caf073a5cd"
+    },
+    {
+      "path": "passes/proc/proc_init.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d27eaa9ad479f6c95d80a62c8373f8b999ce2ad",
+      "size": 3420,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/3d27eaa9ad479f6c95d80a62c8373f8b999ce2ad"
+    },
+    {
+      "path": "passes/proc/proc_memwr.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b292a5e9ac1d8b195a016da79a87b9cdf5a60d23",
+      "size": 4417,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b292a5e9ac1d8b195a016da79a87b9cdf5a60d23"
+    },
+    {
+      "path": "passes/proc/proc_mux.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68127d1bcb581ea228b63b97954751ddc5001eff",
+      "size": 13515,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/68127d1bcb581ea228b63b97954751ddc5001eff"
+    },
+    {
+      "path": "passes/proc/proc_prune.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08903d93fe7a1b537376435896554ade3892b040",
+      "size": 4616,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/08903d93fe7a1b537376435896554ade3892b040"
+    },
+    {
+      "path": "passes/proc/proc_rmdead.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be7961e76b36f82de34b67d53a35b77004bed204",
+      "size": 4866,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/be7961e76b36f82de34b67d53a35b77004bed204"
+    },
+    {
+      "path": "passes/proc/proc_rom.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7b485194c00b88475d6c21245a61c87bf836fa1",
+      "size": 6939,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a7b485194c00b88475d6c21245a61c87bf836fa1"
+    },
+    {
+      "path": "passes/sat/assertpmux.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "314535e8437c8bd8f27a56546504b17b7b5e14d3",
+      "size": 6844,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/314535e8437c8bd8f27a56546504b17b7b5e14d3"
+    },
+    {
+      "path": "passes/sat/async2sync.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be2355e003c143fafe99b0950b64a3b4d41c070f",
+      "size": 11819,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/be2355e003c143fafe99b0950b64a3b4d41c070f"
+    },
+    {
+      "path": "passes/sat/clk2fflogic.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b928ddf6397415ea344b067464e9826e097c2ab",
+      "size": 13575,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0b928ddf6397415ea344b067464e9826e097c2ab"
+    },
+    {
+      "path": "passes/sat/cutpoint.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ceb2b9b72fcbaefa651ea3a79ed42eba90699d9",
+      "size": 7967,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/6ceb2b9b72fcbaefa651ea3a79ed42eba90699d9"
+    },
+    {
+      "path": "passes/sat/eval.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d8d0a6cc7f4eccda37add62a578d13bc15775a7",
+      "size": 21149,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1d8d0a6cc7f4eccda37add62a578d13bc15775a7"
+    },
+    {
+      "path": "passes/sat/expose.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e84bd9e894c0e6c27d6cbc7edd52c763d5c7c4e9",
+      "size": 20356,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e84bd9e894c0e6c27d6cbc7edd52c763d5c7c4e9"
+    },
+    {
+      "path": "passes/sat/fmcombine.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d3130fdb309f7a9e500edab4cce385c774f00b5",
+      "size": 11729,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4d3130fdb309f7a9e500edab4cce385c774f00b5"
+    },
+    {
+      "path": "passes/sat/fminit.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4627a6c96b32f0956e597d79d631676e10d91010",
+      "size": 5972,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4627a6c96b32f0956e597d79d631676e10d91010"
+    },
+    {
+      "path": "passes/sat/formalff.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2500bde4f48edf748160c517d78c527655caedb",
+      "size": 31116,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a2500bde4f48edf748160c517d78c527655caedb"
+    },
+    {
+      "path": "passes/sat/freduce.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eb54fc3a8e7975c674ffcc9884a676d6e64f877",
+      "size": 25732,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4eb54fc3a8e7975c674ffcc9884a676d6e64f877"
+    },
+    {
+      "path": "passes/sat/miter.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dd1b07b480a0c55ee1f07779bba69a1ffdfcaaf",
+      "size": 16283,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/5dd1b07b480a0c55ee1f07779bba69a1ffdfcaaf"
+    },
+    {
+      "path": "passes/sat/mutate.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63a8de27727ef7a13f93da7661c8cf736616e717",
+      "size": 28083,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/63a8de27727ef7a13f93da7661c8cf736616e717"
+    },
+    {
+      "path": "passes/sat/qbfsat.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8136946203a6d92e1ac3ccc966f13935b84547b6",
+      "size": 24438,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/8136946203a6d92e1ac3ccc966f13935b84547b6"
+    },
+    {
+      "path": "passes/sat/recover_names.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2c93df6581d29c2a86b80bb3462e247de92bf8c",
+      "size": 27985,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e2c93df6581d29c2a86b80bb3462e247de92bf8c"
+    },
+    {
+      "path": "passes/sat/sat.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96e4949148bd5cddfa2a81601b779017cd9ecf5b",
+      "size": 60400,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/96e4949148bd5cddfa2a81601b779017cd9ecf5b"
+    },
+    {
+      "path": "passes/sat/sim.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "960082bff2adeec2b44e69dffc042bf2faa88ea8",
+      "size": 92891,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/960082bff2adeec2b44e69dffc042bf2faa88ea8"
+    },
+    {
+      "path": "passes/sat/supercover.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2192dc8a0f435c5e9d270fad4dfd5bb829d4d23",
+      "size": 2874,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a2192dc8a0f435c5e9d270fad4dfd5bb829d4d23"
+    },
+    {
+      "path": "passes/sat/synthprop.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70748271e8669dbb2b1d5b5a5f887c0773d36575",
+      "size": 8175,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/70748271e8669dbb2b1d5b5a5f887c0773d36575"
+    },
+    {
+      "path": "passes/techmap/abc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bad4cbbc347c4b43bb61143de4a05169837fdd1",
+      "size": 91429,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0bad4cbbc347c4b43bb61143de4a05169837fdd1"
+    },
+    {
+      "path": "passes/techmap/abc9.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "465a3f6083dc075e68ba112d18b53b150004ab1c",
+      "size": 19211,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/465a3f6083dc075e68ba112d18b53b150004ab1c"
+    },
+    {
+      "path": "passes/techmap/abc9_exe.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e662086916e1f1338d442e7c60d7fad31ea1cb7",
+      "size": 21950,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2e662086916e1f1338d442e7c60d7fad31ea1cb7"
+    },
+    {
+      "path": "passes/techmap/abc9_ops.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0811543d4890c7f7a26e93f35379e23594f932c7",
+      "size": 50125,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0811543d4890c7f7a26e93f35379e23594f932c7"
+    },
+    {
+      "path": "passes/techmap/abc_new.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02fadef09bbc4f50615ae7fde6f28cb6d497290c",
+      "size": 7325,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/02fadef09bbc4f50615ae7fde6f28cb6d497290c"
+    },
+    {
+      "path": "passes/techmap/abc_ops_reintegrate.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0806b8470ca8864dea95569fa79c5b3081bb7fff",
+      "size": 25342,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0806b8470ca8864dea95569fa79c5b3081bb7fff"
+    },
+    {
+      "path": "passes/techmap/aigmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1ec214fd6a2955ec7ed1fd516fe297a3dcd471e",
+      "size": 5077,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c1ec214fd6a2955ec7ed1fd516fe297a3dcd471e"
+    },
+    {
+      "path": "passes/techmap/alumacc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "139dd29ca5b3b77380280fe087b33d3dee2aa787",
+      "size": 17836,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/139dd29ca5b3b77380280fe087b33d3dee2aa787"
+    },
+    {
+      "path": "passes/techmap/arith_tree.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9281ba00d8ae9c5c2d929d5c93d8e76d9bd859e7",
+      "size": 14049,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/9281ba00d8ae9c5c2d929d5c93d8e76d9bd859e7"
+    },
+    {
+      "path": "passes/techmap/attrmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c97f6ab1dfd7beacc17357143163525499789dc",
+      "size": 9970,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4c97f6ab1dfd7beacc17357143163525499789dc"
+    },
+    {
+      "path": "passes/techmap/attrmvcp.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cff7d8697596a2566cd242c609c3781fc04682ef",
+      "size": 4275,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/cff7d8697596a2566cd242c609c3781fc04682ef"
+    },
+    {
+      "path": "passes/techmap/bmuxmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7aa67d3c071883f206fb6bacccae9417ccf99abb",
+      "size": 3245,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7aa67d3c071883f206fb6bacccae9417ccf99abb"
+    },
+    {
+      "path": "passes/techmap/booth.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb70845694893f2a6d0d3db4c2bcf2edc0e4ef7d",
+      "size": 37935,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/fb70845694893f2a6d0d3db4c2bcf2edc0e4ef7d"
+    },
+    {
+      "path": "passes/techmap/bufnorm.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c27f2740dbb9013badd83b6c35e6afb1c6b6b7d1",
+      "size": 14968,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c27f2740dbb9013badd83b6c35e6afb1c6b6b7d1"
+    },
+    {
+      "path": "passes/techmap/bwmuxmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fe1cded7778b5d012e60c84e5e57d9cab2e6711",
+      "size": 2223,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7fe1cded7778b5d012e60c84e5e57d9cab2e6711"
+    },
+    {
+      "path": "passes/techmap/cellmatch.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2e2393d0b93a834b6922466dc6c691b792dc6f8",
+      "size": 9043,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a2e2393d0b93a834b6922466dc6c691b792dc6f8"
+    },
+    {
+      "path": "passes/techmap/clkbufmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7954b78915984ebfc5f2fa7f8ed3c2850b0e6136",
+      "size": 13533,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7954b78915984ebfc5f2fa7f8ed3c2850b0e6136"
+    },
+    {
+      "path": "passes/techmap/clockgate.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ad6b19dd9ec77869202ed1d0911426ac9448d21",
+      "size": 13485,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4ad6b19dd9ec77869202ed1d0911426ac9448d21"
+    },
+    {
+      "path": "passes/techmap/constmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1df50e47d46b9203cd0b6f588ff42ede30aafd59",
+      "size": 3230,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1df50e47d46b9203cd0b6f588ff42ede30aafd59"
+    },
+    {
+      "path": "passes/techmap/deminout.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "103fba103283b5908d270046d37eeb41fb45139b",
+      "size": 3969,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/103fba103283b5908d270046d37eeb41fb45139b"
+    },
+    {
+      "path": "passes/techmap/demuxmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "292b18badf0cbdb6712c8553f6fd4d845d8d8e7b",
+      "size": 2712,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/292b18badf0cbdb6712c8553f6fd4d845d8d8e7b"
+    },
+    {
+      "path": "passes/techmap/dffinit.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "912f7fb8122de3a73f1e1dc3ada63fb3d6f49403",
+      "size": 5163,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/912f7fb8122de3a73f1e1dc3ada63fb3d6f49403"
+    },
+    {
+      "path": "passes/techmap/dfflegalize.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f3a9ff33146cf7e4e7a22765617dbce0292e31a",
+      "size": 38050,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1f3a9ff33146cf7e4e7a22765617dbce0292e31a"
+    },
+    {
+      "path": "passes/techmap/dfflibmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab1f75860d6e5598a9360f339c32b3a742592d5b",
+      "size": 24567,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/ab1f75860d6e5598a9360f339c32b3a742592d5b"
+    },
+    {
+      "path": "passes/techmap/dffunmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e72c250bb81d04216c9b8d12c1aea7c3d0d86886",
+      "size": 3040,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e72c250bb81d04216c9b8d12c1aea7c3d0d86886"
+    },
+    {
+      "path": "passes/techmap/extract.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13cd1f7091b1b50ddbfbdd7365dad06fc60b0312",
+      "size": 26998,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/13cd1f7091b1b50ddbfbdd7365dad06fc60b0312"
+    },
+    {
+      "path": "passes/techmap/extract_counter.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02e3c82c6943b6a01eabfbb3abece65970fd993c",
+      "size": 26037,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/02e3c82c6943b6a01eabfbb3abece65970fd993c"
+    },
+    {
+      "path": "passes/techmap/extract_fa.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a693d9a81d5a21489923ed101fc332deedb0bc91",
+      "size": 15681,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a693d9a81d5a21489923ed101fc332deedb0bc91"
+    },
+    {
+      "path": "passes/techmap/extract_reduce.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ad880be0872bd00a7d3c5ae01cf77d2470ea88a",
+      "size": 8403,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1ad880be0872bd00a7d3c5ae01cf77d2470ea88a"
+    },
+    {
+      "path": "passes/techmap/extractinv.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cd7b2379a0f939e669940fdd1d3dec97bfdc47f",
+      "size": 4746,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1cd7b2379a0f939e669940fdd1d3dec97bfdc47f"
+    },
+    {
+      "path": "passes/techmap/filterlib.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f553527d3b4f4990ee7268848809320e354f9303",
+      "size": 42,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f553527d3b4f4990ee7268848809320e354f9303"
+    },
+    {
+      "path": "passes/techmap/hilomap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1b947221594668e8e5af1f516ff4536731067d7",
+      "size": 3775,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c1b947221594668e8e5af1f516ff4536731067d7"
+    },
+    {
+      "path": "passes/techmap/insbuf.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5674de71feadb21292b801dd6a4e0c4e811f242e",
+      "size": 3924,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/5674de71feadb21292b801dd6a4e0c4e811f242e"
+    },
+    {
+      "path": "passes/techmap/iopadmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a12d488176557170537620cdf924ab76a70734f",
+      "size": 19821,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0a12d488176557170537620cdf924ab76a70734f"
+    },
+    {
+      "path": "passes/techmap/libcache.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58ad4d049233624a650db25bf92469228b1c16bd",
+      "size": 6950,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/58ad4d049233624a650db25bf92469228b1c16bd"
+    },
+    {
+      "path": "passes/techmap/libparse.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10bf7c4284751e136fdc1788c07bb4f5ba8e5d43",
+      "size": 31803,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/10bf7c4284751e136fdc1788c07bb4f5ba8e5d43"
+    },
+    {
+      "path": "passes/techmap/lut2bmux.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1073b1208429d2e5b8251c5ba9dd8b31e3843d45",
+      "size": 1964,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/1073b1208429d2e5b8251c5ba9dd8b31e3843d45"
+    },
+    {
+      "path": "passes/techmap/lut2mux.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61e415beee2dbbd48e937d5480bf13a7fe9a2715",
+      "size": 3484,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/61e415beee2dbbd48e937d5480bf13a7fe9a2715"
+    },
+    {
+      "path": "passes/techmap/maccmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88f82132d3315813ad18c953fcbd585fcccbe2e0",
+      "size": 12502,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/88f82132d3315813ad18c953fcbd585fcccbe2e0"
+    },
+    {
+      "path": "passes/techmap/mcm.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f5a19c690d6e4b93424d005e54061bade9a881e",
+      "size": 22685,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4f5a19c690d6e4b93424d005e54061bade9a881e"
+    },
+    {
+      "path": "passes/techmap/muxcover.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "719a346d8c6db20f944118937051534fa193c1c3",
+      "size": 20790,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/719a346d8c6db20f944118937051534fa193c1c3"
+    },
+    {
+      "path": "passes/techmap/pmuxtree.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff6bb549bdf76bc10bdd1c89d8c66cfd4536389d",
+      "size": 3458,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/ff6bb549bdf76bc10bdd1c89d8c66cfd4536389d"
+    },
+    {
+      "path": "passes/techmap/shregmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f4e307f99c96dc45006d208bc35f349df7de4e6",
+      "size": 16448,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/9f4e307f99c96dc45006d208bc35f349df7de4e6"
+    },
+    {
+      "path": "passes/techmap/simplemap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c252deb3b05bed2fa999991828b13fa31c9f914",
+      "size": 18443,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2c252deb3b05bed2fa999991828b13fa31c9f914"
+    },
+    {
+      "path": "passes/techmap/techmap.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c8893dc408e66f5854a1310b92188ae8222b58b",
+      "size": 46585,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/6c8893dc408e66f5854a1310b92188ae8222b58b"
+    },
+    {
+      "path": "passes/techmap/tribuf.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07f51bdaec284182dbdc17a9b8695fba7df21434",
+      "size": 6761,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/07f51bdaec284182dbdc17a9b8695fba7df21434"
+    },
+    {
+      "path": "passes/techmap/zinit.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b6a3adaf8c03d468aa17b8870b608a5ef9c5a57",
+      "size": 2580,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/5b6a3adaf8c03d468aa17b8870b608a5ef9c5a57"
+    },
+    {
+      "path": "passes/tests/raise_error.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95b477bc834e1f84f00bc56449b4d65853850073",
+      "size": 2650,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/95b477bc834e1f84f00bc56449b4d65853850073"
+    },
+    {
+      "path": "passes/tests/test_abcloop.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14bfeee4af40585fb993b8409944e85101f05c06",
+      "size": 8022,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/14bfeee4af40585fb993b8409944e85101f05c06"
+    },
+    {
+      "path": "passes/tests/test_autotb.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a504ef515c64578ade23471a4b8e22f6c84be280",
+      "size": 14167,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a504ef515c64578ade23471a4b8e22f6c84be280"
+    },
+    {
+      "path": "passes/tests/test_cell.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9345e818968d305277e9e24a79cfba267d7b92d",
+      "size": 37624,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/d9345e818968d305277e9e24a79cfba267d7b92d"
+    },
+    {
+      "path": "passes/tests/test_kogge_stone.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95b97bb142359d1d40e4092a6cf8a691f0a5c248",
+      "size": 3022,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/95b97bb142359d1d40e4092a6cf8a691f0a5c248"
+    },
+    {
+      "path": "techlibs/achronix/synth_achronix.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0569f4092e0a2c9d7471e1725de66715f1a0b064",
+      "size": 5597,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/0569f4092e0a2c9d7471e1725de66715f1a0b064"
+    },
+    {
+      "path": "techlibs/analogdevices/synth_analogdevices.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dff873080ee6971ccdf4815f6ce64bfee104a0b",
+      "size": 15478,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2dff873080ee6971ccdf4815f6ce64bfee104a0b"
+    },
+    {
+      "path": "techlibs/anlogic/anlogic_eqn.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4004b9f17ed217aac0c2e1bf4c00f2732d8bc5a3",
+      "size": 3112,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4004b9f17ed217aac0c2e1bf4c00f2732d8bc5a3"
+    },
+    {
+      "path": "techlibs/anlogic/anlogic_fixcarry.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aec62a0dc1324854a098421edf9622ab0b18d00e",
+      "size": 3958,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aec62a0dc1324854a098421edf9622ab0b18d00e"
+    },
+    {
+      "path": "techlibs/anlogic/synth_anlogic.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9dfb6977637bc6e5d8c0347b699c199b92f8883",
+      "size": 6447,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/e9dfb6977637bc6e5d8c0347b699c199b92f8883"
+    },
+    {
+      "path": "techlibs/common/opensta.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c765f0b9fa12c52ae88d25733d9f7c258a2e09ea",
+      "size": 3862,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c765f0b9fa12c52ae88d25733d9f7c258a2e09ea"
+    },
+    {
+      "path": "techlibs/common/prep.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3b9b5e5bc260c8e035f8b8ba8c780c4598920a7",
+      "size": 6818,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/b3b9b5e5bc260c8e035f8b8ba8c780c4598920a7"
+    },
+    {
+      "path": "techlibs/common/sdc_expand.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39c50875f9b4a7f6fdf874ed860ae6348a9fabda",
+      "size": 4440,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/39c50875f9b4a7f6fdf874ed860ae6348a9fabda"
+    },
+    {
+      "path": "techlibs/common/synth.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff80d809ecf249bf367b4bab022fe2b77742d886",
+      "size": 10441,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/ff80d809ecf249bf367b4bab022fe2b77742d886"
+    },
+    {
+      "path": "techlibs/easic/synth_easic.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aea517cc5f3494e7522a59b6274bc031dd88c0ce",
+      "size": 5546,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/aea517cc5f3494e7522a59b6274bc031dd88c0ce"
+    },
+    {
+      "path": "techlibs/efinix/efinix_fixcarry.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47432d72c730800b588b0615239b70293dbf35e9",
+      "size": 3701,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/47432d72c730800b588b0615239b70293dbf35e9"
+    },
+    {
+      "path": "techlibs/efinix/synth_efinix.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0e02df11ac995e4b3cab4e45bbf8c164c3d6edc",
+      "size": 6558,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c0e02df11ac995e4b3cab4e45bbf8c164c3d6edc"
+    },
+    {
+      "path": "techlibs/fabulous/synth_fabulous.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f36bd745eb45d98a21209a0e3e384b7be9fe940",
+      "size": 14471,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/5f36bd745eb45d98a21209a0e3e384b7be9fe940"
+    },
+    {
+      "path": "techlibs/gatemate/gatemate_foldinv.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2843d62eba69ae2538fd1395834360704ba6447d",
+      "size": 7881,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2843d62eba69ae2538fd1395834360704ba6447d"
+    },
+    {
+      "path": "techlibs/gatemate/synth_gatemate.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8219699fc5412688823c778055482b7448883a2e",
+      "size": 10092,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/8219699fc5412688823c778055482b7448883a2e"
+    },
+    {
+      "path": "techlibs/gowin/synth_gowin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89ab331b43df3b49185370d77dff8fa616547943",
+      "size": 11857,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/89ab331b43df3b49185370d77dff8fa616547943"
+    },
+    {
+      "path": "techlibs/ice40/ice40_braminit.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a1849642418e4adcaf5862af07a73d8c0e8cc3c",
+      "size": 4239,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4a1849642418e4adcaf5862af07a73d8c0e8cc3c"
+    },
+    {
+      "path": "techlibs/ice40/ice40_dsp.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6e2ee687fd82d0eaa7101863e2f1cec23833116",
+      "size": 10860,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c6e2ee687fd82d0eaa7101863e2f1cec23833116"
+    },
+    {
+      "path": "techlibs/ice40/ice40_opt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67d3813a78542076ca24953032238c930da238cf",
+      "size": 8097,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/67d3813a78542076ca24953032238c930da238cf"
+    },
+    {
+      "path": "techlibs/ice40/ice40_wrapcarry.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63ebdbfcf5bc4a915a9e62f1abd1ec700a04b0fb",
+      "size": 5671,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/63ebdbfcf5bc4a915a9e62f1abd1ec700a04b0fb"
+    },
+    {
+      "path": "techlibs/ice40/synth_ice40.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33fc53b0b726995bebc50c4a1717397b38b82060",
+      "size": 13545,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/33fc53b0b726995bebc50c4a1717397b38b82060"
+    },
+    {
+      "path": "techlibs/intel/synth_intel.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a229fbf7e858d0b738896fb79ffd7efaf2a14a1",
+      "size": 9720,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/3a229fbf7e858d0b738896fb79ffd7efaf2a14a1"
+    },
+    {
+      "path": "techlibs/intel_alm/synth_intel_alm.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a859544cfefdf38c7656fad639cf11410efc5535",
+      "size": 9085,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/a859544cfefdf38c7656fad639cf11410efc5535"
+    },
+    {
+      "path": "techlibs/lattice/lattice_dsp_nexus.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ce71276d7b7f27d568d2d922f7ebf4330dccbd2",
+      "size": 1243,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/8ce71276d7b7f27d568d2d922f7ebf4330dccbd2"
+    },
+    {
+      "path": "techlibs/lattice/lattice_gsr.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7d40c056bdcde96053e2aa15d5bfa0a8be26c31",
+      "size": 4142,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f7d40c056bdcde96053e2aa15d5bfa0a8be26c31"
+    },
+    {
+      "path": "techlibs/lattice/synth_lattice.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7c07b1133bf1fb0688298090f6a10041b089792",
+      "size": 19655,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/f7c07b1133bf1fb0688298090f6a10041b089792"
+    },
+    {
+      "path": "techlibs/microchip/microchip_dffopt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "140ef2c9f6bb5d3e9ed92a7cabb2cf9f75cd27b0",
+      "size": 11598,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/140ef2c9f6bb5d3e9ed92a7cabb2cf9f75cd27b0"
+    },
+    {
+      "path": "techlibs/microchip/microchip_dsp.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "232e8a62956157ba5320fcbf1ef8d0c23e58967f",
+      "size": 12130,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/232e8a62956157ba5320fcbf1ef8d0c23e58967f"
+    },
+    {
+      "path": "techlibs/microchip/synth_microchip.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "331c6ca602a1b6591dd88c312c9f0216570446a1",
+      "size": 16302,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/331c6ca602a1b6591dd88c312c9f0216570446a1"
+    },
+    {
+      "path": "techlibs/nanoxplore/nx_carry.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb0405052cd03669c36087b796d906a4ef01147b",
+      "size": 4850,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/cb0405052cd03669c36087b796d906a4ef01147b"
+    },
+    {
+      "path": "techlibs/nanoxplore/synth_nanoxplore.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b9c341160622a5ea8b6707713cb327633356a96",
+      "size": 11252,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/9b9c341160622a5ea8b6707713cb327633356a96"
+    },
+    {
+      "path": "techlibs/quicklogic/ql_bram_merge.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2fbed4fd91224fd5991f73ec589c204877b5f5d",
+      "size": 6846,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c2fbed4fd91224fd5991f73ec589c204877b5f5d"
+    },
+    {
+      "path": "techlibs/quicklogic/ql_bram_types.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12df2ece6be1c8dc43d81f8aecebb325f179453a",
+      "size": 5627,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/12df2ece6be1c8dc43d81f8aecebb325f179453a"
+    },
+    {
+      "path": "techlibs/quicklogic/ql_dsp_io_regs.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e8b0b566312afc89f620eb7d9e08f6f288cb351",
+      "size": 4184,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7e8b0b566312afc89f620eb7d9e08f6f288cb351"
+    },
+    {
+      "path": "techlibs/quicklogic/ql_dsp_macc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "083dc3ff1e6961f22967891daf8dd03d88d734f8",
+      "size": 7005,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/083dc3ff1e6961f22967891daf8dd03d88d734f8"
+    },
+    {
+      "path": "techlibs/quicklogic/ql_dsp_simd.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7df4e2cf187dcb6ad8cf4490633070fae722beb1",
+      "size": 8455,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/7df4e2cf187dcb6ad8cf4490633070fae722beb1"
+    },
+    {
+      "path": "techlibs/quicklogic/ql_ioff.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5574ef4a0fd5095a4439d495eaab30cf1e3a1a52",
+      "size": 4270,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/5574ef4a0fd5095a4439d495eaab30cf1e3a1a52"
+    },
+    {
+      "path": "techlibs/quicklogic/synth_quicklogic.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66142e6fdcf44a26705998f1f64a16be5b01d6a9",
+      "size": 12754,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/66142e6fdcf44a26705998f1f64a16be5b01d6a9"
+    },
+    {
+      "path": "techlibs/sf2/synth_sf2.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dd7d6267716147b9a6cb92da45c5478ff86c976",
+      "size": 7241,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/2dd7d6267716147b9a6cb92da45c5478ff86c976"
+    },
+    {
+      "path": "techlibs/xilinx/synth_xilinx.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c669c87ee5fbe1751f37a7aed2884e35398239d3",
+      "size": 24895,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/c669c87ee5fbe1751f37a7aed2884e35398239d3"
+    },
+    {
+      "path": "techlibs/xilinx/xilinx_dffopt.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a1e424b75a8056c124391961ad6602be7e5c8fa",
+      "size": 12408,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/4a1e424b75a8056c124391961ad6602be7e5c8fa"
+    },
+    {
+      "path": "techlibs/xilinx/xilinx_dsp.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb7076b585cf8cb395a9d56ad1fbc8e18f715523",
+      "size": 26471,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/cb7076b585cf8cb395a9d56ad1fbc8e18f715523"
+    },
+    {
+      "path": "techlibs/xilinx/xilinx_srl.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10aa789e5a20bed86078c3e5f24f27cfe79b2361",
+      "size": 8648,
+      "url": "https://api.github.com/repos/YosysHQ/yosys/git/blobs/10aa789e5a20bed86078c3e5f24f27cfe79b2361"
+    }
+  ]
+}

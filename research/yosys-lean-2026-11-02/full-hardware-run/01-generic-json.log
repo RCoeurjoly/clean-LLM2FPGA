@@ -1,0 +1,1360 @@
+
+-- Executing script file `/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/full-hardware-run/01-generic-json.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: /nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared/model.il
+
+2. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \mem_186.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_187.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_188.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_189.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_190.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_191.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_192.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_193.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_194.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_195.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_196.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_199.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_200.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_201.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_202.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_203.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_204.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_205.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_206.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_207.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_208.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_209.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_244.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_245.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_246.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_247.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_250.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_251.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_252.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_253.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_254.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_255.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_264.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_265.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_266.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_267.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_270.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_271.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_272.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_273.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_274.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_275.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_289.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_290.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_291.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_292.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_295.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_296.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_297.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_298.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_299.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_300.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_316.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_317.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_318.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_319.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_322.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_323.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_324.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_325.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_326.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_327.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_342.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_343.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_344.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_345.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_348.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_349.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_350.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_351.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_352.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_353.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_362.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_363.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_364.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_365.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_368.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_369.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_370.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_371.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_372.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_373.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_379.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_380.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_381.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_382.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_385.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_386.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_387.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_388.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_389.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_390.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_398.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_399.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_400.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_401.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_404.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_405.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_406.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_407.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_408.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_409.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_424.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_425.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_426.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_427.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_430.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_431.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_432.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_433.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_434.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_435.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_444.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_445.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_446.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_447.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_450.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_451.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_452.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_453.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_454.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_455.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_461.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_462.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_463.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_464.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_467.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_468.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_469.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_470.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_471.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_472.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_480.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_481.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_482.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_483.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_486.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_487.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_488.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_489.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_490.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_491.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_506.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_507.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_508.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_509.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_512.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_513.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_514.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_515.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_516.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_517.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_526.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_527.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_528.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_529.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_532.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_533.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_534.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_535.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_536.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_537.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_543.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_544.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_545.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_546.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_549.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_550.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_551.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_552.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_553.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_554.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_562.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_563.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_564.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_565.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_568.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_569.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_570.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_571.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_572.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_573.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_588.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_589.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_590.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_591.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_594.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_595.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_596.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_597.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_598.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_599.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_608.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_609.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_610.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_611.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_614.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_615.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_616.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_617.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_618.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_619.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_625.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_626.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_627.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_628.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_631.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_632.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_633.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_634.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_635.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_636.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_644.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_645.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_646.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_647.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_650.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_651.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_652.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_653.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_654.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_655.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_670.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_671.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_672.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_673.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_676.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_677.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_678.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_679.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_680.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_681.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_690.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_691.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_692.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_693.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_696.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_697.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_698.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_699.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_700.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_701.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_707.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_708.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_709.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_710.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_713.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_714.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_715.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_716.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_717.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_718.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_726.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_727.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_728.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_729.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_732.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_733.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_734.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_735.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_736.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_737.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_752.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_753.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_754.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_755.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_758.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_759.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_760.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_761.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_762.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_763.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_772.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_773.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_774.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_775.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_778.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_779.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_780.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_781.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_782.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_783.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_789.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_790.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_791.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_792.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_795.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_796.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_797.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_798.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_799.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_800.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_808.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_809.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_810.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_811.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_814.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_815.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_816.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_817.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_818.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_819.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_829.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_830.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_831.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_832.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_835.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_836.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_837.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_838.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_839.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_840.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_849.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_850.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_851.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_852.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_855.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_856.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_857.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_858.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_859.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_860.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_865.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_866.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_867.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_868.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_871.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_872.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_873.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_874.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_875.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_876.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_881.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_882.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_883.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+Mapping memory \mem_884.mem in module \model_top:
+  created 1 $dff cells and 0 static cells of width 32.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 1 write mux blocks.
+
+3. Executing CHECK pass (checking for obvious problems).
+Checking module model_top...
+Found and reported 0 problems.
+
+4. Executing RTLIL backend.
+Output filename: /tmp/llm2fpga-full-hardware-20261102/canonical.il
+
+5. Executing JSON backend.

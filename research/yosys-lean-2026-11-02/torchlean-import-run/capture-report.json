@@ -1,0 +1,243 @@
+{
+  "torchlean_commit": "f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b",
+  "adapter_origin": "Upstream script evaluated by Lean 4.35.0",
+  "adapter_path": "/tmp/llm2fpga-torchlean-import/capture_adapter.py",
+  "adapter_sha256": "0b8ca3cc8d882a92de05ed1dc750ecbd6ef46d2497821aee3039aba1074d4565",
+  "model_path": "/nix/store/qvsldlg3biy0bj9yy1ys9hxvi9hn8sdp-tinystories-quantized/model.pt2",
+  "model_sha256": "c99488b62f34783c1ebc1033de7bb1b6beb75727561ac0fc663d6f0286be9f34",
+  "python": "3.11.14",
+  "torch": "2.9.1",
+  "threads": 1,
+  "require_torch_export": true,
+  "whole_model_imported_into_lean": false,
+  "equivalence_proved": false,
+  "cases": {
+    "whole-model": {
+      "graph_json": "/tmp/llm2fpga-torchlean-import/whole-model.json",
+      "operators": [
+        "<built-in function getitem>",
+        "aten._assert_tensor_metadata.default",
+        "aten.add.Tensor",
+        "aten.arange.default",
+        "aten.arange.start",
+        "aten.clamp.default",
+        "aten.contiguous.default",
+        "aten.detach_.default",
+        "aten.div.Tensor",
+        "aten.dropout.default",
+        "aten.embedding.default",
+        "aten.expand.default",
+        "aten.full.default",
+        "aten.gt.Tensor",
+        "aten.layer_norm.default",
+        "aten.lift_fresh_copy.default",
+        "aten.linear.default",
+        "aten.matmul.default",
+        "aten.mul.Tensor",
+        "aten.mul_.Tensor",
+        "aten.permute.default",
+        "aten.pow.Tensor_Scalar",
+        "aten.reshape.default",
+        "aten.round.default",
+        "aten.slice.Tensor",
+        "aten.softmax.int",
+        "aten.sub.Tensor",
+        "aten.tanh.default",
+        "aten.to.dtype",
+        "aten.transpose.int",
+        "aten.triu.default",
+        "aten.unsqueeze.default",
+        "aten.view.default",
+        "aten.where.self",
+        "quantized_decomposed.choose_qparams.tensor"
+      ],
+      "input_shapes": [
+        [
+          1,
+          32
+        ]
+      ],
+      "input_dtypes": [
+        "torch.int64"
+      ],
+      "status": "rejected",
+      "error_type": "NotImplementedError",
+      "error": "unsupported PyTorch op: aten.embedding.default",
+      "traceback": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/whole-model.traceback.txt",
+      "seconds": 1.4078377360128798
+    },
+    "add": {
+      "graph_json": "/tmp/llm2fpga-torchlean-import/add.json",
+      "operators": [
+        "aten.add.Tensor"
+      ],
+      "input_shapes": [
+        [
+          1,
+          4
+        ]
+      ],
+      "input_dtypes": [
+        "torch.float32"
+      ],
+      "status": "captured",
+      "nodes": 2,
+      "bytes": 603,
+      "sha256": "94466fb7698f9975b090f5f0ab83103016c409c93dc383399621e9854427a236",
+      "retained_graph": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/artifacts/add.json",
+      "numerical_request": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/artifacts/add-request.json",
+      "seconds": 0.00811162099125795,
+      "saved_export": "/tmp/llm2fpga-torchlean-import/add.pt2",
+      "saved_export_sha256": "2c0e2d3e514436009919b4f86ccb2064fcc0cbea0f9181ecfe408960c6d63868"
+    },
+    "linear": {
+      "graph_json": "/tmp/llm2fpga-torchlean-import/linear.json",
+      "operators": [
+        "aten.linear.default"
+      ],
+      "input_shapes": [
+        [
+          1,
+          4
+        ]
+      ],
+      "input_dtypes": [
+        "torch.float32"
+      ],
+      "status": "captured",
+      "nodes": 4,
+      "bytes": 2261,
+      "sha256": "19e33067bdc732b580c3927660be582373da3c2a1ad2c0b5b014f3bb29c6b075",
+      "retained_graph": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/artifacts/linear.json",
+      "numerical_request": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/artifacts/linear-request.json",
+      "seconds": 0.010546906996751204,
+      "saved_export": "/tmp/llm2fpga-torchlean-import/linear.pt2",
+      "saved_export_sha256": "5d27f3e790554e54c3d388537677ab9dc654e54d1e3d9451412d2b58d9162722"
+    },
+    "embedding": {
+      "graph_json": "/tmp/llm2fpga-torchlean-import/embedding.json",
+      "operators": [
+        "aten.embedding.default"
+      ],
+      "input_shapes": [
+        [
+          1,
+          4
+        ]
+      ],
+      "input_dtypes": [
+        "torch.int64"
+      ],
+      "status": "rejected",
+      "error_type": "NotImplementedError",
+      "error": "unsupported PyTorch op: aten.embedding.default",
+      "traceback": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/embedding.traceback.txt",
+      "seconds": 0.008063179004238918,
+      "saved_export": "/tmp/llm2fpga-torchlean-import/embedding.pt2",
+      "saved_export_sha256": "ca28031c0d9e6430ea72729e324a93b18065f3bf972d2105450b7ebbd6f7a3be"
+    },
+    "frozen-transposed-linear": {
+      "graph_json": "/tmp/llm2fpga-torchlean-import/frozen-transposed-linear.json",
+      "operators": [
+        "aten.linear.default",
+        "aten.transpose.int"
+      ],
+      "input_shapes": [
+        [
+          1,
+          4
+        ]
+      ],
+      "input_dtypes": [
+        "torch.float32"
+      ],
+      "status": "rejected",
+      "error_type": "NotImplementedError",
+      "error": "could not resolve tensor argument transpose into the exported payload",
+      "traceback": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/frozen-transposed-linear.traceback.txt",
+      "seconds": 0.011946880986215547,
+      "saved_export": "/tmp/llm2fpga-torchlean-import/frozen-transposed-linear.pt2",
+      "saved_export_sha256": "6aac085b3c9a550c22b8d6b1c9d2f30267c1bb9e43d457398101bef1139436ae"
+    },
+    "round": {
+      "graph_json": "/tmp/llm2fpga-torchlean-import/round.json",
+      "operators": [
+        "aten.round.default"
+      ],
+      "input_shapes": [
+        [
+          1,
+          4
+        ]
+      ],
+      "input_dtypes": [
+        "torch.float32"
+      ],
+      "status": "rejected",
+      "error_type": "NotImplementedError",
+      "error": "unsupported PyTorch op: aten.round.default",
+      "traceback": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/round.traceback.txt",
+      "seconds": 0.0066051130124833435,
+      "saved_export": "/tmp/llm2fpga-torchlean-import/round.pt2",
+      "saved_export_sha256": "3e84579fdba3139edda0bdccbfbc40624e5e0dc5ceb56219cd009c1ea3bc83a1"
+    },
+    "clamp": {
+      "graph_json": "/tmp/llm2fpga-torchlean-import/clamp.json",
+      "operators": [
+        "aten.clamp.default"
+      ],
+      "input_shapes": [
+        [
+          1,
+          4
+        ]
+      ],
+      "input_dtypes": [
+        "torch.float32"
+      ],
+      "status": "rejected",
+      "error_type": "NotImplementedError",
+      "error": "unsupported PyTorch op: aten.clamp.default",
+      "traceback": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/clamp.traceback.txt",
+      "seconds": 0.007070414983900264,
+      "saved_export": "/tmp/llm2fpga-torchlean-import/clamp.pt2",
+      "saved_export_sha256": "025f885cb4fab19cef0b5de275352e844d6c94f0de3e994d800149c83519b11e"
+    },
+    "choose-qparams": {
+      "graph_json": "/tmp/llm2fpga-torchlean-import/choose-qparams.json",
+      "operators": [
+        "<built-in function getitem>",
+        "quantized_decomposed.choose_qparams.tensor"
+      ],
+      "input_shapes": [
+        [
+          1,
+          4
+        ]
+      ],
+      "input_dtypes": [
+        "torch.float32"
+      ],
+      "status": "rejected",
+      "error_type": "NotImplementedError",
+      "error": "unsupported tuple-valued PyTorch op: quantized_decomposed.choose_qparams.tensor",
+      "traceback": "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/choose-qparams.traceback.txt",
+      "seconds": 0.007685724995099008,
+      "saved_export": "/tmp/llm2fpga-torchlean-import/choose-qparams.pt2",
+      "saved_export_sha256": "e4d08748d8f7fbd824b76f4fe45ddcd35498f6e0216eab9476407d55042a6b45"
+    }
+  },
+  "frozen_reference_outputs": [
+    {
+      "shape": [
+        1,
+        32,
+        50257
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "sha256": "fa0b5d595c2bd3d23fb34d9d055984c0000e0e930d6bdfdee97988bdd3142b78"
+    }
+  ],
+  "frozen_model_unchanged": true
+}

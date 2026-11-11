@@ -1,0 +1,25 @@
+{
+  "stage": "08-embedding-reproducer",
+  "command": [
+    "/nix/store/bwk9j00hwqwq5x7b7n23hpf893pa7bnz-python3-3.11.14-env/bin/python",
+    "research/yosys-lean-2026-11-02/torchlean-import-run/minimal_embedding.py",
+    "/tmp/llm2fpga-torchlean-import/capture_adapter.py",
+    "/tmp/llm2fpga-torchlean-import/minimal-embedding.json"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T09:24:36.283962+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "failed",
+  "returncode": 1,
+  "elapsed_seconds": 1.9608761430135928,
+  "finished_at": "2026-11-02T09:24:38.244971+00:00"
+}

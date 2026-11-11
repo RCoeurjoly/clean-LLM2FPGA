@@ -1,0 +1,40 @@
+kind,query,totals_observed,pages_fetched,returned_items,distinct_items,pagination_to_reported_count_complete,bounded_result_complete,incomplete_results,limitation
+code,RTLIL language:Lean,0,1,0,0,True,True,False,
+repository,"RTLIL Lean in:name,description,readme fork:true",2,1,2,2,True,True,False,
+code,BTOR language:Lean,895,1,100,100,False,False,False,only first page sampled; lexical false positives; targeted variants/source audit used
+code,AIGER language:Lean,14,1,14,14,True,True,False,
+code,FIRRTL language:Lean,3,1,3,3,True,True,False,
+repository,"BTOR Lean in:name,description,readme fork:true",2,1,2,2,True,True,False,
+code,XAIGER language:Lean,0,1,0,0,True,True,False,
+code,SMV language:Lean,1426,1,100,100,False,False,False,GitHub 1000-hit cap and first-page sample; targeted variants used
+code,BTOR2 language:Lean,0,1,0,0,True,True,False,
+code,"""btor"" extension:lean",1470,1,100,100,False,False,False,GitHub 1000-hit cap and first-page sample; targeted variants used
+code,"""smv"" extension:lean",6224,1,100,100,False,False,False,GitHub 1000-hit cap and first-page sample; targeted variants used
+code,"""smt2"" language:Lean",60,1,60,60,True,True,False,
+code,"""SMT-LIB"" language:Lean",144|152,1|2,152,152,True,False,False,all numbered pages fetched but total changed across calls; index is not a frozen snapshot
+code,"""RTLIL"" extension:lean",22,1,22,22,True,True,False,
+code,"""BTOR2"" fork:true",8304,1,100,100,False,False,False,GitHub 1000-hit cap and first-page sample; targeted variants used
+code,"""XAIGER"" Lean",635,1,100,100,False,False,False,only first page sampled; lexical false positives; targeted variants/source audit used
+code,"""FIRRTL"" Lean",18048,1,100,100,False,False,False,GitHub 1000-hit cap and first-page sample; targeted variants used
+code,BTOR2 extension:lean fork:true,0,1,0,0,True,True,False,
+code,"""write_functional_smt2"" extension:lean fork:true",0,1,0,0,True,True,False,
+code,"""Rosette"" extension:lean fork:true",40,1,40,40,True,True,False,
+code,"""XAIGER"" extension:lean fork:true",0,1,0,0,True,True,False,
+code,"""AIGER"" extension:lean fork:true",22,1,22,22,True,True,False,
+code,"""FIRRTL"" extension:lean fork:true",2,1,2,2,True,True,False,
+repository,"BTOR2 Lean in:name,description,readme fork:true",15,1,15,15,True,True,False,
+repository,"AIGER Lean in:name,description,readme fork:true",219,1|2|3,219,219,True,True,False,
+repository,"FIRRTL Lean in:name,description,readme fork:true",315,1|2|3|4,315,315,True,True,False,
+repository,"SMV Lean in:name,description,readme fork:true",76,1,76,76,True,True,False,
+repository,"SMT2 Lean in:name,description,readme fork:true",122,1|2,122,122,True,True,False,
+repository,"XAIGER Lean in:name,description,readme fork:true",0,1,0,0,True,True,False,
+repository,"write_functional_smt2 Lean in:name,description,readme fork:true",0,1,0,0,True,True,False,
+repository,"RTL2Lean in:name,description,readme fork:true",18,1,18,18,True,True,False,
+repository,"Rosette Lean Yosys in:name,description,readme fork:true",1,1,1,1,True,True,False,
+repository,BTOR2 language:Lean fork:true,0,1,0,0,True,True,False,
+repository,AIGER language:Lean fork:true,0,1,0,0,True,True,False,
+repository,"smtlib Lean in:name,description,readme fork:true",76,1,76,76,True,True,False,
+repository,"""SMT-LIB"" Lean in:name,description fork:true",4,1,4,4,True,True,False,
+repository,SMV language:Lean fork:true,0,1,0,0,True,True,False,
+repository,FIRRTL language:Lean fork:true,0,1,0,0,True,True,False,
+repository,RTLIL language:Lean fork:true,0,1,0,0,True,True,False,

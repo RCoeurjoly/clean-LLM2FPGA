@@ -1,0 +1,113 @@
+[
+  {
+    "repo": "Deicyde/assembly-to-physics",
+    "commit": "7359bfe8266d06954e221f881403e7e83d5592f6",
+    "root_license_notice_paths": []
+  },
+  {
+    "repo": "Easyoakland/HDLean",
+    "commit": "0c4637326055c9ee38e9d9ecff9cf167d664f7ec",
+    "root_license_notice_paths": []
+  },
+  {
+    "repo": "ErosSph/leap",
+    "commit": "f68bb7ba38eaecb9b0e2ff8c7b1d553f824470d4",
+    "root_license_notice_paths": [
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md"
+    ]
+  },
+  {
+    "repo": "ErosSph/xiangshan2Lean",
+    "commit": "a1299b564831e571b9b80f816219ae06c91db342",
+    "root_license_notice_paths": [
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  {
+    "repo": "Verilean/mechproof",
+    "commit": "71ea7ce7ac3feddfa1bdffafe976064df3c91fee",
+    "root_license_notice_paths": [
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  {
+    "repo": "Verilean/sparkle",
+    "commit": "1614cee83ac586ca9a0626cd4af13bfef7347c3a",
+    "root_license_notice_paths": [
+      "LICENSE"
+    ]
+  },
+  {
+    "repo": "deepai-org/loom",
+    "commit": "ea1770339296375988b42121db599b4cb36184d7",
+    "root_license_notice_paths": [
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  {
+    "repo": "dfdgsdfg/ann-rtl-lean-poc",
+    "commit": "3f162837521fa295c12fc9f7435a820b3fe53f9b",
+    "root_license_notice_paths": [
+      "LICENSE"
+    ]
+  },
+  {
+    "repo": "digama0/thinking-sand",
+    "commit": "5a24f5ea179ff5fbca24e01659f78a6330b846b1",
+    "root_license_notice_paths": []
+  },
+  {
+    "repo": "formalized-si/redstone-verify",
+    "commit": "0fbd001b3324ac6e4cc7744b9027413912a32fa0",
+    "root_license_notice_paths": [
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  {
+    "repo": "muzafferkal/circuitprover-sv",
+    "commit": "df560b7e7fc743ea26e453b0f6e6cc5e0470b034",
+    "root_license_notice_paths": [
+      "LICENSE"
+    ]
+  },
+  {
+    "repo": "nathsou/HDLean",
+    "commit": "c3808e57b342c63eaff677abca7f9391a4dc954a",
+    "root_license_notice_paths": [
+      "LICENSE"
+    ]
+  },
+  {
+    "repo": "shizhilvren/VLean",
+    "commit": "a000f17ce14854080c59bbe4a54cf27f862a090e",
+    "root_license_notice_paths": []
+  },
+  {
+    "repo": "soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean",
+    "commit": "38aad0ea8f4af85c5b470df0a2f114d4f29b6d48",
+    "root_license_notice_paths": []
+  },
+  {
+    "repo": "stephenneuendorffer/CircuitHDL",
+    "commit": "0b027aeee9205d6a343022a3247dc18e41189276",
+    "root_license_notice_paths": []
+  },
+  {
+    "repo": "thomasnormal/lean-surfaces",
+    "commit": "c2aaf29b4778bc39b9d09485afe504b33cc92b9d",
+    "root_license_notice_paths": [
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  {
+    "repo": "verilog-proof/VerilLean",
+    "commit": "d13650b8b8b6bee64f06a4f045e464d1916062e8",
+    "root_license_notice_paths": []
+  }
+]

@@ -1,0 +1,571 @@
+{
+  "sha": "7359bfe8266d06954e221f881403e7e83d5592f6",
+  "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/7359bfe8266d06954e221f881403e7e83d5592f6",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2fcb8d4af6b4dbeaf12eefa15f39c585a9c4fe8d",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/2fcb8d4af6b4dbeaf12eefa15f39c585a9c4fe8d"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74b1cd123b0601b45804c59e81392af4f3ea2548",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/74b1cd123b0601b45804c59e81392af4f3ea2548"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4363dbe2f4304a2061afc7de395d7429edbd7301",
+      "size": 409,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/4363dbe2f4304a2061afc7de395d7429edbd7301"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d41ed29f304141f540a83d164955bda1ca78db74",
+      "size": 16,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/d41ed29f304141f540a83d164955bda1ca78db74"
+    },
+    {
+      "path": "AsmPhys.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7aafa0ebf8afd4230207c80a60251dfc7bbdf2ac",
+      "size": 1272,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/7aafa0ebf8afd4230207c80a60251dfc7bbdf2ac"
+    },
+    {
+      "path": "AsmPhys",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e8bea568862f87ab48e39f8ee428ee4ef6fb441",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/5e8bea568862f87ab48e39f8ee428ee4ef6fb441"
+    },
+    {
+      "path": "AsmPhys/Cells",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29842fbaae58b372141efc33f58de5dba1b4405e",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/29842fbaae58b372141efc33f58de5dba1b4405e"
+    },
+    {
+      "path": "AsmPhys/Cells/Buridan.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4c75630a2485606018d37628dec943791872631",
+      "size": 11086,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/c4c75630a2485606018d37628dec943791872631"
+    },
+    {
+      "path": "AsmPhys/Cells/Chain.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec69792eaf00d4855f5208fe1539e8cddbc066ed",
+      "size": 6755,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/ec69792eaf00d4855f5208fe1539e8cddbc066ed"
+    },
+    {
+      "path": "AsmPhys/Cells/Compose.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97c9e3b39f7a6aa2e0df07d1b3cafa96209396e8",
+      "size": 6090,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/97c9e3b39f7a6aa2e0df07d1b3cafa96209396e8"
+    },
+    {
+      "path": "AsmPhys/Cells/FlipFlop.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8706ad910a7d1779ae6269f256d69485130b1a49",
+      "size": 565,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/8706ad910a7d1779ae6269f256d69485130b1a49"
+    },
+    {
+      "path": "AsmPhys/Cells/Inverter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8db8938e3d818bf1a416f0613a245ddcb2b01f84",
+      "size": 17398,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/8db8938e3d818bf1a416f0613a245ddcb2b01f84"
+    },
+    {
+      "path": "AsmPhys/Cells/InverterCell.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb3c70e9e7d89480a91f44dd77c0ddda088026dc",
+      "size": 3900,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/eb3c70e9e7d89480a91f44dd77c0ddda088026dc"
+    },
+    {
+      "path": "AsmPhys/Cells/InverterCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56da44b7a87da51cbfba5368e282368ffefa140b",
+      "size": 21394,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/56da44b7a87da51cbfba5368e282368ffefa140b"
+    },
+    {
+      "path": "AsmPhys/Cells/Keeper.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fda50a66f78b29048f819b060cc372cf020827b",
+      "size": 4297,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/4fda50a66f78b29048f819b060cc372cf020827b"
+    },
+    {
+      "path": "AsmPhys/Cells/Levels.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f70d88885e50a79bda3fcadbb622b99bdc02ff6",
+      "size": 1810,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/4f70d88885e50a79bda3fcadbb622b99bdc02ff6"
+    },
+    {
+      "path": "AsmPhys/Cells/TGFF.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "002b87ebfac917295520016438663727031bcb13",
+      "size": 11520,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/002b87ebfac917295520016438663727031bcb13"
+    },
+    {
+      "path": "AsmPhys/Cells/TGFFCapture.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae583a2c58acbf4e845dc0f021db8957385fa09e",
+      "size": 17944,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/ae583a2c58acbf4e845dc0f021db8957385fa09e"
+    },
+    {
+      "path": "AsmPhys/Cells/TGLatch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7849fc31a5c98f2a6964c043ce979d303ef1404",
+      "size": 16182,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/a7849fc31a5c98f2a6964c043ce979d303ef1404"
+    },
+    {
+      "path": "AsmPhys/Cells/TGLatchAgree.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf9a720d07a7b679ea7e3c0a6183efae0f42ccd3",
+      "size": 16509,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/bf9a720d07a7b679ea7e3c0a6183efae0f42ccd3"
+    },
+    {
+      "path": "AsmPhys/Cells/TGLatchPair.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daf47a7267964939fecafbdbe3d73404ffdda09c",
+      "size": 26782,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/daf47a7267964939fecafbdbe3d73404ffdda09c"
+    },
+    {
+      "path": "AsmPhys/Cells/TGLatchSettle.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2d028682823f9f1ffce82ec91121f60507dc46f",
+      "size": 7567,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/d2d028682823f9f1ffce82ec91121f60507dc46f"
+    },
+    {
+      "path": "AsmPhys/Cells/TransGate.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afe380f025b72024cae9d83e31d6af68afefdea1",
+      "size": 12137,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/afe380f025b72024cae9d83e31d6af68afefdea1"
+    },
+    {
+      "path": "AsmPhys/Circuit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30258721d2158405156f9c6cd461bcab28d2debe",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/30258721d2158405156f9c6cd461bcab28d2debe"
+    },
+    {
+      "path": "AsmPhys/Circuit/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cebc8e87d3c2a7f9f1bba3d8fd07ebbe7e192cc3",
+      "size": 360,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/cebc8e87d3c2a7f9f1bba3d8fd07ebbe7e192cc3"
+    },
+    {
+      "path": "AsmPhys/Circuit/Charge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29729ece992a2071f8e63e1b9f1312e5c59258da",
+      "size": 4733,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/29729ece992a2071f8e63e1b9f1312e5c59258da"
+    },
+    {
+      "path": "AsmPhys/Circuit/Field.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "767f7ade9966f744965b36f2d5bee4638650f997",
+      "size": 9772,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/767f7ade9966f744965b36f2d5bee4638650f997"
+    },
+    {
+      "path": "AsmPhys/Circuit/Inflow.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4066c26e5ad41dcbb5b097b0dd9e4810b73c6a5",
+      "size": 3460,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/c4066c26e5ad41dcbb5b097b0dd9e4810b73c6a5"
+    },
+    {
+      "path": "AsmPhys/Circuit/Lyapunov.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bc2fc00bbeb1ddd75c74de676a3b4d9c546fee7",
+      "size": 2636,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/2bc2fc00bbeb1ddd75c74de676a3b4d9c546fee7"
+    },
+    {
+      "path": "AsmPhys/Circuit/Rails.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d23d5b3fffe0d0590c6e20819fa7209a9873d5b5",
+      "size": 27998,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/d23d5b3fffe0d0590c6e20819fa7209a9873d5b5"
+    },
+    {
+      "path": "AsmPhys/Circuit/Tellegen.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6ff70599b9468a2d591de5eea549b43b03bc9a3",
+      "size": 1479,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/e6ff70599b9468a2d591de5eea549b43b03bc9a3"
+    },
+    {
+      "path": "AsmPhys/Circuit/Tube.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f176a7718f3d09b99d32a7fdc53fd592575d44d1",
+      "size": 5832,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/f176a7718f3d09b99d32a7fdc53fd592575d44d1"
+    },
+    {
+      "path": "AsmPhys/Circuit/WellPosed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f926339ac0ef06a1f5616249a030f63c9ed8423",
+      "size": 6907,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/2f926339ac0ef06a1f5616249a030f63c9ed8423"
+    },
+    {
+      "path": "AsmPhys/Claims.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d2204597a8c3383d8caaf843376a6f00a881b40",
+      "size": 32813,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/4d2204597a8c3383d8caaf843376a6f00a881b40"
+    },
+    {
+      "path": "AsmPhys/Design",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4467f7e555996b03bc98157ec0bf47927d0717ff",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/4467f7e555996b03bc98157ec0bf47927d0717ff"
+    },
+    {
+      "path": "AsmPhys/Design/Latch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "673dd370c4efc88f5b72db9a92de71ece76fb1a3",
+      "size": 1801,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/673dd370c4efc88f5b72db9a92de71ece76fb1a3"
+    },
+    {
+      "path": "AsmPhys/Design/TGFF.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69251498f2b53ad0fff90f171763ed5ff18694e0",
+      "size": 5545,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/69251498f2b53ad0fff90f171763ed5ff18694e0"
+    },
+    {
+      "path": "AsmPhys/Design/Toy.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2604dec4881f50b29fe71636a0eeb98103bb7548",
+      "size": 3781,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/2604dec4881f50b29fe71636a0eeb98103bb7548"
+    },
+    {
+      "path": "AsmPhys/Shell",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cfaf97e506a325ffdabd8d88af644c5f7fbb8a96",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/cfaf97e506a325ffdabd8d88af644c5f7fbb8a96"
+    },
+    {
+      "path": "AsmPhys/Shell/EndToEnd.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "580c6a0b88e1b7f9ce7774edf11aaed5295d90b7",
+      "size": 2560,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/580c6a0b88e1b7f9ce7774edf11aaed5295d90b7"
+    },
+    {
+      "path": "AsmPhys/Spec",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a2849a317d7ee72db51668f558472909112901ef",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/a2849a317d7ee72db51668f558472909112901ef"
+    },
+    {
+      "path": "AsmPhys/Spec/Cells.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0827382576a39ea92a23c856f103fe98281dce8",
+      "size": 7434,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/b0827382576a39ea92a23c856f103fe98281dce8"
+    },
+    {
+      "path": "AsmPhys/Spec/Circuit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ac1ca99ce25cd0dbca06145621853b90de3c9c9",
+      "size": 4987,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/2ac1ca99ce25cd0dbca06145621853b90de3c9c9"
+    },
+    {
+      "path": "AsmPhys/Spec/Device.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a402fa9ffea23da2f7c85e87ce9796460603025a",
+      "size": 5207,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/a402fa9ffea23da2f7c85e87ce9796460603025a"
+    },
+    {
+      "path": "AsmPhys/Spec/FlipFlop.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39504da424a2aaba7e4becbb7c40e8b02e2d56cc",
+      "size": 7110,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/39504da424a2aaba7e4becbb7c40e8b02e2d56cc"
+    },
+    {
+      "path": "AsmPhys/Spec/Levels.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1375712ff4f9b10c3772950b541d11d1c5b93182",
+      "size": 802,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/1375712ff4f9b10c3772950b541d11d1c5b93182"
+    },
+    {
+      "path": "AsmPhys/Spec/Params.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "375dcf44d0b886f53b29f00ab7519dca472ab974",
+      "size": 5839,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/375dcf44d0b886f53b29f00ab7519dca472ab974"
+    },
+    {
+      "path": "AsmPhys/Spec/Sync.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2df2c0b29fb1c55a8a358a0f23615ce0b4a7733b",
+      "size": 6980,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/2df2c0b29fb1c55a8a358a0f23615ce0b4a7733b"
+    },
+    {
+      "path": "AsmPhys/Sync",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23c4493d77149e3a9d3620d84353ab9868f50549",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/23c4493d77149e3a9d3620d84353ab9868f50549"
+    },
+    {
+      "path": "AsmPhys/Sync/Refinement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4995e088d9653fa25776f9e7ffb6472c4ff01472",
+      "size": 25024,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/4995e088d9653fa25776f9e7ffb6472c4ff01472"
+    },
+    {
+      "path": "AsmPhys/Witness",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9eda71d5b7daa20683c58d6a040a5b2aeba4d020",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/9eda71d5b7daa20683c58d6a040a5b2aeba4d020"
+    },
+    {
+      "path": "AsmPhys/Witness/Clock.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e754545a1f78bb839561540eefef4891b935df46",
+      "size": 6105,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/e754545a1f78bb839561540eefef4891b935df46"
+    },
+    {
+      "path": "AsmPhys/Witness/Devices.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "407586005dfb4e583f000f4b22b165c0a60c6e3e",
+      "size": 13851,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/407586005dfb4e583f000f4b22b165c0a60c6e3e"
+    },
+    {
+      "path": "AsmPhys/Witness/Toy.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7719bc548a12cf3db3d3e61dcfb805855d39b9b2",
+      "size": 806,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/7719bc548a12cf3db3d3e61dcfb805855d39b9b2"
+    },
+    {
+      "path": "AsmPhys/Witness/ToyFlipFlop.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da6113bdce586c71d14fc228cfe1543528c69ac2",
+      "size": 11642,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/da6113bdce586c71d14fc228cfe1543528c69ac2"
+    },
+    {
+      "path": "AsmPhys/Witness/ToyInverter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69f5613ff64237ddf5b9714c2b0173117ed73211",
+      "size": 5025,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/69f5613ff64237ddf5b9714c2b0173117ed73211"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "401b7f05f435675cfc903a0d3f0e88344b2c37c6",
+      "size": 7947,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/401b7f05f435675cfc903a0d3f0e88344b2c37c6"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c2c083c9e636d68e6871b54635b2a10188f50e4",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/9c2c083c9e636d68e6871b54635b2a10188f50e4"
+    },
+    {
+      "path": "docs/ASSUMPTIONS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "303044f824ee02e3bc129d82d0971d14c24be2d7",
+      "size": 10098,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/303044f824ee02e3bc129d82d0971d14c24be2d7"
+    },
+    {
+      "path": "docs/CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3268b4638492dd9e7ab31608452925c8c395fb7e",
+      "size": 8811,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/3268b4638492dd9e7ab31608452925c8c395fb7e"
+    },
+    {
+      "path": "docs/FINDINGS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a334dedeebff1b852b221697611e2f0a4b2e6f1f",
+      "size": 17790,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/a334dedeebff1b852b221697611e2f0a4b2e6f1f"
+    },
+    {
+      "path": "docs/HANDOFF-2026-10-24.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c47b234b88da101551890c062968f58030ad7dd6",
+      "size": 57594,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/c47b234b88da101551890c062968f58030ad7dd6"
+    },
+    {
+      "path": "docs/HANDOFF-2026-10-25.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49a156014916db80155091095f2ca582dd7c68bb",
+      "size": 4263,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/49a156014916db80155091095f2ca582dd7c68bb"
+    },
+    {
+      "path": "docs/REVIEW-2026-10-25.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "423cf0a8686f05771d41b7132d19369682589b7d",
+      "size": 35842,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/423cf0a8686f05771d41b7132d19369682589b7d"
+    },
+    {
+      "path": "docs/SPIKE-FLIPFLOP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8c035e963bb96fb02dc6f15ddcd80a888c60742",
+      "size": 53711,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/c8c035e963bb96fb02dc6f15ddcd80a888c60742"
+    },
+    {
+      "path": "docs/STATUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "780387faea04348179f336d1d2e5aee29cbaf738",
+      "size": 5643,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/780387faea04348179f336d1d2e5aee29cbaf738"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdd3be7ca67293444455b03fb5421419057ab95a",
+      "size": 3121,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/cdd3be7ca67293444455b03fb5421419057ab95a"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91d46c806604d28926d0a2625c8f099e0595d9a9",
+      "size": 284,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/91d46c806604d28926d0a2625c8f099e0595d9a9"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
+      "size": 25,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/a6aff065db2882c535684f8c5bcd4f16e9a23915"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "56db27cfde3cdf104107568aff43767f1a607ee0",
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/trees/56db27cfde3cdf104107568aff43767f1a607ee0"
+    },
+    {
+      "path": "scripts/Audit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e36bf4f30b6382fccdebb3001ffd7558c21ea1cf",
+      "size": 6549,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/e36bf4f30b6382fccdebb3001ffd7558c21ea1cf"
+    },
+    {
+      "path": "scripts/check_layers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c2cf25d915edb613c4c4e3ddd956e41f638e906",
+      "size": 5445,
+      "url": "https://api.github.com/repos/Deicyde/assembly-to-physics/git/blobs/8c2cf25d915edb613c4c4e3ddd956e41f638e906"
+    }
+  ],
+  "truncated": false
+}

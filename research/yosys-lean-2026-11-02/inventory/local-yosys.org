@@ -1,0 +1,30 @@
+#+title: Local Yosys observation (2026-11-02)
+
+The shell PATH did not resolve =yosys=. Read-only sampling of an existing project
+package at
+=/nix/store/gdxjgznv3idp558d24p6r0az2jipmvx4-llm2fpga-yosys-sdp72-parity/bin/yosys=
+reported:
+
+#+begin_example
+Yosys 0.62 (git sha1 v0.62, g++ 15.2.0 -fPIC -O3)
+#+end_example
+
+That binary includes =write_functional_smt2=, =write_functional_rosette= and
+=write_functional_cxx=; see [[file:local-yosys-functional-help.txt][captured command help]]. Its help is sparse in
+the same ways as latest upstream. No latest-version Yosys build was performed.
+
+The repository selects =graph-yosys= through =nix/selected-toolchain.nix=, which
+calls =source/toolchain/nix/graph-yosys.nix= with patched nixpkgs Yosys. The current
+flake pins nixpkgs commit =6fd329b2adfecb86ae49c1cba89689bd0f229e04=.
+
+There are many existing 0.62 patched project packages and separate 0.66 packages
+in the Nix store. A sampled separate package
+=/nix/store/85bkfd67x4f0k49jmi6066xqk45zqzl6-yosys-0.66/bin/yosys=
+reported =Yosys 0.66 (git sha1 7f8fdfd8d7bc08c749a2a969388d3425d4f369d5)=.
+Neither store presence alone establishes which package the current flake selects.
+
+An attempt to identify the exact current flake path with
+=nix eval --offline --no-write-lock-file --raw .#graph-yosys.outPath=
+failed because the sandbox could not connect to the Nix daemon socket. No build
+or fallback derivation change was performed. The sampled 0.62 binary is usable
+for bounded local experiments but is not the latest-upstream census target.

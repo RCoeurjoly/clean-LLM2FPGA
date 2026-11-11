@@ -1,0 +1,202 @@
+{
+  "sha": "d13650b8b8b6bee64f06a4f045e464d1916062e8",
+  "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/trees/d13650b8b8b6bee64f06a4f045e464d1916062e8",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fccb4e9c6bbfd571c595639b235eb5498ba2a1c",
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/trees/1fccb4e9c6bbfd571c595639b235eb5498ba2a1c"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9823cb972e9c43630263d2862e97e599c2092d9",
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/trees/a9823cb972e9c43630263d2862e97e599c2092d9"
+    },
+    {
+      "path": ".github/workflows/lean_action_ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09cd4ca6df0cca43b2dc12ee1f14b488bf6d3fe1",
+      "size": 200,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/09cd4ca6df0cca43b2dc12ee1f14b488bf6d3fe1"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c",
+      "size": 7,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c"
+    },
+    {
+      "path": "Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9666e8a63206f7c036340b70a845da6a325fc32",
+      "size": 62,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/c9666e8a63206f7c036340b70a845da6a325fc32"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5840a872485d262d22acb8081eae372683c557a",
+      "size": 70,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/a5840a872485d262d22acb8081eae372683c557a"
+    },
+    {
+      "path": "VerilLean.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b391526e690b0274048e9900ca1755819e5adcf",
+      "size": 177,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/6b391526e690b0274048e9900ca1755819e5adcf"
+    },
+    {
+      "path": "VerilLean",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d525ef4367c9682ee35ce95ab902135930ab48a",
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/trees/7d525ef4367c9682ee35ce95ab902135930ab48a"
+    },
+    {
+      "path": "VerilLean/Lang.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d35550e3f3d5943d03f8416d62af24afd5ce74e1",
+      "size": 184,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/d35550e3f3d5943d03f8416d62af24afd5ce74e1"
+    },
+    {
+      "path": "VerilLean/Lang",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a93d3433f67f7213654cc82c13dffde8195e9b1",
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/trees/6a93d3433f67f7213654cc82c13dffde8195e9b1"
+    },
+    {
+      "path": "VerilLean/Lang/Analysis.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7daf17db985bef5ee1270e3ea16684069e6b5afe",
+      "size": 2283,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/7daf17db985bef5ee1270e3ea16684069e6b5afe"
+    },
+    {
+      "path": "VerilLean/Lang/ModuleTrs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c215a1cda6014279a894b888373eb88507a45d4",
+      "size": 656,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/1c215a1cda6014279a894b888373eb88507a45d4"
+    },
+    {
+      "path": "VerilLean/Lang/Notation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d728e53433425d1d9e6989396fadee1b93e813b",
+      "size": 45796,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/5d728e53433425d1d9e6989396fadee1b93e813b"
+    },
+    {
+      "path": "VerilLean/Lang/Semantics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "140afa3a59d4776816a98e7e864f5536cc95d437",
+      "size": 71032,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/140afa3a59d4776816a98e7e864f5536cc95d437"
+    },
+    {
+      "path": "VerilLean/Lang/Syntax.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11fb3b3cc8b78260b82894c98054ebcb3d3588ba",
+      "size": 33770,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/11fb3b3cc8b78260b82894c98054ebcb3d3588ba"
+    },
+    {
+      "path": "VerilLean/Lang/Tester.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79c3b4ef60a52fb8502c93b93c1df3056dc2f1ea",
+      "size": 6146,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/79c3b4ef60a52fb8502c93b93c1df3056dc2f1ea"
+    },
+    {
+      "path": "VerilLean/Lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5dea46f4bff7639c2bf591c8ac052ea730f317aa",
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/trees/5dea46f4bff7639c2bf591c8ac052ea730f317aa"
+    },
+    {
+      "path": "VerilLean/Lib/Common.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "871b8e6363040413174583b503806bd760d20c20",
+      "size": 319,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/871b8e6363040413174583b503806bd760d20c20"
+    },
+    {
+      "path": "VerilLean/Lib/HMap.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4aba4131a6d99dfbf8d931be924c6db24582bf0",
+      "size": 13738,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/c4aba4131a6d99dfbf8d931be924c6db24582bf0"
+    },
+    {
+      "path": "VerilLean/Lib/HMapLemmas.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd03492d554f1064c1cd12ef4b56750d1c4e3e7c",
+      "size": 50093,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/bd03492d554f1064c1cd12ef4b56750d1c4e3e7c"
+    },
+    {
+      "path": "VerilLean/Lib/Lib.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b386e5d3d990a1947d13754d5638d4b875f24dc",
+      "size": 78,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/0b386e5d3d990a1947d13754d5638d4b875f24dc"
+    },
+    {
+      "path": "VerilLean/Lib/SZ.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bf99b55385094447cb9475066b32d14737050fb",
+      "size": 9143,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/3bf99b55385094447cb9475066b32d14737050fb"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a03db17c79ebc610baea16d2c5b080c79b90fee",
+      "size": 115,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/6a03db17c79ebc610baea16d2c5b080c79b90fee"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a15146ce8993c3c636c5d92a2f40e7f5a284f88e",
+      "size": 148,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/a15146ce8993c3c636c5d92a2f40e7f5a284f88e"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c685fa085fa1c66103533e992fc82c014a12142",
+      "size": 25,
+      "url": "https://api.github.com/repos/verilog-proof/VerilLean/git/blobs/4c685fa085fa1c66103533e992fc82c014a12142"
+    }
+  ],
+  "truncated": false
+}

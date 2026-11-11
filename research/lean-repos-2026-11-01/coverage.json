@@ -1,0 +1,927 @@
+{
+  "started_at": "2026-11-01T14:05:14.765942+00:00",
+  "finished_at": "2026-11-01T14:33:21Z",
+  "scope": "Public repositories returned by GitHub repository search language:lean; default excludes forks.",
+  "initial_search_total": 20705,
+  "census_unique_count": 20707,
+  "all_collected_unique_count": 20707,
+  "keyword_matched_count": 7217,
+  "recent_activity_threshold": "2026-09-01T00:00:00Z",
+  "activity_definition": "GitHub pushed_at; not a guarantee of default-branch substantive maintenance.",
+  "requested_keywords": [
+    "Verilog",
+    "SystemVerilog",
+    "VHDL",
+    "yosys",
+    "RTL",
+    "MLIR",
+    "PyTorch",
+    "Python"
+  ],
+  "supplemental_keywords": [
+    "CIRCT",
+    "Calyx",
+    "FPGA",
+    "hardware",
+    "tensor",
+    "quantization",
+    "bitvector",
+    "floating-point",
+    "SMT",
+    "SAT",
+    "compiler",
+    "equivalence"
+  ],
+  "screening_scope": "All census metadata plus GitHub-indexed name, description and README keyword searches. Source review is separate, not exhaustive file-by-file review.",
+  "pagination_policy": "Disjoint creation-time ranges <=900 results; count mismatches and incomplete results are subdivided. Unretrievable count-only matches at single-second ranges are recorded explicitly as coverage gaps.",
+  "live_index_caveat": "GitHub search is mutable and not an atomic snapshot; inaccessible and unindexed repositories cannot be guaranteed.",
+  "leaves": [
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2000-01-01T00:00:00Z..2013-06-01T23:59:59Z",
+      "term": null,
+      "expected_count": 1,
+      "unique_count": 1,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+      "term": null,
+      "expected_count": 569,
+      "unique_count": 569,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+      "term": null,
+      "expected_count": 716,
+      "unique_count": 716,
+      "pages": 8
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2021-10-21T03:00:00Z..2022-08-23T10:29:59Z",
+      "term": null,
+      "expected_count": 493,
+      "unique_count": 493,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2022-08-23T10:30:00Z..2023-06-25T17:59:59Z",
+      "term": null,
+      "expected_count": 622,
+      "unique_count": 622,
+      "pages": 7
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2023-06-25T18:00:00Z..2023-11-25T21:44:59Z",
+      "term": null,
+      "expected_count": 484,
+      "unique_count": 484,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2023-11-25T21:45:00Z..2024-04-27T01:29:59Z",
+      "term": null,
+      "expected_count": 593,
+      "unique_count": 593,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2024-04-27T01:30:00Z..2024-09-27T05:14:59Z",
+      "term": null,
+      "expected_count": 610,
+      "unique_count": 610,
+      "pages": 7
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+      "term": null,
+      "expected_count": 732,
+      "unique_count": 732,
+      "pages": 8
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2025-02-27T09:00:00Z..2025-05-14T22:52:29Z",
+      "term": null,
+      "expected_count": 489,
+      "unique_count": 489,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2025-05-14T22:52:30Z..2025-07-30T12:44:59Z",
+      "term": null,
+      "expected_count": 515,
+      "unique_count": 515,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2025-07-30T12:45:00Z..2025-10-15T02:37:29Z",
+      "term": null,
+      "expected_count": 635,
+      "unique_count": 635,
+      "pages": 7
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2025-10-15T02:37:30Z..2025-11-22T09:33:44Z",
+      "term": null,
+      "expected_count": 368,
+      "unique_count": 368,
+      "pages": 4
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2025-11-22T09:33:45Z..2025-12-30T16:29:59Z",
+      "term": null,
+      "expected_count": 550,
+      "unique_count": 550,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2025-12-30T16:30:00Z..2026-02-06T23:26:14Z",
+      "term": null,
+      "expected_count": 544,
+      "unique_count": 544,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+      "term": null,
+      "expected_count": 764,
+      "unique_count": 764,
+      "pages": 8
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+      "term": null,
+      "expected_count": 897,
+      "unique_count": 897,
+      "pages": 9
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-04-24T13:18:45Z..2026-05-13T16:46:52Z",
+      "term": null,
+      "expected_count": 534,
+      "unique_count": 534,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-05-13T16:46:53Z..2026-06-01T20:14:59Z",
+      "term": null,
+      "expected_count": 546,
+      "unique_count": 546,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-06-01T20:15:00Z..2026-06-20T23:43:07Z",
+      "term": null,
+      "expected_count": 552,
+      "unique_count": 552,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-06-20T23:43:08Z..2026-07-10T03:11:14Z",
+      "term": null,
+      "expected_count": 574,
+      "unique_count": 574,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+      "term": null,
+      "expected_count": 854,
+      "unique_count": 854,
+      "pages": 9
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-07-29T06:39:23Z..2026-08-07T20:23:26Z",
+      "term": null,
+      "expected_count": 452,
+      "unique_count": 452,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-08-07T20:23:27Z..2026-08-17T10:07:29Z",
+      "term": null,
+      "expected_count": 479,
+      "unique_count": 479,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-08-17T10:07:30Z..2026-08-26T23:51:33Z",
+      "term": null,
+      "expected_count": 541,
+      "unique_count": 541,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-08-26T23:51:34Z..2026-09-05T13:35:37Z",
+      "term": null,
+      "expected_count": 550,
+      "unique_count": 550,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+      "term": null,
+      "expected_count": 783,
+      "unique_count": 783,
+      "pages": 8
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-17T12:45:42Z",
+      "term": null,
+      "expected_count": 285,
+      "unique_count": 285,
+      "pages": 3
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-18T17:28:43Z",
+      "term": null,
+      "expected_count": 304,
+      "unique_count": 304,
+      "pages": 4
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-18T17:28:44Z..2026-09-19T07:50:13Z",
+      "term": null,
+      "expected_count": 81,
+      "unique_count": 81,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T07:50:14Z..2026-09-19T15:00:58Z",
+      "term": null,
+      "expected_count": 32,
+      "unique_count": 32,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:00:59Z..2026-09-19T15:27:54Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:27:55Z..2026-09-19T15:31:16Z",
+      "term": null,
+      "expected_count": 1,
+      "unique_count": 1,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:31:17Z..2026-09-19T15:32:57Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:32:58Z..2026-09-19T15:33:48Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:33:49Z..2026-09-19T15:34:01Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:34:02Z..2026-09-19T15:34:07Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:34:08Z..2026-09-19T15:34:10Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": null,
+      "expected_count": 1,
+      "unique_count": 0,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:34:12Z..2026-09-19T15:34:12Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:34:13Z..2026-09-19T15:34:13Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:34:14Z..2026-09-19T15:34:38Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:34:39Z..2026-09-19T15:41:22Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:41:23Z..2026-09-19T15:54:49Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T15:54:50Z..2026-09-19T16:48:40Z",
+      "term": null,
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T16:48:41Z..2026-09-19T18:36:21Z",
+      "term": null,
+      "expected_count": 6,
+      "unique_count": 6,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T18:36:22Z..2026-09-19T22:11:43Z",
+      "term": null,
+      "expected_count": 10,
+      "unique_count": 10,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-19T22:11:44Z..2026-09-24T17:03:44Z",
+      "term": null,
+      "expected_count": 453,
+      "unique_count": 453,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-24T17:03:45Z..2026-09-29T11:55:46Z",
+      "term": null,
+      "expected_count": 497,
+      "unique_count": 497,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-09-29T11:55:47Z..2026-10-04T06:47:48Z",
+      "term": null,
+      "expected_count": 461,
+      "unique_count": 461,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-10-04T06:47:49Z..2026-10-09T01:39:50Z",
+      "term": null,
+      "expected_count": 563,
+      "unique_count": 563,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-10-09T01:39:51Z..2026-10-13T20:31:52Z",
+      "term": null,
+      "expected_count": 610,
+      "unique_count": 610,
+      "pages": 7
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-10-13T20:31:53Z..2026-10-18T15:23:54Z",
+      "term": null,
+      "expected_count": 529,
+      "unique_count": 529,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-10-18T15:23:55Z..2026-10-23T10:15:56Z",
+      "term": null,
+      "expected_count": 560,
+      "unique_count": 560,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean",
+      "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+      "term": null,
+      "expected_count": 868,
+      "unique_count": 868,
+      "pages": 9
+    },
+    {
+      "base_query": "language:lean Verilog in:name,description,readme",
+      "query": "language:lean Verilog in:name,description,readme",
+      "term": "Verilog",
+      "expected_count": 32,
+      "unique_count": 32,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean SystemVerilog in:name,description,readme",
+      "query": "language:lean SystemVerilog in:name,description,readme",
+      "term": "SystemVerilog",
+      "expected_count": 20,
+      "unique_count": 20,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean VHDL in:name,description,readme",
+      "query": "language:lean VHDL in:name,description,readme",
+      "term": "VHDL",
+      "expected_count": 3,
+      "unique_count": 3,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean yosys in:name,description,readme",
+      "query": "language:lean yosys in:name,description,readme",
+      "term": "yosys",
+      "expected_count": 12,
+      "unique_count": 12,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean RTL in:name,description,readme",
+      "query": "language:lean RTL in:name,description,readme",
+      "term": "RTL",
+      "expected_count": 41,
+      "unique_count": 41,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean MLIR in:name,description,readme",
+      "query": "language:lean MLIR in:name,description,readme",
+      "term": "MLIR",
+      "expected_count": 38,
+      "unique_count": 38,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean PyTorch in:name,description,readme",
+      "query": "language:lean PyTorch in:name,description,readme",
+      "term": "PyTorch",
+      "expected_count": 62,
+      "unique_count": 62,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2000-01-01T00:00:00Z..2013-06-01T23:59:59Z",
+      "term": "Python",
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+      "term": "Python",
+      "expected_count": 2,
+      "unique_count": 2,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2020-02-16T12:00:00Z..2023-06-25T17:59:59Z",
+      "term": "Python",
+      "expected_count": 47,
+      "unique_count": 47,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2023-06-25T18:00:00Z..2025-02-27T08:59:59Z",
+      "term": "Python",
+      "expected_count": 70,
+      "unique_count": 70,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+      "term": "Python",
+      "expected_count": 120,
+      "unique_count": 120,
+      "pages": 2
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+      "term": "Python",
+      "expected_count": 329,
+      "unique_count": 329,
+      "pages": 4
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+      "term": "Python",
+      "expected_count": 411,
+      "unique_count": 411,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "Python",
+      "expected_count": 1,
+      "unique_count": 0,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+      "term": "Python",
+      "expected_count": 488,
+      "unique_count": 488,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2026-09-19T15:34:12Z..2026-09-24T17:03:44Z",
+      "term": "Python",
+      "expected_count": 94,
+      "unique_count": 94,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+      "term": "Python",
+      "expected_count": 574,
+      "unique_count": 574,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean Python in:name,description,readme",
+      "query": "language:lean Python in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+      "term": "Python",
+      "expected_count": 598,
+      "unique_count": 598,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean CIRCT in:name,description,readme",
+      "query": "language:lean CIRCT in:name,description,readme",
+      "term": "CIRCT",
+      "expected_count": 5,
+      "unique_count": 5,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean Calyx in:name,description,readme",
+      "query": "language:lean Calyx in:name,description,readme",
+      "term": "Calyx",
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean FPGA in:name,description,readme",
+      "query": "language:lean FPGA in:name,description,readme",
+      "term": "FPGA",
+      "expected_count": 21,
+      "unique_count": 21,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean hardware in:name,description,readme",
+      "query": "language:lean hardware in:name,description,readme",
+      "term": "hardware",
+      "expected_count": 321,
+      "unique_count": 321,
+      "pages": 4
+    },
+    {
+      "base_query": "language:lean tensor in:name,description,readme",
+      "query": "language:lean tensor in:name,description,readme",
+      "term": "tensor",
+      "expected_count": 530,
+      "unique_count": 530,
+      "pages": 6
+    },
+    {
+      "base_query": "language:lean quantization in:name,description,readme",
+      "query": "language:lean quantization in:name,description,readme",
+      "term": "quantization",
+      "expected_count": 96,
+      "unique_count": 96,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean bitvector in:name,description,readme",
+      "query": "language:lean bitvector in:name,description,readme",
+      "term": "bitvector",
+      "expected_count": 34,
+      "unique_count": 34,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean floating-point in:name,description,readme",
+      "query": "language:lean floating-point in:name,description,readme",
+      "term": "floating-point",
+      "expected_count": 420,
+      "unique_count": 420,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean SMT in:name,description,readme",
+      "query": "language:lean SMT in:name,description,readme",
+      "term": "SMT",
+      "expected_count": 176,
+      "unique_count": 176,
+      "pages": 2
+    },
+    {
+      "base_query": "language:lean SAT in:name,description,readme",
+      "query": "language:lean SAT in:name,description,readme",
+      "term": "SAT",
+      "expected_count": 405,
+      "unique_count": 405,
+      "pages": 5
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2000-01-01T00:00:00Z..2013-06-01T23:59:59Z",
+      "term": "compiler",
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+      "term": "compiler",
+      "expected_count": 36,
+      "unique_count": 36,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2020-02-16T12:00:00Z..2023-06-25T17:59:59Z",
+      "term": "compiler",
+      "expected_count": 104,
+      "unique_count": 104,
+      "pages": 2
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2023-06-25T18:00:00Z..2025-02-27T08:59:59Z",
+      "term": "compiler",
+      "expected_count": 167,
+      "unique_count": 167,
+      "pages": 2
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+      "term": "compiler",
+      "expected_count": 261,
+      "unique_count": 261,
+      "pages": 3
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+      "term": "compiler",
+      "expected_count": 677,
+      "unique_count": 677,
+      "pages": 7
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+      "term": "compiler",
+      "expected_count": 810,
+      "unique_count": 810,
+      "pages": 9
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "compiler",
+      "expected_count": 1,
+      "unique_count": 0,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+      "term": "compiler",
+      "expected_count": 728,
+      "unique_count": 728,
+      "pages": 8
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2026-09-19T15:34:12Z..2026-09-24T17:03:44Z",
+      "term": "compiler",
+      "expected_count": 140,
+      "unique_count": 140,
+      "pages": 2
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+      "term": "compiler",
+      "expected_count": 785,
+      "unique_count": 785,
+      "pages": 8
+    },
+    {
+      "base_query": "language:lean compiler in:name,description,readme",
+      "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+      "term": "compiler",
+      "expected_count": 788,
+      "unique_count": 788,
+      "pages": 8
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2000-01-01T00:00:00Z..2013-06-01T23:59:59Z",
+      "term": "equivalence",
+      "expected_count": 0,
+      "unique_count": 0,
+      "pages": 0
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+      "term": "equivalence",
+      "expected_count": 9,
+      "unique_count": 9,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2020-02-16T12:00:00Z..2023-06-25T17:59:59Z",
+      "term": "equivalence",
+      "expected_count": 40,
+      "unique_count": 40,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2023-06-25T18:00:00Z..2025-02-27T08:59:59Z",
+      "term": "equivalence",
+      "expected_count": 56,
+      "unique_count": 56,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+      "term": "equivalence",
+      "expected_count": 103,
+      "unique_count": 103,
+      "pages": 2
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+      "term": "equivalence",
+      "expected_count": 257,
+      "unique_count": 257,
+      "pages": 3
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+      "term": "equivalence",
+      "expected_count": 337,
+      "unique_count": 337,
+      "pages": 4
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "equivalence",
+      "expected_count": 1,
+      "unique_count": 0,
+      "pages": 1
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+      "term": "equivalence",
+      "expected_count": 334,
+      "unique_count": 334,
+      "pages": 4
+    },
+    {
+      "base_query": "language:lean equivalence in:name,description,readme",
+      "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:12Z..2026-11-01T23:59:59Z",
+      "term": "equivalence",
+      "expected_count": 537,
+      "unique_count": 537,
+      "pages": 6
+    }
+  ],
+  "network_requests": 158,
+  "errors": [
+    {
+      "kind": "unretrievable_search_match",
+      "query": "language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": null,
+      "expected_count": 1,
+      "returned_count": 0,
+      "missing_count": 1,
+      "explanation": "GitHub search count does not match returned records at a single creation timestamp; see discrepancy-investigation.json."
+    },
+    {
+      "kind": "unretrievable_search_match",
+      "query": "language:lean Python in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "Python",
+      "expected_count": 1,
+      "returned_count": 0,
+      "missing_count": 1,
+      "explanation": "GitHub search count does not match returned records at a single creation timestamp; see discrepancy-investigation.json."
+    },
+    {
+      "kind": "unretrievable_search_match",
+      "query": "language:lean compiler in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "compiler",
+      "expected_count": 1,
+      "returned_count": 0,
+      "missing_count": 1,
+      "explanation": "GitHub search count does not match returned records at a single creation timestamp; see discrepancy-investigation.json."
+    },
+    {
+      "kind": "unretrievable_search_match",
+      "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "equivalence",
+      "expected_count": 1,
+      "returned_count": 0,
+      "missing_count": 1,
+      "explanation": "GitHub search count does not match returned records at a single creation timestamp; see discrepancy-investigation.json."
+    }
+  ]
+}

@@ -1,0 +1,1649 @@
+{
+  "utc": "2026-11-01T23:16:15.901513+00:00",
+  "endpoint": "repos/ErosSph/leap/tarball/f68bb7ba38eaecb9b0e2ff8c7b1d553f824470d4",
+  "exit_code": 0,
+  "archive_bytes": 1279636,
+  "sha256": "b6bdac07a8a019d24053244cb9edea7aa3eb5491c0bec6263c2bbcaaf7196b56",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5745,
+      "sha256": "ce55c5f0e4e37eb011ef776b252fc9a0916d4a26d5dd3f4171f69fabeefd1bfa"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2312,
+      "sha256": "f31d046e0c875d5dcd4d4b18623bde97a8a7334de81a1c2e07902d8c89b73cb1"
+    },
+    {
+      "path": "docs/ARTIFACTS.md",
+      "bytes": 2885,
+      "sha256": "faf7aa3ce8113a0e42728c43efa0074b8b15446e34da63b9eb411e847a773197"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 2375,
+      "sha256": "40da079087d0e7da7d8e2acbb1d3a34a573c6e06d8d475f262d2ec026392edd9"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "e8173aad377a6d70041e5f7a5d8895ed587628f5cab243c53a18c40a1b7b6bf8"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 738,
+      "sha256": "ad5c95e1c835a652ae908c149d84cd9d5ebe36af3a5054cabcc2a2ce61a8e3e6"
+    },
+    {
+      "path": "rtl2lean/__init__.py",
+      "bytes": 126,
+      "sha256": "c32aff80ea6cd06875b8224615f30e7f514e26d33e41a85d25d087e2cd3d8685"
+    },
+    {
+      "path": "rtl2lean/backend/__init__.py",
+      "bytes": 222,
+      "sha256": "d2ea8cd5553f890738541c268a6c0348f6ba53a0d3717956b93a4e6caf6fce30"
+    },
+    {
+      "path": "rtl2lean/backend/codegen.py",
+      "bytes": 50865,
+      "sha256": "5f7a887ea49c6745654406ea41c7104cb8286585fefcdd4469e90a9f8444f924"
+    },
+    {
+      "path": "rtl2lean/backend/lean_checker.py",
+      "bytes": 4746,
+      "sha256": "85272dee0f11e78fa343a156a5d3968358e99ad455904cc2d458e73364657fbb"
+    },
+    {
+      "path": "rtl2lean/compositional_proofs/__init__.py",
+      "bytes": 86,
+      "sha256": "a971fe92a1dea1b6ea098de3f3c7cb3b5b0ab54fd04274dae557f6223723f631"
+    },
+    {
+      "path": "rtl2lean/compositional_proofs/corpus.py",
+      "bytes": 15905,
+      "sha256": "6be6e49bd068fed3974b959aba21d2dc6e7ff6478f66d64a042d0202259e3f89"
+    },
+    {
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "bytes": 28498,
+      "sha256": "e564511f7a6e1b7c616be0ab6e9877c7504286c7cd669240c0cbcb3972c51152"
+    },
+    {
+      "path": "rtl2lean/compositional_proofs/foundation.py",
+      "bytes": 7719,
+      "sha256": "ed37c404a775df374994d90438b1ffed18f7f04c3833d61aa1e85fcdb53ece9c"
+    },
+    {
+      "path": "rtl2lean/compositional_proofs/latency.py",
+      "bytes": 5824,
+      "sha256": "93671f87fb11db921a2af98df133087322d483d500902d4c17335ada604f2946"
+    },
+    {
+      "path": "rtl2lean/compositional_proofs/main.py",
+      "bytes": 8081,
+      "sha256": "8396e62a920c4e5fe2a2421d9e6f27b4095f8caa8f854e80ec5fe3ebbf750921"
+    },
+    {
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "bytes": 27765,
+      "sha256": "8bcbafb3f8cade860af5842bf729a9ee77b73a84ac3e8e9e78d1c1e20ec5abc5"
+    },
+    {
+      "path": "rtl2lean/dependency_audit/__init__.py",
+      "bytes": 77,
+      "sha256": "d8a3e01ccf7b23d5225630da6c095b6218d3e403e57183030caf15ee8c882b3a"
+    },
+    {
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "bytes": 18340,
+      "sha256": "6b60dc5598f32f8945e9bd2a84903a4003c318166b8b146cbe85474b77326b6b"
+    },
+    {
+      "path": "rtl2lean/dependency_audit/dependency.py",
+      "bytes": 14669,
+      "sha256": "d8da58f405782f1ea33f5af3d2aa4184c61c024647c356a7d34156438539887c"
+    },
+    {
+      "path": "rtl2lean/dependency_audit/main.py",
+      "bytes": 6894,
+      "sha256": "4d1a379d62b2c9001737bec90256ac74c8d2ddd3b20830cb7157a71c4e59eb4f"
+    },
+    {
+      "path": "rtl2lean/dependency_audit/report.py",
+      "bytes": 16322,
+      "sha256": "757a30dc527390fe211ab86acf7d7a9d5110f7a544430fe5992ef7a6480c0a88"
+    },
+    {
+      "path": "rtl2lean/evaluation/__init__.py",
+      "bytes": 58,
+      "sha256": "f0a857cef143a4a85395f85126aeea5a0d3c8d5c74901368288a0ffc15b1d3ae"
+    },
+    {
+      "path": "rtl2lean/evaluation/corpus.py",
+      "bytes": 26026,
+      "sha256": "bd4c97d6c4b205c4011edc464af12627d3708268c5b9b32dcb37c9812fc3a6cd"
+    },
+    {
+      "path": "rtl2lean/evaluation/experiment.py",
+      "bytes": 43226,
+      "sha256": "cf2bc04a704a4d4fd47b27543a2ad75df5e2390fba7524a673c0443054068adb"
+    },
+    {
+      "path": "rtl2lean/evaluation/main.py",
+      "bytes": 9951,
+      "sha256": "f98900e32150b50be8bf92a035161a613b0410526997c30d65311126a4345d48"
+    },
+    {
+      "path": "rtl2lean/evaluation/report.py",
+      "bytes": 30991,
+      "sha256": "80e2f78c0646d890342cb5243dcf69df5b84a61a2de64d36018e6bbf76ae3980"
+    },
+    {
+      "path": "rtl2lean/frontend/__init__.py",
+      "bytes": 822,
+      "sha256": "33498d1398cb475d13b76c5365f1b179bf6a957aa85834f1116e370cbb79b093"
+    },
+    {
+      "path": "rtl2lean/frontend/ast.py",
+      "bytes": 11008,
+      "sha256": "62322b0a059c50650fb48b17796cc604320068bbfa5b567b144e61613814757a"
+    },
+    {
+      "path": "rtl2lean/frontend/design.py",
+      "bytes": 15311,
+      "sha256": "802dce140f32a24f23e48440e4740546bf0656851753d92ca5a0fd1a409665ba"
+    },
+    {
+      "path": "rtl2lean/frontend/parser.py",
+      "bytes": 35015,
+      "sha256": "ed7fe8f3b5a077f0b73b5edbe57b49b59ee91a141642f91f9113856e3168ea6f"
+    },
+    {
+      "path": "rtl2lean/frontend/scopes.py",
+      "bytes": 1261,
+      "sha256": "0bedb8d534397f8b0b302b6e02f06d829802a432bc87fb699f44c0f35407e03d"
+    },
+    {
+      "path": "rtl2lean/frontend/semantic.py",
+      "bytes": 28376,
+      "sha256": "e6d4a730a8a113c084f03a726cc42f816b10a9b7a8cd0e6f36a2f4a41cfa2a84"
+    },
+    {
+      "path": "rtl2lean/middle_end/__init__.py",
+      "bytes": 440,
+      "sha256": "abd1ccf9165181216d39cc257e98362c674ac6057544427ce8f4ffff9a8b179a"
+    },
+    {
+      "path": "rtl2lean/middle_end/analyzer.py",
+      "bytes": 6959,
+      "sha256": "cda5f275b3a5fe90e265e63fee5665b9addca4fad75894b276c48a6fdea40b56"
+    },
+    {
+      "path": "rtl2lean/middle_end/ir.py",
+      "bytes": 15559,
+      "sha256": "1bd981f83d6475dd0895348e0413b5aa1c8e111b089b49b20babcf7aafdd9894"
+    },
+    {
+      "path": "rtl2lean/middle_end/ir_converter.py",
+      "bytes": 46508,
+      "sha256": "ce523e25accbe7a7ebb7beed387e1e9799dbdf222e00c608f8663a5862f4d248"
+    },
+    {
+      "path": "rtl2lean/middle_end/ir_verifier.py",
+      "bytes": 10816,
+      "sha256": "3d22f4661ce855c1f1a1fc9ac5f3aac246e832c779d2e1485d6f684aa8e5495c"
+    },
+    {
+      "path": "rtl2lean/middle_end/optimizer.py",
+      "bytes": 19416,
+      "sha256": "fd82bd11f5c5664e86fb2fcd52e3531a72b21e2756d5cce935989798b57dca7f"
+    },
+    {
+      "path": "rtl2lean/middle_end/type_checker.py",
+      "bytes": 6812,
+      "sha256": "1c050dedc209a79a378919eb3b50f096468d9e63a8595874d32e0418e837cce5"
+    },
+    {
+      "path": "rtl2lean/model_calibration/__init__.py",
+      "bytes": 77,
+      "sha256": "67ea235f3e56008c64ebae081f8e5faab86f26d7cb938803c3abfe90a4f1dc60"
+    },
+    {
+      "path": "rtl2lean/model_calibration/analysis.py",
+      "bytes": 19321,
+      "sha256": "7ac7600e1e085e0b6513f71b589038836a39904743accc883a2af6a85bd7e0eb"
+    },
+    {
+      "path": "rtl2lean/model_calibration/backend.py",
+      "bytes": 11613,
+      "sha256": "e2998c600786cdcd01c5456f60ff04d6233e135dabc8c370f17ca79407e129be"
+    },
+    {
+      "path": "rtl2lean/model_calibration/main.py",
+      "bytes": 2412,
+      "sha256": "e55d07c246b1adfd27a67057250ce02c285823b699b5e459d18b97c1270dfecb"
+    },
+    {
+      "path": "rtl2lean/model_calibration/runner.py",
+      "bytes": 14697,
+      "sha256": "2c5ac124af6b878f1611b7165c412959cd54ee2a557be31a157a474dcb4687c9"
+    },
+    {
+      "path": "rtl2lean/model_calibration/tasks.py",
+      "bytes": 15363,
+      "sha256": "35444a118baeb0165e6367702f001370ae8a55ccb8ae90d940e42f63095c7917"
+    },
+    {
+      "path": "rtl2lean/model_comparison/__init__.py",
+      "bytes": 75,
+      "sha256": "bd0d582f7841a3229fbdf7bfe882938deb7f75333b489cd2fbe9f0b1d3e30121"
+    },
+    {
+      "path": "rtl2lean/model_comparison/analysis.py",
+      "bytes": 17717,
+      "sha256": "b3cba1d0318e53399bcbe054d47a91e755db3e212ae8a6985da61a93b37bcee2"
+    },
+    {
+      "path": "rtl2lean/model_comparison/main.py",
+      "bytes": 2348,
+      "sha256": "7e9e176a625fe107ba77c57fd8f2db2f10f505332394d9e8842f777f2835f9c8"
+    },
+    {
+      "path": "rtl2lean/model_comparison/runner.py",
+      "bytes": 20500,
+      "sha256": "e17ab7d1e1a33759348743be0c365d828c42d18aac97c0b81e9c0de6a97a1c44"
+    },
+    {
+      "path": "rtl2lean/model_comparison/tasks.py",
+      "bytes": 9135,
+      "sha256": "9a36823f8a648a2956106d696d0097efb1ddd7e9886fccc72076e702e52b9aca"
+    },
+    {
+      "path": "rtl2lean/multi_phase_proofs/__init__.py",
+      "bytes": 66,
+      "sha256": "ed70523cfd35cad112de211a74119a983ccd88929f0e7b4084a98d995b3b8fc1"
+    },
+    {
+      "path": "rtl2lean/multi_phase_proofs/corpus.py",
+      "bytes": 11503,
+      "sha256": "53f2153b3125070ab177ba36d0638152566b24af06c4787af7f5e29972d1445b"
+    },
+    {
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "bytes": 34607,
+      "sha256": "5350a7ac2b8a57a1b721aa3344f0be8862af1ef9786020dd3f4b4d4401797fb2"
+    },
+    {
+      "path": "rtl2lean/multi_phase_proofs/main.py",
+      "bytes": 9366,
+      "sha256": "4f4ed731ae5ba90fa025df78438db6a4ca815dad59944fb8b988c265c1d89438"
+    },
+    {
+      "path": "rtl2lean/multi_phase_proofs/proof_graph.py",
+      "bytes": 13622,
+      "sha256": "239424deae2abe16d4563db7f972b36400329a84d38ae3c8ec60e57a4f61a7e6"
+    },
+    {
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "bytes": 29471,
+      "sha256": "3d0d04c379298fe069da6d8b162c12401a91f7954a75ed8cde42814786e2717f"
+    },
+    {
+      "path": "rtl2lean/pipeline/__init__.py",
+      "bytes": 254,
+      "sha256": "887e29b0ca810188e22f2fa7a4fec122a53966dee9a9d4be107b74ea43990501"
+    },
+    {
+      "path": "rtl2lean/pipeline/analysis.py",
+      "bytes": 11276,
+      "sha256": "adbc30239fc6d91c2f4ee33200576d21b4caca4459b9e1b2fc1491d484ea8b03"
+    },
+    {
+      "path": "rtl2lean/pipeline/compiler.py",
+      "bytes": 9163,
+      "sha256": "dd1079486ad1bc71eba6a4093fb9410ea3939f2b0469785044fbb49648d0f14b"
+    },
+    {
+      "path": "rtl2lean/pipeline/io.py",
+      "bytes": 592,
+      "sha256": "85192efb03316ca3c6b2c7d943ae7bdac13d3a00c9df4fff29e28b32d81ce4b0"
+    },
+    {
+      "path": "rtl2lean/pipeline/main.py",
+      "bytes": 8369,
+      "sha256": "fc7928549dbef806693ee8678f1e90cf6e79de7ddad8c7c178ad9f75eba17c3c"
+    },
+    {
+      "path": "rtl2lean/pipeline/manifest.py",
+      "bytes": 2318,
+      "sha256": "6b251479f79214a4d82616f42904e482b393fb1a5955f544eb4902825ff5fe73"
+    },
+    {
+      "path": "rtl2lean/pipeline/report.py",
+      "bytes": 11170,
+      "sha256": "84f163ccfe6ed5f63fd181bac71bef2a63fa5223b70acf48e80e9b05cd52ead4"
+    },
+    {
+      "path": "rtl2lean/pipeline/schema.py",
+      "bytes": 13002,
+      "sha256": "c4b8ad79bd2f751d44ca9df9a833ae1cc26ff83e2eb9f44e30d597d1e59769be"
+    },
+    {
+      "path": "rtl2lean/proof_gaps/__init__.py",
+      "bytes": 54,
+      "sha256": "89e4962098df06023421c142c49ba9d66b778f9d7f64a2f3a49af9698ee621aa"
+    },
+    {
+      "path": "rtl2lean/proof_gaps/corpus.py",
+      "bytes": 9807,
+      "sha256": "820eccbffddd44ed4ae788225ab89b14f2a5b1aef588a1d02175967eb32f9a55"
+    },
+    {
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "bytes": 34862,
+      "sha256": "3f2d52f5e9fc94888c050317cbf7efce55fcef62c0be34359887a1fef3881c82"
+    },
+    {
+      "path": "rtl2lean/proof_gaps/main.py",
+      "bytes": 8274,
+      "sha256": "5afb4887e110b974315acbba6bbc4a386d02189bf9ba111c5df232b9b98b04cf"
+    },
+    {
+      "path": "rtl2lean/proof_gaps/proof_gap.py",
+      "bytes": 10971,
+      "sha256": "4b9856885c3899aa6e6d07852e12958a1a26c9a2181d677463bccfacc7c4a3bf"
+    },
+    {
+      "path": "rtl2lean/proof_gaps/report.py",
+      "bytes": 25695,
+      "sha256": "e5b5b658b5dd7778317c069f3c29526827b387a4d496a557ccc4ff2d14708fc3"
+    },
+    {
+      "path": "rtl2lean/proving/__init__.py",
+      "bytes": 189,
+      "sha256": "07e5089d9e3f68f054a958841e862f6ad06776b62a3709486aeafbff9439982c"
+    },
+    {
+      "path": "rtl2lean/proving/context.py",
+      "bytes": 3775,
+      "sha256": "11978ff86fcfea12451b3451931056a8ad1eafda3ae48fc181c949bb5498df45"
+    },
+    {
+      "path": "rtl2lean/proving/llm_prover.py",
+      "bytes": 44193,
+      "sha256": "539637cee784ec93782bb8fda39a35bd3eca1a4ed71ced6fbd0ec4d3ab198cad"
+    },
+    {
+      "path": "rtl2lean/proving/runner.py",
+      "bytes": 15573,
+      "sha256": "8538789a36ba132e99fdc227f2831f4395bc269c8e22d45f6403209a25536a15"
+    },
+    {
+      "path": "rtl2lean/syntax_check.py",
+      "bytes": 1432,
+      "sha256": "a3ce67817ec37735a82f63f31dc973436b0e9bbe0dd8f25b5be6cc520befe73a"
+    },
+    {
+      "path": "rtl2lean/temporal/__init__.py",
+      "bytes": 215,
+      "sha256": "b365c125324163acb5d30da8b91cc25f5badce66fcc41c60ce7cad0ce9f2affa"
+    },
+    {
+      "path": "rtl2lean/temporal/corpus.py",
+      "bytes": 39914,
+      "sha256": "41ddb1029900a23e34e040c05d2bf4477d967bc2477e99439dd76afa7a359f2a"
+    },
+    {
+      "path": "rtl2lean/temporal/experiment.py",
+      "bytes": 24377,
+      "sha256": "d2d4cb55960c3fb69a0c0201cccf6896fea6a01eb7c1541a9b3d1c63e52ac703"
+    },
+    {
+      "path": "rtl2lean/temporal/foundation.py",
+      "bytes": 16532,
+      "sha256": "038c4707ae1d8072f92c599506c1134b99791c3017ef30733a33e7bd46fff66c"
+    },
+    {
+      "path": "rtl2lean/temporal/main.py",
+      "bytes": 7771,
+      "sha256": "f714a286423bad13388e6d085502e380183f49dfcc9618cb1c7d816f1d7235fa"
+    },
+    {
+      "path": "rtl2lean/temporal/report.py",
+      "bytes": 48665,
+      "sha256": "bced1faa27404c03f2720ea742b9e5b2e9f1c7ed1b3cc9714883505c9a30e5e3"
+    },
+    {
+      "path": "rtl2lean/temporal_challenges/__init__.py",
+      "bytes": 257,
+      "sha256": "82eff7a62a8ef91bc03e62cff69694170b9c5c51700a2250d624324c621706a4"
+    },
+    {
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "bytes": 21415,
+      "sha256": "0e0f32313f39f3784c196b0bb402053f3aae397e8a753cb416daf31a172b3952"
+    },
+    {
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "bytes": 28138,
+      "sha256": "82ebb254dc653c6720deb0e37c0c113dbe2c92c7a3d7aff32c4ac4fbf6445c91"
+    },
+    {
+      "path": "rtl2lean/temporal_challenges/foundation.py",
+      "bytes": 7015,
+      "sha256": "1dffc3ae89d8cb8a18b9f681fed1690dc2e0726a8cf3473805c50ae847d7bf79"
+    },
+    {
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "bytes": 9846,
+      "sha256": "6097f95d089aafff4468b1477c7797c583a3d19b1c242f51d2dd78f77c223c55"
+    },
+    {
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "bytes": 24768,
+      "sha256": "34884af768dee807e393a151ec718969879b7d1f617e3cc2027e7a8ced47314d"
+    },
+    {
+      "path": "rtl2lean/theorems/__init__.py",
+      "bytes": 204,
+      "sha256": "ff2d0500285d77938bc21a9574d8b7620afccfa179b509c55dd2dbbd6c9d30eb"
+    },
+    {
+      "path": "rtl2lean/theorems/generator.py",
+      "bytes": 19447,
+      "sha256": "17c7ea39cf3e479106455fbe264bc8fe20418b8023730873546be8cf1292cc2a"
+    },
+    {
+      "path": "tests/adaptive_proving/test_adaptive_proving.py",
+      "bytes": 7521,
+      "sha256": "d9bb7b56fca64709b4263919abbad06674bc89f76f637f6f2b8262e56c5b5076"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 1648,
+      "sha256": "4b5731b317704c0b276ba963d6bd93fceda0a559dc420ddd046bcdaa4850f1e1"
+    },
+    {
+      "path": "tests/foundation_first/test_foundation_first.py",
+      "bytes": 7676,
+      "sha256": "b0bc7e9f40ae8714a6481a639f718823f3ba9f33c7f3b7c74a6ff677d45a79cf"
+    },
+    {
+      "path": "tests/test_boundary_evaluation.py",
+      "bytes": 8664,
+      "sha256": "29886b116ce577577dffdb34a05fd0b162177b6fe5d9077a4357f56496c3e85e"
+    },
+    {
+      "path": "tests/test_bridge_discovery.py",
+      "bytes": 6630,
+      "sha256": "fbbe7c1781e2a6baf4582c4217f236d19a5eb33393b99b3e5c83ffcf230356e5"
+    },
+    {
+      "path": "tests/test_challenge_suite.py",
+      "bytes": 776,
+      "sha256": "6712b6cbe11d5ed00325038d806d37e09fd157c09f1552b502d278d5856e5870"
+    },
+    {
+      "path": "tests/test_codegen_theorems.py",
+      "bytes": 1840,
+      "sha256": "7c0db73d4beced123ab2bef31564eed930569704b4b8ef3598c8c924625de8e7"
+    },
+    {
+      "path": "tests/test_compositional_proofs.py",
+      "bytes": 3402,
+      "sha256": "042c6fca06b8a47c7d521e33af52a7fa3f3bda70723620ed8ef8f31221077753"
+    },
+    {
+      "path": "tests/test_dependency_audit.py",
+      "bytes": 5584,
+      "sha256": "0b9020bfbabb7e9bbcec7b378853fed41ef3b51426d3c5b223ed4c3bc32be58a"
+    },
+    {
+      "path": "tests/test_design_suite.py",
+      "bytes": 2989,
+      "sha256": "d00ecc7a5d1fd7df7a29f01b57fbec8bc9c5c5f36248235894fa3b29b5f17194"
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "bytes": 3923,
+      "sha256": "a79e7cea600b9b11e91eaa115cbee9353d6cc8325339ea1567239a162638755a"
+    },
+    {
+      "path": "tests/test_frontend_ir.py",
+      "bytes": 4536,
+      "sha256": "3e2a652e36e9ccb7622205dc5f48f90aab1c751781a9dd1a864ebfe8528599e5"
+    },
+    {
+      "path": "tests/test_hypergraph_guidance.py",
+      "bytes": 3681,
+      "sha256": "2ea2eb7607bb74b1ca05479055d380d27394cdd17d748f0e92aca06381e28804"
+    },
+    {
+      "path": "tests/test_model_calibration.py",
+      "bytes": 5322,
+      "sha256": "2456dc8dc5e226991f49bd551356da8e716fb0cde0d6853b043d8db0c33afa2e"
+    },
+    {
+      "path": "tests/test_model_comparison.py",
+      "bytes": 3171,
+      "sha256": "cc905a033ba25b2bf6b4ec13c1d4f1efea2e2d91edcd5fe6e1fb53ee6bb0fc36"
+    },
+    {
+      "path": "tests/test_multi_phase_proofs.py",
+      "bytes": 7167,
+      "sha256": "6af6291ad467c031229fdf20f48a4c7fcc9999aceea37a68f4a54443b9b9aebf"
+    },
+    {
+      "path": "tests/test_pool.py",
+      "bytes": 1475,
+      "sha256": "4005f647596e132df28e04fb66bf8980e16a5225ea133a1eea61806ae0f4afec"
+    },
+    {
+      "path": "tests/test_proof_gaps.py",
+      "bytes": 7103,
+      "sha256": "fcba9e4a5907337e8c7e54ca76da4bb546b9037d5d631b8076bab183d309c08d"
+    },
+    {
+      "path": "tests/test_release.py",
+      "bytes": 7209,
+      "sha256": "2e06e95d16fc42a46d7742573c636f0d5e4014612d147f7698ed84685b56af44"
+    },
+    {
+      "path": "tests/test_scale_evaluation.py",
+      "bytes": 7421,
+      "sha256": "152c3c92dc932554920576d7e120c255897e61dd037c100c2cea5c9843e20524"
+    },
+    {
+      "path": "tests/test_syntax_check.py",
+      "bytes": 1351,
+      "sha256": "ef11fd448ad73f42551cb9fedaf86ec7b00951750013483025e360688b3745c0"
+    },
+    {
+      "path": "tests/test_temporal.py",
+      "bytes": 4146,
+      "sha256": "633d7cbc4d8a48fb6bbc6b819298b7cfeaa52007205d1effd44dfc4c4327ee40"
+    },
+    {
+      "path": "tests/test_temporal_challenges.py",
+      "bytes": 2130,
+      "sha256": "04b66d4bc90257208cc5348dc844c793908d7d47aa0991002d1bd7084d0775a9"
+    },
+    {
+      "path": "theorems/models/aes/Foundation.lean",
+      "bytes": 552,
+      "sha256": "d49fd8f61db5526ccaea2cd13a3cfd910650c6630dbe6ee2c760c8440ff90c17"
+    },
+    {
+      "path": "theorems/models/aes/Framework.lean",
+      "bytes": 6841,
+      "sha256": "629498d2873fe0066a19d0cb971990d6f05d58d5411f875fdaed46921859e1ad"
+    },
+    {
+      "path": "theorems/models/aes/Model.lean",
+      "bytes": 369002,
+      "sha256": "28973067b48678b37f9bf5aa5058dd950c9ee98b779e2ea9d482c0032889a8db"
+    },
+    {
+      "path": "theorems/models/aes/R16Support.lean",
+      "bytes": 2261,
+      "sha256": "c2c8cd87418e92cc7b740907e292dc0d00f7b9fb08243d68742ad3326a527c4b"
+    },
+    {
+      "path": "theorems/models/aes/R17Support.lean",
+      "bytes": 651,
+      "sha256": "aa7005ef4f7ddc35f733e0e73cf0a2ebf63024e947b83da8fc5d23c0ed1cb415"
+    },
+    {
+      "path": "theorems/models/dma_axi/Foundation.lean",
+      "bytes": 806,
+      "sha256": "b4efa3c2bf6dc2bf70c7c19abde7b404fd64b299be33bc559d042565033b9a75"
+    },
+    {
+      "path": "theorems/models/dma_axi/Framework.lean",
+      "bytes": 9246,
+      "sha256": "27b3cb5f00c559cd1e2702cb786e0f3eae9825dd9b3dd8b218134ba6b8e7c271"
+    },
+    {
+      "path": "theorems/models/dma_axi/R16Support.lean",
+      "bytes": 2852,
+      "sha256": "f9f2950d5a4f301243a66bee6dac0ea4bc797d8a99eb6005bf1be80f324295d0"
+    },
+    {
+      "path": "theorems/models/dma_axi/R17Support.lean",
+      "bytes": 781,
+      "sha256": "11966287ff2f0481c948bb83ffa141613491470bf9f41ec21a0debbcf0170f93"
+    },
+    {
+      "path": "theorems/models/ethmac/Foundation.lean",
+      "bytes": 667,
+      "sha256": "d26ee5cc0844dd0ffc2dfc71850df6408c113064d0f455f6e98daf3ff044b1cf"
+    },
+    {
+      "path": "theorems/models/ethmac/Framework.lean",
+      "bytes": 7617,
+      "sha256": "7417758f681826d92ad99dbbb0b3450cd3a13a6dd1034b165f394dae9e97d0f3"
+    },
+    {
+      "path": "theorems/models/ethmac/R16Support.lean",
+      "bytes": 2121,
+      "sha256": "402592ba4538b26eedbf4991caa141bec7cf1fdd0989506c6bbcc847e832d7ec"
+    },
+    {
+      "path": "theorems/models/ethmac/R17Support.lean",
+      "bytes": 625,
+      "sha256": "238f07885c35d42ea48b372ac182c117333976c67343677065576e311d08aff0"
+    },
+    {
+      "path": "theorems/models/modexp/Foundation.lean",
+      "bytes": 582,
+      "sha256": "ee392c2cce6b30c91eb473a46edfa4689eb2ebe44609f1f049a2a17fe45f7b8f"
+    },
+    {
+      "path": "theorems/models/modexp/Framework.lean",
+      "bytes": 7549,
+      "sha256": "354063788a226bfcc05a734c2dc43328f8f9387cbb924d00ca03e3fd3be5f5ad"
+    },
+    {
+      "path": "theorems/models/modexp/Model.lean",
+      "bytes": 184766,
+      "sha256": "3367f08e6031da23eec96094214e6cbbcbd9281ec196e286be6cd1879ed2809a"
+    },
+    {
+      "path": "theorems/models/modexp/R16Support.lean",
+      "bytes": 2409,
+      "sha256": "537078a6178ce1d2ea557b03c28ba6cffe4763661747a429f354352a61069911"
+    },
+    {
+      "path": "theorems/models/modexp/R17Support.lean",
+      "bytes": 690,
+      "sha256": "ddca5e001eb76a36f9d2cdadc9c9a25d166e555b6d0e77e13a1caa87108a6ba3"
+    },
+    {
+      "path": "theorems/models/picorv32/Foundation.lean",
+      "bytes": 547,
+      "sha256": "c98ea8a7daf072decb0aa61db54f051b45d6fbdd86f4186056031e57cd248176"
+    },
+    {
+      "path": "theorems/models/picorv32/Framework.lean",
+      "bytes": 6833,
+      "sha256": "19ddfa5fbe9e0dff8fe2bbfca16ebd2366d742555cd5187e97e8b1b14dbdcae7"
+    },
+    {
+      "path": "theorems/models/picorv32/Model.lean",
+      "bytes": 154222,
+      "sha256": "30bffdfcfceae67d65a7009cd496a824ca28ed369b3703a2aee7ea0795ca2542"
+    },
+    {
+      "path": "theorems/models/picorv32/R16Support.lean",
+      "bytes": 2227,
+      "sha256": "376d050f064e4344a663be20122c45aa86adaf9c9b98f628d2f8c5c09bfe6194"
+    },
+    {
+      "path": "theorems/models/picorv32/R17Support.lean",
+      "bytes": 651,
+      "sha256": "e708aae56dbba63399ca71cc57abcc746205e5dd6d9ff0ea10a5435dfe949905"
+    },
+    {
+      "path": "theorems/models/serv/Foundation.lean",
+      "bytes": 587,
+      "sha256": "b225d16e16c34121beb1b9ae5f5c0afb39a89c9cb92921a96e5db6b8506bf155"
+    },
+    {
+      "path": "theorems/models/serv/Framework.lean",
+      "bytes": 8925,
+      "sha256": "225b8a2b8a503ccc680de1dfd8244234e0653c4569e4d0f036ca0a5ba990b1c9"
+    },
+    {
+      "path": "theorems/models/serv/Model.lean",
+      "bytes": 266022,
+      "sha256": "bfea4635bfbbe037ec76a155605fb3d1e9da763e1ecad562940711fa34ba45cb"
+    },
+    {
+      "path": "theorems/models/serv/R16Support.lean",
+      "bytes": 2431,
+      "sha256": "da3b89f2f92f36d19b16944a4003882768db060ba3ba4432fc755e2e57b304c1"
+    },
+    {
+      "path": "theorems/models/serv/R17Support.lean",
+      "bytes": 690,
+      "sha256": "862ca49dbcbe717d4bc22cf842e95f1d1d7c83c765cba9b23cc940ca695dbf1c"
+    },
+    {
+      "path": "theorems/models/zipcpu/Foundation.lean",
+      "bytes": 544,
+      "sha256": "726d9494c3740021af0cfef7e390491687c06cec2b98cfe577669da478531a6a"
+    },
+    {
+      "path": "theorems/models/zipcpu/Framework.lean",
+      "bytes": 11171,
+      "sha256": "816f3e344e862b09b730248a941cf145123238aa2a680d9a0c8e243a01ac80d2"
+    },
+    {
+      "path": "theorems/models/zipcpu/Model.lean",
+      "bytes": 242119,
+      "sha256": "97fb106a7f5a5ac542d25ffd4b9960e63562480bde593d0e05eab973cd955148"
+    },
+    {
+      "path": "theorems/models/zipcpu/R16Support.lean",
+      "bytes": 2229,
+      "sha256": "7352fcf743f33243a795e41c5e46e28fdafce513590305155e4210643250907d"
+    },
+    {
+      "path": "theorems/models/zipcpu/R17Support.lean",
+      "bytes": 638,
+      "sha256": "8121bbfa439507eabffaefa5b108efbeb6c9135e781957a2c15acc93aee81d14"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_01_d_all.lean",
+      "bytes": 1016,
+      "sha256": "b2ae30a553298c259ca1c5f23b04f1f476922ba12104894193ab7a77cc560db7"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_02_s_two.lean",
+      "bytes": 1236,
+      "sha256": "d8dafe415fd06bb69d90f47cb90c471b8857f84c5599320091e09aa303b77eba"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_03_t_always.lean",
+      "bytes": 1293,
+      "sha256": "9fc015bf62a0c495916243e77ac1975490bb8d242050b48b7e48d9ff3c3f793d"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_04_r_invariant.lean",
+      "bytes": 1420,
+      "sha256": "9e7d6943b3d18d13118c41a331999c1456db7fb32515648a8e7fed9a37c42da1"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_05_w_two_step.lean",
+      "bytes": 1327,
+      "sha256": "057b983aef915c37f794fd444375a632324d9bda71bb4dca7b79102ec1773302"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_06_d_split.lean",
+      "bytes": 1057,
+      "sha256": "bb350570f1fc9dc864d7772e6eafffec3dff7646b078c93b51431f11b4d3d91a"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_07_s_three.lean",
+      "bytes": 1454,
+      "sha256": "0b231723d62258d2f6f71f87ce807995df44da52f60a6cdcf8a6cdec42e1f179"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_08_t_double_always.lean",
+      "bytes": 1655,
+      "sha256": "49232b1e15f0dd68db62e0e98463e8c72d94667ae428049535772900a22cf1dd"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_09_r_prefix_extension.lean",
+      "bytes": 1303,
+      "sha256": "fabcf35b3f832a39ae14cd37d751b031b082d0996a943e63833f0589812a2610"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_10_w_two_traces.lean",
+      "bytes": 1309,
+      "sha256": "23cc68381cc9e766224aacc623d87e75daa39b6462e5133edaf368d92e59b145"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_11_d_cross.lean",
+      "bytes": 1171,
+      "sha256": "126ca0b7b7b059cac8abcb97a8894f8afe06f9ef48a171364eb8ff9d6a01b8d8"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_12_s_prefix_two.lean",
+      "bytes": 1396,
+      "sha256": "ee28a3675ca9a02d08e70ad2923aa7cec3ccdd97a1237374184fd849b92d4dda"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_13_t_always_eventually.lean",
+      "bytes": 1471,
+      "sha256": "5532a50b2349886953508ce93487bf200b94b370d90cb22b4a3533811c04b626"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_14_r_dual.lean",
+      "bytes": 1245,
+      "sha256": "42019bbb54bc3f6bf6a46faf56df2a2ba96fd312413f04c3dad53f52a24229f3"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_15_w_trace_invariant.lean",
+      "bytes": 1555,
+      "sha256": "2926c8e0edec576b9535de7eca58fa1c33a57a3c2665e55956f369c9aa4b8592"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_16_d_nested.lean",
+      "bytes": 1127,
+      "sha256": "1ccec89311a3db1c958ccee0ef987b6a6086833c906f7e4a31eb931125d88527"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_17_s_dual.lean",
+      "bytes": 1185,
+      "sha256": "a8ee1d5c8510d991db451c4553b22cdcdebd488f55a02f99cb27d5898fcc4a6f"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_18_t_until_bounded.lean",
+      "bytes": 1304,
+      "sha256": "e96575425486431f4ac63be20200ac5d065c5e2a9cdb32d238ab489fd7ac622c"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_19_r_double_invariant.lean",
+      "bytes": 1758,
+      "sha256": "c090d89832c6ed454c357b86be4443d1d743f14daeb17db3000fedd9d94475a5"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_20_w_states.lean",
+      "bytes": 1285,
+      "sha256": "c789440013fdafc36c6b7bcd7edcaa8e113a11053f064832352698444ba318b7"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_21_d_successor.lean",
+      "bytes": 1141,
+      "sha256": "14658e15ddf6ba2d7daaec8499a157a60d7b300433a03e27db7be24b05661554"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_22_s_cross.lean",
+      "bytes": 1309,
+      "sha256": "0129e7bfd1a33d4e398ff3c8f574082a5cc6262e56ef31e940dc26ffb4294943"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_23_t_next_eventually.lean",
+      "bytes": 1188,
+      "sha256": "6f0a6e1239d87c20e26aa1154e054d24fd5201038c208603ead4a8b34e8e4dba"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_24_r_nested.lean",
+      "bytes": 1327,
+      "sha256": "a1c17a8e74228dd6d20bef88d3798d895361335cc44c7b9528fef2e7050a79fe"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_25_w_split.lean",
+      "bytes": 1327,
+      "sha256": "ac644e486a134370d0d66224e32685c316bee1a4e70ad5ff71b544fbf8f09a07"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_26_d_quad.lean",
+      "bytes": 1209,
+      "sha256": "0ee289aa90a7ec87244dd7d38e9090dcb04de1446d545d254cca997c6ae7c0db"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_27_s_prefix_three.lean",
+      "bytes": 1572,
+      "sha256": "7417cab388c652aecc9f70e5204fd6fb104e03c1144dfa4b11ec51c9e1cb16d7"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_28_t_append_always.lean",
+      "bytes": 1340,
+      "sha256": "a311fbf96f9a61985d44ae12a797eec1a8bdcd1243c9d194b5b7749faed377a3"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_29_r_temporal_suffix.lean",
+      "bytes": 1243,
+      "sha256": "275af4b858ca8440350fb177b74fdb8dfd01d7d21ecf09f0310ea91b33e630cb"
+    },
+    {
+      "path": "theorems/reference/aes/r17_hard_aes_30_w_temporal.lean",
+      "bytes": 1294,
+      "sha256": "daaf99d518c851313e57423604af9d29ae564fc370a609d332a913264e57d104"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_01_d_all.lean",
+      "bytes": 1019,
+      "sha256": "2a7ad5061ebaa066d286cf64180f48ab4a4dbd0a50017fd0da9e67efec3aa244"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_02_s_two.lean",
+      "bytes": 1214,
+      "sha256": "ff8af7f7e01b4650ae7e733ed20c94fa9ecca34807f3432d056b28194cf697e7"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_03_t_always.lean",
+      "bytes": 1272,
+      "sha256": "f377f3e31b6567b12c258e0fb5396548628234376a2c2bb2ddecc6333d58d0ee"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_04_r_invariant.lean",
+      "bytes": 1383,
+      "sha256": "7ab4bfec46a0b04b915eb4e5f45fc8fc9d1046cff52bcba54780aa91a3040910"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_05_w_two_step.lean",
+      "bytes": 1305,
+      "sha256": "d83ed8489ae1bdd112fa0981b18100cb2eee7c42c1dc5633001605d542f1bbb0"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_06_d_split.lean",
+      "bytes": 1060,
+      "sha256": "e3a3475f84b18afe4dc9f67f1bc7c6fe05170c830dcb385de7506f24216a56e1"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_07_s_three.lean",
+      "bytes": 1377,
+      "sha256": "628509be2b527026312e15f9b465c52f320dfa46cb91b87b9f6d38ba96d6def7"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_08_t_double_always.lean",
+      "bytes": 1610,
+      "sha256": "c3e703f623cb0a28bb99b67ae8550e33a431aae980eb06e1ee356ff9c2b1896c"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_09_r_prefix_extension.lean",
+      "bytes": 1281,
+      "sha256": "e812bff4015671816c4b69a0e01b0e6e5237c352b688220427bafce3f50f9fa2"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_10_w_two_traces.lean",
+      "bytes": 1297,
+      "sha256": "4511b8666f717476026fd084958f5d008af2e345b25f80d429cadbcabee92681"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_11_d_cross.lean",
+      "bytes": 1174,
+      "sha256": "381a1eecf8dc7a0758b287e8beb800af3e6fc52569d5fd12a66e92cc77a0f692"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_12_s_prefix_two.lean",
+      "bytes": 1343,
+      "sha256": "d72e18608b6a0632657058aad0dc6889e6901453f3c21421477dd454f7ac5115"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_13_t_always_eventually.lean",
+      "bytes": 1454,
+      "sha256": "dbd35198a41f72ce79e8e4202545fd3210682e24393826e287d706ac35c77e5b"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_14_r_dual.lean",
+      "bytes": 1222,
+      "sha256": "afbbd861209ee259b322f2e0ccad90297162eb3dd7ad1d7d6da48190e464424e"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_15_w_trace_invariant.lean",
+      "bytes": 1510,
+      "sha256": "8d561163024271961f92c240c1ea1dd8be9d07fd65b17e3c44c419017270275e"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_16_d_nested.lean",
+      "bytes": 1130,
+      "sha256": "478ceb3aefcd27e4b68282c64739e57be3e260d352f5137ae3b4056eacab1438"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_17_s_dual.lean",
+      "bytes": 1168,
+      "sha256": "c121a72defe85ceae10ac7d7e0314629c1f4c369fa4d68331a19b80f7e6b14e4"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_18_t_until_bounded.lean",
+      "bytes": 1297,
+      "sha256": "5d2826b4b9506696dd82cab0aa72ddff7ac0fb2e5257f8bdc35ce6ef8c505cc0"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_19_r_double_invariant.lean",
+      "bytes": 1697,
+      "sha256": "94c3884b3c98ea5164f4bd725a3b27bbbabf67d170be1c92184d28bae3443fa6"
+    },
+    {
+      "path": "theorems/reference/dma_axi/r17_hard_dma_axi_20_w_states.lean",
+      "bytes": 1248,
+      "sha256": "16df9ab416c6e6e3c0748d2900a702d77c91ee9036def88cab1d7d41d6d34da7"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_01_d_all.lean",
+      "bytes": 981,
+      "sha256": "f3ba172660513b2ff92de94f6eab52585d14f99c7552562b8d3f4d3c4a6138ff"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_02_s_two.lean",
+      "bytes": 1181,
+      "sha256": "234a2e8180a096a25d91dd49ba96a001264df092956e478518dfe2c40de9079e"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_03_t_always.lean",
+      "bytes": 1240,
+      "sha256": "57f3c698c1ca23f2fa36940b359e1f3ca47dc756fc340197c99c4eeb439944f7"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_04_r_invariant.lean",
+      "bytes": 1355,
+      "sha256": "dce27fbe14520f0772004b86d2e5868aa74973404289c933add6c4a0b5183dcb"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_05_w_two_step.lean",
+      "bytes": 1272,
+      "sha256": "bfd0d8654d96a7641e2b5f960e71142bd1df20e27614c64c13902b077f61cb3c"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_06_d_split.lean",
+      "bytes": 1022,
+      "sha256": "0d8ceb2142b4f896de317c30a6c574315608cfa507d3d24aac622b5e13fd4aea"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_07_s_three.lean",
+      "bytes": 1359,
+      "sha256": "0099952871ee0373665bddf1f8449f8c200165d07c32e7bc5c9d6bd83c9f885d"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_08_t_double_always.lean",
+      "bytes": 1584,
+      "sha256": "daabb4b459744be1ddf577562213943e26fd70fbfc6a02f1cbc336c455511e21"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_09_r_prefix_extension.lean",
+      "bytes": 1248,
+      "sha256": "20c7dadd0516e1906ab43232be34ea0c39ddbaf967e51e57f2918512c69d7e7b"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_10_w_two_traces.lean",
+      "bytes": 1262,
+      "sha256": "f261233ac1e238c05ffde662bb63984796776319aef0682aeb006ca4a2741f3e"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_11_d_cross.lean",
+      "bytes": 1136,
+      "sha256": "f96ce8c4e3051b43264adccd899cb2891207cab24698bf7366358eb0a3d7c5c1"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_12_s_prefix_two.lean",
+      "bytes": 1319,
+      "sha256": "d2ba2e95454e16a6c2a50e0c507b8f3c7f508ced229d2c6bb521073fd6d49db7"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_13_t_always_eventually.lean",
+      "bytes": 1420,
+      "sha256": "d7d63f776218a01e266cb0e7244095a937430fd69f0e2ba753e2250e43c1fdb3"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_14_r_dual.lean",
+      "bytes": 1190,
+      "sha256": "9cc36582ca443bd8528588373fcf881813513074a60ab22911a5140b2f92706c"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_15_w_trace_invariant.lean",
+      "bytes": 1484,
+      "sha256": "6b174685a728689675de7f8cbf627d84c8f6a9cd95b480a3748463ce6a3a62b9"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_16_d_nested.lean",
+      "bytes": 1092,
+      "sha256": "be818767d93cd08b3f1f3cc834022d87d6319d97fd755844252df0aeb82fa92d"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_17_s_dual.lean",
+      "bytes": 1134,
+      "sha256": "c69aec60ad4e39d78c760efeb1ab97a03b1ee42ac7e43b44fe01fe5343c29ddd"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_18_t_until_bounded.lean",
+      "bytes": 1261,
+      "sha256": "b48c08499561821fc60caa09be267fa2efab8bd337c7b5028c09801c21bb9ae4"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_19_r_double_invariant.lean",
+      "bytes": 1675,
+      "sha256": "3da2c33f886610694844f1aa75cdd560d8bcc0d848b3db93572d02316755b515"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_20_w_states.lean",
+      "bytes": 1220,
+      "sha256": "d99b7493d0344207e3427e52c3d10632662c92b35f5529e1c3580723a2c21f31"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_21_d_successor.lean",
+      "bytes": 1098,
+      "sha256": "f313bfaeaf7c3f372301e537d50b5ff44ffab784d5552c214915b60451271471"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_22_s_cross.lean",
+      "bytes": 1250,
+      "sha256": "a13fbfc14507aba6f3d96ee2f460d925050e7aa1961d0431e8b2740b225777fc"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_23_t_next_eventually.lean",
+      "bytes": 1141,
+      "sha256": "39a1681a9540b3eee4ae434579a51826c3aa0f51b950fc338412f689da673f69"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_24_r_nested.lean",
+      "bytes": 1262,
+      "sha256": "097e39af914f1065b237a629c8aade8f263aa9ea03499e30530c03863a0fa838"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_25_w_split.lean",
+      "bytes": 1272,
+      "sha256": "6c3f6d60b814d8463e192639e738ef813dd2fe898e7206e226ff9cc1d74f5d45"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_26_d_quad.lean",
+      "bytes": 1174,
+      "sha256": "8388a8c949d492246bb9a8e7ca8b3b06c85fb0050fd2584e17fa5ed7b0d2d629"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_27_s_prefix_three.lean",
+      "bytes": 1471,
+      "sha256": "001ba3df52eca1811eeda10a774eefb499539107d2a42099ea83c9d8cdc82b85"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_28_t_append_always.lean",
+      "bytes": 1287,
+      "sha256": "c9a04b52de2202d27f27481ad2ace284cc7a13dbc6d609c40514301d7c452fab"
+    },
+    {
+      "path": "theorems/reference/ethmac/r17_hard_ethmac_29_r_temporal_suffix.lean",
+      "bytes": 1192,
+      "sha256": "3b48c64700a6680069976b54a157208be123eae6497202084c913d1ca792d022"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_01_d_all.lean",
+      "bytes": 949,
+      "sha256": "427df57adb99730e5f7602ae17346982d350310468fa75d227476f33ff846033"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_02_s_two.lean",
+      "bytes": 1124,
+      "sha256": "0941ae6ed2ebaa9fb727c9b775a9d6e77f3881f4d7b4132069688fb87b965e80"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_03_t_always.lean",
+      "bytes": 1190,
+      "sha256": "58636383e99bf5372bf294b507ba882d845b1186b05f535926d1b6e3878362f6"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_04_r_invariant.lean",
+      "bytes": 1293,
+      "sha256": "e2abc8eaafc96d54ce4728337850333e3538e2c65136f7f9400b07b8da7a9335"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_05_w_two_step.lean",
+      "bytes": 1215,
+      "sha256": "6a015a8ea90385f918eb6620b030b6709ef938b15b43ce19a2900a38c28af087"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_06_d_split.lean",
+      "bytes": 990,
+      "sha256": "c95278d6f7a5ec6a4e5f0546865342f6320eacf82ad36bf34d64db7ddd48e7a7"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_07_s_three.lean",
+      "bytes": 1267,
+      "sha256": "c9efe102ee83cb95bba0667e426c6dcc5956745134712368d030a354e0e1a9aa"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_08_t_double_always.lean",
+      "bytes": 1516,
+      "sha256": "506f5b79681d663c1b1ac00966c8cfa4f3a1a47b81e43eb8c2698eca898efc4e"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_09_r_prefix_extension.lean",
+      "bytes": 1191,
+      "sha256": "64fd7851611a0d7c6de9506eefb4ce6e1a7d6a908f8b0f7e3e37b7eb1c48a9ca"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_10_w_two_traces.lean",
+      "bytes": 1215,
+      "sha256": "0456ca47571226b37a6eb16f46b3d62bb765cdc4dfd072273e8478cee77ae14b"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_11_d_cross.lean",
+      "bytes": 1104,
+      "sha256": "11d7c2ed8a58e091dfc2f5c5490f0f934cdd2ad5c75021841a0b4d9af4e94008"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_12_s_prefix_two.lean",
+      "bytes": 1245,
+      "sha256": "c416d364a5af0ebfc2bf87c3499770c7ed38ad6ce12142628e308a3aa5e6a7af"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_13_t_always_eventually.lean",
+      "bytes": 1368,
+      "sha256": "6815ea3b1bad448bba13fa61eb5777031fe05febd58ff07f423342d6c9121a34"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_14_r_dual.lean",
+      "bytes": 1136,
+      "sha256": "3e316b45d305421abcb02fbe2e93e57b4a237b79933aadf828823cf8df567ade"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_15_w_trace_invariant.lean",
+      "bytes": 1416,
+      "sha256": "89391ad26d8a394d02ac3f54774918d3975f088ca86de40be9a4d12256ee387a"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_16_d_nested.lean",
+      "bytes": 1060,
+      "sha256": "eb887b5b03d5c5af25b28f8316b186618688e827ddff056ab43a2e89c02b19a7"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_17_s_dual.lean",
+      "bytes": 1082,
+      "sha256": "46ba40f7f025198f4701b95885ac53361fc588a9eb936cc33ed612b595013626"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_18_t_until_bounded.lean",
+      "bytes": 1219,
+      "sha256": "5d97db25fdb90397fa4dea400a8281fdac43f0a93866f56b17f9f434b61e7903"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_19_r_double_invariant.lean",
+      "bytes": 1595,
+      "sha256": "beee615980577e262856efc3f48d47bcd8e2c08b76d95ae94b9ac54413fa5212"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_20_w_states.lean",
+      "bytes": 1158,
+      "sha256": "80a7114aee7e4544609059214091d90051c3c561eb2cc4ef457472d7064fd224"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_21_d_successor.lean",
+      "bytes": 1056,
+      "sha256": "678b170c0b9d2428ff3dc641aee8caf9e87e812e2c46a5282b0921fc059fc03f"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_22_s_cross.lean",
+      "bytes": 1188,
+      "sha256": "b03c338888ee7fdff9243c05bc4f212ba86158e3aaa5017d62f3b34213e02940"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_23_t_next_eventually.lean",
+      "bytes": 1097,
+      "sha256": "e3f5f528450e337af8ce52dbc39055be85c524956fd7050dfcf7926d816600bb"
+    },
+    {
+      "path": "theorems/reference/modexp/r17_hard_modexp_24_r_nested.lean",
+      "bytes": 1200,
+      "sha256": "fe73f51037918e752529827326a45d08ff79ead5a201b1c365f4ca3f6fb8334f"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_01_d_all.lean",
+      "bytes": 991,
+      "sha256": "a1ce9c4204514137891978497496d4255fcae4a7173deba6664f4ab09d4732b5"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_02_s_two.lean",
+      "bytes": 1206,
+      "sha256": "a640d7c67a5f63a646efa1b29b60c8728b9391bb63815c634716b31b70bc3101"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_03_t_always.lean",
+      "bytes": 1253,
+      "sha256": "6c7b1f79f014e61db5fbc3e7176e8b11d0c16592df250c95bf494d799071b52b"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_04_r_invariant.lean",
+      "bytes": 1370,
+      "sha256": "d492dd5c59be58b31a8b465c9466d3de9ac5a80ac89b4d68ab0208f7911f69cb"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_05_w_two_step.lean",
+      "bytes": 1297,
+      "sha256": "75091c304620231cb64a2ce2770c9865232fdf1d4f2736a4a1758d67fbbfc926"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_06_d_split.lean",
+      "bytes": 1032,
+      "sha256": "6b6579d5c902ce9e3198503f3f4be2610292904c95f26c21d6227e0b51068a49"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_07_s_three.lean",
+      "bytes": 1379,
+      "sha256": "bb39745a475560c7139663b649235603bea102c89158f60ac1a08e8628f6b0ff"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_08_t_double_always.lean",
+      "bytes": 1600,
+      "sha256": "93e68d03ceed255da520ba8d2c6b838e519a22dcb290f5026525ad7c0b2b2b56"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_09_r_prefix_extension.lean",
+      "bytes": 1273,
+      "sha256": "294526b7c2f53900a04d2235cf6fd9ce4081991833336f1aa12810041ebc9ea4"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_10_w_two_traces.lean",
+      "bytes": 1281,
+      "sha256": "6b9bd9c762778a54ec23bab7da537bcf540542593c8ff895277bc4fc20ec57ec"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_11_d_cross.lean",
+      "bytes": 1146,
+      "sha256": "ac3ddbbed7ebd4af7409a0e32d82561bf97bb32c6502afd4896accd6be220ae4"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_12_s_prefix_two.lean",
+      "bytes": 1336,
+      "sha256": "26a0e050e5c1e94e1f72ef040ed71551973af060a9ba8067c69e3bf7bf0e581e"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_13_t_always_eventually.lean",
+      "bytes": 1442,
+      "sha256": "bd803477fec9978d3c8cffb3c49dfaa0279b2c6e64d2403fc3ff1695112269f6"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_14_r_dual.lean",
+      "bytes": 1208,
+      "sha256": "5a9a06195995eba0f54519012593e436d3deea3f633c22221aca75be38d55164"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_15_w_trace_invariant.lean",
+      "bytes": 1500,
+      "sha256": "c515d9a76dc088ad39eeabaad550d11933eadfff6c7a521d013f1b7d2baa4452"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_16_d_nested.lean",
+      "bytes": 1102,
+      "sha256": "e3e48bc270de30954d6288fcb8382cd212713bff3a5088e79ad575bd3950824c"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_17_s_dual.lean",
+      "bytes": 1156,
+      "sha256": "2645fc9b9e58f1e50a89738cc1d1d00467f5caddc61d035bd6a411a029ccb21e"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_18_t_until_bounded.lean",
+      "bytes": 1277,
+      "sha256": "6bea1fd85b0b75d13bfa589264687fbfb755b4744a33456c83e0d2db27edf25b"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_19_r_double_invariant.lean",
+      "bytes": 1693,
+      "sha256": "3152f20996f5fb7279fc33b092ac8ba0d91f8446a44c2ea72b914a1b629fa6a9"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_20_w_states.lean",
+      "bytes": 1235,
+      "sha256": "e18f5c6b1acb980f377391771793c32fe73b58406c5dc03625aee365627db8f4"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_21_d_successor.lean",
+      "bytes": 1114,
+      "sha256": "c845402c5522371a85b225e5620b5f9a3fac16fe038359f23abf466ebd80b8fa"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_22_s_cross.lean",
+      "bytes": 1278,
+      "sha256": "b8e3b4f24f83a00c3a60b8af181de9b2ace244e05cf1dbaaacfdf4b91ed5d400"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_23_t_next_eventually.lean",
+      "bytes": 1153,
+      "sha256": "56a824dc878c0bc63c9eac83af7d531ed3a750dd07f619bb27d35a51f88b5e0b"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_24_r_nested.lean",
+      "bytes": 1277,
+      "sha256": "edc6f2a0139e42e178d8684ba026bb67adafd9bd9ac290fa87558e2097632ee3"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_25_w_split.lean",
+      "bytes": 1297,
+      "sha256": "edc32d49fe248347efb7b31778e91d3aade55fa0471aa1652ae8c9f0457ab364"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_26_d_quad.lean",
+      "bytes": 1184,
+      "sha256": "b9495a5d8e53e91f1a7ed717aa9cbf13f541f116625fe17efec4c86c62a50368"
+    },
+    {
+      "path": "theorems/reference/picorv32/r17_hard_picorv32_27_s_prefix_three.lean",
+      "bytes": 1492,
+      "sha256": "51c7d02d5638621702f9c826ada89d8ee3cd075e3ea595c56d044885bf585011"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_01_d_all.lean",
+      "bytes": 1028,
+      "sha256": "623166d6727273ccc2e886592c9a5daf8dec9bae938689b840f38098f635e787"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_02_s_two.lean",
+      "bytes": 1258,
+      "sha256": "f3ef219a5eb857dbabc6b45a4ef6947ab5ead56cc5951bc387b70fb0777bc34d"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_03_t_always.lean",
+      "bytes": 1299,
+      "sha256": "9814aecc3d125f1dbd7cba29586efa5622b8cac96dd62b06f927b0886765c177"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_04_r_invariant.lean",
+      "bytes": 1422,
+      "sha256": "b8aad3586fd555ef78a5a997c2cde9936aeff3e436ee96042845dd02778d7b09"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_05_w_two_step.lean",
+      "bytes": 1349,
+      "sha256": "c39875355056dc54860920c6fa8a3ec6c1a9c645a5c1da070752b55074cf489b"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_06_d_split.lean",
+      "bytes": 1069,
+      "sha256": "c65629c9e970a9f61b11e09d84098a7827380f5e54a90bc1a93e662bef2c95f0"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_07_s_three.lean",
+      "bytes": 1446,
+      "sha256": "4108984874b3a4c18947f391baa766abcf556c70030691326ef00897f9949fe6"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_08_t_double_always.lean",
+      "bytes": 1655,
+      "sha256": "df5a0b68f7760e6f70af0cc4d3ed5c12030fccd506c8d79e9a921c14776a5a5a"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_09_r_prefix_extension.lean",
+      "bytes": 1325,
+      "sha256": "b9f94b1acad5d576316f72386dcdb4a9c0ed3d8f3aeac2b8b1db5e7a099c68ed"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_10_w_two_traces.lean",
+      "bytes": 1327,
+      "sha256": "9686ca5be95bb366c1d75718e86056675988a088b9616e0cc749a5fb42cde30d"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_11_d_cross.lean",
+      "bytes": 1183,
+      "sha256": "1498971e0fc9d23a0ef1a7526235504c04e5f25fc2fb759e9a716967608bd78a"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_12_s_prefix_two.lean",
+      "bytes": 1394,
+      "sha256": "d13b6a7f74243017b2e2bab817341d7716dc174f913b53275dad7a7589eaa853"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_13_t_always_eventually.lean",
+      "bytes": 1491,
+      "sha256": "d6620fa49ed2f0cd4b5c8f37ed7087189b101fe72e9ec3c30d2cb06e3a76833a"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_14_r_dual.lean",
+      "bytes": 1257,
+      "sha256": "cbfe945f5e50edff3b2c34ba76c26fd58d665f2c2c3dc777e785ccc0368d4764"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_15_w_trace_invariant.lean",
+      "bytes": 1555,
+      "sha256": "5c496cea47c0f5462d9277b21e1bbea20a718640842a62c29c9d44bb15cc4e37"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_16_d_nested.lean",
+      "bytes": 1139,
+      "sha256": "64fd2d9da807f4ae91a532d752c4d1c968d1b002f70fe30e61e76d029f0ae5b2"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_17_s_dual.lean",
+      "bytes": 1205,
+      "sha256": "5244a46c3fa7ffecc41f5980ff364b58a68514aeedce652fae7633bde88d857d"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_18_t_until_bounded.lean",
+      "bytes": 1320,
+      "sha256": "aaa4f3d3d25293756dbc0e0d7fc3b06eadf0b875111f789df74bb5ae72e8a32b"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_19_r_double_invariant.lean",
+      "bytes": 1754,
+      "sha256": "909f6418f49d8338bfb2937e1ee1058cb4db3e958056516d12cd6b1aa7824984"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_20_w_states.lean",
+      "bytes": 1287,
+      "sha256": "dba101949a78c9ce8e48e8369fb12185e5c899b2b5a989183d9575c8f8ca0c67"
+    },
+    {
+      "path": "theorems/reference/serv/r17_hard_serv_21_d_successor.lean",
+      "bytes": 1157,
+      "sha256": "42877292cc47453bd514f2c22570eada3be8d03f420c3be6c698865221133d98"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_01_d_all.lean",
+      "bytes": 984,
+      "sha256": "aac89054dcde3513bae79b7955d0dd1dcd963c7d2931294ebe94b353c394be81"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_02_s_two.lean",
+      "bytes": 1204,
+      "sha256": "cb2605c50b02648ceae3cb2bbaf12e6c666985f9461b9bea77211c5819a897c0"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_03_t_always.lean",
+      "bytes": 1225,
+      "sha256": "398ba72d6591790a0e9d5ff7451055cf2df8548af0dea20f09e5d3a7faabdcb5"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_04_r_invariant.lean",
+      "bytes": 1328,
+      "sha256": "a8e46e8621bf332546e0eb698f7172a9dafdf009569aba4bdc51aecd388641fc"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_05_w_two_step.lean",
+      "bytes": 1295,
+      "sha256": "860e88fdea3755a1ce81e752b2fa9a6722d3f17a47ba7b434fef22333c025b1b"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_06_d_split.lean",
+      "bytes": 1025,
+      "sha256": "7e19f1d2f0f51a0a4fb4b73555d675b9f3c9e74fd783447d518b09a3b642780b"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_07_s_three.lean",
+      "bytes": 1302,
+      "sha256": "5c7e0276cc1edd43f686ac5a8e071ffc54a7b0be8b9688ac6cfe1cbadb4430b8"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_08_t_double_always.lean",
+      "bytes": 1551,
+      "sha256": "d125485c2046ebd01507d644a54a928f476b6b148abcc6f484f801883213c6b3"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_09_r_prefix_extension.lean",
+      "bytes": 1271,
+      "sha256": "f9bcbad04b964073776187433b9e3e3bea95a1e7b61283ae4f3aad1a6e2618a7"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_10_w_two_traces.lean",
+      "bytes": 1277,
+      "sha256": "7d0d58424590bdb033ffe0e51b6af3fb1f2b686bf6d7c8d184d9d9d3645749fa"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_11_d_cross.lean",
+      "bytes": 1139,
+      "sha256": "fc838f248ebc4ec431c47b027d14f1f9f6d89925c938d3c187e0b8ccb589c05f"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_12_s_prefix_two.lean",
+      "bytes": 1280,
+      "sha256": "3802ffab4542277284b57a246a73443ba6f6f1676eb32f8e8462f484d0ff8855"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_13_t_always_eventually.lean",
+      "bytes": 1439,
+      "sha256": "89e17d611049c46964e7fcd6cb87bc51074541096bf881c6a0b761fb6b1933b1"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_14_r_dual.lean",
+      "bytes": 1189,
+      "sha256": "6bae54873f8de69ed73317652006440c13eb64a4d8057e9c809b2c645e894a58"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_15_w_trace_invariant.lean",
+      "bytes": 1451,
+      "sha256": "feeedf20add6457be1b0f3a3a816e92dc04ec363c8748600531b65b8d66fd913"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_16_d_nested.lean",
+      "bytes": 1095,
+      "sha256": "01d13fc024e01849e18576fb1282d96d51cb61c6dcbea2b24c9ee0952c3e4e76"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_17_s_dual.lean",
+      "bytes": 1153,
+      "sha256": "a150deeffce86d99a444e1c01357eac9aaba899dbb812598c1cfb165929bf324"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_18_t_until_bounded.lean",
+      "bytes": 1272,
+      "sha256": "178004b161877caea25e8fda47b184840e21001ea79da9330922ad44118abbe4"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_19_r_double_invariant.lean",
+      "bytes": 1630,
+      "sha256": "96798e5dc3ac39d78f760d38f5456d6043569ae788ed7d3bd482247562bd3558"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_20_w_states.lean",
+      "bytes": 1193,
+      "sha256": "629bc565d6435062f42d998eaf746e57dc9de9f2df72ad5505c9096f4e97dc40"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_21_d_successor.lean",
+      "bytes": 1109,
+      "sha256": "3ff48ea5eeec4d1eab6947c15da4facaf64966254e5040f80d0bd84c82b5c255"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_22_s_cross.lean",
+      "bytes": 1277,
+      "sha256": "edba1eba85db8ec9bc6f679730ac4720eed054cb6648e45d446f2ae26d827283"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_23_t_next_eventually.lean",
+      "bytes": 1132,
+      "sha256": "9974fd45c1944f50fa046b5abb1d8f559202abc29e77e49036ddbb43fc9713d1"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_24_r_nested.lean",
+      "bytes": 1235,
+      "sha256": "d72b4fa266eb655821230eb6b520e89ff6892f881ea100c0fad14f949968e325"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_25_w_split.lean",
+      "bytes": 1295,
+      "sha256": "0d7967a28e03ff56a3c4f5aee6b41e5df1154877efd149a00577e043e93417e3"
+    },
+    {
+      "path": "theorems/reference/zipcpu/r17_hard_zipcpu_26_d_quad.lean",
+      "bytes": 1177,
+      "sha256": "68034725c74dc7c51d81c79f94b0e89d7d46424aa8df1919063d80fe563c5964"
+    },
+    {
+      "path": "tools/audit_boundary_evaluation.py",
+      "bytes": 7378,
+      "sha256": "58dfd4b20fac4954fafe2a0d96c9d2fe232175d10325c5b6893a8b7385ff00e6"
+    },
+    {
+      "path": "tools/audit_challenge_suite.py",
+      "bytes": 4941,
+      "sha256": "e12bd7efcfaa2e50d1b6e3b3accaed000fc6d663cb2f133746a385031eb2904e"
+    },
+    {
+      "path": "tools/audit_design_suite.py",
+      "bytes": 3227,
+      "sha256": "6d9c8f610077e2eebad6b388274366efb0ddf7bf31a2579b0c5e713496f9e4b8"
+    },
+    {
+      "path": "tools/audit_release.py",
+      "bytes": 1554,
+      "sha256": "1ef3b19fefa6ba80947df71f35c1928c319afdaff0c0ff96914d0b08205e444f"
+    },
+    {
+      "path": "tools/audit_scale_evaluation.py",
+      "bytes": 3988,
+      "sha256": "00adfda23c6803171abf9789dc196a7b7af124cfb83dfa37f9ee933b03248822"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "utc": "2026-11-01T23:14:58.821976+00:00",
+  "endpoint": "repos/Deicyde/assembly-to-physics/tarball/7359bfe8266d06954e221f881403e7e83d5592f6",
+  "exit_code": 0,
+  "archive_bytes": 167608,
+  "sha256": "c6683a21fbf8caf609e40ae0ba31833526590036133c2c1a7ab011690c227b27",
+  "files": [
+    {
+      "path": "AsmPhys.lean",
+      "bytes": 1272,
+      "sha256": "b2983cc17fe12b9e02220d1c43855830c35433fe4f312564c3af86353794ec6f"
+    },
+    {
+      "path": "AsmPhys/Cells/Buridan.lean",
+      "bytes": 11086,
+      "sha256": "cf231ecab7b2784045ec57e31f6227c5102c6e1aeb7a8e3bd5837125d4ac46ab"
+    },
+    {
+      "path": "AsmPhys/Cells/Chain.lean",
+      "bytes": 6755,
+      "sha256": "b850b13e112af4551f69c8e6a3ee621de8eab1b54c150567791c4b5d47142f41"
+    },
+    {
+      "path": "AsmPhys/Cells/Compose.lean",
+      "bytes": 6090,
+      "sha256": "ea6f58b3d175e33389c60b5fd5e61657fb1b25b10809d04bde3f75cdc00e650d"
+    },
+    {
+      "path": "AsmPhys/Cells/FlipFlop.lean",
+      "bytes": 565,
+      "sha256": "a5057f586476aee7779e74591d62f6b579706abb487ede21ab49cf2c134c47e4"
+    },
+    {
+      "path": "AsmPhys/Cells/Inverter.lean",
+      "bytes": 17398,
+      "sha256": "f02d7b070daba249bd60e00f13d249787a232dc6b137628b613bfb79baf12c74"
+    },
+    {
+      "path": "AsmPhys/Cells/InverterCell.lean",
+      "bytes": 3900,
+      "sha256": "08803feafc0b70bf5db7fec05b54046d929964e87fe69deb10ba86710b1d00fd"
+    },
+    {
+      "path": "AsmPhys/Cells/InverterCore.lean",
+      "bytes": 21394,
+      "sha256": "b1c5c705fe131b627b5e2a95de23c4f6603aa96a27dbba532b1d1fe39bc9fda1"
+    },
+    {
+      "path": "AsmPhys/Cells/Keeper.lean",
+      "bytes": 4297,
+      "sha256": "2f543bbe118d6fa15981cbf40b69f657568710b3270f0c1b7de54dd548436ed9"
+    },
+    {
+      "path": "AsmPhys/Cells/Levels.lean",
+      "bytes": 1810,
+      "sha256": "e116b2188082c3e2a632c8c5f0f9f215da0f6225449cdde3cb4349159360a132"
+    },
+    {
+      "path": "AsmPhys/Cells/TGFF.lean",
+      "bytes": 11520,
+      "sha256": "3b1563a381d58b9d3496aef13f10477e9a143d9f031d97331bac612fffe39fa5"
+    },
+    {
+      "path": "AsmPhys/Cells/TGFFCapture.lean",
+      "bytes": 17944,
+      "sha256": "38ba2873eb14ef47538d03cdcd4d1c418e6fba376055f523844bc5021dabfd7b"
+    },
+    {
+      "path": "AsmPhys/Cells/TGLatch.lean",
+      "bytes": 16182,
+      "sha256": "4e8f5c09e6dc487f5842b4813dd6f262d2ef468a8939cb9205ff47861eda644b"
+    },
+    {
+      "path": "AsmPhys/Cells/TGLatchAgree.lean",
+      "bytes": 16509,
+      "sha256": "6afbd99100fd9272bec622240d61324beb2ee0b8471b73e3b19043d41f3c4c49"
+    },
+    {
+      "path": "AsmPhys/Cells/TGLatchPair.lean",
+      "bytes": 26782,
+      "sha256": "06a72df907012ec27463915eae2ac2df2821e17e19b2fd83c01477af2d0b26fe"
+    },
+    {
+      "path": "AsmPhys/Cells/TGLatchSettle.lean",
+      "bytes": 7567,
+      "sha256": "3261661f07c42c295293364c0f92b174620dd58daf117fa50a1015e473ff59ec"
+    },
+    {
+      "path": "AsmPhys/Cells/TransGate.lean",
+      "bytes": 12137,
+      "sha256": "2b2c559b6cc8547e8cb42aa292b2816cc083e1fcbc8b0a25adc7ee313331c91b"
+    },
+    {
+      "path": "AsmPhys/Circuit/Basic.lean",
+      "bytes": 360,
+      "sha256": "bd6c71f6445160688e9b2fd5c02da78c03f0a32b33c196e0d7630b2bbab0c8ba"
+    },
+    {
+      "path": "AsmPhys/Circuit/Charge.lean",
+      "bytes": 4733,
+      "sha256": "9410a6515a8be6d3e65d79815fffa01ab10958c786452c15eb4d9b23361ad8e4"
+    },
+    {
+      "path": "AsmPhys/Circuit/Field.lean",
+      "bytes": 9772,
+      "sha256": "533354699352e6dbec2a2ab97dff38449cbb04411a7764308b10544c6dee367d"
+    },
+    {
+      "path": "AsmPhys/Circuit/Inflow.lean",
+      "bytes": 3460,
+      "sha256": "d035fc1473a0b20689651353b1e4c60cfa596b9d241bdd183ee86ab3c2f9b899"
+    },
+    {
+      "path": "AsmPhys/Circuit/Lyapunov.lean",
+      "bytes": 2636,
+      "sha256": "39a0617b0da416374b876bef1aa87d18c4814081d008f8264facc1212e30e2ed"
+    },
+    {
+      "path": "AsmPhys/Circuit/Rails.lean",
+      "bytes": 27998,
+      "sha256": "2ca3c9b8f044e5825f54d84a4c38f5116c68e2873f23f3bd874166eba5ec5244"
+    },
+    {
+      "path": "AsmPhys/Circuit/Tellegen.lean",
+      "bytes": 1479,
+      "sha256": "4f1c557729ece60f2c41f37700dae92d200de01dc157583d5bb33a1607bb0e17"
+    },
+    {
+      "path": "AsmPhys/Circuit/Tube.lean",
+      "bytes": 5832,
+      "sha256": "05e342fd88c0088c14d7fad399bcd8752cb0c175bd39e28a0f5bbb5df131269d"
+    },
+    {
+      "path": "AsmPhys/Circuit/WellPosed.lean",
+      "bytes": 6907,
+      "sha256": "d33c3b3c4ad6c5156def867f1ec64e5cf3e1b0d46f9a760ab8f1e187a7a9c857"
+    },
+    {
+      "path": "AsmPhys/Claims.lean",
+      "bytes": 32813,
+      "sha256": "981f27880217d23a469513b12e637836e64024c0cb13b4bc77ee4c504311b9f1"
+    },
+    {
+      "path": "AsmPhys/Design/Latch.lean",
+      "bytes": 1801,
+      "sha256": "1cdf05b152f8e35c11a9079527a0e6306799666151617ec1737e12d597a54a61"
+    },
+    {
+      "path": "AsmPhys/Design/TGFF.lean",
+      "bytes": 5545,
+      "sha256": "d5e7408ca4e2fc45d13660fa5ef769be89a8d8a8880ce46902c0125e302f2ff0"
+    },
+    {
+      "path": "AsmPhys/Design/Toy.lean",
+      "bytes": 3781,
+      "sha256": "9daf86b63379ed9cfcf8ef013b57371904e2ce87c6ed07be87620e0a6605c8b1"
+    },
+    {
+      "path": "AsmPhys/Shell/EndToEnd.lean",
+      "bytes": 2560,
+      "sha256": "3d42f8b0247f947f4f46c08cf00317c1107a05560c2d455758bc06765d36135b"
+    },
+    {
+      "path": "AsmPhys/Spec/Cells.lean",
+      "bytes": 7434,
+      "sha256": "6d7ea23b401233e013d3ee5c32f24287cbea27e02f195fb4f72822ccd6d12ed4"
+    },
+    {
+      "path": "AsmPhys/Spec/Circuit.lean",
+      "bytes": 4987,
+      "sha256": "4b8bf775709c6e9fceb2d43394ba771c4c3dfcb66491cc43e496f965b3713b02"
+    },
+    {
+      "path": "AsmPhys/Spec/Device.lean",
+      "bytes": 5207,
+      "sha256": "029b81a666de4131dfedc4749d2d03e369bad53ee7bcf3a65eb5b3214c936216"
+    },
+    {
+      "path": "AsmPhys/Spec/FlipFlop.lean",
+      "bytes": 7110,
+      "sha256": "a245d2cd19a319ea124b03acba771b9bd24d4ca819621547e2d89bc2b2a82c67"
+    },
+    {
+      "path": "AsmPhys/Spec/Levels.lean",
+      "bytes": 802,
+      "sha256": "3f3e0ab795d9455f8a263f2fb3cecf5a382f1b16e7d08ad166868666d465b25b"
+    },
+    {
+      "path": "AsmPhys/Spec/Params.lean",
+      "bytes": 5839,
+      "sha256": "6c0ccb5e309bc50c5d760891dd0872fd401e68e31d2389ca6c785267592da8c7"
+    },
+    {
+      "path": "AsmPhys/Spec/Sync.lean",
+      "bytes": 6980,
+      "sha256": "707f1f41fa1d0459bf7e0c080b5adcbfa1c79cc8ede93aea444ba5a68e39f6ed"
+    },
+    {
+      "path": "AsmPhys/Sync/Refinement.lean",
+      "bytes": 25024,
+      "sha256": "d9cdfd7f2d5f832ae03823b3e160d23a6ca3cf675f2de1a0f8204655d35056c6"
+    },
+    {
+      "path": "AsmPhys/Witness/Clock.lean",
+      "bytes": 6105,
+      "sha256": "c9c7e4f9a85412e5609549f8422c44b48475189afeb0ea4a0b7b5c67112f311d"
+    },
+    {
+      "path": "AsmPhys/Witness/Devices.lean",
+      "bytes": 13851,
+      "sha256": "80fb00fa48992cb81d705390a854f78a0b6f66034b50f9db352c5aa7e55e0362"
+    },
+    {
+      "path": "AsmPhys/Witness/Toy.lean",
+      "bytes": 806,
+      "sha256": "285bcd01b7729734a76d0843d9124c6a4e88805f7ade433c287aa837f080d656"
+    },
+    {
+      "path": "AsmPhys/Witness/ToyFlipFlop.lean",
+      "bytes": 11642,
+      "sha256": "89022dbdaffc234d5d566341862b2d1be3fc9d3518a2223adeaa82df61e3ee9e"
+    },
+    {
+      "path": "AsmPhys/Witness/ToyInverter.lean",
+      "bytes": 5025,
+      "sha256": "083cf47407376a58df7826757e7ec2bb1c79652c7a749e32f461f684f5339050"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7947,
+      "sha256": "09d048519a0d2e21a5665d0a4e22aad5ed72c999290d10ca96879a2038b39024"
+    },
+    {
+      "path": "docs/ASSUMPTIONS.md",
+      "bytes": 10098,
+      "sha256": "bfb8932c2907a361a8cad274813acf0bb4eb8f99d49ffeb30870a2a135cfb912"
+    },
+    {
+      "path": "docs/CHANGELOG.md",
+      "bytes": 8811,
+      "sha256": "c751a5fbc3fc772d0826f89f960d3ad4ecce2137bd52303146af991e1b35366e"
+    },
+    {
+      "path": "docs/FINDINGS.md",
+      "bytes": 17790,
+      "sha256": "0102b7bbfc3fe7b459bba0bd95a30c6fa56d67208fbfcd077bdecf003b347249"
+    },
+    {
+      "path": "docs/HANDOFF-2026-10-24.md",
+      "bytes": 57594,
+      "sha256": "e7d2a80b7715ad716b68e06bf87c081e157a5273a5b337206ae338e13ff847d6"
+    },
+    {
+      "path": "docs/HANDOFF-2026-10-25.md",
+      "bytes": 4263,
+      "sha256": "ab9242fd9797293ce3d9aacc52fc2733f5f4ec9d54868b235300949f5df4e572"
+    },
+    {
+      "path": "docs/REVIEW-2026-10-25.md",
+      "bytes": 35842,
+      "sha256": "c9b16a14e488595efaf50fe91a6f42249f9303887226c38b35beb8cd4584f616"
+    },
+    {
+      "path": "docs/SPIKE-FLIPFLOP.md",
+      "bytes": 53711,
+      "sha256": "abe7c961e048dac104846ece332dab9d67feba986007823a3c3ad2fa70368ea1"
+    },
+    {
+      "path": "docs/STATUS.md",
+      "bytes": 5643,
+      "sha256": "41311c6cba1b564b24eb37aa1becea427a456addcd45641d3bb008bca6b77ceb"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 284,
+      "sha256": "034b024bf7699a5354d53fd4de751eaf05396500dfd4cdf4607bca6ced34f149"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "scripts/Audit.lean",
+      "bytes": 6549,
+      "sha256": "9135c5456062d8577f26cab58c88381fd5e774038b2ed12fd64461818bb9ff7e"
+    },
+    {
+      "path": "scripts/check_layers.py",
+      "bytes": 5445,
+      "sha256": "98c0d347145cd5db10790494e850ac48e12616b222401a78c5a69a698fd588c2"
+    }
+  ]
+}

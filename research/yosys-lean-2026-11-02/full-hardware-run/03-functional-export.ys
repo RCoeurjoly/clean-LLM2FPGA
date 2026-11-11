@@ -1,0 +1,6 @@
+read_rtlil /tmp/llm2fpga-full-hardware-20261102/normalized.il
+cd \model_top; select -assert-none w:c2l_effect_* c:c2l_effect_* w:c2l_undefined_* c:c2l_undefined_*; rename -hide t:$print t:$assert t:$assume t:$cover t:$anyseq; rename -enumerate -pattern c2l_effect_% t:$print t:$assert t:$assume t:$cover; rename -enumerate -pattern c2l_undefined_% t:$anyseq; write_json /tmp/llm2fpga-full-hardware-20261102/named.json; expose -evert -sep _ t:$print t:$assert t:$assume t:$cover t:$anyseq; delete w:c2l_effect_*_TRG; delete w:c2l_effect_* s:0 %i; cd ..; select \model_top
+check -assert
+write_json /tmp/llm2fpga-full-hardware-20261102/lowered.json
+select model_top
+write_functional_smt2 /tmp/llm2fpga-full-hardware-20261102/functional.smt2

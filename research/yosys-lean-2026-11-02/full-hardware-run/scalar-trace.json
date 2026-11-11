@@ -1,0 +1,23 @@
+{
+  "stage": "scalar-trace",
+  "command": [
+    "/nix/store/smablxy777s8dd47vcm36qzhl1npjw7m-iverilog-12.0/bin/vvp",
+    "/tmp/llm2fpga-full-hardware-20261102/scalar-sim"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:00:45.975535+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 0.012106487003620714,
+  "finished_at": "2026-11-02T00:00:45.987766+00:00"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "trace_samples": 20,
+  "compared_samples_after_reset": 17,
+  "output_comparisons": 34,
+  "lean_setup_commands": [
+    [
+      "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/lean",
+      "--root=/tmp/llm2fpga-lean-memory-table",
+      "-o",
+      "/tmp/llm2fpga-lean-memory-table/Chisel2Lean/Functional.olean",
+      "/tmp/llm2fpga-lean-memory-table/Chisel2Lean/Functional.lean"
+    ],
+    [
+      "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/lean",
+      "--root=/tmp/llm2fpga-lean-memory-table",
+      "-o",
+      "/tmp/llm2fpga-lean-memory-table/TinyStoriesMemory.olean",
+      "/tmp/llm2fpga-lean-memory-table/TinyStoriesMemory.lean"
+    ]
+  ],
+  "lean_command": [
+    "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/lean",
+    "--root=/tmp/llm2fpga-lean-memory-table",
+    "--run",
+    "/tmp/llm2fpga-lean-memory-table/RunMemory.lean",
+    "/tmp/llm2fpga-lean-memory-table/request.json"
+  ],
+  "iverilog_command": [
+    "/nix/store/smablxy777s8dd47vcm36qzhl1npjw7m-iverilog-12.0/bin/iverilog",
+    "-g2012",
+    "-s",
+    "tb",
+    "-o",
+    "/tmp/llm2fpga-lean-memory-table/sim",
+    "/tmp/llm2fpga-lean-memory-table/tb.sv",
+    "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/model-probe/memory-results/model_memory.sv"
+  ],
+  "scope": "One concrete legal reset/write/read/hold trace; not all-input equivalence"
+}

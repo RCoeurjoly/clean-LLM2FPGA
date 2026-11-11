@@ -1,0 +1,2 @@
+read_rtlil /nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared/model.il
+write_json /tmp/llm2fpga-full-hardware-20261102/before.json

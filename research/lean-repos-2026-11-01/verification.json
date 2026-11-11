@@ -1,0 +1,32 @@
+{
+  "status": "passed_with_documented_search_gaps",
+  "census_unique": 20707,
+  "disjoint_census_partitions": 55,
+  "completed_search_leaves": 106,
+  "census_initial_count_difference": 2,
+  "documented_count_discrepancy_leaves": 4,
+  "count_only_census_matches": 1,
+  "exports": {
+    "all-repositories.csv": 20707,
+    "top100-all.csv": 100,
+    "top100-active.csv": 100,
+    "keyword-matches.csv": 2869,
+    "active-keyword-matches.csv": 2126,
+    "source-file-matches.csv": 183,
+    "candidates.csv": 7251,
+    "shortlist-all.csv": 48,
+    "shortlist-active.csv": 41,
+    "top100-github-query.csv": 100
+  },
+  "source_filename_inventories": 289,
+  "filename_inventory_errors": 0,
+  "truncated_filename_inventories": 3,
+  "repository_visibility_counts": {
+    "public": 20707
+  },
+  "source_code_inspected_candidates": 61,
+  "curated_source_assessments": 102,
+  "github_indexed_recent_query_total": 8672,
+  "github_indexed_top100_agrees_with_metadata": false,
+  "note": "Reconciles downloaded/indexed search results and generated artifacts; not proof of GitHub index completeness or candidate implementation correctness."
+}

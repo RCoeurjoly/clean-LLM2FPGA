@@ -1,0 +1,24 @@
+{
+  "stage": "02-emitter-build",
+  "command": [
+    "scripts/lake.sh",
+    "build",
+    "+NN.Runtime.PyTorch.Export.TorchExport"
+  ],
+  "cwd": "/tmp/torchlean-model-probe/lean-dojo-TorchLean-f37cbc5",
+  "started_at": "2026-11-02T09:14:49.474968+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 219.14163062599255,
+  "finished_at": "2026-11-02T09:18:28.616738+00:00"
+}

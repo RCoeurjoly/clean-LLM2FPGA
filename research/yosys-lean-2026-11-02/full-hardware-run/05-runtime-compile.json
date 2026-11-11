@@ -1,0 +1,26 @@
+{
+  "stage": "05-runtime-compile",
+  "command": [
+    "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/lean",
+    "--root=/tmp/llm2fpga-full-hardware-20261102",
+    "-o",
+    "/tmp/llm2fpga-full-hardware-20261102/Chisel2Lean/Functional.olean",
+    "/tmp/llm2fpga-full-hardware-20261102/Chisel2Lean/Functional.lean"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:28:17.569171+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 2.6188650200056145,
+  "finished_at": "2026-11-02T00:28:20.188189+00:00"
+}

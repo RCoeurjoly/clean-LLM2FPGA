@@ -1,0 +1,70 @@
+[
+  {
+    "full_name": "lean-dojo/TorchLean",
+    "priority": 1,
+    "category": "NN semantics",
+    "relevance": "Direct model-side foundation for formalizing the exported quantized PyTorch graph.",
+    "capability": "Typed mixed-dtype tensor IR, PyTorch graph capture/import, finite-precision reference semantics, quantizer specifications and graph relation-composition theorems.",
+    "limitations": "Successful import establishes structural/shape properties, not numerical equivalence to the originating PyTorch backend. No ready XNNPACK dynamic-quantization lowering was found in the inspected revision; floating-point kernel/schedule correspondence remains an obligation.",
+    "evidence_urls": [
+      "https://github.com/lean-dojo/TorchLean/blob/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b/NN/Runtime/PyTorch/Import/TorchExport.lean",
+      "https://github.com/lean-dojo/TorchLean/blob/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b/NN/IR/Properties.lean",
+      "https://github.com/lean-dojo/TorchLean/blob/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b/docs/TRUST_BOUNDARIES.md"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "JGalego/torchlib",
+    "priority": 4,
+    "category": "NN semantics",
+    "relevance": "Experimental PyTorch-inspired modeling; weak assurance for this project's exact-equivalence target.",
+    "capability": "Lean neural-network/runtime interfaces and experimental interval propagation.",
+    "limitations": "The inspected IBP implementation declares ibp_linear_sound as an axiom; runtime Float32 calls and executable certificate comparisons do not establish a model-to-RTL theorem.",
+    "evidence_urls": [
+      "https://github.com/JGalego/torchlib/blob/3aa6b88e5ea5f65fde6a44f19c099b93db22baee/TorchLib/Verification/IBP.lean#L243",
+      "https://github.com/JGalego/torchlib/blob/3aa6b88e5ea5f65fde6a44f19c099b93db22baee/TorchLib/Runtime/Float32.lean#L33"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "alerad/leancert",
+    "priority": 2,
+    "category": "numeric + solver",
+    "relevance": "Potential independent numerical bounds for the actual exp/tanh approximations and tensor components.",
+    "capability": "Certified real/interval numerical machinery, neural-network and selected transformer-component bounds.",
+    "limitations": "Python weight conversion rationally approximates floats and the documented transformer importer omits attention. Some quantized-layer theorem names concern interval ordering rather than PyTorch int8 equivalence. No existing PyTorch-to-RTL bridge; native IEEE rounding needs separate modeling.",
+    "evidence_urls": [
+      "https://github.com/alerad/leancert/blob/44b323a0d6af00211d5013f6e021432db032087c/LeanCert/ML/Transformer.lean#L913",
+      "https://github.com/alerad/leancert/blob/44b323a0d6af00211d5013f6e021432db032087c/LeanCert/ML/Optimized/QuantizedLayer.lean#L447",
+      "https://github.com/alerad/leancert-python/blob/a4309c8f9faaed55c27c2da347fd0ea3eaf71e3a/leancert/nn.py#L53"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "brettkoonce/lean4-mlir",
+    "priority": 2,
+    "category": "NN semantics",
+    "relevance": "Reference for neural-network semantics, compositional proofs, rounding models, and StableHLO generation.",
+    "capability": "Real-valued network/gradient proofs, denotational ties to generated graphs, numerical error-model bridges and GPU code-generation workflow.",
+    "limitations": "Per-op printing, Float32 numerical correspondence, lowerers and runtime remain trusted. Binary32 grid model explicitly idealizes overflow/subnormals; StableHLO token roundtrip is not a theorem about emitted text or imported PyTorch/RTL.",
+    "evidence_urls": [
+      "https://github.com/brettkoonce/lean4-mlir/blob/main/TRUST.md",
+      "https://github.com/brettkoonce/lean4-mlir/blob/main/LeanMlir/Proofs/Float/Binary32Instance.lean#L31",
+      "https://github.com/brettkoonce/lean4-mlir/blob/main/LeanMlir/Proofs/Codegen/StableHLO/Parse.lean#L8"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "leanprover/lean4",
+    "priority": 2,
+    "category": "numeric + solver",
+    "relevance": "Core proof and bitvector certificate-checking infrastructure for arithmetic leaves and checked composition.",
+    "capability": "bv_decide verified bitblasting and LRAT certificate checking; bv_check replays saved certificates.",
+    "limitations": "Supplies no PyTorch/Calyx/SystemVerilog semantics automatically. Practical native checker evaluation adds compiler/runtime trust; checked CNF must be connected to the actual source/RTL encoding.",
+    "evidence_urls": [
+      "https://lean-lang.org/doc/api/Lean/Elab/Tactic/BVDecide.html",
+      "https://lean-lang.org/doc/reference/latest/ValidatingProofs/"
+    ],
+    "proof_status": "documentation_only"
+  }
+]

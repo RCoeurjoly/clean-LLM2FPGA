@@ -1,0 +1,7 @@
+read_rtlil /nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared/model.il
+clk2fflogic -nolower -nopeepopt
+memory_nordff
+opt_clean
+setundef -undriven -anyseq
+check -assert
+write_rtlil /tmp/llm2fpga-full-hardware-20261102/normalized.il

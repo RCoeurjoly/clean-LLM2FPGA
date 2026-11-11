@@ -1,0 +1,373 @@
+#+title: Reproducing the successful synthesis and branching to Lean
+#+date: 2026-11-02
+#+startup: overview
+
+* What had already been documented
+
+The procedure was preserved in executable Nix recipes and build logs.
+There was no standalone runbook found. The current recipes reproduce the
+same staged architecture as the successful RAM-mapping log; their exact
+text and hashes are now retained in [[file:production-recipes.json][production-recipes.json]]. The cached
+successful derivation bodies and input paths are in
+[[file:successful-derivations.json][successful-derivations.json]].
+
+The relevant sequence is:
+
+#+begin_example
+generated core.sv + model.sv + memory.sv
+  -> built-in read_verilog -sv, hierarchy, proc, memory_collect
+  -> optimize memory output registers, flatten, clean, check
+  -> generic RTLIL checkpoint                 [direct-rtlil]
+  -> prep + check                            [direct-prepared]
+  -> selected Xilinx/DSP mapping              [direct-dsp]
+  -> isolate $mem_v2 into model_memories
+     memory -nomap, Xilinx BRAM mapping
+     flatten + check                         [direct-ram]
+  -> blackbox whitebox models, write_json     [direct-netlist]
+#+end_example
+
+Sources: [[file:../../../nix/direct/rtlil.nix][rtlil.nix]], [[file:../../../nix/direct/prepared.nix][prepared.nix]],
+[[file:../../../nix/direct/dsp.nix][dsp.nix]], [[file:../../../nix/direct/ram.nix][ram.nix]], and [[file:../../../nix/direct/netlist.nix][netlist.nix]].
+
+The successful [[file:../../../build/full-model/27-native-ram-and-json.log::8][RAM-mapping command]] reads a previous DSP-stage RTLIL
+checkpoint. It does not redo parsing and all transformations in one
+process. It extracts generic memory cells into a submodule before
+mapping, then flattens the mapped result. Its final resource report is
+15,312.60 MB peak memory, 24,440 RAMB36E1 and 430 RAMB18E1 cells, followed
+by successful JSON export. That log refers to an earlier set of store
+paths; the cached current production derivations preserve the same recipe.
+
+* Toolchain and machine
+
+Use the project's patched Yosys, rather than substituting an unrelated
+system binary. Its pinned executable for this run is:
+
+#+begin_example
+/nix/store/vjqba2jj3231f14vhspj2mvs1k1z4mm4-llm2fpga-yosys-sdp72-parity/bin/yosys
+Yosys 0.62 (git sha1 v0.62, g++ 15.2.0 -fPIC -O3)
+#+end_example
+
+[[file:../../../source/toolchain/nix/graph-yosys.nix][graph-yosys.nix]] applies the existing performance and correctness
+patches. They include bounded gzip output buffering, avoiding alias
+analysis in process-free modules, connection/whole-wire alias helpers,
+grouping mux controls instead of repeatedly scanning them, constant
+evaluation/FSM bit caching, and the Xilinx SDP72 parity adjustment.
+This run uses the existing patches; it does not add synthesis changes.
+
+The machine reports approximately 32 GB physical RAM and 8 GB swap.
+The previous 6 GiB address-space cap was an experiment-specific choice.
+The current reproduction inherits unlimited address-space/CPU rlimits
+and uses only one heavy synthesis process at a time. See
+[[file:environment.json][environment.json]] for the measured machine, tool versions, and hashes.
+
+* Reproduce the production checkpoints
+
+Run these from the repository root:
+
+#+begin_src sh
+nix build .#direct-netlist --no-link --json --max-jobs 1
+nix build .#direct-prepared --no-link --json -L --max-jobs 1 --cores 2
+#+end_src
+
+The first command resolved to the existing successful cached output
+=/nix/store/4xp6xa0gdrmir6lpiwzl2q85ykp1058r-tinystories-netlist=.
+This is cache/provenance validation, not a fresh rerun of BRAM mapping.
+The second command rebuilds two missing generic checkpoints, using
+their original production recipes. It does not rebuild the quantized
+model or change the generated RTL.
+
+Evidence: [[file:synthesis-baseline.json][cached baseline resolution]], [[file:production-build.json][generic checkpoint build result]],
+and [[file:production-build.log.gz][compressed production build log]] / [[file:production-build.tail.log][readable tail]].
+[[file:production-summary.json][Measured stage resources]] retain the uncompressed log's hash and size.
+Do not invalidate an expensive successful Nix
+output merely to force it to repeat; record cache hits explicitly.
+
+The [[file:lineage.json][verified dependency chain]] connects that current cached netlist through
+RAM, DSP, prepared, and generic RTLIL derivations to the *exact*
+=/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl= input used
+by our probes. [[file:lineage-derivations.json][Full derivation records]] retain the proof of those
+dependency edges. This establishes current artifact provenance; it does
+not claim the earlier log's different store paths are byte-identical.
+
+* FunctionalIR branch
+
+** Provision the local probe tools
+
+These commands install into =/tmp=; they do not change a global Lean or
+Python environment. Run from the repository root. The Lean archive is
+the official release asset, and the recorded SHA256 checks the same
+bytes used in this run:
+
+#+begin_src sh
+gh api repos/leanprover/lean4/releases/assets/250981932 \
+  -H 'Accept: application/octet-stream' > /tmp/lean-4.19.0-linux.tar.zst
+sha256sum -c <<'SHA256'
+6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe  /tmp/lean-4.19.0-linux.tar.zst
+SHA256
+mkdir -p /tmp/llm2fpga-tools
+tar --zstd -xf /tmp/lean-4.19.0-linux.tar.zst -C /tmp/llm2fpga-tools
+python3 -m pip install --target /tmp/llm2fpga-ijson \
+  --only-binary=:all: --no-deps ijson==3.4.0.post0
+#+end_src
+
+The native Yosys and Icarus binaries are the existing Nix dependencies;
+the Nix builds above materialize the required production dependencies.
+
+** Run the branch
+
+Branch at the generic =direct-prepared= checkpoint, before DSP/BRAM
+technology mapping. Preserve the generic memories. The additional stages
+are recorded as individual Yosys scripts and measured commands:
+
+1. Read production-checked generic RTLIL. Lower only the 336 one-word
+   memories with =memory_map t:$mem_v2 r:SIZE=1 %i=, assert that 555
+   memories remain, check, and write the canonical RTLIL/metadata JSON.
+2. Run the pinned importer's preflight over that metadata.
+3. Normalize clocks with =clk2fflogic -nolower -nopeepopt=,
+   =memory_nordff=, =opt_clean= and =setundef -undriven -anyseq=.
+4. Use the importer's native Yosys =expose= plan so arbitrary sources
+   become explicit input ports. Retain named-state metadata.
+5. Export FunctionalIR SMT-LIB and matching JSON from the same final
+   normalized design.
+6. Stream those artifacts through the pinned =xiangshan2Lean= helpers.
+7. Generate its typed table model, compile the Lean interpreter and
+   generated model, and check the reported node/interface counts.
+
+#+begin_src sh
+python3 research/yosys-lean-2026-11-02/full-hardware-run/run_pipeline.py
+#+end_src
+
+The pipeline stops at the first failing stage and records its status.
+It does not skip commands based only on an earlier success flag. Exact
+scripts are [[file:01-generic-json.ys][01-generic-json.ys]], [[file:02-normalize.ys][02-normalize.ys]], and
+[[file:03-functional-export.ys][03-functional-export.ys]].
+
+** Transfer projection for large initialization tails
+
+The native export completed in 352.63 seconds at 15,950,588 KiB peak
+resident memory. It produced full matching JSON and a 10,879,385,560-byte
+SMT file. Most of that SMT file consists of per-address initialization
+assertions, which the pinned importer syntax-checks but discards; its
+initial-state constraints come from JSON instead.
+
+[[file:transfer_projection.py][transfer_projection.py]] retains the exact 632,948,862-byte prefix
+containing the three records, Pair datatype and sole transfer function.
+It stops at the expected native initial-state declaration and checks
+the source snapshot/ordering. The complete native export remains intact.
+The [[file:yosys-v0.62-smtlib.cc::258][pinned native serializer source]] establishes that the complete
+transfer precedes that declaration and only initialization assertions
+follow it for our selected single module. The saved source matches the
+actual package and official Git blob; see [[file:serializer-source.json][source provenance]].
+
+The unchanged upstream importer then reads the projected transfer and
+restores all known/unknown initialization bits from matching metadata.
+No initial condition is replaced with zero or removed from that metadata.
+On the production memory control, the full and projected serializations
+produce identical imported program nodes and initial constraints:
+[[file:projection-control.json][projection control result]]. This is a producer-side projection under
+the pinned serializer contract, not a generic SMT-LIB transformation.
+
+The first full import worker was stopped before parsing the redundant
+tail and restarted with this projection. Its interrupted attempt is
+retained with =.before-projection= suffixes. This interruption is not an
+importer semantic failure. The subsequent small projection guard failure
+on a newline-formatted =define-fun= was caught by the control, corrected,
+and the equality control passed before the current full import restarted.
+
+The small memory control regenerates its typed table, compiles the
+interpreter and model, and runs both Lean and Icarus with:
+
+#+begin_src sh
+python3 research/yosys-lean-2026-11-02/full-hardware-run/memory_trace.py
+#+end_src
+
+The upstream revision is =a1299b564831e571b9b80f816219ae06c91db342=.
+Its retained sources are unchanged. [[file:import_worker.py][import_worker.py]] substitutes a
+Linux ijson loader for its Windows-only streaming-reader bootstrap;
+operator, state-initialization, and Lean-interpreter semantics remain
+the upstream definitions. Lean 4.19.0 is the importer's pinned runtime.
+The generated hardware model has not yet been integrated with TorchLean's
+newer Lean toolchain.
+
+[[file:run_stage.py][run_stage.py]] records each subprocess command, output, elapsed time and
+=/usr/bin/time -v= resource report. Heavy intermediate artifacts remain
+under =/tmp/llm2fpga-full-hardware-20261102= rather than being copied into
+the repository. No artificial 6 GiB or 180-second cap is applied.
+
+* Progress and meaning of success
+
+** First full-model importer gap: one-word memories
+
+The first complete streaming preflight inspected all 913,942 cells in
+211.74 seconds. It reported 336 rejected =$mem_v2= cells. Every rejected
+cell matches a =SIZE=1= instance in the original generated SV; there
+were no other diagnostic families. See [[file:preflight.json.initial][original preflight]],
+[[file:scalar-memory-coverage.json][exact source-instance coverage]], and [[file:01-preflight.resources.txt.initial][measured resources]].
+
+The unmodified importer requires at least two words per memory. A minimal
+[[file:scalar-reproducer.sv][production-memory reproducer]] containing one scalar memory and a
+16-word memory demonstrates the rejection. Native Yosys =memory_map=
+restricted to the scalar memory makes preflight pass, retains the
+16-word memory, and preserves the known scalar initialization bits.
+The before/after RTLs agree on a concrete reset/write/read/hold trace.
+Evidence: [[file:scalar-reproducer.ys][normalization script]], [[file:scalar-normalization-result.json][structural/init results]],
+[[file:scalar-tb.sv][trace testbench]], and [[file:scalar-trace.log][successful trace]]. No importer condition was
+disabled or relaxed. The trusted Yosys normalization now lowers exactly
+those 336 words to registers, retaining every larger memory.
+
+The first attempt's scripts, reports and logs are retained with =.initial=
+suffixes. The original full JSON is retained under =/tmp= as
+=before.initial.json=. The revised full-model path passed the complete
+preflight in 212.20 seconds with zero remaining diagnostics, 28,372
+register cells and 555 memories. Its peak resident memory was about
+516 MiB. The same pinned importer checks ran; none was bypassed.
+
+** Production and control results
+
+The =direct-rtlil= rebuild completed successfully: 24,259.84 MB peak
+memory, 345.19 user CPU seconds and 29.95 system CPU seconds. The
+3,564,430,522-byte generic checkpoint is fingerprinted in
+[[file:checkpoint-provenance.json][checkpoint-provenance.json]]. The =direct-prepared= rebuild also
+completed: 22,415.47 MB peak memory, 689.15 user CPU seconds and 21.53
+system CPU seconds. It retains 913,942 generic cells, including 891
+memories, 26,962 DFFs, 891 synchronous-reset/enabled FFs and 183
+asynchronous-reset FFs, with 11 external ports (129 bits).
+
+Full-model global-clock normalization completed in 151.23 seconds, and
+the native export completed in 352.63 seconds with 15,950,588 KiB peak
+RSS. The complete FunctionalIR is 10,879,385,560 bytes; matching final
+JSON is 3,940,606,162 bytes, with 4,001,338,661 bytes of pre-exposure
+metadata. [[file:export-manifest.json][export-manifest.json]] records their exact SHA256 hashes and
+the normalized checkpoints. This establishes export feasibility on this
+machine without technology mapping or Boolean memory expansion.
+
+The full xiangshan2Lean import completed in 757.10 wall-clock seconds
+(750.84 seconds inside the worker), with 18,552,916 KiB peak RSS and no
+major page faults or swap. It produced:
+
+| Item | Count |
+|------+-------|
+| Expression nodes | 4,227,056 |
+| Input fields | 538,088 |
+| State fields | 88,074 |
+| Memory state fields | 555 |
+| Outputs | 3 |
+| Binary table bytes | 364,104,799 |
+| Hex table bytes | 728,209,598 |
+
+Of the inputs, 538,080 fields (886,461 bits) are explicitly exposed
+arbitrary values; the remaining eight are the RTL's external inputs.
+These values are still inputs to the Lean transition function. They are
+not globally constrained to zero. The eventual refinement proof must
+relate or quantify them and show that observable results satisfy the
+intended reset/protocol contract.
+
+[[file:import-summary.json][Import summary]] records the generated artifacts' hashes. The full raw
+report (including every arbitrary-input source) and log are retained as
+[[file:import.json.gz][import.json.gz]] and [[file:04-import.log.gz][04-import.log.gz]], with their uncompressed hashes in
+the summary. The 91 MiB complete interface stays beside the large tables
+under =/tmp=.
+
+Both the original runtime and the complete generated model compiled with
+Lean 4.19.0. The model's =#eval= check reports exactly 4,227,056 nodes,
+538,088 inputs, 88,074 states and three outputs. It took 846.50 seconds
+(14 minutes 6.50 seconds), with 7,598,656 KiB (7.25 GiB) peak RSS and no
+swap. See [[file:06-model-compile.log][validation output]], [[file:06-model-compile.json][command/result]], and
+[[file:06-model-compile.resources.txt][measured resources]]. This is a completed whole-model build, rather
+than an extrapolation from the small memory example.
+
+The export/import/compilation pipeline is complete in
+[[file:pipeline-status.json][pipeline-status.json]]. A completed source-generation or compilation
+step is not a theorem equating the RTL with the quantized PyTorch model.
+The runtime's =CheckedCircuit.valid= field concerns structural validation
+of the serialized circuit, not correctness of the SV/FunctionalIR importer.
+
+The existing production memory module's previously emitted Lean source
+now compiles with Lean 4.19.0. Its typed-table model also compiles and
+reports all 79 nodes, 11 state fields, eight inputs and two outputs.
+One 20-sample reset/write/read/hold trace was replayed through Lean and
+the original production SV using Icarus. All 34 output comparisons after
+reset agreed; initial undefined RTL samples were excluded explicitly.
+See [[file:memory-trace-result.json][trace result]], [[file:memory-lean-trace.log][Lean trace]], and [[file:memory-rtl-trace.log][RTL trace]]. This is a
+concrete trace check, not an all-input theorem.
+
+** Whole-design execution control
+
+[[file:full_reset_probe.py][full_reset_probe.py]] builds the unchanged upstream runtime and the
+small [[file:FullReset.lean][FullReset.lean]] driver through Lean's C backend, then links with
+the bundled =leanc=. It consumes the same circuit's binary serialization
+at runtime instead of embedding the 728 MB hexadecimal string. The
+original generated source's =#eval= compilation is measured separately.
+
+#+begin_src sh
+python3 research/yosys-lean-2026-11-02/full-hardware-run/full_reset_probe.py
+#+end_src
+
+The full hexadecimal table decodes to the binary table byte-for-byte:
+[[file:binary-hex-control.json][binary/hex control]]. The binary decoder, structural checks, initial-state
+validator and transition interpreter are the original upstream Lean
+definitions. The native build and Lean bytecode produce identical output
+on the existing production-memory table: [[file:native-control-result.json][execution-mode control]]. This
+changes execution mode and data loading, not circuit or arithmetic rules.
+
+The whole-design fixture has eight samples of reset and idle using
+[[file:full-reset-tb.sv][full-reset-tb.sv]]. It excludes three initial samples, retains known
+initial bits and completes unknown bits/arbitrary inputs with zero in
+Lean for this trace only. It exercises neither inference nor all possible
+initial states. The successful comparison used Verilator's two-state
+simulation; the Icarus attempt is retained separately below.
+
+The native Lean execution completed all eight samples in 104.73 seconds,
+with 6,257,912 KiB (5.97 GiB) peak RSS and no swap. Table validation,
+the initial-state check and all eight transition-definedness checks
+passed. See [[file:15-native-full-trace.log][complete native trace]] and [[file:15-native-full-trace.resources.txt][resources]]. This is still
+reset/idle execution, with =go= held low throughout.
+
+The supplementary Verilator 5.052 build exposed a line-length/token
+limit: the 237,086-byte =main kernel(...)= line exceeds 40,000
+preprocessor tokens on one line. The original failure is retained in
+[[file:13-verilator-build.log.long-line][the parser diagnostic]]. [[file:format_sv_lines.py][format_sv_lines.py]] inserts 7,131
+newlines after commas on that single line in a temporary copy. Its
+guards reject strings, comments, macros and escaped identifiers there;
+no SV token is replaced. [[file:sv-formatting.json][Source/temporary-copy hashes]] retain provenance.
+The production RTL is unchanged. The full Verilator/native-Lean
+alternative can be reproduced after import with:
+
+#+begin_src sh
+python3 research/yosys-lean-2026-11-02/full-hardware-run/run_verilator_probe.py
+#+end_src
+
+Verilator built the complete design successfully in 257.36 seconds
+(4 minutes 17 seconds), with two build jobs. Simulation completed in
+6.04 seconds. All *15 output comparisons over five post-reset samples*
+match the native Lean trace, including =logits_data=, =logits_valid= and
+=done=. See [[file:verilator-reset-result.json][comparison result]], [[file:14-verilator-trace.log][SV trace]], [[file:15-native-full-trace.log][Lean trace]], and
+[[file:13-verilator-build.json][build command/result]]. [[file:compare_reset.py][compare_reset.py]] requires all eight
+sample indices, checks the full table counts, and compares every output
+at the selected samples. Since =go= remains low and all compared outputs
+are zero, this checks startup/idle alignment, not neural arithmetic.
+
+The Icarus full-design compiler was intentionally stopped after
+1,008.88 seconds (16 minutes 49 seconds), once the same fixture had
+passed with Verilator. Its raw [[file:full-reset-result.json][attempt report]] and [[file:07-rtl-compile.json][stage report]] record
+exit 143; [[file:icarus-superseded.json][the cancellation record]] explains the replacement. No Icarus
+whole-model build or simulation completion is claimed. The smaller
+production-memory comparison did complete with Icarus.
+
+* Result and next proof boundary
+
+On this machine, the production generic lowering, complete native
+FunctionalIR/JSON export, whole-model xiangshan2Lean import, complete
+Lean model compilation/table validation, and one whole-design reset/idle
+RTL/Lean trace comparison have all completed. [[file:progress.json][Final progress]] records
+that scope. [[file:compiled-artifacts.json][Compiled artifact hashes]] identify the Lean model and
+native checker; the large files remain under =/tmp=.
+[[file:verification.json][Final verification]] checks stage exit codes, table-count agreement,
+comparison reports, archive hashes, the 106 unchanged upstream source
+files, Python syntax, and the research documents' local links.
+
+The next research work is reference-side coverage/numerical semantics
+for the frozen quantized =model.pt2=, followed by model-derived block
+contracts and a refinement/progress proof. These checks do not establish
+an inference trace, a PyTorch/RTL equivalence theorem, or correctness of
+FPGA technology mapping and bitstream generation.

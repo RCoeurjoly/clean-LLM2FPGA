@@ -1,0 +1,24 @@
+{
+  "machine_memory": {
+    "MemTotal": "32462164 kB",
+    "MemAvailable": "4923792 kB",
+    "SwapTotal": "8388604 kB",
+    "SwapFree": "8342812 kB"
+  },
+  "artificial_address_space_limit": false,
+  "address_space_rlimit": [
+    -1,
+    -1
+  ],
+  "cpu_rlimit": [
+    -1,
+    -1
+  ],
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "lean_release_url": "https://github.com/leanprover/lean4/releases/download/v4.19.0/lean-4.19.0-linux.tar.zst",
+  "lean_archive_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+  "ijson_version": "3.4.0.post0",
+  "ijson_distribution": "3.4.0.post0",
+  "git_head": "33dc3d953cc5340d36721e7ce870486bcff449de",
+  "upstream_commit": "a1299b564831e571b9b80f816219ae06c91db342"
+}

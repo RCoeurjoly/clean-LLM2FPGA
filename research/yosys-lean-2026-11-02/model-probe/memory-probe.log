@@ -1,0 +1,79 @@
+{
+  "yosys": "/nix/store/vjqba2jj3231f14vhspj2mvs1k1z4mm4-llm2fpga-yosys-sdp72-parity/bin/yosys",
+  "yosys_version": "Yosys 0.62 (git sha1 v0.62, g++ 15.2.0 -fPIC -O3)",
+  "source_inputs": [
+    {
+      "path": "/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv",
+      "bytes": 565,
+      "sha256": "2a20ec2870a3ced4018e4dbd05f092a9bb2493a0bf21cea9fd217bf8a1b73121"
+    }
+  ],
+  "importer_commit": "a1299b564831e571b9b80f816219ae06c91db342",
+  "clock_contract": "Explicit global sampling after clk2fflogic; two-state completion",
+  "limits": {
+    "address_space_gib": 6,
+    "cpu_seconds": 180,
+    "wall_seconds": 210
+  },
+  "lean_compiler_run": false,
+  "equivalence_proved": false,
+  "stages": {
+    "export": {
+      "returncode": 0,
+      "status": "completed",
+      "seconds": 0.03333491800003685
+    },
+    "functional_export": {
+      "returncode": 0,
+      "status": "completed"
+    },
+    "python_import": {
+      "status": "completed",
+      "seconds": 0.0057447230065008625
+    }
+  },
+  "preflight": {
+    "register_cells": 2,
+    "memory_cells": 1,
+    "clock": null,
+    "clock_mode": "global"
+  },
+  "arbitrary_inputs": [
+    {
+      "name": "c2l_undefined_0",
+      "width": 32,
+      "source": "$auto$setundef.cc:533:execute$70"
+    },
+    {
+      "name": "c2l_undefined_1",
+      "width": 4,
+      "source": "$auto$setundef.cc:533:execute$72"
+    }
+  ],
+  "cells": 29,
+  "ports": 10,
+  "imported": {
+    "inputs": 8,
+    "states": 11,
+    "outputs": 2,
+    "nodes": 79,
+    "memory_states": 1
+  },
+  "intermediates": [
+    {
+      "path": "/tmp/llm2fpga-yosys-memory-probe/lowered.json",
+      "bytes": 37014,
+      "sha256": "619afc1a6c205c24bac3be715f0cde60dd67b72ea00648702afcef78e07ba500"
+    },
+    {
+      "path": "/tmp/llm2fpga-yosys-memory-probe/functional.smt2",
+      "bytes": 12601,
+      "sha256": "a283f88b373410e477eecca4d6d43e227e144434c02f2848e94688ff5d8f66fb"
+    },
+    {
+      "path": "/tmp/llm2fpga-yosys-memory-probe/TinyStoriesProbe.lean",
+      "bytes": 4338,
+      "sha256": "e4269871f10b7bdb69735a7f1dc3e062f46eece2f61677e2cb4be5f9cced47ae"
+    }
+  ]
+}

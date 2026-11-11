@@ -1,0 +1,1435 @@
+
+
+
+def forward(self, p_model_transformer_wpe_weight, p_model_transformer_h_0_ln_1_weight, p_model_transformer_h_0_ln_1_bias, p_model_transformer_h_0_attn_attention_out_proj_weight, p_model_transformer_h_0_attn_attention_out_proj_bias, p_model_transformer_h_0_ln_2_weight, p_model_transformer_h_0_ln_2_bias, p_model_transformer_h_0_mlp_c_fc_weight, p_model_transformer_h_0_mlp_c_fc_bias, p_model_transformer_h_0_mlp_c_proj_weight, p_model_transformer_h_0_mlp_c_proj_bias, p_model_transformer_h_1_ln_1_weight, p_model_transformer_h_1_ln_1_bias, p_model_transformer_h_1_attn_attention_out_proj_weight, p_model_transformer_h_1_attn_attention_out_proj_bias, p_model_transformer_h_1_ln_2_weight, p_model_transformer_h_1_ln_2_bias, p_model_transformer_h_1_mlp_c_fc_weight, p_model_transformer_h_1_mlp_c_fc_bias, p_model_transformer_h_1_mlp_c_proj_weight, p_model_transformer_h_1_mlp_c_proj_bias, p_model_transformer_h_2_ln_1_weight, p_model_transformer_h_2_ln_1_bias, p_model_transformer_h_2_attn_attention_out_proj_weight, p_model_transformer_h_2_attn_attention_out_proj_bias, p_model_transformer_h_2_ln_2_weight, p_model_transformer_h_2_ln_2_bias, p_model_transformer_h_2_mlp_c_fc_weight, p_model_transformer_h_2_mlp_c_fc_bias, p_model_transformer_h_2_mlp_c_proj_weight, p_model_transformer_h_2_mlp_c_proj_bias, p_model_transformer_h_3_ln_1_weight, p_model_transformer_h_3_ln_1_bias, p_model_transformer_h_3_attn_attention_out_proj_weight, p_model_transformer_h_3_attn_attention_out_proj_bias, p_model_transformer_h_3_ln_2_weight, p_model_transformer_h_3_ln_2_bias, p_model_transformer_h_3_mlp_c_fc_weight, p_model_transformer_h_3_mlp_c_fc_bias, p_model_transformer_h_3_mlp_c_proj_weight, p_model_transformer_h_3_mlp_c_proj_bias, p_model_transformer_h_4_ln_1_weight, p_model_transformer_h_4_ln_1_bias, p_model_transformer_h_4_attn_attention_out_proj_weight, p_model_transformer_h_4_attn_attention_out_proj_bias, p_model_transformer_h_4_ln_2_weight, p_model_transformer_h_4_ln_2_bias, p_model_transformer_h_4_mlp_c_fc_weight, p_model_transformer_h_4_mlp_c_fc_bias, p_model_transformer_h_4_mlp_c_proj_weight, p_model_transformer_h_4_mlp_c_proj_bias, p_model_transformer_h_5_ln_1_weight, p_model_transformer_h_5_ln_1_bias, p_model_transformer_h_5_attn_attention_out_proj_weight, p_model_transformer_h_5_attn_attention_out_proj_bias, p_model_transformer_h_5_ln_2_weight, p_model_transformer_h_5_ln_2_bias, p_model_transformer_h_5_mlp_c_fc_weight, p_model_transformer_h_5_mlp_c_fc_bias, p_model_transformer_h_5_mlp_c_proj_weight, p_model_transformer_h_5_mlp_c_proj_bias, p_model_transformer_h_6_ln_1_weight, p_model_transformer_h_6_ln_1_bias, p_model_transformer_h_6_attn_attention_out_proj_weight, p_model_transformer_h_6_attn_attention_out_proj_bias, p_model_transformer_h_6_ln_2_weight, p_model_transformer_h_6_ln_2_bias, p_model_transformer_h_6_mlp_c_fc_weight, p_model_transformer_h_6_mlp_c_fc_bias, p_model_transformer_h_6_mlp_c_proj_weight, p_model_transformer_h_6_mlp_c_proj_bias, p_model_transformer_h_7_ln_1_weight, p_model_transformer_h_7_ln_1_bias, p_model_transformer_h_7_attn_attention_out_proj_weight, p_model_transformer_h_7_attn_attention_out_proj_bias, p_model_transformer_h_7_ln_2_weight, p_model_transformer_h_7_ln_2_bias, p_model_transformer_h_7_mlp_c_fc_weight, p_model_transformer_h_7_mlp_c_fc_bias, p_model_transformer_h_7_mlp_c_proj_weight, p_model_transformer_h_7_mlp_c_proj_bias, p_model_transformer_ln_f_weight, p_model_transformer_ln_f_bias, p_model_lm_head_weight, b__scale_0, b__zero_point_0, b__scale_1, b__zero_point_1, b__scale_2, b__zero_point_2, b__scale_3, b__zero_point_3, b__scale_4, b__zero_point_4, b__scale_5, b__zero_point_5, b__scale_6, b__zero_point_6, b__scale_7, b__zero_point_7, b__scale_8, b__zero_point_8, b__scale_9, b__zero_point_9, b__scale_10, b__zero_point_10, b__scale_11, b__zero_point_11, b__scale_12, b__zero_point_12, b__scale_13, b__zero_point_13, b__scale_14, b__zero_point_14, b__scale_15, b__zero_point_15, b__scale_16, b__zero_point_16, b__scale_17, b__zero_point_17, b__scale_18, b__zero_point_18, b__scale_19, b__zero_point_19, b__scale_20, b__zero_point_20, b__scale_21, b__zero_point_21, b__scale_22, b__zero_point_22, b__scale_23, b__zero_point_23, b__scale_24, b__zero_point_24, b__scale_25, b__zero_point_25, b__scale_26, b__zero_point_26, b__scale_27, b__zero_point_27, b__scale_28, b__zero_point_28, b__scale_29, b__zero_point_29, b__scale_30, b__zero_point_30, b__scale_31, b__zero_point_31, b__scale_32, b__zero_point_32, b__scale_33, b__zero_point_33, b__scale_34, b__zero_point_34, b__scale_35, b__zero_point_35, b__scale_36, b__zero_point_36, b__scale_37, b__zero_point_37, b__scale_38, b__zero_point_38, b__scale_39, b__zero_point_39, b__scale_40, b__zero_point_40, b__scale_41, b__zero_point_41, b__scale_42, b__zero_point_42, b__scale_43, b__zero_point_43, b__scale_44, b__zero_point_44, b__scale_45, b__zero_point_45, b__scale_46, b__zero_point_46, b__scale_47, b__zero_point_47, b__scale_48, b__zero_point_48, b__tensor_constant_0, b__tensor_constant_1, b__tensor_constant_2, b__tensor_constant_3, b__tensor_constant_4, b__tensor_constant_5, b__tensor_constant_6, b__tensor_constant_7, b__tensor_constant_8, b__tensor_constant_9, b__tensor_constant_10, b__tensor_constant_11, b__tensor_constant_12, b__tensor_constant_13, b__tensor_constant_14, b__tensor_constant_15, b__tensor_constant_16, b__tensor_constant_17, b__tensor_constant_18, b__tensor_constant_19, b__tensor_constant_20, b__tensor_constant_21, b__tensor_constant_22, b__tensor_constant_23, b__tensor_constant_24, b__tensor_constant_25, b__tensor_constant_26, b__tensor_constant_27, b__tensor_constant_28, b__tensor_constant_29, b__tensor_constant_30, b__tensor_constant_31, b__frozen_param0, b__frozen_param1, b__frozen_param2, b__frozen_param3, b__frozen_param4, b__frozen_param5, b__frozen_param6, b__frozen_param7, b__frozen_param8, b__frozen_param9, b__frozen_param10, b__frozen_param11, b__frozen_param12, b__frozen_param13, b__frozen_param14, b__frozen_param15, b__frozen_param16, b__frozen_param17, b__frozen_param18, b__frozen_param19, b__frozen_param20, b__frozen_param21, b__frozen_param22, b__frozen_param23, b__frozen_param24, b__frozen_param25, b__frozen_param26, b__frozen_param27, b__frozen_param28, b__frozen_param29, b__frozen_param30, b__frozen_param31, b__frozen_param32, b__frozen_param33, b__frozen_param34, b__frozen_param35, b__frozen_param36, b__frozen_param37, b__frozen_param38, b__frozen_param39, b__frozen_param40, b__frozen_param41, b__frozen_param42, b__frozen_param43, b__frozen_param44, b__frozen_param45, b__frozen_param46, b__frozen_param47, b__frozen_param48, b_model_transformer_h_0_attn_attention_bias, b_model_transformer_h_0_attn_attention_lifted_tensor_0, b_model_transformer_h_1_attn_attention_bias, b_model_transformer_h_1_attn_attention_lifted_tensor_1, b_model_transformer_h_2_attn_attention_bias, b_model_transformer_h_2_attn_attention_lifted_tensor_2, b_model_transformer_h_3_attn_attention_bias, b_model_transformer_h_3_attn_attention_lifted_tensor_3, b_model_transformer_h_4_attn_attention_bias, b_model_transformer_h_4_attn_attention_lifted_tensor_4, b_model_transformer_h_5_attn_attention_bias, b_model_transformer_h_5_attn_attention_lifted_tensor_5, b_model_transformer_h_6_attn_attention_bias, b_model_transformer_h_6_attn_attention_lifted_tensor_6, b_model_transformer_h_7_attn_attention_bias, b_model_transformer_h_7_attn_attention_lifted_tensor_7, tokens):
+    embedding = torch.ops.aten.embedding.default(p_model_lm_head_weight, tokens);  p_model_lm_head_weight = tokens = None
+    arange = torch.ops.aten.arange.start(0, 32, device = device(type='cpu'), pin_memory = False)
+    unsqueeze = torch.ops.aten.unsqueeze.default(arange, 0)
+    full = torch.ops.aten.full.default([32, 33], -3.4028234663852886e+38, dtype = torch.float32, device = device(type='cpu'), pin_memory = False)
+    triu = torch.ops.aten.triu.default(full, 1);  full = None
+    arange_1 = torch.ops.aten.arange.default(33, device = device(type='cpu'), pin_memory = False)
+    reshape = torch.ops.aten.reshape.default(arange, [-1, 1]);  arange = None
+    gt = torch.ops.aten.gt.Tensor(arange_1, reshape);  arange_1 = reshape = None
+    mul_ = torch.ops.aten.mul_.Tensor(triu, gt);  triu = gt = None
+    unsqueeze_1 = torch.ops.aten.unsqueeze.default(mul_, 0);  mul_ = None
+    unsqueeze_2 = torch.ops.aten.unsqueeze.default(unsqueeze_1, 1);  unsqueeze_1 = None
+    expand = torch.ops.aten.expand.default(unsqueeze_2, [1, 1, -1, -1]);  unsqueeze_2 = None
+    embedding_1 = torch.ops.aten.embedding.default(p_model_transformer_wpe_weight, unsqueeze);  p_model_transformer_wpe_weight = unsqueeze = None
+    add = torch.ops.aten.add.Tensor(embedding, embedding_1);  embedding = embedding_1 = None
+    dropout = torch.ops.aten.dropout.default(add, 0.0, False);  add = None
+    layer_norm = torch.ops.aten.layer_norm.default(dropout, [64], p_model_transformer_h_0_ln_1_weight, p_model_transformer_h_0_ln_1_bias);  p_model_transformer_h_0_ln_1_weight = p_model_transformer_h_0_ln_1_bias = None
+    choose_qparams_tensor = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm, -128, 127, 0.000244140625, torch.int8)
+    getitem = choose_qparams_tensor[0]
+    getitem_1 = choose_qparams_tensor[1];  choose_qparams_tensor = None
+    div = torch.ops.aten.div.Tensor(layer_norm, getitem);  layer_norm = None
+    round_1 = torch.ops.aten.round.default(div);  div = None
+    _assert_tensor_metadata_default = torch.ops.aten._assert_tensor_metadata.default(round_1, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default = None
+    to = torch.ops.aten.to.dtype(round_1, torch.int32);  round_1 = None
+    add_1 = torch.ops.aten.add.Tensor(to, getitem_1);  to = None
+    clamp = torch.ops.aten.clamp.default(add_1, -128, 127);  add_1 = None
+    _assert_tensor_metadata_default_1 = torch.ops.aten._assert_tensor_metadata.default(clamp, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_1 = None
+    to_1 = torch.ops.aten.to.dtype(clamp, torch.int8);  clamp = None
+    clamp_1 = torch.ops.aten.clamp.default(to_1, -128, 127);  to_1 = None
+    _assert_tensor_metadata_default_2 = torch.ops.aten._assert_tensor_metadata.default(clamp_1, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_2 = None
+    to_2 = torch.ops.aten.to.dtype(clamp_1, torch.float32);  clamp_1 = None
+    sub = torch.ops.aten.sub.Tensor(to_2, getitem_1);  to_2 = getitem_1 = None
+    mul = torch.ops.aten.mul.Tensor(sub, getitem);  sub = getitem = None
+    _assert_tensor_metadata_default_3 = torch.ops.aten._assert_tensor_metadata.default(mul, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_3 = None
+    to_3 = torch.ops.aten.to.dtype(mul, torch.float32);  mul = None
+    clamp_2 = torch.ops.aten.clamp.default(b__frozen_param2, -127, 127);  b__frozen_param2 = None
+    transpose = torch.ops.aten.transpose.int(clamp_2, 0, -1);  clamp_2 = None
+    _assert_tensor_metadata_default_4 = torch.ops.aten._assert_tensor_metadata.default(transpose, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_4 = None
+    to_4 = torch.ops.aten.to.dtype(transpose, torch.int32);  transpose = None
+    sub_1 = torch.ops.aten.sub.Tensor(to_4, b__zero_point_2);  to_4 = b__zero_point_2 = None
+    _assert_tensor_metadata_default_5 = torch.ops.aten._assert_tensor_metadata.default(sub_1, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_5 = None
+    to_5 = torch.ops.aten.to.dtype(sub_1, torch.float32);  sub_1 = None
+    mul_1 = torch.ops.aten.mul.Tensor(to_5, b__scale_2);  to_5 = b__scale_2 = None
+    transpose_1 = torch.ops.aten.transpose.int(mul_1, 0, -1);  mul_1 = None
+    linear = torch.ops.aten.linear.default(to_3, transpose_1);  transpose_1 = None
+    clamp_3 = torch.ops.aten.clamp.default(b__frozen_param0, -127, 127);  b__frozen_param0 = None
+    transpose_2 = torch.ops.aten.transpose.int(clamp_3, 0, -1);  clamp_3 = None
+    _assert_tensor_metadata_default_6 = torch.ops.aten._assert_tensor_metadata.default(transpose_2, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_6 = None
+    to_6 = torch.ops.aten.to.dtype(transpose_2, torch.int32);  transpose_2 = None
+    sub_2 = torch.ops.aten.sub.Tensor(to_6, b__zero_point_0);  to_6 = b__zero_point_0 = None
+    _assert_tensor_metadata_default_7 = torch.ops.aten._assert_tensor_metadata.default(sub_2, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_7 = None
+    to_7 = torch.ops.aten.to.dtype(sub_2, torch.float32);  sub_2 = None
+    mul_2 = torch.ops.aten.mul.Tensor(to_7, b__scale_0);  to_7 = b__scale_0 = None
+    transpose_3 = torch.ops.aten.transpose.int(mul_2, 0, -1);  mul_2 = None
+    linear_1 = torch.ops.aten.linear.default(to_3, transpose_3);  transpose_3 = None
+    clamp_4 = torch.ops.aten.clamp.default(b__frozen_param1, -127, 127);  b__frozen_param1 = None
+    transpose_4 = torch.ops.aten.transpose.int(clamp_4, 0, -1);  clamp_4 = None
+    _assert_tensor_metadata_default_8 = torch.ops.aten._assert_tensor_metadata.default(transpose_4, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_8 = None
+    to_8 = torch.ops.aten.to.dtype(transpose_4, torch.int32);  transpose_4 = None
+    sub_3 = torch.ops.aten.sub.Tensor(to_8, b__zero_point_1);  to_8 = b__zero_point_1 = None
+    _assert_tensor_metadata_default_9 = torch.ops.aten._assert_tensor_metadata.default(sub_3, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_9 = None
+    to_9 = torch.ops.aten.to.dtype(sub_3, torch.float32);  sub_3 = None
+    mul_3 = torch.ops.aten.mul.Tensor(to_9, b__scale_1);  to_9 = b__scale_1 = None
+    transpose_5 = torch.ops.aten.transpose.int(mul_3, 0, -1);  mul_3 = None
+    linear_2 = torch.ops.aten.linear.default(to_3, transpose_5);  to_3 = transpose_5 = None
+    view = torch.ops.aten.view.default(linear, [1, 32, 16, 4]);  linear = None
+    permute = torch.ops.aten.permute.default(view, [0, 2, 1, 3]);  view = None
+    view_1 = torch.ops.aten.view.default(linear_1, [1, 32, 16, 4]);  linear_1 = None
+    permute_1 = torch.ops.aten.permute.default(view_1, [0, 2, 1, 3]);  view_1 = None
+    view_2 = torch.ops.aten.view.default(linear_2, [1, 32, 16, 4]);  linear_2 = None
+    permute_2 = torch.ops.aten.permute.default(view_2, [0, 2, 1, 3]);  view_2 = None
+    _assert_tensor_metadata_default_10 = torch.ops.aten._assert_tensor_metadata.default(permute, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_10 = None
+    to_10 = torch.ops.aten.to.dtype(permute, torch.float32);  permute = None
+    _assert_tensor_metadata_default_11 = torch.ops.aten._assert_tensor_metadata.default(permute_1, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_11 = None
+    to_11 = torch.ops.aten.to.dtype(permute_1, torch.float32);  permute_1 = None
+    transpose_6 = torch.ops.aten.transpose.int(to_11, -1, -2);  to_11 = None
+    matmul = torch.ops.aten.matmul.default(to_10, transpose_6);  to_10 = transpose_6 = None
+    slice_1 = torch.ops.aten.slice.Tensor(b_model_transformer_h_0_attn_attention_bias, 2, 0, 32);  b_model_transformer_h_0_attn_attention_bias = None
+    slice_2 = torch.ops.aten.slice.Tensor(slice_1, 3, 0, 32);  slice_1 = None
+    lift_fresh_copy = torch.ops.aten.lift_fresh_copy.default(b_model_transformer_h_0_attn_attention_lifted_tensor_0);  b_model_transformer_h_0_attn_attention_lifted_tensor_0 = None
+    detach_ = torch.ops.aten.detach_.default(lift_fresh_copy);  lift_fresh_copy = None
+    where = torch.ops.aten.where.self(slice_2, matmul, detach_);  slice_2 = matmul = detach_ = None
+    slice_3 = torch.ops.aten.slice.Tensor(expand, 3, 0, 32)
+    add_2 = torch.ops.aten.add.Tensor(where, slice_3);  where = slice_3 = None
+    softmax = torch.ops.aten.softmax.int(add_2, -1);  add_2 = None
+    _assert_tensor_metadata_default_12 = torch.ops.aten._assert_tensor_metadata.default(softmax, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_12 = None
+    to_12 = torch.ops.aten.to.dtype(softmax, torch.float32);  softmax = None
+    dropout_1 = torch.ops.aten.dropout.default(to_12, 0.0, False);  to_12 = None
+    matmul_1 = torch.ops.aten.matmul.default(dropout_1, permute_2);  dropout_1 = permute_2 = None
+    permute_3 = torch.ops.aten.permute.default(matmul_1, [0, 2, 1, 3]);  matmul_1 = None
+    contiguous = torch.ops.aten.contiguous.default(permute_3);  permute_3 = None
+    view_3 = torch.ops.aten.view.default(contiguous, [1, 32, 64]);  contiguous = None
+    choose_qparams_tensor_1 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_3, -128, 127, 0.000244140625, torch.int8)
+    getitem_2 = choose_qparams_tensor_1[0]
+    getitem_3 = choose_qparams_tensor_1[1];  choose_qparams_tensor_1 = None
+    div_1 = torch.ops.aten.div.Tensor(view_3, getitem_2);  view_3 = None
+    round_2 = torch.ops.aten.round.default(div_1);  div_1 = None
+    _assert_tensor_metadata_default_13 = torch.ops.aten._assert_tensor_metadata.default(round_2, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_13 = None
+    to_13 = torch.ops.aten.to.dtype(round_2, torch.int32);  round_2 = None
+    add_3 = torch.ops.aten.add.Tensor(to_13, getitem_3);  to_13 = None
+    clamp_5 = torch.ops.aten.clamp.default(add_3, -128, 127);  add_3 = None
+    _assert_tensor_metadata_default_14 = torch.ops.aten._assert_tensor_metadata.default(clamp_5, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_14 = None
+    to_14 = torch.ops.aten.to.dtype(clamp_5, torch.int8);  clamp_5 = None
+    clamp_6 = torch.ops.aten.clamp.default(to_14, -128, 127);  to_14 = None
+    _assert_tensor_metadata_default_15 = torch.ops.aten._assert_tensor_metadata.default(clamp_6, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_15 = None
+    to_15 = torch.ops.aten.to.dtype(clamp_6, torch.float32);  clamp_6 = None
+    sub_4 = torch.ops.aten.sub.Tensor(to_15, getitem_3);  to_15 = getitem_3 = None
+    mul_4 = torch.ops.aten.mul.Tensor(sub_4, getitem_2);  sub_4 = getitem_2 = None
+    _assert_tensor_metadata_default_16 = torch.ops.aten._assert_tensor_metadata.default(mul_4, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_16 = None
+    to_16 = torch.ops.aten.to.dtype(mul_4, torch.float32);  mul_4 = None
+    clamp_7 = torch.ops.aten.clamp.default(b__frozen_param3, -127, 127);  b__frozen_param3 = None
+    transpose_7 = torch.ops.aten.transpose.int(clamp_7, 0, -1);  clamp_7 = None
+    _assert_tensor_metadata_default_17 = torch.ops.aten._assert_tensor_metadata.default(transpose_7, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_17 = None
+    to_17 = torch.ops.aten.to.dtype(transpose_7, torch.int32);  transpose_7 = None
+    sub_5 = torch.ops.aten.sub.Tensor(to_17, b__zero_point_3);  to_17 = b__zero_point_3 = None
+    _assert_tensor_metadata_default_18 = torch.ops.aten._assert_tensor_metadata.default(sub_5, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_18 = None
+    to_18 = torch.ops.aten.to.dtype(sub_5, torch.float32);  sub_5 = None
+    mul_5 = torch.ops.aten.mul.Tensor(to_18, b__scale_3);  to_18 = b__scale_3 = None
+    transpose_8 = torch.ops.aten.transpose.int(mul_5, 0, -1);  mul_5 = None
+    linear_3 = torch.ops.aten.linear.default(to_16, transpose_8, p_model_transformer_h_0_attn_attention_out_proj_bias);  to_16 = transpose_8 = p_model_transformer_h_0_attn_attention_out_proj_bias = None
+    dropout_2 = torch.ops.aten.dropout.default(linear_3, 0.0, False);  linear_3 = None
+    add_4 = torch.ops.aten.add.Tensor(dropout_2, dropout);  dropout_2 = dropout = None
+    layer_norm_1 = torch.ops.aten.layer_norm.default(add_4, [64], p_model_transformer_h_0_ln_2_weight, p_model_transformer_h_0_ln_2_bias);  p_model_transformer_h_0_ln_2_weight = p_model_transformer_h_0_ln_2_bias = None
+    choose_qparams_tensor_2 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_1, -128, 127, 0.000244140625, torch.int8)
+    getitem_4 = choose_qparams_tensor_2[0]
+    getitem_5 = choose_qparams_tensor_2[1];  choose_qparams_tensor_2 = None
+    div_2 = torch.ops.aten.div.Tensor(layer_norm_1, getitem_4);  layer_norm_1 = None
+    round_3 = torch.ops.aten.round.default(div_2);  div_2 = None
+    _assert_tensor_metadata_default_19 = torch.ops.aten._assert_tensor_metadata.default(round_3, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_19 = None
+    to_19 = torch.ops.aten.to.dtype(round_3, torch.int32);  round_3 = None
+    add_5 = torch.ops.aten.add.Tensor(to_19, getitem_5);  to_19 = None
+    clamp_8 = torch.ops.aten.clamp.default(add_5, -128, 127);  add_5 = None
+    _assert_tensor_metadata_default_20 = torch.ops.aten._assert_tensor_metadata.default(clamp_8, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_20 = None
+    to_20 = torch.ops.aten.to.dtype(clamp_8, torch.int8);  clamp_8 = None
+    clamp_9 = torch.ops.aten.clamp.default(to_20, -128, 127);  to_20 = None
+    _assert_tensor_metadata_default_21 = torch.ops.aten._assert_tensor_metadata.default(clamp_9, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_21 = None
+    to_21 = torch.ops.aten.to.dtype(clamp_9, torch.float32);  clamp_9 = None
+    sub_6 = torch.ops.aten.sub.Tensor(to_21, getitem_5);  to_21 = getitem_5 = None
+    mul_6 = torch.ops.aten.mul.Tensor(sub_6, getitem_4);  sub_6 = getitem_4 = None
+    _assert_tensor_metadata_default_22 = torch.ops.aten._assert_tensor_metadata.default(mul_6, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_22 = None
+    to_22 = torch.ops.aten.to.dtype(mul_6, torch.float32);  mul_6 = None
+    clamp_10 = torch.ops.aten.clamp.default(b__frozen_param4, -127, 127);  b__frozen_param4 = None
+    transpose_9 = torch.ops.aten.transpose.int(clamp_10, 0, -1);  clamp_10 = None
+    _assert_tensor_metadata_default_23 = torch.ops.aten._assert_tensor_metadata.default(transpose_9, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_23 = None
+    to_23 = torch.ops.aten.to.dtype(transpose_9, torch.int32);  transpose_9 = None
+    sub_7 = torch.ops.aten.sub.Tensor(to_23, b__zero_point_4);  to_23 = b__zero_point_4 = None
+    _assert_tensor_metadata_default_24 = torch.ops.aten._assert_tensor_metadata.default(sub_7, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_24 = None
+    to_24 = torch.ops.aten.to.dtype(sub_7, torch.float32);  sub_7 = None
+    mul_7 = torch.ops.aten.mul.Tensor(to_24, b__scale_4);  to_24 = b__scale_4 = None
+    transpose_10 = torch.ops.aten.transpose.int(mul_7, 0, -1);  mul_7 = None
+    linear_4 = torch.ops.aten.linear.default(to_22, transpose_10, p_model_transformer_h_0_mlp_c_fc_bias);  to_22 = transpose_10 = p_model_transformer_h_0_mlp_c_fc_bias = None
+    mul_8 = torch.ops.aten.mul.Tensor(linear_4, b__tensor_constant_0);  b__tensor_constant_0 = None
+    pow_1 = torch.ops.aten.pow.Tensor_Scalar(linear_4, 3.0)
+    mul_9 = torch.ops.aten.mul.Tensor(pow_1, b__tensor_constant_1);  pow_1 = b__tensor_constant_1 = None
+    add_6 = torch.ops.aten.add.Tensor(linear_4, mul_9);  linear_4 = mul_9 = None
+    mul_10 = torch.ops.aten.mul.Tensor(add_6, b__tensor_constant_2);  add_6 = b__tensor_constant_2 = None
+    tanh = torch.ops.aten.tanh.default(mul_10);  mul_10 = None
+    add_7 = torch.ops.aten.add.Tensor(tanh, b__tensor_constant_3);  tanh = b__tensor_constant_3 = None
+    mul_11 = torch.ops.aten.mul.Tensor(mul_8, add_7);  mul_8 = add_7 = None
+    choose_qparams_tensor_3 = torch.ops.quantized_decomposed.choose_qparams.tensor(mul_11, -128, 127, 0.000244140625, torch.int8)
+    getitem_6 = choose_qparams_tensor_3[0]
+    getitem_7 = choose_qparams_tensor_3[1];  choose_qparams_tensor_3 = None
+    div_3 = torch.ops.aten.div.Tensor(mul_11, getitem_6);  mul_11 = None
+    round_4 = torch.ops.aten.round.default(div_3);  div_3 = None
+    _assert_tensor_metadata_default_25 = torch.ops.aten._assert_tensor_metadata.default(round_4, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_25 = None
+    to_25 = torch.ops.aten.to.dtype(round_4, torch.int32);  round_4 = None
+    add_8 = torch.ops.aten.add.Tensor(to_25, getitem_7);  to_25 = None
+    clamp_11 = torch.ops.aten.clamp.default(add_8, -128, 127);  add_8 = None
+    _assert_tensor_metadata_default_26 = torch.ops.aten._assert_tensor_metadata.default(clamp_11, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_26 = None
+    to_26 = torch.ops.aten.to.dtype(clamp_11, torch.int8);  clamp_11 = None
+    clamp_12 = torch.ops.aten.clamp.default(to_26, -128, 127);  to_26 = None
+    _assert_tensor_metadata_default_27 = torch.ops.aten._assert_tensor_metadata.default(clamp_12, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_27 = None
+    to_27 = torch.ops.aten.to.dtype(clamp_12, torch.float32);  clamp_12 = None
+    sub_8 = torch.ops.aten.sub.Tensor(to_27, getitem_7);  to_27 = getitem_7 = None
+    mul_12 = torch.ops.aten.mul.Tensor(sub_8, getitem_6);  sub_8 = getitem_6 = None
+    _assert_tensor_metadata_default_28 = torch.ops.aten._assert_tensor_metadata.default(mul_12, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_28 = None
+    to_28 = torch.ops.aten.to.dtype(mul_12, torch.float32);  mul_12 = None
+    clamp_13 = torch.ops.aten.clamp.default(b__frozen_param5, -127, 127);  b__frozen_param5 = None
+    transpose_11 = torch.ops.aten.transpose.int(clamp_13, 0, -1);  clamp_13 = None
+    _assert_tensor_metadata_default_29 = torch.ops.aten._assert_tensor_metadata.default(transpose_11, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_29 = None
+    to_29 = torch.ops.aten.to.dtype(transpose_11, torch.int32);  transpose_11 = None
+    sub_9 = torch.ops.aten.sub.Tensor(to_29, b__zero_point_5);  to_29 = b__zero_point_5 = None
+    _assert_tensor_metadata_default_30 = torch.ops.aten._assert_tensor_metadata.default(sub_9, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_30 = None
+    to_30 = torch.ops.aten.to.dtype(sub_9, torch.float32);  sub_9 = None
+    mul_13 = torch.ops.aten.mul.Tensor(to_30, b__scale_5);  to_30 = b__scale_5 = None
+    transpose_12 = torch.ops.aten.transpose.int(mul_13, 0, -1);  mul_13 = None
+    linear_5 = torch.ops.aten.linear.default(to_28, transpose_12, p_model_transformer_h_0_mlp_c_proj_bias);  to_28 = transpose_12 = p_model_transformer_h_0_mlp_c_proj_bias = None
+    dropout_3 = torch.ops.aten.dropout.default(linear_5, 0.0, False);  linear_5 = None
+    add_9 = torch.ops.aten.add.Tensor(add_4, dropout_3);  add_4 = dropout_3 = None
+    layer_norm_2 = torch.ops.aten.layer_norm.default(add_9, [64], p_model_transformer_h_1_ln_1_weight, p_model_transformer_h_1_ln_1_bias);  p_model_transformer_h_1_ln_1_weight = p_model_transformer_h_1_ln_1_bias = None
+    choose_qparams_tensor_4 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_2, -128, 127, 0.000244140625, torch.int8)
+    getitem_8 = choose_qparams_tensor_4[0]
+    getitem_9 = choose_qparams_tensor_4[1];  choose_qparams_tensor_4 = None
+    div_4 = torch.ops.aten.div.Tensor(layer_norm_2, getitem_8);  layer_norm_2 = None
+    round_5 = torch.ops.aten.round.default(div_4);  div_4 = None
+    _assert_tensor_metadata_default_31 = torch.ops.aten._assert_tensor_metadata.default(round_5, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_31 = None
+    to_31 = torch.ops.aten.to.dtype(round_5, torch.int32);  round_5 = None
+    add_10 = torch.ops.aten.add.Tensor(to_31, getitem_9);  to_31 = None
+    clamp_14 = torch.ops.aten.clamp.default(add_10, -128, 127);  add_10 = None
+    _assert_tensor_metadata_default_32 = torch.ops.aten._assert_tensor_metadata.default(clamp_14, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_32 = None
+    to_32 = torch.ops.aten.to.dtype(clamp_14, torch.int8);  clamp_14 = None
+    clamp_15 = torch.ops.aten.clamp.default(to_32, -128, 127);  to_32 = None
+    _assert_tensor_metadata_default_33 = torch.ops.aten._assert_tensor_metadata.default(clamp_15, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_33 = None
+    to_33 = torch.ops.aten.to.dtype(clamp_15, torch.float32);  clamp_15 = None
+    sub_10 = torch.ops.aten.sub.Tensor(to_33, getitem_9);  to_33 = getitem_9 = None
+    mul_14 = torch.ops.aten.mul.Tensor(sub_10, getitem_8);  sub_10 = getitem_8 = None
+    _assert_tensor_metadata_default_34 = torch.ops.aten._assert_tensor_metadata.default(mul_14, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_34 = None
+    to_34 = torch.ops.aten.to.dtype(mul_14, torch.float32);  mul_14 = None
+    clamp_16 = torch.ops.aten.clamp.default(b__frozen_param8, -127, 127);  b__frozen_param8 = None
+    transpose_13 = torch.ops.aten.transpose.int(clamp_16, 0, -1);  clamp_16 = None
+    _assert_tensor_metadata_default_35 = torch.ops.aten._assert_tensor_metadata.default(transpose_13, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_35 = None
+    to_35 = torch.ops.aten.to.dtype(transpose_13, torch.int32);  transpose_13 = None
+    sub_11 = torch.ops.aten.sub.Tensor(to_35, b__zero_point_8);  to_35 = b__zero_point_8 = None
+    _assert_tensor_metadata_default_36 = torch.ops.aten._assert_tensor_metadata.default(sub_11, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_36 = None
+    to_36 = torch.ops.aten.to.dtype(sub_11, torch.float32);  sub_11 = None
+    mul_15 = torch.ops.aten.mul.Tensor(to_36, b__scale_8);  to_36 = b__scale_8 = None
+    transpose_14 = torch.ops.aten.transpose.int(mul_15, 0, -1);  mul_15 = None
+    linear_6 = torch.ops.aten.linear.default(to_34, transpose_14);  transpose_14 = None
+    clamp_17 = torch.ops.aten.clamp.default(b__frozen_param6, -127, 127);  b__frozen_param6 = None
+    transpose_15 = torch.ops.aten.transpose.int(clamp_17, 0, -1);  clamp_17 = None
+    _assert_tensor_metadata_default_37 = torch.ops.aten._assert_tensor_metadata.default(transpose_15, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_37 = None
+    to_37 = torch.ops.aten.to.dtype(transpose_15, torch.int32);  transpose_15 = None
+    sub_12 = torch.ops.aten.sub.Tensor(to_37, b__zero_point_6);  to_37 = b__zero_point_6 = None
+    _assert_tensor_metadata_default_38 = torch.ops.aten._assert_tensor_metadata.default(sub_12, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_38 = None
+    to_38 = torch.ops.aten.to.dtype(sub_12, torch.float32);  sub_12 = None
+    mul_16 = torch.ops.aten.mul.Tensor(to_38, b__scale_6);  to_38 = b__scale_6 = None
+    transpose_16 = torch.ops.aten.transpose.int(mul_16, 0, -1);  mul_16 = None
+    linear_7 = torch.ops.aten.linear.default(to_34, transpose_16);  transpose_16 = None
+    clamp_18 = torch.ops.aten.clamp.default(b__frozen_param7, -127, 127);  b__frozen_param7 = None
+    transpose_17 = torch.ops.aten.transpose.int(clamp_18, 0, -1);  clamp_18 = None
+    _assert_tensor_metadata_default_39 = torch.ops.aten._assert_tensor_metadata.default(transpose_17, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_39 = None
+    to_39 = torch.ops.aten.to.dtype(transpose_17, torch.int32);  transpose_17 = None
+    sub_13 = torch.ops.aten.sub.Tensor(to_39, b__zero_point_7);  to_39 = b__zero_point_7 = None
+    _assert_tensor_metadata_default_40 = torch.ops.aten._assert_tensor_metadata.default(sub_13, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_40 = None
+    to_40 = torch.ops.aten.to.dtype(sub_13, torch.float32);  sub_13 = None
+    mul_17 = torch.ops.aten.mul.Tensor(to_40, b__scale_7);  to_40 = b__scale_7 = None
+    transpose_18 = torch.ops.aten.transpose.int(mul_17, 0, -1);  mul_17 = None
+    linear_8 = torch.ops.aten.linear.default(to_34, transpose_18);  to_34 = transpose_18 = None
+    view_4 = torch.ops.aten.view.default(linear_6, [1, 32, 16, 4]);  linear_6 = None
+    permute_4 = torch.ops.aten.permute.default(view_4, [0, 2, 1, 3]);  view_4 = None
+    view_5 = torch.ops.aten.view.default(linear_7, [1, 32, 16, 4]);  linear_7 = None
+    permute_5 = torch.ops.aten.permute.default(view_5, [0, 2, 1, 3]);  view_5 = None
+    view_6 = torch.ops.aten.view.default(linear_8, [1, 32, 16, 4]);  linear_8 = None
+    permute_6 = torch.ops.aten.permute.default(view_6, [0, 2, 1, 3]);  view_6 = None
+    _assert_tensor_metadata_default_41 = torch.ops.aten._assert_tensor_metadata.default(permute_4, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_41 = None
+    to_41 = torch.ops.aten.to.dtype(permute_4, torch.float32);  permute_4 = None
+    _assert_tensor_metadata_default_42 = torch.ops.aten._assert_tensor_metadata.default(permute_5, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_42 = None
+    to_42 = torch.ops.aten.to.dtype(permute_5, torch.float32);  permute_5 = None
+    transpose_19 = torch.ops.aten.transpose.int(to_42, -1, -2);  to_42 = None
+    matmul_2 = torch.ops.aten.matmul.default(to_41, transpose_19);  to_41 = transpose_19 = None
+    slice_4 = torch.ops.aten.slice.Tensor(b_model_transformer_h_1_attn_attention_bias, 2, 0, 32);  b_model_transformer_h_1_attn_attention_bias = None
+    slice_5 = torch.ops.aten.slice.Tensor(slice_4, 3, 0, 32);  slice_4 = None
+    lift_fresh_copy_1 = torch.ops.aten.lift_fresh_copy.default(b_model_transformer_h_1_attn_attention_lifted_tensor_1);  b_model_transformer_h_1_attn_attention_lifted_tensor_1 = None
+    detach__1 = torch.ops.aten.detach_.default(lift_fresh_copy_1);  lift_fresh_copy_1 = None
+    where_1 = torch.ops.aten.where.self(slice_5, matmul_2, detach__1);  slice_5 = matmul_2 = detach__1 = None
+    slice_6 = torch.ops.aten.slice.Tensor(expand, 3, 0, 32)
+    add_11 = torch.ops.aten.add.Tensor(where_1, slice_6);  where_1 = slice_6 = None
+    softmax_1 = torch.ops.aten.softmax.int(add_11, -1);  add_11 = None
+    _assert_tensor_metadata_default_43 = torch.ops.aten._assert_tensor_metadata.default(softmax_1, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_43 = None
+    to_43 = torch.ops.aten.to.dtype(softmax_1, torch.float32);  softmax_1 = None
+    dropout_4 = torch.ops.aten.dropout.default(to_43, 0.0, False);  to_43 = None
+    matmul_3 = torch.ops.aten.matmul.default(dropout_4, permute_6);  dropout_4 = permute_6 = None
+    permute_7 = torch.ops.aten.permute.default(matmul_3, [0, 2, 1, 3]);  matmul_3 = None
+    contiguous_1 = torch.ops.aten.contiguous.default(permute_7);  permute_7 = None
+    view_7 = torch.ops.aten.view.default(contiguous_1, [1, 32, 64]);  contiguous_1 = None
+    choose_qparams_tensor_5 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_7, -128, 127, 0.000244140625, torch.int8)
+    getitem_10 = choose_qparams_tensor_5[0]
+    getitem_11 = choose_qparams_tensor_5[1];  choose_qparams_tensor_5 = None
+    div_5 = torch.ops.aten.div.Tensor(view_7, getitem_10);  view_7 = None
+    round_6 = torch.ops.aten.round.default(div_5);  div_5 = None
+    _assert_tensor_metadata_default_44 = torch.ops.aten._assert_tensor_metadata.default(round_6, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_44 = None
+    to_44 = torch.ops.aten.to.dtype(round_6, torch.int32);  round_6 = None
+    add_12 = torch.ops.aten.add.Tensor(to_44, getitem_11);  to_44 = None
+    clamp_19 = torch.ops.aten.clamp.default(add_12, -128, 127);  add_12 = None
+    _assert_tensor_metadata_default_45 = torch.ops.aten._assert_tensor_metadata.default(clamp_19, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_45 = None
+    to_45 = torch.ops.aten.to.dtype(clamp_19, torch.int8);  clamp_19 = None
+    clamp_20 = torch.ops.aten.clamp.default(to_45, -128, 127);  to_45 = None
+    _assert_tensor_metadata_default_46 = torch.ops.aten._assert_tensor_metadata.default(clamp_20, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_46 = None
+    to_46 = torch.ops.aten.to.dtype(clamp_20, torch.float32);  clamp_20 = None
+    sub_14 = torch.ops.aten.sub.Tensor(to_46, getitem_11);  to_46 = getitem_11 = None
+    mul_18 = torch.ops.aten.mul.Tensor(sub_14, getitem_10);  sub_14 = getitem_10 = None
+    _assert_tensor_metadata_default_47 = torch.ops.aten._assert_tensor_metadata.default(mul_18, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_47 = None
+    to_47 = torch.ops.aten.to.dtype(mul_18, torch.float32);  mul_18 = None
+    clamp_21 = torch.ops.aten.clamp.default(b__frozen_param9, -127, 127);  b__frozen_param9 = None
+    transpose_20 = torch.ops.aten.transpose.int(clamp_21, 0, -1);  clamp_21 = None
+    _assert_tensor_metadata_default_48 = torch.ops.aten._assert_tensor_metadata.default(transpose_20, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_48 = None
+    to_48 = torch.ops.aten.to.dtype(transpose_20, torch.int32);  transpose_20 = None
+    sub_15 = torch.ops.aten.sub.Tensor(to_48, b__zero_point_9);  to_48 = b__zero_point_9 = None
+    _assert_tensor_metadata_default_49 = torch.ops.aten._assert_tensor_metadata.default(sub_15, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_49 = None
+    to_49 = torch.ops.aten.to.dtype(sub_15, torch.float32);  sub_15 = None
+    mul_19 = torch.ops.aten.mul.Tensor(to_49, b__scale_9);  to_49 = b__scale_9 = None
+    transpose_21 = torch.ops.aten.transpose.int(mul_19, 0, -1);  mul_19 = None
+    linear_9 = torch.ops.aten.linear.default(to_47, transpose_21, p_model_transformer_h_1_attn_attention_out_proj_bias);  to_47 = transpose_21 = p_model_transformer_h_1_attn_attention_out_proj_bias = None
+    dropout_5 = torch.ops.aten.dropout.default(linear_9, 0.0, False);  linear_9 = None
+    add_13 = torch.ops.aten.add.Tensor(dropout_5, add_9);  dropout_5 = add_9 = None
+    layer_norm_3 = torch.ops.aten.layer_norm.default(add_13, [64], p_model_transformer_h_1_ln_2_weight, p_model_transformer_h_1_ln_2_bias);  p_model_transformer_h_1_ln_2_weight = p_model_transformer_h_1_ln_2_bias = None
+    choose_qparams_tensor_6 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_3, -128, 127, 0.000244140625, torch.int8)
+    getitem_12 = choose_qparams_tensor_6[0]
+    getitem_13 = choose_qparams_tensor_6[1];  choose_qparams_tensor_6 = None
+    div_6 = torch.ops.aten.div.Tensor(layer_norm_3, getitem_12);  layer_norm_3 = None
+    round_7 = torch.ops.aten.round.default(div_6);  div_6 = None
+    _assert_tensor_metadata_default_50 = torch.ops.aten._assert_tensor_metadata.default(round_7, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_50 = None
+    to_50 = torch.ops.aten.to.dtype(round_7, torch.int32);  round_7 = None
+    add_14 = torch.ops.aten.add.Tensor(to_50, getitem_13);  to_50 = None
+    clamp_22 = torch.ops.aten.clamp.default(add_14, -128, 127);  add_14 = None
+    _assert_tensor_metadata_default_51 = torch.ops.aten._assert_tensor_metadata.default(clamp_22, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_51 = None
+    to_51 = torch.ops.aten.to.dtype(clamp_22, torch.int8);  clamp_22 = None
+    clamp_23 = torch.ops.aten.clamp.default(to_51, -128, 127);  to_51 = None
+    _assert_tensor_metadata_default_52 = torch.ops.aten._assert_tensor_metadata.default(clamp_23, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_52 = None
+    to_52 = torch.ops.aten.to.dtype(clamp_23, torch.float32);  clamp_23 = None
+    sub_16 = torch.ops.aten.sub.Tensor(to_52, getitem_13);  to_52 = getitem_13 = None
+    mul_20 = torch.ops.aten.mul.Tensor(sub_16, getitem_12);  sub_16 = getitem_12 = None
+    _assert_tensor_metadata_default_53 = torch.ops.aten._assert_tensor_metadata.default(mul_20, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_53 = None
+    to_53 = torch.ops.aten.to.dtype(mul_20, torch.float32);  mul_20 = None
+    clamp_24 = torch.ops.aten.clamp.default(b__frozen_param10, -127, 127);  b__frozen_param10 = None
+    transpose_22 = torch.ops.aten.transpose.int(clamp_24, 0, -1);  clamp_24 = None
+    _assert_tensor_metadata_default_54 = torch.ops.aten._assert_tensor_metadata.default(transpose_22, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_54 = None
+    to_54 = torch.ops.aten.to.dtype(transpose_22, torch.int32);  transpose_22 = None
+    sub_17 = torch.ops.aten.sub.Tensor(to_54, b__zero_point_10);  to_54 = b__zero_point_10 = None
+    _assert_tensor_metadata_default_55 = torch.ops.aten._assert_tensor_metadata.default(sub_17, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_55 = None
+    to_55 = torch.ops.aten.to.dtype(sub_17, torch.float32);  sub_17 = None
+    mul_21 = torch.ops.aten.mul.Tensor(to_55, b__scale_10);  to_55 = b__scale_10 = None
+    transpose_23 = torch.ops.aten.transpose.int(mul_21, 0, -1);  mul_21 = None
+    linear_10 = torch.ops.aten.linear.default(to_53, transpose_23, p_model_transformer_h_1_mlp_c_fc_bias);  to_53 = transpose_23 = p_model_transformer_h_1_mlp_c_fc_bias = None
+    mul_22 = torch.ops.aten.mul.Tensor(linear_10, b__tensor_constant_4);  b__tensor_constant_4 = None
+    pow_2 = torch.ops.aten.pow.Tensor_Scalar(linear_10, 3.0)
+    mul_23 = torch.ops.aten.mul.Tensor(pow_2, b__tensor_constant_5);  pow_2 = b__tensor_constant_5 = None
+    add_15 = torch.ops.aten.add.Tensor(linear_10, mul_23);  linear_10 = mul_23 = None
+    mul_24 = torch.ops.aten.mul.Tensor(add_15, b__tensor_constant_6);  add_15 = b__tensor_constant_6 = None
+    tanh_1 = torch.ops.aten.tanh.default(mul_24);  mul_24 = None
+    add_16 = torch.ops.aten.add.Tensor(tanh_1, b__tensor_constant_7);  tanh_1 = b__tensor_constant_7 = None
+    mul_25 = torch.ops.aten.mul.Tensor(mul_22, add_16);  mul_22 = add_16 = None
+    choose_qparams_tensor_7 = torch.ops.quantized_decomposed.choose_qparams.tensor(mul_25, -128, 127, 0.000244140625, torch.int8)
+    getitem_14 = choose_qparams_tensor_7[0]
+    getitem_15 = choose_qparams_tensor_7[1];  choose_qparams_tensor_7 = None
+    div_7 = torch.ops.aten.div.Tensor(mul_25, getitem_14);  mul_25 = None
+    round_8 = torch.ops.aten.round.default(div_7);  div_7 = None
+    _assert_tensor_metadata_default_56 = torch.ops.aten._assert_tensor_metadata.default(round_8, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_56 = None
+    to_56 = torch.ops.aten.to.dtype(round_8, torch.int32);  round_8 = None
+    add_17 = torch.ops.aten.add.Tensor(to_56, getitem_15);  to_56 = None
+    clamp_25 = torch.ops.aten.clamp.default(add_17, -128, 127);  add_17 = None
+    _assert_tensor_metadata_default_57 = torch.ops.aten._assert_tensor_metadata.default(clamp_25, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_57 = None
+    to_57 = torch.ops.aten.to.dtype(clamp_25, torch.int8);  clamp_25 = None
+    clamp_26 = torch.ops.aten.clamp.default(to_57, -128, 127);  to_57 = None
+    _assert_tensor_metadata_default_58 = torch.ops.aten._assert_tensor_metadata.default(clamp_26, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_58 = None
+    to_58 = torch.ops.aten.to.dtype(clamp_26, torch.float32);  clamp_26 = None
+    sub_18 = torch.ops.aten.sub.Tensor(to_58, getitem_15);  to_58 = getitem_15 = None
+    mul_26 = torch.ops.aten.mul.Tensor(sub_18, getitem_14);  sub_18 = getitem_14 = None
+    _assert_tensor_metadata_default_59 = torch.ops.aten._assert_tensor_metadata.default(mul_26, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_59 = None
+    to_59 = torch.ops.aten.to.dtype(mul_26, torch.float32);  mul_26 = None
+    clamp_27 = torch.ops.aten.clamp.default(b__frozen_param11, -127, 127);  b__frozen_param11 = None
+    transpose_24 = torch.ops.aten.transpose.int(clamp_27, 0, -1);  clamp_27 = None
+    _assert_tensor_metadata_default_60 = torch.ops.aten._assert_tensor_metadata.default(transpose_24, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_60 = None
+    to_60 = torch.ops.aten.to.dtype(transpose_24, torch.int32);  transpose_24 = None
+    sub_19 = torch.ops.aten.sub.Tensor(to_60, b__zero_point_11);  to_60 = b__zero_point_11 = None
+    _assert_tensor_metadata_default_61 = torch.ops.aten._assert_tensor_metadata.default(sub_19, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_61 = None
+    to_61 = torch.ops.aten.to.dtype(sub_19, torch.float32);  sub_19 = None
+    mul_27 = torch.ops.aten.mul.Tensor(to_61, b__scale_11);  to_61 = b__scale_11 = None
+    transpose_25 = torch.ops.aten.transpose.int(mul_27, 0, -1);  mul_27 = None
+    linear_11 = torch.ops.aten.linear.default(to_59, transpose_25, p_model_transformer_h_1_mlp_c_proj_bias);  to_59 = transpose_25 = p_model_transformer_h_1_mlp_c_proj_bias = None
+    dropout_6 = torch.ops.aten.dropout.default(linear_11, 0.0, False);  linear_11 = None
+    add_18 = torch.ops.aten.add.Tensor(add_13, dropout_6);  add_13 = dropout_6 = None
+    layer_norm_4 = torch.ops.aten.layer_norm.default(add_18, [64], p_model_transformer_h_2_ln_1_weight, p_model_transformer_h_2_ln_1_bias);  p_model_transformer_h_2_ln_1_weight = p_model_transformer_h_2_ln_1_bias = None
+    choose_qparams_tensor_8 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_4, -128, 127, 0.000244140625, torch.int8)
+    getitem_16 = choose_qparams_tensor_8[0]
+    getitem_17 = choose_qparams_tensor_8[1];  choose_qparams_tensor_8 = None
+    div_8 = torch.ops.aten.div.Tensor(layer_norm_4, getitem_16);  layer_norm_4 = None
+    round_9 = torch.ops.aten.round.default(div_8);  div_8 = None
+    _assert_tensor_metadata_default_62 = torch.ops.aten._assert_tensor_metadata.default(round_9, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_62 = None
+    to_62 = torch.ops.aten.to.dtype(round_9, torch.int32);  round_9 = None
+    add_19 = torch.ops.aten.add.Tensor(to_62, getitem_17);  to_62 = None
+    clamp_28 = torch.ops.aten.clamp.default(add_19, -128, 127);  add_19 = None
+    _assert_tensor_metadata_default_63 = torch.ops.aten._assert_tensor_metadata.default(clamp_28, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_63 = None
+    to_63 = torch.ops.aten.to.dtype(clamp_28, torch.int8);  clamp_28 = None
+    clamp_29 = torch.ops.aten.clamp.default(to_63, -128, 127);  to_63 = None
+    _assert_tensor_metadata_default_64 = torch.ops.aten._assert_tensor_metadata.default(clamp_29, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_64 = None
+    to_64 = torch.ops.aten.to.dtype(clamp_29, torch.float32);  clamp_29 = None
+    sub_20 = torch.ops.aten.sub.Tensor(to_64, getitem_17);  to_64 = getitem_17 = None
+    mul_28 = torch.ops.aten.mul.Tensor(sub_20, getitem_16);  sub_20 = getitem_16 = None
+    _assert_tensor_metadata_default_65 = torch.ops.aten._assert_tensor_metadata.default(mul_28, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_65 = None
+    to_65 = torch.ops.aten.to.dtype(mul_28, torch.float32);  mul_28 = None
+    clamp_30 = torch.ops.aten.clamp.default(b__frozen_param14, -127, 127);  b__frozen_param14 = None
+    transpose_26 = torch.ops.aten.transpose.int(clamp_30, 0, -1);  clamp_30 = None
+    _assert_tensor_metadata_default_66 = torch.ops.aten._assert_tensor_metadata.default(transpose_26, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_66 = None
+    to_66 = torch.ops.aten.to.dtype(transpose_26, torch.int32);  transpose_26 = None
+    sub_21 = torch.ops.aten.sub.Tensor(to_66, b__zero_point_14);  to_66 = b__zero_point_14 = None
+    _assert_tensor_metadata_default_67 = torch.ops.aten._assert_tensor_metadata.default(sub_21, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_67 = None
+    to_67 = torch.ops.aten.to.dtype(sub_21, torch.float32);  sub_21 = None
+    mul_29 = torch.ops.aten.mul.Tensor(to_67, b__scale_14);  to_67 = b__scale_14 = None
+    transpose_27 = torch.ops.aten.transpose.int(mul_29, 0, -1);  mul_29 = None
+    linear_12 = torch.ops.aten.linear.default(to_65, transpose_27);  transpose_27 = None
+    clamp_31 = torch.ops.aten.clamp.default(b__frozen_param12, -127, 127);  b__frozen_param12 = None
+    transpose_28 = torch.ops.aten.transpose.int(clamp_31, 0, -1);  clamp_31 = None
+    _assert_tensor_metadata_default_68 = torch.ops.aten._assert_tensor_metadata.default(transpose_28, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_68 = None
+    to_68 = torch.ops.aten.to.dtype(transpose_28, torch.int32);  transpose_28 = None
+    sub_22 = torch.ops.aten.sub.Tensor(to_68, b__zero_point_12);  to_68 = b__zero_point_12 = None
+    _assert_tensor_metadata_default_69 = torch.ops.aten._assert_tensor_metadata.default(sub_22, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_69 = None
+    to_69 = torch.ops.aten.to.dtype(sub_22, torch.float32);  sub_22 = None
+    mul_30 = torch.ops.aten.mul.Tensor(to_69, b__scale_12);  to_69 = b__scale_12 = None
+    transpose_29 = torch.ops.aten.transpose.int(mul_30, 0, -1);  mul_30 = None
+    linear_13 = torch.ops.aten.linear.default(to_65, transpose_29);  transpose_29 = None
+    clamp_32 = torch.ops.aten.clamp.default(b__frozen_param13, -127, 127);  b__frozen_param13 = None
+    transpose_30 = torch.ops.aten.transpose.int(clamp_32, 0, -1);  clamp_32 = None
+    _assert_tensor_metadata_default_70 = torch.ops.aten._assert_tensor_metadata.default(transpose_30, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_70 = None
+    to_70 = torch.ops.aten.to.dtype(transpose_30, torch.int32);  transpose_30 = None
+    sub_23 = torch.ops.aten.sub.Tensor(to_70, b__zero_point_13);  to_70 = b__zero_point_13 = None
+    _assert_tensor_metadata_default_71 = torch.ops.aten._assert_tensor_metadata.default(sub_23, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_71 = None
+    to_71 = torch.ops.aten.to.dtype(sub_23, torch.float32);  sub_23 = None
+    mul_31 = torch.ops.aten.mul.Tensor(to_71, b__scale_13);  to_71 = b__scale_13 = None
+    transpose_31 = torch.ops.aten.transpose.int(mul_31, 0, -1);  mul_31 = None
+    linear_14 = torch.ops.aten.linear.default(to_65, transpose_31);  to_65 = transpose_31 = None
+    view_8 = torch.ops.aten.view.default(linear_12, [1, 32, 16, 4]);  linear_12 = None
+    permute_8 = torch.ops.aten.permute.default(view_8, [0, 2, 1, 3]);  view_8 = None
+    view_9 = torch.ops.aten.view.default(linear_13, [1, 32, 16, 4]);  linear_13 = None
+    permute_9 = torch.ops.aten.permute.default(view_9, [0, 2, 1, 3]);  view_9 = None
+    view_10 = torch.ops.aten.view.default(linear_14, [1, 32, 16, 4]);  linear_14 = None
+    permute_10 = torch.ops.aten.permute.default(view_10, [0, 2, 1, 3]);  view_10 = None
+    _assert_tensor_metadata_default_72 = torch.ops.aten._assert_tensor_metadata.default(permute_8, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_72 = None
+    to_72 = torch.ops.aten.to.dtype(permute_8, torch.float32);  permute_8 = None
+    _assert_tensor_metadata_default_73 = torch.ops.aten._assert_tensor_metadata.default(permute_9, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_73 = None
+    to_73 = torch.ops.aten.to.dtype(permute_9, torch.float32);  permute_9 = None
+    transpose_32 = torch.ops.aten.transpose.int(to_73, -1, -2);  to_73 = None
+    matmul_4 = torch.ops.aten.matmul.default(to_72, transpose_32);  to_72 = transpose_32 = None
+    slice_7 = torch.ops.aten.slice.Tensor(b_model_transformer_h_2_attn_attention_bias, 2, 0, 32);  b_model_transformer_h_2_attn_attention_bias = None
+    slice_8 = torch.ops.aten.slice.Tensor(slice_7, 3, 0, 32);  slice_7 = None
+    lift_fresh_copy_2 = torch.ops.aten.lift_fresh_copy.default(b_model_transformer_h_2_attn_attention_lifted_tensor_2);  b_model_transformer_h_2_attn_attention_lifted_tensor_2 = None
+    detach__2 = torch.ops.aten.detach_.default(lift_fresh_copy_2);  lift_fresh_copy_2 = None
+    where_2 = torch.ops.aten.where.self(slice_8, matmul_4, detach__2);  slice_8 = matmul_4 = detach__2 = None
+    slice_9 = torch.ops.aten.slice.Tensor(expand, 3, 0, 32)
+    add_20 = torch.ops.aten.add.Tensor(where_2, slice_9);  where_2 = slice_9 = None
+    softmax_2 = torch.ops.aten.softmax.int(add_20, -1);  add_20 = None
+    _assert_tensor_metadata_default_74 = torch.ops.aten._assert_tensor_metadata.default(softmax_2, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_74 = None
+    to_74 = torch.ops.aten.to.dtype(softmax_2, torch.float32);  softmax_2 = None
+    dropout_7 = torch.ops.aten.dropout.default(to_74, 0.0, False);  to_74 = None
+    matmul_5 = torch.ops.aten.matmul.default(dropout_7, permute_10);  dropout_7 = permute_10 = None
+    permute_11 = torch.ops.aten.permute.default(matmul_5, [0, 2, 1, 3]);  matmul_5 = None
+    contiguous_2 = torch.ops.aten.contiguous.default(permute_11);  permute_11 = None
+    view_11 = torch.ops.aten.view.default(contiguous_2, [1, 32, 64]);  contiguous_2 = None
+    choose_qparams_tensor_9 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_11, -128, 127, 0.000244140625, torch.int8)
+    getitem_18 = choose_qparams_tensor_9[0]
+    getitem_19 = choose_qparams_tensor_9[1];  choose_qparams_tensor_9 = None
+    div_9 = torch.ops.aten.div.Tensor(view_11, getitem_18);  view_11 = None
+    round_10 = torch.ops.aten.round.default(div_9);  div_9 = None
+    _assert_tensor_metadata_default_75 = torch.ops.aten._assert_tensor_metadata.default(round_10, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_75 = None
+    to_75 = torch.ops.aten.to.dtype(round_10, torch.int32);  round_10 = None
+    add_21 = torch.ops.aten.add.Tensor(to_75, getitem_19);  to_75 = None
+    clamp_33 = torch.ops.aten.clamp.default(add_21, -128, 127);  add_21 = None
+    _assert_tensor_metadata_default_76 = torch.ops.aten._assert_tensor_metadata.default(clamp_33, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_76 = None
+    to_76 = torch.ops.aten.to.dtype(clamp_33, torch.int8);  clamp_33 = None
+    clamp_34 = torch.ops.aten.clamp.default(to_76, -128, 127);  to_76 = None
+    _assert_tensor_metadata_default_77 = torch.ops.aten._assert_tensor_metadata.default(clamp_34, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_77 = None
+    to_77 = torch.ops.aten.to.dtype(clamp_34, torch.float32);  clamp_34 = None
+    sub_24 = torch.ops.aten.sub.Tensor(to_77, getitem_19);  to_77 = getitem_19 = None
+    mul_32 = torch.ops.aten.mul.Tensor(sub_24, getitem_18);  sub_24 = getitem_18 = None
+    _assert_tensor_metadata_default_78 = torch.ops.aten._assert_tensor_metadata.default(mul_32, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_78 = None
+    to_78 = torch.ops.aten.to.dtype(mul_32, torch.float32);  mul_32 = None
+    clamp_35 = torch.ops.aten.clamp.default(b__frozen_param15, -127, 127);  b__frozen_param15 = None
+    transpose_33 = torch.ops.aten.transpose.int(clamp_35, 0, -1);  clamp_35 = None
+    _assert_tensor_metadata_default_79 = torch.ops.aten._assert_tensor_metadata.default(transpose_33, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_79 = None
+    to_79 = torch.ops.aten.to.dtype(transpose_33, torch.int32);  transpose_33 = None
+    sub_25 = torch.ops.aten.sub.Tensor(to_79, b__zero_point_15);  to_79 = b__zero_point_15 = None
+    _assert_tensor_metadata_default_80 = torch.ops.aten._assert_tensor_metadata.default(sub_25, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_80 = None
+    to_80 = torch.ops.aten.to.dtype(sub_25, torch.float32);  sub_25 = None
+    mul_33 = torch.ops.aten.mul.Tensor(to_80, b__scale_15);  to_80 = b__scale_15 = None
+    transpose_34 = torch.ops.aten.transpose.int(mul_33, 0, -1);  mul_33 = None
+    linear_15 = torch.ops.aten.linear.default(to_78, transpose_34, p_model_transformer_h_2_attn_attention_out_proj_bias);  to_78 = transpose_34 = p_model_transformer_h_2_attn_attention_out_proj_bias = None
+    dropout_8 = torch.ops.aten.dropout.default(linear_15, 0.0, False);  linear_15 = None
+    add_22 = torch.ops.aten.add.Tensor(dropout_8, add_18);  dropout_8 = add_18 = None
+    layer_norm_5 = torch.ops.aten.layer_norm.default(add_22, [64], p_model_transformer_h_2_ln_2_weight, p_model_transformer_h_2_ln_2_bias);  p_model_transformer_h_2_ln_2_weight = p_model_transformer_h_2_ln_2_bias = None
+    choose_qparams_tensor_10 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_5, -128, 127, 0.000244140625, torch.int8)
+    getitem_20 = choose_qparams_tensor_10[0]
+    getitem_21 = choose_qparams_tensor_10[1];  choose_qparams_tensor_10 = None
+    div_10 = torch.ops.aten.div.Tensor(layer_norm_5, getitem_20);  layer_norm_5 = None
+    round_11 = torch.ops.aten.round.default(div_10);  div_10 = None
+    _assert_tensor_metadata_default_81 = torch.ops.aten._assert_tensor_metadata.default(round_11, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_81 = None
+    to_81 = torch.ops.aten.to.dtype(round_11, torch.int32);  round_11 = None
+    add_23 = torch.ops.aten.add.Tensor(to_81, getitem_21);  to_81 = None
+    clamp_36 = torch.ops.aten.clamp.default(add_23, -128, 127);  add_23 = None
+    _assert_tensor_metadata_default_82 = torch.ops.aten._assert_tensor_metadata.default(clamp_36, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_82 = None
+    to_82 = torch.ops.aten.to.dtype(clamp_36, torch.int8);  clamp_36 = None
+    clamp_37 = torch.ops.aten.clamp.default(to_82, -128, 127);  to_82 = None
+    _assert_tensor_metadata_default_83 = torch.ops.aten._assert_tensor_metadata.default(clamp_37, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_83 = None
+    to_83 = torch.ops.aten.to.dtype(clamp_37, torch.float32);  clamp_37 = None
+    sub_26 = torch.ops.aten.sub.Tensor(to_83, getitem_21);  to_83 = getitem_21 = None
+    mul_34 = torch.ops.aten.mul.Tensor(sub_26, getitem_20);  sub_26 = getitem_20 = None
+    _assert_tensor_metadata_default_84 = torch.ops.aten._assert_tensor_metadata.default(mul_34, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_84 = None
+    to_84 = torch.ops.aten.to.dtype(mul_34, torch.float32);  mul_34 = None
+    clamp_38 = torch.ops.aten.clamp.default(b__frozen_param16, -127, 127);  b__frozen_param16 = None
+    transpose_35 = torch.ops.aten.transpose.int(clamp_38, 0, -1);  clamp_38 = None
+    _assert_tensor_metadata_default_85 = torch.ops.aten._assert_tensor_metadata.default(transpose_35, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_85 = None
+    to_85 = torch.ops.aten.to.dtype(transpose_35, torch.int32);  transpose_35 = None
+    sub_27 = torch.ops.aten.sub.Tensor(to_85, b__zero_point_16);  to_85 = b__zero_point_16 = None
+    _assert_tensor_metadata_default_86 = torch.ops.aten._assert_tensor_metadata.default(sub_27, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_86 = None
+    to_86 = torch.ops.aten.to.dtype(sub_27, torch.float32);  sub_27 = None
+    mul_35 = torch.ops.aten.mul.Tensor(to_86, b__scale_16);  to_86 = b__scale_16 = None
+    transpose_36 = torch.ops.aten.transpose.int(mul_35, 0, -1);  mul_35 = None
+    linear_16 = torch.ops.aten.linear.default(to_84, transpose_36, p_model_transformer_h_2_mlp_c_fc_bias);  to_84 = transpose_36 = p_model_transformer_h_2_mlp_c_fc_bias = None
+    mul_36 = torch.ops.aten.mul.Tensor(linear_16, b__tensor_constant_8);  b__tensor_constant_8 = None
+    pow_3 = torch.ops.aten.pow.Tensor_Scalar(linear_16, 3.0)
+    mul_37 = torch.ops.aten.mul.Tensor(pow_3, b__tensor_constant_9);  pow_3 = b__tensor_constant_9 = None
+    add_24 = torch.ops.aten.add.Tensor(linear_16, mul_37);  linear_16 = mul_37 = None
+    mul_38 = torch.ops.aten.mul.Tensor(add_24, b__tensor_constant_10);  add_24 = b__tensor_constant_10 = None
+    tanh_2 = torch.ops.aten.tanh.default(mul_38);  mul_38 = None
+    add_25 = torch.ops.aten.add.Tensor(tanh_2, b__tensor_constant_11);  tanh_2 = b__tensor_constant_11 = None
+    mul_39 = torch.ops.aten.mul.Tensor(mul_36, add_25);  mul_36 = add_25 = None
+    choose_qparams_tensor_11 = torch.ops.quantized_decomposed.choose_qparams.tensor(mul_39, -128, 127, 0.000244140625, torch.int8)
+    getitem_22 = choose_qparams_tensor_11[0]
+    getitem_23 = choose_qparams_tensor_11[1];  choose_qparams_tensor_11 = None
+    div_11 = torch.ops.aten.div.Tensor(mul_39, getitem_22);  mul_39 = None
+    round_12 = torch.ops.aten.round.default(div_11);  div_11 = None
+    _assert_tensor_metadata_default_87 = torch.ops.aten._assert_tensor_metadata.default(round_12, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_87 = None
+    to_87 = torch.ops.aten.to.dtype(round_12, torch.int32);  round_12 = None
+    add_26 = torch.ops.aten.add.Tensor(to_87, getitem_23);  to_87 = None
+    clamp_39 = torch.ops.aten.clamp.default(add_26, -128, 127);  add_26 = None
+    _assert_tensor_metadata_default_88 = torch.ops.aten._assert_tensor_metadata.default(clamp_39, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_88 = None
+    to_88 = torch.ops.aten.to.dtype(clamp_39, torch.int8);  clamp_39 = None
+    clamp_40 = torch.ops.aten.clamp.default(to_88, -128, 127);  to_88 = None
+    _assert_tensor_metadata_default_89 = torch.ops.aten._assert_tensor_metadata.default(clamp_40, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_89 = None
+    to_89 = torch.ops.aten.to.dtype(clamp_40, torch.float32);  clamp_40 = None
+    sub_28 = torch.ops.aten.sub.Tensor(to_89, getitem_23);  to_89 = getitem_23 = None
+    mul_40 = torch.ops.aten.mul.Tensor(sub_28, getitem_22);  sub_28 = getitem_22 = None
+    _assert_tensor_metadata_default_90 = torch.ops.aten._assert_tensor_metadata.default(mul_40, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_90 = None
+    to_90 = torch.ops.aten.to.dtype(mul_40, torch.float32);  mul_40 = None
+    clamp_41 = torch.ops.aten.clamp.default(b__frozen_param17, -127, 127);  b__frozen_param17 = None
+    transpose_37 = torch.ops.aten.transpose.int(clamp_41, 0, -1);  clamp_41 = None
+    _assert_tensor_metadata_default_91 = torch.ops.aten._assert_tensor_metadata.default(transpose_37, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_91 = None
+    to_91 = torch.ops.aten.to.dtype(transpose_37, torch.int32);  transpose_37 = None
+    sub_29 = torch.ops.aten.sub.Tensor(to_91, b__zero_point_17);  to_91 = b__zero_point_17 = None
+    _assert_tensor_metadata_default_92 = torch.ops.aten._assert_tensor_metadata.default(sub_29, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_92 = None
+    to_92 = torch.ops.aten.to.dtype(sub_29, torch.float32);  sub_29 = None
+    mul_41 = torch.ops.aten.mul.Tensor(to_92, b__scale_17);  to_92 = b__scale_17 = None
+    transpose_38 = torch.ops.aten.transpose.int(mul_41, 0, -1);  mul_41 = None
+    linear_17 = torch.ops.aten.linear.default(to_90, transpose_38, p_model_transformer_h_2_mlp_c_proj_bias);  to_90 = transpose_38 = p_model_transformer_h_2_mlp_c_proj_bias = None
+    dropout_9 = torch.ops.aten.dropout.default(linear_17, 0.0, False);  linear_17 = None
+    add_27 = torch.ops.aten.add.Tensor(add_22, dropout_9);  add_22 = dropout_9 = None
+    layer_norm_6 = torch.ops.aten.layer_norm.default(add_27, [64], p_model_transformer_h_3_ln_1_weight, p_model_transformer_h_3_ln_1_bias);  p_model_transformer_h_3_ln_1_weight = p_model_transformer_h_3_ln_1_bias = None
+    choose_qparams_tensor_12 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_6, -128, 127, 0.000244140625, torch.int8)
+    getitem_24 = choose_qparams_tensor_12[0]
+    getitem_25 = choose_qparams_tensor_12[1];  choose_qparams_tensor_12 = None
+    div_12 = torch.ops.aten.div.Tensor(layer_norm_6, getitem_24);  layer_norm_6 = None
+    round_13 = torch.ops.aten.round.default(div_12);  div_12 = None
+    _assert_tensor_metadata_default_93 = torch.ops.aten._assert_tensor_metadata.default(round_13, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_93 = None
+    to_93 = torch.ops.aten.to.dtype(round_13, torch.int32);  round_13 = None
+    add_28 = torch.ops.aten.add.Tensor(to_93, getitem_25);  to_93 = None
+    clamp_42 = torch.ops.aten.clamp.default(add_28, -128, 127);  add_28 = None
+    _assert_tensor_metadata_default_94 = torch.ops.aten._assert_tensor_metadata.default(clamp_42, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_94 = None
+    to_94 = torch.ops.aten.to.dtype(clamp_42, torch.int8);  clamp_42 = None
+    clamp_43 = torch.ops.aten.clamp.default(to_94, -128, 127);  to_94 = None
+    _assert_tensor_metadata_default_95 = torch.ops.aten._assert_tensor_metadata.default(clamp_43, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_95 = None
+    to_95 = torch.ops.aten.to.dtype(clamp_43, torch.float32);  clamp_43 = None
+    sub_30 = torch.ops.aten.sub.Tensor(to_95, getitem_25);  to_95 = getitem_25 = None
+    mul_42 = torch.ops.aten.mul.Tensor(sub_30, getitem_24);  sub_30 = getitem_24 = None
+    _assert_tensor_metadata_default_96 = torch.ops.aten._assert_tensor_metadata.default(mul_42, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_96 = None
+    to_96 = torch.ops.aten.to.dtype(mul_42, torch.float32);  mul_42 = None
+    clamp_44 = torch.ops.aten.clamp.default(b__frozen_param20, -127, 127);  b__frozen_param20 = None
+    transpose_39 = torch.ops.aten.transpose.int(clamp_44, 0, -1);  clamp_44 = None
+    _assert_tensor_metadata_default_97 = torch.ops.aten._assert_tensor_metadata.default(transpose_39, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_97 = None
+    to_97 = torch.ops.aten.to.dtype(transpose_39, torch.int32);  transpose_39 = None
+    sub_31 = torch.ops.aten.sub.Tensor(to_97, b__zero_point_20);  to_97 = b__zero_point_20 = None
+    _assert_tensor_metadata_default_98 = torch.ops.aten._assert_tensor_metadata.default(sub_31, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_98 = None
+    to_98 = torch.ops.aten.to.dtype(sub_31, torch.float32);  sub_31 = None
+    mul_43 = torch.ops.aten.mul.Tensor(to_98, b__scale_20);  to_98 = b__scale_20 = None
+    transpose_40 = torch.ops.aten.transpose.int(mul_43, 0, -1);  mul_43 = None
+    linear_18 = torch.ops.aten.linear.default(to_96, transpose_40);  transpose_40 = None
+    clamp_45 = torch.ops.aten.clamp.default(b__frozen_param18, -127, 127);  b__frozen_param18 = None
+    transpose_41 = torch.ops.aten.transpose.int(clamp_45, 0, -1);  clamp_45 = None
+    _assert_tensor_metadata_default_99 = torch.ops.aten._assert_tensor_metadata.default(transpose_41, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_99 = None
+    to_99 = torch.ops.aten.to.dtype(transpose_41, torch.int32);  transpose_41 = None
+    sub_32 = torch.ops.aten.sub.Tensor(to_99, b__zero_point_18);  to_99 = b__zero_point_18 = None
+    _assert_tensor_metadata_default_100 = torch.ops.aten._assert_tensor_metadata.default(sub_32, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_100 = None
+    to_100 = torch.ops.aten.to.dtype(sub_32, torch.float32);  sub_32 = None
+    mul_44 = torch.ops.aten.mul.Tensor(to_100, b__scale_18);  to_100 = b__scale_18 = None
+    transpose_42 = torch.ops.aten.transpose.int(mul_44, 0, -1);  mul_44 = None
+    linear_19 = torch.ops.aten.linear.default(to_96, transpose_42);  transpose_42 = None
+    clamp_46 = torch.ops.aten.clamp.default(b__frozen_param19, -127, 127);  b__frozen_param19 = None
+    transpose_43 = torch.ops.aten.transpose.int(clamp_46, 0, -1);  clamp_46 = None
+    _assert_tensor_metadata_default_101 = torch.ops.aten._assert_tensor_metadata.default(transpose_43, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_101 = None
+    to_101 = torch.ops.aten.to.dtype(transpose_43, torch.int32);  transpose_43 = None
+    sub_33 = torch.ops.aten.sub.Tensor(to_101, b__zero_point_19);  to_101 = b__zero_point_19 = None
+    _assert_tensor_metadata_default_102 = torch.ops.aten._assert_tensor_metadata.default(sub_33, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_102 = None
+    to_102 = torch.ops.aten.to.dtype(sub_33, torch.float32);  sub_33 = None
+    mul_45 = torch.ops.aten.mul.Tensor(to_102, b__scale_19);  to_102 = b__scale_19 = None
+    transpose_44 = torch.ops.aten.transpose.int(mul_45, 0, -1);  mul_45 = None
+    linear_20 = torch.ops.aten.linear.default(to_96, transpose_44);  to_96 = transpose_44 = None
+    view_12 = torch.ops.aten.view.default(linear_18, [1, 32, 16, 4]);  linear_18 = None
+    permute_12 = torch.ops.aten.permute.default(view_12, [0, 2, 1, 3]);  view_12 = None
+    view_13 = torch.ops.aten.view.default(linear_19, [1, 32, 16, 4]);  linear_19 = None
+    permute_13 = torch.ops.aten.permute.default(view_13, [0, 2, 1, 3]);  view_13 = None
+    view_14 = torch.ops.aten.view.default(linear_20, [1, 32, 16, 4]);  linear_20 = None
+    permute_14 = torch.ops.aten.permute.default(view_14, [0, 2, 1, 3]);  view_14 = None
+    _assert_tensor_metadata_default_103 = torch.ops.aten._assert_tensor_metadata.default(permute_12, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_103 = None
+    to_103 = torch.ops.aten.to.dtype(permute_12, torch.float32);  permute_12 = None
+    _assert_tensor_metadata_default_104 = torch.ops.aten._assert_tensor_metadata.default(permute_13, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_104 = None
+    to_104 = torch.ops.aten.to.dtype(permute_13, torch.float32);  permute_13 = None
+    transpose_45 = torch.ops.aten.transpose.int(to_104, -1, -2);  to_104 = None
+    matmul_6 = torch.ops.aten.matmul.default(to_103, transpose_45);  to_103 = transpose_45 = None
+    slice_10 = torch.ops.aten.slice.Tensor(b_model_transformer_h_3_attn_attention_bias, 2, 0, 32);  b_model_transformer_h_3_attn_attention_bias = None
+    slice_11 = torch.ops.aten.slice.Tensor(slice_10, 3, 0, 32);  slice_10 = None
+    lift_fresh_copy_3 = torch.ops.aten.lift_fresh_copy.default(b_model_transformer_h_3_attn_attention_lifted_tensor_3);  b_model_transformer_h_3_attn_attention_lifted_tensor_3 = None
+    detach__3 = torch.ops.aten.detach_.default(lift_fresh_copy_3);  lift_fresh_copy_3 = None
+    where_3 = torch.ops.aten.where.self(slice_11, matmul_6, detach__3);  slice_11 = matmul_6 = detach__3 = None
+    slice_12 = torch.ops.aten.slice.Tensor(expand, 3, 0, 32)
+    add_29 = torch.ops.aten.add.Tensor(where_3, slice_12);  where_3 = slice_12 = None
+    softmax_3 = torch.ops.aten.softmax.int(add_29, -1);  add_29 = None
+    _assert_tensor_metadata_default_105 = torch.ops.aten._assert_tensor_metadata.default(softmax_3, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_105 = None
+    to_105 = torch.ops.aten.to.dtype(softmax_3, torch.float32);  softmax_3 = None
+    dropout_10 = torch.ops.aten.dropout.default(to_105, 0.0, False);  to_105 = None
+    matmul_7 = torch.ops.aten.matmul.default(dropout_10, permute_14);  dropout_10 = permute_14 = None
+    permute_15 = torch.ops.aten.permute.default(matmul_7, [0, 2, 1, 3]);  matmul_7 = None
+    contiguous_3 = torch.ops.aten.contiguous.default(permute_15);  permute_15 = None
+    view_15 = torch.ops.aten.view.default(contiguous_3, [1, 32, 64]);  contiguous_3 = None
+    choose_qparams_tensor_13 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_15, -128, 127, 0.000244140625, torch.int8)
+    getitem_26 = choose_qparams_tensor_13[0]
+    getitem_27 = choose_qparams_tensor_13[1];  choose_qparams_tensor_13 = None
+    div_13 = torch.ops.aten.div.Tensor(view_15, getitem_26);  view_15 = None
+    round_14 = torch.ops.aten.round.default(div_13);  div_13 = None
+    _assert_tensor_metadata_default_106 = torch.ops.aten._assert_tensor_metadata.default(round_14, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_106 = None
+    to_106 = torch.ops.aten.to.dtype(round_14, torch.int32);  round_14 = None
+    add_30 = torch.ops.aten.add.Tensor(to_106, getitem_27);  to_106 = None
+    clamp_47 = torch.ops.aten.clamp.default(add_30, -128, 127);  add_30 = None
+    _assert_tensor_metadata_default_107 = torch.ops.aten._assert_tensor_metadata.default(clamp_47, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_107 = None
+    to_107 = torch.ops.aten.to.dtype(clamp_47, torch.int8);  clamp_47 = None
+    clamp_48 = torch.ops.aten.clamp.default(to_107, -128, 127);  to_107 = None
+    _assert_tensor_metadata_default_108 = torch.ops.aten._assert_tensor_metadata.default(clamp_48, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_108 = None
+    to_108 = torch.ops.aten.to.dtype(clamp_48, torch.float32);  clamp_48 = None
+    sub_34 = torch.ops.aten.sub.Tensor(to_108, getitem_27);  to_108 = getitem_27 = None
+    mul_46 = torch.ops.aten.mul.Tensor(sub_34, getitem_26);  sub_34 = getitem_26 = None
+    _assert_tensor_metadata_default_109 = torch.ops.aten._assert_tensor_metadata.default(mul_46, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_109 = None
+    to_109 = torch.ops.aten.to.dtype(mul_46, torch.float32);  mul_46 = None
+    clamp_49 = torch.ops.aten.clamp.default(b__frozen_param21, -127, 127);  b__frozen_param21 = None
+    transpose_46 = torch.ops.aten.transpose.int(clamp_49, 0, -1);  clamp_49 = None
+    _assert_tensor_metadata_default_110 = torch.ops.aten._assert_tensor_metadata.default(transpose_46, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_110 = None
+    to_110 = torch.ops.aten.to.dtype(transpose_46, torch.int32);  transpose_46 = None
+    sub_35 = torch.ops.aten.sub.Tensor(to_110, b__zero_point_21);  to_110 = b__zero_point_21 = None
+    _assert_tensor_metadata_default_111 = torch.ops.aten._assert_tensor_metadata.default(sub_35, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_111 = None
+    to_111 = torch.ops.aten.to.dtype(sub_35, torch.float32);  sub_35 = None
+    mul_47 = torch.ops.aten.mul.Tensor(to_111, b__scale_21);  to_111 = b__scale_21 = None
+    transpose_47 = torch.ops.aten.transpose.int(mul_47, 0, -1);  mul_47 = None
+    linear_21 = torch.ops.aten.linear.default(to_109, transpose_47, p_model_transformer_h_3_attn_attention_out_proj_bias);  to_109 = transpose_47 = p_model_transformer_h_3_attn_attention_out_proj_bias = None
+    dropout_11 = torch.ops.aten.dropout.default(linear_21, 0.0, False);  linear_21 = None
+    add_31 = torch.ops.aten.add.Tensor(dropout_11, add_27);  dropout_11 = add_27 = None
+    layer_norm_7 = torch.ops.aten.layer_norm.default(add_31, [64], p_model_transformer_h_3_ln_2_weight, p_model_transformer_h_3_ln_2_bias);  p_model_transformer_h_3_ln_2_weight = p_model_transformer_h_3_ln_2_bias = None
+    choose_qparams_tensor_14 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_7, -128, 127, 0.000244140625, torch.int8)
+    getitem_28 = choose_qparams_tensor_14[0]
+    getitem_29 = choose_qparams_tensor_14[1];  choose_qparams_tensor_14 = None
+    div_14 = torch.ops.aten.div.Tensor(layer_norm_7, getitem_28);  layer_norm_7 = None
+    round_15 = torch.ops.aten.round.default(div_14);  div_14 = None
+    _assert_tensor_metadata_default_112 = torch.ops.aten._assert_tensor_metadata.default(round_15, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_112 = None
+    to_112 = torch.ops.aten.to.dtype(round_15, torch.int32);  round_15 = None
+    add_32 = torch.ops.aten.add.Tensor(to_112, getitem_29);  to_112 = None
+    clamp_50 = torch.ops.aten.clamp.default(add_32, -128, 127);  add_32 = None
+    _assert_tensor_metadata_default_113 = torch.ops.aten._assert_tensor_metadata.default(clamp_50, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_113 = None
+    to_113 = torch.ops.aten.to.dtype(clamp_50, torch.int8);  clamp_50 = None
+    clamp_51 = torch.ops.aten.clamp.default(to_113, -128, 127);  to_113 = None
+    _assert_tensor_metadata_default_114 = torch.ops.aten._assert_tensor_metadata.default(clamp_51, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_114 = None
+    to_114 = torch.ops.aten.to.dtype(clamp_51, torch.float32);  clamp_51 = None
+    sub_36 = torch.ops.aten.sub.Tensor(to_114, getitem_29);  to_114 = getitem_29 = None
+    mul_48 = torch.ops.aten.mul.Tensor(sub_36, getitem_28);  sub_36 = getitem_28 = None
+    _assert_tensor_metadata_default_115 = torch.ops.aten._assert_tensor_metadata.default(mul_48, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_115 = None
+    to_115 = torch.ops.aten.to.dtype(mul_48, torch.float32);  mul_48 = None
+    clamp_52 = torch.ops.aten.clamp.default(b__frozen_param22, -127, 127);  b__frozen_param22 = None
+    transpose_48 = torch.ops.aten.transpose.int(clamp_52, 0, -1);  clamp_52 = None
+    _assert_tensor_metadata_default_116 = torch.ops.aten._assert_tensor_metadata.default(transpose_48, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_116 = None
+    to_116 = torch.ops.aten.to.dtype(transpose_48, torch.int32);  transpose_48 = None
+    sub_37 = torch.ops.aten.sub.Tensor(to_116, b__zero_point_22);  to_116 = b__zero_point_22 = None
+    _assert_tensor_metadata_default_117 = torch.ops.aten._assert_tensor_metadata.default(sub_37, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_117 = None
+    to_117 = torch.ops.aten.to.dtype(sub_37, torch.float32);  sub_37 = None
+    mul_49 = torch.ops.aten.mul.Tensor(to_117, b__scale_22);  to_117 = b__scale_22 = None
+    transpose_49 = torch.ops.aten.transpose.int(mul_49, 0, -1);  mul_49 = None
+    linear_22 = torch.ops.aten.linear.default(to_115, transpose_49, p_model_transformer_h_3_mlp_c_fc_bias);  to_115 = transpose_49 = p_model_transformer_h_3_mlp_c_fc_bias = None
+    mul_50 = torch.ops.aten.mul.Tensor(linear_22, b__tensor_constant_12);  b__tensor_constant_12 = None
+    pow_4 = torch.ops.aten.pow.Tensor_Scalar(linear_22, 3.0)
+    mul_51 = torch.ops.aten.mul.Tensor(pow_4, b__tensor_constant_13);  pow_4 = b__tensor_constant_13 = None
+    add_33 = torch.ops.aten.add.Tensor(linear_22, mul_51);  linear_22 = mul_51 = None
+    mul_52 = torch.ops.aten.mul.Tensor(add_33, b__tensor_constant_14);  add_33 = b__tensor_constant_14 = None
+    tanh_3 = torch.ops.aten.tanh.default(mul_52);  mul_52 = None
+    add_34 = torch.ops.aten.add.Tensor(tanh_3, b__tensor_constant_15);  tanh_3 = b__tensor_constant_15 = None
+    mul_53 = torch.ops.aten.mul.Tensor(mul_50, add_34);  mul_50 = add_34 = None
+    choose_qparams_tensor_15 = torch.ops.quantized_decomposed.choose_qparams.tensor(mul_53, -128, 127, 0.000244140625, torch.int8)
+    getitem_30 = choose_qparams_tensor_15[0]
+    getitem_31 = choose_qparams_tensor_15[1];  choose_qparams_tensor_15 = None
+    div_15 = torch.ops.aten.div.Tensor(mul_53, getitem_30);  mul_53 = None
+    round_16 = torch.ops.aten.round.default(div_15);  div_15 = None
+    _assert_tensor_metadata_default_118 = torch.ops.aten._assert_tensor_metadata.default(round_16, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_118 = None
+    to_118 = torch.ops.aten.to.dtype(round_16, torch.int32);  round_16 = None
+    add_35 = torch.ops.aten.add.Tensor(to_118, getitem_31);  to_118 = None
+    clamp_53 = torch.ops.aten.clamp.default(add_35, -128, 127);  add_35 = None
+    _assert_tensor_metadata_default_119 = torch.ops.aten._assert_tensor_metadata.default(clamp_53, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_119 = None
+    to_119 = torch.ops.aten.to.dtype(clamp_53, torch.int8);  clamp_53 = None
+    clamp_54 = torch.ops.aten.clamp.default(to_119, -128, 127);  to_119 = None
+    _assert_tensor_metadata_default_120 = torch.ops.aten._assert_tensor_metadata.default(clamp_54, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_120 = None
+    to_120 = torch.ops.aten.to.dtype(clamp_54, torch.float32);  clamp_54 = None
+    sub_38 = torch.ops.aten.sub.Tensor(to_120, getitem_31);  to_120 = getitem_31 = None
+    mul_54 = torch.ops.aten.mul.Tensor(sub_38, getitem_30);  sub_38 = getitem_30 = None
+    _assert_tensor_metadata_default_121 = torch.ops.aten._assert_tensor_metadata.default(mul_54, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_121 = None
+    to_121 = torch.ops.aten.to.dtype(mul_54, torch.float32);  mul_54 = None
+    clamp_55 = torch.ops.aten.clamp.default(b__frozen_param23, -127, 127);  b__frozen_param23 = None
+    transpose_50 = torch.ops.aten.transpose.int(clamp_55, 0, -1);  clamp_55 = None
+    _assert_tensor_metadata_default_122 = torch.ops.aten._assert_tensor_metadata.default(transpose_50, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_122 = None
+    to_122 = torch.ops.aten.to.dtype(transpose_50, torch.int32);  transpose_50 = None
+    sub_39 = torch.ops.aten.sub.Tensor(to_122, b__zero_point_23);  to_122 = b__zero_point_23 = None
+    _assert_tensor_metadata_default_123 = torch.ops.aten._assert_tensor_metadata.default(sub_39, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_123 = None
+    to_123 = torch.ops.aten.to.dtype(sub_39, torch.float32);  sub_39 = None
+    mul_55 = torch.ops.aten.mul.Tensor(to_123, b__scale_23);  to_123 = b__scale_23 = None
+    transpose_51 = torch.ops.aten.transpose.int(mul_55, 0, -1);  mul_55 = None
+    linear_23 = torch.ops.aten.linear.default(to_121, transpose_51, p_model_transformer_h_3_mlp_c_proj_bias);  to_121 = transpose_51 = p_model_transformer_h_3_mlp_c_proj_bias = None
+    dropout_12 = torch.ops.aten.dropout.default(linear_23, 0.0, False);  linear_23 = None
+    add_36 = torch.ops.aten.add.Tensor(add_31, dropout_12);  add_31 = dropout_12 = None
+    layer_norm_8 = torch.ops.aten.layer_norm.default(add_36, [64], p_model_transformer_h_4_ln_1_weight, p_model_transformer_h_4_ln_1_bias);  p_model_transformer_h_4_ln_1_weight = p_model_transformer_h_4_ln_1_bias = None
+    choose_qparams_tensor_16 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_8, -128, 127, 0.000244140625, torch.int8)
+    getitem_32 = choose_qparams_tensor_16[0]
+    getitem_33 = choose_qparams_tensor_16[1];  choose_qparams_tensor_16 = None
+    div_16 = torch.ops.aten.div.Tensor(layer_norm_8, getitem_32);  layer_norm_8 = None
+    round_17 = torch.ops.aten.round.default(div_16);  div_16 = None
+    _assert_tensor_metadata_default_124 = torch.ops.aten._assert_tensor_metadata.default(round_17, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_124 = None
+    to_124 = torch.ops.aten.to.dtype(round_17, torch.int32);  round_17 = None
+    add_37 = torch.ops.aten.add.Tensor(to_124, getitem_33);  to_124 = None
+    clamp_56 = torch.ops.aten.clamp.default(add_37, -128, 127);  add_37 = None
+    _assert_tensor_metadata_default_125 = torch.ops.aten._assert_tensor_metadata.default(clamp_56, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_125 = None
+    to_125 = torch.ops.aten.to.dtype(clamp_56, torch.int8);  clamp_56 = None
+    clamp_57 = torch.ops.aten.clamp.default(to_125, -128, 127);  to_125 = None
+    _assert_tensor_metadata_default_126 = torch.ops.aten._assert_tensor_metadata.default(clamp_57, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_126 = None
+    to_126 = torch.ops.aten.to.dtype(clamp_57, torch.float32);  clamp_57 = None
+    sub_40 = torch.ops.aten.sub.Tensor(to_126, getitem_33);  to_126 = getitem_33 = None
+    mul_56 = torch.ops.aten.mul.Tensor(sub_40, getitem_32);  sub_40 = getitem_32 = None
+    _assert_tensor_metadata_default_127 = torch.ops.aten._assert_tensor_metadata.default(mul_56, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_127 = None
+    to_127 = torch.ops.aten.to.dtype(mul_56, torch.float32);  mul_56 = None
+    clamp_58 = torch.ops.aten.clamp.default(b__frozen_param26, -127, 127);  b__frozen_param26 = None
+    transpose_52 = torch.ops.aten.transpose.int(clamp_58, 0, -1);  clamp_58 = None
+    _assert_tensor_metadata_default_128 = torch.ops.aten._assert_tensor_metadata.default(transpose_52, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_128 = None
+    to_128 = torch.ops.aten.to.dtype(transpose_52, torch.int32);  transpose_52 = None
+    sub_41 = torch.ops.aten.sub.Tensor(to_128, b__zero_point_26);  to_128 = b__zero_point_26 = None
+    _assert_tensor_metadata_default_129 = torch.ops.aten._assert_tensor_metadata.default(sub_41, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_129 = None
+    to_129 = torch.ops.aten.to.dtype(sub_41, torch.float32);  sub_41 = None
+    mul_57 = torch.ops.aten.mul.Tensor(to_129, b__scale_26);  to_129 = b__scale_26 = None
+    transpose_53 = torch.ops.aten.transpose.int(mul_57, 0, -1);  mul_57 = None
+    linear_24 = torch.ops.aten.linear.default(to_127, transpose_53);  transpose_53 = None
+    clamp_59 = torch.ops.aten.clamp.default(b__frozen_param24, -127, 127);  b__frozen_param24 = None
+    transpose_54 = torch.ops.aten.transpose.int(clamp_59, 0, -1);  clamp_59 = None
+    _assert_tensor_metadata_default_130 = torch.ops.aten._assert_tensor_metadata.default(transpose_54, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_130 = None
+    to_130 = torch.ops.aten.to.dtype(transpose_54, torch.int32);  transpose_54 = None
+    sub_42 = torch.ops.aten.sub.Tensor(to_130, b__zero_point_24);  to_130 = b__zero_point_24 = None
+    _assert_tensor_metadata_default_131 = torch.ops.aten._assert_tensor_metadata.default(sub_42, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_131 = None
+    to_131 = torch.ops.aten.to.dtype(sub_42, torch.float32);  sub_42 = None
+    mul_58 = torch.ops.aten.mul.Tensor(to_131, b__scale_24);  to_131 = b__scale_24 = None
+    transpose_55 = torch.ops.aten.transpose.int(mul_58, 0, -1);  mul_58 = None
+    linear_25 = torch.ops.aten.linear.default(to_127, transpose_55);  transpose_55 = None
+    clamp_60 = torch.ops.aten.clamp.default(b__frozen_param25, -127, 127);  b__frozen_param25 = None
+    transpose_56 = torch.ops.aten.transpose.int(clamp_60, 0, -1);  clamp_60 = None
+    _assert_tensor_metadata_default_132 = torch.ops.aten._assert_tensor_metadata.default(transpose_56, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_132 = None
+    to_132 = torch.ops.aten.to.dtype(transpose_56, torch.int32);  transpose_56 = None
+    sub_43 = torch.ops.aten.sub.Tensor(to_132, b__zero_point_25);  to_132 = b__zero_point_25 = None
+    _assert_tensor_metadata_default_133 = torch.ops.aten._assert_tensor_metadata.default(sub_43, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_133 = None
+    to_133 = torch.ops.aten.to.dtype(sub_43, torch.float32);  sub_43 = None
+    mul_59 = torch.ops.aten.mul.Tensor(to_133, b__scale_25);  to_133 = b__scale_25 = None
+    transpose_57 = torch.ops.aten.transpose.int(mul_59, 0, -1);  mul_59 = None
+    linear_26 = torch.ops.aten.linear.default(to_127, transpose_57);  to_127 = transpose_57 = None
+    view_16 = torch.ops.aten.view.default(linear_24, [1, 32, 16, 4]);  linear_24 = None
+    permute_16 = torch.ops.aten.permute.default(view_16, [0, 2, 1, 3]);  view_16 = None
+    view_17 = torch.ops.aten.view.default(linear_25, [1, 32, 16, 4]);  linear_25 = None
+    permute_17 = torch.ops.aten.permute.default(view_17, [0, 2, 1, 3]);  view_17 = None
+    view_18 = torch.ops.aten.view.default(linear_26, [1, 32, 16, 4]);  linear_26 = None
+    permute_18 = torch.ops.aten.permute.default(view_18, [0, 2, 1, 3]);  view_18 = None
+    _assert_tensor_metadata_default_134 = torch.ops.aten._assert_tensor_metadata.default(permute_16, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_134 = None
+    to_134 = torch.ops.aten.to.dtype(permute_16, torch.float32);  permute_16 = None
+    _assert_tensor_metadata_default_135 = torch.ops.aten._assert_tensor_metadata.default(permute_17, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_135 = None
+    to_135 = torch.ops.aten.to.dtype(permute_17, torch.float32);  permute_17 = None
+    transpose_58 = torch.ops.aten.transpose.int(to_135, -1, -2);  to_135 = None
+    matmul_8 = torch.ops.aten.matmul.default(to_134, transpose_58);  to_134 = transpose_58 = None
+    slice_13 = torch.ops.aten.slice.Tensor(b_model_transformer_h_4_attn_attention_bias, 2, 0, 32);  b_model_transformer_h_4_attn_attention_bias = None
+    slice_14 = torch.ops.aten.slice.Tensor(slice_13, 3, 0, 32);  slice_13 = None
+    lift_fresh_copy_4 = torch.ops.aten.lift_fresh_copy.default(b_model_transformer_h_4_attn_attention_lifted_tensor_4);  b_model_transformer_h_4_attn_attention_lifted_tensor_4 = None
+    detach__4 = torch.ops.aten.detach_.default(lift_fresh_copy_4);  lift_fresh_copy_4 = None
+    where_4 = torch.ops.aten.where.self(slice_14, matmul_8, detach__4);  slice_14 = matmul_8 = detach__4 = None
+    slice_15 = torch.ops.aten.slice.Tensor(expand, 3, 0, 32)
+    add_38 = torch.ops.aten.add.Tensor(where_4, slice_15);  where_4 = slice_15 = None
+    softmax_4 = torch.ops.aten.softmax.int(add_38, -1);  add_38 = None
+    _assert_tensor_metadata_default_136 = torch.ops.aten._assert_tensor_metadata.default(softmax_4, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_136 = None
+    to_136 = torch.ops.aten.to.dtype(softmax_4, torch.float32);  softmax_4 = None
+    dropout_13 = torch.ops.aten.dropout.default(to_136, 0.0, False);  to_136 = None
+    matmul_9 = torch.ops.aten.matmul.default(dropout_13, permute_18);  dropout_13 = permute_18 = None
+    permute_19 = torch.ops.aten.permute.default(matmul_9, [0, 2, 1, 3]);  matmul_9 = None
+    contiguous_4 = torch.ops.aten.contiguous.default(permute_19);  permute_19 = None
+    view_19 = torch.ops.aten.view.default(contiguous_4, [1, 32, 64]);  contiguous_4 = None
+    choose_qparams_tensor_17 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_19, -128, 127, 0.000244140625, torch.int8)
+    getitem_34 = choose_qparams_tensor_17[0]
+    getitem_35 = choose_qparams_tensor_17[1];  choose_qparams_tensor_17 = None
+    div_17 = torch.ops.aten.div.Tensor(view_19, getitem_34);  view_19 = None
+    round_18 = torch.ops.aten.round.default(div_17);  div_17 = None
+    _assert_tensor_metadata_default_137 = torch.ops.aten._assert_tensor_metadata.default(round_18, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_137 = None
+    to_137 = torch.ops.aten.to.dtype(round_18, torch.int32);  round_18 = None
+    add_39 = torch.ops.aten.add.Tensor(to_137, getitem_35);  to_137 = None
+    clamp_61 = torch.ops.aten.clamp.default(add_39, -128, 127);  add_39 = None
+    _assert_tensor_metadata_default_138 = torch.ops.aten._assert_tensor_metadata.default(clamp_61, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_138 = None
+    to_138 = torch.ops.aten.to.dtype(clamp_61, torch.int8);  clamp_61 = None
+    clamp_62 = torch.ops.aten.clamp.default(to_138, -128, 127);  to_138 = None
+    _assert_tensor_metadata_default_139 = torch.ops.aten._assert_tensor_metadata.default(clamp_62, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_139 = None
+    to_139 = torch.ops.aten.to.dtype(clamp_62, torch.float32);  clamp_62 = None
+    sub_44 = torch.ops.aten.sub.Tensor(to_139, getitem_35);  to_139 = getitem_35 = None
+    mul_60 = torch.ops.aten.mul.Tensor(sub_44, getitem_34);  sub_44 = getitem_34 = None
+    _assert_tensor_metadata_default_140 = torch.ops.aten._assert_tensor_metadata.default(mul_60, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_140 = None
+    to_140 = torch.ops.aten.to.dtype(mul_60, torch.float32);  mul_60 = None
+    clamp_63 = torch.ops.aten.clamp.default(b__frozen_param27, -127, 127);  b__frozen_param27 = None
+    transpose_59 = torch.ops.aten.transpose.int(clamp_63, 0, -1);  clamp_63 = None
+    _assert_tensor_metadata_default_141 = torch.ops.aten._assert_tensor_metadata.default(transpose_59, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_141 = None
+    to_141 = torch.ops.aten.to.dtype(transpose_59, torch.int32);  transpose_59 = None
+    sub_45 = torch.ops.aten.sub.Tensor(to_141, b__zero_point_27);  to_141 = b__zero_point_27 = None
+    _assert_tensor_metadata_default_142 = torch.ops.aten._assert_tensor_metadata.default(sub_45, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_142 = None
+    to_142 = torch.ops.aten.to.dtype(sub_45, torch.float32);  sub_45 = None
+    mul_61 = torch.ops.aten.mul.Tensor(to_142, b__scale_27);  to_142 = b__scale_27 = None
+    transpose_60 = torch.ops.aten.transpose.int(mul_61, 0, -1);  mul_61 = None
+    linear_27 = torch.ops.aten.linear.default(to_140, transpose_60, p_model_transformer_h_4_attn_attention_out_proj_bias);  to_140 = transpose_60 = p_model_transformer_h_4_attn_attention_out_proj_bias = None
+    dropout_14 = torch.ops.aten.dropout.default(linear_27, 0.0, False);  linear_27 = None
+    add_40 = torch.ops.aten.add.Tensor(dropout_14, add_36);  dropout_14 = add_36 = None
+    layer_norm_9 = torch.ops.aten.layer_norm.default(add_40, [64], p_model_transformer_h_4_ln_2_weight, p_model_transformer_h_4_ln_2_bias);  p_model_transformer_h_4_ln_2_weight = p_model_transformer_h_4_ln_2_bias = None
+    choose_qparams_tensor_18 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_9, -128, 127, 0.000244140625, torch.int8)
+    getitem_36 = choose_qparams_tensor_18[0]
+    getitem_37 = choose_qparams_tensor_18[1];  choose_qparams_tensor_18 = None
+    div_18 = torch.ops.aten.div.Tensor(layer_norm_9, getitem_36);  layer_norm_9 = None
+    round_19 = torch.ops.aten.round.default(div_18);  div_18 = None
+    _assert_tensor_metadata_default_143 = torch.ops.aten._assert_tensor_metadata.default(round_19, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_143 = None
+    to_143 = torch.ops.aten.to.dtype(round_19, torch.int32);  round_19 = None
+    add_41 = torch.ops.aten.add.Tensor(to_143, getitem_37);  to_143 = None
+    clamp_64 = torch.ops.aten.clamp.default(add_41, -128, 127);  add_41 = None
+    _assert_tensor_metadata_default_144 = torch.ops.aten._assert_tensor_metadata.default(clamp_64, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_144 = None
+    to_144 = torch.ops.aten.to.dtype(clamp_64, torch.int8);  clamp_64 = None
+    clamp_65 = torch.ops.aten.clamp.default(to_144, -128, 127);  to_144 = None
+    _assert_tensor_metadata_default_145 = torch.ops.aten._assert_tensor_metadata.default(clamp_65, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_145 = None
+    to_145 = torch.ops.aten.to.dtype(clamp_65, torch.float32);  clamp_65 = None
+    sub_46 = torch.ops.aten.sub.Tensor(to_145, getitem_37);  to_145 = getitem_37 = None
+    mul_62 = torch.ops.aten.mul.Tensor(sub_46, getitem_36);  sub_46 = getitem_36 = None
+    _assert_tensor_metadata_default_146 = torch.ops.aten._assert_tensor_metadata.default(mul_62, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_146 = None
+    to_146 = torch.ops.aten.to.dtype(mul_62, torch.float32);  mul_62 = None
+    clamp_66 = torch.ops.aten.clamp.default(b__frozen_param28, -127, 127);  b__frozen_param28 = None
+    transpose_61 = torch.ops.aten.transpose.int(clamp_66, 0, -1);  clamp_66 = None
+    _assert_tensor_metadata_default_147 = torch.ops.aten._assert_tensor_metadata.default(transpose_61, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_147 = None
+    to_147 = torch.ops.aten.to.dtype(transpose_61, torch.int32);  transpose_61 = None
+    sub_47 = torch.ops.aten.sub.Tensor(to_147, b__zero_point_28);  to_147 = b__zero_point_28 = None
+    _assert_tensor_metadata_default_148 = torch.ops.aten._assert_tensor_metadata.default(sub_47, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_148 = None
+    to_148 = torch.ops.aten.to.dtype(sub_47, torch.float32);  sub_47 = None
+    mul_63 = torch.ops.aten.mul.Tensor(to_148, b__scale_28);  to_148 = b__scale_28 = None
+    transpose_62 = torch.ops.aten.transpose.int(mul_63, 0, -1);  mul_63 = None
+    linear_28 = torch.ops.aten.linear.default(to_146, transpose_62, p_model_transformer_h_4_mlp_c_fc_bias);  to_146 = transpose_62 = p_model_transformer_h_4_mlp_c_fc_bias = None
+    mul_64 = torch.ops.aten.mul.Tensor(linear_28, b__tensor_constant_16);  b__tensor_constant_16 = None
+    pow_5 = torch.ops.aten.pow.Tensor_Scalar(linear_28, 3.0)
+    mul_65 = torch.ops.aten.mul.Tensor(pow_5, b__tensor_constant_17);  pow_5 = b__tensor_constant_17 = None
+    add_42 = torch.ops.aten.add.Tensor(linear_28, mul_65);  linear_28 = mul_65 = None
+    mul_66 = torch.ops.aten.mul.Tensor(add_42, b__tensor_constant_18);  add_42 = b__tensor_constant_18 = None
+    tanh_4 = torch.ops.aten.tanh.default(mul_66);  mul_66 = None
+    add_43 = torch.ops.aten.add.Tensor(tanh_4, b__tensor_constant_19);  tanh_4 = b__tensor_constant_19 = None
+    mul_67 = torch.ops.aten.mul.Tensor(mul_64, add_43);  mul_64 = add_43 = None
+    choose_qparams_tensor_19 = torch.ops.quantized_decomposed.choose_qparams.tensor(mul_67, -128, 127, 0.000244140625, torch.int8)
+    getitem_38 = choose_qparams_tensor_19[0]
+    getitem_39 = choose_qparams_tensor_19[1];  choose_qparams_tensor_19 = None
+    div_19 = torch.ops.aten.div.Tensor(mul_67, getitem_38);  mul_67 = None
+    round_20 = torch.ops.aten.round.default(div_19);  div_19 = None
+    _assert_tensor_metadata_default_149 = torch.ops.aten._assert_tensor_metadata.default(round_20, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_149 = None
+    to_149 = torch.ops.aten.to.dtype(round_20, torch.int32);  round_20 = None
+    add_44 = torch.ops.aten.add.Tensor(to_149, getitem_39);  to_149 = None
+    clamp_67 = torch.ops.aten.clamp.default(add_44, -128, 127);  add_44 = None
+    _assert_tensor_metadata_default_150 = torch.ops.aten._assert_tensor_metadata.default(clamp_67, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_150 = None
+    to_150 = torch.ops.aten.to.dtype(clamp_67, torch.int8);  clamp_67 = None
+    clamp_68 = torch.ops.aten.clamp.default(to_150, -128, 127);  to_150 = None
+    _assert_tensor_metadata_default_151 = torch.ops.aten._assert_tensor_metadata.default(clamp_68, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_151 = None
+    to_151 = torch.ops.aten.to.dtype(clamp_68, torch.float32);  clamp_68 = None
+    sub_48 = torch.ops.aten.sub.Tensor(to_151, getitem_39);  to_151 = getitem_39 = None
+    mul_68 = torch.ops.aten.mul.Tensor(sub_48, getitem_38);  sub_48 = getitem_38 = None
+    _assert_tensor_metadata_default_152 = torch.ops.aten._assert_tensor_metadata.default(mul_68, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_152 = None
+    to_152 = torch.ops.aten.to.dtype(mul_68, torch.float32);  mul_68 = None
+    clamp_69 = torch.ops.aten.clamp.default(b__frozen_param29, -127, 127);  b__frozen_param29 = None
+    transpose_63 = torch.ops.aten.transpose.int(clamp_69, 0, -1);  clamp_69 = None
+    _assert_tensor_metadata_default_153 = torch.ops.aten._assert_tensor_metadata.default(transpose_63, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_153 = None
+    to_153 = torch.ops.aten.to.dtype(transpose_63, torch.int32);  transpose_63 = None
+    sub_49 = torch.ops.aten.sub.Tensor(to_153, b__zero_point_29);  to_153 = b__zero_point_29 = None
+    _assert_tensor_metadata_default_154 = torch.ops.aten._assert_tensor_metadata.default(sub_49, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_154 = None
+    to_154 = torch.ops.aten.to.dtype(sub_49, torch.float32);  sub_49 = None
+    mul_69 = torch.ops.aten.mul.Tensor(to_154, b__scale_29);  to_154 = b__scale_29 = None
+    transpose_64 = torch.ops.aten.transpose.int(mul_69, 0, -1);  mul_69 = None
+    linear_29 = torch.ops.aten.linear.default(to_152, transpose_64, p_model_transformer_h_4_mlp_c_proj_bias);  to_152 = transpose_64 = p_model_transformer_h_4_mlp_c_proj_bias = None
+    dropout_15 = torch.ops.aten.dropout.default(linear_29, 0.0, False);  linear_29 = None
+    add_45 = torch.ops.aten.add.Tensor(add_40, dropout_15);  add_40 = dropout_15 = None
+    layer_norm_10 = torch.ops.aten.layer_norm.default(add_45, [64], p_model_transformer_h_5_ln_1_weight, p_model_transformer_h_5_ln_1_bias);  p_model_transformer_h_5_ln_1_weight = p_model_transformer_h_5_ln_1_bias = None
+    choose_qparams_tensor_20 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_10, -128, 127, 0.000244140625, torch.int8)
+    getitem_40 = choose_qparams_tensor_20[0]
+    getitem_41 = choose_qparams_tensor_20[1];  choose_qparams_tensor_20 = None
+    div_20 = torch.ops.aten.div.Tensor(layer_norm_10, getitem_40);  layer_norm_10 = None
+    round_21 = torch.ops.aten.round.default(div_20);  div_20 = None
+    _assert_tensor_metadata_default_155 = torch.ops.aten._assert_tensor_metadata.default(round_21, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_155 = None
+    to_155 = torch.ops.aten.to.dtype(round_21, torch.int32);  round_21 = None
+    add_46 = torch.ops.aten.add.Tensor(to_155, getitem_41);  to_155 = None
+    clamp_70 = torch.ops.aten.clamp.default(add_46, -128, 127);  add_46 = None
+    _assert_tensor_metadata_default_156 = torch.ops.aten._assert_tensor_metadata.default(clamp_70, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_156 = None
+    to_156 = torch.ops.aten.to.dtype(clamp_70, torch.int8);  clamp_70 = None
+    clamp_71 = torch.ops.aten.clamp.default(to_156, -128, 127);  to_156 = None
+    _assert_tensor_metadata_default_157 = torch.ops.aten._assert_tensor_metadata.default(clamp_71, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_157 = None
+    to_157 = torch.ops.aten.to.dtype(clamp_71, torch.float32);  clamp_71 = None
+    sub_50 = torch.ops.aten.sub.Tensor(to_157, getitem_41);  to_157 = getitem_41 = None
+    mul_70 = torch.ops.aten.mul.Tensor(sub_50, getitem_40);  sub_50 = getitem_40 = None
+    _assert_tensor_metadata_default_158 = torch.ops.aten._assert_tensor_metadata.default(mul_70, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_158 = None
+    to_158 = torch.ops.aten.to.dtype(mul_70, torch.float32);  mul_70 = None
+    clamp_72 = torch.ops.aten.clamp.default(b__frozen_param32, -127, 127);  b__frozen_param32 = None
+    transpose_65 = torch.ops.aten.transpose.int(clamp_72, 0, -1);  clamp_72 = None
+    _assert_tensor_metadata_default_159 = torch.ops.aten._assert_tensor_metadata.default(transpose_65, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_159 = None
+    to_159 = torch.ops.aten.to.dtype(transpose_65, torch.int32);  transpose_65 = None
+    sub_51 = torch.ops.aten.sub.Tensor(to_159, b__zero_point_32);  to_159 = b__zero_point_32 = None
+    _assert_tensor_metadata_default_160 = torch.ops.aten._assert_tensor_metadata.default(sub_51, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_160 = None
+    to_160 = torch.ops.aten.to.dtype(sub_51, torch.float32);  sub_51 = None
+    mul_71 = torch.ops.aten.mul.Tensor(to_160, b__scale_32);  to_160 = b__scale_32 = None
+    transpose_66 = torch.ops.aten.transpose.int(mul_71, 0, -1);  mul_71 = None
+    linear_30 = torch.ops.aten.linear.default(to_158, transpose_66);  transpose_66 = None
+    clamp_73 = torch.ops.aten.clamp.default(b__frozen_param30, -127, 127);  b__frozen_param30 = None
+    transpose_67 = torch.ops.aten.transpose.int(clamp_73, 0, -1);  clamp_73 = None
+    _assert_tensor_metadata_default_161 = torch.ops.aten._assert_tensor_metadata.default(transpose_67, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_161 = None
+    to_161 = torch.ops.aten.to.dtype(transpose_67, torch.int32);  transpose_67 = None
+    sub_52 = torch.ops.aten.sub.Tensor(to_161, b__zero_point_30);  to_161 = b__zero_point_30 = None
+    _assert_tensor_metadata_default_162 = torch.ops.aten._assert_tensor_metadata.default(sub_52, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_162 = None
+    to_162 = torch.ops.aten.to.dtype(sub_52, torch.float32);  sub_52 = None
+    mul_72 = torch.ops.aten.mul.Tensor(to_162, b__scale_30);  to_162 = b__scale_30 = None
+    transpose_68 = torch.ops.aten.transpose.int(mul_72, 0, -1);  mul_72 = None
+    linear_31 = torch.ops.aten.linear.default(to_158, transpose_68);  transpose_68 = None
+    clamp_74 = torch.ops.aten.clamp.default(b__frozen_param31, -127, 127);  b__frozen_param31 = None
+    transpose_69 = torch.ops.aten.transpose.int(clamp_74, 0, -1);  clamp_74 = None
+    _assert_tensor_metadata_default_163 = torch.ops.aten._assert_tensor_metadata.default(transpose_69, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_163 = None
+    to_163 = torch.ops.aten.to.dtype(transpose_69, torch.int32);  transpose_69 = None
+    sub_53 = torch.ops.aten.sub.Tensor(to_163, b__zero_point_31);  to_163 = b__zero_point_31 = None
+    _assert_tensor_metadata_default_164 = torch.ops.aten._assert_tensor_metadata.default(sub_53, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_164 = None
+    to_164 = torch.ops.aten.to.dtype(sub_53, torch.float32);  sub_53 = None
+    mul_73 = torch.ops.aten.mul.Tensor(to_164, b__scale_31);  to_164 = b__scale_31 = None
+    transpose_70 = torch.ops.aten.transpose.int(mul_73, 0, -1);  mul_73 = None
+    linear_32 = torch.ops.aten.linear.default(to_158, transpose_70);  to_158 = transpose_70 = None
+    view_20 = torch.ops.aten.view.default(linear_30, [1, 32, 16, 4]);  linear_30 = None
+    permute_20 = torch.ops.aten.permute.default(view_20, [0, 2, 1, 3]);  view_20 = None
+    view_21 = torch.ops.aten.view.default(linear_31, [1, 32, 16, 4]);  linear_31 = None
+    permute_21 = torch.ops.aten.permute.default(view_21, [0, 2, 1, 3]);  view_21 = None
+    view_22 = torch.ops.aten.view.default(linear_32, [1, 32, 16, 4]);  linear_32 = None
+    permute_22 = torch.ops.aten.permute.default(view_22, [0, 2, 1, 3]);  view_22 = None
+    _assert_tensor_metadata_default_165 = torch.ops.aten._assert_tensor_metadata.default(permute_20, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_165 = None
+    to_165 = torch.ops.aten.to.dtype(permute_20, torch.float32);  permute_20 = None
+    _assert_tensor_metadata_default_166 = torch.ops.aten._assert_tensor_metadata.default(permute_21, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_166 = None
+    to_166 = torch.ops.aten.to.dtype(permute_21, torch.float32);  permute_21 = None
+    transpose_71 = torch.ops.aten.transpose.int(to_166, -1, -2);  to_166 = None
+    matmul_10 = torch.ops.aten.matmul.default(to_165, transpose_71);  to_165 = transpose_71 = None
+    slice_16 = torch.ops.aten.slice.Tensor(b_model_transformer_h_5_attn_attention_bias, 2, 0, 32);  b_model_transformer_h_5_attn_attention_bias = None
+    slice_17 = torch.ops.aten.slice.Tensor(slice_16, 3, 0, 32);  slice_16 = None
+    lift_fresh_copy_5 = torch.ops.aten.lift_fresh_copy.default(b_model_transformer_h_5_attn_attention_lifted_tensor_5);  b_model_transformer_h_5_attn_attention_lifted_tensor_5 = None
+    detach__5 = torch.ops.aten.detach_.default(lift_fresh_copy_5);  lift_fresh_copy_5 = None
+    where_5 = torch.ops.aten.where.self(slice_17, matmul_10, detach__5);  slice_17 = matmul_10 = detach__5 = None
+    slice_18 = torch.ops.aten.slice.Tensor(expand, 3, 0, 32)
+    add_47 = torch.ops.aten.add.Tensor(where_5, slice_18);  where_5 = slice_18 = None
+    softmax_5 = torch.ops.aten.softmax.int(add_47, -1);  add_47 = None
+    _assert_tensor_metadata_default_167 = torch.ops.aten._assert_tensor_metadata.default(softmax_5, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_167 = None
+    to_167 = torch.ops.aten.to.dtype(softmax_5, torch.float32);  softmax_5 = None
+    dropout_16 = torch.ops.aten.dropout.default(to_167, 0.0, False);  to_167 = None
+    matmul_11 = torch.ops.aten.matmul.default(dropout_16, permute_22);  dropout_16 = permute_22 = None
+    permute_23 = torch.ops.aten.permute.default(matmul_11, [0, 2, 1, 3]);  matmul_11 = None
+    contiguous_5 = torch.ops.aten.contiguous.default(permute_23);  permute_23 = None
+    view_23 = torch.ops.aten.view.default(contiguous_5, [1, 32, 64]);  contiguous_5 = None
+    choose_qparams_tensor_21 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_23, -128, 127, 0.000244140625, torch.int8)
+    getitem_42 = choose_qparams_tensor_21[0]
+    getitem_43 = choose_qparams_tensor_21[1];  choose_qparams_tensor_21 = None
+    div_21 = torch.ops.aten.div.Tensor(view_23, getitem_42);  view_23 = None
+    round_22 = torch.ops.aten.round.default(div_21);  div_21 = None
+    _assert_tensor_metadata_default_168 = torch.ops.aten._assert_tensor_metadata.default(round_22, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_168 = None
+    to_168 = torch.ops.aten.to.dtype(round_22, torch.int32);  round_22 = None
+    add_48 = torch.ops.aten.add.Tensor(to_168, getitem_43);  to_168 = None
+    clamp_75 = torch.ops.aten.clamp.default(add_48, -128, 127);  add_48 = None
+    _assert_tensor_metadata_default_169 = torch.ops.aten._assert_tensor_metadata.default(clamp_75, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_169 = None
+    to_169 = torch.ops.aten.to.dtype(clamp_75, torch.int8);  clamp_75 = None
+    clamp_76 = torch.ops.aten.clamp.default(to_169, -128, 127);  to_169 = None
+    _assert_tensor_metadata_default_170 = torch.ops.aten._assert_tensor_metadata.default(clamp_76, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_170 = None
+    to_170 = torch.ops.aten.to.dtype(clamp_76, torch.float32);  clamp_76 = None
+    sub_54 = torch.ops.aten.sub.Tensor(to_170, getitem_43);  to_170 = getitem_43 = None
+    mul_74 = torch.ops.aten.mul.Tensor(sub_54, getitem_42);  sub_54 = getitem_42 = None
+    _assert_tensor_metadata_default_171 = torch.ops.aten._assert_tensor_metadata.default(mul_74, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_171 = None
+    to_171 = torch.ops.aten.to.dtype(mul_74, torch.float32);  mul_74 = None
+    clamp_77 = torch.ops.aten.clamp.default(b__frozen_param33, -127, 127);  b__frozen_param33 = None
+    transpose_72 = torch.ops.aten.transpose.int(clamp_77, 0, -1);  clamp_77 = None
+    _assert_tensor_metadata_default_172 = torch.ops.aten._assert_tensor_metadata.default(transpose_72, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_172 = None
+    to_172 = torch.ops.aten.to.dtype(transpose_72, torch.int32);  transpose_72 = None
+    sub_55 = torch.ops.aten.sub.Tensor(to_172, b__zero_point_33);  to_172 = b__zero_point_33 = None
+    _assert_tensor_metadata_default_173 = torch.ops.aten._assert_tensor_metadata.default(sub_55, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_173 = None
+    to_173 = torch.ops.aten.to.dtype(sub_55, torch.float32);  sub_55 = None
+    mul_75 = torch.ops.aten.mul.Tensor(to_173, b__scale_33);  to_173 = b__scale_33 = None
+    transpose_73 = torch.ops.aten.transpose.int(mul_75, 0, -1);  mul_75 = None
+    linear_33 = torch.ops.aten.linear.default(to_171, transpose_73, p_model_transformer_h_5_attn_attention_out_proj_bias);  to_171 = transpose_73 = p_model_transformer_h_5_attn_attention_out_proj_bias = None
+    dropout_17 = torch.ops.aten.dropout.default(linear_33, 0.0, False);  linear_33 = None
+    add_49 = torch.ops.aten.add.Tensor(dropout_17, add_45);  dropout_17 = add_45 = None
+    layer_norm_11 = torch.ops.aten.layer_norm.default(add_49, [64], p_model_transformer_h_5_ln_2_weight, p_model_transformer_h_5_ln_2_bias);  p_model_transformer_h_5_ln_2_weight = p_model_transformer_h_5_ln_2_bias = None
+    choose_qparams_tensor_22 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_11, -128, 127, 0.000244140625, torch.int8)
+    getitem_44 = choose_qparams_tensor_22[0]
+    getitem_45 = choose_qparams_tensor_22[1];  choose_qparams_tensor_22 = None
+    div_22 = torch.ops.aten.div.Tensor(layer_norm_11, getitem_44);  layer_norm_11 = None
+    round_23 = torch.ops.aten.round.default(div_22);  div_22 = None
+    _assert_tensor_metadata_default_174 = torch.ops.aten._assert_tensor_metadata.default(round_23, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_174 = None
+    to_174 = torch.ops.aten.to.dtype(round_23, torch.int32);  round_23 = None
+    add_50 = torch.ops.aten.add.Tensor(to_174, getitem_45);  to_174 = None
+    clamp_78 = torch.ops.aten.clamp.default(add_50, -128, 127);  add_50 = None
+    _assert_tensor_metadata_default_175 = torch.ops.aten._assert_tensor_metadata.default(clamp_78, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_175 = None
+    to_175 = torch.ops.aten.to.dtype(clamp_78, torch.int8);  clamp_78 = None
+    clamp_79 = torch.ops.aten.clamp.default(to_175, -128, 127);  to_175 = None
+    _assert_tensor_metadata_default_176 = torch.ops.aten._assert_tensor_metadata.default(clamp_79, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_176 = None
+    to_176 = torch.ops.aten.to.dtype(clamp_79, torch.float32);  clamp_79 = None
+    sub_56 = torch.ops.aten.sub.Tensor(to_176, getitem_45);  to_176 = getitem_45 = None
+    mul_76 = torch.ops.aten.mul.Tensor(sub_56, getitem_44);  sub_56 = getitem_44 = None
+    _assert_tensor_metadata_default_177 = torch.ops.aten._assert_tensor_metadata.default(mul_76, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_177 = None
+    to_177 = torch.ops.aten.to.dtype(mul_76, torch.float32);  mul_76 = None
+    clamp_80 = torch.ops.aten.clamp.default(b__frozen_param34, -127, 127);  b__frozen_param34 = None
+    transpose_74 = torch.ops.aten.transpose.int(clamp_80, 0, -1);  clamp_80 = None
+    _assert_tensor_metadata_default_178 = torch.ops.aten._assert_tensor_metadata.default(transpose_74, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_178 = None
+    to_178 = torch.ops.aten.to.dtype(transpose_74, torch.int32);  transpose_74 = None
+    sub_57 = torch.ops.aten.sub.Tensor(to_178, b__zero_point_34);  to_178 = b__zero_point_34 = None
+    _assert_tensor_metadata_default_179 = torch.ops.aten._assert_tensor_metadata.default(sub_57, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_179 = None
+    to_179 = torch.ops.aten.to.dtype(sub_57, torch.float32);  sub_57 = None
+    mul_77 = torch.ops.aten.mul.Tensor(to_179, b__scale_34);  to_179 = b__scale_34 = None
+    transpose_75 = torch.ops.aten.transpose.int(mul_77, 0, -1);  mul_77 = None
+    linear_34 = torch.ops.aten.linear.default(to_177, transpose_75, p_model_transformer_h_5_mlp_c_fc_bias);  to_177 = transpose_75 = p_model_transformer_h_5_mlp_c_fc_bias = None
+    mul_78 = torch.ops.aten.mul.Tensor(linear_34, b__tensor_constant_20);  b__tensor_constant_20 = None
+    pow_6 = torch.ops.aten.pow.Tensor_Scalar(linear_34, 3.0)
+    mul_79 = torch.ops.aten.mul.Tensor(pow_6, b__tensor_constant_21);  pow_6 = b__tensor_constant_21 = None
+    add_51 = torch.ops.aten.add.Tensor(linear_34, mul_79);  linear_34 = mul_79 = None
+    mul_80 = torch.ops.aten.mul.Tensor(add_51, b__tensor_constant_22);  add_51 = b__tensor_constant_22 = None
+    tanh_5 = torch.ops.aten.tanh.default(mul_80);  mul_80 = None
+    add_52 = torch.ops.aten.add.Tensor(tanh_5, b__tensor_constant_23);  tanh_5 = b__tensor_constant_23 = None
+    mul_81 = torch.ops.aten.mul.Tensor(mul_78, add_52);  mul_78 = add_52 = None
+    choose_qparams_tensor_23 = torch.ops.quantized_decomposed.choose_qparams.tensor(mul_81, -128, 127, 0.000244140625, torch.int8)
+    getitem_46 = choose_qparams_tensor_23[0]
+    getitem_47 = choose_qparams_tensor_23[1];  choose_qparams_tensor_23 = None
+    div_23 = torch.ops.aten.div.Tensor(mul_81, getitem_46);  mul_81 = None
+    round_24 = torch.ops.aten.round.default(div_23);  div_23 = None
+    _assert_tensor_metadata_default_180 = torch.ops.aten._assert_tensor_metadata.default(round_24, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_180 = None
+    to_180 = torch.ops.aten.to.dtype(round_24, torch.int32);  round_24 = None
+    add_53 = torch.ops.aten.add.Tensor(to_180, getitem_47);  to_180 = None
+    clamp_81 = torch.ops.aten.clamp.default(add_53, -128, 127);  add_53 = None
+    _assert_tensor_metadata_default_181 = torch.ops.aten._assert_tensor_metadata.default(clamp_81, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_181 = None
+    to_181 = torch.ops.aten.to.dtype(clamp_81, torch.int8);  clamp_81 = None
+    clamp_82 = torch.ops.aten.clamp.default(to_181, -128, 127);  to_181 = None
+    _assert_tensor_metadata_default_182 = torch.ops.aten._assert_tensor_metadata.default(clamp_82, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_182 = None
+    to_182 = torch.ops.aten.to.dtype(clamp_82, torch.float32);  clamp_82 = None
+    sub_58 = torch.ops.aten.sub.Tensor(to_182, getitem_47);  to_182 = getitem_47 = None
+    mul_82 = torch.ops.aten.mul.Tensor(sub_58, getitem_46);  sub_58 = getitem_46 = None
+    _assert_tensor_metadata_default_183 = torch.ops.aten._assert_tensor_metadata.default(mul_82, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_183 = None
+    to_183 = torch.ops.aten.to.dtype(mul_82, torch.float32);  mul_82 = None
+    clamp_83 = torch.ops.aten.clamp.default(b__frozen_param35, -127, 127);  b__frozen_param35 = None
+    transpose_76 = torch.ops.aten.transpose.int(clamp_83, 0, -1);  clamp_83 = None
+    _assert_tensor_metadata_default_184 = torch.ops.aten._assert_tensor_metadata.default(transpose_76, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_184 = None
+    to_184 = torch.ops.aten.to.dtype(transpose_76, torch.int32);  transpose_76 = None
+    sub_59 = torch.ops.aten.sub.Tensor(to_184, b__zero_point_35);  to_184 = b__zero_point_35 = None
+    _assert_tensor_metadata_default_185 = torch.ops.aten._assert_tensor_metadata.default(sub_59, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_185 = None
+    to_185 = torch.ops.aten.to.dtype(sub_59, torch.float32);  sub_59 = None
+    mul_83 = torch.ops.aten.mul.Tensor(to_185, b__scale_35);  to_185 = b__scale_35 = None
+    transpose_77 = torch.ops.aten.transpose.int(mul_83, 0, -1);  mul_83 = None
+    linear_35 = torch.ops.aten.linear.default(to_183, transpose_77, p_model_transformer_h_5_mlp_c_proj_bias);  to_183 = transpose_77 = p_model_transformer_h_5_mlp_c_proj_bias = None
+    dropout_18 = torch.ops.aten.dropout.default(linear_35, 0.0, False);  linear_35 = None
+    add_54 = torch.ops.aten.add.Tensor(add_49, dropout_18);  add_49 = dropout_18 = None
+    layer_norm_12 = torch.ops.aten.layer_norm.default(add_54, [64], p_model_transformer_h_6_ln_1_weight, p_model_transformer_h_6_ln_1_bias);  p_model_transformer_h_6_ln_1_weight = p_model_transformer_h_6_ln_1_bias = None
+    choose_qparams_tensor_24 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_12, -128, 127, 0.000244140625, torch.int8)
+    getitem_48 = choose_qparams_tensor_24[0]
+    getitem_49 = choose_qparams_tensor_24[1];  choose_qparams_tensor_24 = None
+    div_24 = torch.ops.aten.div.Tensor(layer_norm_12, getitem_48);  layer_norm_12 = None
+    round_25 = torch.ops.aten.round.default(div_24);  div_24 = None
+    _assert_tensor_metadata_default_186 = torch.ops.aten._assert_tensor_metadata.default(round_25, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_186 = None
+    to_186 = torch.ops.aten.to.dtype(round_25, torch.int32);  round_25 = None
+    add_55 = torch.ops.aten.add.Tensor(to_186, getitem_49);  to_186 = None
+    clamp_84 = torch.ops.aten.clamp.default(add_55, -128, 127);  add_55 = None
+    _assert_tensor_metadata_default_187 = torch.ops.aten._assert_tensor_metadata.default(clamp_84, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_187 = None
+    to_187 = torch.ops.aten.to.dtype(clamp_84, torch.int8);  clamp_84 = None
+    clamp_85 = torch.ops.aten.clamp.default(to_187, -128, 127);  to_187 = None
+    _assert_tensor_metadata_default_188 = torch.ops.aten._assert_tensor_metadata.default(clamp_85, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_188 = None
+    to_188 = torch.ops.aten.to.dtype(clamp_85, torch.float32);  clamp_85 = None
+    sub_60 = torch.ops.aten.sub.Tensor(to_188, getitem_49);  to_188 = getitem_49 = None
+    mul_84 = torch.ops.aten.mul.Tensor(sub_60, getitem_48);  sub_60 = getitem_48 = None
+    _assert_tensor_metadata_default_189 = torch.ops.aten._assert_tensor_metadata.default(mul_84, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_189 = None
+    to_189 = torch.ops.aten.to.dtype(mul_84, torch.float32);  mul_84 = None
+    clamp_86 = torch.ops.aten.clamp.default(b__frozen_param38, -127, 127);  b__frozen_param38 = None
+    transpose_78 = torch.ops.aten.transpose.int(clamp_86, 0, -1);  clamp_86 = None
+    _assert_tensor_metadata_default_190 = torch.ops.aten._assert_tensor_metadata.default(transpose_78, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_190 = None
+    to_190 = torch.ops.aten.to.dtype(transpose_78, torch.int32);  transpose_78 = None
+    sub_61 = torch.ops.aten.sub.Tensor(to_190, b__zero_point_38);  to_190 = b__zero_point_38 = None
+    _assert_tensor_metadata_default_191 = torch.ops.aten._assert_tensor_metadata.default(sub_61, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_191 = None
+    to_191 = torch.ops.aten.to.dtype(sub_61, torch.float32);  sub_61 = None
+    mul_85 = torch.ops.aten.mul.Tensor(to_191, b__scale_38);  to_191 = b__scale_38 = None
+    transpose_79 = torch.ops.aten.transpose.int(mul_85, 0, -1);  mul_85 = None
+    linear_36 = torch.ops.aten.linear.default(to_189, transpose_79);  transpose_79 = None
+    clamp_87 = torch.ops.aten.clamp.default(b__frozen_param36, -127, 127);  b__frozen_param36 = None
+    transpose_80 = torch.ops.aten.transpose.int(clamp_87, 0, -1);  clamp_87 = None
+    _assert_tensor_metadata_default_192 = torch.ops.aten._assert_tensor_metadata.default(transpose_80, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_192 = None
+    to_192 = torch.ops.aten.to.dtype(transpose_80, torch.int32);  transpose_80 = None
+    sub_62 = torch.ops.aten.sub.Tensor(to_192, b__zero_point_36);  to_192 = b__zero_point_36 = None
+    _assert_tensor_metadata_default_193 = torch.ops.aten._assert_tensor_metadata.default(sub_62, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_193 = None
+    to_193 = torch.ops.aten.to.dtype(sub_62, torch.float32);  sub_62 = None
+    mul_86 = torch.ops.aten.mul.Tensor(to_193, b__scale_36);  to_193 = b__scale_36 = None
+    transpose_81 = torch.ops.aten.transpose.int(mul_86, 0, -1);  mul_86 = None
+    linear_37 = torch.ops.aten.linear.default(to_189, transpose_81);  transpose_81 = None
+    clamp_88 = torch.ops.aten.clamp.default(b__frozen_param37, -127, 127);  b__frozen_param37 = None
+    transpose_82 = torch.ops.aten.transpose.int(clamp_88, 0, -1);  clamp_88 = None
+    _assert_tensor_metadata_default_194 = torch.ops.aten._assert_tensor_metadata.default(transpose_82, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_194 = None
+    to_194 = torch.ops.aten.to.dtype(transpose_82, torch.int32);  transpose_82 = None
+    sub_63 = torch.ops.aten.sub.Tensor(to_194, b__zero_point_37);  to_194 = b__zero_point_37 = None
+    _assert_tensor_metadata_default_195 = torch.ops.aten._assert_tensor_metadata.default(sub_63, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_195 = None
+    to_195 = torch.ops.aten.to.dtype(sub_63, torch.float32);  sub_63 = None
+    mul_87 = torch.ops.aten.mul.Tensor(to_195, b__scale_37);  to_195 = b__scale_37 = None
+    transpose_83 = torch.ops.aten.transpose.int(mul_87, 0, -1);  mul_87 = None
+    linear_38 = torch.ops.aten.linear.default(to_189, transpose_83);  to_189 = transpose_83 = None
+    view_24 = torch.ops.aten.view.default(linear_36, [1, 32, 16, 4]);  linear_36 = None
+    permute_24 = torch.ops.aten.permute.default(view_24, [0, 2, 1, 3]);  view_24 = None
+    view_25 = torch.ops.aten.view.default(linear_37, [1, 32, 16, 4]);  linear_37 = None
+    permute_25 = torch.ops.aten.permute.default(view_25, [0, 2, 1, 3]);  view_25 = None
+    view_26 = torch.ops.aten.view.default(linear_38, [1, 32, 16, 4]);  linear_38 = None
+    permute_26 = torch.ops.aten.permute.default(view_26, [0, 2, 1, 3]);  view_26 = None
+    _assert_tensor_metadata_default_196 = torch.ops.aten._assert_tensor_metadata.default(permute_24, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_196 = None
+    to_196 = torch.ops.aten.to.dtype(permute_24, torch.float32);  permute_24 = None
+    _assert_tensor_metadata_default_197 = torch.ops.aten._assert_tensor_metadata.default(permute_25, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_197 = None
+    to_197 = torch.ops.aten.to.dtype(permute_25, torch.float32);  permute_25 = None
+    transpose_84 = torch.ops.aten.transpose.int(to_197, -1, -2);  to_197 = None
+    matmul_12 = torch.ops.aten.matmul.default(to_196, transpose_84);  to_196 = transpose_84 = None
+    slice_19 = torch.ops.aten.slice.Tensor(b_model_transformer_h_6_attn_attention_bias, 2, 0, 32);  b_model_transformer_h_6_attn_attention_bias = None
+    slice_20 = torch.ops.aten.slice.Tensor(slice_19, 3, 0, 32);  slice_19 = None
+    lift_fresh_copy_6 = torch.ops.aten.lift_fresh_copy.default(b_model_transformer_h_6_attn_attention_lifted_tensor_6);  b_model_transformer_h_6_attn_attention_lifted_tensor_6 = None
+    detach__6 = torch.ops.aten.detach_.default(lift_fresh_copy_6);  lift_fresh_copy_6 = None
+    where_6 = torch.ops.aten.where.self(slice_20, matmul_12, detach__6);  slice_20 = matmul_12 = detach__6 = None
+    slice_21 = torch.ops.aten.slice.Tensor(expand, 3, 0, 32)
+    add_56 = torch.ops.aten.add.Tensor(where_6, slice_21);  where_6 = slice_21 = None
+    softmax_6 = torch.ops.aten.softmax.int(add_56, -1);  add_56 = None
+    _assert_tensor_metadata_default_198 = torch.ops.aten._assert_tensor_metadata.default(softmax_6, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_198 = None
+    to_198 = torch.ops.aten.to.dtype(softmax_6, torch.float32);  softmax_6 = None
+    dropout_19 = torch.ops.aten.dropout.default(to_198, 0.0, False);  to_198 = None
+    matmul_13 = torch.ops.aten.matmul.default(dropout_19, permute_26);  dropout_19 = permute_26 = None
+    permute_27 = torch.ops.aten.permute.default(matmul_13, [0, 2, 1, 3]);  matmul_13 = None
+    contiguous_6 = torch.ops.aten.contiguous.default(permute_27);  permute_27 = None
+    view_27 = torch.ops.aten.view.default(contiguous_6, [1, 32, 64]);  contiguous_6 = None
+    choose_qparams_tensor_25 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_27, -128, 127, 0.000244140625, torch.int8)
+    getitem_50 = choose_qparams_tensor_25[0]
+    getitem_51 = choose_qparams_tensor_25[1];  choose_qparams_tensor_25 = None
+    div_25 = torch.ops.aten.div.Tensor(view_27, getitem_50);  view_27 = None
+    round_26 = torch.ops.aten.round.default(div_25);  div_25 = None
+    _assert_tensor_metadata_default_199 = torch.ops.aten._assert_tensor_metadata.default(round_26, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_199 = None
+    to_199 = torch.ops.aten.to.dtype(round_26, torch.int32);  round_26 = None
+    add_57 = torch.ops.aten.add.Tensor(to_199, getitem_51);  to_199 = None
+    clamp_89 = torch.ops.aten.clamp.default(add_57, -128, 127);  add_57 = None
+    _assert_tensor_metadata_default_200 = torch.ops.aten._assert_tensor_metadata.default(clamp_89, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_200 = None
+    to_200 = torch.ops.aten.to.dtype(clamp_89, torch.int8);  clamp_89 = None
+    clamp_90 = torch.ops.aten.clamp.default(to_200, -128, 127);  to_200 = None
+    _assert_tensor_metadata_default_201 = torch.ops.aten._assert_tensor_metadata.default(clamp_90, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_201 = None
+    to_201 = torch.ops.aten.to.dtype(clamp_90, torch.float32);  clamp_90 = None
+    sub_64 = torch.ops.aten.sub.Tensor(to_201, getitem_51);  to_201 = getitem_51 = None
+    mul_88 = torch.ops.aten.mul.Tensor(sub_64, getitem_50);  sub_64 = getitem_50 = None
+    _assert_tensor_metadata_default_202 = torch.ops.aten._assert_tensor_metadata.default(mul_88, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_202 = None
+    to_202 = torch.ops.aten.to.dtype(mul_88, torch.float32);  mul_88 = None
+    clamp_91 = torch.ops.aten.clamp.default(b__frozen_param39, -127, 127);  b__frozen_param39 = None
+    transpose_85 = torch.ops.aten.transpose.int(clamp_91, 0, -1);  clamp_91 = None
+    _assert_tensor_metadata_default_203 = torch.ops.aten._assert_tensor_metadata.default(transpose_85, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_203 = None
+    to_203 = torch.ops.aten.to.dtype(transpose_85, torch.int32);  transpose_85 = None
+    sub_65 = torch.ops.aten.sub.Tensor(to_203, b__zero_point_39);  to_203 = b__zero_point_39 = None
+    _assert_tensor_metadata_default_204 = torch.ops.aten._assert_tensor_metadata.default(sub_65, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_204 = None
+    to_204 = torch.ops.aten.to.dtype(sub_65, torch.float32);  sub_65 = None
+    mul_89 = torch.ops.aten.mul.Tensor(to_204, b__scale_39);  to_204 = b__scale_39 = None
+    transpose_86 = torch.ops.aten.transpose.int(mul_89, 0, -1);  mul_89 = None
+    linear_39 = torch.ops.aten.linear.default(to_202, transpose_86, p_model_transformer_h_6_attn_attention_out_proj_bias);  to_202 = transpose_86 = p_model_transformer_h_6_attn_attention_out_proj_bias = None
+    dropout_20 = torch.ops.aten.dropout.default(linear_39, 0.0, False);  linear_39 = None
+    add_58 = torch.ops.aten.add.Tensor(dropout_20, add_54);  dropout_20 = add_54 = None
+    layer_norm_13 = torch.ops.aten.layer_norm.default(add_58, [64], p_model_transformer_h_6_ln_2_weight, p_model_transformer_h_6_ln_2_bias);  p_model_transformer_h_6_ln_2_weight = p_model_transformer_h_6_ln_2_bias = None
+    choose_qparams_tensor_26 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_13, -128, 127, 0.000244140625, torch.int8)
+    getitem_52 = choose_qparams_tensor_26[0]
+    getitem_53 = choose_qparams_tensor_26[1];  choose_qparams_tensor_26 = None
+    div_26 = torch.ops.aten.div.Tensor(layer_norm_13, getitem_52);  layer_norm_13 = None
+    round_27 = torch.ops.aten.round.default(div_26);  div_26 = None
+    _assert_tensor_metadata_default_205 = torch.ops.aten._assert_tensor_metadata.default(round_27, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_205 = None
+    to_205 = torch.ops.aten.to.dtype(round_27, torch.int32);  round_27 = None
+    add_59 = torch.ops.aten.add.Tensor(to_205, getitem_53);  to_205 = None
+    clamp_92 = torch.ops.aten.clamp.default(add_59, -128, 127);  add_59 = None
+    _assert_tensor_metadata_default_206 = torch.ops.aten._assert_tensor_metadata.default(clamp_92, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_206 = None
+    to_206 = torch.ops.aten.to.dtype(clamp_92, torch.int8);  clamp_92 = None
+    clamp_93 = torch.ops.aten.clamp.default(to_206, -128, 127);  to_206 = None
+    _assert_tensor_metadata_default_207 = torch.ops.aten._assert_tensor_metadata.default(clamp_93, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_207 = None
+    to_207 = torch.ops.aten.to.dtype(clamp_93, torch.float32);  clamp_93 = None
+    sub_66 = torch.ops.aten.sub.Tensor(to_207, getitem_53);  to_207 = getitem_53 = None
+    mul_90 = torch.ops.aten.mul.Tensor(sub_66, getitem_52);  sub_66 = getitem_52 = None
+    _assert_tensor_metadata_default_208 = torch.ops.aten._assert_tensor_metadata.default(mul_90, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_208 = None
+    to_208 = torch.ops.aten.to.dtype(mul_90, torch.float32);  mul_90 = None
+    clamp_94 = torch.ops.aten.clamp.default(b__frozen_param40, -127, 127);  b__frozen_param40 = None
+    transpose_87 = torch.ops.aten.transpose.int(clamp_94, 0, -1);  clamp_94 = None
+    _assert_tensor_metadata_default_209 = torch.ops.aten._assert_tensor_metadata.default(transpose_87, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_209 = None
+    to_209 = torch.ops.aten.to.dtype(transpose_87, torch.int32);  transpose_87 = None
+    sub_67 = torch.ops.aten.sub.Tensor(to_209, b__zero_point_40);  to_209 = b__zero_point_40 = None
+    _assert_tensor_metadata_default_210 = torch.ops.aten._assert_tensor_metadata.default(sub_67, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_210 = None
+    to_210 = torch.ops.aten.to.dtype(sub_67, torch.float32);  sub_67 = None
+    mul_91 = torch.ops.aten.mul.Tensor(to_210, b__scale_40);  to_210 = b__scale_40 = None
+    transpose_88 = torch.ops.aten.transpose.int(mul_91, 0, -1);  mul_91 = None
+    linear_40 = torch.ops.aten.linear.default(to_208, transpose_88, p_model_transformer_h_6_mlp_c_fc_bias);  to_208 = transpose_88 = p_model_transformer_h_6_mlp_c_fc_bias = None
+    mul_92 = torch.ops.aten.mul.Tensor(linear_40, b__tensor_constant_24);  b__tensor_constant_24 = None
+    pow_7 = torch.ops.aten.pow.Tensor_Scalar(linear_40, 3.0)
+    mul_93 = torch.ops.aten.mul.Tensor(pow_7, b__tensor_constant_25);  pow_7 = b__tensor_constant_25 = None
+    add_60 = torch.ops.aten.add.Tensor(linear_40, mul_93);  linear_40 = mul_93 = None
+    mul_94 = torch.ops.aten.mul.Tensor(add_60, b__tensor_constant_26);  add_60 = b__tensor_constant_26 = None
+    tanh_6 = torch.ops.aten.tanh.default(mul_94);  mul_94 = None
+    add_61 = torch.ops.aten.add.Tensor(tanh_6, b__tensor_constant_27);  tanh_6 = b__tensor_constant_27 = None
+    mul_95 = torch.ops.aten.mul.Tensor(mul_92, add_61);  mul_92 = add_61 = None
+    choose_qparams_tensor_27 = torch.ops.quantized_decomposed.choose_qparams.tensor(mul_95, -128, 127, 0.000244140625, torch.int8)
+    getitem_54 = choose_qparams_tensor_27[0]
+    getitem_55 = choose_qparams_tensor_27[1];  choose_qparams_tensor_27 = None
+    div_27 = torch.ops.aten.div.Tensor(mul_95, getitem_54);  mul_95 = None
+    round_28 = torch.ops.aten.round.default(div_27);  div_27 = None
+    _assert_tensor_metadata_default_211 = torch.ops.aten._assert_tensor_metadata.default(round_28, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_211 = None
+    to_211 = torch.ops.aten.to.dtype(round_28, torch.int32);  round_28 = None
+    add_62 = torch.ops.aten.add.Tensor(to_211, getitem_55);  to_211 = None
+    clamp_95 = torch.ops.aten.clamp.default(add_62, -128, 127);  add_62 = None
+    _assert_tensor_metadata_default_212 = torch.ops.aten._assert_tensor_metadata.default(clamp_95, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_212 = None
+    to_212 = torch.ops.aten.to.dtype(clamp_95, torch.int8);  clamp_95 = None
+    clamp_96 = torch.ops.aten.clamp.default(to_212, -128, 127);  to_212 = None
+    _assert_tensor_metadata_default_213 = torch.ops.aten._assert_tensor_metadata.default(clamp_96, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_213 = None
+    to_213 = torch.ops.aten.to.dtype(clamp_96, torch.float32);  clamp_96 = None
+    sub_68 = torch.ops.aten.sub.Tensor(to_213, getitem_55);  to_213 = getitem_55 = None
+    mul_96 = torch.ops.aten.mul.Tensor(sub_68, getitem_54);  sub_68 = getitem_54 = None
+    _assert_tensor_metadata_default_214 = torch.ops.aten._assert_tensor_metadata.default(mul_96, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_214 = None
+    to_214 = torch.ops.aten.to.dtype(mul_96, torch.float32);  mul_96 = None
+    clamp_97 = torch.ops.aten.clamp.default(b__frozen_param41, -127, 127);  b__frozen_param41 = None
+    transpose_89 = torch.ops.aten.transpose.int(clamp_97, 0, -1);  clamp_97 = None
+    _assert_tensor_metadata_default_215 = torch.ops.aten._assert_tensor_metadata.default(transpose_89, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_215 = None
+    to_215 = torch.ops.aten.to.dtype(transpose_89, torch.int32);  transpose_89 = None
+    sub_69 = torch.ops.aten.sub.Tensor(to_215, b__zero_point_41);  to_215 = b__zero_point_41 = None
+    _assert_tensor_metadata_default_216 = torch.ops.aten._assert_tensor_metadata.default(sub_69, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_216 = None
+    to_216 = torch.ops.aten.to.dtype(sub_69, torch.float32);  sub_69 = None
+    mul_97 = torch.ops.aten.mul.Tensor(to_216, b__scale_41);  to_216 = b__scale_41 = None
+    transpose_90 = torch.ops.aten.transpose.int(mul_97, 0, -1);  mul_97 = None
+    linear_41 = torch.ops.aten.linear.default(to_214, transpose_90, p_model_transformer_h_6_mlp_c_proj_bias);  to_214 = transpose_90 = p_model_transformer_h_6_mlp_c_proj_bias = None
+    dropout_21 = torch.ops.aten.dropout.default(linear_41, 0.0, False);  linear_41 = None
+    add_63 = torch.ops.aten.add.Tensor(add_58, dropout_21);  add_58 = dropout_21 = None
+    layer_norm_14 = torch.ops.aten.layer_norm.default(add_63, [64], p_model_transformer_h_7_ln_1_weight, p_model_transformer_h_7_ln_1_bias);  p_model_transformer_h_7_ln_1_weight = p_model_transformer_h_7_ln_1_bias = None
+    choose_qparams_tensor_28 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_14, -128, 127, 0.000244140625, torch.int8)
+    getitem_56 = choose_qparams_tensor_28[0]
+    getitem_57 = choose_qparams_tensor_28[1];  choose_qparams_tensor_28 = None
+    div_28 = torch.ops.aten.div.Tensor(layer_norm_14, getitem_56);  layer_norm_14 = None
+    round_29 = torch.ops.aten.round.default(div_28);  div_28 = None
+    _assert_tensor_metadata_default_217 = torch.ops.aten._assert_tensor_metadata.default(round_29, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_217 = None
+    to_217 = torch.ops.aten.to.dtype(round_29, torch.int32);  round_29 = None
+    add_64 = torch.ops.aten.add.Tensor(to_217, getitem_57);  to_217 = None
+    clamp_98 = torch.ops.aten.clamp.default(add_64, -128, 127);  add_64 = None
+    _assert_tensor_metadata_default_218 = torch.ops.aten._assert_tensor_metadata.default(clamp_98, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_218 = None
+    to_218 = torch.ops.aten.to.dtype(clamp_98, torch.int8);  clamp_98 = None
+    clamp_99 = torch.ops.aten.clamp.default(to_218, -128, 127);  to_218 = None
+    _assert_tensor_metadata_default_219 = torch.ops.aten._assert_tensor_metadata.default(clamp_99, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_219 = None
+    to_219 = torch.ops.aten.to.dtype(clamp_99, torch.float32);  clamp_99 = None
+    sub_70 = torch.ops.aten.sub.Tensor(to_219, getitem_57);  to_219 = getitem_57 = None
+    mul_98 = torch.ops.aten.mul.Tensor(sub_70, getitem_56);  sub_70 = getitem_56 = None
+    _assert_tensor_metadata_default_220 = torch.ops.aten._assert_tensor_metadata.default(mul_98, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_220 = None
+    to_220 = torch.ops.aten.to.dtype(mul_98, torch.float32);  mul_98 = None
+    clamp_100 = torch.ops.aten.clamp.default(b__frozen_param44, -127, 127);  b__frozen_param44 = None
+    transpose_91 = torch.ops.aten.transpose.int(clamp_100, 0, -1);  clamp_100 = None
+    _assert_tensor_metadata_default_221 = torch.ops.aten._assert_tensor_metadata.default(transpose_91, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_221 = None
+    to_221 = torch.ops.aten.to.dtype(transpose_91, torch.int32);  transpose_91 = None
+    sub_71 = torch.ops.aten.sub.Tensor(to_221, b__zero_point_44);  to_221 = b__zero_point_44 = None
+    _assert_tensor_metadata_default_222 = torch.ops.aten._assert_tensor_metadata.default(sub_71, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_222 = None
+    to_222 = torch.ops.aten.to.dtype(sub_71, torch.float32);  sub_71 = None
+    mul_99 = torch.ops.aten.mul.Tensor(to_222, b__scale_44);  to_222 = b__scale_44 = None
+    transpose_92 = torch.ops.aten.transpose.int(mul_99, 0, -1);  mul_99 = None
+    linear_42 = torch.ops.aten.linear.default(to_220, transpose_92);  transpose_92 = None
+    clamp_101 = torch.ops.aten.clamp.default(b__frozen_param42, -127, 127);  b__frozen_param42 = None
+    transpose_93 = torch.ops.aten.transpose.int(clamp_101, 0, -1);  clamp_101 = None
+    _assert_tensor_metadata_default_223 = torch.ops.aten._assert_tensor_metadata.default(transpose_93, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_223 = None
+    to_223 = torch.ops.aten.to.dtype(transpose_93, torch.int32);  transpose_93 = None
+    sub_72 = torch.ops.aten.sub.Tensor(to_223, b__zero_point_42);  to_223 = b__zero_point_42 = None
+    _assert_tensor_metadata_default_224 = torch.ops.aten._assert_tensor_metadata.default(sub_72, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_224 = None
+    to_224 = torch.ops.aten.to.dtype(sub_72, torch.float32);  sub_72 = None
+    mul_100 = torch.ops.aten.mul.Tensor(to_224, b__scale_42);  to_224 = b__scale_42 = None
+    transpose_94 = torch.ops.aten.transpose.int(mul_100, 0, -1);  mul_100 = None
+    linear_43 = torch.ops.aten.linear.default(to_220, transpose_94);  transpose_94 = None
+    clamp_102 = torch.ops.aten.clamp.default(b__frozen_param43, -127, 127);  b__frozen_param43 = None
+    transpose_95 = torch.ops.aten.transpose.int(clamp_102, 0, -1);  clamp_102 = None
+    _assert_tensor_metadata_default_225 = torch.ops.aten._assert_tensor_metadata.default(transpose_95, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_225 = None
+    to_225 = torch.ops.aten.to.dtype(transpose_95, torch.int32);  transpose_95 = None
+    sub_73 = torch.ops.aten.sub.Tensor(to_225, b__zero_point_43);  to_225 = b__zero_point_43 = None
+    _assert_tensor_metadata_default_226 = torch.ops.aten._assert_tensor_metadata.default(sub_73, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_226 = None
+    to_226 = torch.ops.aten.to.dtype(sub_73, torch.float32);  sub_73 = None
+    mul_101 = torch.ops.aten.mul.Tensor(to_226, b__scale_43);  to_226 = b__scale_43 = None
+    transpose_96 = torch.ops.aten.transpose.int(mul_101, 0, -1);  mul_101 = None
+    linear_44 = torch.ops.aten.linear.default(to_220, transpose_96);  to_220 = transpose_96 = None
+    view_28 = torch.ops.aten.view.default(linear_42, [1, 32, 16, 4]);  linear_42 = None
+    permute_28 = torch.ops.aten.permute.default(view_28, [0, 2, 1, 3]);  view_28 = None
+    view_29 = torch.ops.aten.view.default(linear_43, [1, 32, 16, 4]);  linear_43 = None
+    permute_29 = torch.ops.aten.permute.default(view_29, [0, 2, 1, 3]);  view_29 = None
+    view_30 = torch.ops.aten.view.default(linear_44, [1, 32, 16, 4]);  linear_44 = None
+    permute_30 = torch.ops.aten.permute.default(view_30, [0, 2, 1, 3]);  view_30 = None
+    _assert_tensor_metadata_default_227 = torch.ops.aten._assert_tensor_metadata.default(permute_28, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_227 = None
+    to_227 = torch.ops.aten.to.dtype(permute_28, torch.float32);  permute_28 = None
+    _assert_tensor_metadata_default_228 = torch.ops.aten._assert_tensor_metadata.default(permute_29, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_228 = None
+    to_228 = torch.ops.aten.to.dtype(permute_29, torch.float32);  permute_29 = None
+    transpose_97 = torch.ops.aten.transpose.int(to_228, -1, -2);  to_228 = None
+    matmul_14 = torch.ops.aten.matmul.default(to_227, transpose_97);  to_227 = transpose_97 = None
+    slice_22 = torch.ops.aten.slice.Tensor(b_model_transformer_h_7_attn_attention_bias, 2, 0, 32);  b_model_transformer_h_7_attn_attention_bias = None
+    slice_23 = torch.ops.aten.slice.Tensor(slice_22, 3, 0, 32);  slice_22 = None
+    lift_fresh_copy_7 = torch.ops.aten.lift_fresh_copy.default(b_model_transformer_h_7_attn_attention_lifted_tensor_7);  b_model_transformer_h_7_attn_attention_lifted_tensor_7 = None
+    detach__7 = torch.ops.aten.detach_.default(lift_fresh_copy_7);  lift_fresh_copy_7 = None
+    where_7 = torch.ops.aten.where.self(slice_23, matmul_14, detach__7);  slice_23 = matmul_14 = detach__7 = None
+    slice_24 = torch.ops.aten.slice.Tensor(expand, 3, 0, 32);  expand = None
+    add_65 = torch.ops.aten.add.Tensor(where_7, slice_24);  where_7 = slice_24 = None
+    softmax_7 = torch.ops.aten.softmax.int(add_65, -1);  add_65 = None
+    _assert_tensor_metadata_default_229 = torch.ops.aten._assert_tensor_metadata.default(softmax_7, None, None, torch.float32, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_229 = None
+    to_229 = torch.ops.aten.to.dtype(softmax_7, torch.float32);  softmax_7 = None
+    dropout_22 = torch.ops.aten.dropout.default(to_229, 0.0, False);  to_229 = None
+    matmul_15 = torch.ops.aten.matmul.default(dropout_22, permute_30);  dropout_22 = permute_30 = None
+    permute_31 = torch.ops.aten.permute.default(matmul_15, [0, 2, 1, 3]);  matmul_15 = None
+    contiguous_7 = torch.ops.aten.contiguous.default(permute_31);  permute_31 = None
+    view_31 = torch.ops.aten.view.default(contiguous_7, [1, 32, 64]);  contiguous_7 = None
+    choose_qparams_tensor_29 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_31, -128, 127, 0.000244140625, torch.int8)
+    getitem_58 = choose_qparams_tensor_29[0]
+    getitem_59 = choose_qparams_tensor_29[1];  choose_qparams_tensor_29 = None
+    div_29 = torch.ops.aten.div.Tensor(view_31, getitem_58);  view_31 = None
+    round_30 = torch.ops.aten.round.default(div_29);  div_29 = None
+    _assert_tensor_metadata_default_230 = torch.ops.aten._assert_tensor_metadata.default(round_30, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_230 = None
+    to_230 = torch.ops.aten.to.dtype(round_30, torch.int32);  round_30 = None
+    add_66 = torch.ops.aten.add.Tensor(to_230, getitem_59);  to_230 = None
+    clamp_103 = torch.ops.aten.clamp.default(add_66, -128, 127);  add_66 = None
+    _assert_tensor_metadata_default_231 = torch.ops.aten._assert_tensor_metadata.default(clamp_103, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_231 = None
+    to_231 = torch.ops.aten.to.dtype(clamp_103, torch.int8);  clamp_103 = None
+    clamp_104 = torch.ops.aten.clamp.default(to_231, -128, 127);  to_231 = None
+    _assert_tensor_metadata_default_232 = torch.ops.aten._assert_tensor_metadata.default(clamp_104, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_232 = None
+    to_232 = torch.ops.aten.to.dtype(clamp_104, torch.float32);  clamp_104 = None
+    sub_74 = torch.ops.aten.sub.Tensor(to_232, getitem_59);  to_232 = getitem_59 = None
+    mul_102 = torch.ops.aten.mul.Tensor(sub_74, getitem_58);  sub_74 = getitem_58 = None
+    _assert_tensor_metadata_default_233 = torch.ops.aten._assert_tensor_metadata.default(mul_102, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_233 = None
+    to_233 = torch.ops.aten.to.dtype(mul_102, torch.float32);  mul_102 = None
+    clamp_105 = torch.ops.aten.clamp.default(b__frozen_param45, -127, 127);  b__frozen_param45 = None
+    transpose_98 = torch.ops.aten.transpose.int(clamp_105, 0, -1);  clamp_105 = None
+    _assert_tensor_metadata_default_234 = torch.ops.aten._assert_tensor_metadata.default(transpose_98, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_234 = None
+    to_234 = torch.ops.aten.to.dtype(transpose_98, torch.int32);  transpose_98 = None
+    sub_75 = torch.ops.aten.sub.Tensor(to_234, b__zero_point_45);  to_234 = b__zero_point_45 = None
+    _assert_tensor_metadata_default_235 = torch.ops.aten._assert_tensor_metadata.default(sub_75, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_235 = None
+    to_235 = torch.ops.aten.to.dtype(sub_75, torch.float32);  sub_75 = None
+    mul_103 = torch.ops.aten.mul.Tensor(to_235, b__scale_45);  to_235 = b__scale_45 = None
+    transpose_99 = torch.ops.aten.transpose.int(mul_103, 0, -1);  mul_103 = None
+    linear_45 = torch.ops.aten.linear.default(to_233, transpose_99, p_model_transformer_h_7_attn_attention_out_proj_bias);  to_233 = transpose_99 = p_model_transformer_h_7_attn_attention_out_proj_bias = None
+    dropout_23 = torch.ops.aten.dropout.default(linear_45, 0.0, False);  linear_45 = None
+    add_67 = torch.ops.aten.add.Tensor(dropout_23, add_63);  dropout_23 = add_63 = None
+    layer_norm_15 = torch.ops.aten.layer_norm.default(add_67, [64], p_model_transformer_h_7_ln_2_weight, p_model_transformer_h_7_ln_2_bias);  p_model_transformer_h_7_ln_2_weight = p_model_transformer_h_7_ln_2_bias = None
+    choose_qparams_tensor_30 = torch.ops.quantized_decomposed.choose_qparams.tensor(layer_norm_15, -128, 127, 0.000244140625, torch.int8)
+    getitem_60 = choose_qparams_tensor_30[0]
+    getitem_61 = choose_qparams_tensor_30[1];  choose_qparams_tensor_30 = None
+    div_30 = torch.ops.aten.div.Tensor(layer_norm_15, getitem_60);  layer_norm_15 = None
+    round_31 = torch.ops.aten.round.default(div_30);  div_30 = None
+    _assert_tensor_metadata_default_236 = torch.ops.aten._assert_tensor_metadata.default(round_31, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_236 = None
+    to_236 = torch.ops.aten.to.dtype(round_31, torch.int32);  round_31 = None
+    add_68 = torch.ops.aten.add.Tensor(to_236, getitem_61);  to_236 = None
+    clamp_106 = torch.ops.aten.clamp.default(add_68, -128, 127);  add_68 = None
+    _assert_tensor_metadata_default_237 = torch.ops.aten._assert_tensor_metadata.default(clamp_106, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_237 = None
+    to_237 = torch.ops.aten.to.dtype(clamp_106, torch.int8);  clamp_106 = None
+    clamp_107 = torch.ops.aten.clamp.default(to_237, -128, 127);  to_237 = None
+    _assert_tensor_metadata_default_238 = torch.ops.aten._assert_tensor_metadata.default(clamp_107, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_238 = None
+    to_238 = torch.ops.aten.to.dtype(clamp_107, torch.float32);  clamp_107 = None
+    sub_76 = torch.ops.aten.sub.Tensor(to_238, getitem_61);  to_238 = getitem_61 = None
+    mul_104 = torch.ops.aten.mul.Tensor(sub_76, getitem_60);  sub_76 = getitem_60 = None
+    _assert_tensor_metadata_default_239 = torch.ops.aten._assert_tensor_metadata.default(mul_104, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_239 = None
+    to_239 = torch.ops.aten.to.dtype(mul_104, torch.float32);  mul_104 = None
+    clamp_108 = torch.ops.aten.clamp.default(b__frozen_param46, -127, 127);  b__frozen_param46 = None
+    transpose_100 = torch.ops.aten.transpose.int(clamp_108, 0, -1);  clamp_108 = None
+    _assert_tensor_metadata_default_240 = torch.ops.aten._assert_tensor_metadata.default(transpose_100, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_240 = None
+    to_240 = torch.ops.aten.to.dtype(transpose_100, torch.int32);  transpose_100 = None
+    sub_77 = torch.ops.aten.sub.Tensor(to_240, b__zero_point_46);  to_240 = b__zero_point_46 = None
+    _assert_tensor_metadata_default_241 = torch.ops.aten._assert_tensor_metadata.default(sub_77, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_241 = None
+    to_241 = torch.ops.aten.to.dtype(sub_77, torch.float32);  sub_77 = None
+    mul_105 = torch.ops.aten.mul.Tensor(to_241, b__scale_46);  to_241 = b__scale_46 = None
+    transpose_101 = torch.ops.aten.transpose.int(mul_105, 0, -1);  mul_105 = None
+    linear_46 = torch.ops.aten.linear.default(to_239, transpose_101, p_model_transformer_h_7_mlp_c_fc_bias);  to_239 = transpose_101 = p_model_transformer_h_7_mlp_c_fc_bias = None
+    mul_106 = torch.ops.aten.mul.Tensor(linear_46, b__tensor_constant_28);  b__tensor_constant_28 = None
+    pow_8 = torch.ops.aten.pow.Tensor_Scalar(linear_46, 3.0)
+    mul_107 = torch.ops.aten.mul.Tensor(pow_8, b__tensor_constant_29);  pow_8 = b__tensor_constant_29 = None
+    add_69 = torch.ops.aten.add.Tensor(linear_46, mul_107);  linear_46 = mul_107 = None
+    mul_108 = torch.ops.aten.mul.Tensor(add_69, b__tensor_constant_30);  add_69 = b__tensor_constant_30 = None
+    tanh_7 = torch.ops.aten.tanh.default(mul_108);  mul_108 = None
+    add_70 = torch.ops.aten.add.Tensor(tanh_7, b__tensor_constant_31);  tanh_7 = b__tensor_constant_31 = None
+    mul_109 = torch.ops.aten.mul.Tensor(mul_106, add_70);  mul_106 = add_70 = None
+    choose_qparams_tensor_31 = torch.ops.quantized_decomposed.choose_qparams.tensor(mul_109, -128, 127, 0.000244140625, torch.int8)
+    getitem_62 = choose_qparams_tensor_31[0]
+    getitem_63 = choose_qparams_tensor_31[1];  choose_qparams_tensor_31 = None
+    div_31 = torch.ops.aten.div.Tensor(mul_109, getitem_62);  mul_109 = None
+    round_32 = torch.ops.aten.round.default(div_31);  div_31 = None
+    _assert_tensor_metadata_default_242 = torch.ops.aten._assert_tensor_metadata.default(round_32, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_242 = None
+    to_242 = torch.ops.aten.to.dtype(round_32, torch.int32);  round_32 = None
+    add_71 = torch.ops.aten.add.Tensor(to_242, getitem_63);  to_242 = None
+    clamp_109 = torch.ops.aten.clamp.default(add_71, -128, 127);  add_71 = None
+    _assert_tensor_metadata_default_243 = torch.ops.aten._assert_tensor_metadata.default(clamp_109, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_243 = None
+    to_243 = torch.ops.aten.to.dtype(clamp_109, torch.int8);  clamp_109 = None
+    clamp_110 = torch.ops.aten.clamp.default(to_243, -128, 127);  to_243 = None
+    _assert_tensor_metadata_default_244 = torch.ops.aten._assert_tensor_metadata.default(clamp_110, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_244 = None
+    to_244 = torch.ops.aten.to.dtype(clamp_110, torch.float32);  clamp_110 = None
+    sub_78 = torch.ops.aten.sub.Tensor(to_244, getitem_63);  to_244 = getitem_63 = None
+    mul_110 = torch.ops.aten.mul.Tensor(sub_78, getitem_62);  sub_78 = getitem_62 = None
+    _assert_tensor_metadata_default_245 = torch.ops.aten._assert_tensor_metadata.default(mul_110, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_245 = None
+    to_245 = torch.ops.aten.to.dtype(mul_110, torch.float32);  mul_110 = None
+    clamp_111 = torch.ops.aten.clamp.default(b__frozen_param47, -127, 127);  b__frozen_param47 = None
+    transpose_102 = torch.ops.aten.transpose.int(clamp_111, 0, -1);  clamp_111 = None
+    _assert_tensor_metadata_default_246 = torch.ops.aten._assert_tensor_metadata.default(transpose_102, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_246 = None
+    to_246 = torch.ops.aten.to.dtype(transpose_102, torch.int32);  transpose_102 = None
+    sub_79 = torch.ops.aten.sub.Tensor(to_246, b__zero_point_47);  to_246 = b__zero_point_47 = None
+    _assert_tensor_metadata_default_247 = torch.ops.aten._assert_tensor_metadata.default(sub_79, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_247 = None
+    to_247 = torch.ops.aten.to.dtype(sub_79, torch.float32);  sub_79 = None
+    mul_111 = torch.ops.aten.mul.Tensor(to_247, b__scale_47);  to_247 = b__scale_47 = None
+    transpose_103 = torch.ops.aten.transpose.int(mul_111, 0, -1);  mul_111 = None
+    linear_47 = torch.ops.aten.linear.default(to_245, transpose_103, p_model_transformer_h_7_mlp_c_proj_bias);  to_245 = transpose_103 = p_model_transformer_h_7_mlp_c_proj_bias = None
+    dropout_24 = torch.ops.aten.dropout.default(linear_47, 0.0, False);  linear_47 = None
+    add_72 = torch.ops.aten.add.Tensor(add_67, dropout_24);  add_67 = dropout_24 = None
+    layer_norm_16 = torch.ops.aten.layer_norm.default(add_72, [64], p_model_transformer_ln_f_weight, p_model_transformer_ln_f_bias);  add_72 = p_model_transformer_ln_f_weight = p_model_transformer_ln_f_bias = None
+    view_32 = torch.ops.aten.view.default(layer_norm_16, [-1, 32, 64]);  layer_norm_16 = None
+    choose_qparams_tensor_32 = torch.ops.quantized_decomposed.choose_qparams.tensor(view_32, -128, 127, 0.000244140625, torch.int8)
+    getitem_64 = choose_qparams_tensor_32[0]
+    getitem_65 = choose_qparams_tensor_32[1];  choose_qparams_tensor_32 = None
+    div_32 = torch.ops.aten.div.Tensor(view_32, getitem_64);  view_32 = None
+    round_33 = torch.ops.aten.round.default(div_32);  div_32 = None
+    _assert_tensor_metadata_default_248 = torch.ops.aten._assert_tensor_metadata.default(round_33, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_248 = None
+    to_248 = torch.ops.aten.to.dtype(round_33, torch.int32);  round_33 = None
+    add_73 = torch.ops.aten.add.Tensor(to_248, getitem_65);  to_248 = None
+    clamp_112 = torch.ops.aten.clamp.default(add_73, -128, 127);  add_73 = None
+    _assert_tensor_metadata_default_249 = torch.ops.aten._assert_tensor_metadata.default(clamp_112, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_249 = None
+    to_249 = torch.ops.aten.to.dtype(clamp_112, torch.int8);  clamp_112 = None
+    clamp_113 = torch.ops.aten.clamp.default(to_249, -128, 127);  to_249 = None
+    _assert_tensor_metadata_default_250 = torch.ops.aten._assert_tensor_metadata.default(clamp_113, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_250 = None
+    to_250 = torch.ops.aten.to.dtype(clamp_113, torch.float32);  clamp_113 = None
+    sub_80 = torch.ops.aten.sub.Tensor(to_250, getitem_65);  to_250 = getitem_65 = None
+    mul_112 = torch.ops.aten.mul.Tensor(sub_80, getitem_64);  sub_80 = getitem_64 = None
+    _assert_tensor_metadata_default_251 = torch.ops.aten._assert_tensor_metadata.default(mul_112, dtype = torch.float64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_251 = None
+    to_251 = torch.ops.aten.to.dtype(mul_112, torch.float32);  mul_112 = None
+    clamp_114 = torch.ops.aten.clamp.default(b__frozen_param48, -127, 127);  b__frozen_param48 = None
+    transpose_104 = torch.ops.aten.transpose.int(clamp_114, 0, -1);  clamp_114 = None
+    _assert_tensor_metadata_default_252 = torch.ops.aten._assert_tensor_metadata.default(transpose_104, dtype = torch.int8, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_252 = None
+    to_252 = torch.ops.aten.to.dtype(transpose_104, torch.int32);  transpose_104 = None
+    sub_81 = torch.ops.aten.sub.Tensor(to_252, b__zero_point_48);  to_252 = b__zero_point_48 = None
+    _assert_tensor_metadata_default_253 = torch.ops.aten._assert_tensor_metadata.default(sub_81, dtype = torch.int64, device = device(type='cpu'), layout = torch.strided);  _assert_tensor_metadata_default_253 = None
+    to_253 = torch.ops.aten.to.dtype(sub_81, torch.float32);  sub_81 = None
+    mul_113 = torch.ops.aten.mul.Tensor(to_253, b__scale_48);  to_253 = b__scale_48 = None
+    transpose_105 = torch.ops.aten.transpose.int(mul_113, 0, -1);  mul_113 = None
+    linear_48 = torch.ops.aten.linear.default(to_251, transpose_105);  to_251 = transpose_105 = None
+    return (linear_48,)
+    

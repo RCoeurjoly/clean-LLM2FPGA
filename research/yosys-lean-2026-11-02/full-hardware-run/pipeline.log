@@ -1,0 +1,5 @@
+{"stage": "01-generic-json", "status": "completed", "elapsed_seconds": 83.18129075599427, "returncode": 0}
+{"stage": "01-preflight", "status": "completed", "elapsed_seconds": 212.1971031360008, "returncode": 0}
+{"stage": "02-normalize", "status": "completed", "elapsed_seconds": 151.23057063699525, "returncode": 0}
+{"stage": "03-functional-export", "status": "completed", "elapsed_seconds": 352.62760161899496, "returncode": 0}
+{"stage": "04-import", "status": "failed", "elapsed_seconds": 78.09437233800418, "returncode": 143}

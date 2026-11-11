@@ -1,0 +1,739 @@
+{
+  "utc": "2026-11-01T23:13:16.629694+00:00",
+  "endpoint": "repos/nathsou/HDLean/tarball/c3808e57b342c63eaff677abca7f9391a4dc954a",
+  "exit_code": 0,
+  "archive_bytes": 343128,
+  "sha256": "fb5c8759fe429b4f8bf1be7a27818e99719ab60eadaafd3ba3d1713c078e1ddc",
+  "files": [
+    {
+      "path": "Designs.lean",
+      "bytes": 340,
+      "sha256": "6b6ec4a15e1ae5175210aecf0c72543df17dd09c97b37427fbdcaadaf633874f"
+    },
+    {
+      "path": "Designs/AsyncFifo/Challenge.lean",
+      "bytes": 3226,
+      "sha256": "c66865b990b5dd23b3dac9efdebd5b6bb3a245ecc47f56a445c4117c26770965"
+    },
+    {
+      "path": "Designs/AsyncFifo/Interface.lean",
+      "bytes": 3550,
+      "sha256": "18c7409ea2fcd6a6f0af3c09dacc2b220eb5115a47baf315df9652ee55e017e4"
+    },
+    {
+      "path": "Designs/AsyncFifo/Model.lean",
+      "bytes": 4107,
+      "sha256": "4d5058886f7e583b1ddc01519a3b8ab32453610a5018f100e981880c33c375c7"
+    },
+    {
+      "path": "Designs/AsyncFifo/Progress.lean",
+      "bytes": 15731,
+      "sha256": "e8b4313eb3d7df8133a7df3b02dfcd670e58ae4ff1556e8aa9980e6d7e26aff3"
+    },
+    {
+      "path": "Designs/AsyncFifo/Proof.lean",
+      "bytes": 14274,
+      "sha256": "0431817caf9674034d437ff091c55ae092f0a64cfa582e658d2d1fee932d118d"
+    },
+    {
+      "path": "Designs/AsyncFifo/QueueRefinement.lean",
+      "bytes": 8701,
+      "sha256": "a30d12ead40b08d3d63b315e77724134a36b9b7adab624dc18304647bbfb86ce"
+    },
+    {
+      "path": "Designs/AsyncFifo/Spec.lean",
+      "bytes": 2080,
+      "sha256": "7be1bef10490ad6c040892bc05f799b0c4c863b7674c8c331e863deb300da0ac"
+    },
+    {
+      "path": "Designs/AsyncFifo/Word.lean",
+      "bytes": 39043,
+      "sha256": "ed9ea4c3c2588870fa1ba45a4cbc7b363ca5061774e23c85aa6b2aeec41a1ae9"
+    },
+    {
+      "path": "Designs/CircularFifo/Challenge.lean",
+      "bytes": 987,
+      "sha256": "7a6e41f653d9db041d0328c81098eb163eecb2fa4915b55a42ed73b3deb11f2f"
+    },
+    {
+      "path": "Designs/Counter/Challenge.lean",
+      "bytes": 566,
+      "sha256": "5d117858590200ef935247188d1cac883e6e4621964ac5d83c40d9d2f3150345"
+    },
+    {
+      "path": "Designs/Counter/Interface.lean",
+      "bytes": 931,
+      "sha256": "2d6c49f2603ed02add262e203e73e38a48e1e76411aea2f432234cf9703b23e3"
+    },
+    {
+      "path": "Designs/Counter/Spec.lean",
+      "bytes": 231,
+      "sha256": "beba3709399d0c306d50fcfa2a556ea30ed453254b88996648d1eb7194592444"
+    },
+    {
+      "path": "Designs/Counter/Word.lean",
+      "bytes": 5660,
+      "sha256": "3cdb3c135dff5339857877615d4b91e5aec01d7f9cb3289c65e8bd87178bc376"
+    },
+    {
+      "path": "Designs/Euler.lean",
+      "bytes": 629,
+      "sha256": "2c70466bd644f656cced30aab32196bc1fc4b120144280fba9e6398421a625b8"
+    },
+    {
+      "path": "Designs/Euler/Bcd.lean",
+      "bytes": 3649,
+      "sha256": "9c4beb03a60ddcdbf648dbb725137dc6e9401a58f3faa92c1977fd8c61ced702"
+    },
+    {
+      "path": "Designs/Euler/Kit.lean",
+      "bytes": 8177,
+      "sha256": "22cace9eb9bb6beff551b85b66a04aa7099f219060fd51b68584aab4062ea9d9"
+    },
+    {
+      "path": "Designs/Euler/P010.lean",
+      "bytes": 20477,
+      "sha256": "93d30e9233256ca8fd2904c152e5b2f6bfec513c306182a471144c5ddd9ba702"
+    },
+    {
+      "path": "Designs/Euler/P014.lean",
+      "bytes": 10462,
+      "sha256": "6bc315cb8262f4cf5aee427b43699c1bdf1a56790bfceb7787a7f1f6c63ae420"
+    },
+    {
+      "path": "Designs/Euler/P025.lean",
+      "bytes": 2843,
+      "sha256": "019139f67db3671750418877c8429438a3bb07527cb51f02de7bff30d78cd563"
+    },
+    {
+      "path": "Designs/Euler/P031.lean",
+      "bytes": 4391,
+      "sha256": "b24222892f6a9437c4287857ab9978f1b9ae18b5028e92ec2e18b3f265d6d11e"
+    },
+    {
+      "path": "Designs/Euler/P043.lean",
+      "bytes": 8835,
+      "sha256": "2ddaf3e6f76d3231174970e6de9755e0872abfe618df50869247377610a5bcad"
+    },
+    {
+      "path": "Designs/Euler/P048.lean",
+      "bytes": 10049,
+      "sha256": "f7240a35e7289a05ff9fd624b1ce29f0a57a2daaab477f13d016d806a3f86bbe"
+    },
+    {
+      "path": "Designs/Euler/P057.lean",
+      "bytes": 7232,
+      "sha256": "df2d1dd9a45f22f5855d8691fafe7b3479b57f25069a5333e344ec83963bc198"
+    },
+    {
+      "path": "Designs/Euler/P058.lean",
+      "bytes": 21917,
+      "sha256": "790400186247fda37ef589f0d949ce7ebd18b1ede65f3cfe1b412fef5217930f"
+    },
+    {
+      "path": "Designs/Euler/P092.lean",
+      "bytes": 12986,
+      "sha256": "978326f9e00d76abeb4c13dfcf661d0f01fd7a4b2a0363d7978bde376e23a364"
+    },
+    {
+      "path": "Designs/Euler/P097.lean",
+      "bytes": 7267,
+      "sha256": "907ffee74bfe0b51e3de89cb1fc60a9d28943fca02c9810dd0bacca4a986dcd0"
+    },
+    {
+      "path": "Designs/Euler/Report.lean",
+      "bytes": 7172,
+      "sha256": "a1faba9e57836328a9b0f9ea8448961a09428951f988950f9c197c84e734ff10"
+    },
+    {
+      "path": "Designs/Fifo/Challenge.lean",
+      "bytes": 730,
+      "sha256": "9aaac4c79c29b7efcc4c2ef6c325a47394d7b4e29992b2d599daf4c546fef137"
+    },
+    {
+      "path": "Designs/Fifo/Circular.lean",
+      "bytes": 1744,
+      "sha256": "6e24b667db257844bbd7d1daba26318984a6270c61aaa7f763904c4e753ea783"
+    },
+    {
+      "path": "Designs/Fifo/CircularProof.lean",
+      "bytes": 7149,
+      "sha256": "d047ca7e8362d033efdd2283e35fab471bc7cc11c485c429bd223a847eb68699"
+    },
+    {
+      "path": "Designs/Fifo/CircularQueue.lean",
+      "bytes": 6777,
+      "sha256": "a460ebef8759a6d0c45943aa0e279b5a5fe152f0e2945b36eee2dbe5d5347311"
+    },
+    {
+      "path": "Designs/Fifo/CircularWord.lean",
+      "bytes": 11110,
+      "sha256": "4897ac45b20951b039cf155f0ac1ae4e4bc4454f53436f872b7eb20806b65512"
+    },
+    {
+      "path": "Designs/Fifo/Interface.lean",
+      "bytes": 1506,
+      "sha256": "e3f9ded65de5792a772213cf0d41ba0ec943fae7a7fe43eb9b817f75118f0b2a"
+    },
+    {
+      "path": "Designs/Fifo/Spec.lean",
+      "bytes": 894,
+      "sha256": "e48a7ebb2e7e2c9cbdfd66f224a2daca364ea87017b05a77b7c261ec1a6e8dbd"
+    },
+    {
+      "path": "Designs/Fifo/Word.lean",
+      "bytes": 11662,
+      "sha256": "77fad414642b215953d6a42c21a365acfd0c7ebf2cd60215b16fe68a012d0a77"
+    },
+    {
+      "path": "Designs/Optimized/Transfer.lean",
+      "bytes": 1781,
+      "sha256": "a4f010d014ac59f1e2f439c7d5278b6eccbb98711fc2cf1e5bba54f98073dc28"
+    },
+    {
+      "path": "Designs/RAM/Challenge.lean",
+      "bytes": 817,
+      "sha256": "5bfecc7d5dffc2775fdbccb87c4d3635c5f8d143a5feb724174b80cd3f5f64ac"
+    },
+    {
+      "path": "Designs/RAM/Interface.lean",
+      "bytes": 1064,
+      "sha256": "8f28ec5492e17793d01ec03e699be2592bc075e039b0e04fcdef4becfcb9c9c2"
+    },
+    {
+      "path": "Designs/RAM/Word.lean",
+      "bytes": 7086,
+      "sha256": "745f306e4fecac32a9e68018f0d8a1c78068ba3ba31fc23dd16ad7490c53493d"
+    },
+    {
+      "path": "Designs/Review.lean",
+      "bytes": 12796,
+      "sha256": "14176c160c26dce62757e746afad54e0e7f617c7fe7bfdb5cac7a9a266d4a24e"
+    },
+    {
+      "path": "Designs/RtlOps.lean",
+      "bytes": 4088,
+      "sha256": "7fd6ddc1ee4b17ea062a103f200df8b267ec6a3709eaac77edc0bb34169fd640"
+    },
+    {
+      "path": "Designs/SkidBuffer/Challenge.lean",
+      "bytes": 834,
+      "sha256": "679003fb0a68ba06a3da497c8bfe85f1467808f109d97365e40e0cdad9373e63"
+    },
+    {
+      "path": "Designs/SkidBuffer/Interface.lean",
+      "bytes": 1587,
+      "sha256": "18295a54f8cf088cfe3262b53fd3a79676fd771cfa595292b02a24b7e35be98f"
+    },
+    {
+      "path": "Designs/SkidBuffer/Spec.lean",
+      "bytes": 855,
+      "sha256": "1126aae121586203b546c4e6c1bb4ff9595a3ed672dbc0448472c780179921f3"
+    },
+    {
+      "path": "Designs/SkidBuffer/Word.lean",
+      "bytes": 8674,
+      "sha256": "13fc52404edebfcbb930569a5725323dc357c51d1307a392d3a16091dff3f6f9"
+    },
+    {
+      "path": "Designs/Toy16/Challenge.lean",
+      "bytes": 876,
+      "sha256": "d73ab88513e74e3f8e4f8cd43240be6a21cdbaf488dc6578e8900cb36c7d47b9"
+    },
+    {
+      "path": "Designs/Toy16/Interface.lean",
+      "bytes": 2086,
+      "sha256": "c301852dee1c81f58192c34965f5b37ffefbe33f30bcc6d278b79bbda9fbbf78"
+    },
+    {
+      "path": "Designs/Toy16/Programs.lean",
+      "bytes": 1093,
+      "sha256": "1eee5c0a3c24114cebca77235b273a2e605d887d5c252fe2625942f606814ac4"
+    },
+    {
+      "path": "Designs/Toy16/Spec.lean",
+      "bytes": 3032,
+      "sha256": "5a74cb04c3eca3e50e434f4c816d50c773dee4241d58abbbaa3a3fecfcc2a57b"
+    },
+    {
+      "path": "Designs/Toy16/Word.lean",
+      "bytes": 4520,
+      "sha256": "263414744e1bc8eb9f5ae9d2282d76907937e3098360bfa9106511fc5e78c2b0"
+    },
+    {
+      "path": "Designs/Toy16/WordAlu.lean",
+      "bytes": 3404,
+      "sha256": "02ca8fd82417c4aef1a94a7685a4a8c7d12bd100dfdabc54f61d39881d69fc6e"
+    },
+    {
+      "path": "Designs/Toy16/WordBody.lean",
+      "bytes": 5746,
+      "sha256": "2c841f6e3a87a6e370d21f79c3f6f5d22e095595d83e71ce9c66b9474da58eec"
+    },
+    {
+      "path": "Designs/Toy16/WordCore.lean",
+      "bytes": 3916,
+      "sha256": "792273ce7b317e7669f514252a736e8c83e9a6ff177df43fda51af4a87ba40e5"
+    },
+    {
+      "path": "Designs/Toy16/WordProof.lean",
+      "bytes": 5625,
+      "sha256": "740e9d763f59cb29e28bc0cfeb968c47002562873508d07d583882c89997837d"
+    },
+    {
+      "path": "Designs/Toy16/WordRefinement.lean",
+      "bytes": 12805,
+      "sha256": "e36443af075afa52eb417f27e5170c424a0d63727521d6191da27b1e062c65e6"
+    },
+    {
+      "path": "Designs/Toy16/WordStep.lean",
+      "bytes": 4417,
+      "sha256": "ac13f43271f08fe9b4e8c7d707f27075d6a194103b1bd0c1c0b309c0228d4c9c"
+    },
+    {
+      "path": "HDLean.lean",
+      "bytes": 732,
+      "sha256": "34bf23886445fa240d312c58e80dec029b044eabaa74c98553eafe59e3f862f8"
+    },
+    {
+      "path": "HDLean/Backend/AigerBinary.lean",
+      "bytes": 3050,
+      "sha256": "c910cc42d2e8bc7517452cad3a8bada24b8fd332ff6922e0a35a2cd46d03df7d"
+    },
+    {
+      "path": "HDLean/Backend/AigerProved.lean",
+      "bytes": 6694,
+      "sha256": "fd1dc11647d99cb22ad95e3d73d60a9a87bea4a0ab745538f34f2ed7a615813c"
+    },
+    {
+      "path": "HDLean/Backend/DagEmit.lean",
+      "bytes": 3242,
+      "sha256": "ac8ff70edcfa42154c2d44ae6d24eedf450b08138fa83eb2750f6b893766af46"
+    },
+    {
+      "path": "HDLean/Backend/DagEmitValidated.lean",
+      "bytes": 1859,
+      "sha256": "1b003e117c19e4a8c27a587906cd16a506addfdbf8f66ac61cf6e02b30d03d86"
+    },
+    {
+      "path": "HDLean/Backend/Graph.lean",
+      "bytes": 3001,
+      "sha256": "f0f787f3b5c31e98e5a6e31d682cf22b49cc3b1d9682cf48e9d38fa39d208345"
+    },
+    {
+      "path": "HDLean/Backend/RTLILProved.lean",
+      "bytes": 14687,
+      "sha256": "eaa055cc1c835029fed44e55b23d405971216da0ee844931df03c0bf8ae3e925"
+    },
+    {
+      "path": "HDLean/Backend/StatePorts.lean",
+      "bytes": 4477,
+      "sha256": "163dc5deb3e54ad454538ab320daaa1dfe99537c8496318e0258d94b656f5a48"
+    },
+    {
+      "path": "HDLean/Backend/SystemVerilogProved.lean",
+      "bytes": 10027,
+      "sha256": "2ad0a73643654916eb07a10cbc9be20ac6d8000a75450814de24c95a0c12b74d"
+    },
+    {
+      "path": "HDLean/Backend/TextCodec.lean",
+      "bytes": 5127,
+      "sha256": "ef36b19802c3b25af1974d447e78274ccebd48b84fe613ef67a61017b1f66d3f"
+    },
+    {
+      "path": "HDLean/Backend/TextGrammar.lean",
+      "bytes": 4756,
+      "sha256": "aee77c83b55003239e4481c952ce05a2c9692920b7ac50288a924910453344ca"
+    },
+    {
+      "path": "HDLean/Backend/Validate.lean",
+      "bytes": 15007,
+      "sha256": "77d4eeef6d51501b6b31fae8883f3b92cc200d08b172860c6d33d205f29e0013"
+    },
+    {
+      "path": "HDLean/Core/Dag.lean",
+      "bytes": 6447,
+      "sha256": "ca0355658ab068bd72b8284bdce5cf9a2a736a3ba7f0e76b7ac6a7e8489a9d17"
+    },
+    {
+      "path": "HDLean/Lib/Memory.lean",
+      "bytes": 1235,
+      "sha256": "0e9fd02adf0b1ef30e2bed34f4034f1d1d1f0193d888709e27edb915754ceff6"
+    },
+    {
+      "path": "HDLean/Lib/Network.lean",
+      "bytes": 1422,
+      "sha256": "97060448b2e834310026b886cbaddc0937163a798dc9417de08ba16573c44544"
+    },
+    {
+      "path": "HDLean/Netlist/DagLower.lean",
+      "bytes": 25145,
+      "sha256": "2a0a6aff33846f5d6694459b8a73b5e2bbec2121a03a0c29cb0d19875cd74aba"
+    },
+    {
+      "path": "HDLean/Netlist/DagTight.lean",
+      "bytes": 23453,
+      "sha256": "f2a894713a977ff6c7d8136754c4e0fca01b21288e3b27302d1fc56fd266f4fb"
+    },
+    {
+      "path": "HDLean/Netlist/Optimize.lean",
+      "bytes": 20466,
+      "sha256": "fddf5628164315b729f468a128180df3ee7f5d66659db05510fff6e13b812871"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Cell.lean",
+      "bytes": 22554,
+      "sha256": "46b3f823acaec1193dc9a5c73676c6018c55df99dea94b93ca7a3e2a130132c5"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Correct.lean",
+      "bytes": 41142,
+      "sha256": "743a4f416ce85f0b27ebd637b65bb3a37c68e2ac48ae7f9498d9d8a8901c1f6d"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Module.lean",
+      "bytes": 20855,
+      "sha256": "6065090002935d3c3baaa4c7ffce5b1d5586a6b0143a1cffc09380dafc9e3e2a"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Reset.lean",
+      "bytes": 15363,
+      "sha256": "0e7c4bc6c52b056172b969bc0cfc1f4535133b786a484bbc5dd18b4c35c3ffd4"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/ToDag.lean",
+      "bytes": 8734,
+      "sha256": "c7bf3a7959551c8da80a3264dc2968026d12a705f37fbcabb7629bb34bbb4ada"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Top.lean",
+      "bytes": 9140,
+      "sha256": "d3ae9bb89d9d08d128611052914c6d029a9b9ed83ece121bdf580782887c7be7"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Vec.lean",
+      "bytes": 21877,
+      "sha256": "2a6f51481a30cc1b86f3b195d7979693add4d8f17537fdd518af5d24fb45f49f"
+    },
+    {
+      "path": "HDLean/Rtl/Build.lean",
+      "bytes": 13423,
+      "sha256": "8c0a99e313d114a8ab765e35b9d25df7e9b78d10b8e0b92b93a971c8c3df1da5"
+    },
+    {
+      "path": "HDLean/Rtl/Bundle.lean",
+      "bytes": 3239,
+      "sha256": "cd1801a7155b8e8dcbd8affd64592de0ac3588e9cf7c5986dc4af0cfca33780c"
+    },
+    {
+      "path": "HDLean/Rtl/Compact.lean",
+      "bytes": 14500,
+      "sha256": "ade419ff94e02aa0dd179563a34189508fa63787f69a1457172c0287d84e47b5"
+    },
+    {
+      "path": "HDLean/Rtl/Design.lean",
+      "bytes": 1165,
+      "sha256": "b0eaad9e24885bfd2b3f6aefd11467f383722080ae898a38ee07a7d3642c89a1"
+    },
+    {
+      "path": "HDLean/Rtl/Hoare.lean",
+      "bytes": 22699,
+      "sha256": "4e1df67edd01bf99b0724a8a1f4baccc61d848b12c10599280198a26cc4f143f"
+    },
+    {
+      "path": "HDLean/Rtl/Instance.lean",
+      "bytes": 6455,
+      "sha256": "47c12eb5a9af9132fa7578be933a4196a54cc1127715bf0282203f0f1c17e972"
+    },
+    {
+      "path": "HDLean/Rtl/Lex.lean",
+      "bytes": 9193,
+      "sha256": "fb9e96bb220de185efc25ccb1e6d7db499da2d1bf255929a6cdc854dd87d88ea"
+    },
+    {
+      "path": "HDLean/Rtl/Mealy.lean",
+      "bytes": 20748,
+      "sha256": "ca4b5b6d267ecc42d800db0e78d44a9787c9c659aad19e2c66496c4761586dd6"
+    },
+    {
+      "path": "HDLean/Rtl/MealyCells.lean",
+      "bytes": 8066,
+      "sha256": "c5ce509525104bef677dd30a62459a67fa78e8d3d34cff1183e54ff2ed537f02"
+    },
+    {
+      "path": "HDLean/Rtl/MealyDesign.lean",
+      "bytes": 10678,
+      "sha256": "3d55c56b2cf94c4a700a6bc1dc1e746fceb89d7184d33728cf4dc9a201ab479b"
+    },
+    {
+      "path": "HDLean/Rtl/Memory.lean",
+      "bytes": 11177,
+      "sha256": "f42534790abc773985bf75746a152ec9ced74cfd815fc21aaca011bbefc92984"
+    },
+    {
+      "path": "HDLean/Rtl/Multi.lean",
+      "bytes": 7622,
+      "sha256": "33fd75eb72c7ddd9298f28167514e3da603caec519a37be9d6e95c846fc9fd14"
+    },
+    {
+      "path": "HDLean/Rtl/MultiText.lean",
+      "bytes": 17317,
+      "sha256": "c8e1ae15fa7f735d412136eea7d07b2532b29ba36ece13dfabf499568a57a199"
+    },
+    {
+      "path": "HDLean/Rtl/Named.lean",
+      "bytes": 7942,
+      "sha256": "8af5cdc75b6ac95cb7b520749532d88c8531295c4482572ca39426a406b3ecd1"
+    },
+    {
+      "path": "HDLean/Rtl/Optimize.lean",
+      "bytes": 18308,
+      "sha256": "58ab2a4244b9b124409836f8a8f2e0c37031c4a5f7f386c171f3f8e9c44c910f"
+    },
+    {
+      "path": "HDLean/Rtl/RTLIL.lean",
+      "bytes": 19662,
+      "sha256": "b6daa72b7d4708518a7c32fb9c57f265c217358da6b16a6a3eee456503e6b8d8"
+    },
+    {
+      "path": "HDLean/Rtl/RTLILProof.lean",
+      "bytes": 13079,
+      "sha256": "e617b4a58b66c801bd713bb458bba376288e21cc2b71eaffc641497a9286b589"
+    },
+    {
+      "path": "HDLean/Rtl/RTLILStmt.lean",
+      "bytes": 12736,
+      "sha256": "05910f069b9ffe573ec75122cc0f5beb7a6875b5ffb080bc00ead907ed9f6e4a"
+    },
+    {
+      "path": "HDLean/Rtl/Record.lean",
+      "bytes": 3806,
+      "sha256": "c633275d8a014f26599df0854a22e96840c674b3dad326a0d956e8bc50d55ee5"
+    },
+    {
+      "path": "HDLean/Rtl/Semantics.lean",
+      "bytes": 6568,
+      "sha256": "d1331a9ec95dffc87420dddff73b456186aedf85bf70baf9e71af3f015e40478"
+    },
+    {
+      "path": "HDLean/Rtl/Syntax.lean",
+      "bytes": 8173,
+      "sha256": "4dd58815b67469efe186866f8676f03b3d2fcef89a8f266b7a21cd520547c030"
+    },
+    {
+      "path": "HDLean/Rtl/SystemVerilog.lean",
+      "bytes": 29533,
+      "sha256": "2e6e1388f85ad3a3189b0b3918209e62e26cf694f181f72bbf080b6cb5d75004"
+    },
+    {
+      "path": "HDLean/Rtl/Tactic.lean",
+      "bytes": 1719,
+      "sha256": "52bf9e800bb75c07cd490c4f364d4ca44773a531adcbd690296cea7f39d0f7a5"
+    },
+    {
+      "path": "HDLean/Rtl/TextBase.lean",
+      "bytes": 4225,
+      "sha256": "a63cf164a55de1c673d01218523c7ad28798f97438aa4cf948be84972ae0c3d2"
+    },
+    {
+      "path": "HDLean/Rtl/Valid.lean",
+      "bytes": 2659,
+      "sha256": "d986e27d11980fddc3ae52ee409aae616e50d513a6e94637ae457689b863cf7e"
+    },
+    {
+      "path": "HDLean/Semantics/Clock.lean",
+      "bytes": 5593,
+      "sha256": "cd08d422552baae1dc5aaa5f5457c9d952fa94af6a17ed9932874ef72bb90ff7"
+    },
+    {
+      "path": "HDLean/Semantics/Composition.lean",
+      "bytes": 2620,
+      "sha256": "d9f90b7a02f5d5113018d57c14db518332a7562a14cbaf991d61614d64ef6f18"
+    },
+    {
+      "path": "HDLean/Semantics/GrayProof.lean",
+      "bytes": 4531,
+      "sha256": "675d241c43da74b98f398b9e309cd469a870b6e16e5b3edccd22c6226ba2d895"
+    },
+    {
+      "path": "HDLean/Semantics/Machine.lean",
+      "bytes": 4738,
+      "sha256": "9b5f9466d579c5774234399db1d1e09a6e0c0a49c14d95acfabc49070fba3267"
+    },
+    {
+      "path": "HDLean/Semantics/Reset.lean",
+      "bytes": 1839,
+      "sha256": "78ab58a62c545616788bb59eb891815e68e3006ab56502d58b163691b40aae63"
+    },
+    {
+      "path": "HDLean/Semantics/Retirement.lean",
+      "bytes": 2117,
+      "sha256": "7127ec6d01d446c1a0ab6356e38bc65cea02b51da8c0525be5e61c01243683dd"
+    },
+    {
+      "path": "HDLean/Verification/Simulation.lean",
+      "bytes": 3094,
+      "sha256": "e6ba6a449c987641b809823940c81a8d4dccb4b8d3689f6c5727ca042adfb74a"
+    },
+    {
+      "path": "Main.lean",
+      "bytes": 22732,
+      "sha256": "384b974d92c380b65a8be35066ea5efa67c81dfa1151f6e699426d24796c3ec1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8301,
+      "sha256": "a4e3d7d2c8d0d42ae2dda590451ba4c60629ebf1839722ef49105cc6b99216b1"
+    },
+    {
+      "path": "Tests.lean",
+      "bytes": 63,
+      "sha256": "8b479dcf359411b45cd746877b950e6ef50d6fe89c5a5f9669cd6c66e47ca6f6"
+    },
+    {
+      "path": "Tests/Audit.lean",
+      "bytes": 3366,
+      "sha256": "c81eea7dd6f9f7914539862fee228cfb9cc63e13be94b950e287b3a7be3a0a49"
+    },
+    {
+      "path": "Tests/Backend.lean",
+      "bytes": 4738,
+      "sha256": "04d3391711a3e3dd5860e7608acb373dd30b166464d0ed939c1c725cb1e20bf4"
+    },
+    {
+      "path": "Tests/BackendProved.lean",
+      "bytes": 679,
+      "sha256": "cf5da44422e6ef16749ca93e238dfab3e163e392f700bf34e3fa4c9952ffdb8b"
+    },
+    {
+      "path": "Tests/BackendProvedMain.lean",
+      "bytes": 2269,
+      "sha256": "a7239ea50845cde475fc75eea53a957aa5d49c9e236f3e3ad2d9a78823e0cd20"
+    },
+    {
+      "path": "Tests/Dag.lean",
+      "bytes": 1544,
+      "sha256": "6f139e81007fe1cfbf462ca50037de24b66017e455bf324097811c253eeaa3c3"
+    },
+    {
+      "path": "Tests/Euler.lean",
+      "bytes": 3489,
+      "sha256": "bdb69e07dc5d786a060598539e6311d29760f79eebb1d2c9d066391c03daf142"
+    },
+    {
+      "path": "Tests/Main.lean",
+      "bytes": 6881,
+      "sha256": "437de2dffe1e1ac96d94124bf7813811a5988f568332e759b027fe100d2c5fb9"
+    },
+    {
+      "path": "Tests/test_workflow.py",
+      "bytes": 7588,
+      "sha256": "d9aa2e49be4887de6b6957dd376d9ae497ffdecf4cb1dc7a527929f8b153891f"
+    },
+    {
+      "path": "docs/Decisions.md",
+      "bytes": 21190,
+      "sha256": "8b72e5b409dbcbc296641a80907221b033b11021a9d433c491d8a6c205dd9274"
+    },
+    {
+      "path": "docs/Design.md",
+      "bytes": 77952,
+      "sha256": "775185a20ff0262025ad9ec9132de0728b9461c02cdae170fddd6d0859c11b62"
+    },
+    {
+      "path": "docs/Development.md",
+      "bytes": 2722,
+      "sha256": "5b95c8ebb905ef5e7ef0a6162abd9a7d972b3309eb24c41c3a529840a2d9315b"
+    },
+    {
+      "path": "docs/Euler.md",
+      "bytes": 8416,
+      "sha256": "4d121a69c00bec1c19efb292c36bc373d9894ff94286ec1ad86adcd35e977923"
+    },
+    {
+      "path": "docs/Physical.md",
+      "bytes": 2298,
+      "sha256": "44680c58aec91433dac30981b1bf702b31642c0d9b06256b528270d7cdaef80e"
+    },
+    {
+      "path": "docs/Review.md",
+      "bytes": 69501,
+      "sha256": "7fed8afb4a8c1b4cea040bea2f8f4a91517462c873ea239d6f4606b065f16b8e"
+    },
+    {
+      "path": "docs/Status.md",
+      "bytes": 6366,
+      "sha256": "2ff338319d9337ea5bdf13aaf25ef7430d481138e2055cace8959f73ec715c18"
+    },
+    {
+      "path": "docs/Trust.md",
+      "bytes": 4296,
+      "sha256": "2bee2738c81c905a2a6bbe771d8e25d652f1908958a9be317c637c0bed7b3b2c"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 291,
+      "sha256": "2c5e1b35decd35160328e3d4743c201a36dd9b64aa353d3f702e0784d50fa4d8"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "scripts/bootstrap_eda.py",
+      "bytes": 3430,
+      "sha256": "05b37e270ab5417fd0de2cb76bedf961c2cfa3620a3ccecd3833ee5751805604"
+    },
+    {
+      "path": "scripts/check_backends.py",
+      "bytes": 15296,
+      "sha256": "02751abe9e353bb7a85021597c7178d7e5070236a3a3705802efff4d29c225b4"
+    },
+    {
+      "path": "scripts/check_native_clocks.py",
+      "bytes": 4830,
+      "sha256": "bf3368c4214317ef5097960f72dbd804a3a7f794c602b5ac60ab2189fefdd1ca"
+    },
+    {
+      "path": "scripts/critpath.py",
+      "bytes": 1009,
+      "sha256": "4842cdad048d1a52985324983c0fd4b3ce826e49b3ba05d28c75c03f81db37c4"
+    },
+    {
+      "path": "scripts/euler.py",
+      "bytes": 9158,
+      "sha256": "b70e72b1739f892088f162c6d29bb61cfa2a431c309e97577bc43aec478cb775"
+    },
+    {
+      "path": "scripts/euler_table.py",
+      "bytes": 734,
+      "sha256": "cfdb5d35919664ca2bf0729358f26a27614f46e2cf73888da67161c462459046"
+    },
+    {
+      "path": "scripts/freeze.py",
+      "bytes": 2367,
+      "sha256": "bd5a68faf018879fa7efd06b2d15d9ee45e3eadac0a2fe79d8ed02aacdc6ac8e"
+    },
+    {
+      "path": "scripts/place_route.py",
+      "bytes": 6480,
+      "sha256": "dc93f3bde36fb168ff9e123177423c474eb67657fd462644c1cf8e6bb23cdeec"
+    },
+    {
+      "path": "scripts/synthesize.py",
+      "bytes": 2798,
+      "sha256": "502456cd6e7d249aad2dd1a0b2da44b7e9f05e6f89bc80abb6f8f048d74aa0d0"
+    },
+    {
+      "path": "scripts/verify.py",
+      "bytes": 8261,
+      "sha256": "966ab88794d5d2245e3ff43f8a38e966b26ab7ba5f3bc4557f3e4cfbac184770"
+    },
+    {
+      "path": "scripts/waveform.py",
+      "bytes": 2750,
+      "sha256": "c5c2f04624e8bc21957f0ae425603e4b7766440c579ae6dfab636a464667bebe"
+    }
+  ]
+}

@@ -1,0 +1,1080 @@
+{
+  "scope": "lexical audit only, no fresh Lean dependency/axiom check",
+  "results": [
+    {
+      "repo": "deepai-org/loom",
+      "subtree": "Loom/Hw",
+      "lean_files_scanned": 89,
+      "lexical_comment_and_string_stripped_hits": []
+    },
+    {
+      "repo": "thomasnormal/lean-surfaces",
+      "subtree": "LeanModels/Sv",
+      "lean_files_scanned": 76,
+      "lexical_comment_and_string_stripped_hits": [
+        {
+          "path": "LeanModels/Sv/CombProcTactic.lean",
+          "token": "admit",
+          "line": 485
+        }
+      ]
+    },
+    {
+      "repo": "thomasnormal/lean-surfaces",
+      "subtree": "LeanModels/Circuit",
+      "lean_files_scanned": 25,
+      "lexical_comment_and_string_stripped_hits": []
+    },
+    {
+      "repo": "thomasnormal/lean-surfaces",
+      "subtree": "LeanModels/Spice",
+      "lean_files_scanned": 37,
+      "lexical_comment_and_string_stripped_hits": []
+    },
+    {
+      "repo": "verilog-proof/VerilLean",
+      "subtree": "VerilLean",
+      "lean_files_scanned": 12,
+      "lexical_comment_and_string_stripped_hits": []
+    },
+    {
+      "repo": "nathsou/HDLean",
+      "subtree": "HDLean",
+      "lean_files_scanned": 56,
+      "lexical_comment_and_string_stripped_hits": []
+    },
+    {
+      "repo": "ErosSph/leap",
+      "subtree": "theorems",
+      "lean_files_scanned": 210,
+      "lexical_comment_and_string_stripped_hits": []
+    },
+    {
+      "repo": "digama0/thinking-sand",
+      "subtree": "lean/ThinkingSand",
+      "lean_files_scanned": 118,
+      "lexical_comment_and_string_stripped_hits": [
+        {
+          "path": "lean/ThinkingSand/EndToEnd.lean",
+          "token": "axiom dieBeh",
+          "line": 30
+        },
+        {
+          "path": "lean/ThinkingSand/EndToEnd.lean",
+          "token": "axiom timedBeh",
+          "line": 33
+        },
+        {
+          "path": "lean/ThinkingSand/EndToEnd.lean",
+          "token": "axiom archBeh",
+          "line": 34
+        },
+        {
+          "path": "lean/ThinkingSand/EndToEnd.lean",
+          "token": "axiom isaBeh",
+          "line": 35
+        },
+        {
+          "path": "lean/ThinkingSand/EndToEnd.lean",
+          "token": "axiom iface_L1_timing",
+          "line": 36
+        },
+        {
+          "path": "lean/ThinkingSand/EndToEnd.lean",
+          "token": "axiom iface_L1_L0",
+          "line": 43
+        },
+        {
+          "path": "lean/ThinkingSand/EndToEnd.lean",
+          "token": "axiom iface_L3",
+          "line": 47
+        },
+        {
+          "path": "lean/ThinkingSand/EndToEnd.lean",
+          "token": "axiom iface_L4_L5",
+          "line": 51
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Graph.lean",
+          "token": "axiom nIn",
+          "line": 16
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Graph.lean",
+          "token": "axiom nOut",
+          "line": 20
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Analog.lean",
+          "token": "axiom Real",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Analog.lean",
+          "token": "axiom Real",
+          "line": 16
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom CDL",
+          "line": 21
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom switchFn",
+          "line": 27
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom ttEq",
+          "line": 28
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom ttEq_sound",
+          "line": 29
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom Layout",
+          "line": 36
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom witnessOpens",
+          "line": 42
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom witnessShorts",
+          "line": 43
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom Connected",
+          "line": 44
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom routecheck_sound",
+          "line": 45
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom PhysModel",
+          "line": 51
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom measured",
+          "line": 58
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom specBound",
+          "line": 59
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom Exec",
+          "line": 62
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom Golden",
+          "line": 68
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+          "token": "axiom mismatches",
+          "line": 69
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificate.lean",
+          "token": "axiom checkRefutation",
+          "line": 32
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificate.lean",
+          "token": "axiom checkRefutation_sound",
+          "line": 35
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificate.lean",
+          "token": "axiom miterCNF",
+          "line": 37
+        },
+        {
+          "path": "lean/ThinkingSand/Prelude/Certificate.lean",
+          "token": "axiom miterCNF_sound",
+          "line": 43
+        },
+        {
+          "path": "lean/ThinkingSand/L0/QuantumFloor/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L0/QuantumFloor/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/Basic.lean",
+          "token": "axiom enclose",
+          "line": 25
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/Basic.lean",
+          "token": "axiom trueDelay",
+          "line": 30
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/Basic.lean",
+          "token": "sorry",
+          "line": 38
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/GateProblem.lean",
+          "token": "axiom bandLo",
+          "line": 30
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/GateProblem.lean",
+          "token": "axiom bandHi",
+          "line": 34
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/GateProblem.lean",
+          "token": "axiom IsSolution",
+          "line": 75
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/GateProblem.lean",
+          "token": "axiom delayOf",
+          "line": 81
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/GateProblem.lean",
+          "token": "axiom slewOf",
+          "line": 85
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/GateProblem.lean",
+          "token": "axiom solve",
+          "line": 92
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CellEnclosures/GateProblem.lean",
+          "token": "sorry",
+          "line": 107
+        },
+        {
+          "path": "lean/ThinkingSand/L0/ErrorModel/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L0/ErrorModel/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L0/FieldProblem/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L0/FieldProblem/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L0/QuasistaticReduction/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L0/QuasistaticReduction/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L0/Screening/Basic.lean",
+          "token": "axiom FillGeometry",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L0/Screening/Basic.lean",
+          "token": "axiom fillTied",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L0/Screening/Basic.lean",
+          "token": "axiom theFill",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L0/Screening/Basic.lean",
+          "token": "axiom fillCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L0/OperatingEnvelope/Basic.lean",
+          "token": "axiom belowAvalanche",
+          "line": 21
+        },
+        {
+          "path": "lean/ThinkingSand/L0/OperatingEnvelope/Basic.lean",
+          "token": "axiom thermalBounded",
+          "line": 24
+        },
+        {
+          "path": "lean/ThinkingSand/L0/OperatingEnvelope/Basic.lean",
+          "token": "axiom currentBelowEM",
+          "line": 26
+        },
+        {
+          "path": "lean/ThinkingSand/L0/OperatingEnvelope/Basic.lean",
+          "token": "axiom crowbarBounded",
+          "line": 28
+        },
+        {
+          "path": "lean/ThinkingSand/L0/OperatingEnvelope/Basic.lean",
+          "token": "axiom stressInRange",
+          "line": 30
+        },
+        {
+          "path": "lean/ThinkingSand/L0/OperatingEnvelope/Basic.lean",
+          "token": "axiom forcingBounded",
+          "line": 32
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CapacitanceEnclosures/Basic.lean",
+          "token": "axiom antennaModel",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CapacitanceEnclosures/Basic.lean",
+          "token": "axiom antennaBound",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CutDiscipline/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L0/CutDiscipline/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L0/DeviceModels/Basic.lean",
+          "token": "axiom Device",
+          "line": 11
+        },
+        {
+          "path": "lean/ThinkingSand/L0/DeviceModels/Basic.lean",
+          "token": "axiom deviceIV",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L0/DeviceModels/Basic.lean",
+          "token": "axiom trueIV",
+          "line": 18
+        },
+        {
+          "path": "lean/ThinkingSand/L0/DeviceModels/Basic.lean",
+          "token": "axiom E1",
+          "line": 22
+        },
+        {
+          "path": "lean/ThinkingSand/L0/LumpingComposition/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L0/LumpingComposition/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L5/PowerEpochs/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L5/PowerEpochs/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L5/OperatingConditions/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L5/OperatingConditions/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L5/MemoryMapDevices/Basic.lean",
+          "token": "axiom DeviceTree",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L5/MemoryMapDevices/Basic.lean",
+          "token": "axiom RegMaps",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L5/MemoryMapDevices/Basic.lean",
+          "token": "axiom mapsConsistent",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L5/MemoryMapDevices/Basic.lean",
+          "token": "axiom theDT",
+          "line": 17
+        },
+        {
+          "path": "lean/ThinkingSand/L5/MemoryMapDevices/Basic.lean",
+          "token": "axiom theRM",
+          "line": 18
+        },
+        {
+          "path": "lean/ThinkingSand/L5/MemoryMapDevices/Basic.lean",
+          "token": "axiom memmapCensus",
+          "line": 19
+        },
+        {
+          "path": "lean/ThinkingSand/L5/SysAndObs/Basic.lean",
+          "token": "axiom PortList",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L5/SysAndObs/Basic.lean",
+          "token": "axiom boundaryOk",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L5/SysAndObs/Basic.lean",
+          "token": "axiom thePorts",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L5/SysAndObs/Basic.lean",
+          "token": "axiom boundaryCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L5/Boundary/Basic.lean",
+          "token": "axiom b3Exec",
+          "line": 11
+        },
+        {
+          "path": "lean/ThinkingSand/L5/Boundary/Basic.lean",
+          "token": "axiom b3Golden",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L5/Boundary/Basic.lean",
+          "token": "axiom b3Cert",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L5/BusContract/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L5/BusContract/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L4/IrqSpec/Basic.lean",
+          "token": "axiom CoreRTL",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L4/IrqSpec/Basic.lean",
+          "token": "axiom customSurface",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L4/IrqSpec/Basic.lean",
+          "token": "axiom theCore",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L4/IrqSpec/Basic.lean",
+          "token": "axiom surfaceCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L4/SailBase/Basic.lean",
+          "token": "axiom Elaboration",
+          "line": 11
+        },
+        {
+          "path": "lean/ThinkingSand/L4/SailBase/Basic.lean",
+          "token": "axiom isaScopeOk",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/L4/SailBase/Basic.lean",
+          "token": "axiom theElab",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L4/SailBase/Basic.lean",
+          "token": "axiom isaScopeCensus",
+          "line": 16
+        },
+        {
+          "path": "lean/ThinkingSand/L4/Coverage/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L4/Coverage/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L4/Underspecification/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L4/Underspecification/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Subset/Basic.lean",
+          "token": "axiom DesignCone",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Subset/Basic.lean",
+          "token": "axiom constructsInSubset",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Subset/Basic.lean",
+          "token": "axiom theDesign",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Subset/Basic.lean",
+          "token": "axiom subsetCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L3/CombBlocks/Basic.lean",
+          "token": "axiom RTLCone",
+          "line": 11
+        },
+        {
+          "path": "lean/ThinkingSand/L3/CombBlocks/Basic.lean",
+          "token": "axiom combSane",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/L3/CombBlocks/Basic.lean",
+          "token": "axiom theCone",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L3/CombBlocks/Basic.lean",
+          "token": "axiom combCensus",
+          "line": 16
+        },
+        {
+          "path": "lean/ThinkingSand/L3/ElaboratedObject/Basic.lean",
+          "token": "axiom nStateR",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L3/ElaboratedObject/Basic.lean",
+          "token": "axiom rtlLib",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L3/ElaboratedObject/Basic.lean",
+          "token": "axiom theRTL",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Adequacy/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Adequacy/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Microarchitecture/Basic.lean",
+          "token": "axiom ConfigRecord",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Microarchitecture/Basic.lean",
+          "token": "axiom configAsDeclared",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Microarchitecture/Basic.lean",
+          "token": "axiom theConfig",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Microarchitecture/Basic.lean",
+          "token": "axiom configCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L3/XAndReset/Basic.lean",
+          "token": "axiom RTLSource2",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L3/XAndReset/Basic.lean",
+          "token": "axiom xAndInitIdiom",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L3/XAndReset/Basic.lean",
+          "token": "axiom theSrc",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/XAndReset/Basic.lean",
+          "token": "axiom xCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L3/BusesDebug/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L3/BusesDebug/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Invariant/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Invariant/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Interrupts/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Interrupts/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/InstructionObligations/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L3/InstructionObligations/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Refinement/Basic.lean",
+          "token": "axiom theExec",
+          "line": 33
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Refinement/Basic.lean",
+          "token": "axiom theGolden",
+          "line": 38
+        },
+        {
+          "path": "lean/ThinkingSand/L3/Refinement/Basic.lean",
+          "token": "axiom cosimCert",
+          "line": 39
+        },
+        {
+          "path": "lean/ThinkingSand/L1/SdcExceptions/Basic.lean",
+          "token": "axiom SdcFile",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L1/SdcExceptions/Basic.lean",
+          "token": "axiom sdcConsistent",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L1/SdcExceptions/Basic.lean",
+          "token": "axiom theSdc",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L1/SdcExceptions/Basic.lean",
+          "token": "axiom sdcCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L1/BridgeTheorem/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L1/BridgeTheorem/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L1/ExtractionLvs/Basic.lean",
+          "token": "axiom theLayout",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L1/ExtractionLvs/Basic.lean",
+          "token": "axiom routeWitness",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L1/Clock/Basic.lean",
+          "token": "axiom ClockTree",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L1/Clock/Basic.lean",
+          "token": "axiom gatingEnumerated",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L1/Clock/Basic.lean",
+          "token": "axiom theClockTree",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L1/Clock/Basic.lean",
+          "token": "axiom gatingCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L1/TimedModel/Basic.lean",
+          "token": "axiom ClockDomains",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L1/TimedModel/Basic.lean",
+          "token": "axiom domainsTraced",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L1/TimedModel/Basic.lean",
+          "token": "axiom theDomains",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L1/TimedModel/Basic.lean",
+          "token": "axiom domainCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L1/Corners/Basic.lean",
+          "token": "axiom cornerModel",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L1/Corners/Basic.lean",
+          "token": "axiom nineCorner",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/L1/TopologyPreservation/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L1/TopologyPreservation/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L1/CrosstalkPower/Basic.lean",
+          "token": "axiom grid",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L1/CrosstalkPower/Basic.lean",
+          "token": "axiom droopBound",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L1/LayoutObject/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L1/LayoutObject/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L1/VerifiedSta/Basic.lean",
+          "token": "axiom cellModel",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L1/VerifiedSta/Basic.lean",
+          "token": "axiom spiceBound",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L1/GeometricChecks/Basic.lean",
+          "token": "axiom StreamedGDS",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L1/GeometricChecks/Basic.lean",
+          "token": "axiom drcClean",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L1/GeometricChecks/Basic.lean",
+          "token": "axiom theGDS",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L1/GeometricChecks/Basic.lean",
+          "token": "axiom drcCensus",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L1/Boundaries/Basic.lean",
+          "token": "axiom Obligation",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L1/Boundaries/Basic.lean",
+          "token": "sorry",
+          "line": 14
+        },
+        {
+          "path": "lean/ThinkingSand/L1/DigitalAbstraction/Basic.lean",
+          "token": "axiom boolShadow",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/L1/DigitalAbstraction/Basic.lean",
+          "token": "axiom resolvesTo",
+          "line": 18
+        },
+        {
+          "path": "lean/ThinkingSand/L1/DigitalAbstraction/Basic.lean",
+          "token": "sorry",
+          "line": 29
+        },
+        {
+          "path": "lean/ThinkingSand/L2/WellFormedness/Basic.lean",
+          "token": "axiom WellFormed",
+          "line": 10
+        },
+        {
+          "path": "lean/ThinkingSand/L2/WellFormedness/Basic.lean",
+          "token": "axiom w1w4",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/L2/WellFormedness/Basic.lean",
+          "token": "axiom w1w4_sound",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L2/WellFormedness/Basic.lean",
+          "token": "axiom wellFormedCensus",
+          "line": 16
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom s0",
+          "line": 30
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom s1",
+          "line": 33
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom s2",
+          "line": 34
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom s3",
+          "line": 35
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom s4",
+          "line": 36
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom s5",
+          "line": 37
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom s6",
+          "line": 38
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom s7",
+          "line": 39
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom c01",
+          "line": 52
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom c12",
+          "line": 54
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom c23",
+          "line": 55
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom c34",
+          "line": 56
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom c45",
+          "line": 57
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom c56",
+          "line": 58
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom c67",
+          "line": 59
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom snap7_eq",
+          "line": 65
+        },
+        {
+          "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+          "token": "axiom frontEndCommutes",
+          "line": 71
+        },
+        {
+          "path": "lean/ThinkingSand/L2/HardCones/Basic.lean",
+          "token": "axiom ArithConeEq",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L2/HardCones/Basic.lean",
+          "token": "sorry",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/L2/RegisterCorrespondence/Basic.lean",
+          "token": "axiom rho",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L2/RegisterCorrespondence/Basic.lean",
+          "token": "sorry",
+          "line": 16
+        },
+        {
+          "path": "lean/ThinkingSand/L2/RegisterCorrespondence/Basic.lean",
+          "token": "axiom resetR",
+          "line": 17
+        },
+        {
+          "path": "lean/ThinkingSand/L2/RegisterCorrespondence/Basic.lean",
+          "token": "axiom resetF",
+          "line": 20
+        },
+        {
+          "path": "lean/ThinkingSand/L2/RegisterCorrespondence/Basic.lean",
+          "token": "sorry",
+          "line": 22
+        },
+        {
+          "path": "lean/ThinkingSand/L2/LicensedDeletions/Basic.lean",
+          "token": "axiom afterPhysical",
+          "line": 9
+        },
+        {
+          "path": "lean/ThinkingSand/L2/LicensedDeletions/Basic.lean",
+          "token": "axiom afterClock",
+          "line": 12
+        },
+        {
+          "path": "lean/ThinkingSand/L2/LicensedDeletions/Basic.lean",
+          "token": "axiom reducedNetlist",
+          "line": 13
+        },
+        {
+          "path": "lean/ThinkingSand/L2/LicensedDeletions/Basic.lean",
+          "token": "axiom del_physical",
+          "line": 16
+        },
+        {
+          "path": "lean/ThinkingSand/L2/LicensedDeletions/Basic.lean",
+          "token": "axiom del_clock",
+          "line": 19
+        },
+        {
+          "path": "lean/ThinkingSand/L2/LicensedDeletions/Basic.lean",
+          "token": "axiom del_buffer",
+          "line": 21
+        },
+        {
+          "path": "lean/ThinkingSand/L2/NetlistObject/Basic.lean",
+          "token": "axiom nStateN",
+          "line": 15
+        },
+        {
+          "path": "lean/ThinkingSand/L2/NetlistObject/Basic.lean",
+          "token": "axiom theNetlist",
+          "line": 24
+        },
+        {
+          "path": "lean/ThinkingSand/L2/NetlistObject/Basic.lean",
+          "token": "axiom celltopoCert",
+          "line": 30
+        }
+      ]
+    }
+  ]
+}

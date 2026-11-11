@@ -1,0 +1,38 @@
+--- a/primitives/float/HardFloat-1/source/divSqrtRecFN_small.v
++++ b/primitives/float/HardFloat-1/source/divSqrtRecFN_small.v
+@@ -188,6 +188,8 @@
+     always @(posedge clock) begin
+         if (entering) begin
+             sqrtOp_Z   <= sqrtOp;
++            roundingMode_Z <= roundingMode;
++            if (!normalCase_S) sExp_Z <= 0;
+             majorExc_Z <= majorExc_S;
+             isNaN_Z    <= isNaN_S;
+             isInf_Z    <= isInf_S;
+@@ -202,7 +204,6 @@
+             sExp_Z <=
+                 sqrtOp ? (sExpA_S>>>1) + (1<<(expWidth - 1))
+                     : sSatExpQuot_S_div;
+-            roundingMode_Z <= roundingMode;
+         end
+         if (entering_normalCase && !sqrtOp) begin
+             fractB_Z <= sigB_S[(sigWidth - 2):0];
+@@ -226,6 +227,10 @@
+     wire signed [(sigWidth + 3):0] trialRem = rem - trialTerm;
+     wire newBit = (0 <= trialRem);
+     always @(posedge clock) begin
++        if (entering && !normalCase_S) begin
++            sigX_Z <= 0;
++            notZeroRem_Z <= 0;
++        end
+         if (entering_normalCase || (cycleNum > 2)) begin
+             rem_Z <= newBit ? trialRem : rem;
+         end
+@@ -302,7 +307,6 @@
+
+     /*------------------------------------------------------------------------
+     *------------------------------------------------------------------------*/
+-    wire sqrtOpOut;
+     wire [2:0] roundingModeOut;
+     wire invalidExc, infiniteExc, out_isNaN, out_isInf, out_isZero, out_sign;
+     wire signed [(expWidth + 1):0] out_sExp;

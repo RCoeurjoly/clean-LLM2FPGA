@@ -1,0 +1,22 @@
+{
+  "nix/direct/rtlil.nix": {
+    "sha256": "a2037eac905eed2d735ccd83882ddafd94e2dde578e177237905f71ad70f09e5",
+    "text": "{ runCommand, yosys, rtl }:\nrunCommand \"tinystories-rtlil\" {} ''\n  mkdir \"$out\"\n  ${yosys}/bin/yosys -Q -p \"\n    read_verilog -sv ${rtl}/core.sv ${rtl}/model.sv ${rtl}/memory.sv;\n    hierarchy -check -top model_top;\n    proc;\n    memory_collect;\n    opt_dff *model_memory;\n    select *;\n    flatten -noscopeinfo;\n    opt_clean;\n    check -assert;\n    setattr -set fsm_encoding \\\"none\\\" w:*;\n    select *;\n    write_rtlil $out/model.il\n  \"\n''\n"
+  },
+  "nix/direct/prepared.nix": {
+    "sha256": "5244855c216ab355696d33c2361a9b3273f190fd12f16eed2c76d79386ade581",
+    "text": "{ runCommand, yosys, rtlil }:\nrunCommand \"tinystories-prepared\" {} ''\n  mkdir \"$out\"\n  ${yosys}/bin/yosys -Q -p \"\n    read_rtlil ${rtlil}/model.il;\n    prep -top model_top;\n    check -assert;\n    write_rtlil $out/model.il\n  \"\n''\n"
+  },
+  "nix/direct/dsp.nix": {
+    "sha256": "33a45a71eb334bd256ba1f3241d89b2758e4730dfbd5c9f1e72a07c4833b884f",
+    "text": "{ runCommand, yosys, prepared }:\nrunCommand \"tinystories-dsp\" {} ''\n  mkdir \"$out\"\n  ${yosys}/bin/yosys -Q -p \"\n    read_rtlil ${prepared}/model.il;\n    synth_xilinx -family xc7 -top model_top -noiopad -noclkbuf -run begin:prepare;\n    synth_xilinx -family xc7 -top model_top -noiopad -noclkbuf -run map_dsp:coarse;\n    opt_clean;\n    check -assert;\n    stat -tech xilinx;\n    write_rtlil $out/model.il\n  \"\n''\n"
+  },
+  "nix/direct/ram.nix": {
+    "sha256": "97e041d37c21d9940f831eab21423013914d0b608a80be925c7e9888b93785e9",
+    "text": "{ runCommand, yosys, dsp }:\nrunCommand \"tinystories-ram\" {} ''\n  mkdir \"$out\"\n  ${yosys}/bin/yosys -Q -p \"\n    read_rtlil ${dsp}/model.il;\n    submod -name model_memories t:\\$mem_v2;\n    select *;\n    memory -nomap;\n    synth_xilinx -family xc7 -top model_top -noiopad -noclkbuf -run map_memory:map_ffram;\n    flatten -noscopeinfo;\n    check -assert;\n    stat -tech xilinx;\n    write_rtlil $out/model.il\n  \"\n''\n"
+  },
+  "nix/direct/netlist.nix": {
+    "sha256": "a6b853a4da09f1d12ff3d1e2102b5f396b5d339dcbbf447c75de766a40ebfb3f",
+    "text": "{ runCommand, yosys, ram }:\nrunCommand \"tinystories-netlist\" {} ''\n  mkdir \"$out\"\n  ${yosys}/bin/yosys -Q -p \"\n    read_rtlil ${ram}/model.il;\n    blackbox =A:whitebox;\n    write_json $out/model.json\n  \"\n''\n"
+  }
+}

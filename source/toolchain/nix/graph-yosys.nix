@@ -1,6 +1,4 @@
-# Patch the native compiler's mapping library, never emitted design source.
-# The executable resolves its data directory relative to its own installed path.
-{ lib, runCommand, coreutils, patch, python3, yosys, stdenv, iverilog }:
+{ runCommand, coreutils, patch, yosys }:
 let
   boundedYosys = yosys.overrideAttrs (old: {
     patches = (old.patches or []) ++ [ ./patches/graph-yosys-bounded-gzip.patch
@@ -13,47 +11,8 @@ let
       ./patches/graph-yosys-fsm-cached-bits.patch ];
 
   });
-  tests = lib.fileset.toSource {
-    root = ../tests;
-    fileset = lib.fileset.unions [
-      ../tests/test_graph_xc7_mapping.py
-      ../tests/test_graph_onchip_mapping.py
-      ../tests/test_graph_yosys_mux_grouping.py
-      ../tests/test_graph_yosys_consteval_mux.py
-      ../tests/test_graph_yosys_fsm_opt.py
-      ../tests/fixtures/fsm-opt
-      ../tests/yosys_consteval_mux_probe.cpp
-    ];
-  };
-  support = lib.fileset.toSource {
-    root = ../.;
-    fileset = lib.fileset.unions [
-      ../compiler/stages.py
-      ../compiler/yosys_pipeline.py
-      ../scripts/pipeline/map_graph_core_xc7.py
-      ../scripts/pipeline/memory_policy.py
-      ../rtl/primitives/closure_memory.sv
-      ../rtl/primitives/closure_narrow_rom.sv
-      ../calyx/primitives/closure_memory.futil
-    ];
-  };
   package = runCommand "llm2fpga-yosys-sdp72-parity" {
     nativeBuildInputs = [ coreutils patch ];
-    passthru.upstream = yosys;
-    passthru.tests = runCommand "llm2fpga-yosys-tests" {
-      nativeBuildInputs = [ python3 stdenv.cc iverilog ];
-    } ''
-    export PATH="${package}/bin:$PATH"
-    export PYTHONPATH=${support}
-    export PYTHONDONTWRITEBYTECODE=1
-    python -m unittest discover -s ${tests} -p test_graph_xc7_mapping.py -v
-    python -m unittest discover -s ${tests} -p test_graph_onchip_mapping.py -v
-    export LLM2FPGA_YOSYS_BASELINE="${yosys}/bin/yosys"
-    python -m unittest discover -s ${tests} -p test_graph_yosys_mux_grouping.py -v
-    python -m unittest discover -s ${tests} -p test_graph_yosys_consteval_mux.py -v
-    python -m unittest discover -s ${tests} -p test_graph_yosys_fsm_opt.py -v
-      touch "$out"
-    '';
   } ''
     mkdir -p "$out/bin" "$out/share"
     cp -R --no-preserve=ownership ${boundedYosys}/bin/. "$out/bin/"

@@ -1,0 +1,22 @@
+{
+  "stage": "14-verilator-trace",
+  "command": [
+    "/tmp/llm2fpga-full-hardware-20261102/verilator/full-reset-sim"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:52:36.300033+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 6.044133371004136,
+  "finished_at": "2026-11-02T00:52:42.344313+00:00"
+}

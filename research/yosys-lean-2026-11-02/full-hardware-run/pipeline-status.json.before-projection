@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-01T23:59:59.190726+00:00",
+  "status": "failed",
+  "completed": [
+    "01-generic-json",
+    "01-preflight",
+    "02-normalize",
+    "03-functional-export"
+  ],
+  "checkpoint": "/nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared/model.il",
+  "equivalence_proved": false,
+  "active": "04-import",
+  "failed_stage": "04-import",
+  "returncode": 143,
+  "finished_at": "2026-11-02T00:14:36.691109+00:00"
+}

@@ -1,0 +1,165 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -30,6 +30,7 @@
+ #include "mlir/Support/LogicalResult.h"
+ #include "mlir/Transforms/GreedyPatternRewriteDriver.h"
+ #include "llvm/ADT/TypeSwitch.h"
++#include "llvm/Support/CommandLine.h"
+ #include "llvm/Support/LogicalResult.h"
+ #include "llvm/Support/raw_os_ostream.h"
+ #include "llvm/Support/raw_ostream.h"
+@@ -51,6 +52,8 @@
+ using namespace mlir::arith;
+ using namespace mlir::cf;
+ using namespace mlir::func;
++static llvm::cl::opt<std::string> floatCastSource(
++    "calyx-float-cast-source", llvm::cl::init("float_cast.sv"));
+ namespace circt {
+ class ComponentLoweringStateInterface;
+ namespace scftocalyx {
+@@ -354,7 +357,7 @@
+                              MulIOp, DivUIOp, DivSIOp, RemUIOp, RemSIOp,
+                              /// floating point
+                              AddFOp, SubFOp, MulFOp, CmpFOp, FPToSIOp, SIToFPOp,
+-                             DivFOp, math::SqrtOp, math::AbsFOp,
++                             DivFOp, ExtFOp, TruncFOp, math::FmaOp, math::SqrtOp, math::AbsFOp,
+                              /// others
+                              SelectOp, IndexCastOp, BitcastOp, CallOp>(
+                   [&](auto op) { return buildOp(rewriter, op).succeeded(); })
+@@ -370,6 +373,8 @@
+       return opBuiltSuccessfully ? WalkResult::advance()
+                                  : WalkResult::interrupt();
+     });
++
++    if (!opBuiltSuccessfully) return failure();
+
+     if (!writeJson.empty()) {
+       auto &extMemData = getState<ComponentLoweringState>().getExtMemData();
+@@ -419,6 +424,15 @@
+   LogicalResult buildOp(PatternRewriter &rewriter, SubFOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, MulFOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, CmpFOp op) const;
++  LogicalResult buildOp(PatternRewriter &rewriter, math::FmaOp op) const {
++    return buildRegisteredFloatOp(rewriter, op);
++  }
++  LogicalResult buildOp(PatternRewriter &rewriter, ExtFOp op) const {
++    return buildRegisteredFloatOp(rewriter, op);
++  }
++  LogicalResult buildOp(PatternRewriter &rewriter, TruncFOp op) const {
++    return buildRegisteredFloatOp(rewriter, op);
++  }
+   LogicalResult buildOp(PatternRewriter &rewriter, FPToSIOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, SIToFPOp op) const;
+   LogicalResult buildOp(PatternRewriter &rewriter, DivFOp op) const;
+@@ -620,11 +634,12 @@
+                                                             group);
+
+     rewriter.setInsertionPointToEnd(group.getBodyBlock());
+-    if constexpr (std::is_same_v<TSrcOp, math::SqrtOp>)
+-      // According to the Hardfloat library: "If sqrtOp is 1, the operation is
+-      // the square root of a, and operand b is ignored."
++    if constexpr (std::is_same_v<TSrcOp, math::SqrtOp>) {
+       calyx::AssignOp::create(rewriter, loc, opPipe.getLeft(), op.getOperand());
+-    else {
++      auto zero = createConstant(loc, rewriter, getComponent(),
++          op.getOperand().getType().getIntOrFloatBitWidth(), 0);
++      calyx::AssignOp::create(rewriter, loc, opPipe.getRight(), zero);
++    } else {
+       calyx::AssignOp::create(rewriter, loc, opPipe.getLeft(), op.getLhs());
+       calyx::AssignOp::create(rewriter, loc, opPipe.getRight(), op.getRhs());
+     }
+@@ -674,6 +689,85 @@
+
+     getState<ComponentLoweringState>().setSeqResReg(out.getDefiningOp(), reg);
+
++    return success();
++  }
++
++  LogicalResult buildRegisteredFloatOp(PatternRewriter &rewriter, Operation *op) const {
++    auto loc = op->getLoc();
++    if (auto cast = dyn_cast<TruncFOp>(op))
++      if (cast.getRoundingmode().value_or(arith::RoundingMode::to_nearest_even) !=
++          arith::RoundingMode::to_nearest_even)
++        return op->emitError("unsupported floating-point rounding mode");
++    unsigned from = op->getOperand(0).getType().getIntOrFloatBitWidth();
++    unsigned to = op->getResult(0).getType().getIntOrFloatBitWidth();
++    bool fma = isa<math::FmaOp>(op);
++    if (fma ? (from != 32 && from != 64) :
++        !((from == 32 && to == 64) || (from == 64 && to == 32)))
++      return op->emitError("floating primitive supports only f32 and f64");
++    unsigned count = op->getNumOperands(), outIndex = 3 + count, doneIndex = outIndex + 1;
++    std::string name = fma ? "std_float_fma_" + std::to_string(from) :
++        "std_float_cast_" + std::to_string(from) + "_" + std::to_string(to);
++    std::string source = floatCastSource.getValue();
++    if (fma) source = StringRef(source).rsplit('/').first.str() + "/float_fma.sv";
++    auto component = getComponent();
++    auto module = component->getParentOfType<ModuleOp>();
++    auto one = rewriter.getI1Type();
++    auto input = rewriter.getIntegerType(from), output = rewriter.getIntegerType(to);
++    if (!SymbolTable::lookupSymbolIn(module, name)) {
++      OpBuilder::InsertionGuard guard(rewriter);
++      rewriter.setInsertionPointToStart(module.getBody());
++      SmallVector<hw::PortInfo> ports;
++      auto port = [&](StringRef name, Type type, hw::ModulePort::Direction dir,
++                      StringRef flag = {}) {
++        hw::PortInfo p;
++        p.name = rewriter.getStringAttr(name);
++        p.type = type;
++        p.dir = dir;
++        p.argNum = ports.size();
++        p.loc = loc;
++        NamedAttrList attributes;
++        if (!flag.empty()) attributes.set(flag, rewriter.getI64IntegerAttr(1));
++        if (name == "go") attributes.set("calyx.interval", rewriter.getI64IntegerAttr(1));
++        p.attrs = attributes.getDictionary(rewriter.getContext());
++        ports.push_back(p);
++      };
++      using Direction = hw::ModulePort::Direction;
++      port("clk", one, Direction::Input, "calyx.clk");
++      port("reset", one, Direction::Input, "calyx.reset");
++      port("go", one, Direction::Input, "calyx.go");
++      for (unsigned i = 0; i < count; ++i)
++        port(fma ? "in" + std::to_string(i) : "in", input, Direction::Input);
++      port("out", output, Direction::Output);
++      port("done", one, Direction::Output, "calyx.done");
++      auto declaration = hw::HWModuleExternOp::create(rewriter, loc,
++          rewriter.getStringAttr(name), ports, StringRef(), rewriter.getArrayAttr({}));
++      declaration->setAttr("filename", rewriter.getStringAttr(source));
++    }
++    rewriter.setInsertionPointToStart(component.getBodyBlock());
++    auto &state = getState<ComponentLoweringState>();
++    SmallVector<Type> types{one, one, one};
++    types.append(count, input);
++    types.push_back(output);
++    types.push_back(one);
++    auto primitive = calyx::PrimitiveOp::create(rewriter, loc,
++        types, state.getUniqueName("float"), rewriter.getArrayAttr({}), name);
++    auto reg = createRegister(loc, rewriter, component, to, state.getUniqueName("cast_result"));
++    auto high = createConstant(loc, rewriter, component, 1, 1);
++    auto group = createGroupForOp<calyx::GroupOp>(rewriter, op);
++    state.addBlockScheduleable(op->getBlock(), group);
++    state.registerEvaluatingGroup(primitive.getResult(outIndex), group);
++    state.registerEvaluatingGroup(primitive.getResult(doneIndex), group);
++    OpBuilder builder(group->getRegion(0));
++    rewriter.setInsertionPointToEnd(group.getBodyBlock());
++    auto done = primitive.getResult(doneIndex);
++    for (unsigned i = 0; i < count; ++i)
++      calyx::AssignOp::create(rewriter, loc, primitive.getResult(3 + i), op->getOperand(i));
++    calyx::AssignOp::create(rewriter, loc, primitive.getResult(2), high,
++        comb::createOrFoldNot(builder, loc, done));
++    calyx::AssignOp::create(rewriter, loc, reg.getIn(), primitive.getResult(outIndex));
++    calyx::AssignOp::create(rewriter, loc, reg.getWriteEn(), done);
++    calyx::GroupDoneOp::create(rewriter, loc, reg.getDone());
++    op->getResult(0).replaceAllUsesWith(reg.getOut());
+     return success();
+   }
+
+@@ -2716,7 +2810,7 @@
+         XOrIOp, OrIOp, ExtUIOp, TruncIOp, CondBranchOp, BranchOp, MulIOp,
+         DivUIOp, DivSIOp, RemUIOp, RemSIOp, ReturnOp, arith::ConstantOp,
+         IndexCastOp, BitcastOp, FuncOp, ExtSIOp, CallOp, AddFOp, SubFOp, MulFOp,
+-        CmpFOp, FPToSIOp, SIToFPOp, DivFOp, math::SqrtOp>();
++        CmpFOp, FPToSIOp, SIToFPOp, DivFOp, ExtFOp, TruncFOp, math::FmaOp, math::SqrtOp>();
+
+     RewritePatternSet legalizePatterns(&getContext());
+     legalizePatterns.add<DummyPattern>(&getContext());

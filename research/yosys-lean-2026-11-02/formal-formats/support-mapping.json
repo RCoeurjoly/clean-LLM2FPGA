@@ -1,0 +1,670 @@
+[
+  {
+    "format": "RTLIL (.il)",
+    "project": "nathsou/HDLean",
+    "direction": "emitter plus restricted own-output reader",
+    "support": "Design.parseRTLIL requires HDLean comments, naming conventions, exact canonical reprint; word cells/registers/memories",
+    "proof": "Design.parse_rtlil proves parse(d.rtlil)=some d under rtlilOk; own executable design semantics",
+    "limit": "Not a general Yosys write_rtlil importer; proof concerns project grammar; independent Yosys semantics trusted",
+    "readiness": "Reusable producer/roundtrip foundation",
+    "paths": [
+      "HDLean/Rtl/RTLIL.lean",
+      "HDLean/Rtl/RTLILProof.lean",
+      "docs/Trust.md"
+    ],
+    "head_commit": "c3808e57b342c63eaff677abca7f9391a4dc954a",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-18T09:11:28Z",
+    "source_urls": [
+      "https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/HDLean/Rtl/RTLIL.lean",
+      "https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/HDLean/Rtl/RTLILProof.lean",
+      "https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/docs/Trust.md"
+    ],
+    "local_sources": [
+      "sources/nathsou__HDLean/HDLean/Rtl/RTLIL.lean",
+      "sources/nathsou__HDLean/HDLean/Rtl/RTLILProof.lean",
+      "sources/nathsou__HDLean/docs/Trust.md"
+    ]
+  },
+  {
+    "format": "RTLIL (.il)",
+    "project": "philzook58/yosys-lean",
+    "direction": "Yosys plugin exports live RTLIL/FunctionalIR to Lean",
+    "support": "Yosys read_verilog+lean_prepare+write_lean; generic combinational and single-clock register designs",
+    "proof": "Generated BitVec model, independent specs and full-width arithmetic/unbounded examples",
+    "limit": "No standalone Lean RTLIL text parser; trusts Yosys and C++ exporter; rejects memories/async resets",
+    "readiness": "Practical memory-free hardware importer",
+    "paths": [
+      "src/lean.cc",
+      "docs/semantics.md",
+      "docs/validation.md"
+    ],
+    "head_commit": "9e575011c948f4ee6e422c7acfa5c453d9f8ebff",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-25T17:16:49Z",
+    "source_urls": [
+      "https://github.com/philzook58/yosys-lean/blob/9e575011c948f4ee6e422c7acfa5c453d9f8ebff/src/lean.cc",
+      "https://github.com/philzook58/yosys-lean/blob/9e575011c948f4ee6e422c7acfa5c453d9f8ebff/docs/semantics.md",
+      "https://github.com/philzook58/yosys-lean/blob/9e575011c948f4ee6e422c7acfa5c453d9f8ebff/docs/validation.md"
+    ],
+    "local_sources": [
+      "sources/philzook58__yosys-lean/src/lean.cc",
+      "sources/philzook58__yosys-lean/docs/semantics.md",
+      "sources/philzook58__yosys-lean/docs/validation.md"
+    ]
+  },
+  {
+    "format": "SMT2 (legacy write_smt2)",
+    "project": "LeanHorn/SMTLib-to-Lean",
+    "direction": "generic SMT-LIB importer",
+    "support": "Bool Int Real BV arrays UF quantifiers monomorphic datatypes incremental sessions and restricted CHCs",
+    "proof": "Checked proposition generation and optional expanded/structured equivalence",
+    "limit": "Templates contain sorry; cvc5 parser/semantic reconstruction is translation trust; no audited Yosys init/transition/assumption adapter",
+    "readiness": "Generic proposition import foundation; hardware adapter required",
+    "paths": [
+      "README.md",
+      "Smt2Lean/Backend/Parser.lean",
+      "Smt2Lean/Backend/Validate.lean",
+      "Smt2Lean/Theory/Array.lean"
+    ],
+    "head_commit": "9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-21T02:50:25Z",
+    "source_urls": [
+      "https://github.com/LeanHorn/SMTLib-to-Lean/blob/9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee/README.md",
+      "https://github.com/LeanHorn/SMTLib-to-Lean/blob/9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee/Smt2Lean/Backend/Parser.lean",
+      "https://github.com/LeanHorn/SMTLib-to-Lean/blob/9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee/Smt2Lean/Backend/Validate.lean",
+      "https://github.com/LeanHorn/SMTLib-to-Lean/blob/9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee/Smt2Lean/Theory/Array.lean"
+    ],
+    "local_sources": [
+      "sources/LeanHorn__SMTLib-to-Lean/README.md",
+      "sources/LeanHorn__SMTLib-to-Lean/Smt2Lean/Backend/Parser.lean",
+      "sources/LeanHorn__SMTLib-to-Lean/Smt2Lean/Backend/Validate.lean",
+      "sources/LeanHorn__SMTLib-to-Lean/Smt2Lean/Theory/Array.lean"
+    ]
+  },
+  {
+    "format": "SMT2 (generic syntax)",
+    "project": "onderjan/blazing-smtlib",
+    "direction": "Lean streaming reader/writer",
+    "support": "BSmtLib supports SMT-LIB2.0,2.5,2.6,2.7 script syntax; custom handler extension",
+    "proof": "Reader/file and parser/traversal theorems, lossless/slicing/reprinting, reported standard3 axioms",
+    "limit": "Syntactic specification excludes theory/logics syntax and responses; no theory denotation/Yosys transition model",
+    "readiness": "Strongest discovered reusable verified syntax layer",
+    "paths": [
+      "lean/BSmtLib/Reader.lean",
+      "lean/BSmtLib/Facts/Reader.lean",
+      "lean/BSmtLib/Facts/Parser.lean",
+      "lean/BSmtLibSpec.lean"
+    ],
+    "head_commit": "42b45c20b0045495a40b9eaf0a717e0f1c976bed",
+    "archived": "",
+    "fork": "",
+    "pushed_at": "",
+    "source_urls": [
+      "https://github.com/onderjan/blazing-smtlib/blob/42b45c20b0045495a40b9eaf0a717e0f1c976bed/lean/BSmtLib/Reader.lean",
+      "https://github.com/onderjan/blazing-smtlib/blob/42b45c20b0045495a40b9eaf0a717e0f1c976bed/lean/BSmtLib/Facts/Reader.lean",
+      "https://github.com/onderjan/blazing-smtlib/blob/42b45c20b0045495a40b9eaf0a717e0f1c976bed/lean/BSmtLib/Facts/Parser.lean",
+      "https://github.com/onderjan/blazing-smtlib/blob/42b45c20b0045495a40b9eaf0a717e0f1c976bed/lean/BSmtLibSpec.lean"
+    ],
+    "local_sources": [
+      "sources/onderjan__blazing-smtlib/lean/BSmtLib/Reader.lean",
+      "sources/onderjan__blazing-smtlib/lean/BSmtLib/Facts/Reader.lean",
+      "sources/onderjan__blazing-smtlib/lean/BSmtLib/Facts/Parser.lean",
+      "sources/onderjan__blazing-smtlib/lean/BSmtLibSpec.lean"
+    ]
+  },
+  {
+    "format": "SMT2 (QF_BV)",
+    "project": "hargoniX/Leanwuzla",
+    "direction": "SMT-LIB QF_BV importer and tactic solver interface",
+    "support": "Parses Bool/BV terms and calls bv_decide",
+    "proof": "Tactic uses Lean BV proof machinery",
+    "limit": "README explicitly says development-only and not necessarily sound reduction; no memory/state adapter",
+    "readiness": "Experimental",
+    "paths": [
+      "README.md",
+      "Leanwuzla/Parser.lean"
+    ],
+    "head_commit": "b752f8b2f8f420aa95a106cc57dd5ea8e9794ab9",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-19T07:42:12Z",
+    "source_urls": [
+      "https://github.com/hargoniX/Leanwuzla/blob/b752f8b2f8f420aa95a106cc57dd5ea8e9794ab9/README.md",
+      "https://github.com/hargoniX/Leanwuzla/blob/b752f8b2f8f420aa95a106cc57dd5ea8e9794ab9/Leanwuzla/Parser.lean"
+    ],
+    "local_sources": [
+      "sources/hargoniX__Leanwuzla/README.md",
+      "sources/hargoniX__Leanwuzla/Leanwuzla/Parser.lean"
+    ]
+  },
+  {
+    "format": "SMT2 (functional write_functional_smt2)",
+    "project": "ErosSph/xiangshan2Lean",
+    "direction": "Python exact Yosys FunctionalIR serializer reader to Lean",
+    "support": "Typed bitvector DAG, state, function-valued memories/select/store, exact ports, matching JSON known-bit init, explicit arbitrary inputs",
+    "proof": "Generated Lean model plus checked arbitrary-finite Counter trace proof; bounded-shift lemmas",
+    "limit": "Importer/Yosys lowering not universally proved; pinned serializer shape; memory zero-based >=2words; unknowns two-state choices; CLI tools Windows-locked",
+    "readiness": "Strongest practical discovered word-level route with memories",
+    "paths": [
+      "scripts/functional_ir.py",
+      "scripts/yosys2lean.py",
+      "lean/Chisel2Lean/Functional.lean",
+      "verification/yosys/Counter.lean",
+      "docs/yosys-frontend.md"
+    ],
+    "head_commit": "a1299b564831e571b9b80f816219ae06c91db342",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-19T09:48:36Z",
+    "source_urls": [
+      "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/functional_ir.py",
+      "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys2lean.py",
+      "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/lean/Chisel2Lean/Functional.lean",
+      "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/verification/yosys/Counter.lean",
+      "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/docs/yosys-frontend.md"
+    ],
+    "local_sources": [
+      "sources/ErosSph__xiangshan2Lean/scripts/functional_ir.py",
+      "sources/ErosSph__xiangshan2Lean/scripts/yosys2lean.py",
+      "sources/ErosSph__xiangshan2Lean/lean/Chisel2Lean/Functional.lean",
+      "sources/ErosSph__xiangshan2Lean/verification/yosys/Counter.lean",
+      "sources/ErosSph__xiangshan2Lean/docs/yosys-frontend.md"
+    ]
+  },
+  {
+    "format": "SMT2 (functional write_functional_smt2)",
+    "project": "atvrager/Shoumei-RTL",
+    "direction": "pure Lean source-to-source translator",
+    "support": "S-expression parser and BitVec Inputs/Outputs/State/step emitter",
+    "proof": "No generic translation correctness theorem inspected",
+    "limit": "zero_extend translated by erasure; unknown expression fallback 0#1; absent function generates sorry; no array sort support",
+    "readiness": "Prototype, requires strictness/correctness work",
+    "paths": [
+      "generators/Smt2Lean.lean"
+    ],
+    "head_commit": "1d8119704838948670f71d5d8ce5d371fe8a9eec",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-08T20:47:24Z",
+    "source_urls": [
+      "https://github.com/atvrager/Shoumei-RTL/blob/1d8119704838948670f71d5d8ce5d371fe8a9eec/generators/Smt2Lean.lean"
+    ],
+    "local_sources": [
+      "sources/atvrager__Shoumei-RTL/generators/Smt2Lean.lean"
+    ]
+  },
+  {
+    "format": "SMT2 (solver automation)",
+    "project": "ufmg-smite/lean-smt",
+    "direction": "Lean goals to SMT and proof reconstruction",
+    "support": "UF and linear Int/Real; quantified; BV experimental; low-level query APIs",
+    "proof": "Replays cvc5 proofs; unsupported steps become remaining goals; native option explicitly expands trust",
+    "limit": "No Yosys file/transition-system importer; tactic success does not prove external translation",
+    "readiness": "Proof automation after modeling",
+    "paths": [
+      "README.md",
+      "Smt/Reconstruct.lean",
+      "Smt/Translate/Query.lean"
+    ],
+    "head_commit": "db545bebe2de1e06dc2df62a6ff6c20e5736bfc0",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-29T15:03:25Z",
+    "source_urls": [
+      "https://github.com/ufmg-smite/lean-smt/blob/db545bebe2de1e06dc2df62a6ff6c20e5736bfc0/README.md",
+      "https://github.com/ufmg-smite/lean-smt/blob/db545bebe2de1e06dc2df62a6ff6c20e5736bfc0/Smt/Reconstruct.lean",
+      "https://github.com/ufmg-smite/lean-smt/blob/db545bebe2de1e06dc2df62a6ff6c20e5736bfc0/Smt/Translate/Query.lean"
+    ],
+    "local_sources": [
+      "sources/ufmg-smite__lean-smt/README.md",
+      "sources/ufmg-smite__lean-smt/Smt/Reconstruct.lean",
+      "sources/ufmg-smite__lean-smt/Smt/Translate/Query.lean"
+    ]
+  },
+  {
+    "format": "Rosette (write_functional_rosette)",
+    "project": "uw-unsat/leanette-popl22-artifact",
+    "direction": "related Rosette semantics research",
+    "support": "Lean3 symbolic semantics correctness and Racket Rosette* artifact",
+    "proof": "Generic symbolic evaluation theorems",
+    "limit": "No audited Yosys FunctionalIR Rosette output importer; relationship is adjacent",
+    "readiness": "No discovered format bridge",
+    "paths": [
+      "README.md"
+    ],
+    "head_commit": "",
+    "archived": "",
+    "fork": "",
+    "pushed_at": "",
+    "source_urls": [
+      "https://github.com/uw-unsat/leanette-popl22-artifact/blob/HEAD/README.md"
+    ],
+    "local_sources": [
+      "sources/uw-unsat__leanette-popl22-artifact/README.md"
+    ]
+  },
+  {
+    "format": "BTOR (original)",
+    "project": "uw-unsat/exoverifier",
+    "direction": "internal btor namespace only",
+    "support": "QF_BV graph semantics and bit-blasting",
+    "proof": "Typed SAT/evaluation and graph compiler proof infrastructure",
+    "limit": "Name does not establish BTOR text parsing; tree/source inspected no BTOR/BTOR2 file reader",
+    "readiness": "Internal semantic foundation, not format importer",
+    "paths": [
+      "lean/src/btor/basic.lean"
+    ],
+    "head_commit": "a0166f68ae181d3045cc03662ac723faeb3eaeb2",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2023-06-09T17:14:47Z",
+    "source_urls": [
+      "https://github.com/uw-unsat/exoverifier/blob/a0166f68ae181d3045cc03662ac723faeb3eaeb2/lean/src/btor/basic.lean"
+    ],
+    "local_sources": [
+      "sources/uw-unsat__exoverifier/lean/src/btor/basic.lean"
+    ]
+  },
+  {
+    "format": "BTOR2",
+    "project": "jn555/HardBench",
+    "direction": "Python BV-only parser to unrolled Lean BMC obligations",
+    "support": "sort bitvec/input/state/constant/init/next/bad plus finite listed arithmetic/bitwise/comparison/extension/ite operators",
+    "proof": "Generated fixed-bound safety or concrete counterexample checked in Lean; original btormc differential authority",
+    "limit": "No arrays, shifts, concat/slice, constraints/fairness, nonliteral init or negative refs; bounded 0..k only; generic translator not proved",
+    "readiness": "Real restricted bounded importer",
+    "paths": [
+      "scripts/btor2_ir.py",
+      "scripts/mine_btor2_ladder.py",
+      "HardBench/WordLevel/T13_Hwmcc24Fib30Bound1.lean"
+    ],
+    "head_commit": "ba9fb00a9b386352b1c15273d3534c2aa07c1ef3",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-07-21T16:57:26Z",
+    "source_urls": [
+      "https://github.com/jn555/HardBench/blob/ba9fb00a9b386352b1c15273d3534c2aa07c1ef3/scripts/btor2_ir.py",
+      "https://github.com/jn555/HardBench/blob/ba9fb00a9b386352b1c15273d3534c2aa07c1ef3/scripts/mine_btor2_ladder.py",
+      "https://github.com/jn555/HardBench/blob/ba9fb00a9b386352b1c15273d3534c2aa07c1ef3/HardBench/WordLevel/T13_Hwmcc24Fib30Bound1.lean"
+    ],
+    "local_sources": [
+      "sources/jn555__HardBench/scripts/btor2_ir.py",
+      "sources/jn555__HardBench/scripts/mine_btor2_ladder.py",
+      "sources/jn555__HardBench/HardBench/WordLevel/T13_Hwmcc24Fib30Bound1.lean"
+    ]
+  },
+  {
+    "format": "BTOR2",
+    "project": "WorlesEnric/pceq",
+    "direction": "Rust BTOR2 frontend with downstream Lean VC/certificate exports",
+    "support": "Rust BTOR2 graph/checking/bitblasting; symbolic Bool/BV VC reconstruction and generic semantic coverage metatheory",
+    "proof": "Symbolic VC emits bv_decide/LRAT; ground VC uses native_decide; semantic coverage conditional on explicit model-reflection witnesses",
+    "limit": "Symbolic Lean exporter rejects arrays and quantifiers; Rust/Yosys correspondence remains trusted; structural ledger acceptance is FULL_COVERAGE_SHAPE only",
+    "readiness": "Substantial restricted certificate pipeline",
+    "paths": [
+      "docs/tcb.md",
+      "crates/pceq-cert/src/lean_export.rs",
+      "crates/pceq-cert/src/symbolic_lean.rs",
+      "lean/README.md"
+    ],
+    "head_commit": "77ffc62f91f2315f52c9d66b053822875490b8cf",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-07-29T09:04:51Z",
+    "source_urls": [
+      "https://github.com/WorlesEnric/pceq/blob/77ffc62f91f2315f52c9d66b053822875490b8cf/docs/tcb.md",
+      "https://github.com/WorlesEnric/pceq/blob/77ffc62f91f2315f52c9d66b053822875490b8cf/crates/pceq-cert/src/lean_export.rs",
+      "https://github.com/WorlesEnric/pceq/blob/77ffc62f91f2315f52c9d66b053822875490b8cf/crates/pceq-cert/src/symbolic_lean.rs",
+      "https://github.com/WorlesEnric/pceq/blob/77ffc62f91f2315f52c9d66b053822875490b8cf/lean/README.md"
+    ],
+    "local_sources": [
+      "sources/WorlesEnric__pceq/docs/tcb.md",
+      "sources/WorlesEnric__pceq/crates/pceq-cert/src/lean_export.rs",
+      "sources/WorlesEnric__pceq/crates/pceq-cert/src/symbolic_lean.rs",
+      "sources/WorlesEnric__pceq/lean/README.md"
+    ]
+  },
+  {
+    "format": "AIGER binary (.aig)",
+    "project": "opencompl/valaig",
+    "direction": "Lean binary+ASCII parser, sequential semantics and certificate checker",
+    "support": "AIGER1.0/1.9 fields; binary delta gates; inputs/latches/reset/outputs/bads/constraints/symbols",
+    "proof": "Cert.Checker.unreachable_of from checked initiation/consecution/implication; LRAT.check_sound; CLI proves model.aig.Unreachable bad",
+    "limit": "Parser explicitly unverified/bug-prone; single bad; justice/fairness rejected; certificate constraints rejected and model constraints not used; executable runtime artifact binding separate",
+    "readiness": "Strongest discovered direct sequential AIGER safety bridge",
+    "paths": [
+      "Valaig/External/Aiger/Parser.lean",
+      "Valaig/External/Cert/Basic.lean",
+      "Valaig/External/Cert/Product.lean",
+      "Valaig/External/Sat/External.lean",
+      "Tools/ValaigCert.lean",
+      "README.md"
+    ],
+    "head_commit": "f7e58661ddc7c06cbaa09c90505abd11dc2925cb",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-01T14:04:19Z",
+    "source_urls": [
+      "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Aiger/Parser.lean",
+      "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Cert/Basic.lean",
+      "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Cert/Product.lean",
+      "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Sat/External.lean",
+      "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Tools/ValaigCert.lean",
+      "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/README.md"
+    ],
+    "local_sources": [
+      "sources/opencompl__valaig/Valaig/External/Aiger/Parser.lean",
+      "sources/opencompl__valaig/Valaig/External/Cert/Basic.lean",
+      "sources/opencompl__valaig/Valaig/External/Cert/Product.lean",
+      "sources/opencompl__valaig/Valaig/External/Sat/External.lean",
+      "sources/opencompl__valaig/Tools/ValaigCert.lean",
+      "sources/opencompl__valaig/README.md"
+    ]
+  },
+  {
+    "format": "AIGER ASCII (.aag)",
+    "project": "opencompl/valaig",
+    "direction": "Lean parser and certificate checker",
+    "support": "Explicit ASCII input/latch/gate lines, same sequential semantics as binary",
+    "proof": "Same verified checker theorem and LRAT discharge",
+    "limit": "Same parser and property/constraint restrictions as binary route",
+    "readiness": "Direct sequential importer",
+    "paths": [
+      "Valaig/External/Aiger/Parser.lean"
+    ],
+    "head_commit": "f7e58661ddc7c06cbaa09c90505abd11dc2925cb",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-01T14:04:19Z",
+    "source_urls": [
+      "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Aiger/Parser.lean"
+    ],
+    "local_sources": [
+      "sources/opencompl__valaig/Valaig/External/Aiger/Parser.lean"
+    ]
+  },
+  {
+    "format": "AIGER2 (write_aiger2)",
+    "project": "opencompl/valaig",
+    "direction": "candidate standard-AIGER consumer, no separate command-specific audit",
+    "support": "If backend emits ordinary supported AIGER1.9 records, same parser grammar is relevant",
+    "proof": "Same checker on parsed graph",
+    "limit": "No write_aiger2-specific end-to-end compatibility run; backend lowering and property conventions need validation",
+    "readiness": "Compatibility candidate, not established end-to-end",
+    "paths": [
+      "Valaig/External/Aiger/Parser.lean"
+    ],
+    "head_commit": "f7e58661ddc7c06cbaa09c90505abd11dc2925cb",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-01T14:04:19Z",
+    "source_urls": [
+      "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Aiger/Parser.lean"
+    ],
+    "local_sources": [
+      "sources/opencompl__valaig/Valaig/External/Aiger/Parser.lean"
+    ]
+  },
+  {
+    "format": "AIGER binary (.aig)",
+    "project": "uw-unsat/exoverifier",
+    "direction": "Lean3 binary reader and ASCII writer",
+    "support": "binary header L=0 and extensions B/C/J/F=0 only; unsigned LEB128 gates",
+    "proof": "AIG proof infrastructure; parser itself no inspected grammar-correctness theorem",
+    "limit": "Explicitly no latches/extensions; inactive main source since2022, repository pushed2023",
+    "readiness": "Legacy combinational importer",
+    "paths": [
+      "lean/src/aig/aiger.lean"
+    ],
+    "head_commit": "a0166f68ae181d3045cc03662ac723faeb3eaeb2",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2023-06-09T17:14:47Z",
+    "source_urls": [
+      "https://github.com/uw-unsat/exoverifier/blob/a0166f68ae181d3045cc03662ac723faeb3eaeb2/lean/src/aig/aiger.lean"
+    ],
+    "local_sources": [
+      "sources/uw-unsat__exoverifier/lean/src/aig/aiger.lean"
+    ]
+  },
+  {
+    "format": "AIGER ASCII (.aag)",
+    "project": "nathsou/HDLean",
+    "direction": "emitter plus own subset parser",
+    "support": "Inputs/latches/outputs/and-gates; prints latches uninitialized",
+    "proof": "Aag.parse_print and aiger_print_correct preserve project graph evaluation",
+    "limit": "Own format subset; binary bridge drops latch initial values/symbols and is unproved; not generic AIGER1.9 property reader",
+    "readiness": "Producer/roundtrip foundation",
+    "paths": [
+      "HDLean/Backend/AigerProved.lean",
+      "HDLean/Backend/AigerBinary.lean"
+    ],
+    "head_commit": "c3808e57b342c63eaff677abca7f9391a4dc954a",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-18T09:11:28Z",
+    "source_urls": [
+      "https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/HDLean/Backend/AigerProved.lean",
+      "https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/HDLean/Backend/AigerBinary.lean"
+    ],
+    "local_sources": [
+      "sources/nathsou__HDLean/HDLean/Backend/AigerProved.lean",
+      "sources/nathsou__HDLean/HDLean/Backend/AigerBinary.lean"
+    ]
+  },
+  {
+    "format": "AIGER ASCII (.aag)",
+    "project": "jn555/HardBench",
+    "direction": "Python post-unroll ASCII parser to Lean Boolean theorem",
+    "support": "aag parser; generated Lean requires L=0,O=1",
+    "proof": "bv_decide on emitted combinational circuit; external LRAT-Catcher benchmark path separately widened TCB",
+    "limit": "Not sequential importer; external unrolling and text-to-model fidelity remain trusted",
+    "readiness": "Restricted bounded/combinational importer",
+    "paths": [
+      "harness/probe/aag_to_lean.py",
+      "README.md"
+    ],
+    "head_commit": "ba9fb00a9b386352b1c15273d3534c2aa07c1ef3",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-07-21T16:57:26Z",
+    "source_urls": [
+      "https://github.com/jn555/HardBench/blob/ba9fb00a9b386352b1c15273d3534c2aa07c1ef3/harness/probe/aag_to_lean.py",
+      "https://github.com/jn555/HardBench/blob/ba9fb00a9b386352b1c15273d3534c2aa07c1ef3/README.md"
+    ],
+    "local_sources": [
+      "sources/jn555__HardBench/harness/probe/aag_to_lean.py",
+      "sources/jn555__HardBench/README.md"
+    ]
+  },
+  {
+    "format": "AIGER emitter/tactic",
+    "project": "opencompl/lean-mlir",
+    "direction": "FSM to AIGER via Valaig dependency",
+    "support": "Blase.Fast.Aiger.FSM.toAiger",
+    "proof": "Explicit axiom valaigExternalSolverAx (α : Sort u) : α marks external solver path",
+    "limit": "Emitter, not Yosys file importer; this path can add arbitrary trusted solver axiom",
+    "readiness": "Do not conflate with standalone verified Valaig checker",
+    "paths": [
+      "Blase/Blase/Fast/Aiger.lean"
+    ],
+    "head_commit": "b8c4a771319a044854a4bbb49b8821381ef86ff8",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-07-28T08:16:28Z",
+    "source_urls": [
+      "https://github.com/opencompl/lean-mlir/blob/b8c4a771319a044854a4bbb49b8821381ef86ff8/Blase/Blase/Fast/Aiger.lean"
+    ],
+    "local_sources": [
+      "sources/opencompl__lean-mlir/Blase/Blase/Fast/Aiger.lean"
+    ]
+  },
+  {
+    "format": "AIG (internal Lean graph)",
+    "project": "leanprover/lean4",
+    "direction": "internal combinational AIG and BV tactics",
+    "support": "Std.Sat.AIG construction/denotation/CNF and verified LRAT checker",
+    "proof": "Bitblaster/CNF/checker soundness; bv_decide compiled-check reflection trust documented",
+    "limit": "Internal AIG is not AIGER file parser or sequential hardware importer",
+    "readiness": "Reusable proof engine",
+    "paths": [
+      "src/Std/Sat/AIG/Basic.lean",
+      "src/Lean/Elab/Tactic/BVDecide.lean"
+    ],
+    "head_commit": "",
+    "archived": "",
+    "fork": "",
+    "pushed_at": "",
+    "source_urls": [
+      "https://github.com/leanprover/lean4/blob/HEAD/src/Std/Sat/AIG/Basic.lean",
+      "https://github.com/leanprover/lean4/blob/HEAD/src/Lean/Elab/Tactic/BVDecide.lean"
+    ],
+    "local_sources": [
+      "sources/leanprover__lean4/src/Std/Sat/AIG/Basic.lean",
+      "sources/leanprover__lean4/src/Lean/Elab/Tactic/BVDecide.lean"
+    ]
+  },
+  {
+    "format": "XAIGER",
+    "project": "no audited Lean reader found",
+    "direction": "none found",
+    "support": "Global code/repository variants plus known AIGER candidate source audits",
+    "proof": "None established",
+    "limit": "Search/index incompleteness precludes universal absence claim; plain AIGER support does not imply XAIGER box extensions",
+    "readiness": "New reader/translation required",
+    "paths": [],
+    "head_commit": "",
+    "archived": "",
+    "fork": "",
+    "pushed_at": "",
+    "source_urls": [],
+    "local_sources": []
+  },
+  {
+    "format": "SMV",
+    "project": "ttj/leansmv",
+    "direction": "Python NuSMV subset parser to Lean transition systems",
+    "support": "Bool/enum/range types, DEFINE, ASSIGN init/next, case and nondeterminism; manual invariant examples",
+    "proof": "Counter and mutex/other generated-model invariant proofs",
+    "limit": "Grammar lacks word[N]/signed/unsigned word, arrays and IVAR/INIT/TRANS sections; no Yosys write_smv compatibility; temporal/fairness parse not generally certified",
+    "readiness": "Genuine teaching importer, not drop-in Yosys word-SMV bridge",
+    "paths": [
+      "scripts/smv_parser.py",
+      "scripts/smv_grammar.lark",
+      "scripts/smv2lean.py",
+      "VerifDemo/NuXMV/CounterProofs.lean"
+    ],
+    "head_commit": "2349edc2eddb9a4f479f98c23f3d257a72945472",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-05-24T04:37:23Z",
+    "source_urls": [
+      "https://github.com/ttj/leansmv/blob/2349edc2eddb9a4f479f98c23f3d257a72945472/scripts/smv_parser.py",
+      "https://github.com/ttj/leansmv/blob/2349edc2eddb9a4f479f98c23f3d257a72945472/scripts/smv_grammar.lark",
+      "https://github.com/ttj/leansmv/blob/2349edc2eddb9a4f479f98c23f3d257a72945472/scripts/smv2lean.py",
+      "https://github.com/ttj/leansmv/blob/2349edc2eddb9a4f479f98c23f3d257a72945472/VerifDemo/NuXMV/CounterProofs.lean"
+    ],
+    "local_sources": [
+      "sources/ttj__leansmv/scripts/smv_parser.py",
+      "sources/ttj__leansmv/scripts/smv_grammar.lark",
+      "sources/ttj__leansmv/scripts/smv2lean.py",
+      "sources/ttj__leansmv/VerifDemo/NuXMV/CounterProofs.lean"
+    ]
+  },
+  {
+    "format": "SMV",
+    "project": "ttj/fmaiv and Kiguli/leansmv",
+    "direction": "vendored/forked SMV subset translators",
+    "support": "fmaiv explicitly vendors ttj translator; Kiguli older fork emits sorry theorem placeholders",
+    "proof": "Separate manual example proofs",
+    "limit": "Same narrow subset; fork status/push dates retained; no word-level Yosys compatibility shown",
+    "readiness": "Related inherited importer family",
+    "paths": [],
+    "head_commit": "",
+    "archived": "",
+    "fork": "",
+    "pushed_at": "",
+    "source_urls": [],
+    "local_sources": []
+  },
+  {
+    "format": "FIRRTL",
+    "project": "ErosSph/xiangshan2Lean",
+    "direction": "classic Scala FIRRTL/CIRCT frontend to Lean executable models",
+    "support": "Classic <=1.1.0 and modern2.0..6.0 text via pinned libraries; UInt/SInt/aggregates/hierarchy/single-clock sync regs",
+    "proof": "Counter and RightShift generated-model equivalence bridges, arbitrary finite Counter sequences",
+    "limit": "FIRRTL Mem/SyncReadMem/multiclock/async reset/extmodule/assert effects rejected; translator/compiler correctness unproved",
+    "readiness": "Actual restricted external FIRRTL importer",
+    "paths": [
+      "python/chisel2lean4/frontends/firrtl.py",
+      "docs/firrtl-frontend.md",
+      "docs/semantics.md"
+    ],
+    "head_commit": "a1299b564831e571b9b80f816219ae06c91db342",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-19T09:48:36Z",
+    "source_urls": [
+      "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/python/chisel2lean4/frontends/firrtl.py",
+      "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/docs/firrtl-frontend.md",
+      "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/docs/semantics.md"
+    ],
+    "local_sources": [
+      "sources/ErosSph__xiangshan2Lean/python/chisel2lean4/frontends/firrtl.py",
+      "sources/ErosSph__xiangshan2Lean/docs/firrtl-frontend.md",
+      "sources/ErosSph__xiangshan2Lean/docs/semantics.md"
+    ]
+  },
+  {
+    "format": "FIRRTL",
+    "project": "benreynwar/silean",
+    "direction": "FIRRTL backend emitter",
+    "support": "Silean named ModuleStructure traversal/rendering/emission",
+    "proof": "Separate Silean semantics/contracts; aggregate backend states it does not define circuit semantics",
+    "limit": "Emitter does not establish external Yosys FIRRTL parsing/refinement",
+    "readiness": "Producer only for this question",
+    "paths": [
+      "Silean1/FIRRTL.lean"
+    ],
+    "head_commit": "436467ba1b38cd41dbe1279b7fc6218db9041ea3",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-10-27T20:02:01Z",
+    "source_urls": [
+      "https://github.com/benreynwar/silean/blob/436467ba1b38cd41dbe1279b7fc6218db9041ea3/Silean1/FIRRTL.lean"
+    ],
+    "local_sources": [
+      "sources/benreynwar__silean/Silean1/FIRRTL.lean"
+    ]
+  },
+  {
+    "format": "AIGER model-checking metatheory",
+    "project": "Ghonimo/kernelcert-artifact",
+    "direction": "semantic framework, no file reader",
+    "support": "SeqCircuit functions, constraints/reset/witness soundness and stratification",
+    "proof": "witness_sound, witness_sound_K in semantic layer, reported standard axioms",
+    "limit": "README explicitly missing AIG-backed syntax, check encoders, CNF/LRAT discharge and trusted AIGER frontend; Pipeline stub",
+    "readiness": "Semantic foundation",
+    "paths": [
+      "formalization/KernelCert/Circuit.lean",
+      "formalization/README.md"
+    ],
+    "head_commit": "d11802bf5b054e5341943199b5a10b7f57a821d3",
+    "archived": false,
+    "fork": false,
+    "pushed_at": "2026-07-26T07:05:28Z",
+    "source_urls": [
+      "https://github.com/Ghonimo/kernelcert-artifact/blob/d11802bf5b054e5341943199b5a10b7f57a821d3/formalization/KernelCert/Circuit.lean",
+      "https://github.com/Ghonimo/kernelcert-artifact/blob/d11802bf5b054e5341943199b5a10b7f57a821d3/formalization/README.md"
+    ],
+    "local_sources": [
+      "sources/Ghonimo__kernelcert-artifact/formalization/KernelCert/Circuit.lean",
+      "sources/Ghonimo__kernelcert-artifact/formalization/README.md"
+    ]
+  }
+]

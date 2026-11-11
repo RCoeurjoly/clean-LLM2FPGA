@@ -1,0 +1,22 @@
+{
+  "scope": "One whole-design reset/idle trace; no inference or all-input theorem",
+  "simulator": "Verilator 5.052, two-state",
+  "rtl_log": "research/yosys-lean-2026-11-02/full-hardware-run/14-verilator-trace.log",
+  "lean_log": "research/yosys-lean-2026-11-02/full-hardware-run/15-native-full-trace.log",
+  "initial_completion": "Lean known bits retained; unknown bits/arbitrary inputs zero for this trace only",
+  "status": "completed",
+  "trace_samples": 8,
+  "compared_samples_after_reset": 5,
+  "excluded_initial_samples": [
+    0,
+    1,
+    2
+  ],
+  "output_comparisons": 15,
+  "table_counts": {
+    "nodes": 4227056,
+    "inputs": 538088,
+    "states": 88074,
+    "outputs": 3
+  }
+}

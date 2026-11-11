@@ -1,0 +1,919 @@
+{
+  "research_date": "2026-11-02",
+  "upstream": "https://github.com/YosysHQ/yosys",
+  "stable": {
+    "tag": "v0.70",
+    "published_at": "2026-10-13T09:20:48Z",
+    "commit": "28ba3cb926fe376fa05ebfc1b921747d011d4557"
+  },
+  "main": {
+    "commit": "63eecf3ddca2f143750f11e37ebd18ecb16b51c7",
+    "committed_at": "2026-10-29T15:02:43Z"
+  },
+  "exhaustive_scope": "All literal Backend registrations and write_-named registrations in Yosys core source at both pinned commits (backends, frontends, passes, techlibs, kernel), checked against CMake backend directories; all 22 production write_* backends and test_autotb. File-writer candidates and registered-command help were scanned for auxiliary formats. Plugins, external executables and source submodules can define additional unbounded output formats.",
+  "build_scope": "Source inventory of upstream's available components, not a claim that every distributor or selectively configured YOSYS_COMPONENTS binary enables them. No latest-version build or arbitrary-input export suite was run.",
+  "backend_counts": {
+    "production_write_backends": 22,
+    "test_backends": 1,
+    "all_Backend_registrations": 23,
+    "extra_write_prefix_utility_frontends": 1
+  },
+  "verification": {
+    "method": "Official GitHub release/commit/tree metadata via connector; official pinned codeload archives; every core C++ source blob independently hashed against GitHub tree entries",
+    "main_cpp_files": 328,
+    "stable_cpp_files": 324,
+    "blob_mismatches": 0,
+    "details": "archive-validation.json"
+  },
+  "production_backends": [
+    {
+      "command": "write_rtlil",
+      "format": "RTLIL text",
+      "category": "internal structural IR",
+      "semantics": "Serializes Yosys internal design objects, including processes, memories, cells, hierarchy, attributes and X/Z constants; consumers still need RTLIL cell semantics.",
+      "constraints": "No requirement to lower processes or memories. Main has Twine identity/replayable printing changes since v0.70; pin version and dialect.",
+      "variants": [
+        "-selected",
+        "-sort",
+        "main: -readable loses Twine identity/replayability",
+        "main: -small omits name comments"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/rtlil/rtlil_backend.cc#L513",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/rtlil/rtlil_backend.cc#L514",
+      "blob_sha": "5f43cd2a6a33ea2c855133c4418980764c33740b",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/rtlil/rtlil_backend.cc#L384"
+      ]
+    },
+    {
+      "command": "write_json",
+      "format": "Yosys JSON netlist",
+      "category": "structural netlist",
+      "semantics": "Hierarchy, cells, parameters, attributes, ports, memories and bit connections; optional AIG models for supported cell types.",
+      "constraints": "Processes are explicitly rejected: run proc. A syntactically present cell instance is not a definition of that cell's behavior. Memory/cell semantics need an interpreter.",
+      "variants": [
+        "-aig",
+        "-compat-int",
+        "-selected",
+        "-noscopeinfo",
+        "json pass exports selected objects"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/json/json.cc#L339",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/json/json.cc#L340",
+      "blob_sha": "841c3a6482e5a29c2dbb5adbb487911abe324e62",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/json/json.cc#L154"
+      ]
+    },
+    {
+      "command": "write_verilog",
+      "format": "Verilog; SystemVerilog output variant",
+      "category": "HDL netlist",
+      "semantics": "Netlist with expressions/always blocks for recognized internal cells and instances for external cells; hierarchy and memories can be emitted.",
+      "constraints": "Help requires proc: RTLIL processes cannot always be mapped directly and trigger a warning. Unmapped/library instances still require external definitions. -sv emits constructs such as always_comb, not a distinct backend.",
+      "variants": [
+        "-sv",
+        "-noexpr retains internal cells",
+        "-blackboxes",
+        "-extmem emits readmemh .mem initialization sidecars"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/verilog/verilog_backend.cc#L2586",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/verilog/verilog_backend.cc#L2587",
+      "blob_sha": "52bf6322b72180e55f84965d842787a0b1af9442",
+      "extra_sources": []
+    },
+    {
+      "command": "write_blif",
+      "format": "BLIF; Yosys extended BLIF",
+      "category": "structural logic netlist",
+      "semantics": "Boolean logic and latches where recognized; other cell/module instances use .subckt or .gate references.",
+      "constraints": "Unmapped RTLIL processes and memories are rejected. -conn/-attr/-param/-cname and related extensions are nonstandard; help advises another suffix for custom consumers.",
+      "variants": [
+        "-gates",
+        "-icells",
+        "-conn",
+        "-attr",
+        "-param",
+        "-cname",
+        "-iname/-iattr",
+        "-blackbox",
+        "-gatesi .gateinit"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/blif/blif.cc#L534",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/blif/blif.cc#L535",
+      "blob_sha": "a05058f548afc1572bc3511f34428b2524c791fb",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/blif/blif.cc#L720"
+      ]
+    },
+    {
+      "command": "write_edif",
+      "format": "EDIF",
+      "category": "technology netlist",
+      "semantics": "Structural cell and wire connectivity in the Xilinx place and route EDIF flavor.",
+      "constraints": "Unmapped processes/memories rejected; cells require matching library definitions. X bits may be exported as zero with a warning. Other EDIF consumers may need adaptation.",
+      "variants": [
+        "-attrprop",
+        "-keep",
+        "-pvector",
+        "-lsbidx",
+        "GND/VCC constant-driver choices"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/edif/edif.cc#L94",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/edif/edif.cc#L95",
+      "blob_sha": "08e2ebec0231eba4ec6f64af4add57f4454ad0e3",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/edif/edif.cc#L211",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/edif/edif.cc#L517"
+      ]
+    },
+    {
+      "command": "write_spice",
+      "format": "SPICE subcircuit netlist",
+      "category": "technology netlist",
+      "semantics": "Structural instances/subcircuits and connectivity, including chosen power/ground names.",
+      "constraints": "Unmapped processes/memories rejected. Cell/subcircuit models are external; missing blackbox declarations cause guessed port order. Does not synthesize transistor models for arbitrary RTLIL cells.",
+      "variants": [
+        "-big_endian",
+        "-neg/-pos",
+        "-buf",
+        "-nc_prefix",
+        "-inames"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/spice/spice.cc#L135",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/spice/spice.cc#L136",
+      "blob_sha": "80f9a501d66876a4b44fb6308a1ab6930ba7af8a",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/spice/spice.cc#L84",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/spice/spice.cc#L226"
+      ]
+    },
+    {
+      "command": "write_firrtl",
+      "format": "FIRRTL",
+      "category": "hardware IR",
+      "semantics": "Recognized coarse cells, modules and blackbox extmodules translated into FIRRTL.",
+      "constraints": "Subset only: rejects inout module ports, unsupported cells, negative-edge FFs, initialized memories, nonzero memory offsets, clocked reads, asynchronous/negedge writes and complex write enables. Warns unsupported register initial values. Automatically runs pmuxtree/bmuxmap/demuxmap/bwmuxmap.",
+      "variants": [],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/firrtl/firrtl.cc#L1207",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/firrtl/firrtl.cc#L1208",
+      "blob_sha": "72f8b056054cdfcb133789970cf65d18b8842610",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/firrtl/firrtl.cc#L566",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/firrtl/firrtl.cc#L921",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/firrtl/firrtl.cc#L1007"
+      ]
+    },
+    {
+      "command": "write_intersynth",
+      "format": "InterSynth netlist",
+      "category": "coarse grain interconnect netlist",
+      "semantics": "Cell types, connection types and word-wide netlists for coarse-grain example-driven interconnect synthesis.",
+      "constraints": "Rejects unprocessed memories/processes, unknown cell types, composite signals and signals that are not word-wide. Cell interfaces must be known; -lib adds Verilog/RTLIL library definitions.",
+      "variants": [
+        "-notypes",
+        "-lib",
+        "-selected (whole modules)"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/intersynth/intersynth.cc#L48",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/intersynth/intersynth.cc#L49",
+      "blob_sha": "c58881b02c1a478255a8b023abc8f1f962155b49",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/intersynth/intersynth.cc#L33",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/intersynth/intersynth.cc#L142"
+      ]
+    },
+    {
+      "command": "write_aiger",
+      "format": "AIGER binary; ASCII AAG",
+      "category": "Boolean transition system",
+      "semantics": "Flattened AND/inverter graph with simple FF state; asserts become bad-state properties and assumes invariant constraints. Initstate/nondeterministic formal cells have special handling.",
+      "constraints": "Requires flattened and gate-lowered design; no unprocessed memories/processes. Supported FFs include $_FF_ and $_DFF_[NP]_; arbitrary clocks/resets/enables must be normalized before interpreting an AIGER transition as a clocked hardware step. Unsupported cell kinds error. -ywmap currently requires -zinit.",
+      "variants": [
+        "-ascii",
+        "-zinit",
+        "-miter",
+        "-symbols",
+        "-map/-vmap port/latch maps",
+        "-ywmap JSON witness map"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger/aiger.cc#L893",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger/aiger.cc#L894",
+      "blob_sha": "36c0e6ca1f2bcf1ad1282829ca971d63d94109f5",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger/aiger.cc#L234",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger/aiger.cc#L1021"
+      ]
+    },
+    {
+      "command": "write_aiger2",
+      "format": "AIGER binary",
+      "category": "combinational Boolean model",
+      "semantics": "Experimental newer writer directly ingests a larger supported subset of combinational coarse cells/gates and can traverse hierarchy with -flatten.",
+      "constraints": "Not a drop-in sequential replacement for write_aiger: known_ops is combinational, no FF/memory operations. Unknown/blackbox cells fail; -flatten respects keep_hierarchy. Source has TODOs for inout, undriven and zero-width cases. Help generates its unsupported-cell list dynamically; literal extraction retains %s and raw C++.",
+      "variants": [
+        "-strash",
+        "-flatten"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger2/aiger.cc#L1794",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger2/aiger.cc#L1799",
+      "blob_sha": "1ceedecd8434dc52149c36e3ddd72fac958ed7e6",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger2/aiger.cc#L36",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger2/aiger.cc#L127"
+      ]
+    },
+    {
+      "command": "write_xaiger",
+      "format": "XAIGER / extended AIGER",
+      "category": "ABC mapping interchange",
+      "semantics": "AIG plus ABC box information and optional simple FFs; non-AIG/non-box cells become pseudo-inputs and pseudo-outputs. Whiteboxes can use $abc9_holes definitions.",
+      "constraints": "A cut-and-box mapping representation; not automatically a complete standalone semantic model. -dff enables $_DFF_[NP]_. Symbol map references are valid only in the writing Yosys run unless debug string maps are selected.",
+      "variants": [
+        "-ascii",
+        "-dff",
+        "-map",
+        "-map-strings"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger/xaiger.cc#L727",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger/xaiger.cc#L728",
+      "blob_sha": "da935893477533298b6603523072db2152577a39",
+      "extra_sources": []
+    },
+    {
+      "command": "write_xaiger2",
+      "format": "XAIGER with h/a extensions",
+      "category": "ABC mapping interchange",
+      "semantics": "Newer combinational AIG writer with hierarchical/opaque-box information for ABC.",
+      "constraints": "Same combinational known_ops core as aiger2, with boxed unsupported logic rather than a general clocked model. -mapping_prep mutates/removes exported cells; -mapping_prep and -map2 conflict with -flatten.",
+      "variants": [
+        "-strash",
+        "-flatten",
+        "-map2 reintegration map",
+        "-mapping_prep (mutating)"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger2/aiger.cc#L1900",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/aiger2/aiger.cc#L1902",
+      "blob_sha": "1ceedecd8434dc52149c36e3ddd72fac958ed7e6",
+      "extra_sources": []
+    },
+    {
+      "command": "write_smt2",
+      "format": "SMT-LIBv2",
+      "category": "formal transition system",
+      "semantics": "Per-module state sort, hierarchy relation, initial predicate, transition relation and assertion/assumption/cover predicates; BitVec arithmetic and ArraysEx memories by default.",
+      "constraints": "Lower processes. Unmap sync reset/enables with dffunmap; async FFs need async2sync; dffunmap or clk2fflogic, and latches need clk2fflogic. Read-port registers must not be merged into memories (memory -nordff / memory_nordff). -nobv implies -nomem, -stbv disables array memories. Unknown cells fail unless explicitly supplied as SMT blackboxes; $live/$fair/$equiv are rejected. A proof driver must assert hierarchy/init/transition predicates correctly; clock normalization matters for multiple clocks.",
+      "variants": [
+        "-stbv",
+        "-stdt",
+        "-nobv",
+        "-nomem",
+        "-wires",
+        "-tpl",
+        "-solver-option"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/smt2.cc#L1605",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/smt2.cc#L1606",
+      "blob_sha": "41bccd598002fb5112c6ea5cb29e248c875bf468",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/smt2.cc#L930",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/smt2.cc#L1697",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/smt2.cc#L1108"
+      ]
+    },
+    {
+      "command": "write_btor",
+      "format": "BTOR2",
+      "category": "formal transition system",
+      "semantics": "Bit-vector/array state, init/next transitions, bad properties and constraints. Despite command/help spelling BTOR, emitted sort/state/next syntax is BTOR2.",
+      "constraints": "One top module; flatten hierarchy/resolve unknown cells. Normalize FF types as with SMT2 (dffunmap, async2sync or clk2fflogic); no synchronous memory reads (memory_nordff), no mixed sync/async memory write ports. Explicit error paths for unsupported cells. A hardware proof still requires an agreed clock-step model.",
+      "variants": [
+        "-s single bad property",
+        "-c covers instead of asserts",
+        "-i auxiliary info",
+        "-ywmap JSON witness map",
+        "-x symbols"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/btor/btor.cc#L1590",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/btor/btor.cc#L1591",
+      "blob_sha": "8aa0f372d2806e60a5cccb0d61c9eec29cdf6d84",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/btor/btor.cc#L806",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/btor/btor.cc#L965"
+      ]
+    },
+    {
+      "command": "write_smv",
+      "format": "SMV",
+      "category": "formal transition system",
+      "semantics": "SMV module expressions and next-state equations for a supported subset.",
+      "constraints": "Help says UNDER CONSTRUCTION. Modules with raw memories/processes are skipped with warnings; packed $mem is a FIXME. Supports only selected cell/FF types; error messages require dffunmap, async2sync or clk2fflogic for unsupported FF families. Do not assume arbitrary mapped cells or memory support.",
+      "variants": [
+        "-verbose",
+        "-tpl"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smv/smv.cc#L721",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smv/smv.cc#L722",
+      "blob_sha": "3385410394ed4f1697e7aa7c45f0c427e1bfadcd",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smv/smv.cc#L228",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smv/smv.cc#L580",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smv/smv.cc#L770"
+      ]
+    },
+    {
+      "command": "write_cxxrtl",
+      "format": "C++ CXXRTL",
+      "category": "simulation code",
+      "semantics": "Executable RTL simulation code and optional header, with sequential state, memories, hierarchy, blackbox interfaces and explicit eval/commit stepping.",
+      "constraints": "Requires driver clock/port interaction and race-free scheduling. Supports processes (normally lowers them unless -noproc); rejects unknown cells, unmarked external blackboxes, multi-driver wires and global-clock processes. C++ simulation model is not a Lean proof artifact.",
+      "variants": [
+        "-header",
+        "-noflatten",
+        "-noproc",
+        "optimization/debug levels",
+        "CXXRTL C API and VCD runtime are companion interfaces"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/cxxrtl/cxxrtl_backend.cc#L3481",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/cxxrtl/cxxrtl_backend.cc#L3482",
+      "blob_sha": "7e2bba33ea3803065b0087b344b89a9c34564d7f",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/cxxrtl/cxxrtl_backend.cc#L2988",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/cxxrtl/cxxrtl_backend.cc#L3077",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/cxxrtl/cxxrtl_backend.cc#L3199"
+      ]
+    },
+    {
+      "command": "write_simplec",
+      "format": "C (simplec)",
+      "category": "simulation/formal-oriented code",
+      "semantics": "Simple C intended for C simulation and C-based verification; separate from CXXRTL and functional C++.",
+      "constraints": "Help says UNDER CONSTRUCTION. Actual eval_cell supports a limited set of fine Boolean gates; unknown cells fail with 'No C model ... FIXME'. Requires a top module. No blanket memory/FF/clock support claim.",
+      "variants": [
+        "-i8/-i16/-i32/-i64",
+        "-verbose"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/simplec/simplec.cc#L760",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/simplec/simplec.cc#L761",
+      "blob_sha": "4f6af5e0f8012a22f9062e5ea0256ea74376307d",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/simplec/simplec.cc#L393",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/simplec/simplec.cc#L511"
+      ]
+    },
+    {
+      "command": "write_functional_cxx",
+      "format": "C++ Functional IR",
+      "category": "functional simulation code",
+      "semantics": "Per-selected-module pure evaluation/state functions and initial state using functional C++ runtime; separate from CXXRTL.",
+      "constraints": "Shared Functional IR requires normalized global-clock FFs (FfData.has_gclk), not ordinary clocked FFs; source recommends async2sync or clk2fflogic. Collect memories with memory_collect; write ports must be asynchronous and read ports unclocked (memory_nordff). Memories without read ports are rejected. Undriven/multiply-driven nets, combinational loops, unknown cell kinds and $check are rejected; $check requires chformal -lower. Flatten/resolve hierarchy and lower processes before treating each selected module as a standalone function. X collision values are treated as don't cares. Command help is TODO; use source constraints rather than inferring maturity.",
+      "variants": [],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/functional/cxx.cc#L243",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/functional/cxx.cc#L245",
+      "blob_sha": "c74cd300f4cb5e0a55e2700243596174375d8cf6",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/functional.cc#L559",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/functional.cc#L610",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/functional.cc#L644"
+      ]
+    },
+    {
+      "command": "write_functional_smt2",
+      "format": "SMT-LIB from Functional IR",
+      "category": "functional formal model",
+      "semantics": "Functional bit-vector/array/state encoding; separate schema from traditional write_smt2 and its SMTBMC metadata contract.",
+      "constraints": "Shared Functional IR requires normalized global-clock FFs (FfData.has_gclk), not ordinary clocked FFs; source recommends async2sync or clk2fflogic. Collect memories with memory_collect; write ports must be asynchronous and read ports unclocked (memory_nordff). Memories without read ports are rejected. Undriven/multiply-driven nets, combinational loops, unknown cell kinds and $check are rejected; $check requires chformal -lower. Flatten/resolve hierarchy and lower processes before treating each selected module as a standalone function. X collision values are treated as don't cares. Help contains only a one-line description.",
+      "variants": [],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/functional/smtlib.cc#L276",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/functional/smtlib.cc#L278",
+      "blob_sha": "c5a8945a53fb72a894f280988b6c2ce6ce57bb1b",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/functional.cc#L559",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/functional.cc#L610",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/functional.cc#L644"
+      ]
+    },
+    {
+      "command": "write_functional_rosette",
+      "format": "Rosette-compatible Racket",
+      "category": "functional formal model",
+      "semantics": "#lang rosette/safe output with bit-vector operations, memories and state from Functional IR.",
+      "constraints": "Shared Functional IR requires normalized global-clock FFs (FfData.has_gclk), not ordinary clocked FFs; source recommends async2sync or clk2fflogic. Collect memories with memory_collect; write ports must be asynchronous and read ports unclocked (memory_nordff). Memories without read ports are rejected. Undriven/multiply-driven nets, combinational loops, unknown cell kinds and $check are rejected; $check requires chformal -lower. Flatten/resolve hierarchy and lower processes before treating each selected module as a standalone function. X collision values are treated as don't cares.",
+      "variants": [
+        "-provides",
+        "-assoc-list-helpers"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/functional/smtlib_rosette.cc#L324",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/functional/smtlib_rosette.cc#L326",
+      "blob_sha": "e174b9b7aa5669de2c190761964a64076bd8dde3",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/functional.cc#L559",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/functional.cc#L610"
+      ]
+    },
+    {
+      "command": "write_jny",
+      "format": "JNY JSON design metadata",
+      "category": "metadata",
+      "semantics": "JSON metadata, module/cell type summaries, selected connections, attributes and parameters according to misc/jny.schema.json.",
+      "constraints": "Metadata interchange, not a replacement for a complete RTLIL/HDL/formal semantics. Help synopsis says jny, but actual Backend registration creates write_jny; jny pass is a selected-object alternative.",
+      "variants": [
+        "-no-connections",
+        "-no-attributes",
+        "-no-properties",
+        "jny -o alternative"
+      ],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/jny/jny.cc#L414",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/jny/jny.cc#L415",
+      "blob_sha": "3a4e31f8b7b77015b561c9f2f4dd3e4c430d875e",
+      "extra_sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/misc/jny.schema.json"
+      ]
+    },
+    {
+      "command": "write_table",
+      "format": "Tab-separated ASCII connectivity table",
+      "category": "connectivity report",
+      "semantics": "Six columns: module, cell, type, port, direction, signal; module IO represented as pseudo cells.",
+      "constraints": "Connectivity view only; it omits the full behavioral definitions/parameters needed to interpret arbitrary cells and processes.",
+      "variants": [],
+      "available_in": [
+        "v0.70",
+        "main"
+      ],
+      "built_in": true,
+      "registration_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/table/table.cc#L31",
+      "help_source": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/table/table.cc#L32",
+      "blob_sha": "4dfaa32cf50aa9bf67ceb6e0d0f5c188e68d45d0",
+      "extra_sources": []
+    }
+  ],
+  "auxiliary_exports": [
+    {
+      "command": "dump",
+      "formats": [
+        "RTLIL text"
+      ],
+      "category": "alternate command",
+      "notes": "Selected RTLIL dump; -outfile/-append output file.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/rtlil/rtlil_backend.cc#L580"
+      ]
+    },
+    {
+      "command": "json",
+      "formats": [
+        "Yosys JSON"
+      ],
+      "category": "alternate command",
+      "notes": "Selected-object form of write_json, with -o.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/json/json.cc#L639"
+      ]
+    },
+    {
+      "command": "jny",
+      "formats": [
+        "JNY JSON"
+      ],
+      "category": "alternate command",
+      "notes": "Selected-object metadata form, with -o.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/jny/jny.cc#L483"
+      ]
+    },
+    {
+      "command": "fsm_export",
+      "formats": [
+        "KISS2"
+      ],
+      "category": "hardware subset",
+      "notes": "Only extracted $fsm cells; -origenc/-o/-noauto; not a whole-design format.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/fsm/fsm_export.cc#L122"
+      ]
+    },
+    {
+      "command": "fsm_recode",
+      "formats": [
+        "Synopsys Formality set_fsm_* script",
+        "Yosys .fsm/.map encoding map"
+      ],
+      "category": "mapping sidecar",
+      "notes": "-fm_set_fsm_file / -encfile report old/new FSM state encodings.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/fsm/fsm_recode.cc#L129"
+      ]
+    },
+    {
+      "command": "show",
+      "formats": [
+        "Graphviz DOT",
+        "Graphviz render target such as SVG or PostScript"
+      ],
+      "category": "visualization",
+      "notes": "Yosys emits DOT; other requested formats are rendered by external dot, whose formats are an external dependency.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/cmds/show.cc#L671"
+      ]
+    },
+    {
+      "command": "viz",
+      "formats": [
+        "Graphviz DOT",
+        "Graphviz rendered graphics"
+      ],
+      "category": "visualization",
+      "notes": "Dataflow graph; external dot renders non-DOT output.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/cmds/viz.cc#L820"
+      ]
+    },
+    {
+      "command": "sat",
+      "formats": [
+        "DIMACS CNF",
+        "VCD",
+        "WaveJSON"
+      ],
+      "category": "SAT problem / witness",
+      "notes": "-dump_cnf serializes the configured SAT problem; -dump_vcd/-dump_json serialize a found model/counterexample, not the full circuit.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/sat/sat.cc#L921"
+      ]
+    },
+    {
+      "command": "sim",
+      "formats": [
+        "VCD",
+        "FST",
+        "AIGER witness AIW",
+        "JSON summary"
+      ],
+      "category": "simulation trace",
+      "notes": "-vcd/-fst/-aiw/-summary; AIW requires symbol map. FST availability depends on the build. Reading WIT/YW is not an output backend.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/sat/sim.cc#L2681"
+      ]
+    },
+    {
+      "command": "fst2tb",
+      "formats": [
+        "Verilog testbench",
+        "text stimulus .txt"
+      ],
+      "category": "testbench",
+      "notes": "-tb <name> produces <name>.v and <name>.txt from FST stimuli.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/sat/sim.cc#L3042"
+      ]
+    },
+    {
+      "command": "test_autotb",
+      "formats": [
+        "Verilog testbench",
+        "runtime textual samples"
+      ],
+      "category": "test backend",
+      "notes": "The 23rd Backend registration, outside backends/. Generates primitive semi-random testbenches; samples are produced when generated HDL runs.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/tests/test_autotb.cc#L329"
+      ]
+    },
+    {
+      "command": "icell_liberty",
+      "formats": [
+        "Liberty .lib"
+      ],
+      "category": "cell interface library",
+      "notes": "Interfaces of used internal cells; help explicitly says models are not guaranteed logically sound. Not a sound complete hardware export.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/cmds/icell_liberty.cc#L151"
+      ]
+    },
+    {
+      "command": "abc9_ops",
+      "formats": [
+        "ABC LUT library",
+        "ABC box library"
+      ],
+      "category": "mapping sidecar",
+      "notes": "-write_lut/-write_box dump precomputed mapping libraries. ABC is an external engine; its own arbitrary export commands are not Yosys backends.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/techmap/abc9_ops.cc#L1290"
+      ]
+    },
+    {
+      "command": "synthprop",
+      "formats": [
+        "synthesizable-property port mapping text"
+      ],
+      "category": "mapping sidecar",
+      "notes": "-map records generated output property port assignments.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/sat/synthprop.cc#L182"
+      ]
+    },
+    {
+      "command": "linecoverage",
+      "formats": [
+        "LCOV",
+        "text report"
+      ],
+      "category": "coverage report",
+      "notes": "-lcov produces source-location coverage from selection; no circuit semantics.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/cmds/linecoverage.cc#L32"
+      ]
+    },
+    {
+      "command": "stat",
+      "formats": [
+        "statistics JSON",
+        "text report"
+      ],
+      "category": "statistics report",
+      "notes": "-json writes to log/console; tee can save it. Distinct from write_json.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/cmds/stat.cc#L898"
+      ]
+    },
+    {
+      "command": "help",
+      "formats": [
+        "text reference",
+        "cell model Verilog",
+        "command-documentation JSON",
+        "cell-documentation JSON"
+      ],
+      "category": "documentation",
+      "notes": "help <cell>+ emits the Verilog model. Undocumented internal -dump-cmds-json/-dump-cells-json write documentation schemas, not netlists.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/register.cc#L755",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/register.cc#L1136"
+      ]
+    },
+    {
+      "command": "select",
+      "formats": [
+        "plain-text object selection list"
+      ],
+      "category": "selection report",
+      "notes": "-write emits the same objects as -list.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/cmds/select.cc#L1091"
+      ]
+    },
+    {
+      "command": "mutate",
+      "formats": [
+        "Yosys mutate-command script",
+        "source-tag list"
+      ],
+      "category": "mutation metadata",
+      "notes": "-list with -o/-s outputs mutation commands and src metadata.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/sat/mutate.cc#L731"
+      ]
+    },
+    {
+      "command": "qbfsat",
+      "formats": [
+        "SMT-LIBv2 problem",
+        "plain-text solution assignments"
+      ],
+      "category": "solver problem / solution",
+      "notes": "-dump-final-smt2 and -write-solution; underlying yosys-smtbmc/SMT solver external execution is separate.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/sat/qbfsat.cc#L508"
+      ]
+    },
+    {
+      "command": "opensta / sdc_expand",
+      "formats": [
+        "expanded SDC constraints",
+        "temporary Tcl script, Verilog netlist and Liberty interfaces"
+      ],
+      "category": "external delegated output",
+      "notes": "Yosys runs external OpenSTA write_sdc; no registered built-in write_sdc command. Requires OpenSTA and the relevant Yosys components.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/techlibs/common/opensta.cc#L96",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/techlibs/common/sdc_expand.cc#L117"
+      ]
+    },
+    {
+      "command": "verific",
+      "formats": [
+        "Verilog netlist dump",
+        "Verilog/SystemVerilog pretty print",
+        "VHDL pretty print"
+      ],
+      "category": "optional licensed frontend output",
+      "notes": "Only with proprietary Verific support: -d dumps Verific netlist; -pp pretty-prints loaded Verific designs, including -vhdl if supported. Not a write_vhdl backend from arbitrary RTLIL.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/frontends/verific/verific.cc#L3184",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/frontends/verific/verific.cc#L3375",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/frontends/verific/verific.cc#L3408"
+      ]
+    },
+    {
+      "command": "write_file",
+      "formats": [
+        "arbitrary copied/heredoc text"
+      ],
+      "category": "file utility",
+      "notes": "Registered as Frontend(=write_file); copies text, does not translate hardware.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/cmds/write_file.cc#L28"
+      ]
+    },
+    {
+      "command": "tee",
+      "formats": [
+        "captured command log text"
+      ],
+      "category": "file utility",
+      "notes": "Routes another command's log to a file; does not add a netlist format.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/cmds/tee.cc#L28"
+      ]
+    },
+    {
+      "command": "driver flags",
+      "formats": [
+        "plain-text log",
+        "Makefile dependency file",
+        "performance JSON"
+      ],
+      "category": "driver diagnostics",
+      "notes": "-l/-L, -E/--deps-file, --perffile; not hardware semantics.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/driver.cc#L322",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/driver.cc#L338",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/kernel/driver.cc#L349"
+      ]
+    },
+    {
+      "command": "debug/reduction/synthesis wrappers",
+      "formats": [
+        "already-counted RTLIL or Verilog, plus logs/scripts"
+      ],
+      "category": "existing format reuse",
+      "notes": "bugpoint, extract -mine, freduce -dump, test_cell HDL dumping, read_verilog AST/Verilog/RTLIL debugging, synth_* output-file switches and ABC temporary artifacts reuse formats. Arbitrary logs, AST debug text, scripts and library/compiler traces are not additional whole-design backends.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/techmap/extract.cc#L748",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/passes/sat/freduce.cc#L608"
+      ]
+    },
+    {
+      "command": "yosys-smtbmc",
+      "formats": [
+        "VCD",
+        "Yosys witness YW JSON",
+        "Verilog testbench",
+        "SMTC constraints",
+        "SMT-LIBv2 solver transcript"
+      ],
+      "category": "bundled companion executable",
+      "notes": "--dump-vcd/--dump-yw/--dump-vlogtb/--dump-smtc; SMTIO --dump-smt2. These are proof traces/problems, not additional registered Yosys design backends.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/smtbmc.py#L135",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/smtio.py"
+      ]
+    },
+    {
+      "command": "yosys-witness",
+      "formats": [
+        "Yosys witness YW JSON",
+        "AIGER witness AIW",
+        "text trace/statistics"
+      ],
+      "category": "bundled companion executable",
+      "notes": "yw2yw, aiw2yw, yw2aiw, wit2yw convert/transform witnesses using backend map files. Reading BTOR witnesses does not imply writing a BTOR witness format.",
+      "sources": [
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/witness.py#L87",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/witness.py#L298",
+        "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/smt2/witness.py#L357"
+      ]
+    }
+  ],
+  "absent_builtin_names": [
+    "write_lean",
+    "write_lean4",
+    "write_vhdl",
+    "write_btor2",
+    "write_simplecxx",
+    "write_sdc"
+  ],
+  "limitations": [
+    "Finite source census, not every arbitrary file emitted by plugins, the shell/Tcl/Python APIs, ABC, Graphviz, OpenSTA or linked proprietary libraries.",
+    "Auxiliary output survey includes explicit file options, reports, mapping sidecars, visualizations, solver traces and bundled witness tools; log text/debug AST dumps are not each counted as distinct whole-design interchange languages.",
+    "Full raw C++ help bodies and literal help strings are retained in source-registry-*.json. Dynamic help expansion (notably aiger2 supported-cell exclusions) was inspected in source, not executed; %s placeholders are not actual runtime command output.",
+    "Model generation is not by itself a proof of the exporter or a Lean-checked equivalence certificate; input domain, cell library, X/Z treatment, clock model and preprocessing must be fixed separately."
+  ]
+}

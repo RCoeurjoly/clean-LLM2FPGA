@@ -1,0 +1,12 @@
+FULL_RESET 0 00000000 0 0
+FULL_RESET 1 00000000 0 0
+FULL_RESET 2 00000000 0 0
+FULL_RESET 3 00000000 0 0
+FULL_RESET 4 00000000 0 0
+FULL_RESET 5 00000000 0 0
+FULL_RESET 6 00000000 0 0
+FULL_RESET 7 00000000 0 0
+- research/yosys-lean-2026-11-02/full-hardware-run/full-reset-tb.sv:24: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.052 2026-09-05
+- Verilator: $finish at 8ps; walltime 5.813 s; speed 1.376 ps/s
+- Verilator: cpu 5.761 s on 1 threads; allocated 139 MB

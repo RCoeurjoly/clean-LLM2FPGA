@@ -1,0 +1,167 @@
+{
+  "derivations": {
+    "bz5h540cj8cmxwr49v8avrnwa87yxzmv-tinystories-ram.drv": {
+      "args": [
+        "-e",
+        "/nix/store/l622p70vy8k5sh7y5wizi5f2mic6ynpg-source-stdenv.sh",
+        "/nix/store/shkw4qm9qcw5sc5n1k5jznc83ny02r39-default-builder.sh"
+      ],
+      "builder": "/nix/store/rlq03x4cwf8zn73hxaxnx0zn5q9kifls-bash-5.3p3/bin/bash",
+      "env": {
+        "__structuredAttrs": "",
+        "buildCommand": "mkdir \"$out\"\n/nix/store/vjqba2jj3231f14vhspj2mvs1k1z4mm4-llm2fpga-yosys-sdp72-parity/bin/yosys -Q -p \"\n  read_rtlil /nix/store/6vybsfl9mjql6961ynjg6d6zxyl4d5vz-tinystories-dsp/model.il;\n  submod -name model_memories t:\\$mem_v2;\n  select *;\n  memory -nomap;\n  synth_xilinx -family xc7 -top model_top -noiopad -noclkbuf -run map_memory:map_ffram;\n  flatten -noscopeinfo;\n  check -assert;\n  stat -tech xilinx;\n  write_rtlil $out/model.il\n\"\n",
+        "buildInputs": "",
+        "builder": "/nix/store/rlq03x4cwf8zn73hxaxnx0zn5q9kifls-bash-5.3p3/bin/bash",
+        "cmakeFlags": "",
+        "configureFlags": "",
+        "depsBuildBuild": "",
+        "depsBuildBuildPropagated": "",
+        "depsBuildTarget": "",
+        "depsBuildTargetPropagated": "",
+        "depsHostHost": "",
+        "depsHostHostPropagated": "",
+        "depsTargetTarget": "",
+        "depsTargetTargetPropagated": "",
+        "doCheck": "",
+        "doInstallCheck": "",
+        "enableParallelBuilding": "1",
+        "enableParallelChecking": "1",
+        "enableParallelInstalling": "1",
+        "mesonFlags": "",
+        "name": "tinystories-ram",
+        "nativeBuildInputs": "",
+        "out": "/nix/store/1p2lpclcg0jydfh5d2sfhfimrbsmn044-tinystories-ram",
+        "outputs": "out",
+        "passAsFile": "buildCommand",
+        "patches": "",
+        "propagatedBuildInputs": "",
+        "propagatedNativeBuildInputs": "",
+        "stdenv": "/nix/store/br3nr5ymp1p8k9gn9zljmbnsksikj98l-stdenv-linux",
+        "strictDeps": "",
+        "system": "x86_64-linux"
+      },
+      "inputs": {
+        "drvs": {
+          "dwp3wll5zvrx1qmjhg6fvrw89l9j55r9-stdenv-linux.drv": {
+            "dynamicOutputs": {},
+            "outputs": [
+              "out"
+            ]
+          },
+          "lripdpdfh1mldkk4zwfghin4a90d7n2c-llm2fpga-yosys-sdp72-parity.drv": {
+            "dynamicOutputs": {},
+            "outputs": [
+              "out"
+            ]
+          },
+          "qvj1mbkkd7q9j77gpv7gykf7jv9r3kym-tinystories-dsp.drv": {
+            "dynamicOutputs": {},
+            "outputs": [
+              "out"
+            ]
+          },
+          "vwmk63kc9sysjif65h7fdwnqr5h8jfm6-bash-5.3p3.drv": {
+            "dynamicOutputs": {},
+            "outputs": [
+              "out"
+            ]
+          }
+        },
+        "srcs": [
+          "l622p70vy8k5sh7y5wizi5f2mic6ynpg-source-stdenv.sh",
+          "shkw4qm9qcw5sc5n1k5jznc83ny02r39-default-builder.sh"
+        ]
+      },
+      "name": "tinystories-ram",
+      "outputs": {
+        "out": {
+          "path": "1p2lpclcg0jydfh5d2sfhfimrbsmn044-tinystories-ram"
+        }
+      },
+      "system": "x86_64-linux",
+      "version": 4
+    },
+    "kp2y0xcrk1l0rciz4lbm1vf8026rhfw9-tinystories-netlist.drv": {
+      "args": [
+        "-e",
+        "/nix/store/l622p70vy8k5sh7y5wizi5f2mic6ynpg-source-stdenv.sh",
+        "/nix/store/shkw4qm9qcw5sc5n1k5jznc83ny02r39-default-builder.sh"
+      ],
+      "builder": "/nix/store/rlq03x4cwf8zn73hxaxnx0zn5q9kifls-bash-5.3p3/bin/bash",
+      "env": {
+        "__structuredAttrs": "",
+        "buildCommand": "mkdir \"$out\"\n/nix/store/vjqba2jj3231f14vhspj2mvs1k1z4mm4-llm2fpga-yosys-sdp72-parity/bin/yosys -Q -p \"\n  read_rtlil /nix/store/1p2lpclcg0jydfh5d2sfhfimrbsmn044-tinystories-ram/model.il;\n  blackbox =A:whitebox;\n  write_json $out/model.json\n\"\n",
+        "buildInputs": "",
+        "builder": "/nix/store/rlq03x4cwf8zn73hxaxnx0zn5q9kifls-bash-5.3p3/bin/bash",
+        "cmakeFlags": "",
+        "configureFlags": "",
+        "depsBuildBuild": "",
+        "depsBuildBuildPropagated": "",
+        "depsBuildTarget": "",
+        "depsBuildTargetPropagated": "",
+        "depsHostHost": "",
+        "depsHostHostPropagated": "",
+        "depsTargetTarget": "",
+        "depsTargetTargetPropagated": "",
+        "doCheck": "",
+        "doInstallCheck": "",
+        "enableParallelBuilding": "1",
+        "enableParallelChecking": "1",
+        "enableParallelInstalling": "1",
+        "mesonFlags": "",
+        "name": "tinystories-netlist",
+        "nativeBuildInputs": "",
+        "out": "/nix/store/4xp6xa0gdrmir6lpiwzl2q85ykp1058r-tinystories-netlist",
+        "outputs": "out",
+        "passAsFile": "buildCommand",
+        "patches": "",
+        "propagatedBuildInputs": "",
+        "propagatedNativeBuildInputs": "",
+        "stdenv": "/nix/store/br3nr5ymp1p8k9gn9zljmbnsksikj98l-stdenv-linux",
+        "strictDeps": "",
+        "system": "x86_64-linux"
+      },
+      "inputs": {
+        "drvs": {
+          "bz5h540cj8cmxwr49v8avrnwa87yxzmv-tinystories-ram.drv": {
+            "dynamicOutputs": {},
+            "outputs": [
+              "out"
+            ]
+          },
+          "dwp3wll5zvrx1qmjhg6fvrw89l9j55r9-stdenv-linux.drv": {
+            "dynamicOutputs": {},
+            "outputs": [
+              "out"
+            ]
+          },
+          "lripdpdfh1mldkk4zwfghin4a90d7n2c-llm2fpga-yosys-sdp72-parity.drv": {
+            "dynamicOutputs": {},
+            "outputs": [
+              "out"
+            ]
+          },
+          "vwmk63kc9sysjif65h7fdwnqr5h8jfm6-bash-5.3p3.drv": {
+            "dynamicOutputs": {},
+            "outputs": [
+              "out"
+            ]
+          }
+        },
+        "srcs": [
+          "l622p70vy8k5sh7y5wizi5f2mic6ynpg-source-stdenv.sh",
+          "shkw4qm9qcw5sc5n1k5jznc83ny02r39-default-builder.sh"
+        ]
+      },
+      "name": "tinystories-netlist",
+      "outputs": {
+        "out": {
+          "path": "4xp6xa0gdrmir6lpiwzl2q85ykp1058r-tinystories-netlist"
+        }
+      },
+      "system": "x86_64-linux",
+      "version": 4
+    }
+  },
+  "version": 4
+}

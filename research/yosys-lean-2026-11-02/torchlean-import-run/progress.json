@@ -1,0 +1,15 @@
+{
+  "updated_at": "2026-11-02T09:26:52.570775+00:00",
+  "status": "completed",
+  "active": null,
+  "scope": "Upstream TorchLean import feasibility for frozen quantized model.pt2",
+  "whole_model_imported": false,
+  "equivalence_proved": false,
+  "exec_session_id": null,
+  "cache_downloads": 9031,
+  "whole_frontend_result": "Rejected aten.embedding.default",
+  "adapter_emitted_by_lean": true,
+  "adapter_matches_previous_reconstruction": true,
+  "result": "Whole-model frontend blocked; built Lean controls passed",
+  "numerical_control_output_values_compared": 7
+}

@@ -1,0 +1,7 @@
+{
+  "repository": "ChangyangZen/LSDL-Standard-Cell-Library",
+  "source": "https://github.com/ChangyangZen/LSDL-Standard-Cell-Library/blob/main/formal/lean/LsdlSwitch/Switch.lean",
+  "blob_sha": "0215c6130cf1af17f24fa5e5657530b88ba1931d",
+  "scope": "Single source-file inspection, not whole-project audit",
+  "finding": "Formal switch-network semantics with transistor series/parallel correctness; this file is not a SPICE text reader and no Yosys importer is established by this limited inspection."
+}

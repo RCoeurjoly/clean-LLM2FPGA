@@ -1,0 +1,222 @@
+[
+  {
+    "format": "Verilog/SystemVerilog",
+    "repo": "thomasnormal/lean-surfaces",
+    "commit": "c2aaf29b4778bc39b9d09485afe504b33cc92b9d",
+    "classification": "implemented external-source importer, restricted tiers",
+    "route": "pyslang 11.x extractor -> sv-0.1 JSON envelope -> Lean AST/interpreters",
+    "semantics": "Four-state values, fuel-bounded cycle scheduler with legal schedule oracle; separate timed Active/Inactive/NBA loader; trace/refinement proofs for accepted fragments",
+    "trust_and_limitations": "Python/slang translation trusted; schema is not Yosys JSON; M0 uses an implicit single posedge clock; timed/cycle adequacy is stated, not generally proved; unsupported nodes can be rejected at execution; no fresh Lean build in this survey",
+    "evidence_urls": "https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/extractors/sv/extract.py#L1 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Sv/Json.lean#L5 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Sv/Semantics.lean#L5 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Sv/Adequacy.lean#L45 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Sv/PinAxioms.lean#L5"
+  },
+  {
+    "format": "Verilog/SystemVerilog",
+    "repo": "ErosSph/leap",
+    "commit": "f68bb7ba38eaecb9b0e2ff8c7b1d553f824470d4",
+    "classification": "implemented external-source importer, two-state subset",
+    "route": "pyslang 11.0.0 elaboration -> Python AST/IR normalization -> Lean source + compile gate",
+    "semantics": "Generated Bool/BitVec combinational and state transition functions; corpus model-level proofs",
+    "trust_and_limitations": "Lean 4.26.0 pinned; frontend/codegen unverified; rejects unsupported constructs; corpus theorem acceptance does not establish arbitrary RTL/model equivalence or full Yosys-generated-cell coverage",
+    "evidence_urls": "https://github.com/ErosSph/leap/blob/f68bb7ba38eaecb9b0e2ff8c7b1d553f824470d4/rtl2lean/frontend/parser.py#L411 | https://github.com/ErosSph/leap/blob/f68bb7ba38eaecb9b0e2ff8c7b1d553f824470d4/rtl2lean/frontend/semantic.py#L341 | https://github.com/ErosSph/leap/blob/f68bb7ba38eaecb9b0e2ff8c7b1d553f824470d4/rtl2lean/backend/codegen.py#L24 | https://github.com/ErosSph/leap/blob/f68bb7ba38eaecb9b0e2ff8c7b1d553f824470d4/rtl2lean/backend/lean_checker.py#L25 | https://github.com/ErosSph/leap/blob/f68bb7ba38eaecb9b0e2ff8c7b1d553f824470d4/README.md#L84"
+  },
+  {
+    "format": "Verilog/SystemVerilog",
+    "repo": "Verilean/sparkle",
+    "commit": "1614cee83ac586ca9a0626cd4af13bfef7347c3a",
+    "classification": "implemented partial importer with unsound acceptance paths",
+    "route": "Lean lexer/parser -> internal hardware IR -> simulation/proof source",
+    "semantics": "Executable circuit DSL and generated model/proofs for a subset",
+    "trust_and_limitations": "Failed always blocks are skipped; missing submodules become warning wires and are skipped; unsupported verification expressions emit sorry; assertion macro emits by sorry. All 18 inspected parser-bearing forks inherited these three principal gaps",
+    "evidence_urls": "https://github.com/Verilean/sparkle/blob/1614cee83ac586ca9a0626cd4af13bfef7347c3a/Tools/SVParser/Parser.lean#L913 | https://github.com/Verilean/sparkle/blob/1614cee83ac586ca9a0626cd4af13bfef7347c3a/Tools/SVParser/Lower.lean#L2388 | https://github.com/Verilean/sparkle/blob/1614cee83ac586ca9a0626cd4af13bfef7347c3a/Tools/SVParser/Verify.lean#L232 | https://github.com/Verilean/sparkle/blob/1614cee83ac586ca9a0626cd4af13bfef7347c3a/Tools/SVParser/Macro.lean#L91"
+  },
+  {
+    "format": "Verilog/SystemVerilog",
+    "repo": "muzafferkal/circuitprover-sv",
+    "commit": "df560b7e7fc743ea26e453b0f6e6cc5e0470b034",
+    "classification": "implemented restricted source translator",
+    "route": "Regex source parser preserves symbolic parameters -> deterministic Lean generator",
+    "semantics": "Bool/BitVec step/output/run; generic step-to-trace theorem; small-width exhaustive co-simulation",
+    "trust_and_limitations": "Regex parser; width syntax [HI:0], no inout, no always_comb in generator; exhaustive WIDTH=1,2,3 checks do not prove translator correctness for every width; not a general arbitrary Yosys netlist reader",
+    "evidence_urls": "https://github.com/muzafferkal/circuitprover-sv/blob/df560b7e7fc743ea26e453b0f6e6cc5e0470b034/tools/sv_parser.py#L76 | https://github.com/muzafferkal/circuitprover-sv/blob/df560b7e7fc743ea26e453b0f6e6cc5e0470b034/tools/sv2lean.py#L446 | https://github.com/muzafferkal/circuitprover-sv/blob/df560b7e7fc743ea26e453b0f6e6cc5e0470b034/tools/sv2lean.py#L512 | https://github.com/muzafferkal/circuitprover-sv/blob/df560b7e7fc743ea26e453b0f6e6cc5e0470b034/README.md#L10"
+  },
+  {
+    "format": "Verilog/SystemVerilog",
+    "repo": "verilog-proof/VerilLean",
+    "commit": "d13650b8b8b6bee64f06a4f045e464d1916062e8",
+    "classification": "embedded Verilog-like syntax and semantics, not unchanged file reader",
+    "route": "Lean v![...] syntax macros -> AST -> transition semantics",
+    "semantics": "Expression/statement/module semantics with explicit notSupported results",
+    "trust_and_limitations": "Verilog apostrophe literals are replaced by # to fit Lean lexer; no read_file/Yosys netlist import found; no fresh build or language-adequacy proof established",
+    "evidence_urls": "https://github.com/verilog-proof/VerilLean/blob/d13650b8b8b6bee64f06a4f045e464d1916062e8/VerilLean/Lang/Notation.lean#L1 | https://github.com/verilog-proof/VerilLean/blob/d13650b8b8b6bee64f06a4f045e464d1916062e8/VerilLean/Lang/Semantics.lean#L1"
+  },
+  {
+    "format": "Verilog/SystemVerilog",
+    "repo": "nathsou/HDLean",
+    "commit": "c3808e57b342c63eaff677abca7f9391a4dc954a",
+    "classification": "proved canonical emitted-format parser, not arbitrary Yosys import",
+    "route": "AAG-derived graph -> rigid SV text; parseSystemVerilog decodes that exact grammar",
+    "semantics": "Proved text roundtrip and decoded graph execution correspondence",
+    "trust_and_limitations": "Requires hd_top/hd_m_* generated names and HD_GATES/HD_LITERALS scaffolding; proof is for self-emitted shape, not IEEE-wide or general write_verilog output. Lean4.35.0 pinned",
+    "evidence_urls": "https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/HDLean/Backend/SystemVerilogProved.lean#L5 | https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/HDLean/Backend/SystemVerilogProved.lean#L114 | https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/HDLean/Backend/SystemVerilogProved.lean#L164"
+  },
+  {
+    "format": "Verilog/SystemVerilog",
+    "repo": "Easyoakland/HDLean",
+    "commit": "0c4637326055c9ee38e9d9ecff9cf167d664f7ec",
+    "classification": "output-only compiler",
+    "route": "Lean Mealy descriptions -> compiler netlist -> SystemVerilog emission",
+    "semantics": "Lean-side Mealy semantics; generated hardware descriptions",
+    "trust_and_limitations": "SystemVerilog generator is not an external SV/Yosys reader",
+    "evidence_urls": "https://github.com/Easyoakland/HDLean/blob/0c4637326055c9ee38e9d9ecff9cf167d664f7ec/src/Compiler/ToSystemVerilog.lean#L1 | https://github.com/Easyoakland/HDLean/blob/0c4637326055c9ee38e9d9ecff9cf167d664f7ec/src/Compiler/Netlist.lean#L1"
+  },
+  {
+    "format": "Yosys write_json",
+    "repo": "deepai-org/loom",
+    "commit": "ea1770339296375988b42121db599b4cb36184d7",
+    "classification": "actual Yosys-schema bridge into Lean",
+    "route": "scripts/yosys_to_loom_ir.py reads Yosys modules/netnames/cells/connections/parameters -> neutral JSON schema1 or hierarchy schema2 -> Lean ImportJson and checked ImportIR lowering",
+    "semantics": "Executable two-state BitVec expressions, register/memory cycles, stateless/hierarchical components; explicit partial-value refinement choices",
+    "trust_and_limitations": "Yosys and Python adapter explicitly untrusted; accepted cell subset not arbitrary technology library; external equivalence/signoff remains required; unsafe implemented_by memoization used at runtime. Lean4.28.0 pinned; two Python adapter probes run, no Lean build",
+    "evidence_urls": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/yosys_to_loom_ir.py#L1 | https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/yosys_to_loom_ir.py#L24 | https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/ImportJson.lean#L402 | https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/ImportIR.lean#L8 | https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/ImportIR.lean#L873 | https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/Semantics.lean#L54 | https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/Signoff.lean#L5"
+  },
+  {
+    "format": "Yosys write_json",
+    "repo": "deepai-org/lean_hw",
+    "commit": "e13e667a2b7bc08c394b45f060af52644c70e80d",
+    "classification": "related predecessor/copy of actual Yosys bridge",
+    "route": "Same source family, Python Yosys JSON to neutral IR -> Lean",
+    "semantics": "Same Loom semantic architecture",
+    "trust_and_limitations": "Tree e13e... also equals ssghost/loom fork tree; not an independent corroborating implementation; trust boundaries same as deepai-org/loom",
+    "evidence_urls": "https://github.com/deepai-org/lean_hw/blob/e13e667a2b7bc08c394b45f060af52644c70e80d/scripts/yosys_to_loom_ir.py#L1 | https://github.com/deepai-org/lean_hw/blob/e13e667a2b7bc08c394b45f060af52644c70e80d/Loom/Hw/ImportJson.lean#L402"
+  },
+  {
+    "format": "Yosys write_json",
+    "repo": "ErosSph/xiangshan2Lean",
+    "commit": "a1299b564831e571b9b80f816219ae06c91db342",
+    "classification": "actual auxiliary schema use, semantic importer is Functional SMT",
+    "route": "write_json intermediate circuit metadata/effects/initial constraints; actual transfer function via write_functional_smt2",
+    "semantics": "Generated Lean BitVec/memory transition functions from FunctionalIR",
+    "trust_and_limitations": "Do not label JSON alone as direct full netlist semantics. Its .table.json is an internal Lean runtime interface, not Yosys write_table. Root separately exercised production memory RTL translation; no Lean compiler available",
+    "evidence_urls": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys2lean.py#L310 | https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys2lean.py#L341 | https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/functional_ir.py#L1 | https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/docs/yosys-frontend.md#L74"
+  },
+  {
+    "format": "Yosys write_json",
+    "repo": "formalized-si/redstone-verify",
+    "commit": "0fbd001b3324ac6e4cc7744b9027413912a32fa0",
+    "classification": "port-metadata consumer, not JSON semantic importer",
+    "route": "Python verify.py uses proc/write_json to discover one-bit specification ports",
+    "semantics": "Main certified semantics/certificate flow is via AIGER/LRAT (separate survey)",
+    "trust_and_limitations": "Generic netlist JSON import would overstate this source",
+    "evidence_urls": "https://github.com/formalized-si/redstone-verify/blob/0fbd001b3324ac6e4cc7744b9027413912a32fa0/tools/verify.py#L466"
+  },
+  {
+    "format": "SPICE write_spice",
+    "repo": "thomasnormal/lean-surfaces",
+    "commit": "c2aaf29b4778bc39b9d09485afe504b33cc92b9d",
+    "classification": "real SPICE syntax and circuit semantics, Yosys bridge not established",
+    "route": "Direct Lean SPICE parse/elaborate including .subckt/.ends and X instances; linear devices and Level1 MOS model subset",
+    "semantics": "Typed circuit equations, checked DC solutions, MOS/logic examples and conditional analog proofs",
+    "trust_and_limitations": "No Yosys write_spice ingestion workflow found. Yosys hierarchical digital output still needs leaf subcircuit library and explicit top-level circuit harness; parser rejects unsupported cards (.include etc); typed elaboration requires ground and supported model profile",
+    "evidence_urls": "https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Circuit/Spice.lean#L5 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Circuit/Spice.lean#L270 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Circuit/Spice.lean#L458 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Circuit/DC.lean#L1 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Spice/RippleNetlist.lean#L1"
+  },
+  {
+    "format": "CXXRTL C++ / headers",
+    "repo": "thomasnormal/lean-surfaces",
+    "commit": "c2aaf29b4778bc39b9d09485afe504b33cc92b9d",
+    "classification": "adjacent C++ tooling, no CXXRTL importer established",
+    "route": "cpp-0.1 translation envelope and Clang evidence/value/callable sublayers",
+    "semantics": "Narrow C++ value/object/callable machinery",
+    "trust_and_limitations": "No source reference to CXXRTL found in 8,919 scanned candidate files; C++ translation/value semantics does not establish semantics of generated CXXRTL runtime, fixed-point scheduling, templates and headers",
+    "evidence_urls": "https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/extractors/cpp/README.md#L1 | https://github.com/thomasnormal/lean-surfaces/blob/c2aaf29b4778bc39b9d09485afe504b33cc92b9d/LeanModels/Cpp/Translation.lean#L1"
+  },
+  {
+    "format": "Generic netlist / Verilog",
+    "repo": "digama0/thinking-sand",
+    "commit": "5a24f5ea179ff5fbca24e01659f78a6330b846b1",
+    "classification": "external netlist analysis and axiom-backed Lean object",
+    "route": "Python netgraph/checkers analyze files; Lean netlist object supplied as axiom",
+    "semantics": "Conditional abstract netlist/Mealy theory",
+    "trust_and_limitations": "axiom theNetlist, nStateN, celltopoCert, among many external assumptions; no kernel-checked Yosys file import established",
+    "evidence_urls": "https://github.com/digama0/thinking-sand/blob/5a24f5ea179ff5fbca24e01659f78a6330b846b1/lean/ThinkingSand/L2/NetlistObject/Basic.lean#L15 | https://github.com/digama0/thinking-sand/blob/5a24f5ea179ff5fbca24e01659f78a6330b846b1/tools/netgraph.py#L1"
+  },
+  {
+    "format": "Verilog/SystemVerilog",
+    "repo": "soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean",
+    "commit": "38aad0ea8f4af85c5b470df0a2f114d4f29b6d48",
+    "classification": "LLM translation benchmark, not checked parser",
+    "route": "Prompted LLM emits Lean models under fixed schemas; compiler/schema checker",
+    "semantics": "Handwritten and generated model-level specs/proofs",
+    "trust_and_limitations": "Compilation and schema conformance are not verified Verilog semantics or translation correctness",
+    "evidence_urls": "https://github.com/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/blob/38aad0ea8f4af85c5b470df0a2f114d4f29b6d48/README.md#L1 | https://github.com/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/blob/38aad0ea8f4af85c5b470df0a2f114d4f29b6d48/check.py#L1 | https://github.com/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/blob/38aad0ea8f4af85c5b470df0a2f114d4f29b6d48/schema.md#L1"
+  },
+  {
+    "format": "BLIF / EBLIF write_blif",
+    "repo": "",
+    "commit": "",
+    "classification": "no source-verified Lean importer found in this survey",
+    "route": "See explicit repo/code query families and source scan",
+    "semantics": "No implementation established",
+    "trust_and_limitations": "Negative result bounded by index, query caps, candidate selection and public access; not a universal nonexistence proof",
+    "evidence_urls": "See search coverage and local-source-hits.json"
+  },
+  {
+    "format": "EDIF write_edif",
+    "repo": "",
+    "commit": "",
+    "classification": "no source-verified Lean importer found in this survey",
+    "route": "See explicit repo/code query families and source scan",
+    "semantics": "No implementation established",
+    "trust_and_limitations": "Negative result bounded by index, query caps, candidate selection and public access; not a universal nonexistence proof",
+    "evidence_urls": "See search coverage and local-source-hits.json"
+  },
+  {
+    "format": "JNY structural JSON write_jny",
+    "repo": "",
+    "commit": "",
+    "classification": "no source-verified Lean importer found in this survey",
+    "route": "See explicit repo/code query families and source scan",
+    "semantics": "No implementation established",
+    "trust_and_limitations": "Negative result bounded by index, query caps, candidate selection and public access; not a universal nonexistence proof",
+    "evidence_urls": "See search coverage and local-source-hits.json"
+  },
+  {
+    "format": "Intersynth write_intersynth",
+    "repo": "",
+    "commit": "",
+    "classification": "no source-verified Lean importer found in this survey",
+    "route": "See explicit repo/code query families and source scan",
+    "semantics": "No implementation established",
+    "trust_and_limitations": "Negative result bounded by index, query caps, candidate selection and public access; not a universal nonexistence proof",
+    "evidence_urls": "See search coverage and local-source-hits.json"
+  },
+  {
+    "format": "SimpleC write_simplec",
+    "repo": "",
+    "commit": "",
+    "classification": "no source-verified Lean importer found in this survey",
+    "route": "See explicit repo/code query families and source scan",
+    "semantics": "No implementation established",
+    "trust_and_limitations": "Negative result bounded by index, query caps, candidate selection and public access; not a universal nonexistence proof",
+    "evidence_urls": "See search coverage and local-source-hits.json"
+  },
+  {
+    "format": "Functional C++ write_functional_cxx",
+    "repo": "",
+    "commit": "",
+    "classification": "no source-verified Lean importer found in this survey",
+    "route": "See explicit repo/code query families and source scan",
+    "semantics": "No implementation established",
+    "trust_and_limitations": "Negative result bounded by index, query caps, candidate selection and public access; not a universal nonexistence proof",
+    "evidence_urls": "See search coverage and local-source-hits.json"
+  },
+  {
+    "format": "Yosys connection table write_table",
+    "repo": "",
+    "commit": "",
+    "classification": "no source-verified Lean importer found in this survey",
+    "route": "See explicit repo/code query families and source scan",
+    "semantics": "No implementation established",
+    "trust_and_limitations": "Negative result bounded by index, query caps, candidate selection and public access; not a universal nonexistence proof",
+    "evidence_urls": "See search coverage and local-source-hits.json"
+  }
+]

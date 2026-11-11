@@ -1,0 +1,570 @@
+[
+  {
+    "full_name": "lean-dojo/FloatLib",
+    "priority": 1,
+    "category": "exact_numeric_semantics_quantization",
+    "relevance": "Strong scalar foundation candidate for mixed binary32/binary64, integer conversion and quantized Linear arithmetic.",
+    "capability": "Executable backend refinement equations for add/sub/mul/div/sqrt/FMA; source AffineQuantizer implements exact-rational nearest-even clamp(round(x/scale)+zeroPoint), dequantization and error theorems. Documentation includes mixed precision, reduction trees and certifying elementary functions.",
+    "limitations": "Affine spec does not establish PT2E/XNNPACK dynamic per-channel kernel equivalence: runtime division/multiplication rounding, scale derivation, dtype promotion, clamp/tie order, accumulation and backend options need separate bridges. Wider deterministic transcendental approximations explicitly lack general error bounds; software spec/runtime correspondence still requires review.",
+    "evidence_urls": [
+      "https://github.com/lean-dojo/FloatLib/blob/main/FloatLib/Floats/ExecFloat/Proof/Arithmetic.lean",
+      "https://github.com/lean-dojo/FloatLib/blob/main/FloatLib/Numerics/Quantization/Affine.lean",
+      "https://github.com/lean-dojo/FloatLib/blob/main/README.md",
+      "https://github.com/lean-dojo/FloatLib/blob/main/FloatLib/Numerics/Quantization/Affine/Real.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "Rob23oba/lean-floats",
+    "priority": 1,
+    "category": "native_float_bridge",
+    "relevance": "Direct way to reason about Lean Float and Float32 after a Lean toolchain migration.",
+    "capability": "Source transfers algebraic/order/conversion lemmas via RealFloat.ofFloat and ofFloat32; README describes binary64/binary32 equivalences and Lean4.33 model definitions.",
+    "limitations": "Early library; proofs describe Lean logical Float.Model bodies, not an automatic PyTorch/XNNPACK/hardware contract. Toolchain version must be reconciled; no full transformer importer or quantization mapping found.",
+    "evidence_urls": [
+      "https://github.com/Rob23oba/lean-floats/blob/master/README.md",
+      "https://github.com/Rob23oba/lean-floats/blob/master/LeanFloats/Float/Basic.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "tunnellm/lean-ieee754",
+    "priority": 1,
+    "category": "floating_point_error_analysis",
+    "relevance": "Strong explicit f32/f64 dot-product and reduction numerical-error building blocks.",
+    "capability": "Source Native.Operations proves unpacked/word addition and multiplication refinement; documentation includes native Float/Float32 bridges, sequential/pairwise dot products, gradual-underflow bounds and executable range/accuracy certificates.",
+    "limitations": "Evaluation order and range hypotheses matter; sequential unfused dot theorems do not certify XNNPACK reduction schedules or FMA use. Authors disclose primarily LLM-written formalization and incomplete independent standard-correspondence review.",
+    "evidence_urls": [
+      "https://github.com/tunnellm/lean-ieee754/blob/main/README.md",
+      "https://github.com/tunnellm/lean-ieee754/blob/main/FP/Native/Operations.lean",
+      "https://github.com/tunnellm/lean-ieee754/blob/main/docs/Foundations.md"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "duckki/flare-lean",
+    "priority": 1,
+    "category": "python_numerics_certificate_workflow",
+    "relevance": "Promising restricted Python/NumPy-to-Lean numerical verification workflow, especially f64 approximations and source contracts.",
+    "capability": "Source native binary64 arithmetic bounds derive from Float.Model; Pipeline tracks finite native results versus an independent ideal real expression. Provider documentation covers bounded loops, selected arrays and optional Rust/Aeneas correspondence.",
+    "limitations": "Restricted profiles only; BLAS calls, arbitrary Python and combining profiles need new semantic bridges. Runtime/frontend/source mapping remains trusted. No documented arbitrary PyTorch/PT2E transformer importer or XNNPACK per-channel quantization proof.",
+    "evidence_urls": [
+      "https://github.com/duckki/flare-lean/blob/main/Flare/Binary64/Arithmetic.lean",
+      "https://github.com/duckki/flare-lean/blob/main/Flare/Binary64/Pipeline.lean",
+      "https://github.com/duckki/flare-lean/blob/main/docs/numerical-verification.md"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "TheNetherWatcher/ort-dequant-proof",
+    "priority": 1,
+    "category": "quantization_loop_memory_bridge",
+    "relevance": "Exceptionally relevant model for proving packed quantization kernels preserve indexing and arithmetic inputs.",
+    "capability": "DequantProof.lean proves int2/int4 bitvector decoding, per-axis/blocked write bijections, scale/zero-point indices, chunk bounds and disjoint output writes using kernel decide and arithmetic.",
+    "limitations": "ONNX Runtime sub-byte DequantizeLinear, not our int8/PT2E dynamic Linear. C++ loop model manually transcribed; float expression is not modeled, size_t no-overflow assumed. Useful proof architecture rather than ready end-to-end compiler theorem.",
+    "evidence_urls": [
+      "https://github.com/TheNetherWatcher/ort-dequant-proof/blob/main/README.md",
+      "https://github.com/TheNetherWatcher/ort-dequant-proof/blob/main/DequantProof.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "opencompl/fp-lean",
+    "priority": 2,
+    "category": "bitvector_floating_point",
+    "relevance": "Useful executable IEEE-style bitblasting library alongside SAT/bv_decide.",
+    "capability": "Inspected packed/unpacked multiplication with exceptional cases and rounding modes; SMT-LIB semantics explicitly separates structural NaN equality from IEEE comparison. Directory now includes addition/division/FMA/sqrt beyond older README's multiplication focus.",
+    "limitations": "Full semantic correctness and operation coverage must be audited individually; testing compatibility and a few algebraic theorems are not complete standard correspondence. Distinct from leanprover/fp-lean book. No PyTorch/XNNPACK frontend.",
+    "evidence_urls": [
+      "https://github.com/opencompl/fp-lean/blob/main/Fp/Multiplication.lean",
+      "https://github.com/opencompl/fp-lean/blob/main/Fp/SmtLibSemantics.lean",
+      "https://github.com/opencompl/fp-lean/blob/main/README.md"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "Beneficial-AI-Foundation/FloatSpec",
+    "priority": 2,
+    "category": "floating_point_foundations",
+    "relevance": "Flocq-style generic rounding/error and IEEE representations worth evaluating for mathematical specifications.",
+    "capability": "Source PrimFloat constructs a proof-carrying StandardFloat binary64 model, validity witnesses and representation/operation equivalence theorems; documented VCFloat-style error layer.",
+    "limitations": "README explicitly distinguishes no active sorry/project axioms from source-semantic fidelity and lists outstanding work. PrimFloat is a modeled Coq primitive binary64 layer, not evidence of an existing Lean native/PyTorch/host implementation bridge.",
+    "evidence_urls": [
+      "https://github.com/Beneficial-AI-Foundation/FloatSpec/blob/main/README.md",
+      "https://github.com/Beneficial-AI-Foundation/FloatSpec/blob/main/FloatSpec/src/IEEE754/PrimFloat.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "girving/interval",
+    "priority": 2,
+    "category": "certified_real_enclosures",
+    "relevance": "Mature-style conservative real enclosures for exp/log and approximation error proofs.",
+    "capability": "Software Floating with directed bounds, Interval and Approx typeclasses; inspected hyperbolic source proves sinh/cosh enclosures compositionally from exp.",
+    "limitations": "Conservative software interval results concern real functions; not bit-exact host tanh/exp or PyTorch inference. Need prove actual polynomial/kernel approximation and floating-point evaluation fit the interval contracts.",
+    "evidence_urls": [
+      "https://github.com/girving/interval/blob/main/README.md",
+      "https://github.com/girving/interval/blob/main/Interval/Interval/Hyperbolic.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "leanprover/KLR",
+    "priority": 2,
+    "category": "kernel_ir_memory_semantics",
+    "relevance": "Relevant IR and memory proof architecture for translating ML kernels into Lean models.",
+    "capability": "Python AST gather/tracing frontend; source semantics models tensor banks/chip memory, allocation and heap laws. FloatRep is parameterized; SymbolicFloat preserves exact operation order syntactically.",
+    "limitations": "Initial target NKI/Trainium, not FPGA or PyTorch PT2E. Inspected FloatRep only requires Add and symbolic expressions; an IEEE instantiation and frontend/compiler correspondence must be established separately.",
+    "evidence_urls": [
+      "https://github.com/leanprover/KLR/blob/main/README.md",
+      "https://github.com/leanprover/KLR/blob/main/KLR/Semantics/Memory.lean",
+      "https://github.com/leanprover/KLR/blob/main/KLR/Semantics/Float.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "leanprover/TensorLib",
+    "priority": 3,
+    "category": "tensor_execution_layout",
+    "relevance": "Useful dtype, slicing, byte serialization and executable tensor infrastructure.",
+    "capability": "Inspected Float.lean implements float format/FP8 conversion helpers; MixedPrec.lean supplies error-bound scaffolding for FP8.",
+    "limitations": "MixedPrec declares additional axioms including v=x+(v-x), cancellation and distributivity-like Float32 identities that are generally false for rounded IEEE arithmetic. Its numerical error theorems cannot be accepted as exact FP foundations without replacing these assumptions. Float source contains sorry warnings.",
+    "evidence_urls": [
+      "https://github.com/leanprover/TensorLib/blob/main/TensorLib/Float.lean",
+      "https://github.com/leanprover/TensorLib/blob/main/TensorLib/MixedPrec.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "leanprover/SHerLOC",
+    "priority": 3,
+    "category": "stablehlo_frontend_analysis",
+    "relevance": "Potential typed AST/frontend component if source pipeline exports StableHLO.",
+    "capability": "Parses generic StableHLO syntax to well-formed typed AST, reports unspecified/underspecified constructions; example JAX attention exporter.",
+    "limitations": "Program analysis and typing do not establish numerical equivalence or supply a PT2E/XNNPACK importer.",
+    "evidence_urls": [
+      "https://github.com/leanprover/SHerLOC/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "leanprover/TenCert",
+    "priority": 4,
+    "category": "umbrella_project",
+    "relevance": "Discovery pointer to ML kernel/tensor ecosystem.",
+    "capability": "Meta-package linking SHerLOC, KLR and TensorLib.",
+    "limitations": "No standalone end-to-end certification capability stated; assess components separately.",
+    "evidence_urls": [
+      "https://github.com/leanprover/TenCert/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "lambdaclass/supertensor_lean",
+    "priority": 3,
+    "category": "tensor_rewrite_optimizer",
+    "relevance": "Potential verified rewrite/e-graph patterns and C/Rust/CUDA generators.",
+    "capability": "Source pipeline and semantic-preservation framework inspected; rules use shape-indexed TensorExpr and CommRing mathematical semantics.",
+    "limitations": "CommRing associativity/distributivity are not IEEE FP laws. Lowering preservation inspected is kernelCount=opCount structural invariant, not numerical program equivalence; full semantic theorem is documented future work and witness obligations remain. README end-to-end claims must be read with these boundaries.",
+    "evidence_urls": [
+      "https://github.com/lambdaclass/supertensor_lean/blob/main/README.md",
+      "https://github.com/lambdaclass/supertensor_lean/blob/main/SuperTensor/Pipeline.lean",
+      "https://github.com/lambdaclass/supertensor_lean/blob/main/SuperTensor/Sigma/SemanticPreservation.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "ufmg-smite/lean-smt",
+    "priority": 2,
+    "category": "smt_proof_reconstruction",
+    "relevance": "Useful proof-producing automation for arithmetic/index/side-condition obligations.",
+    "capability": "smt sends goals to cvc5 and replays proof in Lean; source reconstructs terms/proofs and exposes unsupported proof steps as remaining goals. UF and linear integer/real arithmetic supported; BV experimental.",
+    "limitations": "Does not supply tensor/PyTorch or floating-point semantics. Reconstruct.native optionally adds compiler trust; unsupported steps must be closed, not treated as successful certification.",
+    "evidence_urls": [
+      "https://github.com/ufmg-smite/lean-smt/blob/main/README.md",
+      "https://github.com/ufmg-smite/lean-smt/blob/main/Smt/Reconstruct.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "input-output-hk/Lean-blaster",
+    "priority": 3,
+    "category": "smt_workflow_tooling",
+    "relevance": "Potential fast SMT counterexample/goal exploration and arithmetic simplification.",
+    "capability": "README describes optimizing Lean expressions, translating to SMT-LIB and interpreting Z3 sat/unsat/unknown.",
+    "limitations": "Documentation inspected did not establish proof reconstruction/checker boundary; do not equate external unsat result with kernel-checked proof. No source-specific semantics.",
+    "evidence_urls": [
+      "https://github.com/input-output-hk/Lean-blaster/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "leanprover-community/lean-auto",
+    "priority": 3,
+    "category": "automated_theorem_proving",
+    "relevance": "General monomorphization and prover interface could help kernel proof automation.",
+    "capability": "Native Duper integration reconstructs proofs; supports dependent/polymorphic inputs and SMT/TPTP invocation.",
+    "limitations": "README explicitly says SMT and TPTP invocation modes have no proof reconstruction. Not a numerical semantics or compiler correspondence library.",
+    "evidence_urls": [
+      "https://github.com/leanprover-community/lean-auto/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "AeneasVerif/aeneas",
+    "priority": 2,
+    "category": "rust_loop_memory_verification",
+    "relevance": "Promising for verifying an extracted Rust reference or generated kernel's control flow and buffers.",
+    "capability": "Rust MIR/LLBC functional translation with Lean backend, scalar/vector libraries and monadic proof tactics; mature Lean backend includes partial functions and termination proofs.",
+    "limitations": "Rust subset and translation trust boundary; some nested-loop control patterns, mutable-generic references, unsafe/concurrent code limited. Does not directly translate Python/PyTorch or prove FPGA hardware equivalence.",
+    "evidence_urls": [
+      "https://github.com/AeneasVerif/aeneas/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "lecopivo/SciLean",
+    "priority": 3,
+    "category": "scientific_computing_tensor_math",
+    "relevance": "Reusable array, AD and real-analysis/code-transformation ideas.",
+    "capability": "Scientific computing library with array types, automatic differentiation and numerical methods; README calls it early proof of concept. Inspected Float helpers and extern gamma functions.",
+    "limitations": "Runs native/FFI/OpenBLAS computations; no established PyTorch numeric semantic bridge from these files. Mathematical transformations alone do not certify rounded operations or backend reduction order.",
+    "evidence_urls": [
+      "https://github.com/lecopivo/SciLean/blob/master/README.md",
+      "https://github.com/lecopivo/SciLean/blob/master/SciLean/Data/Float.lean",
+      "https://github.com/lecopivo/SciLean/blob/master/SciLean/FFI/Float.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "dselsam/certigrad",
+    "priority": 3,
+    "category": "historical_neural_semantics",
+    "relevance": "Older useful reference for computation-graph specifications and compositional correctness methodology.",
+    "capability": "Lean stochastic backprop correctness, reparameterization/KL graph optimizations and tensor semantics.",
+    "limitations": "README explicitly axiomatizes background mathematics, proves infinite-precision real correctness while executing float, replaces primitives with Eigen at runtime; not machine arithmetic or current Lean4/PyTorch import.",
+    "evidence_urls": [
+      "https://github.com/dselsam/certigrad/blob/master/README.md",
+      "https://github.com/dselsam/certigrad/blob/master/src/certigrad/tensor.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "josephmckinsey/Flean",
+    "priority": 3,
+    "category": "historical_floating_point_foundations",
+    "relevance": "Preserve older candidate for reasoning about float format properties.",
+    "capability": "Lean4 floating-point model aimed at precision-parametric IEEE behavior.",
+    "limitations": "README proposes axiomatic interface to native Float, excludes performance/fixed point/intervals and points to flean2 rewrite. Not a current exact runtime bridge as documented.",
+    "evidence_urls": [
+      "https://github.com/josephmckinsey/Flean/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "josephmckinsey/flean2",
+    "priority": 3,
+    "category": "rounding_foundations",
+    "relevance": "Potential reusable order/rounding abstraction.",
+    "capability": "README lists rounder ring operations, floor/ceil, gluing and interval restrictions.",
+    "limitations": "Sparse development TODO documentation; source semantics/coverage not assessed. No runtime/PyTorch bridge established.",
+    "evidence_urls": [
+      "https://github.com/josephmckinsey/flean2/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "opencompl/HOLFloat-Lean",
+    "priority": 4,
+    "category": "floating_point_foundations",
+    "relevance": "Alternative real-oriented floating-point semantic development.",
+    "capability": "README follows Harrison's machine-checked theory of floating-point arithmetic.",
+    "limitations": "IEEE_theorem.lean consists only of TODO: Port Theorems. Numerical operations/semantics definitions should not be mistaken for established IEEE theorem coverage or native correspondence.",
+    "evidence_urls": [
+      "https://github.com/opencompl/HOLFloat-Lean/blob/main/README.md",
+      "https://github.com/opencompl/HOLFloat-Lean/blob/main/HOLFloat/IEEE_theorem.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "joehendrix/lean-sat-checker",
+    "priority": 3,
+    "category": "sat_certificate_checker",
+    "relevance": "Potential LRAT checking component for independently checking solver evidence.",
+    "capability": "Exploratory executable LRAT parser/checker with explicit clause satisfaction definitions and RUP/RAT processing.",
+    "limitations": "Inspected LRAT source has commented unfinished RUP soundness and final verification soundness theorem stubs. Treat as executable tooling/reference, not an established verified certificate checker; the commented sorry/admit placeholders are not active proof declarations.",
+    "evidence_urls": [
+      "https://github.com/joehendrix/lean-sat-checker/blob/main/README.md",
+      "https://github.com/joehendrix/lean-sat-checker/blob/main/SatChecker/LRat.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "hargoniX/crup",
+    "priority": 3,
+    "category": "sat_certificate_checker",
+    "relevance": "Low-star RUP checker worth preserving as reference/tooling.",
+    "capability": "Lean4 executable checks plain RUP proofs/derivation chains with exit status.",
+    "limitations": "Inspected single-file implementation contains parsing/unit-propagation/executable checking without formal checker soundness theorem. Plain RUP only and restrictive parsers. Lean implementation alone does not yield independently kernel-checked logical soundness.",
+    "evidence_urls": [
+      "https://github.com/hargoniX/crup/blob/main/README.md",
+      "https://github.com/hargoniX/crup/blob/main/crup.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "Antoine2718/LeanTorch-Cert",
+    "priority": 4,
+    "category": "neural_real_semantics_incomplete",
+    "relevance": "Close-looking PyTorch/FX exporter and shape-indexed network scaffold, but incomplete proof layer.",
+    "capability": "Source defines real-valued Linear/ReLU chain evaluation and interval propagation; documentation claims exact rational serialization and LibTorch FFI.",
+    "limitations": "Cert/Semantics.lean ibp_soundness_linear and Cert/Robustness.lean main robustness theorem use sorry. Tanh and LeakyReLU interval traversal pass input box through unchanged. Not ready sound numerical certification.",
+    "evidence_urls": [
+      "https://github.com/Antoine2718/LeanTorch-Cert/blob/main/README.md",
+      "https://github.com/Antoine2718/LeanTorch-Cert/blob/main/Cert/Semantics.lean",
+      "https://github.com/Antoine2718/LeanTorch-Cert/blob/main/Cert/Robustness.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "nktkt/leanx",
+    "priority": 4,
+    "category": "neural_verification_incomplete",
+    "relevance": "PyTorch-style API and bound-propagation implementation scaffold.",
+    "capability": "README describes IEEE32 runtime, graphs, IBP/CROWN and network examples.",
+    "limitations": "README explicitly admits most Float arithmetic theorems use sorry. Naming/paper reuse must not confuse it with official TorchLean or established semantic correspondence.",
+    "evidence_urls": [
+      "https://github.com/nktkt/leanx/blob/master/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "fire/onnx-lean-verify",
+    "priority": 4,
+    "category": "onnx_semantics_incomplete",
+    "relevance": "Potential ONNX catalog and operator metadata reference.",
+    "capability": "Documentation partitions executable/extensional semantics and reports elementary algebra/shape theorems.",
+    "limitations": "README explicitly says Conv/Pool/MatMul implementations have sorry placeholders despite executable operator count; no complete ONNX numerical implementation or GPTNeo certification.",
+    "evidence_urls": [
+      "https://github.com/fire/onnx-lean-verify/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "davorrunje/neural-network-proofs",
+    "priority": 4,
+    "category": "real_neural_expressivity",
+    "relevance": "Mathematical neural-network specification resource.",
+    "capability": "Universal approximation, monotonic network and convex network formalizations with documented axiom guards.",
+    "limitations": "Expressivity and real function properties, not execution equivalence, quantization, finite arithmetic or PyTorch import.",
+    "evidence_urls": [
+      "https://github.com/davorrunje/neural-network-proofs/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "Robby955/neural-horner",
+    "priority": 4,
+    "category": "algorithm_model_correspondence_example",
+    "relevance": "Illustrates useful separation between algorithm proof and learned implementation evidence.",
+    "capability": "Lean formalization of underlying modular integer Horner algorithm alongside trained recurrent network experiments.",
+    "limitations": "Finite trained-network accuracy and dynamic-width comparison are explicitly not universal neural-network equivalence proofs. No numerical compiler bridge.",
+    "evidence_urls": [
+      "https://github.com/Robby955/neural-horner/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "remimimimimi/lean4-numnn",
+    "priority": 4,
+    "category": "neural_implementation_demo",
+    "relevance": "Small older Lean neural implementation candidate retained for completeness.",
+    "capability": "README: simple neural network written from scratch.",
+    "limitations": "No proof/export/compiler or numerical semantics capability established from documentation.",
+    "evidence_urls": [
+      "https://github.com/remimimimimi/lean4-numnn/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "scasella/certified-int-narrowing",
+    "priority": 1,
+    "category": "inductor_integer_specialization",
+    "relevance": "Highly relevant captured-PyTorch-to-Lean pattern for integer width specialization of generated kernels.",
+    "capability": "Inspected NarrowGeneric.lean models i32/i64 promotion and wrapping, truncating division/remainder, masked loads and symbolic payloads; proves checker-accepted per-lane observable equality, definedness and argument packing with polynomial side conditions. Artifact records 25 accepted captured Inductor instances.",
+    "limitations": "Restricted 1D pointwise kernels, not arbitrary NN/PyTorch semantic import. Source extractor/exporter trusted with disclosed gaps; runtime guard installation assumed, original bounds/no aliasing assumed, TTIR→SASS/hardware trusted. Symbolic payload equality preserves same operations without proving their numeric semantics.",
+    "evidence_urls": [
+      "https://github.com/scasella/certified-int-narrowing/blob/main/README.md",
+      "https://github.com/scasella/certified-int-narrowing/blob/main/NarrowGeneric.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "scasella/veritile-narrow-cat",
+    "priority": 2,
+    "category": "triton_launch_index_proofs",
+    "relevance": "Relevant whole-launch coverage and generated integer-index optimization case study.",
+    "capability": "Source NarrowCat.lean includes generated expression from emitted Inductor source, hand-written exact wrapping semantics, observation equality and fitting lemmas. Fork adds launch exact coverage, memory placement and opt-in narrowing optimization.",
+    "limitations": "Fork-specific additions; same operations kept symbolically so no FP equivalence claim. Broader VeriTile algorithm channel uses reals/abstract rounding; IEEE/PTX/TMA/concurrency gaps remain externally checked. Runtime guards/toolchain correspondence trusted.",
+    "evidence_urls": [
+      "https://github.com/scasella/veritile-narrow-cat/blob/veritile-launch-checker/README.md",
+      "https://github.com/scasella/veritile-narrow-cat/blob/veritile-launch-checker/bench/optimizations/inductor_narrow/NarrowCat.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "TheNetherWatcher/lean-perf-proofs",
+    "priority": 1,
+    "category": "quantized_linear_integer_kernel",
+    "relevance": "Strong bitvector proof patterns for integer quantized Linear kernels and reference-loop correspondence.",
+    "capability": "VnniProof.lean proves int4 dequantization range, sign-bit flip, grouping-invariant modular dot, asymmetric and symmetric compensation equality for DA8W4 int8×int4 CPU kernels; includes previous ONNX dequant proof.",
+    "limitations": "Hand-transcribed model and PR tests tie source to compiled implementation. Float epilogue is not proved; assumes same IEEE operation sequence receives same integer. Weight bound≤15 and K≤2^15 ensure no signed-int32 overflow; not XNNPACK int8 dynamic per-channel implementation.",
+    "evidence_urls": [
+      "https://github.com/TheNetherWatcher/lean-perf-proofs/blob/main/README.md",
+      "https://github.com/TheNetherWatcher/lean-perf-proofs/blob/main/torchao-da8w4-vnni/README.md",
+      "https://github.com/TheNetherWatcher/lean-perf-proofs/blob/main/torchao-da8w4-vnni/VnniProof.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "Nielius/Tensorlayouts",
+    "priority": 3,
+    "category": "tensor_view_layout",
+    "relevance": "Useful mathematical basis for shape/stride view fusion and memory layout proofs.",
+    "capability": "Inspected ViewMerging.lean states necessary/sufficient view merge criterion and supporting index composition lemmas.",
+    "limitations": "Main proof dependencies and criterion contain sorry; offsets/masks absent. Positive Nat stride setting is narrower than general PyTorch views. No numerical/FP semantics.",
+    "evidence_urls": [
+      "https://github.com/Nielius/Tensorlayouts/blob/master/README.md",
+      "https://github.com/Nielius/Tensorlayouts/blob/master/Tensorlayouts/Merging/ViewMerging.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "lschiemanowski/ptxlean_relu_layer",
+    "priority": 1,
+    "category": "fp32_kernel_to_torchlean_bridge",
+    "relevance": "One of the clearest discovered concrete machine-arithmetic-to-neural-specification bridges.",
+    "capability": "SequentialBridge.lean proves modeled scalar PTX dense1024→3072+ReLU kernel returns and stores finite FP32 output within traceErrorBudget of actual upstream TorchLean Sequential real forward. RoundingError composes FloatLib half-ULP FMA and bias-add budgets; includes store frame property.",
+    "limitations": "Hand-modeled PTX program/source correspondence; fixed architecture and sequential fused accumulation. Requires KernelEntry and finite result at each trace site, budget depends on actual rounded trace; Python snippet illustrative, no PyTorch backend equality. FP32.Arithmetic interface alone is uncertified, main theorem specifically instantiates FloatLib.",
+    "evidence_urls": [
+      "https://github.com/lschiemanowski/ptxlean_relu_layer/blob/main/README.md",
+      "https://github.com/lschiemanowski/ptxlean_relu_layer/blob/main/ReluLayer/SequentialBridge.lean",
+      "https://github.com/lschiemanowski/ptxlean_relu_layer/blob/main/ReluLayer/PTX/RoundingError.lean",
+      "https://github.com/lschiemanowski/ptxlean_relu_layer/blob/main/ReluLayer/PTX/FP32.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "teal-sea/lean-checked-network",
+    "priority": 2,
+    "category": "trained_network_integer_real_certificates",
+    "relevance": "Useful full certificate closure and raw-weight table correspondence example for tiny transformers.",
+    "capability": "Inspected FinalRaw theorem assembles raw-weight/table identities, exhaustive integer margins and analytic real-softmax bound to prove all12769 mod113 inputs. Also ACAS real-semantics tree checking, constructed fixed-weight networks and recurrent adder examples.",
+    "limitations": "Integer weights at scale256 and exact-real softmax, explicitly not float checkpoint. Exhaustive tiny-model proof does not scale to GPTNeo. Generated proof modules live in release bundle; README discloses full source rebuild not established and ONNX importer audited/hash-pinned but unproved.",
+    "evidence_urls": [
+      "https://github.com/teal-sea/lean-checked-network/blob/main/README.md",
+      "https://github.com/teal-sea/lean-checked-network/blob/main/transformer/STATUS.md",
+      "https://github.com/teal-sea/lean-checked-network/blob/main/transformer/mathlib/TransformerBridge/FinalRaw.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "V-Sekai-archive/contract-stablehlo-mlx",
+    "priority": 3,
+    "category": "stablehlo_numeric_differential_tooling",
+    "relevance": "Useful backend fidelity experiment preserving operation order and approximation choices.",
+    "capability": "Lean StableHLO executor via MLX FFI and generated Metal kernels; source Pins.lean checks emitted Slang strings match pinned kernel text via native_decide. README reports bitwise CPU/GPU differential cases and exhaustive binary32 erff comparison.",
+    "limitations": "Pin equality is textual generation consistency, not theorem of numerical/compiled semantics. Bit-for-bit ggml claim supported by tests, not universal Lean numerical correspondence; Apple MLX/Metal specific and refuses unsupported paths.",
+    "evidence_urls": [
+      "https://github.com/V-Sekai-archive/contract-stablehlo-mlx/blob/main/README.md",
+      "https://github.com/V-Sekai-archive/contract-stablehlo-mlx/blob/main/StablehloMlx/Kernels/Pins.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "tomdif/eml-lean",
+    "priority": 4,
+    "category": "real_elementary_function_identities",
+    "relevance": "Indirect mathematical resource for elementary function relationships.",
+    "capability": "Mathlib formalization of generating calculator functions from exp(x)-log(y), real/complex identities and calculus.",
+    "limitations": "Exact mathematical identities, not approximation error or executable FP semantics. Two documented sorrys in unrelated HeckeAction; does not validate PyTorch exp/tanh or hardware kernels.",
+    "evidence_urls": [
+      "https://github.com/tomdif/eml-lean/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "sueszli/autograd.lean",
+    "priority": 3,
+    "category": "neural_autograd_implementation",
+    "relevance": "Small full neural implementation and proof/spec split reference.",
+    "capability": "Inspected Ops.lean has generic ordered matmul, Float forward/backward/attention kernels, shape/index theorems and mathlib derivative development; README separates mathematical kernel correctness from numerical parity testing to microGPT.",
+    "limitations": "Source explicitly runs Float but proves arithmetic on exact rationals; gradient/real correctness and tolerance parity are not FP backend equivalence. No captured PyTorch importer or quantization mapping.",
+    "evidence_urls": [
+      "https://github.com/sueszli/autograd.lean/blob/main/README",
+      "https://github.com/sueszli/autograd.lean/blob/main/Autograd/Ops.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "santacodes/gptlean",
+    "priority": 4,
+    "category": "gpt_named_low_specificity",
+    "relevance": "Name/keyword hit worth distinguishing from GPT inference semantics.",
+    "capability": "README describes formalizing GPTs and Python LeanDojo tactic suggestion.",
+    "limitations": "Inspected documentation mainly sketches complexity-class definitions; no model tensor execution, numeric correspondence or compiled GPT semantic theorem established. PyTorch mention concerns tactic-model training.",
+    "evidence_urls": [
+      "https://github.com/santacodes/gptlean/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "cpehle/tyr",
+    "priority": 3,
+    "category": "shape_typed_libtorch_runtime",
+    "relevance": "Direct Lean tensor runtime bindings and SafeTensors schema tooling.",
+    "capability": "Inspected Tyr/Torch.lean exposes shape-indexed tensors and extensive LibTorch operations; README has GPT examples, GPU parity suites and SafeTensors type provider.",
+    "limitations": "Core numeric operations are extern opaque LibTorch declarations; shape types and empirical parity do not verify foreign backend arithmetic, indexing or dispatch. Work in progress, no PT2E/XNNPACK semantics proof found.",
+    "evidence_urls": [
+      "https://github.com/cpehle/tyr/blob/main/Readme.md",
+      "https://github.com/cpehle/tyr/blob/main/Tyr/Torch.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "YosraBenTaarit/glimmer-verify",
+    "priority": 3,
+    "category": "kv_cache_memory_proof_experiment",
+    "relevance": "Potential future cache-memory bounds/isolation pattern; current user disables cache.",
+    "capability": "Documentation describes closed Nat-model predicated indexing bounds and paged KV isolation theorems, proof-repair experiments and differential runtime tests.",
+    "limitations": "Explicitly no bit-precise64-bit wrapping or verified C++/CUDA compiler correspondence. Small16-token indexer, experimental proof tasks; no neural numerics. Less relevant while use_cache=False.",
+    "evidence_urls": [
+      "https://github.com/YosraBenTaarit/glimmer-verify/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "swjng/lean-stablehlo",
+    "priority": 4,
+    "category": "cryptographic_stablehlo_extraction",
+    "relevance": "Indirect DSL/extraction architecture example.",
+    "capability": "Deep-embedded AST evaluates over ZMod, polynomial/Horner correctness and cryptographic KZG pipeline; serializer outputs StableHLO text.",
+    "limitations": "Cryptographic finite-field semantics, not tensor/FP StableHLO semantics. Unverified serializer; KZG depends on named extra pairing/group/primality assumptions. No PyTorch import equivalence.",
+    "evidence_urls": [
+      "https://github.com/swjng/lean-stablehlo/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "reussir-lang/lean-to-reussir",
+    "priority": 4,
+    "category": "lean_compiler_runtime_tooling",
+    "relevance": "Possible future Lean execution backend, indirect to Python-to-FPGA verification.",
+    "capability": "LCNF translator monomorphizes Lean programs and lowers to Reussir with RC memory reuse; documents runtime representation and test oracle.",
+    "limitations": "Implementation/compiler tooling; README provides no verified translation or source numeric correspondence theorem. Reussir/LLVM23 toolchain and runtime trusted, no PyTorch frontend.",
+    "evidence_urls": [
+      "https://github.com/reussir-lang/lean-to-reussir/blob/dev/README.md"
+    ],
+    "proof_status": "documentation_only"
+  }
+]

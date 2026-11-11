@@ -1,0 +1,105 @@
+{
+  "note": "Full downloaded text snapshots relocated out of research; compact selected source evidence and commit/blob/hash manifests retained.",
+  "moved": [
+    {
+      "repo": "Verilean/sparkle",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/Verilean__sparkle/source"
+    },
+    {
+      "repo": "athanor-ai/ibex-athanor",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/athanor-ai__ibex-athanor/source"
+    },
+    {
+      "repo": "shizhilvren/VLean",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/shizhilvren__VLean/source"
+    },
+    {
+      "repo": "Verilean/mechproof",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/Verilean__mechproof/source"
+    },
+    {
+      "repo": "digama0/thinking-sand",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/digama0__thinking-sand/source"
+    },
+    {
+      "repo": "thomasnormal/lean-surfaces",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/thomasnormal__lean-surfaces/source"
+    },
+    {
+      "repo": "ErosSph/leap",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/ErosSph__leap/source"
+    },
+    {
+      "repo": "muzafferkal/circuitprover-sv",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/muzafferkal__circuitprover-sv/source"
+    },
+    {
+      "repo": "Deicyde/assembly-to-physics",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/Deicyde__assembly-to-physics/source"
+    },
+    {
+      "repo": "unbalancedparentheses/verified-hardware-synthesis",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/unbalancedparentheses__verified-hardware-synthesis/source"
+    },
+    {
+      "repo": "ssghost/loom",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/ssghost__loom/source"
+    },
+    {
+      "repo": "rewire-hardware/ReWire",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/rewire-hardware__ReWire/source"
+    },
+    {
+      "repo": "philzook58/yosys-lean",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/philzook58__yosys-lean/source"
+    },
+    {
+      "repo": "formalized-si/redstone-verify",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/formalized-si__redstone-verify/source"
+    },
+    {
+      "repo": "WorlesEnric/pceq",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/WorlesEnric__pceq/source"
+    },
+    {
+      "repo": "nathsou/HDLean",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/nathsou__HDLean/source"
+    },
+    {
+      "repo": "Easyoakland/HDLean",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/Easyoakland__HDLean/source"
+    },
+    {
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/dfdgsdfg__ann-rtl-lean-poc/source"
+    },
+    {
+      "repo": "deepai-org/loom",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/deepai-org__loom/source"
+    },
+    {
+      "repo": "soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/soohyuk-cho__COS598B-Final-Project-Verilog-To-Lean/source"
+    },
+    {
+      "repo": "verilog-proof/VerilLean",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/verilog-proof__VerilLean/source"
+    },
+    {
+      "repo": "atvrager/Shoumei-RTL",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/atvrager__Shoumei-RTL/source"
+    },
+    {
+      "repo": "stephenneuendorffer/CircuitHDL",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/stephenneuendorffer__CircuitHDL/source"
+    },
+    {
+      "repo": "deepai-org/lean_hw",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/deepai-org__lean_hw/source"
+    },
+    {
+      "repo": "ErosSph/xiangshan2Lean",
+      "source_path": "/tmp/yosys-lean-2026-11-02-netlist-snapshots/ErosSph__xiangshan2Lean/source"
+    }
+  ]
+}

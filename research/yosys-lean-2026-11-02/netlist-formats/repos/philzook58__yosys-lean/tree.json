@@ -1,0 +1,1995 @@
+{
+  "sha": "9e575011c948f4ee6e422c7acfa5c453d9f8ebff",
+  "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/9e575011c948f4ee6e422c7acfa5c453d9f8ebff",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e4015a09c84294f1d604a35417f71ce6b26d7b7",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/3e4015a09c84294f1d604a35417f71ce6b26d7b7"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75392dbe1d3581f8080ba9db2c3d72a56d3ddc3b",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/75392dbe1d3581f8080ba9db2c3d72a56d3ddc3b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "905897acd47de046a08711a22b774dd736469b2b",
+      "size": 1780,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/905897acd47de046a08711a22b774dd736469b2b"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7212c7291371e6e45eacb30605cf6c531c032df",
+      "size": 137,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b7212c7291371e6e45eacb30605cf6c531c032df"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffe51b4aad78051a2d26318695b08389c177b87e",
+      "size": 4322,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ffe51b4aad78051a2d26318695b08389c177b87e"
+    },
+    {
+      "path": "Examples.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32527f94752e7b3f5b6425a8c14d1e9bdfa3fb45",
+      "size": 88,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/32527f94752e7b3f5b6425a8c14d1e9bdfa3fb45"
+    },
+    {
+      "path": "Examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25ba669432a3b9d2af399c443b15670044ea6a87",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/25ba669432a3b9d2af399c443b15670044ea6a87"
+    },
+    {
+      "path": "Examples/AXILProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62568e7c7b7c2e2f193b2e4f33bd73d56b0ab568",
+      "size": 7305,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/62568e7c7b7c2e2f193b2e4f33bd73d56b0ab568"
+    },
+    {
+      "path": "Examples/AdderProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d160b583a58ee0aa2a205e57a20834a769312da8",
+      "size": 591,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/d160b583a58ee0aa2a205e57a20834a769312da8"
+    },
+    {
+      "path": "Examples/AdderSupport.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ce64fd8b23f776c0ebbaef3ec03728a6f5fbb2e",
+      "size": 7064,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0ce64fd8b23f776c0ebbaef3ec03728a6f5fbb2e"
+    },
+    {
+      "path": "Examples/BarrelMultiplierProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cef1bff1ccddbe27882525b1e5ed277bb6f63c6c",
+      "size": 8575,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/cef1bff1ccddbe27882525b1e5ed277bb6f63c6c"
+    },
+    {
+      "path": "Examples/BugCounterexamples.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71b2a552c6b053e5509abeebca96073c10a080e0",
+      "size": 4436,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/71b2a552c6b053e5509abeebca96073c10a080e0"
+    },
+    {
+      "path": "Examples/BusCounterexamples.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "263e90658963b9e19bca134cd43d19b2b0103bfa",
+      "size": 4313,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/263e90658963b9e19bca134cd43d19b2b0103bfa"
+    },
+    {
+      "path": "Examples/CrcProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00b40f2d5cb25633ff0962f52922f0e0102ea104",
+      "size": 6736,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/00b40f2d5cb25633ff0962f52922f0e0102ea104"
+    },
+    {
+      "path": "Examples/Divider32Proofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0de91c683fcf668f29358f7cea50ce439ff44474",
+      "size": 15769,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0de91c683fcf668f29358f7cea50ce439ff44474"
+    },
+    {
+      "path": "Examples/DividerArithmetic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9978beb36e12230bfd699b1a6c5dc34794b078b3",
+      "size": 3220,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/9978beb36e12230bfd699b1a6c5dc34794b078b3"
+    },
+    {
+      "path": "Examples/DividerProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3cfda63a682e95a15450b56134e108a8b6a1bb0",
+      "size": 7358,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b3cfda63a682e95a15450b56134e108a8b6a1bb0"
+    },
+    {
+      "path": "Examples/DividerSignedProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8045bb15d13b9e7587edab3de645beb324de38b",
+      "size": 12287,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/d8045bb15d13b9e7587edab3de645beb324de38b"
+    },
+    {
+      "path": "Examples/ElasticProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58bae3626655762c677a40f8e9b08adde68321f0",
+      "size": 4774,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/58bae3626655762c677a40f8e9b08adde68321f0"
+    },
+    {
+      "path": "Examples/FormalTutorialProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1effb0de0fe7b92319c4d28c74942afb0fcadb5f",
+      "size": 5220,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1effb0de0fe7b92319c4d28c74942afb0fcadb5f"
+    },
+    {
+      "path": "Examples/Generated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7701cdfa3d147526f55eced97d029f035d4d06d",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/b7701cdfa3d147526f55eced97d029f035d4d06d"
+    },
+    {
+      "path": "Examples/Generated/BarrelMul.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "144ded532fd30b8533ac7a8586712ddf12b987ab",
+      "size": 9394,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/144ded532fd30b8533ac7a8586712ddf12b987ab"
+    },
+    {
+      "path": "Examples/Generated/BugCounter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c6b16e34f3b245980537ab79e79ad8ccb90a34b",
+      "size": 4521,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1c6b16e34f3b245980537ab79e79ad8ccb90a34b"
+    },
+    {
+      "path": "Examples/Generated/BugShift.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4afe03b39392e420198bfeda646ec27c549d04c3",
+      "size": 2642,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/4afe03b39392e420198bfeda646ec27c549d04c3"
+    },
+    {
+      "path": "Examples/Generated/BugStall.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52a5a86252467ae270a43324bec9ee763686faf0",
+      "size": 7424,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/52a5a86252467ae270a43324bec9ee763686faf0"
+    },
+    {
+      "path": "Examples/Generated/CrcByte.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d84dd7146220e994f5795fcdaef6da2316258de",
+      "size": 9180,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/3d84dd7146220e994f5795fcdaef6da2316258de"
+    },
+    {
+      "path": "Examples/Generated/CrcSerial.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4beb658966fdebfeff87cd2cb9abec5ad5b5a196",
+      "size": 4867,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/4beb658966fdebfeff87cd2cb9abec5ad5b5a196"
+    },
+    {
+      "path": "Examples/Generated/EQYFSM.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee501e152f38ae86025c94bebe89728fbbf50dfa",
+      "size": 9030,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ee501e152f38ae86025c94bebe89728fbbf50dfa"
+    },
+    {
+      "path": "Examples/Generated/EQYFSMBad.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05c1e7a40807a28eeabc429156d95f3c58f2cd7e",
+      "size": 9336,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/05c1e7a40807a28eeabc429156d95f3c58f2cd7e"
+    },
+    {
+      "path": "Examples/Generated/Elastic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6307ee63b7b8ce84c9ace1b7b1b97a9fd44b53b9",
+      "size": 4651,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/6307ee63b7b8ce84c9ace1b7b1b97a9fd44b53b9"
+    },
+    {
+      "path": "Examples/Generated/FixedCounter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e81a777a512343ac7cb60b07912bb329de4053c",
+      "size": 4524,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/6e81a777a512343ac7cb60b07912bb329de4053c"
+    },
+    {
+      "path": "Examples/Generated/FixedShift.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78770e8eb279426c67549e552d37f0a990cdce6f",
+      "size": 2160,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/78770e8eb279426c67549e552d37f0a990cdce6f"
+    },
+    {
+      "path": "Examples/Generated/FixedStall.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c7895cf40f755fb9d6a07075b1ae5bbe58def69",
+      "size": 7591,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0c7895cf40f755fb9d6a07075b1ae5bbe58def69"
+    },
+    {
+      "path": "Examples/Generated/Hack.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7cd5333d137f7a18ab639bf1acaa46ff2697b90",
+      "size": 9642,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c7cd5333d137f7a18ab639bf1acaa46ff2697b90"
+    },
+    {
+      "path": "Examples/Generated/IbexALU.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8302a07fa1894e179e24171b5c070f9fae88cea1",
+      "size": 39384,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/8302a07fa1894e179e24171b5c070f9fae88cea1"
+    },
+    {
+      "path": "Examples/Generated/NervAdd.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69db9f5ad8b9773afca74a7f9edc6d7875f7a4cf",
+      "size": 181791,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/69db9f5ad8b9773afca74a7f9edc6d7875f7a4cf"
+    },
+    {
+      "path": "Examples/Generated/NervAddView.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d2c2d5bad6c0cff4bcc0a4d7c0193b144f69e8f",
+      "size": 242032,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/8d2c2d5bad6c0cff4bcc0a4d7c0193b144f69e8f"
+    },
+    {
+      "path": "Examples/Generated/NervAddi.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8c565dc9fc207ab177c58488daf4968fdb7fa0f",
+      "size": 179080,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b8c565dc9fc207ab177c58488daf4968fdb7fa0f"
+    },
+    {
+      "path": "Examples/Generated/NervAddiBad.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fc0d3e20a347d829b24b28abe4b9ad9781bc008",
+      "size": 179958,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/7fc0d3e20a347d829b24b28abe4b9ad9781bc008"
+    },
+    {
+      "path": "Examples/Generated/NervFaultAlias.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a54d0d2a91f97a2a56e7721f6e3804a6fed13d4",
+      "size": 218954,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/4a54d0d2a91f97a2a56e7721f6e3804a6fed13d4"
+    },
+    {
+      "path": "Examples/Generated/NervFaultControl.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26a0dec27e56d31ae87a34208d56ae77e33356aa",
+      "size": 223318,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/26a0dec27e56d31ae87a34208d56ae77e33356aa"
+    },
+    {
+      "path": "Examples/Generated/NervFaultFetch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81315dc550e89ad8ff408cb6600087e7d6fe0ca5",
+      "size": 220900,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/81315dc550e89ad8ff408cb6600087e7d6fe0ca5"
+    },
+    {
+      "path": "Examples/Generated/NervFaultLoad.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "368c0a349c5dd9aec61041fcb1df27343f22c4ab",
+      "size": 224721,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/368c0a349c5dd9aec61041fcb1df27343f22c4ab"
+    },
+    {
+      "path": "Examples/Generated/NervFaultOperand.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b183db0fe8257ed8bf4a5e80671a1af3b4a8e5a7",
+      "size": 217155,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b183db0fe8257ed8bf4a5e80671a1af3b4a8e5a7"
+    },
+    {
+      "path": "Examples/Generated/NervFaultStall.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d40f484faa3e0af3daae9ad136ce797c51292afb",
+      "size": 219113,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/d40f484faa3e0af3daae9ad136ce797c51292afb"
+    },
+    {
+      "path": "Examples/Generated/NervFetch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5250f41533a0ef4d55fba6195f2a8589db59cead",
+      "size": 183837,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/5250f41533a0ef4d55fba6195f2a8589db59cead"
+    },
+    {
+      "path": "Examples/Generated/NervFetchBridge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b935a9c041fa1682b25cc07e86e365bdc380a38",
+      "size": 14664,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1b935a9c041fa1682b25cc07e86e365bdc380a38"
+    },
+    {
+      "path": "Examples/Generated/NervFetchView.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b97c5a5af1fc4c491ae02772deeabf5a514c0908",
+      "size": 244281,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b97c5a5af1fc4c491ae02772deeabf5a514c0908"
+    },
+    {
+      "path": "Examples/Generated/NervWriteBad.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b820bb0a5c2572c007f71d0a39bdb25500af3a4",
+      "size": 181067,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/2b820bb0a5c2572c007f71d0a39bdb25500af3a4"
+    },
+    {
+      "path": "Examples/Generated/Original.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bccb8f02cdca4e4a6492d3da65ba603433563655",
+      "size": 9248,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/bccb8f02cdca4e4a6492d3da65ba603433563655"
+    },
+    {
+      "path": "Examples/Generated/Prefix32.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e085dcefc580eb3aed54b4c7ae1970eb708c3fe",
+      "size": 48524,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1e085dcefc580eb3aed54b4c7ae1970eb708c3fe"
+    },
+    {
+      "path": "Examples/Generated/Prefix32Wires.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ae30bc6bcd361d9ac4842d612338a3e3eb834e7",
+      "size": 49004,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/9ae30bc6bcd361d9ac4842d612338a3e3eb834e7"
+    },
+    {
+      "path": "Examples/Generated/Ripple32.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01f4ba868616ac8f63a5558c977dd74a202d0059",
+      "size": 34810,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/01f4ba868616ac8f63a5558c977dd74a202d0059"
+    },
+    {
+      "path": "Examples/Generated/Ripple32Wires.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54d9c56dec07dff441860a443271cf159ea228d7",
+      "size": 35882,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/54d9c56dec07dff441860a443271cf159ea228d7"
+    },
+    {
+      "path": "Examples/Generated/SBYAccumulator.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b630ebccb1fb7bad999300e5b72c579eae3df18",
+      "size": 8810,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/6b630ebccb1fb7bad999300e5b72c579eae3df18"
+    },
+    {
+      "path": "Examples/Generated/SBYCounter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9336160f68a04bf51ccd19f00c143eb80b99e63",
+      "size": 3220,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b9336160f68a04bf51ccd19f00c143eb80b99e63"
+    },
+    {
+      "path": "Examples/Generated/SBYCover.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40f63d4e35a2b5aa42204aeafaba9e90ade64467",
+      "size": 3735,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/40f63d4e35a2b5aa42204aeafaba9e90ade64467"
+    },
+    {
+      "path": "Examples/Generated/SMTIncrement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1afdb82ab271550ba815db94ff16c692ec897eca",
+      "size": 5843,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1afdb82ab271550ba815db94ff16c692ec897eca"
+    },
+    {
+      "path": "Examples/Generated/ShiftAdd.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40abe70cec7de31efcff5ea34802fd71a3bdf9e7",
+      "size": 7821,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/40abe70cec7de31efcff5ea34802fd71a3bdf9e7"
+    },
+    {
+      "path": "Examples/Generated/TwoCycle.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1ae01e1a9146a4cd2c1890f9efc1e005d94028e",
+      "size": 10997,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e1ae01e1a9146a4cd2c1890f9efc1e005d94028e"
+    },
+    {
+      "path": "Examples/Generated/ZipAXIL.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad56af2487921df6eaa1235729ab4d8b621f5c81",
+      "size": 19163,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ad56af2487921df6eaa1235729ab4d8b621f5c81"
+    },
+    {
+      "path": "Examples/Generated/ZipAXILBad.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62f1ec70c0c483fcb843aec3770bf99e9c77bff8",
+      "size": 13085,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/62f1ec70c0c483fcb843aec3770bf99e9c77bff8"
+    },
+    {
+      "path": "Examples/Generated/ZipAXILBadFormal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9dd85cc9e1d3ff922cfe5b238e9750bf372f9b1",
+      "size": 137782,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/a9dd85cc9e1d3ff922cfe5b238e9750bf372f9b1"
+    },
+    {
+      "path": "Examples/Generated/ZipAXILFormal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51e8cc056c220a0200c818357302b793f914b69e",
+      "size": 143349,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/51e8cc056c220a0200c818357302b793f914b69e"
+    },
+    {
+      "path": "Examples/Generated/ZipDiv32.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3fc8d191cb5d72ec32d6e5cc56399e823a32970",
+      "size": 20755,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e3fc8d191cb5d72ec32d6e5cc56399e823a32970"
+    },
+    {
+      "path": "Examples/Generated/ZipDiv4.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b28914776a0ef96d7ae820b3b6fd3aeb20eafdf5",
+      "size": 20180,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b28914776a0ef96d7ae820b3b6fd3aeb20eafdf5"
+    },
+    {
+      "path": "Examples/Generated/ZipDivFormal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3363b0f74f42f6bc6064a8b0ed83873a2e21d14c",
+      "size": 56004,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/3363b0f74f42f6bc6064a8b0ed83873a2e21d14c"
+    },
+    {
+      "path": "Examples/Generated/ZipSkid.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81645ef75b204d0b446759ba3bc47f1120725f7",
+      "size": 4688,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c81645ef75b204d0b446759ba3bc47f1120725f7"
+    },
+    {
+      "path": "Examples/Generated/ZipSkidBad.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a9ae4faa5c57c74814efcdc3e3592242a7b192c",
+      "size": 4967,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/8a9ae4faa5c57c74814efcdc3e3592242a7b192c"
+    },
+    {
+      "path": "Examples/Generated/ZipSkidBadFormal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2abd4014ef853a446bb67021f055c5bb2e632765",
+      "size": 32796,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/2abd4014ef853a446bb67021f055c5bb2e632765"
+    },
+    {
+      "path": "Examples/Generated/ZipSkidFormal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b9d48542de8e8ea46fa11dc0b2d32ef97c8e0f2",
+      "size": 33385,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/4b9d48542de8e8ea46fa11dc0b2d32ef97c8e0f2"
+    },
+    {
+      "path": "Examples/HackProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fca1a3f63140852a8f69b6a762f8c87680d51c10",
+      "size": 5449,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fca1a3f63140852a8f69b6a762f8c87680d51c10"
+    },
+    {
+      "path": "Examples/HackSpec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d49893faffd5050b156ea36714520125904b09d",
+      "size": 1905,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/5d49893faffd5050b156ea36714520125904b09d"
+    },
+    {
+      "path": "Examples/IbexALUProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcfd450455edac86f3befd502ff5a7c790d2f4d8",
+      "size": 3364,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/dcfd450455edac86f3befd502ff5a7c790d2f4d8"
+    },
+    {
+      "path": "Examples/KernelBV.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "336002795293d8f36708c7cba172ebaccf25b897",
+      "size": 613,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/336002795293d8f36708c7cba172ebaccf25b897"
+    },
+    {
+      "path": "Examples/MultiplierProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a24ce53fb0a0b90aca80ea6f2caa2a4cb0f085b",
+      "size": 8215,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1a24ce53fb0a0b90aca80ea6f2caa2a4cb0f085b"
+    },
+    {
+      "path": "Examples/NervArchitecture.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdfbf299bdae20e8beffbf0e8504fdaa2e55a154",
+      "size": 11240,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fdfbf299bdae20e8beffbf0e8504fdaa2e55a154"
+    },
+    {
+      "path": "Examples/NervArchitectureCounterexample.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f852eba648c7933937868e7f96a9e4eb774dfdf9",
+      "size": 1404,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/f852eba648c7933937868e7f96a9e4eb774dfdf9"
+    },
+    {
+      "path": "Examples/NervArithmetic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd238c7f28dd73023e175cb2d22b2c1d2671cb66",
+      "size": 7727,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fd238c7f28dd73023e175cb2d22b2c1d2671cb66"
+    },
+    {
+      "path": "Examples/NervControl.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "483d39abc49a225e2b3335898a5a2a22f339705c",
+      "size": 7763,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/483d39abc49a225e2b3335898a5a2a22f339705c"
+    },
+    {
+      "path": "Examples/NervControlDecode.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c258c76f778daef9311683085497e7078828c11d",
+      "size": 12647,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c258c76f778daef9311683085497e7078828c11d"
+    },
+    {
+      "path": "Examples/NervControlExample.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "403a7bcbb5a140bf102c05be8c260baf6adfee30",
+      "size": 5859,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/403a7bcbb5a140bf102c05be8c260baf6adfee30"
+    },
+    {
+      "path": "Examples/NervControlProgram.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a4f3506d9adaf42198a138220ad4216bdfb24f0",
+      "size": 5470,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0a4f3506d9adaf42198a138220ad4216bdfb24f0"
+    },
+    {
+      "path": "Examples/NervCounterexamples.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa28d338a568ca491427999546524d9784b2c7a8",
+      "size": 878,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fa28d338a568ca491427999546524d9784b2c7a8"
+    },
+    {
+      "path": "Examples/NervFaultAlias.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e59902566f911022924133171af1752b0f822586",
+      "size": 1118,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e59902566f911022924133171af1752b0f822586"
+    },
+    {
+      "path": "Examples/NervFaultControls.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2e91d07f11c28a9b60852838f8046bce14c2a7b",
+      "size": 1051,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/f2e91d07f11c28a9b60852838f8046bce14c2a7b"
+    },
+    {
+      "path": "Examples/NervFaultFetch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce166a84ceace61d796dda6d0e8bded45bf30c31",
+      "size": 1115,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ce166a84ceace61d796dda6d0e8bded45bf30c31"
+    },
+    {
+      "path": "Examples/NervFaultLoad.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2c29efa5ee4568feec3854714bb3e286b16a05a",
+      "size": 1114,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b2c29efa5ee4568feec3854714bb3e286b16a05a"
+    },
+    {
+      "path": "Examples/NervFaultOperand.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b7b4ae6056218197b5eae4873a52391783d4894",
+      "size": 1126,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/4b7b4ae6056218197b5eae4873a52391783d4894"
+    },
+    {
+      "path": "Examples/NervFaultStall.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe8ef0eae1019b3477b738c1f89ab962cbd92cdb",
+      "size": 1118,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fe8ef0eae1019b3477b738c1f89ab962cbd92cdb"
+    },
+    {
+      "path": "Examples/NervFaults",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b1b1d1c8e3f73cecee56e19d229b860accc1304",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/1b1b1d1c8e3f73cecee56e19d229b860accc1304"
+    },
+    {
+      "path": "Examples/NervFaults/Control.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21f84bb390473ea00e3c27f4e3b6905126da077a",
+      "size": 926,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/21f84bb390473ea00e3c27f4e3b6905126da077a"
+    },
+    {
+      "path": "Examples/NervFaults/ControlAlias.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "561d4ef094e5cc8b35531bda833414990c8a12de",
+      "size": 558,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/561d4ef094e5cc8b35531bda833414990c8a12de"
+    },
+    {
+      "path": "Examples/NervFaults/ControlFetch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e12f7c3d49257aabf73804532ba473bf439b6ffc",
+      "size": 558,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e12f7c3d49257aabf73804532ba473bf439b6ffc"
+    },
+    {
+      "path": "Examples/NervFaults/ControlLoad.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb0410b40ea63b4b4ff60f6c6c5928b063446226",
+      "size": 556,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/eb0410b40ea63b4b4ff60f6c6c5928b063446226"
+    },
+    {
+      "path": "Examples/NervFaults/ControlOperand.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d611c61aa6a1a24733338b09949add5066140124",
+      "size": 562,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/d611c61aa6a1a24733338b09949add5066140124"
+    },
+    {
+      "path": "Examples/NervFaults/ControlStall.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df0cf26ee57385e2334f47da24d53182347d4f23",
+      "size": 558,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/df0cf26ee57385e2334f47da24d53182347d4f23"
+    },
+    {
+      "path": "Examples/NervFetch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "002620d55792f1a133428ecdfd05b78d250ac6fb",
+      "size": 3524,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/002620d55792f1a133428ecdfd05b78d250ac6fb"
+    },
+    {
+      "path": "Examples/NervImmediate.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4a7ba432eb985c8189690ddb176632566d4dec2",
+      "size": 5122,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b4a7ba432eb985c8189690ddb176632566d4dec2"
+    },
+    {
+      "path": "Examples/NervProgram.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "361701240f7daa8967916e70c74e53fecf4e92ac",
+      "size": 8464,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/361701240f7daa8967916e70c74e53fecf4e92ac"
+    },
+    {
+      "path": "Examples/NervProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80889c1e74e4d78a7b22a3ac727a293e1852bbf2",
+      "size": 3192,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/80889c1e74e4d78a7b22a3ac727a293e1852bbf2"
+    },
+    {
+      "path": "Examples/NervRegisters.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a881398f7469ef6665815a2ecf05dedf2b4e4498",
+      "size": 4167,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/a881398f7469ef6665815a2ecf05dedf2b4e4498"
+    },
+    {
+      "path": "Examples/NervSafety.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a85056610a8a49b7cd5b051f52352039aa61a3e",
+      "size": 14978,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0a85056610a8a49b7cd5b051f52352039aa61a3e"
+    },
+    {
+      "path": "Examples/Prefix32Carries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bc384191250be1356b36cb17d542ca2314fb6d0",
+      "size": 18857,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0bc384191250be1356b36cb17d542ca2314fb6d0"
+    },
+    {
+      "path": "Examples/Prefix32Proofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2c7c54c961f347f53675985b7aa38e9ad1b61bb",
+      "size": 5863,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/a2c7c54c961f347f53675985b7aa38e9ad1b61bb"
+    },
+    {
+      "path": "Examples/RepairProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62996867a70a28de5afb9433844aac82aa73c46e",
+      "size": 3844,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/62996867a70a28de5afb9433844aac82aa73c46e"
+    },
+    {
+      "path": "Examples/ReplayCounterexamples.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed593a6e58544ef7b034a1c4c10775d8f673cd48",
+      "size": 4169,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ed593a6e58544ef7b034a1c4c10775d8f673cd48"
+    },
+    {
+      "path": "Examples/Ripple32Carries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93a04d7c5bae60df4ac4b1aba64dcdb2e3b24561",
+      "size": 20285,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/93a04d7c5bae60df4ac4b1aba64dcdb2e3b24561"
+    },
+    {
+      "path": "Examples/Ripple32Proofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be03d023b81d5d6bcbc0584bd843c99df7a1e97c",
+      "size": 6332,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/be03d023b81d5d6bcbc0584bd843c99df7a1e97c"
+    },
+    {
+      "path": "Examples/SBYAccumulatorProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2571345ab2bb6f15e9e55b9e171ecdc9cb50ef3b",
+      "size": 4896,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/2571345ab2bb6f15e9e55b9e171ecdc9cb50ef3b"
+    },
+    {
+      "path": "Examples/SBYCoverProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6b7dc9d6d05510c215237935ff6fc8637e46667",
+      "size": 1185,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/f6b7dc9d6d05510c215237935ff6fc8637e46667"
+    },
+    {
+      "path": "Examples/SkidFormalProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f8ec98bb92c7fff9227813b3587957cd5bb04ae",
+      "size": 4436,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/3f8ec98bb92c7fff9227813b3587957cd5bb04ae"
+    },
+    {
+      "path": "Examples/SkidProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcc80bc7823ae62fc4cf414fc62c5bd6edc3955b",
+      "size": 3026,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fcc80bc7823ae62fc4cf414fc62c5bd6edc3955b"
+    },
+    {
+      "path": "Examples/TwoCycleProofs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c38446b94e039a00ea5d01b7067d2ab1d5ae25a8",
+      "size": 11410,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c38446b94e039a00ea5d01b7067d2ab1d5ae25a8"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f280fbcaead086eab3faf3940518a744e5c978e8",
+      "size": 1098,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/f280fbcaead086eab3faf3940518a744e5c978e8"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba375aec39c32edd439aa2cf97b5744d0b3c72c8",
+      "size": 5145,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ba375aec39c32edd439aa2cf97b5744d0b3c72c8"
+    },
+    {
+      "path": "ROADMAP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e43d81da4ab9f4e175d6bda493f765c71be48f10",
+      "size": 9460,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e43d81da4ab9f4e175d6bda493f765c71be48f10"
+    },
+    {
+      "path": "YosysLean.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8b688dfef5c46bcd4d54730f208dec5e56198bd",
+      "size": 23,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c8b688dfef5c46bcd4d54730f208dec5e56198bd"
+    },
+    {
+      "path": "YosysLean",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62428d0052e5c1d8ef5d765adc27d462c282b1fc",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/62428d0052e5c1d8ef5d765adc27d462c282b1fc"
+    },
+    {
+      "path": "YosysLean/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8122509443caa50b4907522e73bb6ec5e5b5f2a4",
+      "size": 4183,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/8122509443caa50b4907522e73bb6ec5e5b5f2a4"
+    },
+    {
+      "path": "YosysLean/BitVec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e3e9fcca8bc94bf406419e637ad3ce57353957a",
+      "size": 730,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/2e3e9fcca8bc94bf406419e637ad3ce57353957a"
+    },
+    {
+      "path": "YosysLean/Check.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7049bd686005a09cff90a5247df06e2b0ffa48a",
+      "size": 831,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/f7049bd686005a09cff90a5247df06e2b0ffa48a"
+    },
+    {
+      "path": "YosysLean/Formal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc7ab8284448cc17b4959f9296fd03e3aa126d36",
+      "size": 2635,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fc7ab8284448cc17b4959f9296fd03e3aa126d36"
+    },
+    {
+      "path": "YosysLean/Tactic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11cf430efb903c7496e499dc4c71201f1864d7e5",
+      "size": 732,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/11cf430efb903c7496e499dc4c71201f1864d7e5"
+    },
+    {
+      "path": "YosysLean/Trace.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e04a67e723c910fe6bb6c67f6d9732c22338aff",
+      "size": 4765,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/9e04a67e723c910fe6bb6c67f6d9732c22338aff"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1097d876e3b20750bbecb204f23b2ddfb5c1d8f1",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/1097d876e3b20750bbecb204f23b2ddfb5c1d8f1"
+    },
+    {
+      "path": "docs/build.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "164bb8a2e8393379162b04d16b22137076348490",
+      "size": 2371,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/164bb8a2e8393379162b04d16b22137076348490"
+    },
+    {
+      "path": "docs/confidence.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "837fb869c0e45719b5472230d9c50f2d084e4e84",
+      "size": 10692,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/837fb869c0e45719b5472230d9c50f2d084e4e84"
+    },
+    {
+      "path": "docs/divider.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d768dac1af6e8ef793d7b6d8aec1e17e6e7b70d7",
+      "size": 2457,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/d768dac1af6e8ef793d7b6d8aec1e17e6e7b70d7"
+    },
+    {
+      "path": "docs/proving.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b063f812da9f9fbb185dea7309a337b909012b65",
+      "size": 9991,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b063f812da9f9fbb185dea7309a337b909012b65"
+    },
+    {
+      "path": "docs/semantics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1006de0c75506cf4f701c7ead5a0495f4dc4a2c8",
+      "size": 5012,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1006de0c75506cf4f701c7ead5a0495f4dc4a2c8"
+    },
+    {
+      "path": "docs/validation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "746fbe07cc8f64f80a91fd63eb4adc80c816801f",
+      "size": 6681,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/746fbe07cc8f64f80a91fd63eb4adc80c816801f"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aff54b23d7b05694d615b814c5bc1dc802445fce",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/aff54b23d7b05694d615b814c5bc1dc802445fce"
+    },
+    {
+      "path": "examples/bird",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1e423e58c82f7752e14c0da2253318beb48b32f",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/e1e423e58c82f7752e14c0da2253318beb48b32f"
+    },
+    {
+      "path": "examples/bird/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6804d55ecbc52f78712b09439fb062028a68c158",
+      "size": 2284,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/6804d55ecbc52f78712b09439fb062028a68c158"
+    },
+    {
+      "path": "examples/bird/crc8_sync.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e99cb91b40371bb7afd5ee0ab0a8a2a80b50376",
+      "size": 716,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1e99cb91b40371bb7afd5ee0ab0a8a2a80b50376"
+    },
+    {
+      "path": "examples/bird/crc_byte.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "988972a552d4206f31de322574623de96355ba2d",
+      "size": 549,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/988972a552d4206f31de322574623de96355ba2d"
+    },
+    {
+      "path": "examples/bird/ripple.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bac6efcab47fad29b28d1ea372dd514df7df6679",
+      "size": 465,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/bac6efcab47fad29b28d1ea372dd514df7df6679"
+    },
+    {
+      "path": "examples/bird/upstream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5611a9fc7f643a401575d46f10743b442cd4ea7c",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/5611a9fc7f643a401575d46f10743b442cd4ea7c"
+    },
+    {
+      "path": "examples/bird/upstream/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "examples/bird/upstream/crc8.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "011275628265122dee6227e385be5a84d4755481",
+      "size": 653,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/011275628265122dee6227e385be5a84d4755481"
+    },
+    {
+      "path": "examples/bird/upstream/sklansky_adder_32.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eebd81b5944c36a77543103cdda1747e9a81223",
+      "size": 9347,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/4eebd81b5944c36a77543103cdda1747e9a81223"
+    },
+    {
+      "path": "examples/bugs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29f78d4f4638fa90b89855726c05e7d03676d376",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/29f78d4f4638fa90b89855726c05e7d03676d376"
+    },
+    {
+      "path": "examples/bugs/Counter.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab2677f2ee267bd8b0cf7427c85be4ea76b1185f",
+      "size": 602,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ab2677f2ee267bd8b0cf7427c85be4ea76b1185f"
+    },
+    {
+      "path": "examples/bugs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ada375c9dfd2be8aab0cf6268595fc4ba2ee97aa",
+      "size": 7105,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ada375c9dfd2be8aab0cf6268595fc4ba2ee97aa"
+    },
+    {
+      "path": "examples/bugs/ShiftWidth.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61e4344aed7c17427f7d12425e6ce286e52e5f87",
+      "size": 428,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/61e4344aed7c17427f7d12425e6ce286e52e5f87"
+    },
+    {
+      "path": "examples/bugs/StallBuffer.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ace30aa3f0d8eae403bf0c279e0c713953e65ef1",
+      "size": 948,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ace30aa3f0d8eae403bf0c279e0c713953e65ef1"
+    },
+    {
+      "path": "examples/bugs/counter.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa44d6ec81e922ab26a2a0aa401243c457fd301",
+      "size": 61,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/4aa44d6ec81e922ab26a2a0aa401243c457fd301"
+    },
+    {
+      "path": "examples/bugs/shift.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8cc55ce14929c179f4c9178517d58eee7c0646d",
+      "size": 34,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c8cc55ce14929c179f4c9178517d58eee7c0646d"
+    },
+    {
+      "path": "examples/bugs/stall.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "709337e50f63f25f09827fa5f417a6a2389970f6",
+      "size": 67,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/709337e50f63f25f09827fa5f417a6a2389970f6"
+    },
+    {
+      "path": "examples/bus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7886af427fa0eb806ea70197b6ccc75f35470e8c",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/7886af427fa0eb806ea70197b6ccc75f35470e8c"
+    },
+    {
+      "path": "examples/bus/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fee1e41b4a106cfc951cc37f8a58933e2d910358",
+      "size": 4544,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fee1e41b4a106cfc951cc37f8a58933e2d910358"
+    },
+    {
+      "path": "examples/bus/sources.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f2ced07795e55328f8a1b79129810041758c90c",
+      "size": 523,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/5f2ced07795e55328f8a1b79129810041758c90c"
+    },
+    {
+      "path": "examples/bus/upstream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "994602aff029f33c0952c676299fbe77d9e3b214",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/994602aff029f33c0952c676299fbe77d9e3b214"
+    },
+    {
+      "path": "examples/bus/upstream/easyaxil.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c939bb834508ead21755ed7450c8c118039b4155",
+      "size": 13945,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c939bb834508ead21755ed7450c8c118039b4155"
+    },
+    {
+      "path": "examples/bus/upstream/faxil_register.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fe9789a958e420a59b6f3690c7f9ac6adc96e79",
+      "size": 4995,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/7fe9789a958e420a59b6f3690c7f9ac6adc96e79"
+    },
+    {
+      "path": "examples/bus/upstream/faxil_slave.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4a8767b06d8b0c4ddd15d9c495702365b70226d",
+      "size": 24663,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e4a8767b06d8b0c4ddd15d9c495702365b70226d"
+    },
+    {
+      "path": "examples/bus/upstream/skidbuffer.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e567844d98a66fa489930a03bf214308faa8535",
+      "size": 12571,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0e567844d98a66fa489930a03bf214308faa8535"
+    },
+    {
+      "path": "examples/elastic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b553471b9a60e53b0a7b4a81030d1c5a414eae3a",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/b553471b9a60e53b0a7b4a81030d1c5a414eae3a"
+    },
+    {
+      "path": "examples/elastic/Pipeline.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5bd1950ca2f4efe0394bd62569035156515268a",
+      "size": 611,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e5bd1950ca2f4efe0394bd62569035156515268a"
+    },
+    {
+      "path": "examples/elastic/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "706505a8a77d75de4b2c37ddc98e19df38f90e20",
+      "size": 1133,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/706505a8a77d75de4b2c37ddc98e19df38f90e20"
+    },
+    {
+      "path": "examples/formal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8d95b5525e1a3245141b0673997118345ff325e",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/a8d95b5525e1a3245141b0673997118345ff325e"
+    },
+    {
+      "path": "examples/formal/EqyFSMHarness.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "800bd9dacf0e2a2c614a5dd88201ad4a764a2564",
+      "size": 486,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/800bd9dacf0e2a2c614a5dd88201ad4a764a2564"
+    },
+    {
+      "path": "examples/formal/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7b9342fd222027756c8ab8757263ff767b9e600",
+      "size": 8799,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e7b9342fd222027756c8ab8757263ff767b9e600"
+    },
+    {
+      "path": "examples/formal/sources.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e05e6929603d4e345211008390a36aa529ac30bf",
+      "size": 2375,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e05e6929603d4e345211008390a36aa529ac30bf"
+    },
+    {
+      "path": "examples/formal/upstream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae87c7536b590b4a12540fda771424e8d5d2a668",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/ae87c7536b590b4a12540fda771424e8d5d2a668"
+    },
+    {
+      "path": "examples/formal/upstream/eqy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "319ce14ebb788533fe7e03f3a4e0050aaca6b3ad",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/319ce14ebb788533fe7e03f3a4e0050aaca6b3ad"
+    },
+    {
+      "path": "examples/formal/upstream/eqy/COPYING",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55f0274c158524c715dc565aaa6c1a113a13229d",
+      "size": 926,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/55f0274c158524c715dc565aaa6c1a113a13229d"
+    },
+    {
+      "path": "examples/formal/upstream/eqy/fsm.eqy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "881016df9cf47a222fa253c39f9d21696f2099ae",
+      "size": 248,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/881016df9cf47a222fa253c39f9d21696f2099ae"
+    },
+    {
+      "path": "examples/formal/upstream/eqy/fsm.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05ebe2c21d902429427f2502fa9e90cd45bb9061",
+      "size": 881,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/05ebe2c21d902429427f2502fa9e90cd45bb9061"
+    },
+    {
+      "path": "examples/formal/upstream/sby",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7c684e8467adf3ab747a35a24415eb0091845a4",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/c7c684e8467adf3ab747a35a24415eb0091845a4"
+    },
+    {
+      "path": "examples/formal/upstream/sby/COPYING",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eba1da22eb50fca103909fe4488beb8c16c8adca",
+      "size": 830,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/eba1da22eb50fca103909fe4488beb8c16c8adca"
+    },
+    {
+      "path": "examples/formal/upstream/sby/cover.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "478ce36bdef2f447e9285baa5983a979b391f5ee",
+      "size": 274,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/478ce36bdef2f447e9285baa5983a979b391f5ee"
+    },
+    {
+      "path": "examples/formal/upstream/sby/demo.sby",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e8fdcf733b06b659fe328ad8239fc5bb84bdf9e",
+      "size": 110,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0e8fdcf733b06b659fe328ad8239fc5bb84bdf9e"
+    },
+    {
+      "path": "examples/formal/upstream/sby/demo.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fea915bff55e5fd208cb2293503d6596482fde0f",
+      "size": 294,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fea915bff55e5fd208cb2293503d6596482fde0f"
+    },
+    {
+      "path": "examples/formal/upstream/sby/prove.sby",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a83fcd554b64eab8bff6426b49e8a2b187d29f20",
+      "size": 109,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/a83fcd554b64eab8bff6426b49e8a2b187d29f20"
+    },
+    {
+      "path": "examples/formal/upstream/sby/prove.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72b353e80818854a7916d85e8118a7d6b91a4f65",
+      "size": 830,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/72b353e80818854a7916d85e8118a7d6b91a4f65"
+    },
+    {
+      "path": "examples/formal/upstream/smtbmc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "989dec43608ca380890c919fdcabb1926c2b0c97",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/989dec43608ca380890c919fdcabb1926c2b0c97"
+    },
+    {
+      "path": "examples/formal/upstream/smtbmc/COPYING",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3ca45b42e35a5d026ab7cab9b80fa34a3a089ca",
+      "size": 777,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/a3ca45b42e35a5d026ab7cab9b80fa34a3a089ca"
+    },
+    {
+      "path": "examples/formal/upstream/smtbmc/demo1.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "567dde1483e9307cd188bbb31875c8045da9e294",
+      "size": 451,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/567dde1483e9307cd188bbb31875c8045da9e294"
+    },
+    {
+      "path": "examples/hack",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1770314de961c1a49e463076eb88d67f8af83c08",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/1770314de961c1a49e463076eb88d67f8af83c08"
+    },
+    {
+      "path": "examples/hack/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22f9a7297c6c1b4a3cb3a941be5f7f175f6cc72d",
+      "size": 4648,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/22f9a7297c6c1b4a3cb3a941be5f7f175f6cc72d"
+    },
+    {
+      "path": "examples/hack/original",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d90f8a6647550a87c88ab0730f83512f6a1f9a0",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/7d90f8a6647550a87c88ab0730f83512f6a1f9a0"
+    },
+    {
+      "path": "examples/hack/original/CPU.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24012cc1f7d46f33acf80fee135fe56c6874d9cb",
+      "size": 2513,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/24012cc1f7d46f33acf80fee135fe56c6874d9cb"
+    },
+    {
+      "path": "examples/hack/original/PC.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76e00c6bd735962808b1a40fd968aa6bf4faeeeb",
+      "size": 271,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/76e00c6bd735962808b1a40fd968aa6bf4faeeeb"
+    },
+    {
+      "path": "examples/hack/original/alu.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a717fae5b0b104222ce66279dd861a26a968452",
+      "size": 685,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/9a717fae5b0b104222ce66279dd861a26a968452"
+    },
+    {
+      "path": "examples/hack/repaired",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1e3ae74d23c3acb828d70eb7bcd4bc9e226a604",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/c1e3ae74d23c3acb828d70eb7bcd4bc9e226a604"
+    },
+    {
+      "path": "examples/hack/repaired/CPU.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2a4ffaa83a30743893f3a2cb98e6f65b35346bf",
+      "size": 2538,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e2a4ffaa83a30743893f3a2cb98e6f65b35346bf"
+    },
+    {
+      "path": "examples/hack/two-cycle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e7c3de2a0f5acf4d8613d2652b5a029af4822ba",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/5e7c3de2a0f5acf4d8613d2652b5a029af4822ba"
+    },
+    {
+      "path": "examples/hack/two-cycle/CPU.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bceb298737b815f7967a77d78c9695223dd811c7",
+      "size": 1400,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/bceb298737b815f7967a77d78c9695223dd811c7"
+    },
+    {
+      "path": "examples/ibex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82667e1d2b53f7200318c13b58635b37fb57711d",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/82667e1d2b53f7200318c13b58635b37fb57711d"
+    },
+    {
+      "path": "examples/ibex/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec7fcd485c07689def53e8eaf0814a85c51ae03",
+      "size": 2387,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0ec7fcd485c07689def53e8eaf0814a85c51ae03"
+    },
+    {
+      "path": "examples/ibex/converted",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5142f1cc762d1cee2cb675f5c0a14c5e92ba5a95",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/5142f1cc762d1cee2cb675f5c0a14c5e92ba5a95"
+    },
+    {
+      "path": "examples/ibex/converted/ibex_alu.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "806b7697ed47c67b3b0c1206df1529df5b0e411a",
+      "size": 19947,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/806b7697ed47c67b3b0c1206df1529df5b0e411a"
+    },
+    {
+      "path": "examples/ibex/sources.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2be2420315f0b49ff2eb7bb7a331a3404d4ef210",
+      "size": 1146,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/2be2420315f0b49ff2eb7bb7a331a3404d4ef210"
+    },
+    {
+      "path": "examples/ibex/upstream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "efde635207283be942418596e58f354635510420",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/efde635207283be942418596e58f354635510420"
+    },
+    {
+      "path": "examples/ibex/upstream/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "examples/ibex/upstream/ibex_alu.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "635506cad77967f273f497691bbbf34a5651da28",
+      "size": 30480,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/635506cad77967f273f497691bbbf34a5651da28"
+    },
+    {
+      "path": "examples/ibex/upstream/ibex_pkg.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fa205fa9c431f684df4064f3fb10e5a7ae9684f",
+      "size": 24000,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/5fa205fa9c431f684df4064f3fb10e5a7ae9684f"
+    },
+    {
+      "path": "examples/multiplier",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ce752c6d8cc1035ce3738c2bc9c1284c3af38627",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/ce752c6d8cc1035ce3738c2bc9c1284c3af38627"
+    },
+    {
+      "path": "examples/multiplier/BarrelMul.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03e0ce620947ca5c30b2c84f248ac03bd86f792a",
+      "size": 1020,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/03e0ce620947ca5c30b2c84f248ac03bd86f792a"
+    },
+    {
+      "path": "examples/multiplier/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "feb27cadaad67f6f479e977a4a25ed3737f32f44",
+      "size": 4385,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/feb27cadaad67f6f479e977a4a25ed3737f32f44"
+    },
+    {
+      "path": "examples/multiplier/ShiftAdd.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67316c96ed58207d06e4d228521e32514302cf39",
+      "size": 791,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/67316c96ed58207d06e4d228521e32514302cf39"
+    },
+    {
+      "path": "examples/riscv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a70c6ddaf261dc982779ca4de325d5122c30bc0f",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/a70c6ddaf261dc982779ca4de325d5122c30bc0f"
+    },
+    {
+      "path": "examples/riscv/NervFaultHarness.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "439e61b1dc50cf3a55d7a26145da2800f57ac573",
+      "size": 4513,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/439e61b1dc50cf3a55d7a26145da2800f57ac573"
+    },
+    {
+      "path": "examples/riscv/NervFetchHarness.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8227ce24505c1ffedbff18bc9320c4a0120cdcfd",
+      "size": 940,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/8227ce24505c1ffedbff18bc9320c4a0120cdcfd"
+    },
+    {
+      "path": "examples/riscv/NervHarness.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6daa7bc2ab86ada154ebd2a7ddccc881d997e2d3",
+      "size": 818,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/6daa7bc2ab86ada154ebd2a7ddccc881d997e2d3"
+    },
+    {
+      "path": "examples/riscv/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e65187f670bee57b1de4e95a32cd13e2938653a7",
+      "size": 8793,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/e65187f670bee57b1de4e95a32cd13e2938653a7"
+    },
+    {
+      "path": "examples/riscv/sources.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bac861e99de344d522850955fc9b9a75c2507544",
+      "size": 1226,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/bac861e99de344d522850955fc9b9a75c2507544"
+    },
+    {
+      "path": "examples/riscv/upstream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e68bb8b6ea462727d04432664810263c108bf88",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/0e68bb8b6ea462727d04432664810263c108bf88"
+    },
+    {
+      "path": "examples/riscv/upstream/nerv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3db5bd629cf32ed7377762a4d0562bac254f968c",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/3db5bd629cf32ed7377762a4d0562bac254f968c"
+    },
+    {
+      "path": "examples/riscv/upstream/nerv/nerv.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cbed8ec7accc10019a9276b8b039a3715df5d85",
+      "size": 16236,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/3cbed8ec7accc10019a9276b8b039a3715df5d85"
+    },
+    {
+      "path": "examples/riscv/upstream/riscv-formal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ce478f31797e4518e2e075c8b396bdc1de63186",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/1ce478f31797e4518e2e075c8b396bdc1de63186"
+    },
+    {
+      "path": "examples/riscv/upstream/riscv-formal/insn_add.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c8fe3bcbe0273660775aa22de6ae792a9765cd2",
+      "size": 2375,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0c8fe3bcbe0273660775aa22de6ae792a9765cd2"
+    },
+    {
+      "path": "examples/riscv/upstream/riscv-formal/insn_addi.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e2dd9264f696e8a4a58e5df3921457d96366883",
+      "size": 2314,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/5e2dd9264f696e8a4a58e5df3921457d96366883"
+    },
+    {
+      "path": "examples/riscv/upstream/riscv-formal/rvfi_insn_check.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab2482b608c1d1f2c9ec2de6ac658765552d4e45",
+      "size": 8763,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/ab2482b608c1d1f2c9ec2de6ac658765552d4e45"
+    },
+    {
+      "path": "examples/riscv/upstream/riscv-formal/rvfi_macros.vh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "179f9ddde5d0f784d04e4666eb48975dfb54f724",
+      "size": 780023,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/179f9ddde5d0f784d04e4666eb48975dfb54f724"
+    },
+    {
+      "path": "examples/zipcpu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27e5e496db8d94f4194d0bf0eefdc42d94c58500",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/27e5e496db8d94f4194d0bf0eefdc42d94c58500"
+    },
+    {
+      "path": "examples/zipcpu/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e95e305462a9c1763a468a8e367e61ee0ddb424",
+      "size": 10531,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/2e95e305462a9c1763a468a8e367e61ee0ddb424"
+    },
+    {
+      "path": "examples/zipcpu/UnsignedContract.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0c5b2f747b94bd84482e6ae06dadc2d104a2389",
+      "size": 1395,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c0c5b2f747b94bd84482e6ae06dadc2d104a2389"
+    },
+    {
+      "path": "examples/zipcpu/upstream",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2adca8871d313b269d66e50cd686080a1dd547d6",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/2adca8871d313b269d66e50cd686080a1dd547d6"
+    },
+    {
+      "path": "examples/zipcpu/upstream/COPYING",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "examples/zipcpu/upstream/div.sby",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d78c23c09a98e6de8527008310d9ded36faa1f5",
+      "size": 224,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1d78c23c09a98e6de8527008310d9ded36faa1f5"
+    },
+    {
+      "path": "examples/zipcpu/upstream/div.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e5f5ef0d06c9fa071b624ca85278b109cda5528",
+      "size": 16517,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/5e5f5ef0d06c9fa071b624ca85278b109cda5528"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9460435d8b7f26e2dcad363e2212c91081ec649d",
+      "size": 145,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/9460435d8b7f26e2dcad363e2212c91081ec649d"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
+      "size": 25,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/a6aff065db2882c535684f8c5bcd4f16e9a23915"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1a122e602afdb4a076b58d8215f6d5834269779",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/d1a122e602afdb4a076b58d8215f6d5834269779"
+    },
+    {
+      "path": "scripts/benchmark_divider.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d422b139c31ce4dd79348e8749209a2ef0a46af",
+      "size": 4712,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0d422b139c31ce4dd79348e8749209a2ef0a46af"
+    },
+    {
+      "path": "scripts/check_lean.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5c3d9bed81d45ed8a92932dab5b75a6e910b0cf",
+      "size": 6465,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b5c3d9bed81d45ed8a92932dab5b75a6e910b0cf"
+    },
+    {
+      "path": "scripts/convert_ibex.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a40592ba92e851bc1b8ed155aea6bec34e33013a",
+      "size": 1174,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/a40592ba92e851bc1b8ed155aea6bec34e33013a"
+    },
+    {
+      "path": "scripts/export.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "028cfccf9784f500174b5e017237e16414dad62d",
+      "size": 14720,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/028cfccf9784f500174b5e017237e16414dad62d"
+    },
+    {
+      "path": "scripts/nerv_faults.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e3669ac35a0fceb2e4f0115e53805eeb577e1a8",
+      "size": 3802,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/6e3669ac35a0fceb2e4f0115e53805eeb577e1a8"
+    },
+    {
+      "path": "scripts/nerv_fetch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db0f71fb69fa28460e472128715d3bd34a05274f",
+      "size": 2649,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/db0f71fb69fa28460e472128715d3bd34a05274f"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3f9f5d0ad93768cf1b5d1aee9986ecbc20b3971",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/e3f9f5d0ad93768cf1b5d1aee9986ecbc20b3971"
+    },
+    {
+      "path": "src/lean.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "942cb755e71f016c293d924398693e915b016b06",
+      "size": 23248,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/942cb755e71f016c293d924398693e915b016b06"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6901be5d396e24d666be5763e2b600eed38d003c",
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/trees/6901be5d396e24d666be5763e2b600eed38d003c"
+    },
+    {
+      "path": "tests/bug_examples.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7358552019cfb43b82f694192ff4976cc6cbf095",
+      "size": 3804,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/7358552019cfb43b82f694192ff4976cc6cbf095"
+    },
+    {
+      "path": "tests/bus.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0533b720e4a4967f97859f4223eb5a2aa7364817",
+      "size": 2786,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/0533b720e4a4967f97859f4223eb5a2aa7364817"
+    },
+    {
+      "path": "tests/checker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d918c05a07d29873c4c1b2aeef3746fafc217fc3",
+      "size": 5181,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/d918c05a07d29873c4c1b2aeef3746fafc217fc3"
+    },
+    {
+      "path": "tests/choices.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b35751f5c7bbc137380bd9400c94b8d08d882308",
+      "size": 274,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b35751f5c7bbc137380bd9400c94b8d08d882308"
+    },
+    {
+      "path": "tests/cpu.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1237f8116d761c1af12285b951635ae72a507a96",
+      "size": 10639,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/1237f8116d761c1af12285b951635ae72a507a96"
+    },
+    {
+      "path": "tests/divider.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a7e4d07e7cc91e617d0c546e952511cf6c207bf",
+      "size": 7448,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/9a7e4d07e7cc91e617d0c546e952511cf6c207bf"
+    },
+    {
+      "path": "tests/formal_tutorials.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a043565a1f05fbd94377bbf01ff92e80e12a5c9",
+      "size": 2663,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/7a043565a1f05fbd94377bbf01ff92e80e12a5c9"
+    },
+    {
+      "path": "tests/multiplier.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cbacb5514f4d70a017491112396b01ff07a5daa",
+      "size": 5544,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/2cbacb5514f4d70a017491112396b01ff07a5daa"
+    },
+    {
+      "path": "tests/named.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b07632cc8e62b4e432385abbe82866d2afc19695",
+      "size": 5066,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/b07632cc8e62b4e432385abbe82866d2afc19695"
+    },
+    {
+      "path": "tests/nerv_faults.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7429a4e324d7fb077f4a7e93d20de5a20a1c947",
+      "size": 9756,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/c7429a4e324d7fb077f4a7e93d20de5a20a1c947"
+    },
+    {
+      "path": "tests/nerv_program.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9025c8c8bea7a914bc72e702c25c456778eaab7",
+      "size": 14546,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/a9025c8c8bea7a914bc72e702c25c456778eaab7"
+    },
+    {
+      "path": "tests/ops.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df88255ef5d711f0a3f7fb369fb4ea6d821597a1",
+      "size": 966,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/df88255ef5d711f0a3f7fb369fb4ea6d821597a1"
+    },
+    {
+      "path": "tests/properties.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "259903ff69cc02ae090ca61de6ee00befd161be6",
+      "size": 2328,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/259903ff69cc02ae090ca61de6ee00befd161be6"
+    },
+    {
+      "path": "tests/run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5168b6a1c01c81a452f3bc3785cccf4d9123554a",
+      "size": 22614,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/5168b6a1c01c81a452f3bc3785cccf4d9123554a"
+    },
+    {
+      "path": "tests/smt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23e735d95f9f10adce81d39b4adfe03f010e3163",
+      "size": 10993,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/23e735d95f9f10adce81d39b4adfe03f010e3163"
+    },
+    {
+      "path": "tests/stream_examples.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d20ee0ee936c90494664aa323e496fd4bc07821f",
+      "size": 10830,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/d20ee0ee936c90494664aa323e496fd4bc07821f"
+    },
+    {
+      "path": "tests/two_cycle.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc5295d385776541a2f78799ce484863704ceb67",
+      "size": 3491,
+      "url": "https://api.github.com/repos/philzook58/yosys-lean/git/blobs/fc5295d385776541a2f78799ce484863704ceb67"
+    }
+  ],
+  "truncated": false
+}

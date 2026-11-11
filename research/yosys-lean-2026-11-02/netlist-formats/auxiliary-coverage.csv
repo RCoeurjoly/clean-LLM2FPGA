@@ -1,0 +1,29 @@
+command,formats,result
+dump,RTLIL text,Alias of an inventoried backend; inherits relevant mapping.
+json,Yosys JSON,Alias of an inventoried backend; inherits relevant mapping.
+jny,JNY JSON,Alias of an inventoried backend; inherits relevant mapping.
+fsm_export,KISS2,No independent auxiliary-format importer audit; do not infer absence from this row.
+fsm_recode,Synopsys Formality set_fsm_* script | Yosys .fsm/.map encoding map,No independent auxiliary-format importer audit; do not infer absence from this row.
+show,Graphviz DOT | Graphviz render target such as SVG or PostScript,No independent auxiliary-format importer audit; do not infer absence from this row.
+viz,Graphviz DOT | Graphviz rendered graphics,No independent auxiliary-format importer audit; do not infer absence from this row.
+sat,DIMACS CNF | VCD | WaveJSON,Solver/certificate/witness formats require separate schema and soundness checks; generic Lean SAT/SMT libraries alone are insufficient.
+sim,VCD | FST | AIGER witness AIW | JSON summary,No independent auxiliary-format importer audit; do not infer absence from this row.
+fst2tb,Verilog testbench | text stimulus .txt,Verilog/SV emitted text inherits restricted-reader caveats; other sidecars not independently verified.
+test_autotb,Verilog testbench | runtime textual samples,Verilog/SV emitted text inherits restricted-reader caveats; other sidecars not independently verified.
+icell_liberty,Liberty .lib,No independent auxiliary-format importer audit; do not infer absence from this row.
+abc9_ops,ABC LUT library | ABC box library,No independent auxiliary-format importer audit; do not infer absence from this row.
+synthprop,synthesizable-property port mapping text,No independent auxiliary-format importer audit; do not infer absence from this row.
+linecoverage,LCOV | text report,No independent auxiliary-format importer audit; do not infer absence from this row.
+stat,statistics JSON | text report,No independent auxiliary-format importer audit; do not infer absence from this row.
+help,text reference | cell model Verilog | command-documentation JSON | cell-documentation JSON,Verilog/SV emitted text inherits restricted-reader caveats; other sidecars not independently verified.
+select,plain-text object selection list,No independent auxiliary-format importer audit; do not infer absence from this row.
+mutate,Yosys mutate-command script | source-tag list,No independent auxiliary-format importer audit; do not infer absence from this row.
+qbfsat,SMT-LIBv2 problem | plain-text solution assignments,Solver/certificate/witness formats require separate schema and soundness checks; generic Lean SAT/SMT libraries alone are insufficient.
+opensta / sdc_expand,"expanded SDC constraints | temporary Tcl script, Verilog netlist and Liberty interfaces",No independent auxiliary-format importer audit; do not infer absence from this row.
+verific,Verilog netlist dump | Verilog/SystemVerilog pretty print | VHDL pretty print,Verilog/SV emitted text inherits restricted-reader caveats; other sidecars not independently verified.
+write_file,arbitrary copied/heredoc text,No independent auxiliary-format importer audit; do not infer absence from this row.
+tee,captured command log text,No independent auxiliary-format importer audit; do not infer absence from this row.
+driver flags,plain-text log | Makefile dependency file | performance JSON,No independent auxiliary-format importer audit; do not infer absence from this row.
+debug/reduction/synthesis wrappers,"already-counted RTLIL or Verilog, plus logs/scripts",No independent auxiliary-format importer audit; do not infer absence from this row.
+yosys-smtbmc,VCD | Yosys witness YW JSON | Verilog testbench | SMTC constraints | SMT-LIBv2 solver transcript,Solver/certificate/witness formats require separate schema and soundness checks; generic Lean SAT/SMT libraries alone are insufficient.
+yosys-witness,Yosys witness YW JSON | AIGER witness AIW | text trace/statistics,Solver/certificate/witness formats require separate schema and soundness checks; generic Lean SAT/SMT libraries alone are insufficient.

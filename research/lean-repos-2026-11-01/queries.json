@@ -1,0 +1,3530 @@
+[
+  {
+    "query": "language:lean",
+    "page": 1,
+    "total_count": 20705,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2000-01-01T00:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 20705,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2000-01-01T00:00:00Z..2013-06-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 1
+  },
+  {
+    "query": "language:lean created:2013-06-02T00:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 20704,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 1,
+    "total_count": 569,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 3,
+    "total_count": 569,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 2,
+    "total_count": 569,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 4,
+    "total_count": 569,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 6,
+    "total_count": 569,
+    "incomplete_results": false,
+    "returned": 69
+  },
+  {
+    "query": "language:lean created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 5,
+    "total_count": 569,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 20135,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2023-06-25T17:59:59Z",
+    "page": 1,
+    "total_count": 1831,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+    "page": 1,
+    "total_count": 716,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+    "page": 2,
+    "total_count": 716,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+    "page": 3,
+    "total_count": 716,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+    "page": 4,
+    "total_count": 716,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+    "page": 5,
+    "total_count": 716,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+    "page": 8,
+    "total_count": 716,
+    "incomplete_results": false,
+    "returned": 16
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+    "page": 7,
+    "total_count": 716,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2020-02-16T12:00:00Z..2021-10-21T02:59:59Z",
+    "page": 6,
+    "total_count": 716,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2021-10-21T03:00:00Z..2023-06-25T17:59:59Z",
+    "page": 1,
+    "total_count": 1115,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2021-10-21T03:00:00Z..2022-08-23T10:29:59Z",
+    "page": 1,
+    "total_count": 493,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2021-10-21T03:00:00Z..2022-08-23T10:29:59Z",
+    "page": 2,
+    "total_count": 493,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2021-10-21T03:00:00Z..2022-08-23T10:29:59Z",
+    "page": 4,
+    "total_count": 493,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2021-10-21T03:00:00Z..2022-08-23T10:29:59Z",
+    "page": 5,
+    "total_count": 493,
+    "incomplete_results": false,
+    "returned": 93
+  },
+  {
+    "query": "language:lean created:2021-10-21T03:00:00Z..2022-08-23T10:29:59Z",
+    "page": 3,
+    "total_count": 493,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2022-08-23T10:30:00Z..2023-06-25T17:59:59Z",
+    "page": 1,
+    "total_count": 622,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2022-08-23T10:30:00Z..2023-06-25T17:59:59Z",
+    "page": 2,
+    "total_count": 622,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2022-08-23T10:30:00Z..2023-06-25T17:59:59Z",
+    "page": 4,
+    "total_count": 622,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2022-08-23T10:30:00Z..2023-06-25T17:59:59Z",
+    "page": 5,
+    "total_count": 622,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2022-08-23T10:30:00Z..2023-06-25T17:59:59Z",
+    "page": 3,
+    "total_count": 622,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2022-08-23T10:30:00Z..2023-06-25T17:59:59Z",
+    "page": 7,
+    "total_count": 622,
+    "incomplete_results": false,
+    "returned": 22
+  },
+  {
+    "query": "language:lean created:2022-08-23T10:30:00Z..2023-06-25T17:59:59Z",
+    "page": 6,
+    "total_count": 622,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-06-25T18:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 18304,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-06-25T18:00:00Z..2025-02-27T08:59:59Z",
+    "page": 1,
+    "total_count": 2419,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-06-25T18:00:00Z..2024-04-27T01:29:59Z",
+    "page": 1,
+    "total_count": 1077,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-06-25T18:00:00Z..2023-11-25T21:44:59Z",
+    "page": 1,
+    "total_count": 484,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-06-25T18:00:00Z..2023-11-25T21:44:59Z",
+    "page": 2,
+    "total_count": 484,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-06-25T18:00:00Z..2023-11-25T21:44:59Z",
+    "page": 4,
+    "total_count": 484,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-06-25T18:00:00Z..2023-11-25T21:44:59Z",
+    "page": 5,
+    "total_count": 484,
+    "incomplete_results": false,
+    "returned": 84
+  },
+  {
+    "query": "language:lean created:2023-06-25T18:00:00Z..2023-11-25T21:44:59Z",
+    "page": 3,
+    "total_count": 484,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-11-25T21:45:00Z..2024-04-27T01:29:59Z",
+    "page": 1,
+    "total_count": 593,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-11-25T21:45:00Z..2024-04-27T01:29:59Z",
+    "page": 2,
+    "total_count": 593,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-11-25T21:45:00Z..2024-04-27T01:29:59Z",
+    "page": 5,
+    "total_count": 593,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-11-25T21:45:00Z..2024-04-27T01:29:59Z",
+    "page": 3,
+    "total_count": 593,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2023-11-25T21:45:00Z..2024-04-27T01:29:59Z",
+    "page": 6,
+    "total_count": 593,
+    "incomplete_results": false,
+    "returned": 93
+  },
+  {
+    "query": "language:lean created:2023-11-25T21:45:00Z..2024-04-27T01:29:59Z",
+    "page": 4,
+    "total_count": 593,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-04-27T01:30:00Z..2025-02-27T08:59:59Z",
+    "page": 1,
+    "total_count": 1342,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-04-27T01:30:00Z..2024-09-27T05:14:59Z",
+    "page": 1,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-04-27T01:30:00Z..2024-09-27T05:14:59Z",
+    "page": 3,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-04-27T01:30:00Z..2024-09-27T05:14:59Z",
+    "page": 2,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-04-27T01:30:00Z..2024-09-27T05:14:59Z",
+    "page": 5,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-04-27T01:30:00Z..2024-09-27T05:14:59Z",
+    "page": 7,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 10
+  },
+  {
+    "query": "language:lean created:2024-04-27T01:30:00Z..2024-09-27T05:14:59Z",
+    "page": 6,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-04-27T01:30:00Z..2024-09-27T05:14:59Z",
+    "page": 4,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+    "page": 1,
+    "total_count": 732,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+    "page": 3,
+    "total_count": 732,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+    "page": 4,
+    "total_count": 732,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+    "page": 2,
+    "total_count": 732,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+    "page": 6,
+    "total_count": 732,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+    "page": 5,
+    "total_count": 732,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+    "page": 7,
+    "total_count": 732,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2024-09-27T05:15:00Z..2025-02-27T08:59:59Z",
+    "page": 8,
+    "total_count": 732,
+    "incomplete_results": false,
+    "returned": 32
+  },
+  {
+    "query": "language:lean created:2025-02-27T09:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 15885,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+    "page": 1,
+    "total_count": 2557,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-02-27T09:00:00Z..2025-07-30T12:44:59Z",
+    "page": 1,
+    "total_count": 1004,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-02-27T09:00:00Z..2025-05-14T22:52:29Z",
+    "page": 1,
+    "total_count": 489,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-02-27T09:00:00Z..2025-05-14T22:52:29Z",
+    "page": 2,
+    "total_count": 489,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-02-27T09:00:00Z..2025-05-14T22:52:29Z",
+    "page": 4,
+    "total_count": 489,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-02-27T09:00:00Z..2025-05-14T22:52:29Z",
+    "page": 3,
+    "total_count": 489,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-02-27T09:00:00Z..2025-05-14T22:52:29Z",
+    "page": 5,
+    "total_count": 489,
+    "incomplete_results": false,
+    "returned": 89
+  },
+  {
+    "query": "language:lean created:2025-05-14T22:52:30Z..2025-07-30T12:44:59Z",
+    "page": 1,
+    "total_count": 515,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-05-14T22:52:30Z..2025-07-30T12:44:59Z",
+    "page": 3,
+    "total_count": 515,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-05-14T22:52:30Z..2025-07-30T12:44:59Z",
+    "page": 4,
+    "total_count": 515,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-05-14T22:52:30Z..2025-07-30T12:44:59Z",
+    "page": 2,
+    "total_count": 515,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-05-14T22:52:30Z..2025-07-30T12:44:59Z",
+    "page": 5,
+    "total_count": 515,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-05-14T22:52:30Z..2025-07-30T12:44:59Z",
+    "page": 6,
+    "total_count": 515,
+    "incomplete_results": false,
+    "returned": 15
+  },
+  {
+    "query": "language:lean created:2025-07-30T12:45:00Z..2025-12-30T16:29:59Z",
+    "page": 1,
+    "total_count": 1553,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-07-30T12:45:00Z..2025-10-15T02:37:29Z",
+    "page": 1,
+    "total_count": 635,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-07-30T12:45:00Z..2025-10-15T02:37:29Z",
+    "page": 2,
+    "total_count": 635,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-07-30T12:45:00Z..2025-10-15T02:37:29Z",
+    "page": 5,
+    "total_count": 635,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-07-30T12:45:00Z..2025-10-15T02:37:29Z",
+    "page": 4,
+    "total_count": 635,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-07-30T12:45:00Z..2025-10-15T02:37:29Z",
+    "page": 6,
+    "total_count": 635,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-07-30T12:45:00Z..2025-10-15T02:37:29Z",
+    "page": 3,
+    "total_count": 635,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-07-30T12:45:00Z..2025-10-15T02:37:29Z",
+    "page": 7,
+    "total_count": 635,
+    "incomplete_results": false,
+    "returned": 35
+  },
+  {
+    "query": "language:lean created:2025-10-15T02:37:30Z..2025-12-30T16:29:59Z",
+    "page": 1,
+    "total_count": 918,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-10-15T02:37:30Z..2025-11-22T09:33:44Z",
+    "page": 1,
+    "total_count": 368,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-10-15T02:37:30Z..2025-11-22T09:33:44Z",
+    "page": 2,
+    "total_count": 368,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-10-15T02:37:30Z..2025-11-22T09:33:44Z",
+    "page": 4,
+    "total_count": 368,
+    "incomplete_results": false,
+    "returned": 68
+  },
+  {
+    "query": "language:lean created:2025-10-15T02:37:30Z..2025-11-22T09:33:44Z",
+    "page": 3,
+    "total_count": 368,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-11-22T09:33:45Z..2025-12-30T16:29:59Z",
+    "page": 1,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-11-22T09:33:45Z..2025-12-30T16:29:59Z",
+    "page": 2,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-11-22T09:33:45Z..2025-12-30T16:29:59Z",
+    "page": 4,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-11-22T09:33:45Z..2025-12-30T16:29:59Z",
+    "page": 6,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 50
+  },
+  {
+    "query": "language:lean created:2025-11-22T09:33:45Z..2025-12-30T16:29:59Z",
+    "page": 3,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-11-22T09:33:45Z..2025-12-30T16:29:59Z",
+    "page": 5,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 13328,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 1,
+    "total_count": 3285,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-03-17T06:22:29Z",
+    "page": 1,
+    "total_count": 1308,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-02-06T23:26:14Z",
+    "page": 1,
+    "total_count": 544,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-02-06T23:26:14Z",
+    "page": 2,
+    "total_count": 544,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-02-06T23:26:14Z",
+    "page": 4,
+    "total_count": 544,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-02-06T23:26:14Z",
+    "page": 5,
+    "total_count": 544,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-02-06T23:26:14Z",
+    "page": 6,
+    "total_count": 544,
+    "incomplete_results": false,
+    "returned": 44
+  },
+  {
+    "query": "language:lean created:2025-12-30T16:30:00Z..2026-02-06T23:26:14Z",
+    "page": 3,
+    "total_count": 544,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+    "page": 1,
+    "total_count": 764,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+    "page": 2,
+    "total_count": 764,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+    "page": 5,
+    "total_count": 764,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+    "page": 6,
+    "total_count": 764,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+    "page": 7,
+    "total_count": 764,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+    "page": 8,
+    "total_count": 764,
+    "incomplete_results": false,
+    "returned": 64
+  },
+  {
+    "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+    "page": 3,
+    "total_count": 764,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-02-06T23:26:15Z..2026-03-17T06:22:29Z",
+    "page": 4,
+    "total_count": 764,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-06-01T20:14:59Z",
+    "page": 1,
+    "total_count": 1977,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 1,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 2,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 4,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 3,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 7,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 5,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 6,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 9,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 97
+  },
+  {
+    "query": "language:lean created:2026-03-17T06:22:30Z..2026-04-24T13:18:44Z",
+    "page": 8,
+    "total_count": 897,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-04-24T13:18:45Z..2026-06-01T20:14:59Z",
+    "page": 1,
+    "total_count": 1080,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-04-24T13:18:45Z..2026-05-13T16:46:52Z",
+    "page": 1,
+    "total_count": 534,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-04-24T13:18:45Z..2026-05-13T16:46:52Z",
+    "page": 2,
+    "total_count": 534,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-04-24T13:18:45Z..2026-05-13T16:46:52Z",
+    "page": 3,
+    "total_count": 534,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-04-24T13:18:45Z..2026-05-13T16:46:52Z",
+    "page": 4,
+    "total_count": 534,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-04-24T13:18:45Z..2026-05-13T16:46:52Z",
+    "page": 5,
+    "total_count": 534,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-04-24T13:18:45Z..2026-05-13T16:46:52Z",
+    "page": 6,
+    "total_count": 534,
+    "incomplete_results": false,
+    "returned": 34
+  },
+  {
+    "query": "language:lean created:2026-05-13T16:46:53Z..2026-06-01T20:14:59Z",
+    "page": 1,
+    "total_count": 546,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-05-13T16:46:53Z..2026-06-01T20:14:59Z",
+    "page": 2,
+    "total_count": 546,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-05-13T16:46:53Z..2026-06-01T20:14:59Z",
+    "page": 3,
+    "total_count": 546,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-05-13T16:46:53Z..2026-06-01T20:14:59Z",
+    "page": 4,
+    "total_count": 546,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-05-13T16:46:53Z..2026-06-01T20:14:59Z",
+    "page": 6,
+    "total_count": 546,
+    "incomplete_results": false,
+    "returned": 46
+  },
+  {
+    "query": "language:lean created:2026-05-13T16:46:53Z..2026-06-01T20:14:59Z",
+    "page": 5,
+    "total_count": 546,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 10043,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 1,
+    "total_count": 2911,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-07-10T03:11:14Z",
+    "page": 1,
+    "total_count": 1126,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-06-20T23:43:07Z",
+    "page": 1,
+    "total_count": 552,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-06-20T23:43:07Z",
+    "page": 2,
+    "total_count": 552,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-06-20T23:43:07Z",
+    "page": 3,
+    "total_count": 552,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-06-20T23:43:07Z",
+    "page": 5,
+    "total_count": 552,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-06-20T23:43:07Z",
+    "page": 4,
+    "total_count": 552,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-01T20:15:00Z..2026-06-20T23:43:07Z",
+    "page": 6,
+    "total_count": 552,
+    "incomplete_results": false,
+    "returned": 52
+  },
+  {
+    "query": "language:lean created:2026-06-20T23:43:08Z..2026-07-10T03:11:14Z",
+    "page": 1,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-20T23:43:08Z..2026-07-10T03:11:14Z",
+    "page": 2,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-20T23:43:08Z..2026-07-10T03:11:14Z",
+    "page": 4,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-20T23:43:08Z..2026-07-10T03:11:14Z",
+    "page": 3,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-20T23:43:08Z..2026-07-10T03:11:14Z",
+    "page": 5,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-06-20T23:43:08Z..2026-07-10T03:11:14Z",
+    "page": 6,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 74
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-08-17T10:07:29Z",
+    "page": 1,
+    "total_count": 1785,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 1,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 3,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 2,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 4,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 5,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 6,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 9,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 54
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 7,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-10T03:11:15Z..2026-07-29T06:39:22Z",
+    "page": 8,
+    "total_count": 854,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-29T06:39:23Z..2026-08-17T10:07:29Z",
+    "page": 1,
+    "total_count": 931,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-29T06:39:23Z..2026-08-07T20:23:26Z",
+    "page": 1,
+    "total_count": 452,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-29T06:39:23Z..2026-08-07T20:23:26Z",
+    "page": 3,
+    "total_count": 452,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-29T06:39:23Z..2026-08-07T20:23:26Z",
+    "page": 2,
+    "total_count": 452,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-29T06:39:23Z..2026-08-07T20:23:26Z",
+    "page": 4,
+    "total_count": 452,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-07-29T06:39:23Z..2026-08-07T20:23:26Z",
+    "page": 5,
+    "total_count": 452,
+    "incomplete_results": false,
+    "returned": 52
+  },
+  {
+    "query": "language:lean created:2026-08-07T20:23:27Z..2026-08-17T10:07:29Z",
+    "page": 1,
+    "total_count": 479,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-07T20:23:27Z..2026-08-17T10:07:29Z",
+    "page": 2,
+    "total_count": 479,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-07T20:23:27Z..2026-08-17T10:07:29Z",
+    "page": 3,
+    "total_count": 479,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-07T20:23:27Z..2026-08-17T10:07:29Z",
+    "page": 5,
+    "total_count": 479,
+    "incomplete_results": false,
+    "returned": 79
+  },
+  {
+    "query": "language:lean created:2026-08-07T20:23:27Z..2026-08-17T10:07:29Z",
+    "page": 4,
+    "total_count": 479,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 7133,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 1,
+    "total_count": 3047,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-09-05T13:35:37Z",
+    "page": 1,
+    "total_count": 1091,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-08-26T23:51:33Z",
+    "page": 1,
+    "total_count": 541,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-08-26T23:51:33Z",
+    "page": 2,
+    "total_count": 541,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-08-26T23:51:33Z",
+    "page": 3,
+    "total_count": 541,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-08-26T23:51:33Z",
+    "page": 4,
+    "total_count": 541,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-08-26T23:51:33Z",
+    "page": 6,
+    "total_count": 541,
+    "incomplete_results": false,
+    "returned": 41
+  },
+  {
+    "query": "language:lean created:2026-08-17T10:07:30Z..2026-08-26T23:51:33Z",
+    "page": 5,
+    "total_count": 541,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-26T23:51:34Z..2026-09-05T13:35:37Z",
+    "page": 1,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-26T23:51:34Z..2026-09-05T13:35:37Z",
+    "page": 2,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-26T23:51:34Z..2026-09-05T13:35:37Z",
+    "page": 3,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-26T23:51:34Z..2026-09-05T13:35:37Z",
+    "page": 4,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-08-26T23:51:34Z..2026-09-05T13:35:37Z",
+    "page": 6,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 50
+  },
+  {
+    "query": "language:lean created:2026-08-26T23:51:34Z..2026-09-05T13:35:37Z",
+    "page": 5,
+    "total_count": 550,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-24T17:03:44Z",
+    "page": 1,
+    "total_count": 1956,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+    "page": 1,
+    "total_count": 783,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+    "page": 2,
+    "total_count": 783,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+    "page": 3,
+    "total_count": 783,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+    "page": 4,
+    "total_count": 783,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+    "page": 5,
+    "total_count": 783,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+    "page": 7,
+    "total_count": 783,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+    "page": 6,
+    "total_count": 783,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-05T13:35:38Z..2026-09-15T03:19:41Z",
+    "page": 8,
+    "total_count": 783,
+    "incomplete_results": false,
+    "returned": 83
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-24T17:03:44Z",
+    "page": 1,
+    "total_count": 1173,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-19T22:11:43Z",
+    "page": 1,
+    "total_count": 720,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-19T22:11:43Z",
+    "page": 2,
+    "total_count": 720,
+    "incomplete_results": false,
+    "returned": 99
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-19T22:11:43Z",
+    "page": 4,
+    "total_count": 720,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-19T22:11:43Z",
+    "page": 6,
+    "total_count": 720,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-19T22:11:43Z",
+    "page": 3,
+    "total_count": 720,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-19T22:11:43Z",
+    "page": 7,
+    "total_count": 720,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-19T22:11:43Z",
+    "page": 5,
+    "total_count": 720,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-19T22:11:43Z",
+    "page": 8,
+    "total_count": 720,
+    "incomplete_results": false,
+    "returned": 20
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-17T12:45:42Z",
+    "page": 1,
+    "total_count": 285,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-17T12:45:42Z",
+    "page": 3,
+    "total_count": 285,
+    "incomplete_results": false,
+    "returned": 85
+  },
+  {
+    "query": "language:lean created:2026-09-15T03:19:42Z..2026-09-17T12:45:42Z",
+    "page": 2,
+    "total_count": 285,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-19T22:11:43Z",
+    "page": 1,
+    "total_count": 435,
+    "incomplete_results": false,
+    "returned": 99
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-19T22:11:43Z",
+    "page": 2,
+    "total_count": 435,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-19T22:11:43Z",
+    "page": 3,
+    "total_count": 435,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-19T22:11:43Z",
+    "page": 5,
+    "total_count": 435,
+    "incomplete_results": false,
+    "returned": 35
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-19T22:11:43Z",
+    "page": 4,
+    "total_count": 435,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-18T17:28:43Z",
+    "page": 1,
+    "total_count": 304,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-18T17:28:43Z",
+    "page": 2,
+    "total_count": 304,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-18T17:28:43Z",
+    "page": 4,
+    "total_count": 304,
+    "incomplete_results": false,
+    "returned": 4
+  },
+  {
+    "query": "language:lean created:2026-09-17T12:45:43Z..2026-09-18T17:28:43Z",
+    "page": 3,
+    "total_count": 304,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-18T17:28:44Z..2026-09-19T22:11:43Z",
+    "page": 1,
+    "total_count": 131,
+    "incomplete_results": false,
+    "returned": 99
+  },
+  {
+    "query": "language:lean created:2026-09-18T17:28:44Z..2026-09-19T22:11:43Z",
+    "page": 2,
+    "total_count": 131,
+    "incomplete_results": false,
+    "returned": 31
+  },
+  {
+    "query": "language:lean created:2026-09-18T17:28:44Z..2026-09-19T07:50:13Z",
+    "page": 1,
+    "total_count": 81,
+    "incomplete_results": false,
+    "returned": 81
+  },
+  {
+    "query": "language:lean created:2026-09-19T07:50:14Z..2026-09-19T22:11:43Z",
+    "page": 1,
+    "total_count": 50,
+    "incomplete_results": false,
+    "returned": 49
+  },
+  {
+    "query": "language:lean created:2026-09-19T07:50:14Z..2026-09-19T15:00:58Z",
+    "page": 1,
+    "total_count": 32,
+    "incomplete_results": false,
+    "returned": 32
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:00:59Z..2026-09-19T22:11:43Z",
+    "page": 1,
+    "total_count": 18,
+    "incomplete_results": false,
+    "returned": 17
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:00:59Z..2026-09-19T18:36:21Z",
+    "page": 1,
+    "total_count": 8,
+    "incomplete_results": false,
+    "returned": 7
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:00:59Z..2026-09-19T16:48:40Z",
+    "page": 1,
+    "total_count": 2,
+    "incomplete_results": false,
+    "returned": 1
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:00:59Z..2026-09-19T15:54:49Z",
+    "page": 1,
+    "total_count": 2,
+    "incomplete_results": false,
+    "returned": 1
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:00:59Z..2026-09-19T15:27:54Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:27:55Z..2026-09-19T15:54:49Z",
+    "page": 1,
+    "total_count": 2,
+    "incomplete_results": false,
+    "returned": 1
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:27:55Z..2026-09-19T15:41:22Z",
+    "page": 1,
+    "total_count": 2,
+    "incomplete_results": false,
+    "returned": 1
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:27:55Z..2026-09-19T15:34:38Z",
+    "page": 1,
+    "total_count": 2,
+    "incomplete_results": false,
+    "returned": 1
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:27:55Z..2026-09-19T15:31:16Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 1
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:31:17Z..2026-09-19T15:34:38Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:31:17Z..2026-09-19T15:32:57Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:32:58Z..2026-09-19T15:34:38Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:32:58Z..2026-09-19T15:33:48Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:33:49Z..2026-09-19T15:34:38Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:33:49Z..2026-09-19T15:34:13Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:33:49Z..2026-09-19T15:34:01Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:02Z..2026-09-19T15:34:13Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:02Z..2026-09-19T15:34:07Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:08Z..2026-09-19T15:34:13Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:08Z..2026-09-19T15:34:10Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:13Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:12Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:12Z..2026-09-19T15:34:12Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:13Z..2026-09-19T15:34:13Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:14Z..2026-09-19T15:34:38Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:39Z..2026-09-19T15:41:22Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:41:23Z..2026-09-19T15:54:49Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:54:50Z..2026-09-19T16:48:40Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean created:2026-09-19T16:48:41Z..2026-09-19T18:36:21Z",
+    "page": 1,
+    "total_count": 6,
+    "incomplete_results": false,
+    "returned": 6
+  },
+  {
+    "query": "language:lean created:2026-09-19T18:36:22Z..2026-09-19T22:11:43Z",
+    "page": 1,
+    "total_count": 10,
+    "incomplete_results": false,
+    "returned": 10
+  },
+  {
+    "query": "language:lean created:2026-09-19T22:11:44Z..2026-09-24T17:03:44Z",
+    "page": 1,
+    "total_count": 453,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-19T22:11:44Z..2026-09-24T17:03:44Z",
+    "page": 4,
+    "total_count": 453,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-19T22:11:44Z..2026-09-24T17:03:44Z",
+    "page": 5,
+    "total_count": 453,
+    "incomplete_results": false,
+    "returned": 53
+  },
+  {
+    "query": "language:lean created:2026-09-19T22:11:44Z..2026-09-24T17:03:44Z",
+    "page": 3,
+    "total_count": 453,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-19T22:11:44Z..2026-09-24T17:03:44Z",
+    "page": 2,
+    "total_count": 453,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-24T17:03:45Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 4087,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 1,
+    "total_count": 2131,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-24T17:03:45Z..2026-10-04T06:47:48Z",
+    "page": 1,
+    "total_count": 958,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-24T17:03:45Z..2026-09-29T11:55:46Z",
+    "page": 1,
+    "total_count": 497,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-24T17:03:45Z..2026-09-29T11:55:46Z",
+    "page": 2,
+    "total_count": 497,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-24T17:03:45Z..2026-09-29T11:55:46Z",
+    "page": 3,
+    "total_count": 497,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-24T17:03:45Z..2026-09-29T11:55:46Z",
+    "page": 4,
+    "total_count": 497,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-24T17:03:45Z..2026-09-29T11:55:46Z",
+    "page": 5,
+    "total_count": 497,
+    "incomplete_results": false,
+    "returned": 97
+  },
+  {
+    "query": "language:lean created:2026-09-29T11:55:47Z..2026-10-04T06:47:48Z",
+    "page": 1,
+    "total_count": 461,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-29T11:55:47Z..2026-10-04T06:47:48Z",
+    "page": 2,
+    "total_count": 461,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-29T11:55:47Z..2026-10-04T06:47:48Z",
+    "page": 3,
+    "total_count": 461,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-29T11:55:47Z..2026-10-04T06:47:48Z",
+    "page": 4,
+    "total_count": 461,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-09-29T11:55:47Z..2026-10-04T06:47:48Z",
+    "page": 5,
+    "total_count": 461,
+    "incomplete_results": false,
+    "returned": 61
+  },
+  {
+    "query": "language:lean created:2026-10-04T06:47:49Z..2026-10-13T20:31:52Z",
+    "page": 1,
+    "total_count": 1173,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-04T06:47:49Z..2026-10-09T01:39:50Z",
+    "page": 1,
+    "total_count": 563,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-04T06:47:49Z..2026-10-09T01:39:50Z",
+    "page": 2,
+    "total_count": 563,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-04T06:47:49Z..2026-10-09T01:39:50Z",
+    "page": 3,
+    "total_count": 563,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-04T06:47:49Z..2026-10-09T01:39:50Z",
+    "page": 4,
+    "total_count": 563,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-04T06:47:49Z..2026-10-09T01:39:50Z",
+    "page": 5,
+    "total_count": 563,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-04T06:47:49Z..2026-10-09T01:39:50Z",
+    "page": 6,
+    "total_count": 563,
+    "incomplete_results": false,
+    "returned": 63
+  },
+  {
+    "query": "language:lean created:2026-10-09T01:39:51Z..2026-10-13T20:31:52Z",
+    "page": 1,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-09T01:39:51Z..2026-10-13T20:31:52Z",
+    "page": 3,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-09T01:39:51Z..2026-10-13T20:31:52Z",
+    "page": 2,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-09T01:39:51Z..2026-10-13T20:31:52Z",
+    "page": 4,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-09T01:39:51Z..2026-10-13T20:31:52Z",
+    "page": 6,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-09T01:39:51Z..2026-10-13T20:31:52Z",
+    "page": 7,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 10
+  },
+  {
+    "query": "language:lean created:2026-10-09T01:39:51Z..2026-10-13T20:31:52Z",
+    "page": 5,
+    "total_count": 610,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1956,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-13T20:31:53Z..2026-10-23T10:15:56Z",
+    "page": 1,
+    "total_count": 1089,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-13T20:31:53Z..2026-10-18T15:23:54Z",
+    "page": 1,
+    "total_count": 529,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-13T20:31:53Z..2026-10-18T15:23:54Z",
+    "page": 2,
+    "total_count": 529,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-13T20:31:53Z..2026-10-18T15:23:54Z",
+    "page": 3,
+    "total_count": 529,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-13T20:31:53Z..2026-10-18T15:23:54Z",
+    "page": 6,
+    "total_count": 529,
+    "incomplete_results": false,
+    "returned": 29
+  },
+  {
+    "query": "language:lean created:2026-10-13T20:31:53Z..2026-10-18T15:23:54Z",
+    "page": 5,
+    "total_count": 529,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-13T20:31:53Z..2026-10-18T15:23:54Z",
+    "page": 4,
+    "total_count": 529,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-18T15:23:55Z..2026-10-23T10:15:56Z",
+    "page": 1,
+    "total_count": 560,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-18T15:23:55Z..2026-10-23T10:15:56Z",
+    "page": 2,
+    "total_count": 560,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-18T15:23:55Z..2026-10-23T10:15:56Z",
+    "page": 3,
+    "total_count": 560,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-18T15:23:55Z..2026-10-23T10:15:56Z",
+    "page": 4,
+    "total_count": 560,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-18T15:23:55Z..2026-10-23T10:15:56Z",
+    "page": 6,
+    "total_count": 560,
+    "incomplete_results": false,
+    "returned": 60
+  },
+  {
+    "query": "language:lean created:2026-10-18T15:23:55Z..2026-10-23T10:15:56Z",
+    "page": 5,
+    "total_count": 560,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 2,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 3,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 4,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 5,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 6,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 8,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 7,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean created:2026-10-23T10:15:57Z..2026-11-01T23:59:59Z",
+    "page": 9,
+    "total_count": 868,
+    "incomplete_results": false,
+    "returned": 68
+  },
+  {
+    "query": "language:lean Verilog in:name,description,readme",
+    "page": 1,
+    "total_count": 32,
+    "incomplete_results": false,
+    "returned": 32
+  },
+  {
+    "query": "language:lean SystemVerilog in:name,description,readme",
+    "page": 1,
+    "total_count": 20,
+    "incomplete_results": false,
+    "returned": 20
+  },
+  {
+    "query": "language:lean VHDL in:name,description,readme",
+    "page": 1,
+    "total_count": 3,
+    "incomplete_results": false,
+    "returned": 3
+  },
+  {
+    "query": "language:lean yosys in:name,description,readme",
+    "page": 1,
+    "total_count": 12,
+    "incomplete_results": false,
+    "returned": 12
+  },
+  {
+    "query": "language:lean RTL in:name,description,readme",
+    "page": 1,
+    "total_count": 41,
+    "incomplete_results": false,
+    "returned": 41
+  },
+  {
+    "query": "language:lean MLIR in:name,description,readme",
+    "page": 1,
+    "total_count": 38,
+    "incomplete_results": false,
+    "returned": 38
+  },
+  {
+    "query": "language:lean PyTorch in:name,description,readme",
+    "page": 1,
+    "total_count": 62,
+    "incomplete_results": false,
+    "returned": 62
+  },
+  {
+    "query": "language:lean Python in:name,description,readme",
+    "page": 1,
+    "total_count": 2734,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2000-01-01T00:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 2734,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2000-01-01T00:00:00Z..2013-06-01T23:59:59Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2013-06-02T00:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 2734,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 1,
+    "total_count": 2,
+    "incomplete_results": false,
+    "returned": 2
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2020-02-16T12:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 2732,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2020-02-16T12:00:00Z..2023-06-25T17:59:59Z",
+    "page": 1,
+    "total_count": 47,
+    "incomplete_results": false,
+    "returned": 47
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2023-06-25T18:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 2685,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2023-06-25T18:00:00Z..2025-02-27T08:59:59Z",
+    "page": 1,
+    "total_count": 70,
+    "incomplete_results": false,
+    "returned": 70
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2025-02-27T09:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 2615,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+    "page": 1,
+    "total_count": 120,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+    "page": 2,
+    "total_count": 120,
+    "incomplete_results": false,
+    "returned": 20
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2025-12-30T16:30:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 2495,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 1,
+    "total_count": 329,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 2,
+    "total_count": 329,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 3,
+    "total_count": 329,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 4,
+    "total_count": 329,
+    "incomplete_results": false,
+    "returned": 29
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-06-01T20:15:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 2166,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 1,
+    "total_count": 411,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 2,
+    "total_count": 411,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 3,
+    "total_count": 411,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 5,
+    "total_count": 411,
+    "incomplete_results": false,
+    "returned": 11
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 4,
+    "total_count": 411,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1755,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 1,
+    "total_count": 583,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 3,
+    "total_count": 583,
+    "incomplete_results": false,
+    "returned": 99
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 2,
+    "total_count": 583,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 4,
+    "total_count": 583,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 5,
+    "total_count": 583,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 6,
+    "total_count": 583,
+    "incomplete_results": false,
+    "returned": 83
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 1,
+    "total_count": 488,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 2,
+    "total_count": 488,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 4,
+    "total_count": 488,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 3,
+    "total_count": 488,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 5,
+    "total_count": 488,
+    "incomplete_results": false,
+    "returned": 88
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-19T15:34:12Z..2026-09-24T17:03:44Z",
+    "page": 1,
+    "total_count": 94,
+    "incomplete_results": false,
+    "returned": 94
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-24T17:03:45Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1172,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 1,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 2,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 3,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 4,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 5,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 6,
+    "total_count": 574,
+    "incomplete_results": false,
+    "returned": 74
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 598,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 2,
+    "total_count": 598,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 3,
+    "total_count": 598,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 4,
+    "total_count": 598,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 5,
+    "total_count": 598,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean Python in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 6,
+    "total_count": 598,
+    "incomplete_results": false,
+    "returned": 98
+  },
+  {
+    "query": "language:lean CIRCT in:name,description,readme",
+    "page": 1,
+    "total_count": 5,
+    "incomplete_results": false,
+    "returned": 5
+  },
+  {
+    "query": "language:lean Calyx in:name,description,readme",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean FPGA in:name,description,readme",
+    "page": 1,
+    "total_count": 21,
+    "incomplete_results": false,
+    "returned": 21
+  },
+  {
+    "query": "language:lean hardware in:name,description,readme",
+    "page": 1,
+    "total_count": 321,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean hardware in:name,description,readme",
+    "page": 2,
+    "total_count": 321,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean hardware in:name,description,readme",
+    "page": 4,
+    "total_count": 321,
+    "incomplete_results": false,
+    "returned": 21
+  },
+  {
+    "query": "language:lean hardware in:name,description,readme",
+    "page": 3,
+    "total_count": 321,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean tensor in:name,description,readme",
+    "page": 1,
+    "total_count": 530,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean tensor in:name,description,readme",
+    "page": 2,
+    "total_count": 530,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean tensor in:name,description,readme",
+    "page": 3,
+    "total_count": 530,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean tensor in:name,description,readme",
+    "page": 4,
+    "total_count": 530,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean tensor in:name,description,readme",
+    "page": 5,
+    "total_count": 530,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean tensor in:name,description,readme",
+    "page": 6,
+    "total_count": 530,
+    "incomplete_results": false,
+    "returned": 30
+  },
+  {
+    "query": "language:lean quantization in:name,description,readme",
+    "page": 1,
+    "total_count": 96,
+    "incomplete_results": false,
+    "returned": 96
+  },
+  {
+    "query": "language:lean bitvector in:name,description,readme",
+    "page": 1,
+    "total_count": 34,
+    "incomplete_results": false,
+    "returned": 34
+  },
+  {
+    "query": "language:lean floating-point in:name,description,readme",
+    "page": 1,
+    "total_count": 420,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean floating-point in:name,description,readme",
+    "page": 3,
+    "total_count": 420,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean floating-point in:name,description,readme",
+    "page": 2,
+    "total_count": 420,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean floating-point in:name,description,readme",
+    "page": 4,
+    "total_count": 420,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean floating-point in:name,description,readme",
+    "page": 5,
+    "total_count": 420,
+    "incomplete_results": false,
+    "returned": 20
+  },
+  {
+    "query": "language:lean SMT in:name,description,readme",
+    "page": 1,
+    "total_count": 176,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean SMT in:name,description,readme",
+    "page": 2,
+    "total_count": 176,
+    "incomplete_results": false,
+    "returned": 76
+  },
+  {
+    "query": "language:lean SAT in:name,description,readme",
+    "page": 1,
+    "total_count": 405,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean SAT in:name,description,readme",
+    "page": 2,
+    "total_count": 405,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean SAT in:name,description,readme",
+    "page": 3,
+    "total_count": 405,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean SAT in:name,description,readme",
+    "page": 5,
+    "total_count": 405,
+    "incomplete_results": false,
+    "returned": 5
+  },
+  {
+    "query": "language:lean SAT in:name,description,readme",
+    "page": 4,
+    "total_count": 405,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme",
+    "page": 1,
+    "total_count": 4497,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2000-01-01T00:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 4497,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2000-01-01T00:00:00Z..2013-06-01T23:59:59Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2013-06-02T00:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 4497,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 1,
+    "total_count": 36,
+    "incomplete_results": false,
+    "returned": 36
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2020-02-16T12:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 4461,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2020-02-16T12:00:00Z..2023-06-25T17:59:59Z",
+    "page": 1,
+    "total_count": 104,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2020-02-16T12:00:00Z..2023-06-25T17:59:59Z",
+    "page": 2,
+    "total_count": 104,
+    "incomplete_results": false,
+    "returned": 4
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2023-06-25T18:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 4357,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2023-06-25T18:00:00Z..2025-02-27T08:59:59Z",
+    "page": 1,
+    "total_count": 167,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2023-06-25T18:00:00Z..2025-02-27T08:59:59Z",
+    "page": 2,
+    "total_count": 167,
+    "incomplete_results": false,
+    "returned": 67
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-02-27T09:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 4190,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+    "page": 1,
+    "total_count": 261,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+    "page": 2,
+    "total_count": 261,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+    "page": 3,
+    "total_count": 261,
+    "incomplete_results": false,
+    "returned": 61
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 3929,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 1,
+    "total_count": 677,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 2,
+    "total_count": 677,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 3,
+    "total_count": 677,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 4,
+    "total_count": 677,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 5,
+    "total_count": 677,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 6,
+    "total_count": 677,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 7,
+    "total_count": 677,
+    "incomplete_results": false,
+    "returned": 77
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 3252,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 1,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 2,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 3,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 4,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 5,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 6,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 7,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 8,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 9,
+    "total_count": 810,
+    "incomplete_results": false,
+    "returned": 10
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 2442,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 1,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 2,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 3,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 4,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 5,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 6,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 7,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 8,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 99
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-24T17:03:44Z",
+    "page": 9,
+    "total_count": 869,
+    "incomplete_results": false,
+    "returned": 69
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 1,
+    "total_count": 728,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 2,
+    "total_count": 728,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 3,
+    "total_count": 728,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 4,
+    "total_count": 728,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 5,
+    "total_count": 728,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 6,
+    "total_count": 728,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 7,
+    "total_count": 728,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 8,
+    "total_count": 728,
+    "incomplete_results": false,
+    "returned": 28
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-19T15:34:12Z..2026-09-24T17:03:44Z",
+    "page": 1,
+    "total_count": 140,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-19T15:34:12Z..2026-09-24T17:03:44Z",
+    "page": 2,
+    "total_count": 140,
+    "incomplete_results": false,
+    "returned": 40
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1573,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 1,
+    "total_count": 785,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 2,
+    "total_count": 785,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 3,
+    "total_count": 785,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 4,
+    "total_count": 785,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 5,
+    "total_count": 785,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 6,
+    "total_count": 785,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 7,
+    "total_count": 785,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-09-24T17:03:45Z..2026-10-13T20:31:52Z",
+    "page": 8,
+    "total_count": 785,
+    "incomplete_results": false,
+    "returned": 85
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 788,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 2,
+    "total_count": 788,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 3,
+    "total_count": 788,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 4,
+    "total_count": 788,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 5,
+    "total_count": 788,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 6,
+    "total_count": 788,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 7,
+    "total_count": 788,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean compiler in:name,description,readme created:2026-10-13T20:31:53Z..2026-11-01T23:59:59Z",
+    "page": 8,
+    "total_count": 788,
+    "incomplete_results": false,
+    "returned": 88
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme",
+    "page": 1,
+    "total_count": 1674,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2000-01-01T00:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1674,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2000-01-01T00:00:00Z..2013-06-01T23:59:59Z",
+    "page": 1,
+    "total_count": 0,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2013-06-02T00:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1674,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2013-06-02T00:00:00Z..2020-02-16T11:59:59Z",
+    "page": 1,
+    "total_count": 9,
+    "incomplete_results": false,
+    "returned": 9
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2020-02-16T12:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1665,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2020-02-16T12:00:00Z..2023-06-25T17:59:59Z",
+    "page": 1,
+    "total_count": 40,
+    "incomplete_results": false,
+    "returned": 40
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2023-06-25T18:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1625,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2023-06-25T18:00:00Z..2025-02-27T08:59:59Z",
+    "page": 1,
+    "total_count": 56,
+    "incomplete_results": false,
+    "returned": 56
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2025-02-27T09:00:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1569,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+    "page": 1,
+    "total_count": 103,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2025-02-27T09:00:00Z..2025-12-30T16:29:59Z",
+    "page": 2,
+    "total_count": 103,
+    "incomplete_results": false,
+    "returned": 3
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2025-12-30T16:30:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1466,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 1,
+    "total_count": 257,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 2,
+    "total_count": 257,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2025-12-30T16:30:00Z..2026-06-01T20:14:59Z",
+    "page": 3,
+    "total_count": 257,
+    "incomplete_results": false,
+    "returned": 57
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-06-01T20:15:00Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 1209,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 1,
+    "total_count": 337,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 2,
+    "total_count": 337,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 4,
+    "total_count": 337,
+    "incomplete_results": false,
+    "returned": 37
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-06-01T20:15:00Z..2026-08-17T10:07:29Z",
+    "page": 3,
+    "total_count": 337,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 2,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 3,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 4,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 5,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 6,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 7,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 99
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 8,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-11-01T23:59:59Z",
+    "page": 9,
+    "total_count": 872,
+    "incomplete_results": false,
+    "returned": 72
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+    "page": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "returned": 0
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 1,
+    "total_count": 334,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 2,
+    "total_count": 334,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 3,
+    "total_count": 334,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-08-17T10:07:30Z..2026-09-19T15:34:10Z",
+    "page": 4,
+    "total_count": 334,
+    "incomplete_results": false,
+    "returned": 34
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:12Z..2026-11-01T23:59:59Z",
+    "page": 1,
+    "total_count": 537,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:12Z..2026-11-01T23:59:59Z",
+    "page": 2,
+    "total_count": 537,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:12Z..2026-11-01T23:59:59Z",
+    "page": 3,
+    "total_count": 537,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:12Z..2026-11-01T23:59:59Z",
+    "page": 4,
+    "total_count": 537,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:12Z..2026-11-01T23:59:59Z",
+    "page": 5,
+    "total_count": 537,
+    "incomplete_results": false,
+    "returned": 100
+  },
+  {
+    "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:12Z..2026-11-01T23:59:59Z",
+    "page": 6,
+    "total_count": 537,
+    "incomplete_results": false,
+    "returned": 37
+  }
+]

@@ -1,0 +1,32 @@
+--- a/CalyxEmitter.cpp
++++ b/CalyxEmitter.cpp
+@@ -146,7 +146,7 @@
+           return {sMemories};
+         })
+         .Case<ConstantOp>([&](auto op) -> FailureOr<StringRef> {
+-          static constexpr std::string_view sFloat = "float";
++          static constexpr std::string_view sFloat = "compile";
+           return {sFloat};
+         })
+         .Case<AddFOpIEEE754>([&](auto op) -> FailureOr<StringRef> {
+@@ -969,17 +969,10 @@
+   TypedAttr attr = constantOp.getValueAttr();
+   assert(isa<FloatAttr>(attr) && "must be a floating point constant");
+   auto fltAttr = cast<FloatAttr>(attr);
+-  APFloat value = fltAttr.getValue();
+-  auto type = cast<FloatType>(fltAttr.getType());
+-  double doubleValue = value.convertToDouble();
+-  auto floatBits = value.getSizeInBits(type.getFloatSemantics());
++  APInt bits = fltAttr.getValue().bitcastToAPInt();
+   indent() << constantOp.instanceName() << space() << equals() << space()
+-           << "std_float_const";
+-  // Currently defaults to IEEE-754 representation [1].
+-  // [1]: https://github.com/calyxir/calyx/blob/main/primitives/float.futil
+-  static constexpr int32_t IEEE754 = 0;
+-  os << LParen() << std::to_string(IEEE754) << comma() << floatBits << comma()
+-     << std::to_string(doubleValue) << RParen() << semicolonEndL();
++           << "std_const" << LParen() << bits.getBitWidth() << comma()
++           << bits.getZExtValue() << RParen() << semicolonEndL();
+ }
+
+ /// Calling getName() on a calyx operation will return "calyx.${opname}". This

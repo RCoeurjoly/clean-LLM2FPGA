@@ -1,0 +1,9 @@
+C2L_TABLE_CHECK {"states":11,"outputs":2,"nodes":79,"inputs":8}
+{"sample":0,"outputs":{"read_data":0,"done":0}}
+{"sample":1,"outputs":{"read_data":0,"done":0}}
+{"sample":2,"outputs":{"read_data":0,"done":0}}
+{"sample":3,"outputs":{"read_data":0,"done":0}}
+{"sample":4,"outputs":{"read_data":0,"done":0}}
+{"sample":5,"outputs":{"read_data":0,"done":0}}
+{"sample":6,"outputs":{"read_data":0,"done":0}}
+{"sample":7,"outputs":{"read_data":0,"done":0}}

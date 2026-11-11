@@ -1,0 +1,199 @@
+{
+  "utc": "2026-11-01T23:13:18.017642+00:00",
+  "endpoint": "repos/Easyoakland/HDLean/tarball/0c4637326055c9ee38e9d9ecff9cf167d664f7ec",
+  "exit_code": 0,
+  "archive_bytes": 58193,
+  "sha256": "a9c26a4af9d27be0b143294f13880e1071c0189dcfa55fabb865a27d94399a50",
+  "files": [
+    {
+      "path": "Help.md",
+      "bytes": 437,
+      "sha256": "f543ed63204b97bbe7654411ae15b1889ebf43126c1931e079dbf42ede65371b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 39,
+      "sha256": "68b07802f5ee182f5f09442e393736d5e3119e0bb230b8c1fc22c89811f5b3c1"
+    },
+    {
+      "path": "Why.md",
+      "bytes": 11705,
+      "sha256": "2f5aacef059284dc4a8367e64be506fc72f0079823c749cad872328597c84165"
+    },
+    {
+      "path": "comparison.md",
+      "bytes": 1928,
+      "sha256": "8f6ccd40d0f7abf83166181558da2e8f0289dcaf7d47e6ff645dfab1042c4386"
+    },
+    {
+      "path": "examples/RISCV/Main.lean",
+      "bytes": 1655,
+      "sha256": "4989ca3107909fd94f556fbdd52f0b5418b766ff0ca08bbec39754515f8d227a"
+    },
+    {
+      "path": "examples/RISCV/RISCV.lean",
+      "bytes": 145,
+      "sha256": "93a1680a615f6148b36c72eeeb9f4c38a15c551b1ffd6a16f65939c8db490cbb"
+    },
+    {
+      "path": "examples/RISCV/RISCV/Alu.lean",
+      "bytes": 968,
+      "sha256": "9bc7462c20112e32fde9521cae28007277494833030a9ac087c08ac1dcfe2b89"
+    },
+    {
+      "path": "examples/RISCV/RISCV/AluDecode.lean",
+      "bytes": 2821,
+      "sha256": "3670492c70a22d1640b8adc05377edf1df490c715dff5a6cacb09b7e01ebfa0f"
+    },
+    {
+      "path": "examples/RISCV/RISCV/Basic.lean",
+      "bytes": 11374,
+      "sha256": "930fcba83ce72b1da9e5914b4ced74228303a02db67646d7b8f021cba366f1e3"
+    },
+    {
+      "path": "examples/RISCV/RISCV/ForwardingUnit.lean",
+      "bytes": 2276,
+      "sha256": "6cfc99c27500119629f3af522e57044637a1de4a6004f95458d46671cb37eec0"
+    },
+    {
+      "path": "examples/RISCV/RISCV/ImmGen.lean",
+      "bytes": 1064,
+      "sha256": "cb0f4614e5cd73262a1fe3b8521409456c9a41242757034cc9c9363f93da6587"
+    },
+    {
+      "path": "examples/RISCV/RISCV/InstrDecode.lean",
+      "bytes": 4136,
+      "sha256": "06de230c6121f750b9b185c59713d586f500b521c2715470121baf84b6344fbd"
+    },
+    {
+      "path": "examples/RISCV/RISCV/PipelineCtrl.lean",
+      "bytes": 3505,
+      "sha256": "63c28cc748a72c5f652e82a9f4433919fc8ed09beda25fb16561b9cdc3f2dd40"
+    },
+    {
+      "path": "examples/RISCV/RISCV/README.md",
+      "bytes": 93,
+      "sha256": "028487a57daf709be004c4193d3e3995ba180782b520e647a7647a763fc41db0"
+    },
+    {
+      "path": "examples/RISCV/RISCV/RegisterFile.lean",
+      "bytes": 2356,
+      "sha256": "cb7aaf7260343a09befd88a9654ef4dee197350e42d369cd7d5a545a404edaed"
+    },
+    {
+      "path": "examples/RISCV/RISCV/SingleCycleProc.lean",
+      "bytes": 2334,
+      "sha256": "1cebc7de45d7394beda74b881980fb2d945f4d56b93448306233203cf88a2828"
+    },
+    {
+      "path": "examples/RISCV/RISCV/SingleProcTb.lean",
+      "bytes": 3169,
+      "sha256": "f3bfb432e6faef0779b078d95f6a747d9a71ca3923176bb4ac9eaacc85a538fe"
+    },
+    {
+      "path": "examples/RISCV/RISCV/Types.lean",
+      "bytes": 815,
+      "sha256": "fb39bbff1b1b8460fdac6b0268f4c3303fa00c7849ea490350bad82b7c5b5850"
+    },
+    {
+      "path": "examples/RISCV/lakefile.toml",
+      "bytes": 229,
+      "sha256": "96c4ce2b80ecaa2f27c3e985ee13f14966ca0ea600f0dec1958976c4820f6a2d"
+    },
+    {
+      "path": "examples/RISCV/lean-toolchain",
+      "bytes": 25,
+      "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+    },
+    {
+      "path": "src/Compiler.lean",
+      "bytes": 122,
+      "sha256": "535b7f84f06d9fce3f30cde538b2b0a5f459d8c1be76eaf2f2929d400d7439f2"
+    },
+    {
+      "path": "src/Compiler/ANF.lean",
+      "bytes": 2420,
+      "sha256": "a52862397e4dee82caec9906b6626f855d20fd770018844a6626b2ebcd505f5e"
+    },
+    {
+      "path": "src/Compiler/BitShape.lean",
+      "bytes": 8127,
+      "sha256": "7bde9cc0fa5d3882ac218a8afa7498387ac5ec9298ecfacca647a09a04cf6258"
+    },
+    {
+      "path": "src/Compiler/BitVecThm.lean",
+      "bytes": 1686,
+      "sha256": "1c47be9ba4ba6a059dc225d66ff665b1b2f174bb6184e509565760349cce4cba"
+    },
+    {
+      "path": "src/Compiler/ImplementedByHWAttr.lean",
+      "bytes": 3120,
+      "sha256": "2da273ee814828e423392c56baaaa82f624d608cd157f7080f3e41c066e384bf"
+    },
+    {
+      "path": "src/Compiler/Netlist.lean",
+      "bytes": 19973,
+      "sha256": "26b29366df4cf9215a5cfe0fed4b9968aef7d4e0528875a03218d5a7ab93569c"
+    },
+    {
+      "path": "src/Compiler/ToSystemVerilog.lean",
+      "bytes": 59660,
+      "sha256": "1e1bf0774425af0a5f4c5f5140c4ab8b02e8837f63e223ed38e4b2e5fafe219d"
+    },
+    {
+      "path": "src/Compiler/Trace.lean",
+      "bytes": 981,
+      "sha256": "692cf7c35b6dc5ea04b89367e550ccd4cdc9077dcfc38d12a7ac48444c52b224"
+    },
+    {
+      "path": "src/Compiler/WHNF.lean",
+      "bytes": 6782,
+      "sha256": "948c9cfceb13bb62c3b9846a3063835bdc2d9e634f946cb7af162673f2b0a5cf"
+    },
+    {
+      "path": "src/Hdlean.lean",
+      "bytes": 81,
+      "sha256": "ddc7751b12c8860f48f54b78d26705abea6f9cef07f1ec2afa6e2a161e42c2fc"
+    },
+    {
+      "path": "src/Hdlean/Arrow.lean",
+      "bytes": 3389,
+      "sha256": "aa6c3553f728c318582bb9de6d7105f41f4a9dd526a9498c81754a8890fbf3af"
+    },
+    {
+      "path": "src/Hdlean/Basic.lean",
+      "bytes": 6098,
+      "sha256": "b988747e29d26154b66fc57bbb6fe25fc46c26512000a7a797203b64ebf3cd49"
+    },
+    {
+      "path": "src/Hdlean/SigmaMealy.lean",
+      "bytes": 33446,
+      "sha256": "b95d32271e2a378d37395976889749de444beb28b2c56008f696c8e383b24226"
+    },
+    {
+      "path": "src/Hdlean/Tactic.lean",
+      "bytes": 707,
+      "sha256": "4dcfc70b176e065a383aa27a7d26556230db4329c0dd3cc9d066852d8aba22c8"
+    },
+    {
+      "path": "src/Main.lean",
+      "bytes": 654,
+      "sha256": "125386f61b35f2b6ee271230a815af0a9ec7385080264e4a97c24f508442337e"
+    },
+    {
+      "path": "src/Test.lean",
+      "bytes": 1959,
+      "sha256": "3e524437fb7bea26574e2416c1b7a99d057752e605ab9a7fbe418856b767ffec"
+    },
+    {
+      "path": "src/lakefile.toml",
+      "bytes": 450,
+      "sha256": "1d9ed63a34ed8deb8d9382734091f3259e467400eaba6f75553107b7fef2a8e3"
+    },
+    {
+      "path": "src/lean-toolchain",
+      "bytes": 6,
+      "sha256": "f379ccb92b9116442dc65bdc35648a85d3786b34779db7f704a901fa07b00cb6"
+    }
+  ]
+}

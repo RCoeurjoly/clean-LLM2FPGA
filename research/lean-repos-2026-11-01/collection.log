@@ -1,0 +1,591 @@
+2026-11-01T14:05:20Z Initial GitHub language:lean total_count=20705
+2026-11-01T14:05:25Z Census leaf 1; total distinct repositories 1
+2026-11-01T14:05:58Z Census leaf 569; total distinct repositories 570
+2026-11-01T14:06:41Z Census leaf 716; total distinct repositories 1286
+2026-11-01T14:06:53Z API retry 1: gh: API rate limit exceeded for user ID 16906199. If you reach out to GitHub Support for help, please include the request ID E12C:1F39DE:5961:AAAB:6AE7477D and timestamp 2026-11-01 14:06:53 UTC. For more on scraping GitHub and how it may affect your rights, please review our Terms of Service (https://docs.github.com/en/site-policy/github-terms/github-terms-of-service) (HTTP 403)
+2026-11-01T14:08:14Z Census leaf 493; total distinct repositories 1779
+2026-11-01T14:08:44Z Census leaf 622; total distinct repositories 2401
+2026-11-01T14:09:17Z Census leaf 484; total distinct repositories 2885
+2026-11-01T14:09:48Z Census leaf 593; total distinct repositories 3478
+2026-11-01T14:10:21Z Census leaf 610; total distinct repositories 4088
+Traceback (most recent call last):
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 212, in <module>
+    'recent_activity_threshold': '2026-09-01T00:00:00Z',
+^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 167, in main
+    
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 116, in partition
+    if not pages:
+                ^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 116, in partition
+    if not pages:
+                ^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 116, in partition
+    if not pages:
+                ^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 115, in partition
+    pages = list(range(2, math.ceil(count / 100) + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 116, in partition
+    if not pages:
+                ^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 116, in partition
+    if not pages:
+                ^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 120, in partition
+    
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 93, in search
+    self.log(f'API retry {attempt + 1}: {error}')
+       ^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 66, in api
+    self.cached += 1
+             ^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2115, in _communicate
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 224, in <module>
+    main()
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 180, in main
+    census_ids = collector.partition('language:lean', low, high)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 129, in partition
+    left = self.partition(base, low, middle, term, depth=depth + 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 133, in partition
+    for page, data in enumerate(self.remaining_pages(query, count), start=2):
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 119, in remaining_pages
+    return list(pool.map(lambda page: self.search(query, page), pages))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "/usr/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
+2026-11-01T14:10:45Z Initial GitHub language:lean total_count=20705
+2026-11-01T14:10:45Z Census leaf 1; total distinct repositories 1
+2026-11-01T14:10:45Z Census leaf 569; total distinct repositories 570
+2026-11-01T14:10:45Z Census leaf 716; total distinct repositories 1286
+2026-11-01T14:10:45Z Census leaf 493; total distinct repositories 1779
+2026-11-01T14:10:45Z Census leaf 622; total distinct repositories 2401
+2026-11-01T14:10:45Z Census leaf 484; total distinct repositories 2885
+2026-11-01T14:10:45Z Census leaf 593; total distinct repositories 3478
+2026-11-01T14:10:45Z Census leaf 610; total distinct repositories 4088
+2026-11-01T14:10:47Z Census leaf 732; total distinct repositories 4820
+2026-11-01T14:11:14Z Census leaf 489; total distinct repositories 5309
+2026-11-01T14:11:30Z Census leaf 515; total distinct repositories 5824
+2026-11-01T14:11:51Z Census leaf 635; total distinct repositories 6459
+2026-11-01T14:12:07Z Census leaf 368; total distinct repositories 6827
+2026-11-01T14:12:23Z Census leaf 550; total distinct repositories 7377
+2026-11-01T14:12:48Z Census leaf 544; total distinct repositories 7921
+2026-11-01T14:13:09Z Census leaf 764; total distinct repositories 8685
+2026-11-01T14:13:37Z Census leaf 897; total distinct repositories 9582
+2026-11-01T14:13:57Z Census leaf 534; total distinct repositories 10116
+2026-11-01T14:14:14Z Census leaf 546; total distinct repositories 10662
+2026-11-01T14:14:41Z Census leaf 552; total distinct repositories 11214
+2026-11-01T14:14:59Z Census leaf 574; total distinct repositories 11788
+2026-11-01T14:15:24Z Census leaf 854; total distinct repositories 12642
+2026-11-01T14:15:40Z Census leaf 452; total distinct repositories 13094
+2026-11-01T14:15:54Z Census leaf 479; total distinct repositories 13573
+2026-11-01T14:16:18Z Census leaf 541; total distinct repositories 14114
+2026-11-01T14:16:33Z Census leaf 550; total distinct repositories 14664
+2026-11-01T14:16:57Z Census leaf 783; total distinct repositories 15447
+2026-11-01T14:17:19Z Repartitioning unstable page range: 719/720
+2026-11-01T14:17:28Z Census leaf 285; total distinct repositories 15732
+2026-11-01T14:17:39Z Repartitioning unstable page range: 434/435
+2026-11-01T14:17:47Z Census leaf 304; total distinct repositories 16036
+2026-11-01T14:17:54Z Repartitioning unstable page range: 130/131
+2026-11-01T14:17:57Z Census leaf 81; total distinct repositories 16117
+2026-11-01T14:17:59Z Repartitioning unstable page range: 49/50
+2026-11-01T14:18:01Z Census leaf 32; total distinct repositories 16149
+2026-11-01T14:18:03Z Repartitioning unstable page range: 17/18
+2026-11-01T14:18:05Z Repartitioning unstable page range: 7/8
+2026-11-01T14:18:07Z Repartitioning unstable page range: 1/2
+2026-11-01T14:18:09Z Repartitioning unstable page range: 1/2
+2026-11-01T14:18:12Z Census leaf 0; total distinct repositories 16149
+2026-11-01T14:18:14Z Repartitioning unstable page range: 1/2
+2026-11-01T14:18:16Z Repartitioning unstable page range: 1/2
+2026-11-01T14:18:18Z Repartitioning unstable page range: 1/2
+2026-11-01T14:18:21Z Census leaf 1; total distinct repositories 16150
+2026-11-01T14:18:23Z Repartitioning unstable page range: 0/1
+2026-11-01T14:18:25Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:18:27Z Repartitioning unstable page range: 0/1
+2026-11-01T14:18:30Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:18:32Z Repartitioning unstable page range: 0/1
+2026-11-01T14:18:34Z Repartitioning unstable page range: 0/1
+2026-11-01T14:18:37Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:18:39Z Repartitioning unstable page range: 0/1
+2026-11-01T14:18:41Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:18:43Z Repartitioning unstable page range: 0/1
+2026-11-01T14:18:45Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:18:48Z Repartitioning unstable page range: 0/1
+2026-11-01T14:18:50Z Repartitioning unstable page range: 0/1
+Traceback (most recent call last):
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 224, in <module>
+    main()
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 180, in main
+    census_ids = collector.partition('language:lean', low, high)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 4 more times]
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 129, in partition
+    left = self.partition(base, low, middle, term, depth=depth + 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 129, in partition
+    left = self.partition(base, low, middle, term, depth=depth + 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 1 more time]
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 143, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 143, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 143, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 143, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 143, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 143, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 144, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 143, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 143, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 140, in partition
+    raise RuntimeError(f'Count mismatch: {query}: {len(unique)}/{count}')
+RuntimeError: Count mismatch: language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z: 0/1
+2026-11-01T14:20:10Z Initial GitHub language:lean total_count=20705
+2026-11-01T14:20:10Z Census leaf 1; total distinct repositories 1
+2026-11-01T14:20:10Z Census leaf 569; total distinct repositories 570
+2026-11-01T14:20:10Z Census leaf 716; total distinct repositories 1286
+2026-11-01T14:20:10Z Census leaf 493; total distinct repositories 1779
+2026-11-01T14:20:10Z Census leaf 622; total distinct repositories 2401
+2026-11-01T14:20:10Z Census leaf 484; total distinct repositories 2885
+2026-11-01T14:20:10Z Census leaf 593; total distinct repositories 3478
+2026-11-01T14:20:10Z Census leaf 610; total distinct repositories 4088
+2026-11-01T14:20:10Z Census leaf 732; total distinct repositories 4820
+2026-11-01T14:20:10Z Census leaf 489; total distinct repositories 5309
+2026-11-01T14:20:10Z Census leaf 515; total distinct repositories 5824
+2026-11-01T14:20:10Z Census leaf 635; total distinct repositories 6459
+2026-11-01T14:20:10Z Census leaf 368; total distinct repositories 6827
+2026-11-01T14:20:10Z Census leaf 550; total distinct repositories 7377
+2026-11-01T14:20:11Z Census leaf 544; total distinct repositories 7921
+2026-11-01T14:20:11Z Census leaf 764; total distinct repositories 8685
+2026-11-01T14:20:11Z Census leaf 897; total distinct repositories 9582
+2026-11-01T14:20:11Z Census leaf 534; total distinct repositories 10116
+2026-11-01T14:20:11Z Census leaf 546; total distinct repositories 10662
+2026-11-01T14:20:11Z Census leaf 552; total distinct repositories 11214
+2026-11-01T14:20:11Z Census leaf 574; total distinct repositories 11788
+2026-11-01T14:20:11Z Census leaf 854; total distinct repositories 12642
+2026-11-01T14:20:11Z Census leaf 452; total distinct repositories 13094
+2026-11-01T14:20:11Z Census leaf 479; total distinct repositories 13573
+2026-11-01T14:20:11Z Census leaf 541; total distinct repositories 14114
+2026-11-01T14:20:12Z Census leaf 550; total distinct repositories 14664
+2026-11-01T14:20:12Z Census leaf 783; total distinct repositories 15447
+2026-11-01T14:20:12Z Repartitioning unstable page range: 719/720
+2026-11-01T14:20:12Z Census leaf 285; total distinct repositories 15732
+2026-11-01T14:20:12Z Repartitioning unstable page range: 434/435
+2026-11-01T14:20:12Z Census leaf 304; total distinct repositories 16036
+2026-11-01T14:20:12Z Repartitioning unstable page range: 130/131
+2026-11-01T14:20:12Z Census leaf 81; total distinct repositories 16117
+2026-11-01T14:20:12Z Repartitioning unstable page range: 49/50
+2026-11-01T14:20:12Z Census leaf 32; total distinct repositories 16149
+2026-11-01T14:20:12Z Repartitioning unstable page range: 17/18
+2026-11-01T14:20:12Z Repartitioning unstable page range: 7/8
+2026-11-01T14:20:12Z Repartitioning unstable page range: 1/2
+2026-11-01T14:20:12Z Repartitioning unstable page range: 1/2
+2026-11-01T14:20:12Z Census leaf 0; total distinct repositories 16149
+2026-11-01T14:20:12Z Repartitioning unstable page range: 1/2
+2026-11-01T14:20:12Z Repartitioning unstable page range: 1/2
+2026-11-01T14:20:12Z Repartitioning unstable page range: 1/2
+2026-11-01T14:20:12Z Census leaf 1; total distinct repositories 16150
+2026-11-01T14:20:12Z Repartitioning unstable page range: 0/1
+2026-11-01T14:20:12Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:13Z Repartitioning unstable page range: 0/1
+2026-11-01T14:20:13Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:13Z Repartitioning unstable page range: 0/1
+2026-11-01T14:20:13Z Repartitioning unstable page range: 0/1
+2026-11-01T14:20:13Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:13Z Repartitioning unstable page range: 0/1
+2026-11-01T14:20:13Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:13Z Repartitioning unstable page range: 0/1
+2026-11-01T14:20:13Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:13Z Repartitioning unstable page range: 0/1
+2026-11-01T14:20:13Z Repartitioning unstable page range: 0/1
+2026-11-01T14:20:13Z DOCUMENTED SEARCH DISCREPANCY: 0/1: language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z
+2026-11-01T14:20:13Z Census leaf 1; total distinct repositories 16150
+2026-11-01T14:20:14Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:16Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:18Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:20Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:23Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:25Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:20:27Z Census leaf 6; total distinct repositories 16156
+2026-11-01T14:20:30Z Census leaf 10; total distinct repositories 16166
+2026-11-01T14:20:43Z Census leaf 453; total distinct repositories 16619
+2026-11-01T14:21:08Z Census leaf 497; total distinct repositories 17116
+2026-11-01T14:21:21Z Census leaf 461; total distinct repositories 17577
+2026-11-01T14:21:39Z Census leaf 563; total distinct repositories 18140
+2026-11-01T14:21:55Z Census leaf 610; total distinct repositories 18750
+2026-11-01T14:22:16Z Census leaf 529; total distinct repositories 19279
+2026-11-01T14:22:31Z Census leaf 560; total distinct repositories 19839
+2026-11-01T14:22:53Z Census leaf 868; total distinct repositories 20707
+2026-11-01T14:22:53Z CENSUS COMPLETE: 20707 repositories
+2026-11-01T14:22:54Z Keyword Verilog: initial count 32
+2026-11-01T14:22:56Z Keyword SystemVerilog: initial count 20
+2026-11-01T14:22:58Z Keyword VHDL: initial count 3
+2026-11-01T14:23:01Z Keyword yosys: initial count 12
+2026-11-01T14:23:04Z Keyword RTL: initial count 41
+2026-11-01T14:23:06Z Keyword MLIR: initial count 38
+2026-11-01T14:23:09Z Keyword PyTorch: initial count 62
+2026-11-01T14:23:12Z Keyword Python: initial count 2734
+2026-11-01T14:23:17Z Keyword Python: leaf 0; matched repositories 159
+2026-11-01T14:23:22Z Keyword Python: leaf 2; matched repositories 161
+2026-11-01T14:23:29Z Keyword Python: leaf 47; matched repositories 208
+2026-11-01T14:23:35Z Keyword Python: leaf 70; matched repositories 273
+2026-11-01T14:23:43Z Keyword Python: leaf 120; matched repositories 388
+2026-11-01T14:23:56Z Keyword Python: leaf 329; matched repositories 701
+2026-11-01T14:24:11Z Keyword Python: leaf 411; matched repositories 1099
+2026-11-01T14:24:31Z Repartitioning unstable page range: 582/583
+2026-11-01T14:24:35Z Keyword Python: leaf 180; matched repositories 1271
+2026-11-01T14:24:46Z Repartitioning unstable page range: 402/403
+2026-11-01T14:24:52Z Keyword Python: leaf 195; matched repositories 1461
+2026-11-01T14:24:59Z Repartitioning unstable page range: 207/208
+2026-11-01T14:25:04Z Repartitioning unstable page range: 116/117
+2026-11-01T14:25:06Z Keyword Python: leaf 48; matched repositories 1509
+2026-11-01T14:25:09Z Repartitioning unstable page range: 68/69
+2026-11-01T14:25:11Z Keyword Python: leaf 51; matched repositories 1560
+2026-11-01T14:25:13Z Repartitioning unstable page range: 17/18
+2026-11-01T14:25:15Z Keyword Python: leaf 10; matched repositories 1570
+2026-11-01T14:25:17Z Repartitioning unstable page range: 7/8
+2026-11-01T14:25:19Z Keyword Python: leaf 4; matched repositories 1574
+2026-11-01T14:25:21Z Repartitioning unstable page range: 3/4
+2026-11-01T14:25:24Z Repartitioning unstable page range: 2/3
+2026-11-01T14:25:26Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:28Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:30Z Keyword Python: leaf 0; matched repositories 1574
+2026-11-01T14:25:33Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:35Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:37Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:39Z Keyword Python: leaf 0; matched repositories 1574
+2026-11-01T14:25:41Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:44Z Keyword Python: leaf 0; matched repositories 1574
+2026-11-01T14:25:46Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:48Z Keyword Python: leaf 0; matched repositories 1574
+2026-11-01T14:25:51Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:53Z Repartitioning unstable page range: 0/1
+2026-11-01T14:25:55Z Keyword Python: leaf 0; matched repositories 1574
+2026-11-01T14:25:57Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:00Z Keyword Python: leaf 0; matched repositories 1574
+2026-11-01T14:26:02Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:04Z Keyword Python: leaf 0; matched repositories 1574
+2026-11-01T14:26:06Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:09Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:11Z DOCUMENTED SEARCH DISCREPANCY: 0/1: language:lean Python in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z
+2026-11-01T14:26:11Z Keyword Python: leaf 1; matched repositories 1574
+2026-11-01T14:26:13Z Keyword Python: leaf 0; matched repositories 1574
+Traceback (most recent call last):
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 230, in <module>
+    main()
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 209, in main
+    collector.partition(base, low, high, term)
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 130, in partition
+    right = self.partition(base, middle + 1, high, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 4 more times]
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 129, in partition
+    left = self.partition(base, low, middle, term, depth=depth + 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 149, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 1 more time]
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 149, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 149, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 149, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 149, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 149, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 149, in partition
+    return (self.partition(base, low, middle, term, depth=depth + 1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 150, in partition
+    | self.partition(base, middle + 1, high, term, depth=depth + 1))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  [Previous line repeated 1 more time]
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 123, in partition
+    first = initial if initial is not None else self.search(query)
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 100, in search
+    data = self.api(endpoint)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/roland/clean-LLM2FPGA/research/lean-repos-2026-11-01/collect.py", line 71, in api
+    time.sleep(max(0, 2.25 - (time.monotonic() - self.last_search)))
+KeyboardInterrupt
+2026-11-01T14:26:16Z Initial GitHub language:lean total_count=20705
+2026-11-01T14:26:16Z Census leaf 1; total distinct repositories 1
+2026-11-01T14:26:16Z Census leaf 569; total distinct repositories 570
+2026-11-01T14:26:16Z Census leaf 716; total distinct repositories 1286
+2026-11-01T14:26:16Z Census leaf 493; total distinct repositories 1779
+2026-11-01T14:26:16Z Census leaf 622; total distinct repositories 2401
+2026-11-01T14:26:16Z Census leaf 484; total distinct repositories 2885
+2026-11-01T14:26:16Z Census leaf 593; total distinct repositories 3478
+2026-11-01T14:26:17Z Census leaf 610; total distinct repositories 4088
+2026-11-01T14:26:17Z Census leaf 732; total distinct repositories 4820
+2026-11-01T14:26:17Z Census leaf 489; total distinct repositories 5309
+2026-11-01T14:26:17Z Census leaf 515; total distinct repositories 5824
+2026-11-01T14:26:17Z Census leaf 635; total distinct repositories 6459
+2026-11-01T14:26:17Z Census leaf 368; total distinct repositories 6827
+2026-11-01T14:26:17Z Census leaf 550; total distinct repositories 7377
+2026-11-01T14:26:17Z Census leaf 544; total distinct repositories 7921
+2026-11-01T14:26:17Z Census leaf 764; total distinct repositories 8685
+2026-11-01T14:26:17Z Census leaf 897; total distinct repositories 9582
+2026-11-01T14:26:17Z Census leaf 534; total distinct repositories 10116
+2026-11-01T14:26:17Z Census leaf 546; total distinct repositories 10662
+2026-11-01T14:26:17Z Census leaf 552; total distinct repositories 11214
+2026-11-01T14:26:17Z Census leaf 574; total distinct repositories 11788
+2026-11-01T14:26:18Z Census leaf 854; total distinct repositories 12642
+2026-11-01T14:26:18Z Census leaf 452; total distinct repositories 13094
+2026-11-01T14:26:18Z Census leaf 479; total distinct repositories 13573
+2026-11-01T14:26:18Z Census leaf 541; total distinct repositories 14114
+2026-11-01T14:26:18Z Census leaf 550; total distinct repositories 14664
+2026-11-01T14:26:18Z Census leaf 783; total distinct repositories 15447
+2026-11-01T14:26:18Z Repartitioning unstable page range: 719/720
+2026-11-01T14:26:18Z Census leaf 285; total distinct repositories 15732
+2026-11-01T14:26:18Z Repartitioning unstable page range: 434/435
+2026-11-01T14:26:18Z Census leaf 304; total distinct repositories 16036
+2026-11-01T14:26:18Z Repartitioning unstable page range: 130/131
+2026-11-01T14:26:18Z Census leaf 81; total distinct repositories 16117
+2026-11-01T14:26:19Z Repartitioning unstable page range: 49/50
+2026-11-01T14:26:19Z Census leaf 32; total distinct repositories 16149
+2026-11-01T14:26:19Z Repartitioning unstable page range: 17/18
+2026-11-01T14:26:19Z Repartitioning unstable page range: 7/8
+2026-11-01T14:26:19Z Repartitioning unstable page range: 1/2
+2026-11-01T14:26:19Z Repartitioning unstable page range: 1/2
+2026-11-01T14:26:19Z Census leaf 0; total distinct repositories 16149
+2026-11-01T14:26:19Z Repartitioning unstable page range: 1/2
+2026-11-01T14:26:19Z Repartitioning unstable page range: 1/2
+2026-11-01T14:26:19Z Repartitioning unstable page range: 1/2
+2026-11-01T14:26:19Z Census leaf 1; total distinct repositories 16150
+2026-11-01T14:26:19Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:19Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:19Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:19Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:19Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:19Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:19Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:19Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:19Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:19Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:19Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:19Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:19Z Repartitioning unstable page range: 0/1
+2026-11-01T14:26:19Z DOCUMENTED SEARCH DISCREPANCY: 0/1: language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z
+2026-11-01T14:26:19Z Census leaf 1; total distinct repositories 16150
+2026-11-01T14:26:19Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:19Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:20Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:20Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:20Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:20Z Census leaf 0; total distinct repositories 16150
+2026-11-01T14:26:20Z Census leaf 6; total distinct repositories 16156
+2026-11-01T14:26:20Z Census leaf 10; total distinct repositories 16166
+2026-11-01T14:26:20Z Census leaf 453; total distinct repositories 16619
+2026-11-01T14:26:20Z Census leaf 497; total distinct repositories 17116
+2026-11-01T14:26:20Z Census leaf 461; total distinct repositories 17577
+2026-11-01T14:26:20Z Census leaf 563; total distinct repositories 18140
+2026-11-01T14:26:21Z Census leaf 610; total distinct repositories 18750
+2026-11-01T14:26:21Z Census leaf 529; total distinct repositories 19279
+2026-11-01T14:26:21Z Census leaf 560; total distinct repositories 19839
+2026-11-01T14:26:21Z Census leaf 868; total distinct repositories 20707
+2026-11-01T14:26:21Z CENSUS COMPLETE: 20707 repositories
+2026-11-01T14:26:21Z Keyword Verilog: initial count 32
+2026-11-01T14:26:21Z Keyword SystemVerilog: initial count 20
+2026-11-01T14:26:21Z Keyword VHDL: initial count 3
+2026-11-01T14:26:22Z Keyword yosys: initial count 12
+2026-11-01T14:26:22Z Keyword RTL: initial count 41
+2026-11-01T14:26:22Z Keyword MLIR: initial count 38
+2026-11-01T14:26:22Z Keyword PyTorch: initial count 62
+2026-11-01T14:26:22Z Keyword Python: initial count 2734
+2026-11-01T14:26:22Z Keyword Python: leaf 0; matched repositories 159
+2026-11-01T14:26:22Z Keyword Python: leaf 2; matched repositories 161
+2026-11-01T14:26:22Z Keyword Python: leaf 47; matched repositories 208
+2026-11-01T14:26:22Z Keyword Python: leaf 70; matched repositories 273
+2026-11-01T14:26:22Z Keyword Python: leaf 120; matched repositories 388
+2026-11-01T14:26:23Z Keyword Python: leaf 329; matched repositories 701
+2026-11-01T14:26:23Z Keyword Python: leaf 411; matched repositories 1099
+2026-11-01T14:26:23Z DOCUMENTED SEARCH DISCREPANCY: 0/1: language:lean Python in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z
+2026-11-01T14:26:23Z Keyword Python: leaf 1; matched repositories 1099
+2026-11-01T14:26:36Z Keyword Python: leaf 488; matched repositories 1574
+2026-11-01T14:26:39Z Keyword Python: leaf 94; matched repositories 1667
+2026-11-01T14:26:56Z Keyword Python: leaf 574; matched repositories 2232
+2026-11-01T14:27:12Z Keyword Python: leaf 598; matched repositories 2819
+2026-11-01T14:27:13Z Keyword CIRCT: initial count 5
+2026-11-01T14:27:15Z Keyword Calyx: initial count 0
+2026-11-01T14:27:18Z Keyword FPGA: initial count 21
+2026-11-01T14:27:22Z Keyword hardware: initial count 321
+2026-11-01T14:27:33Z Keyword tensor: initial count 530
+2026-11-01T14:27:48Z Keyword quantization: initial count 96
+2026-11-01T14:27:49Z Keyword bitvector: initial count 34
+2026-11-01T14:27:53Z Keyword floating-point: initial count 420
+2026-11-01T14:28:06Z Keyword SMT: initial count 176
+2026-11-01T14:28:12Z Keyword SAT: initial count 405
+2026-11-01T14:28:25Z Keyword compiler: initial count 4497
+2026-11-01T14:28:29Z Keyword compiler: leaf 0; matched repositories 3883
+2026-11-01T14:28:35Z Keyword compiler: leaf 36; matched repositories 3914
+2026-11-01T14:28:44Z Keyword compiler: leaf 104; matched repositories 3998
+2026-11-01T14:28:54Z Keyword compiler: leaf 167; matched repositories 4129
+2026-11-01T14:29:06Z Keyword compiler: leaf 261; matched repositories 4311
+2026-11-01T14:29:27Z Keyword compiler: leaf 677; matched repositories 4752
+2026-11-01T14:29:51Z Keyword compiler: leaf 810; matched repositories 5251
+2026-11-01T14:30:17Z DOCUMENTED SEARCH DISCREPANCY: 0/1: language:lean compiler in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z
+2026-11-01T14:30:17Z Keyword compiler: leaf 1; matched repositories 5251
+2026-11-01T14:30:37Z Keyword compiler: leaf 728; matched repositories 5689
+2026-11-01T14:30:43Z Keyword compiler: leaf 140; matched repositories 5762
+2026-11-01T14:31:06Z Keyword compiler: leaf 785; matched repositories 6189
+2026-11-01T14:31:27Z Keyword compiler: leaf 788; matched repositories 6556
+2026-11-01T14:31:31Z Keyword equivalence: initial count 1674
+2026-11-01T14:31:35Z Keyword equivalence: leaf 0; matched repositories 6556
+2026-11-01T14:31:40Z Keyword equivalence: leaf 9; matched repositories 6560
+2026-11-01T14:31:47Z Keyword equivalence: leaf 40; matched repositories 6594
+2026-11-01T14:31:53Z Keyword equivalence: leaf 56; matched repositories 6635
+2026-11-01T14:32:01Z Keyword equivalence: leaf 103; matched repositories 6695
+2026-11-01T14:32:13Z Keyword equivalence: leaf 257; matched repositories 6800
+2026-11-01T14:32:33Z Keyword equivalence: leaf 337; matched repositories 6944
+2026-11-01T14:32:55Z DOCUMENTED SEARCH DISCREPANCY: 0/1: language:lean equivalence in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z
+2026-11-01T14:32:55Z Keyword equivalence: leaf 1; matched repositories 6944
+2026-11-01T14:33:07Z Keyword equivalence: leaf 334; matched repositories 7067
+2026-11-01T14:33:21Z Keyword equivalence: leaf 537; matched repositories 7217
+2026-11-01T14:33:21Z COLLECTION COMPLETE

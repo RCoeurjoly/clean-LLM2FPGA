@@ -1,0 +1,12 @@
+{
+  "before_rejected": "research/yosys-lean-2026-11-02/full-hardware-run/scalar-reproducer.sv:9.107-11.79|/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:10.43-10.46: The current memory importer requires a zero-based memory with at least two words ($mem_v2)",
+  "after_preflight": {
+    "register_cells": 5,
+    "memory_cells": 1,
+    "clock": null,
+    "clock_mode": "global"
+  },
+  "larger_memory_words_retained": 16,
+  "known_scalar_initial_value_retained": 0,
+  "scope": "Supported normalization, not a theorem of RTL-to-Lean correspondence"
+}

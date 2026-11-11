@@ -1,0 +1,2 @@
+SCALAR_NORMALIZATION_TRACE_PASS
+research/yosys-lean-2026-11-02/full-hardware-run/scalar-tb.sv:38: $finish called at 90 (1s)

@@ -1,0 +1,151 @@
+{
+  "model_path": "/nix/store/qvsldlg3biy0bj9yy1ys9hxvi9hn8sdp-tinystories-quantized/model.pt2",
+  "model_sha256": "c99488b62f34783c1ebc1033de7bb1b6beb75727561ac0fc663d6f0286be9f34",
+  "model_bytes": 54859074,
+  "torch": "2.9.1",
+  "python": "3.11.14",
+  "adapter_sha256": "0b8ca3cc8d882a92de05ed1dc750ecbd6ef46d2497821aee3039aba1074d4565",
+  "torchlean_commit": "f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b",
+  "adapter_reconstructed_without_lean": true,
+  "lean_checker_run": false,
+  "frontend_equivalence_proved": false,
+  "stages": {
+    "load": {
+      "status": "completed",
+      "seconds": 1.472112792005646
+    },
+    "reference_execution": {
+      "status": "completed",
+      "seconds": 0.04732405200775247
+    },
+    "whole_frontend_import": {
+      "status": "failed",
+      "seconds": 1.3116866929922253,
+      "type": "NotImplementedError",
+      "message": "unsupported PyTorch op: aten.embedding.default"
+    },
+    "scan_original_graph": {
+      "status": "completed",
+      "seconds": 0.045441844005836174
+    }
+  },
+  "runtime": {
+    "threads": 1,
+    "cpu_capability": "AVX2",
+    "quantized_engine": "x86",
+    "mkldnn_enabled": true,
+    "deterministic_algorithms": false
+  },
+  "example_inputs": [
+    {
+      "shape": [
+        1,
+        32
+      ],
+      "dtype": "torch.int64"
+    }
+  ],
+  "example_kwargs": {},
+  "state_tensors": 279,
+  "state_elements": 40921546,
+  "graph_nodes": 1710,
+  "node_kinds": {
+    "placeholder": 280,
+    "call_function": 1429,
+    "output": 1
+  },
+  "operator_counts": {
+    "aten.embedding.default": 2,
+    "aten.arange.start": 1,
+    "aten.unsqueeze.default": 3,
+    "aten.full.default": 1,
+    "aten.triu.default": 1,
+    "aten.arange.default": 1,
+    "aten.reshape.default": 1,
+    "aten.gt.Tensor": 1,
+    "aten.mul_.Tensor": 1,
+    "aten.expand.default": 1,
+    "aten.add.Tensor": 74,
+    "aten.dropout.default": 25,
+    "aten.layer_norm.default": 17,
+    "quantized_decomposed.choose_qparams.tensor": 33,
+    "<built-in function getitem>": 66,
+    "aten.div.Tensor": 33,
+    "aten.round.default": 33,
+    "aten._assert_tensor_metadata.default": 254,
+    "aten.to.dtype": 254,
+    "aten.clamp.default": 115,
+    "aten.sub.Tensor": 82,
+    "aten.mul.Tensor": 114,
+    "aten.transpose.int": 106,
+    "aten.linear.default": 49,
+    "aten.view.default": 33,
+    "aten.permute.default": 32,
+    "aten.matmul.default": 16,
+    "aten.slice.Tensor": 24,
+    "aten.lift_fresh_copy.default": 8,
+    "aten.detach_.default": 8,
+    "aten.where.self": 8,
+    "aten.softmax.int": 8,
+    "aten.contiguous.default": 8,
+    "aten.pow.Tensor_Scalar": 8,
+    "aten.tanh.default": 8
+  },
+  "range_constraints": "{}",
+  "linear_weight_dependencies": {
+    "frozen_state_only": 49
+  },
+  "dropout_arguments": {
+    "(0.0, False)": 25
+  },
+  "tensor_node_dtypes": {
+    "torch.float32": 768,
+    "torch.int64": 202,
+    "torch.int8": 213,
+    "torch.bool": 25,
+    "torch.float64": 132,
+    "torch.int32": 82
+  },
+  "sample_outputs": [
+    {
+      "shape": [
+        1,
+        32,
+        50257
+      ],
+      "dtype": "torch.float32",
+      "finite": true,
+      "sha256": "fa0b5d595c2bd3d23fb34d9d055984c0000e0e930d6bdfdee97988bdd3142b78"
+    }
+  ],
+  "coverage": {
+    "nodes_by_status": {
+      "unsupported": 315,
+      "recognized_lowering": 884,
+      "recognized_metadata": 230
+    },
+    "unique_operators": 35,
+    "unsupported_operator_identities": [
+      "aten._assert_tensor_metadata.default",
+      "aten.arange.default",
+      "aten.arange.start",
+      "aten.clamp.default",
+      "aten.detach_.default",
+      "aten.dropout.default",
+      "aten.embedding.default",
+      "aten.expand.default",
+      "aten.full.default",
+      "aten.gt.Tensor",
+      "aten.lift_fresh_copy.default",
+      "aten.linear.default",
+      "aten.mul_.Tensor",
+      "aten.round.default",
+      "aten.triu.default",
+      "aten.unsqueeze.default",
+      "aten.where.self",
+      "quantized_decomposed.choose_qparams.tensor"
+    ],
+    "scope": "lowering recognition only, not serialization/type/numerical proof"
+  },
+  "peak_rss_kib": 481628
+}

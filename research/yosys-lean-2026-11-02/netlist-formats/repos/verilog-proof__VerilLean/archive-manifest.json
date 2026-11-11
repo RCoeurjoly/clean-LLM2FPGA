@@ -1,0 +1,94 @@
+{
+  "utc": "2026-11-01T23:13:18.352826+00:00",
+  "endpoint": "repos/verilog-proof/VerilLean/tarball/d13650b8b8b6bee64f06a4f045e464d1916062e8",
+  "exit_code": 0,
+  "archive_bytes": 48355,
+  "sha256": "b37bd9542ce8bb87eb2a881f153d5931101cb84350b6328ceef7a1125ef9c7b9",
+  "files": [
+    {
+      "path": "Main.lean",
+      "bytes": 62,
+      "sha256": "81969f0032aa1365e35fad88390113253e61d4fa3b64539ce8d2e04f971224ad"
+    },
+    {
+      "path": "README.md",
+      "bytes": 70,
+      "sha256": "6b59d92ef5fa91e3da07f169592b872d932603eb6de1f5ac610bdfecdd1e8c96"
+    },
+    {
+      "path": "VerilLean.lean",
+      "bytes": 177,
+      "sha256": "28d31fa5ea5fa124d2310f633c30829fc8f8d7b6e72d6d878798ae91e783ccf9"
+    },
+    {
+      "path": "VerilLean/Lang.lean",
+      "bytes": 184,
+      "sha256": "79efdcff147697437d3fe222203870b76b6d2ac85863ced32c380c76a546c6d1"
+    },
+    {
+      "path": "VerilLean/Lang/Analysis.lean",
+      "bytes": 2283,
+      "sha256": "07b7c53f2b105a5363a8cd8df9bfbb5236c6da4d7a2a8300150cc5cf0a093fc0"
+    },
+    {
+      "path": "VerilLean/Lang/ModuleTrs.lean",
+      "bytes": 656,
+      "sha256": "65c842f453ed6625a51355e627a9d8d09761df8b70ca17e49fe4a16148d2c9cb"
+    },
+    {
+      "path": "VerilLean/Lang/Notation.lean",
+      "bytes": 45796,
+      "sha256": "f93432e499ff4ecbfe140926be52a2de6d062ae51a30a5d4cc165af2997bb34f"
+    },
+    {
+      "path": "VerilLean/Lang/Semantics.lean",
+      "bytes": 71032,
+      "sha256": "88d255ae7ec092bf1a91d1ee4c2eaef91c3537fb8d9d64f837bd8f74495044d3"
+    },
+    {
+      "path": "VerilLean/Lang/Syntax.lean",
+      "bytes": 33770,
+      "sha256": "9bb3fc85f400363a528ed89908485f8ac30af699a29986df5cb8056af9d700e2"
+    },
+    {
+      "path": "VerilLean/Lang/Tester.lean",
+      "bytes": 6146,
+      "sha256": "cceeb25ecc59e79b8655b17ca3da0a4d5d9b1c6b45b2c9cf3baa0ceb87cb2ab6"
+    },
+    {
+      "path": "VerilLean/Lib/Common.lean",
+      "bytes": 319,
+      "sha256": "c0a1d84c88b20020f3d154a24fef222d9600ce8388093fa891846fcffa31c8b3"
+    },
+    {
+      "path": "VerilLean/Lib/HMap.lean",
+      "bytes": 13738,
+      "sha256": "644696b950d1d58ccbdc5aac67528de12ddb918d8036de8421174fff6a4118e0"
+    },
+    {
+      "path": "VerilLean/Lib/HMapLemmas.lean",
+      "bytes": 50093,
+      "sha256": "3133d1de32da351f6fda8aecadb05b3953ee2b26eac25419fddddbb5f33e408b"
+    },
+    {
+      "path": "VerilLean/Lib/Lib.lean",
+      "bytes": 78,
+      "sha256": "f5c8f1e87db177f1b74a79e242556b3748c00b09b43d250e1401ab00ec279ef3"
+    },
+    {
+      "path": "VerilLean/Lib/SZ.lean",
+      "bytes": 9143,
+      "sha256": "471eab42ef18db17d2ad6db803b769451d91fa244aef7ba4ca0084e61c2c2e52"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 148,
+      "sha256": "a5bcde01d7983f8afc30835d91722f7bb58e5522d0d115cddc77b272b32e1552"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "db7bb24b756d745bbde83fe92718b51bd3625dae3701ba0f598d0eedcd3f3028"
+    }
+  ]
+}

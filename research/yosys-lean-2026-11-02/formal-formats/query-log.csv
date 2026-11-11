@@ -1,0 +1,51 @@
+id,kind,query,page,per_page,total_count,incomplete_results,returned,error,limitation
+F-C001,code,RTLIL language:Lean,1,100,0,False,0,,
+F-R001,repository,"RTLIL Lean in:name,description,readme fork:true",1,100,,,0,HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None),connector omitted count; F-R001 endpoint rejected; repeated via gh with totals where applicable
+F-C002,code,BTOR language:Lean,1,100,895,False,100,,first page only; lexical false positives; narrowed variants and source/census audits used; not exhausted
+F-C003,code,AIGER language:Lean,1,100,14,False,14,,
+F-C004,code,FIRRTL language:Lean,1,100,3,False,3,,
+F-R002,repository,"RTLIL Lean in:name,description,readme fork:true",1,100,,,2,,connector omitted count; F-R001 endpoint rejected; repeated via gh with totals where applicable
+F-R003,repository,"BTOR Lean in:name,description,readme fork:true",1,100,,,2,,connector omitted count; F-R001 endpoint rejected; repeated via gh with totals where applicable
+F-C005,code,XAIGER language:Lean,1,100,0,False,0,,
+F-C006,code,SMV language:Lean,1,100,1426,False,100,,first page only; lexical false positives; narrowed variants and source/census audits used; not exhausted
+F-C007,code,BTOR2 language:Lean,1,100,0,False,0,,
+F-C008,code,"""btor"" extension:lean",1,100,1470,False,100,,first page only; lexical false positives; narrowed variants and source/census audits used; not exhausted
+F-C009,code,"""smv"" extension:lean",1,100,6224,False,100,,first page only; lexical false positives; narrowed variants and source/census audits used; not exhausted
+F-C010,code,"""smt2"" language:Lean",1,100,60,False,60,,
+F-C011,code,"""SMT-LIB"" language:Lean",1,100,144,False,100,,
+F-C012,code,"""SMT-LIB"" language:Lean",2,100,152,False,52,,
+F-C013,code,"""RTLIL"" extension:lean",1,100,22,False,22,,
+F-C014,code,"""BTOR2"" fork:true",1,100,8304,False,100,,first page only; lexical false positives; narrowed variants and source/census audits used; not exhausted
+F-C015,code,"""XAIGER"" Lean",1,100,635,False,100,,first page only; lexical false positives; narrowed variants and source/census audits used; not exhausted
+F-C016,code,"""FIRRTL"" Lean",1,100,18048,False,100,,first page only; lexical false positives; narrowed variants and source/census audits used; not exhausted
+F-C017,code,BTOR2 extension:lean fork:true,1,100,0,False,0,,
+F-C018,code,"""write_functional_smt2"" extension:lean fork:true",1,100,0,False,0,,
+F-C019,code,"""Rosette"" extension:lean fork:true",1,100,40,False,40,,
+F-C020,code,"""XAIGER"" extension:lean fork:true",1,100,0,False,0,,
+F-C021,code,"""AIGER"" extension:lean fork:true",1,100,22,False,22,,
+F-C022,code,"""FIRRTL"" extension:lean fork:true",1,100,2,False,2,,
+F-G001,repository,"BTOR2 Lean in:name,description,readme fork:true",1,100,15,False,15,,
+F-G002,repository,"RTLIL Lean in:name,description,readme fork:true",1,100,2,False,2,,
+F-G003,repository,"AIGER Lean in:name,description,readme fork:true",1,100,219,False,100,,
+F-G004,repository,"FIRRTL Lean in:name,description,readme fork:true",1,100,315,False,100,,
+F-G005,repository,"SMV Lean in:name,description,readme fork:true",1,100,76,False,76,,
+F-G006,repository,"SMT2 Lean in:name,description,readme fork:true",1,100,122,False,100,,
+F-G007,repository,"XAIGER Lean in:name,description,readme fork:true",1,100,0,False,0,,
+F-G008,repository,"write_functional_smt2 Lean in:name,description,readme fork:true",1,100,0,False,0,,
+F-G009,repository,"BTOR Lean in:name,description,readme fork:true",1,100,2,False,2,,
+F-G010,repository,"AIGER Lean in:name,description,readme fork:true",2,100,219,False,100,,
+F-G011,repository,"AIGER Lean in:name,description,readme fork:true",3,100,219,False,19,,
+F-G012,repository,"FIRRTL Lean in:name,description,readme fork:true",2,100,315,False,100,,
+F-G013,repository,"FIRRTL Lean in:name,description,readme fork:true",3,100,315,False,100,,
+F-G014,repository,"FIRRTL Lean in:name,description,readme fork:true",4,100,315,False,15,,
+F-G015,repository,"SMT2 Lean in:name,description,readme fork:true",2,100,122,False,22,,
+F-G016,repository,"RTL2Lean in:name,description,readme fork:true",1,100,18,False,18,,
+F-G017,repository,"Rosette Lean Yosys in:name,description,readme fork:true",1,100,1,False,1,,
+F-G018,repository,BTOR2 language:Lean fork:true,1,100,0,False,0,,
+F-G019,repository,AIGER language:Lean fork:true,1,100,0,False,0,,
+F-G020,repository,"smtlib Lean in:name,description,readme fork:true",1,100,76,False,76,,
+F-G021,repository,"""SMT-LIB"" Lean in:name,description fork:true",1,100,4,False,4,,
+F-G022,repository,SMV language:Lean fork:true,1,100,0,False,0,,
+F-G023,repository,FIRRTL language:Lean fork:true,1,100,0,False,0,,
+F-G024,repository,RTLIL language:Lean fork:true,1,100,0,False,0,,
+F-G000,repository,"BTOR2 Lean in:name,description,readme fork:true",1,100,15,False,0,,

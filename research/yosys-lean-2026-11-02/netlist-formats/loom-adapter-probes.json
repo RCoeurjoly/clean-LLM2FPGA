@@ -1,0 +1,321 @@
+{
+  "scope": "Python adapter only, no Lean build or Yosys exporter run",
+  "results": [
+    {
+      "probe": "supported_and",
+      "yosys_module": {
+        "attributes": {
+          "src": "probe.v:1.0-1.10"
+        },
+        "ports": {
+          "a": {
+            "direction": "input",
+            "bits": [
+              2
+            ]
+          },
+          "b": {
+            "direction": "input",
+            "bits": [
+              3
+            ]
+          },
+          "y": {
+            "direction": "output",
+            "bits": [
+              4
+            ]
+          }
+        },
+        "netnames": {},
+        "cells": {
+          "c": {
+            "type": "$and",
+            "parameters": {
+              "A_WIDTH": "1",
+              "B_WIDTH": "1",
+              "Y_WIDTH": "1",
+              "A_SIGNED": "0",
+              "B_SIGNED": "0"
+            },
+            "port_directions": {
+              "A": "input",
+              "B": "input",
+              "Y": "output"
+            },
+            "connections": {
+              "A": [
+                2
+              ],
+              "B": [
+                3
+              ],
+              "Y": [
+                4
+              ]
+            }
+          }
+        }
+      },
+      "neutral_module": {
+        "name": "top",
+        "ports": [
+          {
+            "name": "a",
+            "direction": "input",
+            "width": 1,
+            "semantic_type": "bits",
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          },
+          {
+            "name": "b",
+            "direction": "input",
+            "width": 1,
+            "semantic_type": "bits",
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          },
+          {
+            "name": "y",
+            "direction": "output",
+            "width": 1,
+            "semantic_type": "bits",
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          }
+        ],
+        "domains": [],
+        "registers": [],
+        "memories": [],
+        "outputs": [
+          {
+            "name": "y",
+            "width": 1,
+            "value": {
+              "kind": "binary",
+              "width": 1,
+              "op": "bit_and",
+              "left": {
+                "kind": "signal",
+                "width": 1,
+                "name": "a",
+                "source": {
+                  "file": "probe.v",
+                  "start_line": 1,
+                  "start_column": 0,
+                  "end_line": 1,
+                  "end_column": 0
+                }
+              },
+              "right": {
+                "kind": "signal",
+                "width": 1,
+                "name": "b",
+                "source": {
+                  "file": "probe.v",
+                  "start_line": 1,
+                  "start_column": 0,
+                  "end_line": 1,
+                  "end_column": 0
+                }
+              },
+              "source": {
+                "file": "probe.v",
+                "start_line": 1,
+                "start_column": 0,
+                "end_line": 1,
+                "end_column": 0
+              }
+            },
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          }
+        ],
+        "memory_equivalence": [],
+        "register_equivalence": [],
+        "instances": [],
+        "unsupported": [],
+        "source": {
+          "file": "probe.v",
+          "start_line": 1,
+          "start_column": 0,
+          "end_line": 1,
+          "end_column": 10
+        }
+      }
+    },
+    {
+      "probe": "unsupported_custom",
+      "yosys_module": {
+        "attributes": {
+          "src": "probe.v:1.0-1.10"
+        },
+        "ports": {
+          "a": {
+            "direction": "input",
+            "bits": [
+              2
+            ]
+          },
+          "b": {
+            "direction": "input",
+            "bits": [
+              3
+            ]
+          },
+          "y": {
+            "direction": "output",
+            "bits": [
+              4
+            ]
+          }
+        },
+        "netnames": {},
+        "cells": {
+          "c": {
+            "type": "$mystery",
+            "parameters": {
+              "A_WIDTH": "1",
+              "B_WIDTH": "1",
+              "Y_WIDTH": "1",
+              "A_SIGNED": "0",
+              "B_SIGNED": "0"
+            },
+            "port_directions": {
+              "A": "input",
+              "B": "input",
+              "Y": "output"
+            },
+            "connections": {
+              "A": [
+                2
+              ],
+              "B": [
+                3
+              ],
+              "Y": [
+                4
+              ]
+            }
+          }
+        }
+      },
+      "neutral_module": {
+        "name": "top",
+        "ports": [
+          {
+            "name": "a",
+            "direction": "input",
+            "width": 1,
+            "semantic_type": "bits",
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          },
+          {
+            "name": "b",
+            "direction": "input",
+            "width": 1,
+            "semantic_type": "bits",
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          },
+          {
+            "name": "y",
+            "direction": "output",
+            "width": 1,
+            "semantic_type": "bits",
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          }
+        ],
+        "domains": [],
+        "registers": [],
+        "memories": [],
+        "outputs": [
+          {
+            "name": "y",
+            "width": 1,
+            "value": {
+              "kind": "literal",
+              "width": 1,
+              "value": 0,
+              "source": {
+                "file": "probe.v",
+                "start_line": 1,
+                "start_column": 0,
+                "end_line": 1,
+                "end_column": 0
+              }
+            },
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          }
+        ],
+        "memory_equivalence": [],
+        "register_equivalence": [],
+        "instances": [],
+        "unsupported": [
+          {
+            "kind": "yosys_cell",
+            "detail": "unsupported cell type $mystery",
+            "source": {
+              "file": "probe.v",
+              "start_line": 1,
+              "start_column": 0,
+              "end_line": 1,
+              "end_column": 0
+            }
+          }
+        ],
+        "source": {
+          "file": "probe.v",
+          "start_line": 1,
+          "start_column": 0,
+          "end_line": 1,
+          "end_column": 10
+        }
+      }
+    }
+  ]
+}

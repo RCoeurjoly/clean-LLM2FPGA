@@ -1,0 +1,26 @@
+{
+  "stage": "10-native-runtime-c",
+  "command": [
+    "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/lean",
+    "--root=/tmp/llm2fpga-full-hardware-20261102",
+    "-c",
+    "/tmp/llm2fpga-full-hardware-20261102/Functional.c",
+    "/tmp/llm2fpga-full-hardware-20261102/Chisel2Lean/Functional.lean"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:36:05.422499+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 2.352138575995923,
+  "finished_at": "2026-11-02T00:36:07.774764+00:00"
+}

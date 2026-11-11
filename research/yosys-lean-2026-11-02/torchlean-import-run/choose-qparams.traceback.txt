@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/capture_probe.py", line 109, in capture
+    graph = adapter.export_torchlean_graph_json(module, inputs, str(path),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/llm2fpga-torchlean-import/capture_adapter.py", line 907, in export_torchlean_graph_json
+    graph, user_input_names = _capture(model, example, require_torch_export)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/llm2fpga-torchlean-import/capture_adapter.py", line 888, in _capture
+    if require_torch_export: _check_graph_operators(ep.graph, model)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/llm2fpga-torchlean-import/capture_adapter.py", line 841, in _check_graph_operators
+    _tuple_kind(node, model)
+  File "/tmp/llm2fpga-torchlean-import/capture_adapter.py", line 79, in _tuple_kind
+    raise NotImplementedError(f"unsupported tuple-valued PyTorch op: {node.target}")
+NotImplementedError: unsupported tuple-valued PyTorch op: quantized_decomposed.choose_qparams.tensor

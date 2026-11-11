@@ -1,0 +1,25 @@
+{
+  "stage": "memory-runtime-compile",
+  "command": [
+    "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/lean",
+    "-o",
+    "/tmp/llm2fpga-lean-memory-table/Chisel2Lean/Functional.olean",
+    "/tmp/llm2fpga-lean-memory-table/Chisel2Lean/Functional.lean"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-01T23:37:19.261920+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "failed",
+  "returncode": 1,
+  "elapsed_seconds": 0.05005126100149937,
+  "finished_at": "2026-11-01T23:37:19.312116+00:00"
+}

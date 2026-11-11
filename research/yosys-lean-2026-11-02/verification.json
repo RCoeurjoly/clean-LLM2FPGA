@@ -1,0 +1,15 @@
+{
+  "all_22_backend_commands_mapped": true,
+  "model_hash_and_complete_coverage_counts": true,
+  "supported_control_and_six_failure_reproducers": true,
+  "production_memory_source_generation_and_hashes": true,
+  "whole_hardware_failure_evidence": true,
+  "probe_script_syntax": true,
+  "org_local_links_and_blocks": true,
+  "authored_org_files_checked": 6,
+  "production_files_modified_by_this_task": false,
+  "retained_manifest_hashes_verified": {
+    "formal-formats": 149,
+    "netlist-formats": 180
+  }
+}

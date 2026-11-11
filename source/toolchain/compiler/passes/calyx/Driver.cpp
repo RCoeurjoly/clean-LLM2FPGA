@@ -13,19 +13,8 @@
 #include "mlir/Transforms/Passes.h"
 #include "mlir/Pass/PassRegistry.h"
 #include "mlir/Tools/mlir-opt/MlirOptMain.h"
-void registerMemoryInventoryPass();
-void registerExclusiveCombInputsPass();
-void registerIdenticalCombPass();
-void registerRegisterBoundedCombPass();
-void registerStaticLoopCountersPass();
-void registerTransactionalDividersPass();
-void registerExternalMemoryInterfacePass();
-void registerRuntimeMemoryPass();
-void registerRuntimeInterfacePass();
-void registerMemoryRetirementPass();
-void registerMemoryContractPass();
-void registerMemoryBindingPass();
-void registerModelMemoryBindingPass();
+void registerPrepareArithmeticPass();
+void registerPrepareMathPass();
 
 int main(int argc, char **argv) {
   mlir::DialectRegistry registry;
@@ -38,19 +27,8 @@ int main(int argc, char **argv) {
   mlir::registerSymbolDCEPass();
   mlir::registerCanonicalizerPass();
   mlir::registerPass([] { return circt::createFlattenMemRefPass(); });
-  registerMemoryInventoryPass();
-  registerExclusiveCombInputsPass();
-  registerIdenticalCombPass();
-  registerRegisterBoundedCombPass();
-  registerStaticLoopCountersPass();
-  registerTransactionalDividersPass();
-  registerExternalMemoryInterfacePass();
-  registerRuntimeMemoryPass();
-  registerRuntimeInterfacePass();
-  registerMemoryRetirementPass();
-  registerMemoryContractPass();
-  registerMemoryBindingPass();
-  registerModelMemoryBindingPass();
+  registerPrepareArithmeticPass();
+  registerPrepareMathPass();
   return mlir::failed(mlir::MlirOptMain(argc, argv,
       "LLM2FPGA typed Calyx passes\n", registry));
 }

@@ -1,0 +1,368 @@
+[
+  {
+    "query": "write_simplec language:Lean",
+    "total_count": 0,
+    "incomplete_results": false,
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "items": []
+  },
+  {
+    "query": "read_blif language:Lean",
+    "total_count": 0,
+    "incomplete_results": false,
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "items": []
+  },
+  {
+    "query": "edifVersion language:Lean",
+    "total_count": 0,
+    "incomplete_results": false,
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "items": []
+  },
+  {
+    "query": "spice language:Lean",
+    "total_count": 8,
+    "incomplete_results": false,
+    "page": 1,
+    "per_page": 100,
+    "returned": 8,
+    "items": [
+      {
+        "repo": "MesTTo/LeaTTa",
+        "path": "MeTTaIL/Extensions/Spice.lean",
+        "url": "https://github.com/MesTTo/LeaTTa/blob/63cba425c9cfd4caf4fe000f354e4bcfc382425d/MeTTaIL/Extensions/Spice.lean"
+      },
+      {
+        "repo": "linglib-community/linglib",
+        "path": "Linglib/Data/VerbClasses/Levin1993.lean",
+        "url": "https://github.com/linglib-community/linglib/blob/21610d34bbce06bfcf233ae596ddbb849ac440a2/Linglib/Data/VerbClasses/Levin1993.lean"
+      },
+      {
+        "repo": "emberian/obend",
+        "path": "lean/Obend/Hardware/Analog.lean",
+        "url": "https://github.com/emberian/obend/blob/ce82cf0772eae7ad2ef5c3110955d63f6dc8fd11/lean/Obend/Hardware/Analog.lean"
+      },
+      {
+        "repo": "Sterrs/leaning",
+        "path": "src/principia/myint/int_pair.lean",
+        "url": "https://github.com/Sterrs/leaning/blob/3901cc953694b33adda86cb88ca30ba99594db31/src/principia/myint/int_pair.lean"
+      },
+      {
+        "repo": "ChangyangZen/LSDL-Standard-Cell-Library",
+        "path": "formal/lean/LsdlSwitch/Switch.lean",
+        "url": "https://github.com/ChangyangZen/LSDL-Standard-Cell-Library/blob/b705be4d56d72e1565d4b61e66194c0c9c982b6c/formal/lean/LsdlSwitch/Switch.lean"
+      },
+      {
+        "repo": "emberian/obend",
+        "path": "lean/Obend/Hardware/Physics.lean",
+        "url": "https://github.com/emberian/obend/blob/ce82cf0772eae7ad2ef5c3110955d63f6dc8fd11/lean/Obend/Hardware/Physics.lean"
+      },
+      {
+        "repo": "nconsigny/leanKohaku",
+        "path": "LeanKohaku/Wallet/Bip39Wordlist.lean",
+        "url": "https://github.com/nconsigny/leanKohaku/blob/f8f691da09723a3df8cbcf17684b43a9bd8d1edb/LeanKohaku/Wallet/Bip39Wordlist.lean"
+      },
+      {
+        "repo": "cmu-l3/reuF2F",
+        "path": "lean/reuF2F.lean",
+        "url": "https://github.com/cmu-l3/reuF2F/blob/230023d821dff5f58d18446ce6dab0b588205c9f/lean/reuF2F.lean"
+      }
+    ]
+  },
+  {
+    "query": "CXXRTL extension:lean",
+    "total_count": 0,
+    "incomplete_results": false,
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "items": []
+  },
+  {
+    "query": "repo:deepai-org/loom yosys",
+    "total_count": 54,
+    "incomplete_results": false,
+    "page": 1,
+    "per_page": 100,
+    "returned": 54,
+    "items": [
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/corroborate_yosys.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/corroborate_yosys.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/yosys_to_loom_ir.py",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/yosys_to_loom_ir.py"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "TCB.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/TCB.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "REPRODUCING.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/REPRODUCING.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "STATUS.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/STATUS.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Evidence/KianV/xv6_boot.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Evidence/KianV/xv6_boot.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "fpga/zc702/README.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/fpga/zc702/README.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/reproduce.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/reproduce.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/fanout_demo.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/fanout_demo.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "CONCRETE_SSA_BOUNDARY.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/CONCRETE_SSA_BOUNDARY.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/convert_kianv.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/convert_kianv.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/boot_kianv_xv6.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/boot_kianv_xv6.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "IMPORTING_RTL.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/IMPORTING_RTL.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/lockstep_lnp64u.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/lockstep_lnp64u.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/inventory_kianv.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/inventory_kianv.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Evidence/Targets/Cost.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Evidence/Targets/Cost.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/import_coverage.py",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/import_coverage.py"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/rtl_equivalence.py",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/rtl_equivalence.py"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/verilog_inventory.py",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/verilog_inventory.py"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Loom/Hw/RETIME_SPEC.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/RETIME_SPEC.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "fpga/zc702/board/build_oxc7_seed.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/fpga/zc702/board/build_oxc7_seed.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "CHANGELOG.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/CHANGELOG.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/epoch_ladder.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/epoch_ladder.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "PRETTY.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/PRETTY.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/soc_fabric_storage_neutrality.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/soc_fabric_storage_neutrality.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/verify_kianv_physical_handoff.py",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/verify_kianv_physical_handoff.py"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/kianv_bottom_up_equivalence.py",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/kianv_bottom_up_equivalence.py"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "PLATONIC.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/PLATONIC.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Evidence/KianV/construct_inventory.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Evidence/KianV/construct_inventory.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Tools/AreaAttrib.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Tools/AreaAttrib.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "MULTICLOCK_PLAN.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/MULTICLOCK_PLAN.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "fpga/zc702/surface_matrix/typed_soc_tile_evidence/route-report.txt",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/fpga/zc702/surface_matrix/typed_soc_tile_evidence/route-report.txt"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Evidence/KianV/import_coverage_policy.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Evidence/KianV/import_coverage_policy.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Loom/Hw/Cost.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/Cost.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/build_verified_release.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/build_verified_release.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Loom/Hw/ImportIR.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/ImportIR.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Evidence/KianV/import_coverage.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Evidence/KianV/import_coverage.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Machines/Epoch/Engine.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Machines/Epoch/Engine.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Tools/TypedSoCTileEvidence.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Tools/TypedSoCTileEvidence.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Loom/Hw/CostTransform.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/CostTransform.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Machines/Lnp64mini/Core.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Machines/Lnp64mini/Core.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Machines/CapWalk/Engine.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Machines/CapWalk/Engine.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/kianv_physical_handoff.py",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/kianv_physical_handoff.py"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "fpga/zc702/surface_matrix/typed_soc_tile_evidence/RESULT.md",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/fpga/zc702/surface_matrix/typed_soc_tile_evidence/RESULT.md"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Evidence/Targets/AsyncQueueStorage.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Evidence/Targets/AsyncQueueStorage.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Loom/Hw/Temporal.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Loom/Hw/Temporal.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Evidence/KianV/construct_inventory.json",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Evidence/KianV/construct_inventory.json"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/test_multiclock_synthesis.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/test_multiclock_synthesis.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/test_import_adapters.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/test_import_adapters.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/test_surface_vivado_contract.sh",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/test_surface_vivado_contract.sh"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Tests/MemTarget.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Tests/MemTarget.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Tests/Temporal.lean",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Tests/Temporal.lean"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Tests/fixtures/import_memory_decisions.json",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Tests/fixtures/import_memory_decisions.json"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "Tests/fixtures/import_shiftx_policy_one.json",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/Tests/fixtures/import_shiftx_policy_one.json"
+      }
+    ]
+  }
+]

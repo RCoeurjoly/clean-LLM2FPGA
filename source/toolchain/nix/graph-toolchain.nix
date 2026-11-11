@@ -41,8 +41,4 @@ let
 in {
   inherit mlir torchMlir;
   inherit (llvmPackages) llvm;
-  driver = pkgs.callPackage ./graph-compiler-passes.nix {
-    inherit mlir torchMlir;
-    inherit (llvmPackages) llvm;
-  };
 }

@@ -1,0 +1,1452 @@
+{
+  "sha": "c3808e57b342c63eaff677abca7f9391a4dc954a",
+  "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/c3808e57b342c63eaff677abca7f9391a4dc954a",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81177303b7bbfe6e7d7c64dc9ccb8fc0817404a2",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/81177303b7bbfe6e7d7c64dc9ccb8fc0817404a2"
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acb62df12e7f2f4f9870e9976e7484be82c3f6f9",
+      "size": 473,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/acb62df12e7f2f4f9870e9976e7484be82c3f6f9"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f55845fffffc165734e0617beeb178f7602e057a",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/f55845fffffc165734e0617beeb178f7602e057a"
+    },
+    {
+      "path": ".github/workflows/approval.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf28cc9609fd5a612d13ab7d02586b82275049b6",
+      "size": 1090,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/cf28cc9609fd5a612d13ab7d02586b82275049b6"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d200fb084ebf40efdc0097c8dbd417b202df8358",
+      "size": 1291,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/d200fb084ebf40efdc0097c8dbd417b202df8358"
+    },
+    {
+      "path": ".github/workflows/physical.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a78e353aed8110591510fcb8d2d69ed9d72849f",
+      "size": 1284,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/5a78e353aed8110591510fcb8d2d69ed9d72849f"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47c8135e59d10d4b5374f461e10f3991682c9d9f",
+      "size": 39,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/47c8135e59d10d4b5374f461e10f3991682c9d9f"
+    },
+    {
+      "path": "Designs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35204b1577b4505864be9148df0998521bb89d6a",
+      "size": 340,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/35204b1577b4505864be9148df0998521bb89d6a"
+    },
+    {
+      "path": "Designs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67c5e89d1fc878fced8aada5addb144d5daa3a3b",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/67c5e89d1fc878fced8aada5addb144d5daa3a3b"
+    },
+    {
+      "path": "Designs/AsyncFifo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58ce56f971c145323b6bac0979e4cf3afb32bf29",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/58ce56f971c145323b6bac0979e4cf3afb32bf29"
+    },
+    {
+      "path": "Designs/AsyncFifo/Challenge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e722a471cc91a782816f107169b4c334a522236f",
+      "size": 3226,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/e722a471cc91a782816f107169b4c334a522236f"
+    },
+    {
+      "path": "Designs/AsyncFifo/Interface.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3697ee81b4a0428639c39933ca186ad6d8f68532",
+      "size": 3550,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/3697ee81b4a0428639c39933ca186ad6d8f68532"
+    },
+    {
+      "path": "Designs/AsyncFifo/Model.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08028f49125a6fac2af835a435d6386b73e48ebf",
+      "size": 4107,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/08028f49125a6fac2af835a435d6386b73e48ebf"
+    },
+    {
+      "path": "Designs/AsyncFifo/Progress.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a91322ddcb77abdc5c5d20deeca79cd2a15dec1",
+      "size": 15731,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/4a91322ddcb77abdc5c5d20deeca79cd2a15dec1"
+    },
+    {
+      "path": "Designs/AsyncFifo/Proof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f21a06227cca3a1c7aceeddec54f3fc5a197036",
+      "size": 14274,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/2f21a06227cca3a1c7aceeddec54f3fc5a197036"
+    },
+    {
+      "path": "Designs/AsyncFifo/QueueRefinement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d61109929eeee5f8145db244f7ff3f2d7c3b51b",
+      "size": 8701,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/8d61109929eeee5f8145db244f7ff3f2d7c3b51b"
+    },
+    {
+      "path": "Designs/AsyncFifo/Spec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a558404c0fc9d47714bf91168999f3e1d5fa6c44",
+      "size": 2080,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/a558404c0fc9d47714bf91168999f3e1d5fa6c44"
+    },
+    {
+      "path": "Designs/AsyncFifo/Word.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05c3e9a665abc76b63edffec95c2d03d75ddac2e",
+      "size": 39043,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/05c3e9a665abc76b63edffec95c2d03d75ddac2e"
+    },
+    {
+      "path": "Designs/CircularFifo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e66f285c867bd14fd9d99f66ab9a9a47f6da3b6",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/5e66f285c867bd14fd9d99f66ab9a9a47f6da3b6"
+    },
+    {
+      "path": "Designs/CircularFifo/Challenge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9424a39c2b7c8ba68204bd15f87525ee5eab6cba",
+      "size": 987,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/9424a39c2b7c8ba68204bd15f87525ee5eab6cba"
+    },
+    {
+      "path": "Designs/Counter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "053ff4ae73df2598f76ff709128432a0d921f1d5",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/053ff4ae73df2598f76ff709128432a0d921f1d5"
+    },
+    {
+      "path": "Designs/Counter/Challenge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27a379de06bd405641e9ee63ca1ce5026f4ad454",
+      "size": 566,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/27a379de06bd405641e9ee63ca1ce5026f4ad454"
+    },
+    {
+      "path": "Designs/Counter/Interface.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4707ba75f7587e5c6aa0a1c03a252d36ea93df23",
+      "size": 931,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/4707ba75f7587e5c6aa0a1c03a252d36ea93df23"
+    },
+    {
+      "path": "Designs/Counter/Spec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56987f1b70a6410033747bde80d77f4339f9fd27",
+      "size": 231,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/56987f1b70a6410033747bde80d77f4339f9fd27"
+    },
+    {
+      "path": "Designs/Counter/Word.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27affdc97b109c5647239de1f2f48786a1a86616",
+      "size": 5660,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/27affdc97b109c5647239de1f2f48786a1a86616"
+    },
+    {
+      "path": "Designs/Euler.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8410d2f945f9fcf512f337a42579106f7573705c",
+      "size": 629,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/8410d2f945f9fcf512f337a42579106f7573705c"
+    },
+    {
+      "path": "Designs/Euler",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d428a62dd0a6248baedb6ea5396995555d1be602",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/d428a62dd0a6248baedb6ea5396995555d1be602"
+    },
+    {
+      "path": "Designs/Euler/Bcd.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c97b877cd5950c11de1486ccd0aa668adc170a6",
+      "size": 3649,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/5c97b877cd5950c11de1486ccd0aa668adc170a6"
+    },
+    {
+      "path": "Designs/Euler/Kit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d0d1f279d1a0c529937d1136a94e34a61c574c3",
+      "size": 8177,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/3d0d1f279d1a0c529937d1136a94e34a61c574c3"
+    },
+    {
+      "path": "Designs/Euler/P010.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8f9935bce6924da5d3ac480fd2a42fe93def6b4",
+      "size": 20477,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/f8f9935bce6924da5d3ac480fd2a42fe93def6b4"
+    },
+    {
+      "path": "Designs/Euler/P014.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa36e1a2775e1e746a93a1131465d15bc3153693",
+      "size": 10462,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/fa36e1a2775e1e746a93a1131465d15bc3153693"
+    },
+    {
+      "path": "Designs/Euler/P025.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "368d66278a4782be536d03e7ac37e13b8e85d56f",
+      "size": 2843,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/368d66278a4782be536d03e7ac37e13b8e85d56f"
+    },
+    {
+      "path": "Designs/Euler/P031.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fab07ed8d61cfff404c08a08c736dddeb80561d",
+      "size": 4391,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/1fab07ed8d61cfff404c08a08c736dddeb80561d"
+    },
+    {
+      "path": "Designs/Euler/P043.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c8a3fb86acc9a26b6ca273a0fda9343cc42c4d2",
+      "size": 8835,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/1c8a3fb86acc9a26b6ca273a0fda9343cc42c4d2"
+    },
+    {
+      "path": "Designs/Euler/P048.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b5401a0924792adaedbb77b4a0afb7e7fe83166",
+      "size": 10049,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/8b5401a0924792adaedbb77b4a0afb7e7fe83166"
+    },
+    {
+      "path": "Designs/Euler/P057.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "709ca10abb77ac4b2d79cd2be3f84e842415281f",
+      "size": 7232,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/709ca10abb77ac4b2d79cd2be3f84e842415281f"
+    },
+    {
+      "path": "Designs/Euler/P058.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41645328849845876a57c8e7f687199a0c9110f3",
+      "size": 21917,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/41645328849845876a57c8e7f687199a0c9110f3"
+    },
+    {
+      "path": "Designs/Euler/P092.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3594e27d591ac07143889ef89af2af7d97cf557e",
+      "size": 12986,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/3594e27d591ac07143889ef89af2af7d97cf557e"
+    },
+    {
+      "path": "Designs/Euler/P097.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d229824a768944d45ed66839cdd487dacc2c23b",
+      "size": 7267,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/6d229824a768944d45ed66839cdd487dacc2c23b"
+    },
+    {
+      "path": "Designs/Euler/Report.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bef3ec94398ca204613bdf40f40a244ba32c922",
+      "size": 7172,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/1bef3ec94398ca204613bdf40f40a244ba32c922"
+    },
+    {
+      "path": "Designs/Fifo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6c94e9d5242f915d3f4d4f4351c03fe72bfcc14",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/f6c94e9d5242f915d3f4d4f4351c03fe72bfcc14"
+    },
+    {
+      "path": "Designs/Fifo/Challenge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "debb415b4cc0ab7a3154cbf22397e0b9d6671f6e",
+      "size": 730,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/debb415b4cc0ab7a3154cbf22397e0b9d6671f6e"
+    },
+    {
+      "path": "Designs/Fifo/Circular.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29675dbf15e2d1b658d07f9f9adb0439602106e8",
+      "size": 1744,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/29675dbf15e2d1b658d07f9f9adb0439602106e8"
+    },
+    {
+      "path": "Designs/Fifo/CircularProof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9fe65b3003f31f632009951a144defb2d64c365",
+      "size": 7149,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b9fe65b3003f31f632009951a144defb2d64c365"
+    },
+    {
+      "path": "Designs/Fifo/CircularQueue.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57f4000a640c6d28a6d9080e58fcbf68edb4f81e",
+      "size": 6777,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/57f4000a640c6d28a6d9080e58fcbf68edb4f81e"
+    },
+    {
+      "path": "Designs/Fifo/CircularWord.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e00fa590d6ab7cce7ca4417a374967253c9a02b",
+      "size": 11110,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/3e00fa590d6ab7cce7ca4417a374967253c9a02b"
+    },
+    {
+      "path": "Designs/Fifo/Interface.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6246264345fd9df705b101422d62c972d6ea19a",
+      "size": 1506,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/a6246264345fd9df705b101422d62c972d6ea19a"
+    },
+    {
+      "path": "Designs/Fifo/Spec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4ecb87e37aa08e3e79494501d175415fc83dff1",
+      "size": 894,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/e4ecb87e37aa08e3e79494501d175415fc83dff1"
+    },
+    {
+      "path": "Designs/Fifo/Word.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4f3d45bebdc4da537799a21948c3b40a6a02250",
+      "size": 11662,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/d4f3d45bebdc4da537799a21948c3b40a6a02250"
+    },
+    {
+      "path": "Designs/Optimized",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7cf9d724b35ca7ddb728e4d274500ba9980a4742",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/7cf9d724b35ca7ddb728e4d274500ba9980a4742"
+    },
+    {
+      "path": "Designs/Optimized/Transfer.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e771cfe03e078d68cbb3af1d51b6383a30613b6",
+      "size": 1781,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/7e771cfe03e078d68cbb3af1d51b6383a30613b6"
+    },
+    {
+      "path": "Designs/RAM",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2504efd2cd3faac9ff228f34f2cb0c699cff8ef",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/f2504efd2cd3faac9ff228f34f2cb0c699cff8ef"
+    },
+    {
+      "path": "Designs/RAM/Challenge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d15639439c823dab95d0ff309d4874988ff1570",
+      "size": 817,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/1d15639439c823dab95d0ff309d4874988ff1570"
+    },
+    {
+      "path": "Designs/RAM/Interface.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "943c1a784f202a2bdbda96932be0222b0bfdc8a5",
+      "size": 1064,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/943c1a784f202a2bdbda96932be0222b0bfdc8a5"
+    },
+    {
+      "path": "Designs/RAM/Word.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "765fbc5dda280d4f06849c157252540549a82d42",
+      "size": 7086,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/765fbc5dda280d4f06849c157252540549a82d42"
+    },
+    {
+      "path": "Designs/Review.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec684f6eceffa30867afb7e9f090b3489a13dc2",
+      "size": 12796,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/7ec684f6eceffa30867afb7e9f090b3489a13dc2"
+    },
+    {
+      "path": "Designs/RtlOps.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34bfc3369b56f64dc3744b52a67ddfbc9b53a61f",
+      "size": 4088,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/34bfc3369b56f64dc3744b52a67ddfbc9b53a61f"
+    },
+    {
+      "path": "Designs/SkidBuffer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eba5d89f32e62562e1f8f1388317d12e0db95cce",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/eba5d89f32e62562e1f8f1388317d12e0db95cce"
+    },
+    {
+      "path": "Designs/SkidBuffer/Challenge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4bd51066d6c6bbb3b4fb990ce5d8173975ce4c2",
+      "size": 834,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b4bd51066d6c6bbb3b4fb990ce5d8173975ce4c2"
+    },
+    {
+      "path": "Designs/SkidBuffer/Interface.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59c633b7d3302cdaa5cfe3d58bef00a086c6f038",
+      "size": 1587,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/59c633b7d3302cdaa5cfe3d58bef00a086c6f038"
+    },
+    {
+      "path": "Designs/SkidBuffer/Spec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cc2145912d416c7194211d6e5afab8393c088f1",
+      "size": 855,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/8cc2145912d416c7194211d6e5afab8393c088f1"
+    },
+    {
+      "path": "Designs/SkidBuffer/Word.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5912b8e0141e3eddf2b14b2ad04e939bf9874c42",
+      "size": 8674,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/5912b8e0141e3eddf2b14b2ad04e939bf9874c42"
+    },
+    {
+      "path": "Designs/Toy16",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03d52d8694be07683d364c25440fda2fc524ac3c",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/03d52d8694be07683d364c25440fda2fc524ac3c"
+    },
+    {
+      "path": "Designs/Toy16/Challenge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0ad4f547f04512454816aa9a653d55e9d9306cd",
+      "size": 876,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b0ad4f547f04512454816aa9a653d55e9d9306cd"
+    },
+    {
+      "path": "Designs/Toy16/Interface.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad540ae75a4a96ecfbac4c2f484a0765951bad05",
+      "size": 2086,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/ad540ae75a4a96ecfbac4c2f484a0765951bad05"
+    },
+    {
+      "path": "Designs/Toy16/Programs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d10685ce3e3599b7804ef6d1c5f5d6b3a1fa923",
+      "size": 1093,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0d10685ce3e3599b7804ef6d1c5f5d6b3a1fa923"
+    },
+    {
+      "path": "Designs/Toy16/Spec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50a28df914820dbcc7eef1a32795c2229b895b1e",
+      "size": 3032,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/50a28df914820dbcc7eef1a32795c2229b895b1e"
+    },
+    {
+      "path": "Designs/Toy16/Word.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c16ddfa79176d56d2c80438786df7caee59fb31",
+      "size": 4520,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/8c16ddfa79176d56d2c80438786df7caee59fb31"
+    },
+    {
+      "path": "Designs/Toy16/WordAlu.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0af1f2b0c7b1b4111e760b35c56b1e1242369b9",
+      "size": 3404,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b0af1f2b0c7b1b4111e760b35c56b1e1242369b9"
+    },
+    {
+      "path": "Designs/Toy16/WordBody.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17e8c0c7dd5af50884c5496b0d791476a9065584",
+      "size": 5746,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/17e8c0c7dd5af50884c5496b0d791476a9065584"
+    },
+    {
+      "path": "Designs/Toy16/WordCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a04139aaed8386827b0d02b3f319f93e6a79e9f5",
+      "size": 3916,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/a04139aaed8386827b0d02b3f319f93e6a79e9f5"
+    },
+    {
+      "path": "Designs/Toy16/WordProof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f608e585560f6a3259f3b88f25c193727af5272a",
+      "size": 5625,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/f608e585560f6a3259f3b88f25c193727af5272a"
+    },
+    {
+      "path": "Designs/Toy16/WordRefinement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ab22d0f08f718e5b49c644d232ed219f21fc920",
+      "size": 12805,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/3ab22d0f08f718e5b49c644d232ed219f21fc920"
+    },
+    {
+      "path": "Designs/Toy16/WordStep.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcf263e7fa35968fc21d72e8b51a8da5f7571974",
+      "size": 4417,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/dcf263e7fa35968fc21d72e8b51a8da5f7571974"
+    },
+    {
+      "path": "HDLean.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b99aadc656835f5d1ca243fa5fa4930656b4086f",
+      "size": 732,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b99aadc656835f5d1ca243fa5fa4930656b4086f"
+    },
+    {
+      "path": "HDLean",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cbe284e512ebbb13e932cfdc539a1255c42086ff",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/cbe284e512ebbb13e932cfdc539a1255c42086ff"
+    },
+    {
+      "path": "HDLean/Backend",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60f83609c532d82e873111a81ee33aa2ac6d8121",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/60f83609c532d82e873111a81ee33aa2ac6d8121"
+    },
+    {
+      "path": "HDLean/Backend/AigerBinary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47eae08abfe1a81dccef221b97588ed7b9cfa241",
+      "size": 3050,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/47eae08abfe1a81dccef221b97588ed7b9cfa241"
+    },
+    {
+      "path": "HDLean/Backend/AigerProved.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a51edba0b72327a86f6550cad3aa733dad13b0d",
+      "size": 6694,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0a51edba0b72327a86f6550cad3aa733dad13b0d"
+    },
+    {
+      "path": "HDLean/Backend/DagEmit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ca63bc814afcc73ecbbc063c54175874e9e9b5b",
+      "size": 3242,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/3ca63bc814afcc73ecbbc063c54175874e9e9b5b"
+    },
+    {
+      "path": "HDLean/Backend/DagEmitValidated.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b71788c0b17043f3bb91bf2ccd5f849ef17a4b2",
+      "size": 1859,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/7b71788c0b17043f3bb91bf2ccd5f849ef17a4b2"
+    },
+    {
+      "path": "HDLean/Backend/Graph.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b33d2287d648d1f79e78be1156578ef886c7d1a",
+      "size": 3001,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/6b33d2287d648d1f79e78be1156578ef886c7d1a"
+    },
+    {
+      "path": "HDLean/Backend/RTLILProved.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2491c1d7344d10f44b6162eb098f33eafa6b045",
+      "size": 14687,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/f2491c1d7344d10f44b6162eb098f33eafa6b045"
+    },
+    {
+      "path": "HDLean/Backend/StatePorts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a52d223fda86605a71f73bb29bf4984b74b55ad3",
+      "size": 4477,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/a52d223fda86605a71f73bb29bf4984b74b55ad3"
+    },
+    {
+      "path": "HDLean/Backend/SystemVerilogProved.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4e02d5952f8030f040af569857e904001fdb86f",
+      "size": 10027,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/f4e02d5952f8030f040af569857e904001fdb86f"
+    },
+    {
+      "path": "HDLean/Backend/TextCodec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8e37867722ade3d0b5d0db7d262614d7b09c362",
+      "size": 5127,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/c8e37867722ade3d0b5d0db7d262614d7b09c362"
+    },
+    {
+      "path": "HDLean/Backend/TextGrammar.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d889c900a76dbcc6e37b4fba98ef3cc59fb8b4ac",
+      "size": 4756,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/d889c900a76dbcc6e37b4fba98ef3cc59fb8b4ac"
+    },
+    {
+      "path": "HDLean/Backend/Validate.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22c6987d30fa45a05411743c4b1d688d5ab3f40f",
+      "size": 15007,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/22c6987d30fa45a05411743c4b1d688d5ab3f40f"
+    },
+    {
+      "path": "HDLean/Core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a599f402aa840cb71e89bd1801b8b1312a2ded5c",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/a599f402aa840cb71e89bd1801b8b1312a2ded5c"
+    },
+    {
+      "path": "HDLean/Core/Dag.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aab52355b88850ef9dec212a07f4584312b04cd3",
+      "size": 6447,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/aab52355b88850ef9dec212a07f4584312b04cd3"
+    },
+    {
+      "path": "HDLean/Lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0bd67d50e3aef24bada3d8cf5647dd98c3365ca1",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/0bd67d50e3aef24bada3d8cf5647dd98c3365ca1"
+    },
+    {
+      "path": "HDLean/Lib/Memory.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53151890fa92993bc4ba313d16539a2ac070f89c",
+      "size": 1235,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/53151890fa92993bc4ba313d16539a2ac070f89c"
+    },
+    {
+      "path": "HDLean/Lib/Network.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e841f9745d0fc945bb593a2c4ea1cca60cb55473",
+      "size": 1422,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/e841f9745d0fc945bb593a2c4ea1cca60cb55473"
+    },
+    {
+      "path": "HDLean/Netlist",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff00bba1029b88bb2cda4fe9c43c6921341d6f37",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/ff00bba1029b88bb2cda4fe9c43c6921341d6f37"
+    },
+    {
+      "path": "HDLean/Netlist/DagLower.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "807853565d40d914db26d7900f7c5050f77eceb8",
+      "size": 25145,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/807853565d40d914db26d7900f7c5050f77eceb8"
+    },
+    {
+      "path": "HDLean/Netlist/DagTight.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42a72268d8a4d27e51313a33c81258ff0b21469c",
+      "size": 23453,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/42a72268d8a4d27e51313a33c81258ff0b21469c"
+    },
+    {
+      "path": "HDLean/Netlist/Optimize.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "490cfdefff92c97770079af3c21e84b72c6487d9",
+      "size": 20466,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/490cfdefff92c97770079af3c21e84b72c6487d9"
+    },
+    {
+      "path": "HDLean/Rtl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a34a84f549a9662350144437301b35c84f3b565",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/4a34a84f549a9662350144437301b35c84f3b565"
+    },
+    {
+      "path": "HDLean/Rtl/Blast",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6f06e2ec940290725a89dd0584e89dc70b85fe5",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/e6f06e2ec940290725a89dd0584e89dc70b85fe5"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Cell.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbde5a796b5170017f823e76633446f9400067d1",
+      "size": 22554,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/bbde5a796b5170017f823e76633446f9400067d1"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Correct.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b82737f53a4021a762d72121627d86d65dc45f9",
+      "size": 41142,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0b82737f53a4021a762d72121627d86d65dc45f9"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Module.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3cb2b0dc094cd2154831497a6175a12139d6116",
+      "size": 20855,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/f3cb2b0dc094cd2154831497a6175a12139d6116"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Reset.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "940a0bebc363bfe97b7aeb405c7cf66ae72ebe70",
+      "size": 15363,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/940a0bebc363bfe97b7aeb405c7cf66ae72ebe70"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/ToDag.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a57823eda8d62409c5b98f22b2b05304e0ae21f",
+      "size": 8734,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/9a57823eda8d62409c5b98f22b2b05304e0ae21f"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Top.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2240175721b3b9b0f3c31a7d5f2ff80897e05a9e",
+      "size": 9140,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/2240175721b3b9b0f3c31a7d5f2ff80897e05a9e"
+    },
+    {
+      "path": "HDLean/Rtl/Blast/Vec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a11019dcb97fe76985e8c6eeba3ed62b4b0f487",
+      "size": 21877,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/5a11019dcb97fe76985e8c6eeba3ed62b4b0f487"
+    },
+    {
+      "path": "HDLean/Rtl/Build.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e5291caa99fc08958ff6312a8ff78667641e056",
+      "size": 13423,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/6e5291caa99fc08958ff6312a8ff78667641e056"
+    },
+    {
+      "path": "HDLean/Rtl/Bundle.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72113d3d7dea39abea2a2c1ccf0cbc90d220d7c1",
+      "size": 3239,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/72113d3d7dea39abea2a2c1ccf0cbc90d220d7c1"
+    },
+    {
+      "path": "HDLean/Rtl/Compact.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8fc61284dcf14671c402e52a4ebd3ab1f3de6cc",
+      "size": 14500,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/e8fc61284dcf14671c402e52a4ebd3ab1f3de6cc"
+    },
+    {
+      "path": "HDLean/Rtl/Design.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83a7c61501e1b20eb9a133ec9873b2143e57f20b",
+      "size": 1165,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/83a7c61501e1b20eb9a133ec9873b2143e57f20b"
+    },
+    {
+      "path": "HDLean/Rtl/Hoare.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b79facaaa913de72375faa0e0956f67d640a5604",
+      "size": 22699,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b79facaaa913de72375faa0e0956f67d640a5604"
+    },
+    {
+      "path": "HDLean/Rtl/Instance.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc510ebf902f18ed0d75820b71ca6316377a83ba",
+      "size": 6455,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/bc510ebf902f18ed0d75820b71ca6316377a83ba"
+    },
+    {
+      "path": "HDLean/Rtl/Lex.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b89eb1ad8d2cbd7a79ed2c57878af76ccff02dc",
+      "size": 9193,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/6b89eb1ad8d2cbd7a79ed2c57878af76ccff02dc"
+    },
+    {
+      "path": "HDLean/Rtl/Mealy.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c48f2f5130f3ad0dfc118d24bef13b8eea91b0b",
+      "size": 20748,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/2c48f2f5130f3ad0dfc118d24bef13b8eea91b0b"
+    },
+    {
+      "path": "HDLean/Rtl/MealyCells.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2381fa86c28ee5eca118641cbca31b493c054d44",
+      "size": 8066,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/2381fa86c28ee5eca118641cbca31b493c054d44"
+    },
+    {
+      "path": "HDLean/Rtl/MealyDesign.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18ee041d78d3c5943642d9c4ac7a85bf9e5ec080",
+      "size": 10678,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/18ee041d78d3c5943642d9c4ac7a85bf9e5ec080"
+    },
+    {
+      "path": "HDLean/Rtl/Memory.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ad861aae7a1b71ac26e7eaa6a2b425e9d581658",
+      "size": 11177,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/9ad861aae7a1b71ac26e7eaa6a2b425e9d581658"
+    },
+    {
+      "path": "HDLean/Rtl/Multi.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec67e4f3b5373667f65801af63d9c18156f86ac",
+      "size": 7622,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/7ec67e4f3b5373667f65801af63d9c18156f86ac"
+    },
+    {
+      "path": "HDLean/Rtl/MultiText.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75537542739651ffe4ebeeb340971a25baa9afaa",
+      "size": 17317,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/75537542739651ffe4ebeeb340971a25baa9afaa"
+    },
+    {
+      "path": "HDLean/Rtl/Named.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56f419f1acea445af5eb6999da38d678fb302386",
+      "size": 7942,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/56f419f1acea445af5eb6999da38d678fb302386"
+    },
+    {
+      "path": "HDLean/Rtl/Optimize.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81f5706708dfc10c11caf7a886564bd93fa9b2a9",
+      "size": 18308,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/81f5706708dfc10c11caf7a886564bd93fa9b2a9"
+    },
+    {
+      "path": "HDLean/Rtl/RTLIL.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0c1fd389ce08bc5a47eb99229c2d8c227e04af5",
+      "size": 19662,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/c0c1fd389ce08bc5a47eb99229c2d8c227e04af5"
+    },
+    {
+      "path": "HDLean/Rtl/RTLILProof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5594668d2c9151b07c36a033a1ff7c4b30784286",
+      "size": 13079,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/5594668d2c9151b07c36a033a1ff7c4b30784286"
+    },
+    {
+      "path": "HDLean/Rtl/RTLILStmt.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c7d63239c8d3a6aec6a783d81df6284b84e7b9a",
+      "size": 12736,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/3c7d63239c8d3a6aec6a783d81df6284b84e7b9a"
+    },
+    {
+      "path": "HDLean/Rtl/Record.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a471e0f86df1928d3fde96863d4d3d04efc7cf3",
+      "size": 3806,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/5a471e0f86df1928d3fde96863d4d3d04efc7cf3"
+    },
+    {
+      "path": "HDLean/Rtl/Semantics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d9aa48d623bb118e63190613a3ab593c52d1acf",
+      "size": 6568,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/8d9aa48d623bb118e63190613a3ab593c52d1acf"
+    },
+    {
+      "path": "HDLean/Rtl/Syntax.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb3d70c86f5d40b3cffa25074d53c7a5141b5ecd",
+      "size": 8173,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/fb3d70c86f5d40b3cffa25074d53c7a5141b5ecd"
+    },
+    {
+      "path": "HDLean/Rtl/SystemVerilog.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bb45f4b5b5119b7ee47018e10495834a83e39e3",
+      "size": 29533,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0bb45f4b5b5119b7ee47018e10495834a83e39e3"
+    },
+    {
+      "path": "HDLean/Rtl/Tactic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "068460936c9c6a4d11cbebc7a6b1511f4fadaf7e",
+      "size": 1719,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/068460936c9c6a4d11cbebc7a6b1511f4fadaf7e"
+    },
+    {
+      "path": "HDLean/Rtl/TextBase.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70ac3a8e837b4df4ca71a8c688ebd55a17083603",
+      "size": 4225,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/70ac3a8e837b4df4ca71a8c688ebd55a17083603"
+    },
+    {
+      "path": "HDLean/Rtl/Valid.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3a25840003eee52ea8796ca70560c9e5432c0db",
+      "size": 2659,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/c3a25840003eee52ea8796ca70560c9e5432c0db"
+    },
+    {
+      "path": "HDLean/Semantics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a825371b89c0064298f27aff4cabeffda7049f9c",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/a825371b89c0064298f27aff4cabeffda7049f9c"
+    },
+    {
+      "path": "HDLean/Semantics/Clock.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1baf08eadb7d8f492e88577b2d131e21120aee27",
+      "size": 5593,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/1baf08eadb7d8f492e88577b2d131e21120aee27"
+    },
+    {
+      "path": "HDLean/Semantics/Composition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0686d50fed51913bc291f3e5624f708be39cd4c8",
+      "size": 2620,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0686d50fed51913bc291f3e5624f708be39cd4c8"
+    },
+    {
+      "path": "HDLean/Semantics/GrayProof.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fbaa1d920a441111a4e09f34596ce632465f954",
+      "size": 4531,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/2fbaa1d920a441111a4e09f34596ce632465f954"
+    },
+    {
+      "path": "HDLean/Semantics/Machine.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7a2ec3397fd87f1f7f496712d884625a722e4de",
+      "size": 4738,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b7a2ec3397fd87f1f7f496712d884625a722e4de"
+    },
+    {
+      "path": "HDLean/Semantics/Reset.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcbc4f3474739b45437af010fca4a0afa8a01e5a",
+      "size": 1839,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/bcbc4f3474739b45437af010fca4a0afa8a01e5a"
+    },
+    {
+      "path": "HDLean/Semantics/Retirement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b58dbd2b56004013cf9e81443ae950642740983c",
+      "size": 2117,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b58dbd2b56004013cf9e81443ae950642740983c"
+    },
+    {
+      "path": "HDLean/Verification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32a0bf2ca199304dbf63fc147f8506d9c90eeabb",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/32a0bf2ca199304dbf63fc147f8506d9c90eeabb"
+    },
+    {
+      "path": "HDLean/Verification/Simulation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55ee470c21ea001089f31806c3cc31e3cdec56df",
+      "size": 3094,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/55ee470c21ea001089f31806c3cc31e3cdec56df"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90d91775edb02f65148fc681d0311de02e958f58",
+      "size": 1076,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/90d91775edb02f65148fc681d0311de02e958f58"
+    },
+    {
+      "path": "Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93656b5b72f32e39f05135de7fbb6632188403fe",
+      "size": 22732,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/93656b5b72f32e39f05135de7fbb6632188403fe"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72d1f5fe29619128d030898b8ffea3e53b8027a0",
+      "size": 8301,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/72d1f5fe29619128d030898b8ffea3e53b8027a0"
+    },
+    {
+      "path": "Tests.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37782ad68c77b0c872ad369f73657314f4d709fb",
+      "size": 63,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/37782ad68c77b0c872ad369f73657314f4d709fb"
+    },
+    {
+      "path": "Tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1013c4aeeba594ea283ded0501661de79044331f",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/1013c4aeeba594ea283ded0501661de79044331f"
+    },
+    {
+      "path": "Tests/Audit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92bd83fcd4d051e008801af1809fb8c7eabe125f",
+      "size": 3366,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/92bd83fcd4d051e008801af1809fb8c7eabe125f"
+    },
+    {
+      "path": "Tests/Backend.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e323776ec5be75457af63c281cfddfbed1b8f7e5",
+      "size": 4738,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/e323776ec5be75457af63c281cfddfbed1b8f7e5"
+    },
+    {
+      "path": "Tests/BackendProved.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e2bbda75aa8d8d0b9be77eee2ec20f882ecff70",
+      "size": 679,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/7e2bbda75aa8d8d0b9be77eee2ec20f882ecff70"
+    },
+    {
+      "path": "Tests/BackendProvedMain.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84ff2778c51e36a8d30ced966990af1faba3c919",
+      "size": 2269,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/84ff2778c51e36a8d30ced966990af1faba3c919"
+    },
+    {
+      "path": "Tests/Dag.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "013fdde1b06a05f72ccda841ac4ad079f21980d6",
+      "size": 1544,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/013fdde1b06a05f72ccda841ac4ad079f21980d6"
+    },
+    {
+      "path": "Tests/Euler.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcade1f1bf5cdde5b8e3f9f4572eba9fc5706b56",
+      "size": 3489,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/dcade1f1bf5cdde5b8e3f9f4572eba9fc5706b56"
+    },
+    {
+      "path": "Tests/Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3672d12a58cce0b453a5ce54ed165a7669ae6b95",
+      "size": 6881,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/3672d12a58cce0b453a5ce54ed165a7669ae6b95"
+    },
+    {
+      "path": "Tests/test_workflow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15b7bf3ce17f39bbccc371e54730e512c9f7d4ba",
+      "size": 7588,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/15b7bf3ce17f39bbccc371e54730e512c9f7d4ba"
+    },
+    {
+      "path": "boards",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d28d4ba364fc95551931bb52de384190919bdcce",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/d28d4ba364fc95551931bb52de384190919bdcce"
+    },
+    {
+      "path": "boards/alchitry-cu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c6fcd45256032107c87f55ddb43e71fe86beff7",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/6c6fcd45256032107c87f55ddb43e71fe86beff7"
+    },
+    {
+      "path": "boards/alchitry-cu/cu.pcf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aef613fc7b30e30719ce4fc8150e019cc5e35fb5",
+      "size": 257,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/aef613fc7b30e30719ce4fc8150e019cc5e35fb5"
+    },
+    {
+      "path": "boards/alchitry-cu/euler_top.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d395449cd19b9c9df523fe349c82fd6709084c5",
+      "size": 1831,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0d395449cd19b9c9df523fe349c82fd6709084c5"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d91c8639bdff54d39b46e7b7f0cef064abd3322c",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/d91c8639bdff54d39b46e7b7f0cef064abd3322c"
+    },
+    {
+      "path": "docs/Decisions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afba36cbf9743287872c4c13a638359e4671db14",
+      "size": 21190,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/afba36cbf9743287872c4c13a638359e4671db14"
+    },
+    {
+      "path": "docs/Design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c23551a0bc77071124f6471d3d90209ac445deca",
+      "size": 77952,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/c23551a0bc77071124f6471d3d90209ac445deca"
+    },
+    {
+      "path": "docs/Development.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c40b60b68c3dba729aee2745942a0391b0129dbe",
+      "size": 2722,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/c40b60b68c3dba729aee2745942a0391b0129dbe"
+    },
+    {
+      "path": "docs/Euler.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0aeb712deb99edc9b255faf01403d53e8e86c91",
+      "size": 8416,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/a0aeb712deb99edc9b255faf01403d53e8e86c91"
+    },
+    {
+      "path": "docs/Physical.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d8d021194347f2b42e8be6f8efb9d8534537ba7",
+      "size": 2298,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/6d8d021194347f2b42e8be6f8efb9d8534537ba7"
+    },
+    {
+      "path": "docs/Review.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d66c4811226a85cb406b2177275baa373b40a7d5",
+      "size": 69501,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/d66c4811226a85cb406b2177275baa373b40a7d5"
+    },
+    {
+      "path": "docs/Status.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cbce9a1fab5765204fd1cd578b86efcd6babfcb",
+      "size": 6366,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0cbce9a1fab5765204fd1cd578b86efcd6babfcb"
+    },
+    {
+      "path": "docs/Trust.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0835ecf722b6a5f33ae9255c63f7c319ee470462",
+      "size": 4296,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0835ecf722b6a5f33ae9255c63f7c319ee470462"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2529a1c8538de0e13264036d5a4ea43d7ad7361a",
+      "size": 138,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/2529a1c8538de0e13264036d5a4ea43d7ad7361a"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e141a70ce019112ac2d92a82529e857d98ec30ed",
+      "size": 291,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/e141a70ce019112ac2d92a82529e857d98ec30ed"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
+      "size": 25,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/a6aff065db2882c535684f8c5bcd4f16e9a23915"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "079517edd943215b0df672b97214e2b070d89671",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/079517edd943215b0df672b97214e2b070d89671"
+    },
+    {
+      "path": "scripts/bootstrap_eda.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "724b85ef0514242d16fc8a69af5c6e0984330655",
+      "size": 3430,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/724b85ef0514242d16fc8a69af5c6e0984330655"
+    },
+    {
+      "path": "scripts/check_backends.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f725c5860f160d91dd269edf94120a913b1d568e",
+      "size": 15296,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/f725c5860f160d91dd269edf94120a913b1d568e"
+    },
+    {
+      "path": "scripts/check_native_clocks.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89b2d6abb78fcdb0ec8cd54345f3c7be706c3aa0",
+      "size": 4830,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/89b2d6abb78fcdb0ec8cd54345f3c7be706c3aa0"
+    },
+    {
+      "path": "scripts/critpath.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f771d0d76ab77f5e7785b4df3ce21a341684524e",
+      "size": 1009,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/f771d0d76ab77f5e7785b4df3ce21a341684524e"
+    },
+    {
+      "path": "scripts/euler.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "391bf4927fa0cde6d3c15551133615a2425bc6c7",
+      "size": 9158,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/391bf4927fa0cde6d3c15551133615a2425bc6c7"
+    },
+    {
+      "path": "scripts/euler_table.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8187ea4d3ae0c35ed55157e4603d030ebecbd1c",
+      "size": 734,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/d8187ea4d3ae0c35ed55157e4603d030ebecbd1c"
+    },
+    {
+      "path": "scripts/freeze.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "505663710ef5335771c7c9ae134421492ffb2203",
+      "size": 2367,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/505663710ef5335771c7c9ae134421492ffb2203"
+    },
+    {
+      "path": "scripts/place_route.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0714bee050cd4b8039487ed811e3c9d4bf9746ff",
+      "size": 6480,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/0714bee050cd4b8039487ed811e3c9d4bf9746ff"
+    },
+    {
+      "path": "scripts/synthesize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "148af0250d5e123e8aa757a0a3b3c3a239546434",
+      "size": 2798,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/148af0250d5e123e8aa757a0a3b3c3a239546434"
+    },
+    {
+      "path": "scripts/verify.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1daeee79fdeb4550df7cdf86aa177f72cdff6c2e",
+      "size": 8261,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/1daeee79fdeb4550df7cdf86aa177f72cdff6c2e"
+    },
+    {
+      "path": "scripts/waveform.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec8cb8d1e94c4c3d2a86b4c0409eb8e66bd5ca57",
+      "size": 2750,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/ec8cb8d1e94c4c3d2a86b4c0409eb8e66bd5ca57"
+    },
+    {
+      "path": "verification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2209cb4f9c93bd66cbbae7548c560d90391a72b",
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/trees/d2209cb4f9c93bd66cbbae7548c560d90391a72b"
+    },
+    {
+      "path": "verification/branch-protection.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e35bb96ebfb22b0da5ef32d5aba49eed6e43f357",
+      "size": 442,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/e35bb96ebfb22b0da5ef32d5aba49eed6e43f357"
+    },
+    {
+      "path": "verification/frozen.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b30bd127c1e2f5bb00512a4642ef34e094e5f08a",
+      "size": 9050,
+      "url": "https://api.github.com/repos/nathsou/HDLean/git/blobs/b30bd127c1e2f5bb00512a4642ef34e094e5f08a"
+    }
+  ],
+  "truncated": false
+}

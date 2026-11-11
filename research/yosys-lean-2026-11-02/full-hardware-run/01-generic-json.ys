@@ -1,0 +1,8 @@
+read_rtlil /nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared/model.il
+select -assert-count 336 t:$mem_v2 r:SIZE=1 %i
+memory_map t:$mem_v2 r:SIZE=1 %i
+select *
+select -assert-count 555 t:$mem_v2
+check -assert
+write_rtlil /tmp/llm2fpga-full-hardware-20261102/canonical.il
+write_json /tmp/llm2fpga-full-hardware-20261102/before.json

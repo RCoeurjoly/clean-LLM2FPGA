@@ -11,22 +11,35 @@ mod tests {
         for mask in 0..(1 << pairs.len()) {
             let mut packed = PackedConflictGraph::default();
             let mut original: UnMatrix<(),BoolIdx> = UnMatrix::new_undirected();
-            for _ in 0..4 { assert_eq!(packed.add_node(()).index(), original.add_node(()).index()); }
+            for _ in 0..4 {
+                assert_eq!(packed.add_node(()).index(), original.add_node(()).index());
+            }
             for (bit,(a,b)) in pairs.iter().enumerate() {
                 if mask & (1 << bit) != 0 {
                     let (a,b)=(NodeIndex::new(*a),NodeIndex::new(*b));
                     packed.update_edge(a,b,true); packed.update_edge(a,b,true);
-                    original.update_edge(OriginalNodeIndex::new(a.index()),OriginalNodeIndex::new(b.index()),true.into());
+                    original.update_edge(
+                        OriginalNodeIndex::new(a.index()),
+                        OriginalNodeIndex::new(b.index()), true.into());
                 }
             }
             for a in 0..5 {
                 let a=NodeIndex::new(a);
-                assert_eq!(packed.neighbors(a).map(|n| n.index()).collect::<Vec<_>>(), original.neighbors(OriginalNodeIndex::new(a.index())).map(|n| n.index()).collect::<Vec<_>>());
+                assert_eq!(
+                    packed.neighbors(a).map(|n| n.index()).collect::<Vec<_>>(),
+                    original.neighbors(OriginalNodeIndex::new(a.index()))
+                        .map(|n| n.index()).collect::<Vec<_>>());
             }
-            assert_eq!(packed.edge_references().map(|(a,b,_)|(a.index(),b.index())).collect::<Vec<_>>(),
+            assert_eq!(
+                packed.edge_references().map(|(a,b,_)|(a.index(),b.index()))
+                    .collect::<Vec<_>>(),
                 original.edge_references().map(|(a,b,_)|(a.index(),b.index())).collect::<Vec<_>>());
-            let ids = |groups: Vec<Vec<NodeIndex>>| groups.into_iter().map(|group| group.into_iter().map(|node| node.index()).collect::<Vec<_>>()).collect::<Vec<_>>();
-            let original_ids = petgraph::algo::tarjan_scc(&original).into_iter().map(|group| group.into_iter().map(|node| node.index()).collect::<Vec<_>>()).collect::<Vec<_>>();
+            let ids = |groups: Vec<Vec<NodeIndex>>| groups.into_iter()
+                .map(|group| group.into_iter().map(|node| node.index()).collect::<Vec<_>>())
+                .collect::<Vec<_>>();
+            let original_ids = petgraph::algo::tarjan_scc(&original).into_iter()
+                .map(|group| group.into_iter().map(|node| node.index()).collect::<Vec<_>>())
+                .collect::<Vec<_>>();
             assert_eq!(ids(petgraph::algo::tarjan_scc(&packed)), original_ids);
         }
     }

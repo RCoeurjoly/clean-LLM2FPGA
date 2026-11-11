@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-11-01T14:05:14.765942+00:00",
+  "updated_at": "2026-11-01T14:33:21Z",
+  "distinct_repositories": 20707,
+  "keyword_matched_repositories": 7217,
+  "network_requests": 158,
+  "cached_requests": 346,
+  "completed_leaves": 106,
+  "errors": [
+    {
+      "kind": "unretrievable_search_match",
+      "query": "language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": null,
+      "expected_count": 1,
+      "returned_count": 0,
+      "missing_count": 1,
+      "explanation": "GitHub search count does not match returned records at a single creation timestamp; see discrepancy-investigation.json."
+    },
+    {
+      "kind": "unretrievable_search_match",
+      "query": "language:lean Python in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "Python",
+      "expected_count": 1,
+      "returned_count": 0,
+      "missing_count": 1,
+      "explanation": "GitHub search count does not match returned records at a single creation timestamp; see discrepancy-investigation.json."
+    },
+    {
+      "kind": "unretrievable_search_match",
+      "query": "language:lean compiler in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "compiler",
+      "expected_count": 1,
+      "returned_count": 0,
+      "missing_count": 1,
+      "explanation": "GitHub search count does not match returned records at a single creation timestamp; see discrepancy-investigation.json."
+    },
+    {
+      "kind": "unretrievable_search_match",
+      "query": "language:lean equivalence in:name,description,readme created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+      "term": "equivalence",
+      "expected_count": 1,
+      "returned_count": 0,
+      "missing_count": 1,
+      "explanation": "GitHub search count does not match returned records at a single creation timestamp; see discrepancy-investigation.json."
+    }
+  ]
+}

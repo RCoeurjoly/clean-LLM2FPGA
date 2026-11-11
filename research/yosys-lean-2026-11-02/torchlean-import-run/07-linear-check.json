@@ -1,0 +1,30 @@
+{
+  "stage": "07-linear-check",
+  "command": [
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "--load-dynlib=/tmp/llm2fpga-torchlean-build/lean-dojo-TorchLean-f37cbc5-582c4f673202/cpu/lib/libtorchlean_tensor_cpu.so",
+    "--root=/tmp/llm2fpga-torchlean-import",
+    "--run",
+    "/tmp/llm2fpga-torchlean-import/CheckArtifact.lean",
+    "/tmp/llm2fpga-torchlean-import/linear.json",
+    "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/artifacts/linear-request.json"
+  ],
+  "cwd": "/tmp/torchlean-model-probe/lean-dojo-TorchLean-f37cbc5",
+  "started_at": "2026-11-02T09:25:14.387694+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 10.668283512000926,
+  "finished_at": "2026-11-02T09:25:25.056126+00:00"
+}

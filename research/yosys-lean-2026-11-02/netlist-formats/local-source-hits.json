@@ -1,0 +1,3642 @@
+{
+  "files_scanned": 8919,
+  "patterns": {
+    "blif_eblif": "(?i)\\b(?:e?blif)\\b|write_blif",
+    "edif": "(?i)\\bedif\\b|write_edif|edifVersion",
+    "cxxrtl": "(?i)\\bcxxrtl\\b|write_cxxrtl",
+    "jny": "(?i)write_jny|\\bjny\\b",
+    "intersynth": "(?i)\\bintersynth\\b|write_intersynth",
+    "simplec": "(?i)\\bsimplec\\b|write_simplec",
+    "yosys_table": "write_table",
+    "functional_cpp": "write_functional_cxx|functional/cxxrtl|functional_cxx",
+    "yosys_json": "write_json|yosys-json|yosys_json|netnames"
+  },
+  "hits": [
+    {
+      "format": "yosys_json",
+      "repo": "Verilean/sparkle",
+      "path": "docs/tutorial/md/Ch09_FPGA.md",
+      "line": 77,
+      "text": "          write_json /tmp/blinky.json\""
+    },
+    {
+      "format": "yosys_json",
+      "repo": "Verilean/sparkle",
+      "path": "docs/tutorial/md/Ch09_FPGA.md",
+      "line": 186,
+      "text": "          write_json /tmp/blinky.json\""
+    },
+    {
+      "format": "yosys_json",
+      "repo": "Verilean/sparkle",
+      "path": "docs/tutorial/md/Ch11_Web3Signer.md",
+      "line": 201,
+      "text": "          write_json build/sign_z_uart.json\""
+    },
+    {
+      "format": "yosys_json",
+      "repo": "Verilean/sparkle",
+      "path": "docs/tutorial/md/Ch08_Yosys.md",
+      "line": 75,
+      "text": "  write_json /tmp/counter8.json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "Verilean/sparkle",
+      "path": "docs/tutorial/md/Ch08_Yosys.md",
+      "line": 91,
+      "text": "- **`write_json`** \u2014 emit the netlist as JSON, easy to feed"
+    },
+    {
+      "format": "blif_eblif",
+      "repo": "digama0/thinking-sand",
+      "path": "src/L2-logic/04-equivalence-certificates.md",
+      "line": 87,
+      "text": "`cec/trail-cec.sh` does this: it snapshots after each pass (`&get -n` for uniform signal names; `s0` via non-destructive `write_blif`, since `fx` needs an SOP network), exports each adjacent miter (`miter -c`, whose single output can be 1 exactly when the two circuits differ), and discharges it with **minisat** \u2014 outside ABC \u2014 keeping ABC's own `cec` as a cross-check. The polarity is falsification-tested (an AND-vs-OR miter yields SAT), so a false \"equivalent\" cannot pass."
+    },
+    {
+      "format": "blif_eblif",
+      "repo": "digama0/thinking-sand",
+      "path": "flow/rocket-sram22/cec/DC-CERT-NOTES.md",
+      "line": 92,
+      "text": "signal names; `s0` via non-destructive `write_blif`, since `fx` needs an SOP network), then check"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/foundation.py",
+      "line": 17,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/foundation.py",
+      "line": 337,
+      "text": "    write_json(base_path.with_name(\"r3_base_check.json\"), base_check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/foundation.py",
+      "line": 351,
+      "text": "        write_json(path.with_suffix(\".check.json\"), check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/foundation.py",
+      "line": 381,
+      "text": "    write_json(foundation_path.with_name(\"r3_foundation_check.json\"), foundation_check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/foundation.py",
+      "line": 395,
+      "text": "    write_json(requirement_root / \"corpus\" / \"foundations\" / f\"{benchmark.slug}.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/main.py",
+      "line": 10,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/main.py",
+      "line": 39,
+      "text": "        write_json(path, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/main.py",
+      "line": 58,
+      "text": "    write_json(path, {\"schema\": \"rtl2lean-temporal-progress-v1\", \"events\": events})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/main.py",
+      "line": 85,
+      "text": "    write_json(requirement_root / \"run_manifest.json\", manifest)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/main.py",
+      "line": 153,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/main.py",
+      "line": 162,
+      "text": "        write_json(requirement_root / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/report.py",
+      "line": 13,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/report.py",
+      "line": 336,
+      "text": "    write_json(requirement_root / \"lean_integrity.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/report.py",
+      "line": 417,
+      "text": "        write_json(requirement_root / \"case_studies\" / f\"{label}.json\", record)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/report.py",
+      "line": 491,
+      "text": "    write_json(tables / \"proof_complexity_schema.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/report.py",
+      "line": 518,
+      "text": "    write_json(requirement_root / \"trace_bridge\" / \"results.json\", {\"results\": trace})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/report.py",
+      "line": 520,
+      "text": "    write_json(requirement_root / \"multi_clock\" / \"temporal_results.json\", {\"results\": multi})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/report.py",
+      "line": 527,
+      "text": "        write_json(requirement_root / \"aes_high_complexity\" / filename, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/report.py",
+      "line": 788,
+      "text": "    write_json(requirement_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 13,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 107,
+      "text": "            write_json(rejection_path, {\"properties\": [*existing, checked]})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 126,
+      "text": "    write_json(corpus_path, corpus)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 138,
+      "text": "    write_json(requirement_root / \"corpus\" / \"property_validation.json\", {\"rows\": rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 139,
+      "text": "    write_json(requirement_root / \"corpus\" / \"freeze.json\", freeze)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 188,
+      "text": "    write_json(requirement_root / \"baseline\" / \"baseline_capability.json\", capability)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 219,
+      "text": "        write_json(target_root / \"result.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 235,
+      "text": "    write_json(requirement_root / \"baseline\" / \"baseline_results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 236,
+      "text": "    write_json(requirement_root / \"baseline\" / \"selected_targets.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 331,
+      "text": "        write_json(saved, result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 345,
+      "text": "    write_json(requirement_root / \"direct_llm\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 414,
+      "text": "        write_json(pool_path, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 461,
+      "text": "        write_json(saved, result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 481,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 482,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"intermediate_lemmas.json\", {\"lemmas\": intermediate})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 483,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"lemma_novelty.json\", {\"rows\": novelty})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/experiment.py",
+      "line": 484,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"causal_ablation.json\", {\"rows\": causal})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/corpus.py",
+      "line": 26,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/corpus.py",
+      "line": 714,
+      "text": "    write_json(corpus_root / \"all_candidates.json\", {\"candidates\": all_candidates})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/corpus.py",
+      "line": 715,
+      "text": "    write_json(corpus_root / \"final_properties.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/corpus.py",
+      "line": 716,
+      "text": "    write_json(corpus_root / \"rejected_properties.json\", {\"properties\": rejected})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/corpus.py",
+      "line": 717,
+      "text": "    write_json(corpus_root / \"property_classification.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/corpus.py",
+      "line": 723,
+      "text": "    write_json(corpus_root / \"aes_complexity_tags.json\", {\"properties\": aes_tags})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal/corpus.py",
+      "line": 724,
+      "text": "    write_json(requirement_root / \"multi_clock\" / \"execution_semantics.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/io.py",
+      "line": 10,
+      "text": "def write_json(path: Path, value: Any) -> None:"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/analysis.py",
+      "line": 20,
+      "text": "from .io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/analysis.py",
+      "line": 211,
+      "text": "    write_json(destination / \"design.json\", design_payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/analysis.py",
+      "line": 212,
+      "text": "    write_json(destination / \"clocks.json\", clocks_payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/analysis.py",
+      "line": 213,
+      "text": "    write_json(destination / \"unsupported.json\", unsupported_payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/analysis.py",
+      "line": 238,
+      "text": "    write_json(output_root / \"repository_audit.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/compiler.py",
+      "line": 22,
+      "text": "from .io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/compiler.py",
+      "line": 178,
+      "text": "        write_json(destination / \"ir\" / \"design.json\", typed.to_dict())"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/compiler.py",
+      "line": 189,
+      "text": "        write_json(stage / \"lean_check.json\", lean_result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/compiler.py",
+      "line": 199,
+      "text": "        write_json(destination / \"stage1.json\", record)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/compiler.py",
+      "line": 210,
+      "text": "        write_json(destination / \"stage1.json\", record)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/compiler.py",
+      "line": 220,
+      "text": "            write_json(unsupported_path, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/main.py",
+      "line": 13,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/main.py",
+      "line": 77,
+      "text": "    write_json(output / \"progress.json\", {\"schema\": \"rtl2lean-progress-v1\", \"events\": events})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/main.py",
+      "line": 104,
+      "text": "    write_json(output / \"run_manifest.json\", run_manifest)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/main.py",
+      "line": 158,
+      "text": "            write_json(output / benchmark.slug / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/main.py",
+      "line": 164,
+      "text": "    write_json(output / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/report.py",
+      "line": 8,
+      "text": "from .io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/report.py",
+      "line": 170,
+      "text": "    write_json(output_root / \"progress.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/pipeline/report.py",
+      "line": 175,
+      "text": "    write_json(output_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/analysis.py",
+      "line": 14,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/analysis.py",
+      "line": 214,
+      "text": "        write_json(requirement_root / \"analysis\" / name, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/analysis.py",
+      "line": 215,
+      "text": "    write_json(requirement_root / \"capability_ranking.json\", ranking)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/analysis.py",
+      "line": 359,
+      "text": "    write_json(requirement_root / \"integrity.json\", integrity)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/analysis.py",
+      "line": 360,
+      "text": "    write_json(requirement_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/runner.py",
+      "line": 15,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/runner.py",
+      "line": 125,
+      "text": "                write_json(saved, normalized)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/runner.py",
+      "line": 240,
+      "text": "    write_json(saved, result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/runner.py",
+      "line": 290,
+      "text": "            write_json(requirement_root / \"run_progress.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/runner.py",
+      "line": 303,
+      "text": "    write_json(requirement_root / \"runs\" / \"all_results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/tasks.py",
+      "line": 14,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/tasks.py",
+      "line": 234,
+      "text": "    write_json(manifests / \"api_config.json\", _api_config())"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/tasks.py",
+      "line": 261,
+      "text": "        write_json(manifests / \"validation.json\", {\"rows\": validation_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/tasks.py",
+      "line": 331,
+      "text": "        write_json(requirement_root / rel, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/tasks.py",
+      "line": 340,
+      "text": "    write_json(frozen_path, frozen)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/main.py",
+      "line": 10,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/main.py",
+      "line": 41,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_calibration/main.py",
+      "line": 49,
+      "text": "        write_json(requirement_root / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/foundation.py",
+      "line": 10,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/foundation.py",
+      "line": 113,
+      "text": "    write_json(requirement_root / \"until\" / \"candidates.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/foundation.py",
+      "line": 118,
+      "text": "    write_json(requirement_root / \"until\" / \"rejected.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/foundation.py",
+      "line": 155,
+      "text": "    write_json(requirement_root / \"until\" / \"foundation_checks.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/main.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/main.py",
+      "line": 42,
+      "text": "    write_json(path, {\"schema\": \"rtl2lean-compositional_proofs-progress-v1\", \"events\": events})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/main.py",
+      "line": 61,
+      "text": "        write_json(snapshot_path, {\"schema\": \"rtl2lean-compositional_proofs-r4-snapshot-v1\","
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/main.py",
+      "line": 65,
+      "text": "    write_json(requirement_root / \"run_manifest.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/main.py",
+      "line": 92,
+      "text": "        write_json(requirement_root / \"repeated_trials\" / \"plan.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/main.py",
+      "line": 134,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/main.py",
+      "line": 143,
+      "text": "        write_json(requirement_root / \"failure.json\", {\"error\": repr(error),"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 12,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 94,
+      "text": "    write_json(requirement_root / \"kernel_replay.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 104,
+      "text": "        write_json(root / \"case.json\", {\"case_type\": name, \"available\": False, \"reason\": note})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 114,
+      "text": "    write_json(root / \"case.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 115,
+      "text": "    write_json(root / \"property.json\", prop); write_json(root / \"baseline.json\", base or {})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 116,
+      "text": "    write_json(root / \"direct_trials.json\", {\"rows\": direct_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 117,
+      "text": "    write_json(root / \"lemma_first_trials.json\", {\"rows\": lemma_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 118,
+      "text": "    write_json(root / \"rtl_evidence.json\", {\"rows\": prop.get(\"rtl_evidence\")})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 119,
+      "text": "    write_json(root / \"ir_evidence.json\", {\"rows\": prop.get(\"ir_evidence\")})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 174,
+      "text": "    write_json(variable_path, variable_payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 251,
+      "text": "    write_json(variable_root / \"case.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 255,
+      "text": "    write_json(requirement_root / \"case_studies\" / \"internally_bounded_completion\" / \"case.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 377,
+      "text": "    write_json(requirement_root / \"integrity.json\", {\"checks\": checks})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/report.py",
+      "line": 428,
+      "text": "    write_json(requirement_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 15,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 97,
+      "text": "    write_json(final_path, frozen)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 98,
+      "text": "    write_json(requirement_root / \"compositional_hard\" / \"validation.json\", {\"rows\": rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 99,
+      "text": "    write_json(requirement_root / \"compositional_hard\" / \"freeze.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 106,
+      "text": "    write_json(requirement_root / \"until\" / \"results.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 152,
+      "text": "    write_json(requirement_root / \"baseline\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 266,
+      "text": "    write_json(requirement_root / \"direct_llm\" / \"inline_decomposition.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 315,
+      "text": "            write_json(saved, result); rows.append(result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 327,
+      "text": "    write_json(requirement_root / \"direct_llm\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 329,
+      "text": "    write_json(requirement_root / \"repeated_trials\" / \"direct.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 443,
+      "text": "            write_json(pool_path, {\"schema\": PersistentLocalLemmaPool.SCHEMA, \"dut\": benchmark.design_id,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 485,
+      "text": "            write_json(saved, result); rows.append(result); all_lemmas.extend(lemmas)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 501,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 502,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"lemmas.json\", {\"lemmas\": all_lemmas})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 503,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"abstraction_gain.json\", {\"rows\": abstraction})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 504,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"causal.json\", {\"rows\": causal})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 505,
+      "text": "    write_json(requirement_root / \"repeated_trials\" / \"lemma_first.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/experiment.py",
+      "line": 511,
+      "text": "    write_json(requirement_root / \"repeated_trials\" / \"summary.json\", summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/corpus.py",
+      "line": 10,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/corpus.py",
+      "line": 296,
+      "text": "    write_json(requirement_root / \"compositional_hard\" / \"candidates.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/corpus.py",
+      "line": 299,
+      "text": "    write_json(requirement_root / \"compositional_hard\" / \"complexity.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/corpus.py",
+      "line": 309,
+      "text": "    write_json(requirement_root / \"until\" / \"results.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/latency.py",
+      "line": 9,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/compositional_proofs/latency.py",
+      "line": 118,
+      "text": "        write_json(requirement_root / \"variable_latency\" / name, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/main.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/main.py",
+      "line": 44,
+      "text": "    write_json(path, {\"schema\": \"rtl2lean-proof_gaps-progress-v1\", \"events\": events})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/main.py",
+      "line": 65,
+      "text": "        write_json(snapshot_path, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/main.py",
+      "line": 72,
+      "text": "    write_json(requirement_root / \"run_manifest.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/main.py",
+      "line": 149,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/main.py",
+      "line": 158,
+      "text": "        write_json(requirement_root / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 10,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 84,
+      "text": "    write_json(case_root / \"lean_model_manifest.json\", {\"files\": rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 96,
+      "text": "        write_json(root / \"case.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 123,
+      "text": "    write_json(root / \"case.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 131,
+      "text": "        write_json(root / filename, value)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 164,
+      "text": "    write_json(requirement_root / \"proof_gap\" / \"proof_gap_analysis.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 333,
+      "text": "    write_json(requirement_root / \"prompt_leakage_audit.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 457,
+      "text": "    write_json(requirement_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/report.py",
+      "line": 458,
+      "text": "    write_json(requirement_root / \"integrity.json\", integrity)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 15,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 115,
+      "text": "    write_json(final_path, final)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 116,
+      "text": "    write_json(requirement_root / \"corpus\" / \"challenge_properties.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 121,
+      "text": "    write_json(requirement_root / \"corpus\" / \"validation.json\", {\"rows\": validation})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 122,
+      "text": "    write_json(requirement_root / \"corpus\" / \"freeze.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 180,
+      "text": "    write_json(requirement_root / \"baseline\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 432,
+      "text": "    write_json(requirement_root / \"direct\" / \"gap_resolution_audit.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 476,
+      "text": "            write_json(saved, result); rows.append(result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 487,
+      "text": "    write_json(requirement_root / \"direct\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 614,
+      "text": "                write_json(saved, prior)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 622,
+      "text": "            write_json(pool_path, {\"schema\": PersistentLocalLemmaPool.SCHEMA, \"dut\": benchmark.design_id,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 671,
+      "text": "            write_json(saved, result); rows.append(result); all_lemmas.extend(lemmas)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 687,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 688,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"intermediate_lemmas.json\", {\"lemmas\": all_lemmas})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 689,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"novelty.json\", {\"rows\": novelty_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 690,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"gap_alignment.json\", {\"rows\": alignment_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/experiment.py",
+      "line": 691,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"causal_ablation.json\", {\"rows\": causal_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/corpus.py",
+      "line": 8,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/corpus.py",
+      "line": 224,
+      "text": "    write_json(requirement_root / \"corpus\" / \"all_candidates.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/proof_gap.py",
+      "line": 8,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/proof_gap.py",
+      "line": 89,
+      "text": "    write_json(requirement_root / \"proof_gap\" / \"theorem_base_inventory.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/proof_gap.py",
+      "line": 225,
+      "text": "    write_json(requirement_root / \"proof_gap\" / \"proof_gap_analysis.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/proof_gap.py",
+      "line": 231,
+      "text": "    write_json(requirement_root / \"proof_gap\" / \"coverage_analysis.json\", {\"rows\": coverage_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/proof_gap.py",
+      "line": 232,
+      "text": "    write_json(requirement_root / \"proof_gap\" / \"missing_relations.json\", {\"rows\": missing_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proof_gaps/proof_gap.py",
+      "line": 233,
+      "text": "    write_json(requirement_root / \"proof_gap\" / \"proof_gap_depth.json\", {\"rows\": depth_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "line": 9,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "line": 350,
+      "text": "    write_json(normalized / \"direct_paths.json\", direct_result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "line": 351,
+      "text": "    write_json(normalized / \"lemma_first_paths.json\", lemma_result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "line": 352,
+      "text": "    write_json(normalized / \"path_overlap.json\", overlap_result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "line": 354,
+      "text": "    write_json(bypass_root / \"syntactic_bypass.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "line": 360,
+      "text": "    write_json(bypass_root / \"semantic_bypass.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "line": 367,
+      "text": "    write_json(bypass_root / \"classification.json\", classification_result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/analysis.py",
+      "line": 394,
+      "text": "    write_json(requirement_root / \"strong_bottleneck\" / \"reevaluation.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/main.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/main.py",
+      "line": 39,
+      "text": "    write_json(path, {\"schema\": \"rtl2lean-dependency_audit-progress-v1\", \"events\": events})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/main.py",
+      "line": 58,
+      "text": "        write_json(snapshot, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/main.py",
+      "line": 66,
+      "text": "    write_json(requirement_root / \"run_manifest.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/main.py",
+      "line": 122,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/main.py",
+      "line": 131,
+      "text": "        write_json(requirement_root / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/report.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/report.py",
+      "line": 49,
+      "text": "        write_json(root / \"case.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/report.py",
+      "line": 74,
+      "text": "    write_json(root / \"case.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/report.py",
+      "line": 88,
+      "text": "        write_json(root / filename, value)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/report.py",
+      "line": 290,
+      "text": "    write_json(requirement_root / \"integrity.json\", integrity)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/report.py",
+      "line": 291,
+      "text": "    write_json(requirement_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/dependency.py",
+      "line": 14,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/dependency.py",
+      "line": 271,
+      "text": "        write_json(source.with_suffix(\".result.json\"), check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/dependency.py",
+      "line": 326,
+      "text": "    write_json(dependency_root / \"direct_dependencies.json\", direct_result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/dependency.py",
+      "line": 327,
+      "text": "    write_json(dependency_root / \"lemma_first_dependencies.json\", lemma_result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/dependency.py",
+      "line": 328,
+      "text": "    write_json(dependency_root / \"recursive_expansion.json\", expansions)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/dependency_audit/dependency.py",
+      "line": 329,
+      "text": "    write_json(dependency_root / \"expanded_dependency_graph.json\", expansions)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/main.py",
+      "line": 21,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/main.py",
+      "line": 48,
+      "text": "    write_json(path, {\"schema\": \"rtl2lean-evaluation-progress-v1\", \"events\": events})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/main.py",
+      "line": 75,
+      "text": "    write_json(requirement_root / \"run_manifest.json\", manifest)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/main.py",
+      "line": 145,
+      "text": "        write_json(requirement_root / \"pool_ablation\" / \"fresh_pool.json\", fresh)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/main.py",
+      "line": 146,
+      "text": "        write_json(requirement_root / \"pool_ablation\" / \"shared_pool.json\", shared)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/main.py",
+      "line": 147,
+      "text": "        write_json(requirement_root / \"pool_ablation\" / \"order_sensitivity.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/main.py",
+      "line": 180,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/main.py",
+      "line": 189,
+      "text": "        write_json(requirement_root / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/report.py",
+      "line": 14,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/report.py",
+      "line": 215,
+      "text": "    write_json(requirement_root / \"reproducibility\" / \"experiment_fingerprint.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/report.py",
+      "line": 409,
+      "text": "    write_json(requirement_root / \"lean_integrity.json\", integrity)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/report.py",
+      "line": 487,
+      "text": "    write_json(requirement_root / \"final_audit_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 16,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 70,
+      "text": "    write_json(path.with_name(\"r2_framework_check.json\"), result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 112,
+      "text": "    write_json(requirement_root / \"runtime\" / \"translation_phases.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 182,
+      "text": "            write_json(property_dir / \"statement_check.json\", statement_check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 210,
+      "text": "            write_json(property_dir / \"result.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 229,
+      "text": "    write_json(requirement_root / \"baseline\" / \"baseline_results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 239,
+      "text": "    write_json(requirement_root / \"baseline\" / \"candidate_targets.json\", {\"targets\": candidates})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 240,
+      "text": "    write_json(requirement_root / \"baseline\" / \"selected_targets.json\", {\"targets\": selected})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 241,
+      "text": "    write_json(requirement_root / \"baseline\" / \"selection_rule.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 244,
+      "text": "    write_json(requirement_root / \"baseline\" / \"target_selection.json\", selection)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 318,
+      "text": "    write_json(pool.path, {\"schema\": pool.SCHEMA, \"dut\": benchmark.design_id, \"lemmas\": [],"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 388,
+      "text": "            write_json(output_dir / \"result.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 405,
+      "text": "    write_json(output_dir / \"result.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 440,
+      "text": "            write_json(shared_path, {\"schema\": PersistentLocalLemmaPool.SCHEMA,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 456,
+      "text": "                write_json(pool_path, {\"schema\": PersistentLocalLemmaPool.SCHEMA,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 508,
+      "text": "            write_json(property_dir / \"configuration_result.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 524,
+      "text": "    write_json(config_root / \"summary.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 552,
+      "text": "            write_json(empty_path, {\"schema\": PersistentLocalLemmaPool.SCHEMA, \"dut\": benchmark.design_id,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 607,
+      "text": "    write_json(requirement_root / \"llm\" / artifact_name, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 610,
+      "text": "    write_json(requirement_root / \"llm\" / intermediate_name, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 631,
+      "text": "    write_json(requirement_root / \"llm\" / \"assisted_results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 700,
+      "text": "    write_json(requirement_root / \"reuse\" / \"retrieval.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 704,
+      "text": "    write_json(requirement_root / \"reuse\" / \"actual_use.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 707,
+      "text": "    write_json(requirement_root / \"reuse\" / \"causal_reuse.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 740,
+      "text": "    write_json(requirement_root / \"reuse\" / \"relatedness.json\", relatedness)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/experiment.py",
+      "line": 779,
+      "text": "            write_json(path.with_name(check_name), check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/corpus.py",
+      "line": 17,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/corpus.py",
+      "line": 280,
+      "text": "    write_json(output_root / \"audit\" / benchmark.slug / \"property_audit.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/corpus.py",
+      "line": 471,
+      "text": "        write_json(output_root / \"audit\" / benchmark.slug / \"property_audit.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/corpus.py",
+      "line": 510,
+      "text": "    write_json(requirement_root / \"corpus\" / \"property_corpus.json\", corpus)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/corpus.py",
+      "line": 511,
+      "text": "    write_json(requirement_root / \"corpus\" / \"property_audit.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/evaluation/corpus.py",
+      "line": 514,
+      "text": "    write_json(requirement_root / \"corpus\" / \"semantic_evidence.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/theorems/generator.py",
+      "line": 13,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/theorems/generator.py",
+      "line": 391,
+      "text": "    write_json(targets_path, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/context.py",
+      "line": 8,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/context.py",
+      "line": 82,
+      "text": "    write_json(artifact_path, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 13,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 37,
+      "text": "    write_json(model_dir / \"foundation_check.json\", check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 54,
+      "text": "    write_json(model_dir / \"framework_check.json\", framework_check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 71,
+      "text": "    write_json(model_dir.parent / \"stage2.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 138,
+      "text": "    write_json(path, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 272,
+      "text": "        write_json(target_dir / \"result.json\", target_result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 289,
+      "text": "    write_json(arm_dir / \"theorems_check.json\", final_check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 311,
+      "text": "    write_json(arm_dir / \"summary.json\", summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/proving/runner.py",
+      "line": 336,
+      "text": "    write_json(compilation.model_path.parent.parent / \"stage3.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/foundation.py",
+      "line": 16,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/foundation.py",
+      "line": 140,
+      "text": "        write_json(model_dir / \"r4_foundation_check.json\", check)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/foundation.py",
+      "line": 160,
+      "text": "    write_json(requirement_root / \"until\" / \"foundation_checks.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "line": 45,
+      "text": "    write_json(path, {\"schema\": \"rtl2lean-temporal_challenges-progress-v1\", \"events\": events})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "line": 68,
+      "text": "        write_json(requirement_root / \"until\" / filename, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "line": 93,
+      "text": "        write_json(snapshot_path, snapshot)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "line": 99,
+      "text": "    write_json(requirement_root / \"run_manifest.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "line": 131,
+      "text": "            write_json(requirement_root / \"until\" / \"until_properties.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "line": 183,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/main.py",
+      "line": 195,
+      "text": "        write_json(requirement_root / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 109,
+      "text": "    write_json(requirement_root / \"kernel_replay.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 182,
+      "text": "        write_json(root / \"case.json\", {\"case_type\": label, \"available\": False, \"reason\": note})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 204,
+      "text": "    write_json(root / \"case.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 205,
+      "text": "    write_json(root / \"rtl_evidence.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 209,
+      "text": "    write_json(root / \"ir_evidence.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 213,
+      "text": "    write_json(root / \"property.json\", prop)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 214,
+      "text": "    write_json(root / \"baseline.json\", bmap.get(key, {}))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 215,
+      "text": "    write_json(root / \"direct.json\", dmap.get(key, {}))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 216,
+      "text": "    write_json(root / \"lemma_first.json\", lmap.get(key, {}))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 217,
+      "text": "    write_json(root / \"kernel_result.json\", payload[\"chain\"][\"kernel_result\"])"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 305,
+      "text": "    write_json(requirement_root / \"case_studies\" / \"real_variable_completion\" / \"evidence.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 371,
+      "text": "    write_json(requirement_root / \"lean_integrity.json\", {\"checks\": checks})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/report.py",
+      "line": 421,
+      "text": "    write_json(requirement_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 14,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 103,
+      "text": "    write_json(path, frozen)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 111,
+      "text": "    write_json(requirement_root / \"hard_temporal\" / \"freeze.json\", freeze)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 112,
+      "text": "    write_json(requirement_root / \"hard_temporal\" / \"validation.json\", {\"rows\": rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 148,
+      "text": "        write_json(root / \"result.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 164,
+      "text": "    write_json(requirement_root / \"baseline\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 362,
+      "text": "                write_json(saved, prior)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 385,
+      "text": "        write_json(saved, result); results.append(result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 400,
+      "text": "    write_json(requirement_root / \"direct_llm\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 445,
+      "text": "    write_json(requirement_root / \"direct_llm\" / \"inline_decomposition_audit.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 482,
+      "text": "                write_json(saved, prior)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 488,
+      "text": "        write_json(pool_path, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 534,
+      "text": "        write_json(saved, result); results.append(result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 556,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 557,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"intermediate_lemmas.json\", {\"lemmas\": intermediate})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 558,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"novelty.json\", {\"rows\": novelty})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/experiment.py",
+      "line": 559,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"causal_ablation.json\", {\"rows\": causal})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 9,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 101,
+      "text": "            write_json(requirement_root / \"until\" / \"pair_selection.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 109,
+      "text": "    write_json(requirement_root / \"until\" / \"pair_selection.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 406,
+      "text": "    write_json(requirement_root / \"hard_temporal\" / \"candidates.json\", {\"pairs\": all_pair_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 407,
+      "text": "    write_json(requirement_root / \"hard_temporal\" / \"final_properties.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 408,
+      "text": "    write_json(requirement_root / \"hard_temporal\" / \"complexity.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 416,
+      "text": "    write_json(requirement_root / \"until\" / \"until_properties.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 420,
+      "text": "    write_json(requirement_root / \"variable_completion\" / \"dut_latency_evidence.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 423,
+      "text": "    write_json(requirement_root / \"variable_completion\" / \"candidates.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/temporal_challenges/corpus.py",
+      "line": 426,
+      "text": "    write_json(requirement_root / \"variable_completion\" / \"results.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/proof_graph.py",
+      "line": 10,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/proof_graph.py",
+      "line": 107,
+      "text": "    write_json(requirement_root / \"proof_graph\" / \"theorem_dependency_graph.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/proof_graph.py",
+      "line": 274,
+      "text": "    write_json(requirement_root / \"proof_graph\" / \"target_graphs.json\", {\"rows\": target_graphs})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/proof_graph.py",
+      "line": 275,
+      "text": "    write_json(requirement_root / \"proof_graph\" / \"alternative_paths.json\", {\"rows\": alternatives})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/proof_graph.py",
+      "line": 276,
+      "text": "    write_json(requirement_root / \"bottleneck\" / \"candidates.json\", {\"rows\": bottlenecks})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/proof_graph.py",
+      "line": 277,
+      "text": "    write_json(requirement_root / \"bottleneck\" / \"strength.json\", {\"rows\": strengths})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/main.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/main.py",
+      "line": 52,
+      "text": "    write_json(path, {\"schema\": \"rtl2lean-multi_phase_proofs-progress-v1\", \"events\": events})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/main.py",
+      "line": 72,
+      "text": "        write_json(snapshot_path, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/main.py",
+      "line": 79,
+      "text": "    write_json(requirement_root / \"run_manifest.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/main.py",
+      "line": 181,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/main.py",
+      "line": 190,
+      "text": "        write_json(requirement_root / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 10,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 52,
+      "text": "    write_json(root / \"lean_model_manifest.json\", {\"files\": rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 72,
+      "text": "    write_json(root / \"rtl_source_manifest.json\", {\"files\": rtl_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 82,
+      "text": "    write_json(root / \"ir_manifest.json\", {\"files\": ir_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 131,
+      "text": "        write_json(root / \"case.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 170,
+      "text": "    write_json(root / \"case.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 187,
+      "text": "        write_json(root / filename, value)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 315,
+      "text": "    write_json(requirement_root / \"prompt_leakage_audit.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 523,
+      "text": "    write_json(requirement_root / \"integrity.json\", integrity)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/report.py",
+      "line": 524,
+      "text": "    write_json(requirement_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 16,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 132,
+      "text": "    write_json(final_path, frozen)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 135,
+      "text": "    write_json(requirement_root / \"corpus\" / \"bottleneck_challenges.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 152,
+      "text": "    write_json(requirement_root / \"corpus\" / \"trial_seeds.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 156,
+      "text": "    write_json(requirement_root / \"corpus\" / \"validation.json\", {\"rows\": validation})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 157,
+      "text": "    write_json(requirement_root / \"corpus\" / \"freeze.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 168,
+      "text": "    write_json(requirement_root / \"bottleneck\" / \"frozen_classification.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 221,
+      "text": "    write_json(requirement_root / \"baseline\" / \"results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 307,
+      "text": "        write_json(saved, result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 338,
+      "text": "    write_json(requirement_root / \"direct\" / \"trials.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 392,
+      "text": "    write_json(requirement_root / \"direct\" / \"bypass_audit.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 560,
+      "text": "                write_json(saved, prior)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 569,
+      "text": "        write_json(pool_path, {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 617,
+      "text": "        write_json(saved, result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 655,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"trials.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 656,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"intermediate_lemmas.json\", {\"lemmas\": all_lemmas})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 657,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"novelty.json\", {\"rows\": novelty_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 658,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"alignment.json\", {\"rows\": alignment_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 659,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"closure.json\", {\"rows\": closure_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/experiment.py",
+      "line": 660,
+      "text": "    write_json(requirement_root / \"lemma_first\" / \"causal_ablation.json\", {\"rows\": causal_rows})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/corpus.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/multi_phase_proofs/corpus.py",
+      "line": 253,
+      "text": "    write_json(requirement_root / \"corpus\" / \"all_candidates.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/analysis.py",
+      "line": 13,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/analysis.py",
+      "line": 210,
+      "text": "        write_json(requirement_root / \"analysis\" / name, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/analysis.py",
+      "line": 211,
+      "text": "    write_json(requirement_root / \"capability_ranking.json\", ranking)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/analysis.py",
+      "line": 303,
+      "text": "    write_json(requirement_root / \"integrity.json\", integrity)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/analysis.py",
+      "line": 304,
+      "text": "    write_json(requirement_root / \"final_report.json\", report)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/runner.py",
+      "line": 15,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/runner.py",
+      "line": 389,
+      "text": "    write_json(saved, result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/runner.py",
+      "line": 422,
+      "text": "            write_json(requirement_root / \"run_progress.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/runner.py",
+      "line": 435,
+      "text": "    write_json(requirement_root / \"runs\" / \"all_results.json\", payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/tasks.py",
+      "line": 11,
+      "text": "from rtl2lean.pipeline.io import sha256, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/tasks.py",
+      "line": 57,
+      "text": "    write_json(manifests / \"api_config.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/tasks.py",
+      "line": 182,
+      "text": "        write_json(requirement_root / rel, payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/tasks.py",
+      "line": 193,
+      "text": "    write_json(frozen_path, frozen)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/main.py",
+      "line": 8,
+      "text": "from rtl2lean.pipeline.io import write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/main.py",
+      "line": 39,
+      "text": "        write_json(requirement_root / \"run_summary.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/leap",
+      "path": "rtl2lean/model_comparison/main.py",
+      "line": 47,
+      "text": "        write_json(requirement_root / \"failure.json\", {"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/import_coverage.py",
+      "line": 68,
+      "text": "    parser.add_argument(\"--yosys-json\", type=pathlib.Path, required=True)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/import_coverage.py",
+      "line": 75,
+      "text": "    yosys_bytes = args.yosys_json.read_bytes()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/verilog_inventory.py",
+      "line": 99,
+      "text": "    for name, net in module.get(\"netnames\", {}).items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/verilog_inventory.py",
+      "line": 335,
+      "text": "            f\"write_json {elaborated}\","
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/verify_kianv_physical_handoff.py",
+      "line": 126,
+      "text": "            f\"write_json {safe_yosys_path(hierarchy_json)}\""
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 243,
+      "text": "        self.netnames = module.get(\"netnames\", {})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 259,
+      "text": "        for name, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 282,
+      "text": "        for _, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 290,
+      "text": "        names = [name for name, net in self.netnames.items()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 305,
+      "text": "        for name, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1194,
+      "text": "    parser.add_argument(\"--yosys-json\", type=pathlib.Path, required=True)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1204,
+      "text": "    yosys_bytes = args.yosys_json.read_bytes()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1223,
+      "text": "        \"name\": \"yosys-json\","
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1296,
+      "text": "            {\"role\": \"elaborated_yosys_json\", \"path\": args.yosys_json.resolve().as_posix(),"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/kianv_bottom_up_equivalence.py",
+      "line": 161,
+      "text": "    for name, net in raw_module.get(\"netnames\", {}).items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ssghost/loom",
+      "path": "scripts/kianv_bottom_up_equivalence.py",
+      "line": 176,
+      "text": "    for name, net in raw_module.get(\"netnames\", {}).items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "formalized-si/redstone-verify",
+      "path": "tools/verify.py",
+      "line": 466,
+      "text": "                        f\"write_json {pj}\\nselect -assert-none {SEQ_CELLS}\\n\")"
+    },
+    {
+      "format": "blif_eblif",
+      "repo": "formalized-si/redstone-verify",
+      "path": "docs/LANDSCAPE.md",
+      "line": 39,
+      "text": "- **PERSHING** \u2014 https://github.com/qmn/pershing ; paper SIGTBD 2016 https://sigtbd.csail.mit.edu/pubs/2016/paper4.pdf ; the C version **dewey** https://github.com/qmn/dewey \u2014 automatic place&route for redstone (simulated annealing), BLIF as input. An example of \"dry\" P&R, with no equivalence checking."
+    },
+    {
+      "format": "yosys_json",
+      "repo": "formalized-si/redstone-verify",
+      "path": "docs/DECISIONS.md",
+      "line": 29,
+      "text": "- verify.py: spec ports read from Yosys (`write_json` after `proc`), only 1-bit input/output ports;"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "formalized-si/redstone-verify",
+      "path": "docs/CERTIFICATE.md",
+      "line": 178,
+      "text": "| Yosys 0.64 (d8dab5b3) | port elaboration (`read_verilog, hierarchy, proc, flatten, write_json`); certify script: `read_verilog -sv` (includes frontend constant folding and function inlining), `hierarchy -check`, `proc -noopt`, `flatten`, `techmap` (stock `techmap.v` + `divzero_map.v`), `chtype`, `setundef`, `aigmap`, `check -assert`, `write_aiger` | Homebrew build | trusted. There are no optimisation passes, so it cannot \"decide\" the miter. The prove stage (`prep`, `opt`, SatGen) is a partly independent second path, but it shares the frontend |"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "nathsou/HDLean",
+      "path": "scripts/check_backends.py",
+      "line": 109,
+      "text": "    script = (f'read_verilog -sv {paths[\"sv\"].name}; proc; write_json {name}_sv.json; '"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "nathsou/HDLean",
+      "path": "scripts/check_backends.py",
+      "line": 111,
+      "text": "              f'read_rtlil {paths[\"rtlil\"].name}; write_json {name}_il.json; '"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "nathsou/HDLean",
+      "path": "scripts/check_backends.py",
+      "line": 127,
+      "text": "            q = parsed['netnames']['state']['bits'][k:k+1]"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "nathsou/HDLean",
+      "path": "scripts/check_backends.py",
+      "line": 144,
+      "text": "        mutant_script = mutant_script.replace(f'write_json {name}_il.json', f'write_json {name}_mutant_il.json')"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "runners/runtime_artifacts.py",
+      "line": 45,
+      "text": "def write_json(path: Path, payload: dict[str, Any]) -> None:"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "runners/runtime_artifacts.py",
+      "line": 126,
+      "text": "    write_json(snapshot_dir / \"manifest.json\", manifest)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "rtl-synthesis/runners/blueprint.py",
+      "line": 52,
+      "text": "    script.extend((\"opt\", f\"write_json {json_path}\"))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "rtl/runners/blueprint.py",
+      "line": 50,
+      "text": "    script.extend((\"opt\", f\"write_json {json_path}\"))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/src/artifacts.py",
+      "line": 75,
+      "text": "def write_json(path: Path, payload: dict[str, Any]) -> None:"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/src/train.py",
+      "line": 10,
+      "text": "    from .artifacts import default_run_dir, display_path, ensure_dir, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/src/train.py",
+      "line": 22,
+      "text": "    from artifacts import default_run_dir, display_path, ensure_dir, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/src/train.py",
+      "line": 423,
+      "text": "    write_json(run_dir / \"weights_float.json\", weights_float_payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/src/train.py",
+      "line": 439,
+      "text": "    write_json(run_dir / \"weights_float_selected.json\", weights_float_selected_payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/src/train.py",
+      "line": 454,
+      "text": "    write_json(run_dir / \"weights_quantized.json\", weights_quantized_payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/src/train.py",
+      "line": 492,
+      "text": "    write_json(run_dir / \"metrics.json\", metrics_payload)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/runners/main.py",
+      "line": 13,
+      "text": "from ann.src.artifacts import read_json, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "ann/runners/main.py",
+      "line": 102,
+      "text": "    write_json(out_path, quantized)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "smt/contract/common.py",
+      "line": 449,
+      "text": "def write_json(path: Path, payload: dict[str, object]) -> None:"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "smt/contract/overflow/check_bounds.py",
+      "line": 29,
+      "text": "        write_json,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "smt/contract/overflow/check_bounds.py",
+      "line": 50,
+      "text": "        write_json,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "smt/contract/overflow/check_bounds.py",
+      "line": 403,
+      "text": "    write_json(args.summary, summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "smt/contract/equivalence/check_equivalence.py",
+      "line": 27,
+      "text": "        write_json,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "smt/contract/equivalence/check_equivalence.py",
+      "line": 46,
+      "text": "        write_json,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "smt/contract/equivalence/check_equivalence.py",
+      "line": 323,
+      "text": "    write_json(args.summary, summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "contract/src/artifacts.py",
+      "line": 87,
+      "text": "def write_json(path: Path, payload: dict[str, Any]) -> None:"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "rtl-hls4ml/runners/blueprint.py",
+      "line": 51,
+      "text": "    script.extend((\"opt\", f\"write_json {json_path}\"))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "dfdgsdfg/ann-rtl-lean-poc",
+      "path": "rtl-formalize-synthesis/runners/blueprint.py",
+      "line": 51,
+      "text": "    script.extend((\"opt\", f\"write_json {json_path}\"))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/import_coverage.py",
+      "line": 68,
+      "text": "    parser.add_argument(\"--yosys-json\", type=pathlib.Path, required=True)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/import_coverage.py",
+      "line": 75,
+      "text": "    yosys_bytes = args.yosys_json.read_bytes()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/verilog_inventory.py",
+      "line": 99,
+      "text": "    for name, net in module.get(\"netnames\", {}).items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/verilog_inventory.py",
+      "line": 335,
+      "text": "            f\"write_json {elaborated}\","
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/verify_kianv_physical_handoff.py",
+      "line": 126,
+      "text": "            f\"write_json {safe_yosys_path(hierarchy_json)}\""
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 243,
+      "text": "        self.netnames = module.get(\"netnames\", {})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 259,
+      "text": "        for name, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 282,
+      "text": "        for _, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 290,
+      "text": "        names = [name for name, net in self.netnames.items()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 305,
+      "text": "        for name, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1194,
+      "text": "    parser.add_argument(\"--yosys-json\", type=pathlib.Path, required=True)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1204,
+      "text": "    yosys_bytes = args.yosys_json.read_bytes()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1223,
+      "text": "        \"name\": \"yosys-json\","
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1296,
+      "text": "            {\"role\": \"elaborated_yosys_json\", \"path\": args.yosys_json.resolve().as_posix(),"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/kianv_bottom_up_equivalence.py",
+      "line": 161,
+      "text": "    for name, net in raw_module.get(\"netnames\", {}).items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/loom",
+      "path": "scripts/kianv_bottom_up_equivalence.py",
+      "line": 176,
+      "text": "    for name, net in raw_module.get(\"netnames\", {}).items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "docs/HANDOFF-2026-10-16.md",
+      "line": 228,
+      "text": "| `scripts/yosys_hierarchy.py`\u3001`yosys_json.py`\u3001`yosys_expose.py` | \u68c0\u67e5\u70b9\u53ca\u5927\u89c4\u6a21\u5143\u6570\u636e/\u89c2\u5bdf\u8282\u70b9\u5904\u7406 |"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "docs/HANDOFF-2026-10-15.md",
+      "line": 109,
+      "text": "| `scripts/yosys_json.py`\u3001`yosys_expose.py`\u3001`sv_stdio.py` | \u5927 JSON \u5143\u6570\u636e\u3001\u6279\u91cf\u89c2\u5bdf\u8282\u70b9\u66b4\u9732\u3001\u6807\u51c6\u6d41\u6865\u63a5 |"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "docs/script-catalog.md",
+      "line": 66,
+      "text": "- [`verify_yosys_json.py`](../scripts/verification/two_state/verify_yosys_json.py)\uff1aCompare streaming netlist edits with the existing checked JSON artifacts."
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "docs/script-catalog.md",
+      "line": 229,
+      "text": "- [`yosys_json.py`](../scripts/yosys_json.py)\uff1aStream official Yosys JSON while retaining the exact netlist and bit IDs."
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/fourstate2lean.py",
+      "line": 84,
+      "text": "        'check -assert; write_json backend/normalized.json; '"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys_hierarchy.py",
+      "line": 49,
+      "text": "            'exposure_pipeline': exposure + '; check -assert; write_json; write_functional_smt2'}"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys_expose.py",
+      "line": 16,
+      "text": "        'write_json /work/named.json',"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys_effects.py",
+      "line": 31,
+      "text": "            if output in module['ports'] or output in module['netnames']:"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys_effects.py",
+      "line": 34,
+      "text": "            module['netnames'][output] = {'hide_name': 0, 'bits': bits, 'attributes': {'src': source}}"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/functional_ir.py",
+      "line": 102,
+      "text": "    for wire in module[\"netnames\"].values():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/functional_ir.py",
+      "line": 124,
+      "text": "            'netnames': {name: {'bits': wire['bits'], 'attributes': {'init': wire['attributes']['init']}}"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/functional_ir.py",
+      "line": 125,
+      "text": "                         for name, wire in module['netnames'].items() if 'init' in wire['attributes']}}"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/functional_ir.py",
+      "line": 133,
+      "text": "        if name in module['ports'] or name in module['netnames']:"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/functional_ir.py",
+      "line": 137,
+      "text": "        module['netnames'][name] = {'hide_name': 0, 'bits': bits, 'attributes': cell['attributes']}"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys_json.py",
+      "line": 61,
+      "text": "        for name, wire in backend.kvitems(stream, 'modules.' + top + '.netnames'):"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys_json.py",
+      "line": 64,
+      "text": "    module = {'ports': interface, 'cells': selected, 'netnames': wires}"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys_json.py",
+      "line": 119,
+      "text": "                if path == ('modules', top, 'netnames'):"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/fourstate_machine_replay.py",
+      "line": 93,
+      "text": "            top=selection['top'];module={'cells':{},'netnames':{}}"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/fourstate_machine_replay.py",
+      "line": 94,
+      "text": "            for section in ('cells','netnames'):"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/fourstate_machine_replay.py",
+      "line": 129,
+      "text": "                   netnames={s[k] for s in mapping['states'] if 'memory' not in s for k in ('bank_tag','bank_value')})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/fourstate_machine_replay.py",
+      "line": 131,
+      "text": "    artifact.update(read_mode='streamed-selected-replay-fields',selection_counts={k:len(lowered['modules'][mapping['encoded_top']][k]) for k in ('cells','netnames')})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/fourstate_machine_replay.py",
+      "line": 149,
+      "text": "                candidates=captured.get(tuple(module['netnames'][name]['bits']),[])"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 26,
+      "text": "from yosys_json import audit as stream_audit, expose as stream_expose"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 70,
+      "text": "    'json_bridge_sha256': 'yosys_json.py', 'json_reader_bootstrap_sha256': 'bootstrap_json_stream.py',"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 215,
+      "text": "    first=f'{frontend} {source_args} --top {top}; hierarchy -check -top {top}; proc -noopt; flatten {top}; hierarchy -check -top {top}; opt_clean; memory_collect; write_json /work/before.json'"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 263,
+      "text": "        first = f'read_rtlil /work/hierarchy.il; hierarchy -check -top {top}; flatten {top}; hierarchy -check -top {top}; opt_clean; memory_collect; write_json /work/before.json'"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 265,
+      "text": "        first = first.replace('opt_clean; memory_collect; write_json /work/before.json',"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 266,
+      "text": "                              observation_plan(top, observations) + '; opt_clean; memory_collect; write_json /work/before.json')"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 268,
+      "text": "        first = first.replace('write_json /work/before.json', 'write_rtlil /work/before.il; write_json /work/before.json')"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 293,
+      "text": "            from yosys_json import ports"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 310,
+      "text": "    second='read_json /work/before.json; clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq; write_json /work/unconstrained.json'"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 319,
+      "text": "        second = second.replace('write_json /work/unconstrained.json', 'write_rtlil /work/unconstrained.il; write_json /work/unconstrained.json')"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 341,
+      "text": "    final=f'read_json /work/exposed.json; check -assert; write_json /work/lowered.json; select {top}; write_functional_smt2 /work/functional.smt2'"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/yosys2lean.py",
+      "line": 344,
+      "text": "                 'write_json /work/lowered.json; write_functional_smt2 /work/functional.smt2')"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "tests/test_fourstate_json_stream.py",
+      "line": 87,
+      "text": "        obj={'modules':{'T':{'ports':{},'cells':{'keep':{'type':'$ff','connections':{'D':[1,2],'Q':[3,4]}},'drop':{'type':'$not'}},'netnames':{'bank':{'bits':[1,2]},'drop':{'bits':[3,4]}}}}}"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "tests/test_fourstate_json_stream.py",
+      "line": 94,
+      "text": "            selected,receipt=lowered_json(model,manifest,dict(reader=self.reader,top='T',cells={'keep'},netnames={'bank'}))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "tests/test_fourstate_json_stream.py",
+      "line": 95,
+      "text": "            self.assertEqual(selected,{'modules':{'T':{'cells':{'keep':old['modules']['T']['cells']['keep']},'netnames':{'bank':old['modules']['T']['netnames']['bank']}}}})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "tests/test_fourstate_json_stream.py",
+      "line": 99,
+      "text": "                lowered_json(model,manifest,dict(reader=self.reader,top='T',cells={'keep'},netnames={'bank'}))"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "tests/test_yosys_observations.py",
+      "line": 47,
+      "text": "                            + f'; opt_clean; write_json {output.as_posix()}')"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_yosys_json.py",
+      "line": 26,
+      "text": "from yosys_json import audit, expose"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_saturating_example.py",
+      "line": 48,
+      "text": "def write_json(path: Path, value):"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_saturating_example.py",
+      "line": 110,
+      "text": "    write_json(evidence / \"expected.json\", expected)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_saturating_example.py",
+      "line": 132,
+      "text": "                write_json(evidence / \"mismatch.json\", mismatch)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_saturating_example.py",
+      "line": 154,
+      "text": "    write_json(evidence / \"summary.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_saturating_example.py",
+      "line": 188,
+      "text": "        write_json(evidence / \"summary.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_saturating_example.py",
+      "line": 208,
+      "text": "    write_json(evidence / \"summary.json\", summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_saturating_example.py",
+      "line": 247,
+      "text": "        write_json(evidence / \"summary.json\", summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_saturating_example.py",
+      "line": 253,
+      "text": "        write_json(evidence / \"summary.json\", summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_config.py",
+      "line": 33,
+      "text": "from verify_xiangshan_right_shift import make_trace, run_lean_trace, compare, write_json"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_config.py",
+      "line": 76,
+      "text": "        write_json(folder / \"trace.json\", trace)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_config.py",
+      "line": 84,
+      "text": "        write_json(folder / \"summary.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_config.py",
+      "line": 115,
+      "text": "        write_json(folder / \"summary.json\", {\"status\": \"PASS\", \"wrong_XLEN_mapping_detected\": True})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_config.py",
+      "line": 122,
+      "text": "    write_json(args.evidence / \"summary.json\", summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_config.py",
+      "line": 123,
+      "text": "    write_json(ROOT / \"docs/validation-xiangshan-config-7.3.json\", summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_whole.py",
+      "line": 34,
+      "text": "from yosys_json import ports"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 46,
+      "text": "def write_json(path, value):"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 181,
+      "text": "    write_json(evidence / \"trace.json\", trace)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 182,
+      "text": "    write_json(evidence / \"request.json\", {\"parameters\": parameters,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 196,
+      "text": "    write_json(evidence / \"result.json\", records)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 213,
+      "text": "                write_json(evidence / \"mismatch.json\", mismatch)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 232,
+      "text": "    write_json(evidence / \"trace.json\", trace)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 239,
+      "text": "    write_json(evidence / \"summary.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 268,
+      "text": "        write_json(evidence / \"summary.json\", result)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 283,
+      "text": "    write_json(evidence / \"summary.json\", proof)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 315,
+      "text": "        write_json(descriptor, {\"module\": REFERENCE_MODULE,"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 331,
+      "text": "        write_json(evidence / \"summary.json\", summary)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "scripts/verification/two_state/verify_xiangshan_right_shift.py",
+      "line": 336,
+      "text": "        write_json(evidence / \"summary.json\", {\"status\": \"FAIL\", \"cases\": results, \"error\": str(error)})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/import_coverage.py",
+      "line": 68,
+      "text": "    parser.add_argument(\"--yosys-json\", type=pathlib.Path, required=True)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/import_coverage.py",
+      "line": 75,
+      "text": "    yosys_bytes = args.yosys_json.read_bytes()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/verilog_inventory.py",
+      "line": 99,
+      "text": "    for name, net in module.get(\"netnames\", {}).items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/verilog_inventory.py",
+      "line": 335,
+      "text": "            f\"write_json {elaborated}\","
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/verify_kianv_physical_handoff.py",
+      "line": 126,
+      "text": "            f\"write_json {safe_yosys_path(hierarchy_json)}\""
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 243,
+      "text": "        self.netnames = module.get(\"netnames\", {})"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 259,
+      "text": "        for name, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 282,
+      "text": "        for _, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 290,
+      "text": "        names = [name for name, net in self.netnames.items()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 305,
+      "text": "        for name, net in self.netnames.items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1194,
+      "text": "    parser.add_argument(\"--yosys-json\", type=pathlib.Path, required=True)"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1204,
+      "text": "    yosys_bytes = args.yosys_json.read_bytes()"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1223,
+      "text": "        \"name\": \"yosys-json\","
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/yosys_to_loom_ir.py",
+      "line": 1296,
+      "text": "            {\"role\": \"elaborated_yosys_json\", \"path\": args.yosys_json.resolve().as_posix(),"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/kianv_bottom_up_equivalence.py",
+      "line": 161,
+      "text": "    for name, net in raw_module.get(\"netnames\", {}).items():"
+    },
+    {
+      "format": "yosys_json",
+      "repo": "deepai-org/lean_hw",
+      "path": "scripts/kianv_bottom_up_equivalence.py",
+      "line": 176,
+      "text": "    for name, net in raw_module.get(\"netnames\", {}).items():"
+    }
+  ]
+}

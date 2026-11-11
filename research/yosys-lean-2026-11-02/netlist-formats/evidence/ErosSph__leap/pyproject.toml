@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leap-rtl"
+version = "0.1.0"
+description = "RTL-to-Lean translation and hypergraph-guided lemma discovery"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pyslang==11.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+leap-translate = "rtl2lean.pipeline.main:main"
+leap-check = "experiments.corpus_check:main"
+leap-benchmark = "experiments.benchmark:main"
+
+[tool.setuptools.packages.find]
+include = ["rtl2lean*", "experiments*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["legacy_artifacts: requires historical experiment output snapshots, not released"]

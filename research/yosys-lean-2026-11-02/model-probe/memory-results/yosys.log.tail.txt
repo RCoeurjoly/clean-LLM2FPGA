@@ -1,0 +1,60 @@
+  created $dff cell `$procdff$34' with positive edge clock.
+Creating register for signal `\model_memory.$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$1_DATA' using process `\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$2'.
+  created $dff cell `$procdff$35' with positive edge clock.
+Creating register for signal `\model_memory.$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$1_EN' using process `\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$2'.
+  created $dff cell `$procdff$36' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$2'.
+Removing empty process `model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$2'.
+Cleaned up 3 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module model_memory.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \model_memory..
+Removed 3 unused cells and 16 unused wires.
+<suppressed ~4 debug messages>
+
+7. Executing JSON backend.
+
+8. Executing CLK2FFLOGIC pass (convert clocked FFs to generic $ff cells).
+Modifying write port 0 on memory model_memory.mem: CLK=\clk, A=$0$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$1_ADDR[3:0]$3, D=$0$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$1_DATA[31:0]$4
+Replacing model_memory.$procdff$32 ($dff): CLK=\clk, D=$0\read_data[31:0], Q=\read_data
+Replacing model_memory.$procdff$33 ($dff): CLK=\clk, D=$0\done[0:0], Q=\done
+
+9. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \model_memory..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+11. Executing SETUNDEF pass (replace undef values with defined constants).
+
+12. Executing CHECK pass (checking for obvious problems).
+Checking module model_memory...
+Found and reported 0 problems.
+
+13. Executing JSON backend.
+
+-- Executing script file `research/yosys-lean-2026-11-02/model-probe/memory-results/functional-export.ys' --
+
+1. Executing JSON frontend.
+Importing module model_memory from JSON tree.
+
+2. Executing CHECK pass (checking for obvious problems).
+Checking module model_memory...
+Found and reported 0 problems.
+
+3. Executing JSON backend.
+
+4. Executing Functional SMT Backend.
+Processing module `\model_memory`.

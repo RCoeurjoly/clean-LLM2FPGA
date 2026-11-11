@@ -1,0 +1,31 @@
+{
+  "stage": "scalar-trace-compile",
+  "command": [
+    "/nix/store/smablxy777s8dd47vcm36qzhl1npjw7m-iverilog-12.0/bin/iverilog",
+    "-g2012",
+    "-s",
+    "tb",
+    "-o",
+    "/tmp/llm2fpga-full-hardware-20261102/scalar-sim",
+    "research/yosys-lean-2026-11-02/full-hardware-run/scalar-tb.sv",
+    "research/yosys-lean-2026-11-02/full-hardware-run/scalar-reproducer.sv",
+    "result-model-rtl/memory.sv",
+    "/tmp/llm2fpga-full-hardware-20261102/scalar-lowered.sv"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:00:29.016549+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 0.016630615005851723,
+  "finished_at": "2026-11-02T00:00:29.033332+00:00"
+}

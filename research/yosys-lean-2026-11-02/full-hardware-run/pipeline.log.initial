@@ -1,0 +1,2 @@
+{"stage": "01-generic-json", "status": "completed", "elapsed_seconds": 38.15176855800382, "returncode": 0}
+{"stage": "01-preflight", "status": "failed", "elapsed_seconds": 211.85140632399998, "returncode": 1}

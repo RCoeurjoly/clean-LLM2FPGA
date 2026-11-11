@@ -1,0 +1,40 @@
+{
+  "capture_constraints": [],
+  "format": "torchlean.ir.v2",
+  "frontend": "pytorch",
+  "input_ids": [
+    0
+  ],
+  "nodes": [
+    {
+      "debug_target": "x",
+      "dtype": "float32",
+      "id": 0,
+      "kind": "input",
+      "parents": [],
+      "shape": [
+        1,
+        4
+      ],
+      "value_kind": "tensor"
+    },
+    {
+      "debug_target": "aten.add.Tensor",
+      "dtype": "float32",
+      "id": 1,
+      "kind": "add",
+      "parents": [
+        0,
+        0
+      ],
+      "shape": [
+        1,
+        4
+      ],
+      "value_kind": "tensor"
+    }
+  ],
+  "output_ids": [
+    1
+  ]
+}

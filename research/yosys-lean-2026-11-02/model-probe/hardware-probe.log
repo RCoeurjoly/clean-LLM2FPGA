@@ -1,0 +1,37 @@
+{
+  "yosys": "/nix/store/vjqba2jj3231f14vhspj2mvs1k1z4mm4-llm2fpga-yosys-sdp72-parity/bin/yosys",
+  "yosys_version": "Yosys 0.62 (git sha1 v0.62, g++ 15.2.0 -fPIC -O3)",
+  "source_inputs": [
+    {
+      "path": "/nix/store/wnaqq1fv97r2dgck3nc9j8x03a4r7bw8-tinystories-core-rtl/core.sv",
+      "bytes": 41783062,
+      "sha256": "c7c641d07de33febf7ed223fcc7e9755c0b698da77cea4204363ce9d80049ca1"
+    },
+    {
+      "path": "/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/model.sv",
+      "bytes": 705897,
+      "sha256": "1b477f3dfe75e578b777dbfddf32446d15dee8f03953056d313d5daeffa05727"
+    },
+    {
+      "path": "/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv",
+      "bytes": 565,
+      "sha256": "2a20ec2870a3ced4018e4dbd05f092a9bb2493a0bf21cea9fd217bf8a1b73121"
+    }
+  ],
+  "importer_commit": "a1299b564831e571b9b80f816219ae06c91db342",
+  "clock_contract": "Explicit global sampling after clk2fflogic; two-state completion",
+  "limits": {
+    "address_space_gib": 6,
+    "cpu_seconds": 180,
+    "wall_seconds": 210
+  },
+  "lean_compiler_run": false,
+  "equivalence_proved": false,
+  "stages": {
+    "export": {
+      "returncode": -6,
+      "status": "failed",
+      "seconds": 79.98551173400483
+    }
+  }
+}

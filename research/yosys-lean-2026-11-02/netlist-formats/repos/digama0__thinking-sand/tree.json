@@ -1,0 +1,2988 @@
+{
+  "sha": "5a24f5ea179ff5fbca24e01659f78a6330b846b1",
+  "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/5a24f5ea179ff5fbca24e01659f78a6330b846b1",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ed1e0df53581603dc1c24c19adb4c1670ca13d1",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/2ed1e0df53581603dc1c24c19adb4c1670ca13d1"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0fc08b6769177ad1cf6b03771d556a53c137a40b",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/0fc08b6769177ad1cf6b03771d556a53c137a40b"
+    },
+    {
+      "path": ".github/workflows/book.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b416b32fd4b643e275a2f9ab2389ac33b75911fd",
+      "size": 1627,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b416b32fd4b643e275a2f9ab2389ac33b75911fd"
+    },
+    {
+      "path": ".github/workflows/lean.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dbb65b9cdb60a3f2c4af7f0f03900aab7e75f40",
+      "size": 1649,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/6dbb65b9cdb60a3f2c4af7f0f03900aab7e75f40"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9cdec86e7e0414828f468774782bc41335c73ad",
+      "size": 594,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/e9cdec86e7e0414828f468774782bc41335c73ad"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67da68aed408f4334cc963073505fe000e52e4a2",
+      "size": 17543,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/67da68aed408f4334cc963073505fe000e52e4a2"
+    },
+    {
+      "path": "book.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cacb6ee64d8e0ad06f67c98d5e21f8af0d03570b",
+      "size": 712,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/cacb6ee64d8e0ad06f67c98d5e21f8af0d03570b"
+    },
+    {
+      "path": "flow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c59312f8c1784bb5ae85377600f9e6a195626587",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/c59312f8c1784bb5ae85377600f9e6a195626587"
+    },
+    {
+      "path": "flow/caravel_core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfc8e63f26d0a5401a9634c2c76f472a13a42845",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/bfc8e63f26d0a5401a9634c2c76f472a13a42845"
+    },
+    {
+      "path": "flow/caravel_core/NOTES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb93c23ba81f3bd743752770d684d7db1be17a6a",
+      "size": 2674,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/eb93c23ba81f3bd743752770d684d7db1be17a6a"
+    },
+    {
+      "path": "flow/caravel_core/base.sdc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11e3bfe2737a9a5fad716aa3260f0b354f58756d",
+      "size": 1827,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/11e3bfe2737a9a5fad716aa3260f0b354f58756d"
+    },
+    {
+      "path": "flow/caravel_core/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a39cc0527949a6c903f532bb38787c11b74fd82",
+      "size": 2008,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1a39cc0527949a6c903f532bb38787c11b74fd82"
+    },
+    {
+      "path": "flow/caravel_core/lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9c9aa2ce913fbe24dee63c742a5e22a5086897f",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/f9c9aa2ce913fbe24dee63c742a5e22a5086897f"
+    },
+    {
+      "path": "flow/caravel_core/lib/RAM128.nom.lib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67256528a1854ba0d283a7c1691171706c85bdeb",
+      "size": 1042573,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/67256528a1854ba0d283a7c1691171706c85bdeb"
+    },
+    {
+      "path": "flow/caravel_core/lib/caravel_clocking.lib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90c2f9f0a756fef6660b8cf05c3f7eb7c563274a",
+      "size": 18259,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/90c2f9f0a756fef6660b8cf05c3f7eb7c563274a"
+    },
+    {
+      "path": "flow/caravel_core/lib/gpio_defaults_block.lib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28a124d000f865cb92b59c6d36f2af18bb10ea1a",
+      "size": 2510,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/28a124d000f865cb92b59c6d36f2af18bb10ea1a"
+    },
+    {
+      "path": "flow/caravel_core/lib/gpio_logic_high.lib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c31f4d6362cb854f44dd8f76b49446978b0850f",
+      "size": 1167,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4c31f4d6362cb854f44dd8f76b49446978b0850f"
+    },
+    {
+      "path": "flow/caravel_core/lib/housekeeping.lib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e9c11a0e5dbfeb46750f45bb8a534d106a621ac",
+      "size": 341399,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9e9c11a0e5dbfeb46750f45bb8a534d106a621ac"
+    },
+    {
+      "path": "flow/caravel_core/lib/mprj_io_buffer.lib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fec19cb10e49d0c8471c626369ad83e001f468ef",
+      "size": 47829,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/fec19cb10e49d0c8471c626369ad83e001f468ef"
+    },
+    {
+      "path": "flow/caravel_core/lib/spare_logic_block.lib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d967b6fd3431dfa09a0fa21c2c0658ce3154d5bc",
+      "size": 6325,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d967b6fd3431dfa09a0fa21c2c0658ce3154d5bc"
+    },
+    {
+      "path": "flow/caravel_core/lib/user_project_wrapper.lib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba27b2e8dcefa499da8b61566eee59e2755f3eb7",
+      "size": 1962553,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ba27b2e8dcefa499da8b61566eee59e2755f3eb7"
+    },
+    {
+      "path": "flow/rocket-hammer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7a5edc44a1a257afeba5b2ef503a762413170fb",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/e7a5edc44a1a257afeba5b2ef503a762413170fb"
+    },
+    {
+      "path": "flow/rocket-hammer/NOTES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "682e56ec546983259a96dd8f821b13a4472d3cf8",
+      "size": 5930,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/682e56ec546983259a96dd8f821b13a4472d3cf8"
+    },
+    {
+      "path": "flow/rocket-hammer/hammer-1.2.0-compat.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4105d7d489875fff42c43eac0d0b34f9fc8ccc67",
+      "size": 15154,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4105d7d489875fff42c43eac0d0b34f9fc8ccc67"
+    },
+    {
+      "path": "flow/rocket-sram22",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0951e913f960f85e12b9878afcc4c3acc258b597",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/0951e913f960f85e12b9878afcc4c3acc258b597"
+    },
+    {
+      "path": "flow/rocket-sram22/COSIM-NOTES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f2edfec5d2cf6ab5ea0f7425eda2b47ae67613f",
+      "size": 3957,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2f2edfec5d2cf6ab5ea0f7425eda2b47ae67613f"
+    },
+    {
+      "path": "flow/rocket-sram22/CosimConfigs.scala",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc06cdd64828ff4dcc2c26266477754d1acadbc5",
+      "size": 560,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/fc06cdd64828ff4dcc2c26266477754d1acadbc5"
+    },
+    {
+      "path": "flow/rocket-sram22/NOTES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf1fd7550e893d0d8cff29ec615d279192badf01",
+      "size": 3833,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/cf1fd7550e893d0d8cff29ec615d279192badf01"
+    },
+    {
+      "path": "flow/rocket-sram22/cec",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75afc056eb54a1557a2ffa6cf2ec3d6cb004cd59",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/75afc056eb54a1557a2ffa6cf2ec3d6cb004cd59"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/CEC-NOTES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a90c49ef13b2a8cdf9f9737f02f1560010653dc1",
+      "size": 6028,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a90c49ef13b2a8cdf9f9737f02f1560010653dc1"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/DC-CERT-NOTES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5a58cca480fb97444175f55b8e496bcbbc17723",
+      "size": 6552,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b5a58cca480fb97444175f55b8e496bcbbc17723"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/abc-mfs-dclog.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "683e940b07665e7dcc311c8e1dc0b1772fe213a9",
+      "size": 4370,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/683e940b07665e7dcc311c8e1dc0b1772fe213a9"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/abc-mfs-dclog.rev",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "880468fd14c8ad31a6c96d6eaa71de0c47d44ad4",
+      "size": 41,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/880468fd14c8ad31a6c96d6eaa71de0c47d44ad4"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/dc-check.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "46e00ce0c1ec63437b563e53b861c512ca7d7376",
+      "size": 3064,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/46e00ce0c1ec63437b563e53b861c512ca7d7376"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/dc-fullchip.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9fdd35bb24034b7314c5b78b6233a499f0b94f2e",
+      "size": 2516,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9fdd35bb24034b7314c5b78b6233a499f0b94f2e"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/dc-instrument.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8b84430f3b908db9d8c9f02ac4e7459c822974d1",
+      "size": 4132,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8b84430f3b908db9d8c9f02ac4e7459c822974d1"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/dc-log.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "806682e493116185bb55109fb3cba66c7a6d33b7",
+      "size": 2946,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/806682e493116185bb55109fb3cba66c7a6d33b7"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/fullchip-equiv.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4bc62a17717d2a1f87553a75099e0934f27c8e67",
+      "size": 3462,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4bc62a17717d2a1f87553a75099e0934f27c8e67"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/run-cec.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "199666196d7f57964c8315f1f5357e8f39487ca4",
+      "size": 4057,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/199666196d7f57964c8315f1f5357e8f39487ca4"
+    },
+    {
+      "path": "flow/rocket-sram22/cec/trail-cec.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "de123feb9ec8e1a1472c2a4e439b0a271ce95300",
+      "size": 4871,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/de123feb9ec8e1a1472c2a4e439b0a271ce95300"
+    },
+    {
+      "path": "flow/rocket-sram22/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbe00376664c548a57587ca79c1d8dd69012ce6d",
+      "size": 4130,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/dbe00376664c548a57587ca79c1d8dd69012ce6d"
+    },
+    {
+      "path": "flow/rocket-sram22/cospike-rv32.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eba7ad00c67526a4c6b12dfc5044b517d72bf047",
+      "size": 5623,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/eba7ad00c67526a4c6b12dfc5044b517d72bf047"
+    },
+    {
+      "path": "flow/rocket-sram22/sim",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73edcc144f3190536a971346078d1d7aad618716",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/73edcc144f3190536a971346078d1d7aad618716"
+    },
+    {
+      "path": "flow/rocket-sram22/sim/cotest.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b1922f26ca94c289ced2a54276485e06c25adff",
+      "size": 1282,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8b1922f26ca94c289ced2a54276485e06c25adff"
+    },
+    {
+      "path": "flow/rocket-sram22/sim/cotest.riscv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "14cbfd4c1fd47905d22d7006711b47f67dbf889a",
+      "size": 5396,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/14cbfd4c1fd47905d22d7006711b47f67dbf889a"
+    },
+    {
+      "path": "flow/rocket-sram22/sim/crt0.S",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "621e70a753ce4204cf9774cd16c4874bd67e0c17",
+      "size": 83,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/621e70a753ce4204cf9774cd16c4874bd67e0c17"
+    },
+    {
+      "path": "flow/rocket-sram22/sim/hello.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f118791bab01748f7873d4438e2fc92657ff5ec",
+      "size": 990,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0f118791bab01748f7873d4438e2fc92657ff5ec"
+    },
+    {
+      "path": "flow/rocket-sram22/sim/hello.riscv",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4542efc604981389d750c6ab9729dbc07bbc8ab8",
+      "size": 5348,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4542efc604981389d750c6ab9729dbc07bbc8ab8"
+    },
+    {
+      "path": "flow/rocket-sram22/sim/link.ld",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc16fd462aedba91994b0fc7c9eb05001d4d7c54",
+      "size": 277,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/cc16fd462aedba91994b0fc7c9eb05001d4d7c54"
+    },
+    {
+      "path": "flow/rocket-sram22/sky130A_mr_tiled.drc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c39d2648fdc3183700e8990c3c2166876e450324",
+      "size": 53191,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/c39d2648fdc3183700e8990c3c2166876e450324"
+    },
+    {
+      "path": "flow/rocket-tiny",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "644464d7cdeec2451b5928370b005df42fba99a2",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/644464d7cdeec2451b5928370b005df42fba99a2"
+    },
+    {
+      "path": "flow/rocket-tiny/NOTES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff04f87ceb0662906752d1238ce0f00f82bba1c2",
+      "size": 6804,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ff04f87ceb0662906752d1238ce0f00f82bba1c2"
+    },
+    {
+      "path": "flow/rocket-tiny/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff790aaffdefc0a60410b7268fa07194d11d0f86",
+      "size": 20504,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ff790aaffdefc0a60410b7268fa07194d11d0f86"
+    },
+    {
+      "path": "flow/rocket-tiny/srams",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "faaa7bba06a6ceb7427a8af6d6db966c433a0fe9",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/faaa7bba06a6ceb7427a8af6d6db966c433a0fe9"
+    },
+    {
+      "path": "flow/rocket-tiny/srams/rocket_srams.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ab22ca0a9c5ab7bb1f648f95570c5480ca123b4",
+      "size": 3855,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1ab22ca0a9c5ab7bb1f648f95570c5480ca123b4"
+    },
+    {
+      "path": "flow/vexriscv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b631a5a9d4abf8d79438f29708b6d8846928623",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/7b631a5a9d4abf8d79438f29708b6d8846928623"
+    },
+    {
+      "path": "flow/vexriscv/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18c8edc6e3d8a090024a5d5b96826a728ec6aa67",
+      "size": 361,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/18c8edc6e3d8a090024a5d5b96826a728ec6aa67"
+    },
+    {
+      "path": "lean",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b483414e6f80ef980457a9e0e6959f8e5386aba",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/3b483414e6f80ef980457a9e0e6959f8e5386aba"
+    },
+    {
+      "path": "lean/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4080d07dfc31f2b8ff0a971431e329a34ae3674c",
+      "size": 8,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4080d07dfc31f2b8ff0a971431e329a34ae3674c"
+    },
+    {
+      "path": "lean/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "437c08e95825ee60e3bee1663303a756c52b560f",
+      "size": 8478,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/437c08e95825ee60e3bee1663303a756c52b560f"
+    },
+    {
+      "path": "lean/ThinkingSand.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e1c2da605eaa33d399838f54395e456789728f9",
+      "size": 224,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0e1c2da605eaa33d399838f54395e456789728f9"
+    },
+    {
+      "path": "lean/ThinkingSand",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc4d80fb8f1bf75d5fe267c3ade4b0be19e06fd5",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/dc4d80fb8f1bf75d5fe267c3ade4b0be19e06fd5"
+    },
+    {
+      "path": "lean/ThinkingSand/EndToEnd.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28706f8d711cd7b85b7db21297daec669860eb18",
+      "size": 3477,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/28706f8d711cd7b85b7db21297daec669860eb18"
+    },
+    {
+      "path": "lean/ThinkingSand/Examples.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74d1b8484404e76a2a71beabb57a6a44e378bf0e",
+      "size": 34,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/74d1b8484404e76a2a71beabb57a6a44e378bf0e"
+    },
+    {
+      "path": "lean/ThinkingSand/Examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4869d589210d4e6a1d1625799a8e696ac28ff7a2",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/4869d589210d4e6a1d1625799a8e696ac28ff7a2"
+    },
+    {
+      "path": "lean/ThinkingSand/Examples/Tiny.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5ec2cb76ad9b0029f6b4f6f6e943e97b4c36322",
+      "size": 3175,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d5ec2cb76ad9b0029f6b4f6f6e943e97b4c36322"
+    },
+    {
+      "path": "lean/ThinkingSand/L0.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90fe9126ffb17673f2ea65fde63bcb8f68f2bd0d",
+      "size": 422,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/90fe9126ffb17673f2ea65fde63bcb8f68f2bd0d"
+    },
+    {
+      "path": "lean/ThinkingSand/L0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a22bb68b9298fdf92971ebcbc63b0272e4570212",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/a22bb68b9298fdf92971ebcbc63b0272e4570212"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CapacitanceEnclosures.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f779ebd04fc2dd66bc63e183209bc52949c7692b",
+      "size": 51,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f779ebd04fc2dd66bc63e183209bc52949c7692b"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CapacitanceEnclosures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e943a57f27fe47bd63e4265d78e0b7251dd2f9c5",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/e943a57f27fe47bd63e4265d78e0b7251dd2f9c5"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CapacitanceEnclosures/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88e8ff54c590b060b0ad53952530dadab3a6c64b",
+      "size": 774,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/88e8ff54c590b060b0ad53952530dadab3a6c64b"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CellEnclosures.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46c88bfaf6bbea10bcc013ba855fbe2013fd4d08",
+      "size": 94,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/46c88bfaf6bbea10bcc013ba855fbe2013fd4d08"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CellEnclosures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "85c420084c4946ec88007eac601cf6aedd35d5f0",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/85c420084c4946ec88007eac601cf6aedd35d5f0"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CellEnclosures/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb4d9ef02f5faa56abd7c4373d98cd5efc8f34bb",
+      "size": 1855,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/bb4d9ef02f5faa56abd7c4373d98cd5efc8f34bb"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CellEnclosures/GateProblem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdea0d0873b176fd8820ff9b3f536862a5f33646",
+      "size": 6075,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/cdea0d0873b176fd8820ff9b3f536862a5f33646"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CutDiscipline.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07f9b18e2dca9f49fa31e1ee835e6781ae7d5cfd",
+      "size": 43,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/07f9b18e2dca9f49fa31e1ee835e6781ae7d5cfd"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CutDiscipline",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d50e2fcfa3410cc2132a98231af9f70ccb6c6a0",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/5d50e2fcfa3410cc2132a98231af9f70ccb6c6a0"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/CutDiscipline/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bad662af60b7dcfd0e580f5fa7b0ab61cbfedc0",
+      "size": 385,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4bad662af60b7dcfd0e580f5fa7b0ab61cbfedc0"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/DeviceModels.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92d5f2079a963861ee47101e9cdbdc4fd8f000cc",
+      "size": 42,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/92d5f2079a963861ee47101e9cdbdc4fd8f000cc"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/DeviceModels",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "51f92d2f2c08274c7176841c7150806ec5962290",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/51f92d2f2c08274c7176841c7150806ec5962290"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/DeviceModels/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "765bda65ba8e14fa580335ea6cba6e1d8ade3efc",
+      "size": 1244,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/765bda65ba8e14fa580335ea6cba6e1d8ade3efc"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/ErrorModel.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c35ec797f34547c3f9ea3cc83964c97ebb8c841b",
+      "size": 40,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/c35ec797f34547c3f9ea3cc83964c97ebb8c841b"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/ErrorModel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c32357aeded7e653e6a3a5d65ee0368750494e3",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/8c32357aeded7e653e6a3a5d65ee0368750494e3"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/ErrorModel/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea6dfcdd627215ba59e893d56d8e8fa303bee2ba",
+      "size": 376,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ea6dfcdd627215ba59e893d56d8e8fa303bee2ba"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/FieldProblem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53fdfa36e5d5cea6c0e67517d36b0c8cae0f8e95",
+      "size": 42,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/53fdfa36e5d5cea6c0e67517d36b0c8cae0f8e95"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/FieldProblem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3b12e2dc0e902c9fbda6e44122bd35939715fb2",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/d3b12e2dc0e902c9fbda6e44122bd35939715fb2"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/FieldProblem/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7687d87ab9a95d40d4397bb63a5cf98337d412a",
+      "size": 382,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d7687d87ab9a95d40d4397bb63a5cf98337d412a"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/LumpingComposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd4fb88f710ddd1c6f556dff9a823ef316c942bd",
+      "size": 48,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/dd4fb88f710ddd1c6f556dff9a823ef316c942bd"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/LumpingComposition",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e13ce4bf2a8d3900bcce566f90b5b9fee9b83093",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/e13ce4bf2a8d3900bcce566f90b5b9fee9b83093"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/LumpingComposition/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "838590e9c0b12cea0cd09ef27d59f0d1fef9d12f",
+      "size": 400,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/838590e9c0b12cea0cd09ef27d59f0d1fef9d12f"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/OperatingEnvelope.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "877828232976050166e07674c7f6fbe196d87988",
+      "size": 47,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/877828232976050166e07674c7f6fbe196d87988"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/OperatingEnvelope",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d959b55e08cc4120c6058c0010aacc469375fae3",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/d959b55e08cc4120c6058c0010aacc469375fae3"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/OperatingEnvelope/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0640a60642d592002739418e6cfb2a71d4b65765",
+      "size": 1922,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0640a60642d592002739418e6cfb2a71d4b65765"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/QuantumFloor.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66bbeefdf629a7e1ca5bd03bce7521a6ffbecf6a",
+      "size": 42,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/66bbeefdf629a7e1ca5bd03bce7521a6ffbecf6a"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/QuantumFloor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c13b23b5c49f0ee8f47176809f817d8888c76272",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/c13b23b5c49f0ee8f47176809f817d8888c76272"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/QuantumFloor/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ee3baf90bdce37f985124a269f2461adc76270f",
+      "size": 382,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9ee3baf90bdce37f985124a269f2461adc76270f"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/QuasistaticReduction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "012256286adc41b1814a13f9cb9a3a6275abb3ff",
+      "size": 50,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/012256286adc41b1814a13f9cb9a3a6275abb3ff"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/QuasistaticReduction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d21a3b895f335c948487c090976c7fac934507c7",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/d21a3b895f335c948487c090976c7fac934507c7"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/QuasistaticReduction/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0cf0dd8fc820188d1aa64383eacbe92ad200c4b",
+      "size": 406,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d0cf0dd8fc820188d1aa64383eacbe92ad200c4b"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/Screening.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ccb9a61c4f8d1df668a57f0caa870929e006d28",
+      "size": 39,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1ccb9a61c4f8d1df668a57f0caa870929e006d28"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/Screening",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9dd05eb102913e4860cc1b099ff24ba52467526f",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/9dd05eb102913e4860cc1b099ff24ba52467526f"
+    },
+    {
+      "path": "lean/ThinkingSand/L0/Screening/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "116693fe3a5c424f720826b30203bcbe039eed74",
+      "size": 704,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/116693fe3a5c424f720826b30203bcbe039eed74"
+    },
+    {
+      "path": "lean/ThinkingSand/L1.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4527ab9cad31873e57b35cf0603aa5d6c4318fae",
+      "size": 473,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4527ab9cad31873e57b35cf0603aa5d6c4318fae"
+    },
+    {
+      "path": "lean/ThinkingSand/L1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "adefbe8f8f97f6cfe974eb11cfce14cce37c7009",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/adefbe8f8f97f6cfe974eb11cfce14cce37c7009"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Boundaries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea065831c293d2d72b93193f59b7f0dbf54b2dc3",
+      "size": 40,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ea065831c293d2d72b93193f59b7f0dbf54b2dc3"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Boundaries",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5321946378970287609c40afa7ff2495eb2b0513",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/5321946378970287609c40afa7ff2495eb2b0513"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Boundaries/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dafef04b4fd2668d73e0a988513765ff806d21c",
+      "size": 377,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2dafef04b4fd2668d73e0a988513765ff806d21c"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/BridgeTheorem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "967b62b2521c3b5acc6535e8ec8e3609ea09aba0",
+      "size": 43,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/967b62b2521c3b5acc6535e8ec8e3609ea09aba0"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/BridgeTheorem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4fabdbd38f399a5a8832fa11ba85122db7f21601",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/4fabdbd38f399a5a8832fa11ba85122db7f21601"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/BridgeTheorem/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c595ea4c1adab34a6e0ece41a3881bc08a0c6ed3",
+      "size": 388,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/c595ea4c1adab34a6e0ece41a3881bc08a0c6ed3"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Clock.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6334594114f3d4cfbe0f5b4695bd678c0a57c9b1",
+      "size": 35,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/6334594114f3d4cfbe0f5b4695bd678c0a57c9b1"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Clock",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df80aabf0ea007e285f0f1462448edc10a075ceb",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/df80aabf0ea007e285f0f1462448edc10a075ceb"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Clock/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c30fe114a2c72bfa88767ee7083a1efdda7f3da",
+      "size": 691,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1c30fe114a2c72bfa88767ee7083a1efdda7f3da"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Corners.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "618b04ab9085e60497422e5f4d71375b27f40324",
+      "size": 37,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/618b04ab9085e60497422e5f4d71375b27f40324"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Corners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8cdb6153f2f9c65c6372919d3be28689de7f052",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/f8cdb6153f2f9c65c6372919d3be28689de7f052"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/Corners/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6049ce1e72314dec6dbbf46ef1a28fe71a0490ba",
+      "size": 673,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/6049ce1e72314dec6dbbf46ef1a28fe71a0490ba"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/CrosstalkPower.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f02debb78a20deeeee63423bddaebb160b9422f",
+      "size": 44,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/6f02debb78a20deeeee63423bddaebb160b9422f"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/CrosstalkPower",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "af820aef54954e18a0b8f3c0e662dfea7a99817f",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/af820aef54954e18a0b8f3c0e662dfea7a99817f"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/CrosstalkPower/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cbcf9f070320d55d39a28a726e4631817449507",
+      "size": 835,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8cbcf9f070320d55d39a28a726e4631817449507"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/DigitalAbstraction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a38de2e5dd53bb0e484a9b705630ebb1fd67f567",
+      "size": 48,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a38de2e5dd53bb0e484a9b705630ebb1fd67f567"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/DigitalAbstraction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29a6bf345908e4b4f50fab7b3dfe8ced7549005d",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/29a6bf345908e4b4f50fab7b3dfe8ced7549005d"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/DigitalAbstraction/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbbbb94d35aec66a289199fddd96aee786e4defe",
+      "size": 1694,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/cbbbb94d35aec66a289199fddd96aee786e4defe"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/ExtractionLvs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9bc012bf4be65794f84e74d3f427b628f89c0a6",
+      "size": 43,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a9bc012bf4be65794f84e74d3f427b628f89c0a6"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/ExtractionLvs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13e4fb50b8b763af3682f2decf7b0c0d1155086e",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/13e4fb50b8b763af3682f2decf7b0c0d1155086e"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/ExtractionLvs/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9bc3a2994145bbcda8e6e056610aa53090d5e6a",
+      "size": 804,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f9bc3a2994145bbcda8e6e056610aa53090d5e6a"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/GeometricChecks.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2feb027acd15e8bb94af087f1b61e7e37ed894bb",
+      "size": 45,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2feb027acd15e8bb94af087f1b61e7e37ed894bb"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/GeometricChecks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73dd04e01e4fbc625545be978f4994adc8cf1144",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/73dd04e01e4fbc625545be978f4994adc8cf1144"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/GeometricChecks/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82f8116de0dc8b0c9684974f49ee0f774ccd2c8f",
+      "size": 668,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/82f8116de0dc8b0c9684974f49ee0f774ccd2c8f"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/LayoutObject.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c0af3b934ef997b372e4703bdaae9b5768fdbe5",
+      "size": 42,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8c0af3b934ef997b372e4703bdaae9b5768fdbe5"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/LayoutObject",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c50553269612064233b9027e0216718fa7a8339",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/6c50553269612064233b9027e0216718fa7a8339"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/LayoutObject/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b56746f6edef45748fbc579051dbfb6b8e578536",
+      "size": 385,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b56746f6edef45748fbc579051dbfb6b8e578536"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/SdcExceptions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e15514e2d229474e9e68f54c0a5c04278a085a0",
+      "size": 43,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4e15514e2d229474e9e68f54c0a5c04278a085a0"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/SdcExceptions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58607a48b951df48c719009f7286eb04226c8bb8",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/58607a48b951df48c719009f7286eb04226c8bb8"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/SdcExceptions/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "551b0b7f6a6723e065233fa0db37aa205ab67011",
+      "size": 687,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/551b0b7f6a6723e065233fa0db37aa205ab67011"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/TimedModel.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "212be188b2003eada58c437e42786894580121f6",
+      "size": 40,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/212be188b2003eada58c437e42786894580121f6"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/TimedModel",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "165e82df7f86f68bab0a06252722455828b314c6",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/165e82df7f86f68bab0a06252722455828b314c6"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/TimedModel/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aec0eadfac28821a6c435184d03d07872229612",
+      "size": 686,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/3aec0eadfac28821a6c435184d03d07872229612"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/TopologyPreservation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d67973b1af7b95ae6a4f88f384e26ef18ca146f7",
+      "size": 50,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d67973b1af7b95ae6a4f88f384e26ef18ca146f7"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/TopologyPreservation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee1b35e2bf8ef83775ae6ad32b61124262070335",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/ee1b35e2bf8ef83775ae6ad32b61124262070335"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/TopologyPreservation/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c3cc26a76ba170c3f6f5af74aa5c99bb182f02f",
+      "size": 409,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2c3cc26a76ba170c3f6f5af74aa5c99bb182f02f"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/VerifiedSta.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e85ca8bed45d96f13782ddc459fb082f8ef538c5",
+      "size": 41,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/e85ca8bed45d96f13782ddc459fb082f8ef538c5"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/VerifiedSta",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e52ffaa281929da4f16b694adfa3dcbd2187286",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/1e52ffaa281929da4f16b694adfa3dcbd2187286"
+    },
+    {
+      "path": "lean/ThinkingSand/L1/VerifiedSta/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0efed5194df11864c713a26bf9ac8040f89da94",
+      "size": 862,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f0efed5194df11864c713a26bf9ac8040f89da94"
+    },
+    {
+      "path": "lean/ThinkingSand/L2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94c75bcf8fee237bc6911bcb39974e2e4f74f865",
+      "size": 242,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/94c75bcf8fee237bc6911bcb39974e2e4f74f865"
+    },
+    {
+      "path": "lean/ThinkingSand/L2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4809abbe620f2d1b48d16977601141a6bcd667da",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/4809abbe620f2d1b48d16977601141a6bcd667da"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/EquivalenceCertificates.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d26900cf09f260659382cb8ca1350df1032a4926",
+      "size": 53,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d26900cf09f260659382cb8ca1350df1032a4926"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/EquivalenceCertificates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04c13e6f36668b89ee8982bd930152f433d5f630",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/04c13e6f36668b89ee8982bd930152f433d5f630"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/EquivalenceCertificates/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70a0c747462708947713c9bc7ef6bd239a231951",
+      "size": 3618,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/70a0c747462708947713c9bc7ef6bd239a231951"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/HardCones.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef403a93ef594981147f5fda48695565d9434fc5",
+      "size": 39,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ef403a93ef594981147f5fda48695565d9434fc5"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/HardCones",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7db6d46754175100a0f7910d5886703becfb0413",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/7db6d46754175100a0f7910d5886703becfb0413"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/HardCones/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "477a0cdee1283c9b1c956a650d01b4e44042470a",
+      "size": 492,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/477a0cdee1283c9b1c956a650d01b4e44042470a"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/LicensedDeletions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f1cdcde816f38534f8625f1e8fb91359fc3a4f9",
+      "size": 47,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4f1cdcde816f38534f8625f1e8fb91359fc3a4f9"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/LicensedDeletions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70e1e001d87bc86365b3ce32b2defec7e270221e",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/70e1e001d87bc86365b3ce32b2defec7e270221e"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/LicensedDeletions/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8df0712435bace65f24c94bb63b0a9181760c166",
+      "size": 1420,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8df0712435bace65f24c94bb63b0a9181760c166"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/NetlistObject.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40e3cdef5bee07d1ffb52065384d2730c0e0996a",
+      "size": 43,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/40e3cdef5bee07d1ffb52065384d2730c0e0996a"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/NetlistObject",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "910167182a13cd5ad3d01bb33a947dc15de19826",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/910167182a13cd5ad3d01bb33a947dc15de19826"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/NetlistObject/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2df96633ca93abea8fc4c344af141c59a920e43d",
+      "size": 2101,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2df96633ca93abea8fc4c344af141c59a920e43d"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/RegisterCorrespondence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f78d5e08a5b4644b6c5514b9480031d02a1cec94",
+      "size": 52,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f78d5e08a5b4644b6c5514b9480031d02a1cec94"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/RegisterCorrespondence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e454b4b7dd7b2ce1dfd9bdcaef2db75fcc2f2829",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/e454b4b7dd7b2ce1dfd9bdcaef2db75fcc2f2829"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/RegisterCorrespondence/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8f8845d8c492b0546db9faf214855e448bfecde",
+      "size": 840,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a8f8845d8c492b0546db9faf214855e448bfecde"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/WellFormedness.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9677f0d8e050bcedc8e0504c4f655fac605a4d5",
+      "size": 44,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f9677f0d8e050bcedc8e0504c4f655fac605a4d5"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/WellFormedness",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59a066d64b5981efb7ecc166e02398390be1f81c",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/59a066d64b5981efb7ecc166e02398390be1f81c"
+    },
+    {
+      "path": "lean/ThinkingSand/L2/WellFormedness/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1fa7e4a41202754eb41b35c24bddb5196835f01",
+      "size": 941,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/c1fa7e4a41202754eb41b35c24bddb5196835f01"
+    },
+    {
+      "path": "lean/ThinkingSand/L3.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79c760d8afa247d449462cf1aaaa2327c8307151",
+      "size": 391,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/79c760d8afa247d449462cf1aaaa2327c8307151"
+    },
+    {
+      "path": "lean/ThinkingSand/L3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abed26b8504e3a9e997adf93c0bd5ceb23aa694c",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/abed26b8504e3a9e997adf93c0bd5ceb23aa694c"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Adequacy.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76d206e497a7dda00bdb6dc00f797c67bf1ccfd9",
+      "size": 38,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/76d206e497a7dda00bdb6dc00f797c67bf1ccfd9"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Adequacy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e43f23802a32609ed0a4c11a3763a0466f62537e",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/e43f23802a32609ed0a4c11a3763a0466f62537e"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Adequacy/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1f3caf2e2b140ae25bd65c72b1a7542e34d81d3",
+      "size": 364,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d1f3caf2e2b140ae25bd65c72b1a7542e34d81d3"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/BusesDebug.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "902d32278ecd5a6d35d08aa93454ec1c47f98485",
+      "size": 40,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/902d32278ecd5a6d35d08aa93454ec1c47f98485"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/BusesDebug",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61ba467620db05b3508aee42b0242d761176021e",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/61ba467620db05b3508aee42b0242d761176021e"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/BusesDebug/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22f653c2853396f82f843a85e23376d79a55510e",
+      "size": 372,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/22f653c2853396f82f843a85e23376d79a55510e"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/CombBlocks.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91794b97fe764c720514eb75990b011743593a67",
+      "size": 40,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/91794b97fe764c720514eb75990b011743593a67"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/CombBlocks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5099bd1f7c1ba797455dc6e3c481bdb5e505e53",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/e5099bd1f7c1ba797455dc6e3c481bdb5e505e53"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/CombBlocks/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35e3f466af7e8273db8453b372a0464593caaddd",
+      "size": 736,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/35e3f466af7e8273db8453b372a0464593caaddd"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/ElaboratedObject.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ec4d2bc2fdf512d6ec43f6a8c8dae52aed07563",
+      "size": 46,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8ec4d2bc2fdf512d6ec43f6a8c8dae52aed07563"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/ElaboratedObject",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "108a34a66b15883f3544dd5e1106e3b0269f221d",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/108a34a66b15883f3544dd5e1106e3b0269f221d"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/ElaboratedObject/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37b136a11ca8d2e0206d60a95468ac6bee6e6d0e",
+      "size": 676,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/37b136a11ca8d2e0206d60a95468ac6bee6e6d0e"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/InstructionObligations.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9842024d49ba6890e847df0cf22de7b59544e21b",
+      "size": 52,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9842024d49ba6890e847df0cf22de7b59544e21b"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/InstructionObligations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3837530690d6e3fe0c48115c4658412f51c805b0",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/3837530690d6e3fe0c48115c4658412f51c805b0"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/InstructionObligations/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50258e71865f701c4085c1afc0e710f7c7d3b89e",
+      "size": 408,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/50258e71865f701c4085c1afc0e710f7c7d3b89e"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Interrupts.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8c67e7b1157ee50ad9df858ff4aefdac4fa8acb",
+      "size": 40,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a8c67e7b1157ee50ad9df858ff4aefdac4fa8acb"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Interrupts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e0a4163a3931749d6554c9551b27a6470d1e3ad",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/0e0a4163a3931749d6554c9551b27a6470d1e3ad"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Interrupts/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c83065dc85de4ffabcfaf63ac194ccba49ae85e",
+      "size": 370,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1c83065dc85de4ffabcfaf63ac194ccba49ae85e"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Invariant.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3085b6bf291939bff1d96f91e972a14c525f1dac",
+      "size": 39,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/3085b6bf291939bff1d96f91e972a14c525f1dac"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Invariant",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "052979e634876ee53daae7598d591046cad08ff9",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/052979e634876ee53daae7598d591046cad08ff9"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Invariant/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c72dd3f09a373e19b5fe357613bb6ffa802a88f",
+      "size": 367,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8c72dd3f09a373e19b5fe357613bb6ffa802a88f"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Microarchitecture.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "788555b07144606f583ea8f34dfef565eb1d7169",
+      "size": 47,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/788555b07144606f583ea8f34dfef565eb1d7169"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Microarchitecture",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f3b28fb714b7aec2d56b080cd9f9d31ab8dce66",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/3f3b28fb714b7aec2d56b080cd9f9d31ab8dce66"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Microarchitecture/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3149e634d42b4f78d569f20a16b4b51305698fa1",
+      "size": 756,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/3149e634d42b4f78d569f20a16b4b51305698fa1"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Refinement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9041c5203c2b645cb7ec34cc83baee98f09770b7",
+      "size": 40,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9041c5203c2b645cb7ec34cc83baee98f09770b7"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Refinement",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ebe57823b43761f04983174bfb3dc6abbf31a46",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/1ebe57823b43761f04983174bfb3dc6abbf31a46"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Refinement/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dea186e15757134cc1e5b6d3e4c1b73effdd8c4d",
+      "size": 2267,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/dea186e15757134cc1e5b6d3e4c1b73effdd8c4d"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Subset.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baf16e2f7a6eb254ee040d577950d6987bf28ebb",
+      "size": 36,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/baf16e2f7a6eb254ee040d577950d6987bf28ebb"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Subset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ef8da065dd3a5412fae70a518242bab287c74dd",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/2ef8da065dd3a5412fae70a518242bab287c74dd"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/Subset/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bf5e9ba3bc69bb45c089ae78e69fc1d15c1715a",
+      "size": 720,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9bf5e9ba3bc69bb45c089ae78e69fc1d15c1715a"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/XAndReset.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff6cc1e62e5e7c5ce1b40715166173ccae0910d7",
+      "size": 39,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ff6cc1e62e5e7c5ce1b40715166173ccae0910d7"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/XAndReset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bacb2584c2ac6dab8c027b123222723fe21a6a3a",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/bacb2584c2ac6dab8c027b123222723fe21a6a3a"
+    },
+    {
+      "path": "lean/ThinkingSand/L3/XAndReset/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb131d95794c71eef975678a5fec822a096ba308",
+      "size": 681,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/eb131d95794c71eef975678a5fec822a096ba308"
+    },
+    {
+      "path": "lean/ThinkingSand/L4.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1231b5b82ce00f84aa5a30975be7ad964fb114d2",
+      "size": 137,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1231b5b82ce00f84aa5a30975be7ad964fb114d2"
+    },
+    {
+      "path": "lean/ThinkingSand/L4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2b2d3aef7a8d921cca587241eb082a0c112979f",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/e2b2d3aef7a8d921cca587241eb082a0c112979f"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/Coverage.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5031dd438a635b9682eff0009a45c3b0faf67c6",
+      "size": 38,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b5031dd438a635b9682eff0009a45c3b0faf67c6"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/Coverage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b78bada659153f0345a993b223bdc51c1dc4059",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/3b78bada659153f0345a993b223bdc51c1dc4059"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/Coverage/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f047f27f24df7b6ca7f154b9277af046619ce4f3",
+      "size": 364,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f047f27f24df7b6ca7f154b9277af046619ce4f3"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/IrqSpec.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9801f9896db90d7fc1e6897bb6b79f077a69dddd",
+      "size": 37,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9801f9896db90d7fc1e6897bb6b79f077a69dddd"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/IrqSpec",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d9e9cf8e10f0baba040a3fe08d9003cd0083c70",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/3d9e9cf8e10f0baba040a3fe08d9003cd0083c70"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/IrqSpec/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a49aeca207ca0512ba90a5d0e4537fc112b07535",
+      "size": 693,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a49aeca207ca0512ba90a5d0e4537fc112b07535"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/SailBase.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "167b574f377c4b37d186956b00403b5ca188ce9f",
+      "size": 38,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/167b574f377c4b37d186956b00403b5ca188ce9f"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/SailBase",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8be3f7fc7c86387f902bd86cfc849959b0a7d80c",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/8be3f7fc7c86387f902bd86cfc849959b0a7d80c"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/SailBase/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0231c0cad8b658cf80105d3a7d08084add652616",
+      "size": 719,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0231c0cad8b658cf80105d3a7d08084add652616"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/Underspecification.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4172b03d742ffda589e6ee9da5a1c6944ffe6be9",
+      "size": 48,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4172b03d742ffda589e6ee9da5a1c6944ffe6be9"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/Underspecification",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2394e802a293fed4c76dcf82c61dbe2e0fb6a22a",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/2394e802a293fed4c76dcf82c61dbe2e0fb6a22a"
+    },
+    {
+      "path": "lean/ThinkingSand/L4/Underspecification/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae0842dba4852d1a3679eb0a493ec7b5ed5ffc68",
+      "size": 394,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ae0842dba4852d1a3679eb0a493ec7b5ed5ffc68"
+    },
+    {
+      "path": "lean/ThinkingSand/L5.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94d86997d962aacaaf7e1861ab9114f9dd58b5c5",
+      "size": 218,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/94d86997d962aacaaf7e1861ab9114f9dd58b5c5"
+    },
+    {
+      "path": "lean/ThinkingSand/L5",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fb7b17d4a54d5aa8dbb26d23b149c2fbc3ba78d",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/1fb7b17d4a54d5aa8dbb26d23b149c2fbc3ba78d"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/Boundary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a686b512d92a916941f515b916c29d83ed3e4162",
+      "size": 38,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a686b512d92a916941f515b916c29d83ed3e4162"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/Boundary",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "629897fafd60d247d445f5802e66d38b52bc79b7",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/629897fafd60d247d445f5802e66d38b52bc79b7"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/Boundary/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d85c49aad036e328389dc47c283fcc313459143",
+      "size": 805,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/3d85c49aad036e328389dc47c283fcc313459143"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/BusContract.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80a89441ba8105e9dbd8d559a0161b5be7f7d71d",
+      "size": 41,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/80a89441ba8105e9dbd8d559a0161b5be7f7d71d"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/BusContract",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14e1fa1626cf365af77051db30896ebb3d1118bd",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/14e1fa1626cf365af77051db30896ebb3d1118bd"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/BusContract/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee168bbd36f559c8b6061a269fd10dcfbac22abf",
+      "size": 378,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ee168bbd36f559c8b6061a269fd10dcfbac22abf"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/MemoryMapDevices.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75e78246f6dffd9ce71c4ba9fe094cbd63944306",
+      "size": 46,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/75e78246f6dffd9ce71c4ba9fe094cbd63944306"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/MemoryMapDevices",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a01da608159e0ede507ad0272bdae3f1ef25ade",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/8a01da608159e0ede507ad0272bdae3f1ef25ade"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/MemoryMapDevices/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e6c97ee0572ff274755f8fa074f76a3c50d5087",
+      "size": 964,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2e6c97ee0572ff274755f8fa074f76a3c50d5087"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/OperatingConditions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06a2ee1861d20c29b90368782bbd017c996c89fb",
+      "size": 49,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/06a2ee1861d20c29b90368782bbd017c996c89fb"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/OperatingConditions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "073233a57f6e62bb1f61ee5b0bcd1c9f238a1cb8",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/073233a57f6e62bb1f61ee5b0bcd1c9f238a1cb8"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/OperatingConditions/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e95b59f690f67554d64c2f20070271765446616",
+      "size": 402,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/5e95b59f690f67554d64c2f20070271765446616"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/PowerEpochs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86aebc8c8937af30729bae7ebfb454d95c70f4d3",
+      "size": 41,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/86aebc8c8937af30729bae7ebfb454d95c70f4d3"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/PowerEpochs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2fd385f888e59f95c8e2567d8c416a8ff9b48ca5",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/2fd385f888e59f95c8e2567d8c416a8ff9b48ca5"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/PowerEpochs/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7299cf0cd33d17fe9daca293561f68f9991353af",
+      "size": 378,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/7299cf0cd33d17fe9daca293561f68f9991353af"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/SysAndObs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d82ddb5d1aab47316896c6d3ee88b7512c12f116",
+      "size": 39,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d82ddb5d1aab47316896c6d3ee88b7512c12f116"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/SysAndObs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c21ef619b2b437a1661e68c9e0b66c03c98548ac",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/c21ef619b2b437a1661e68c9e0b66c03c98548ac"
+    },
+    {
+      "path": "lean/ThinkingSand/L5/SysAndObs/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8d3183a9f0df81139af49ea48bcd3d9f8cd9bc7",
+      "size": 700,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f8d3183a9f0df81139af49ea48bcd3d9f8cd9bc7"
+    },
+    {
+      "path": "lean/ThinkingSand/Prelude.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb5197d94faebd631ea4f27f26442a5b2858c212",
+      "size": 183,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/fb5197d94faebd631ea4f27f26442a5b2858c212"
+    },
+    {
+      "path": "lean/ThinkingSand/Prelude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e76c9a141ffb637a7eb83fb933ad549a909c6e5",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/0e76c9a141ffb637a7eb83fb933ad549a909c6e5"
+    },
+    {
+      "path": "lean/ThinkingSand/Prelude/Analog.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aae00b15bdfffc4113515c65cbaaf80f805aa78c",
+      "size": 1187,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/aae00b15bdfffc4113515c65cbaaf80f805aa78c"
+    },
+    {
+      "path": "lean/ThinkingSand/Prelude/Certificate.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6bac4cdc56624bbb522586b0d0e4daf8b72989a",
+      "size": 2201,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/c6bac4cdc56624bbb522586b0d0e4daf8b72989a"
+    },
+    {
+      "path": "lean/ThinkingSand/Prelude/Certificates.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d3c50962ea790cd7a0e0707a11d19d41249a4d2",
+      "size": 4577,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/5d3c50962ea790cd7a0e0707a11d19d41249a4d2"
+    },
+    {
+      "path": "lean/ThinkingSand/Prelude/Core.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49857d9dbfa65b8100c46543d52635581c6849d8",
+      "size": 3222,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/49857d9dbfa65b8100c46543d52635581c6849d8"
+    },
+    {
+      "path": "lean/ThinkingSand/Prelude/Graph.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a6a57be20046ad02505e30421215fce26fd855e",
+      "size": 2402,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2a6a57be20046ad02505e30421215fce26fd855e"
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ce390dc4932b8ba82a4aaecc0b3dbf6b3f32ee1",
+      "size": 144,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2ce390dc4932b8ba82a4aaecc0b3dbf6b3f32ee1"
+    },
+    {
+      "path": "lean/lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84cbbe92874ca25a540e97bf44f33b4313d72abc",
+      "size": 92,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/84cbbe92874ca25a540e97bf44f33b4313d72abc"
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec5999cc044e45c8e7c613fc6830e018b47d595",
+      "size": 25,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0ec5999cc044e45c8e7c613fc6830e018b47d595"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92709724341aad1a615be911153a5e06871c725f",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/92709724341aad1a615be911153a5e06871c725f"
+    },
+    {
+      "path": "src/L0-physics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2905cb956de3c20600342cb29d367f0a3c3bbab",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/d2905cb956de3c20600342cb29d367f0a3c3bbab"
+    },
+    {
+      "path": "src/L0-physics/00-field-problem.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bb1c2573fd91ef363ae0d96c2c9e70169c4055b",
+      "size": 19478,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8bb1c2573fd91ef363ae0d96c2c9e70169c4055b"
+    },
+    {
+      "path": "src/L0-physics/01-quasistatic-reduction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "072e347eae8fb8233b365521000a202c01210568",
+      "size": 8658,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/072e347eae8fb8233b365521000a202c01210568"
+    },
+    {
+      "path": "src/L0-physics/02-device-models.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9144ca27a64105bb3e9317776cfc56f420e67d51",
+      "size": 18995,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9144ca27a64105bb3e9317776cfc56f420e67d51"
+    },
+    {
+      "path": "src/L0-physics/03-error-model.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b6a0248beb3f4c258c055db9e4766bb88aaeffc",
+      "size": 16116,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8b6a0248beb3f4c258c055db9e4766bb88aaeffc"
+    },
+    {
+      "path": "src/L0-physics/04-operating-envelope.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf79cb20f6a0ace6ca841209648cc58939fb2a32",
+      "size": 22941,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/bf79cb20f6a0ace6ca841209648cc58939fb2a32"
+    },
+    {
+      "path": "src/L0-physics/05-quantum-floor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44dbf85a658f091da6db0c09859357a6f2a311a5",
+      "size": 16540,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/44dbf85a658f091da6db0c09859357a6f2a311a5"
+    },
+    {
+      "path": "src/L0-physics/06-cut-discipline.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f319dc2acc323fdc78bc12cd8b317684c257de1",
+      "size": 11205,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0f319dc2acc323fdc78bc12cd8b317684c257de1"
+    },
+    {
+      "path": "src/L0-physics/07-cell-enclosures.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c89cfe3a5f05a8d28f9aae623a1f721bc3ce963c",
+      "size": 14950,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/c89cfe3a5f05a8d28f9aae623a1f721bc3ce963c"
+    },
+    {
+      "path": "src/L0-physics/08-lumping-composition.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0bede76d593a3c6b8462af8be2e719355b1e3d8",
+      "size": 14091,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d0bede76d593a3c6b8462af8be2e719355b1e3d8"
+    },
+    {
+      "path": "src/L0-physics/09-capacitance-enclosures.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b088539172dc5131b7a3de432cd1e268e82907d",
+      "size": 10426,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9b088539172dc5131b7a3de432cd1e268e82907d"
+    },
+    {
+      "path": "src/L0-physics/10-screening.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd9a53352ca277b9b47dd3eb24fc82523ff3a430",
+      "size": 11041,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/cd9a53352ca277b9b47dd3eb24fc82523ff3a430"
+    },
+    {
+      "path": "src/L0-physics/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "208bfcd00a0515f00cef0229e788c049d7c96773",
+      "size": 10760,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/208bfcd00a0515f00cef0229e788c049d7c96773"
+    },
+    {
+      "path": "src/L1-electrical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9dd5c1e4924492767e01cb4c744739ddba43fb6",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/f9dd5c1e4924492767e01cb4c744739ddba43fb6"
+    },
+    {
+      "path": "src/L1-electrical/00-layout-object.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b73b138e38d730543c2b8059074370f6849aa36f",
+      "size": 7343,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b73b138e38d730543c2b8059074370f6849aa36f"
+    },
+    {
+      "path": "src/L1-electrical/01-topology-preservation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee8f0ae311be4a51afb1dd51997d57ab5810b620",
+      "size": 10808,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ee8f0ae311be4a51afb1dd51997d57ab5810b620"
+    },
+    {
+      "path": "src/L1-electrical/02-extraction-lvs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7353b90c9ea4652ec505c8647d1e40c90cc26d6",
+      "size": 15060,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/e7353b90c9ea4652ec505c8647d1e40c90cc26d6"
+    },
+    {
+      "path": "src/L1-electrical/03-timed-model.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1a6a28fadcefc1354001435de8b11530ee0c6d3",
+      "size": 9752,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a1a6a28fadcefc1354001435de8b11530ee0c6d3"
+    },
+    {
+      "path": "src/L1-electrical/04-sdc-exceptions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db6b5c2773dbe883e79136f1120e1d3bd360a93b",
+      "size": 7535,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/db6b5c2773dbe883e79136f1120e1d3bd360a93b"
+    },
+    {
+      "path": "src/L1-electrical/05-crosstalk-power.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "426571b97a5415dd48dcd455362df9e4b257140a",
+      "size": 8801,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/426571b97a5415dd48dcd455362df9e4b257140a"
+    },
+    {
+      "path": "src/L1-electrical/06-digital-abstraction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a313da9997ee9846485bc0a722184b1beb8101ea",
+      "size": 14655,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a313da9997ee9846485bc0a722184b1beb8101ea"
+    },
+    {
+      "path": "src/L1-electrical/07-bridge-theorem.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fbfb65d6ed4704cf0d8670a173676c457eab0d0",
+      "size": 8487,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4fbfb65d6ed4704cf0d8670a173676c457eab0d0"
+    },
+    {
+      "path": "src/L1-electrical/08-verified-sta.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2356885309c07761dca3deb29264dc1d5fdf0a0",
+      "size": 8121,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f2356885309c07761dca3deb29264dc1d5fdf0a0"
+    },
+    {
+      "path": "src/L1-electrical/09-corners.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83a8d693709e8156ef91a6e95f248db4fe98cdcb",
+      "size": 9689,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/83a8d693709e8156ef91a6e95f248db4fe98cdcb"
+    },
+    {
+      "path": "src/L1-electrical/10-clock.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7f48a325bdd124601f498d256bc84755c665d2e",
+      "size": 8214,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d7f48a325bdd124601f498d256bc84755c665d2e"
+    },
+    {
+      "path": "src/L1-electrical/11-boundaries.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bac5ff7f5699b249bc1b32db772495c82073d5c7",
+      "size": 9643,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/bac5ff7f5699b249bc1b32db772495c82073d5c7"
+    },
+    {
+      "path": "src/L1-electrical/12-geometric-checks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "158acb080838bf79a33a546b9f190c7e0df6ed9f",
+      "size": 7971,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/158acb080838bf79a33a546b9f190c7e0df6ed9f"
+    },
+    {
+      "path": "src/L1-electrical/13-droop-check.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30f48fc919e05271aba43c0e95bc44573bf32dc8",
+      "size": 6274,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/30f48fc919e05271aba43c0e95bc44573bf32dc8"
+    },
+    {
+      "path": "src/L1-electrical/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42516a29caed538d42e114e613079d010333bd35",
+      "size": 23681,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/42516a29caed538d42e114e613079d010333bd35"
+    },
+    {
+      "path": "src/L2-logic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fbf320d523a5a7fd821166bc9464da38651a1de2",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/fbf320d523a5a7fd821166bc9464da38651a1de2"
+    },
+    {
+      "path": "src/L2-logic/00-netlist-object.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcd9037332be24e754456d25fd23685c5e5c2819",
+      "size": 6960,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/fcd9037332be24e754456d25fd23685c5e5c2819"
+    },
+    {
+      "path": "src/L2-logic/01-well-formedness.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eb07e4d95f220041573d7f1306cf85827d5f077",
+      "size": 6067,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4eb07e4d95f220041573d7f1306cf85827d5f077"
+    },
+    {
+      "path": "src/L2-logic/02-licensed-deletions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a36ca97477c12815623c558bab4153128eb39eb4",
+      "size": 6870,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a36ca97477c12815623c558bab4153128eb39eb4"
+    },
+    {
+      "path": "src/L2-logic/03-register-correspondence.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6524a32639e1b3fe3cf86af0c2d6af2344d2e50",
+      "size": 9513,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d6524a32639e1b3fe3cf86af0c2d6af2344d2e50"
+    },
+    {
+      "path": "src/L2-logic/04-equivalence-certificates.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52c99ff29a7fe82f7f0dff55409facaaf9944ebe",
+      "size": 23398,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/52c99ff29a7fe82f7f0dff55409facaaf9944ebe"
+    },
+    {
+      "path": "src/L2-logic/05-hard-cones.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd82f5c8c176411d17d63ccb84c55275872838a7",
+      "size": 7907,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/dd82f5c8c176411d17d63ccb84c55275872838a7"
+    },
+    {
+      "path": "src/L2-logic/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7c7741014d1dc68fc31dbcee7551a2cd8761313",
+      "size": 17010,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f7c7741014d1dc68fc31dbcee7551a2cd8761313"
+    },
+    {
+      "path": "src/L3-rtl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e8fa93b17e89292755c82af6912e17550cf225bf",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/e8fa93b17e89292755c82af6912e17550cf225bf"
+    },
+    {
+      "path": "src/L3-rtl/00-elaborated-object.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b425719f27c55ce64600e45ba4b34d4d9cfb781",
+      "size": 7450,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/3b425719f27c55ce64600e45ba4b34d4d9cfb781"
+    },
+    {
+      "path": "src/L3-rtl/01-subset.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "becae9df9ae2aca636213f97007cb13e97b7f8da",
+      "size": 5824,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/becae9df9ae2aca636213f97007cb13e97b7f8da"
+    },
+    {
+      "path": "src/L3-rtl/02-comb-blocks.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de124f6edfe4e92b8dafd85a4ea572a0e5c7648e",
+      "size": 6535,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/de124f6edfe4e92b8dafd85a4ea572a0e5c7648e"
+    },
+    {
+      "path": "src/L3-rtl/03-x-and-reset.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa3482e4f36559f59db890bd2b75e2c007c8b467",
+      "size": 6609,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/fa3482e4f36559f59db890bd2b75e2c007c8b467"
+    },
+    {
+      "path": "src/L3-rtl/04-adequacy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4628d4a4f1ffc803d6604c94422ee8b3ccd8cb8",
+      "size": 6723,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a4628d4a4f1ffc803d6604c94422ee8b3ccd8cb8"
+    },
+    {
+      "path": "src/L3-rtl/05-microarchitecture.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbcd55190620468f1f22d556d06eafe134a71272",
+      "size": 9600,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/dbcd55190620468f1f22d556d06eafe134a71272"
+    },
+    {
+      "path": "src/L3-rtl/06-buses-debug.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bb9ad4f07bbabbf996122c9f3c692d72fb371b9",
+      "size": 4641,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0bb9ad4f07bbabbf996122c9f3c692d72fb371b9"
+    },
+    {
+      "path": "src/L3-rtl/07-interrupts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d05543aa26248c39f4e2bfd32c7d1481dc2059d7",
+      "size": 2961,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d05543aa26248c39f4e2bfd32c7d1481dc2059d7"
+    },
+    {
+      "path": "src/L3-rtl/08-refinement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9ea366f4d746f9dde4e00a08991dd0fe32462c4",
+      "size": 10744,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d9ea366f4d746f9dde4e00a08991dd0fe32462c4"
+    },
+    {
+      "path": "src/L3-rtl/09-invariant.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14251b669039b25a60b96872c0c4f2866bbecf0d",
+      "size": 8472,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/14251b669039b25a60b96872c0c4f2866bbecf0d"
+    },
+    {
+      "path": "src/L3-rtl/10-instruction-obligations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "648199650b9dea0a78b024c5c7ecfd7132d75cd5",
+      "size": 6119,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/648199650b9dea0a78b024c5c7ecfd7132d75cd5"
+    },
+    {
+      "path": "src/L3-rtl/11-bus-obligations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf9d67366703f39869a7d6a130ae47648923cddd",
+      "size": 2780,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/cf9d67366703f39869a7d6a130ae47648923cddd"
+    },
+    {
+      "path": "src/L3-rtl/12-trap-obligations.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a236d1c5831acb1427c9de32365b0f8d2a79870b",
+      "size": 3304,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/a236d1c5831acb1427c9de32365b0f8d2a79870b"
+    },
+    {
+      "path": "src/L3-rtl/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d74902ee3b09ea96e5d028f6d9ce716aa550f862",
+      "size": 13621,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d74902ee3b09ea96e5d028f6d9ce716aa550f862"
+    },
+    {
+      "path": "src/L4-isa",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1a86c2c02da9e73d241aa538521831e30121203",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/f1a86c2c02da9e73d241aa538521831e30121203"
+    },
+    {
+      "path": "src/L4-isa/00-sail-base.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7de58f80d5fc70fbb882c832ebcf8830736ba02b",
+      "size": 9762,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/7de58f80d5fc70fbb882c832ebcf8830736ba02b"
+    },
+    {
+      "path": "src/L4-isa/01-irq-spec.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80b18961c662a3cbb0617929f5a45a926045793c",
+      "size": 6970,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/80b18961c662a3cbb0617929f5a45a926045793c"
+    },
+    {
+      "path": "src/L4-isa/02-underspecification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eafcf637397754e170735faa2545bd81e8631955",
+      "size": 6959,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/eafcf637397754e170735faa2545bd81e8631955"
+    },
+    {
+      "path": "src/L4-isa/03-coverage.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec8b2bb3cce916f7f28ea31f2dcfb99dc39e1b87",
+      "size": 8459,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ec8b2bb3cce916f7f28ea31f2dcfb99dc39e1b87"
+    },
+    {
+      "path": "src/L4-isa/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "715a424c257da43953cd5999d60bf442e8057bea",
+      "size": 7019,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/715a424c257da43953cd5999d60bf442e8057bea"
+    },
+    {
+      "path": "src/L5-system",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5820c34a912224cd3af17f214bd3e686cc91bbb0",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/5820c34a912224cd3af17f214bd3e686cc91bbb0"
+    },
+    {
+      "path": "src/L5-system/00-sys-and-obs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9adef7f34976f28cadb0b2aa1a416f5eb830b345",
+      "size": 7690,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9adef7f34976f28cadb0b2aa1a416f5eb830b345"
+    },
+    {
+      "path": "src/L5-system/01-boundary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a6e137a78f25e7a2768638b22c713d896cc1806",
+      "size": 5576,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/7a6e137a78f25e7a2768638b22c713d896cc1806"
+    },
+    {
+      "path": "src/L5-system/02-bus-contract.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01240197c3432a0cac3d60fee69595bbc65d3d8c",
+      "size": 7374,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/01240197c3432a0cac3d60fee69595bbc65d3d8c"
+    },
+    {
+      "path": "src/L5-system/03-memory-map-devices.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9173c1cf79c94970db2a46791b4e55a05c003171",
+      "size": 6016,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9173c1cf79c94970db2a46791b4e55a05c003171"
+    },
+    {
+      "path": "src/L5-system/04-power-epochs.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e459efc8e1c60d20f912de6e61b7e72bd717eb1",
+      "size": 13888,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2e459efc8e1c60d20f912de6e61b7e72bd717eb1"
+    },
+    {
+      "path": "src/L5-system/05-operating-conditions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f78b26622dbcb1b631cf4ba6d31f3162bdf1e54b",
+      "size": 5795,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/f78b26622dbcb1b631cf4ba6d31f3162bdf1e54b"
+    },
+    {
+      "path": "src/L5-system/06-device-models.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b58b95dff66d54c40c88dea41b456ae08758cecc",
+      "size": 2823,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b58b95dff66d54c40c88dea41b456ae08758cecc"
+    },
+    {
+      "path": "src/L5-system/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34e813df57d990a3034d6c7855d9a8c842de0091",
+      "size": 6591,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/34e813df57d990a3034d6c7855d9a8c842de0091"
+    },
+    {
+      "path": "src/SUMMARY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38b3a0aa5b866cc0d6941bb24dc0fedfd8fa31f4",
+      "size": 4139,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/38b3a0aa5b866cc0d6941bb24dc0fedfd8fa31f4"
+    },
+    {
+      "path": "src/axioms.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28b8297b01155270b901eb4f4f3a1ad2ebed4cff",
+      "size": 28294,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/28b8297b01155270b901eb4f4f3a1ad2ebed4cff"
+    },
+    {
+      "path": "src/bibliography.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "411c56d44fa4e9bd655d215ac36f0bab1f1c143c",
+      "size": 33308,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/411c56d44fa4e9bd655d215ac36f0bab1f1c143c"
+    },
+    {
+      "path": "src/data-provenance.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "411a65eb8d18c498c1682d8a9a1b63b710d56b9f",
+      "size": 4594,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/411a65eb8d18c498c1682d8a9a1b63b710d56b9f"
+    },
+    {
+      "path": "src/explorer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5513ae0dac3a569f5cb7122cd73f4dcf28db00bd",
+      "size": 3999,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/5513ae0dac3a569f5cb7122cd73f4dcf28db00bd"
+    },
+    {
+      "path": "src/findings.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ab1c936f9fd49e97caebbdddc4b771649a23993",
+      "size": 17727,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/3ab1c936f9fd49e97caebbdddc4b771649a23993"
+    },
+    {
+      "path": "src/glossary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b366b47fd93c5edfa09c2b90e897a3a01e09b73",
+      "size": 16462,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/5b366b47fd93c5edfa09c2b90e897a3a01e09b73"
+    },
+    {
+      "path": "src/introduction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ff7f198f330cd6b365c3fee449a43f598e775af",
+      "size": 16631,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8ff7f198f330cd6b365c3fee449a43f598e775af"
+    },
+    {
+      "path": "src/overview.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a89b370a20ca5891f70e173602f7ffe1b5c6132",
+      "size": 26234,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1a89b370a20ca5891f70e173602f7ffe1b5c6132"
+    },
+    {
+      "path": "src/reading-list.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e02186ac26d34a6acc1f8a71342604d0b6392005",
+      "size": 8278,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/e02186ac26d34a6acc1f8a71342604d0b6392005"
+    },
+    {
+      "path": "src/seams.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5cb0cdc4b6054497196152d9fd9a9cc537c6e10",
+      "size": 12052,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b5cb0cdc4b6054497196152d9fd9a9cc537c6e10"
+    },
+    {
+      "path": "tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68a49aa39e0ac3d7d9c3d5c01cabc1e704d902e7",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/68a49aa39e0ac3d7d9c3d5c01cabc1e704d902e7"
+    },
+    {
+      "path": "tools/bbox.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "248357710cfbf047f842ddeb3a2f185cd69c822f",
+      "size": 1172,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/248357710cfbf047f842ddeb3a2f185cd69c822f"
+    },
+    {
+      "path": "tools/build-book.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "416216914d6900f757e9df5388d3694b7082d959",
+      "size": 2445,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/416216914d6900f757e9df5388d3694b7082d959"
+    },
+    {
+      "path": "tools/build-chipviz-html.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bd556aba0b4823bc6ffd2aea8d52cc4ad9d578e",
+      "size": 23804,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4bd556aba0b4823bc6ffd2aea8d52cc4ad9d578e"
+    },
+    {
+      "path": "tools/build-firmware.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8062b7496f0b37cb2070bca103f2c1229cfcbf23",
+      "size": 2763,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8062b7496f0b37cb2070bca103f2c1229cfcbf23"
+    },
+    {
+      "path": "tools/build-rocket-hammer.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d59e656f87a498f4d16b77e839c778ed2f86a3b1",
+      "size": 3127,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d59e656f87a498f4d16b77e839c778ed2f86a3b1"
+    },
+    {
+      "path": "tools/build-rocket.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4cf53e6930fcf2eee45806798a34e584a0034b0a",
+      "size": 5636,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4cf53e6930fcf2eee45806798a34e584a0034b0a"
+    },
+    {
+      "path": "tools/celltopo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ded54f4d0173683cf8ffa6aef83098f9bf41817",
+      "size": 15263,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0ded54f4d0173683cf8ffa6aef83098f9bf41817"
+    },
+    {
+      "path": "tools/check-all.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2f7bb98e6a6f7d0ffba981635b4b767a720ccb39",
+      "size": 2305,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2f7bb98e6a6f7d0ffba981635b4b767a720ccb39"
+    },
+    {
+      "path": "tools/check-interfaces.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51994c25a806a83ebce9e50749bba606bb28697f",
+      "size": 5727,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/51994c25a806a83ebce9e50749bba606bb28697f"
+    },
+    {
+      "path": "tools/check-l0.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2eb1b2c0a3494e51014c255ab26560a9077f0260",
+      "size": 8015,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2eb1b2c0a3494e51014c255ab26560a9077f0260"
+    },
+    {
+      "path": "tools/check-l1.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "307574bf97446bccfd7d423a3c368630dd36f763",
+      "size": 17530,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/307574bf97446bccfd7d423a3c368630dd36f763"
+    },
+    {
+      "path": "tools/check-l2.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b850b7952977f54218af5533d043a3b455845b85",
+      "size": 9778,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b850b7952977f54218af5533d043a3b455845b85"
+    },
+    {
+      "path": "tools/check-l3.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c2c7efb580345233a0c8c2f9c36df53f8387dd82",
+      "size": 16075,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/c2c7efb580345233a0c8c2f9c36df53f8387dd82"
+    },
+    {
+      "path": "tools/check-l4.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8809bb4facb0e148063c8f5ca898a1d29e77c65c",
+      "size": 4260,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8809bb4facb0e148063c8f5ca898a1d29e77c65c"
+    },
+    {
+      "path": "tools/check-l5.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c409e23d684788fbd29226317189a91fcb723d61",
+      "size": 7192,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/c409e23d684788fbd29226317189a91fcb723d61"
+    },
+    {
+      "path": "tools/checklib.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31a2777b77a85f2d75c8f94214d471a1e9d0748c",
+      "size": 7203,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/31a2777b77a85f2d75c8f94214d471a1e9d0748c"
+    },
+    {
+      "path": "tools/chipviz.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1b0d691179cd79312b050e739d9d7c8b76a3ea2",
+      "size": 16337,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/e1b0d691179cd79312b050e739d9d7c8b76a3ea2"
+    },
+    {
+      "path": "tools/clockcheck.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7502cc7dc93ab37c143c511b509bc444d4ec6bba",
+      "size": 5187,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/7502cc7dc93ab37c143c511b509bc444d4ec6bba"
+    },
+    {
+      "path": "tools/combcheck.ys",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10cd4c39760fa6357b962113e4dc798c3503376c",
+      "size": 453,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/10cd4c39760fa6357b962113e4dc798c3503376c"
+    },
+    {
+      "path": "tools/config-record.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "df7567cdd324a18d5e399bb08c6a7a37a7de8813",
+      "size": 11059,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/df7567cdd324a18d5e399bb08c6a7a37a7de8813"
+    },
+    {
+      "path": "tools/extract-cells.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1901b56254baa3bc8541790a817582832b517f6b",
+      "size": 1924,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1901b56254baa3bc8541790a817582832b517f6b"
+    },
+    {
+      "path": "tools/fetch-data.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8277b3b7185cad22235535f467b52fc5b0aeeb5e",
+      "size": 9264,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/8277b3b7185cad22235535f467b52fc5b0aeeb5e"
+    },
+    {
+      "path": "tools/flowreport.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38101cb3c2ae7b4ac1750456360af52377050e69",
+      "size": 4062,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/38101cb3c2ae7b4ac1750456360af52377050e69"
+    },
+    {
+      "path": "tools/fwanchors.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7468c02dc265dbd557d781596a839c0f8479f2b4",
+      "size": 3778,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/7468c02dc265dbd557d781596a839c0f8479f2b4"
+    },
+    {
+      "path": "tools/gdsdump.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca7097ee08fd55b5eaafdfa8e436927f94ba4c1a",
+      "size": 1844,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ca7097ee08fd55b5eaafdfa8e436927f94ba4c1a"
+    },
+    {
+      "path": "tools/imagecheck.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e5b0c3f4ff377c4b8107dffd98b3ad76a785fdf",
+      "size": 5028,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9e5b0c3f4ff377c4b8107dffd98b3ad76a785fdf"
+    },
+    {
+      "path": "tools/install-toolchain.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dc8db04e58af84dbc5fdf198b17bfe06c81b15fe",
+      "size": 14064,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/dc8db04e58af84dbc5fdf198b17bfe06c81b15fe"
+    },
+    {
+      "path": "tools/irqmap.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f3790bdd581f55ae5598ef32c9e13557992ee3f",
+      "size": 7801,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/7f3790bdd581f55ae5598ef32c9e13557992ee3f"
+    },
+    {
+      "path": "tools/mdbook-lean.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eda39bed87732c688235398e46bab399e2741a4",
+      "size": 5129,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0eda39bed87732c688235398e46bab399e2741a4"
+    },
+    {
+      "path": "tools/memmap.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6ba56a50af8f128935d3370691e6d0881f9cabe",
+      "size": 13118,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d6ba56a50af8f128935d3370691e6d0881f9cabe"
+    },
+    {
+      "path": "tools/netgraph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4deec269e308f8a1e309a8228505f9dbd51e2ac7",
+      "size": 9053,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/4deec269e308f8a1e309a8228505f9dbd51e2ac7"
+    },
+    {
+      "path": "tools/pads.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a7ef780f597b1284a0ca099b79c3f03a289562c",
+      "size": 5085,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9a7ef780f597b1284a0ca099b79c3f03a289562c"
+    },
+    {
+      "path": "tools/partition.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e3261c5a0c6b5572cdbb38ba0d72bdc08725d0f1",
+      "size": 10204,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/e3261c5a0c6b5572cdbb38ba0d72bdc08725d0f1"
+    },
+    {
+      "path": "tools/regenerate-core.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "633edbb0fd55a16d44616972abe55577cbd1659b",
+      "size": 5081,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/633edbb0fd55a16d44616972abe55577cbd1659b"
+    },
+    {
+      "path": "tools/regenerate-mgmt-core.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "44b6a71df7d8848bef0678932abbbb929279d728",
+      "size": 2994,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/44b6a71df7d8848bef0678932abbbb929279d728"
+    },
+    {
+      "path": "tools/replicate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe73a2361aa3d2fbf1736feb0437aaff9bea2878",
+      "size": 4101,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/fe73a2361aa3d2fbf1736feb0437aaff9bea2878"
+    },
+    {
+      "path": "tools/routecheck.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "329bb098a63e2222ac40ef6889e3f82745e21290",
+      "size": 17159,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/329bb098a63e2222ac40ef6889e3f82745e21290"
+    },
+    {
+      "path": "tools/rtlcheck.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a69e3df37a2b3a988bf993fbdb932dd888b5e23",
+      "size": 5604,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/2a69e3df37a2b3a988bf993fbdb932dd888b5e23"
+    },
+    {
+      "path": "tools/run-flow.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3f1ff1c1e18ee345242b18ff91b616e9beecebd7",
+      "size": 2335,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/3f1ff1c1e18ee345242b18ff91b616e9beecebd7"
+    },
+    {
+      "path": "tools/run-rocket-flow.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9d8b29abdac1143c0b2cd8bb3648985e8a199a4d",
+      "size": 2798,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/9d8b29abdac1143c0b2cd8bb3648985e8a199a4d"
+    },
+    {
+      "path": "tools/run-sim.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1672e1b861cc7b4d6cee2161de25288d96dfa01f",
+      "size": 3326,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1672e1b861cc7b4d6cee2161de25288d96dfa01f"
+    },
+    {
+      "path": "tools/sdc-audit.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b6cf96e97c7e4947a8c87c716f2733cd4f3f98c7",
+      "size": 6126,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/b6cf96e97c7e4947a8c87c716f2733cd4f3f98c7"
+    },
+    {
+      "path": "tools/sdc-elaborate.tcl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c574ce750c3cedb7b98ffc2ee1755db3f8156f6",
+      "size": 3273,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0c574ce750c3cedb7b98ffc2ee1755db3f8156f6"
+    },
+    {
+      "path": "tools/sim",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f4740159dc865becf1375dd678bde6e8cc7c3db",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/0f4740159dc865becf1375dd678bde6e8cc7c3db"
+    },
+    {
+      "path": "tools/sim/tb_core.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d06a1b240b75e3cb0e2fe380ce5a16ba36077089",
+      "size": 8063,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/d06a1b240b75e3cb0e2fe380ce5a16ba36077089"
+    },
+    {
+      "path": "tools/spicecheck.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f9f32ee64c4c5c729596d45ce4dcee14bbdc3c4",
+      "size": 9781,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1f9f32ee64c4c5c729596d45ce4dcee14bbdc3c4"
+    },
+    {
+      "path": "tools/sta-rerun.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7cec874c3544e6d79a2b563741172747f3742118",
+      "size": 4530,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/7cec874c3544e6d79a2b563741172747f3742118"
+    },
+    {
+      "path": "tools/sta-rerun.tcl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54bb8ec3280845d6151a780223a4ce9e42f58461",
+      "size": 2587,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/54bb8ec3280845d6151a780223a4ce9e42f58461"
+    },
+    {
+      "path": "tools/synccheck.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "df9e3ada53d0289019107e2c3e4f9692fa6f5bc9",
+      "size": 9383,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/df9e3ada53d0289019107e2c3e4f9692fa6f5bc9"
+    },
+    {
+      "path": "viz",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "72bfc6edc2fee4c96b0280eb6d1fb073242c6fb3",
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/trees/72bfc6edc2fee4c96b0280eb6d1fb073242c6fb3"
+    },
+    {
+      "path": "viz/cellgeo.json.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c3b9db363c6c550eda2400448a59d7e71d222f4",
+      "size": 103015,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/0c3b9db363c6c550eda2400448a59d7e71d222f4"
+    },
+    {
+      "path": "viz/cells.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fc394be0305cbd98565993d0b334ca653e7cdf1",
+      "size": 295126,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1fc394be0305cbd98565993d0b334ca653e7cdf1"
+    },
+    {
+      "path": "viz/floorplan.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7214c2d636c0e093c4869fdb40e68c068ed7d97a",
+      "size": 18537,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/7214c2d636c0e093c4869fdb40e68c068ed7d97a"
+    },
+    {
+      "path": "viz/met1.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed5952e82ab7388807248bf6e9e5891507181d26",
+      "size": 1588336,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/ed5952e82ab7388807248bf6e9e5891507181d26"
+    },
+    {
+      "path": "viz/met2.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "787c492594d8ae7d8dd593d4d5f238b3f99deadb",
+      "size": 1185715,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/787c492594d8ae7d8dd593d4d5f238b3f99deadb"
+    },
+    {
+      "path": "viz/met3.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c7cf37e812c7bee5796e0c09adb8d4f9ae3f1a",
+      "size": 118014,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/40c7cf37e812c7bee5796e0c09adb8d4f9ae3f1a"
+    },
+    {
+      "path": "viz/met4.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d4837c6867511ae89d22cf38340cec23a345fc0",
+      "size": 18489,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/5d4837c6867511ae89d22cf38340cec23a345fc0"
+    },
+    {
+      "path": "viz/met5.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98de3bb0b0eb2fa664670f5a978593b8bb247309",
+      "size": 3733,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/98de3bb0b0eb2fa664670f5a978593b8bb247309"
+    },
+    {
+      "path": "viz/power.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30fefe70d6e5d6850eb1caa86744d7adff400801",
+      "size": 134944,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/30fefe70d6e5d6850eb1caa86744d7adff400801"
+    },
+    {
+      "path": "viz/taps.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "034135943fd60abd1b3ef0807884c1582e835d0c",
+      "size": 369071,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/034135943fd60abd1b3ef0807884c1582e835d0c"
+    },
+    {
+      "path": "viz/vias.bin.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a9c0b9d7ffa0286954e4534160bfb22a149ded6",
+      "size": 1925116,
+      "url": "https://api.github.com/repos/digama0/thinking-sand/git/blobs/1a9c0b9d7ffa0286954e4534160bfb22a149ded6"
+    }
+  ],
+  "truncated": false
+}

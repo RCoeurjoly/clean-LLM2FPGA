@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-11-02T00:24:56.881829+00:00",
+  "files": [
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/canonical.il",
+      "bytes": 3180280215,
+      "sha256": "3de2b3b7361c56ff224493eeda2bef75b07e043924c92e572750bd07d3d50f0a"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/before.json",
+      "bytes": 3620987056,
+      "sha256": "2e1e5a3b9bebf3840acaa5c26e3cccc576f07674377b3962e907eeffef72378f"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/normalized.il",
+      "bytes": 3439678409,
+      "sha256": "e5c51133ab867ba03c482d9a6089097d7f95b78373308776dd967fda54375557"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/named.json",
+      "bytes": 4001338661,
+      "sha256": "ef137d7dad302f48f79e93ee8f66235cc372886f2d2fbf7c4dde7c92f5b8e291"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/lowered.json",
+      "bytes": 3940606162,
+      "sha256": "bb89cbb00f558ddc84c28077a3b2efea160a5ae83fde1aefc88f44d283f9798a"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/functional.smt2",
+      "bytes": 10879385560,
+      "sha256": "36209a56a8520d1a3920e1082283826f08bfed0d800b216e1827b4d8f856aa0a"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/transfer.smt2",
+      "bytes": 632948862,
+      "sha256": "ca8c3a3148277c6c3ed2502f253c4170a3676e2d462f1212ff1ad79e224ae92a"
+    }
+  ]
+}

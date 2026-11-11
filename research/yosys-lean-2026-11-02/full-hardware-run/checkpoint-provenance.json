@@ -1,0 +1,14 @@
+[
+  {
+    "stage": "direct-rtlil",
+    "path": "/nix/store/qy5nn6a0y30wr8yz2xpqlgy7kkp4mnpx-tinystories-rtlil/model.il",
+    "bytes": 3564430522,
+    "sha256": "4297b7bf454c2c57c537f751522fc4f5dc0c8b8e1cd5c93109aaff0349dd671e"
+  },
+  {
+    "stage": "direct-prepared",
+    "path": "/nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared/model.il",
+    "bytes": 3182162893,
+    "sha256": "1fe8ca381c54a5904c59977e7f8f87eec8516375f00f62efbea028866907bdd1"
+  }
+]

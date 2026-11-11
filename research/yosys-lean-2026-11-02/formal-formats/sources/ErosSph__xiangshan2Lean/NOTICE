@@ -1,0 +1,47 @@
+Chisel2Lean4
+
+This project derives from Chicala:
+https://github.com/iscas-tis/chicala
+
+The upstream baseline is commit:
+c8bab84b24c448c611b8bf2a87c7e9c26014b081
+
+The original Apache License, Version 2.0 is retained in LICENSE.
+The upstream README is retained in docs/upstream/README.md.
+
+This distribution includes additions and modifications for the parameterized
+Lean 4 intermediate representation, backend, runtime, source diagnostics,
+command-line execution, and independent RTL differential validation.
+
+The XiangShan RightShiftModule validation fixture is derived from
+OpenXiangShan/XiangShan and retains its original Mulan PSL v2 license and
+copyright notices. See verification/xiangshan/right-shift/SOURCE.json and
+verification/xiangshan/right-shift/upstream/LICENSE for provenance and terms.
+
+XiangShan v2.1 FIRRTL validation
+Derived FIRRTL circuits in verification/xiangshan/firrtl originate from
+OpenXiangShan/XiangShan commit f0d8a1cf543c113433ff98140b6d77055d930deb.
+Original modules and parameter framework are elaborated without logic changes.
+Upstream Mulan PSL v2 license is retained alongside the artifacts.
+The classic frontend uses the Apache-2.0 licensed official Scala FIRRTL 1.5.6
+library. GSIM is a design reference, not a copied implementation or dependency.
+
+The real CDE implementation in vendor/cde is copied without modification from
+chipsalliance/cde commit 52768c97a27b254c0cc0ac9401feb55b29e18c28. Its original
+Apache-2.0 license and source checksum are retained in vendor/cde.
+Full XiangShan configuration integration uses immutable source dependencies
+listed in verification/xiangshan/config-dependencies.json. Fetched dependency
+sources and their original licenses remain in the project-local cache.
+
+The modern Chisel 7.3 elaboration validation also uses the unchanged Nanhu
+L2TlbPrefetch and AluDataModule under the same immutable dependency lock.
+Modern FIRRTL is parsed and normalized by the Apache-2.0 with LLVM-exception
+licensed CIRCT firtool 1.135.0; its generic MLIR SSA output is imported by a
+new reader. No CIRCT source implementation is copied into this project.
+
+The fixed-RTL frontend uses upstream Yosys 0.70 FunctionalIR and its existing
+SMT-LIB serializer, through the project-local YoWASP distribution. The bundled
+slang/sv-elab frontend performs SystemVerilog elaboration. Wheel SHA256 hashes
+are fixed in scripts/bootstrap_yosys.py; upstream and dependency licenses remain
+in the extracted wheel metadata. The Python reader and Lean exporter are new
+code; no Yosys, slang, sv-elab or Sparkle source implementation is vendored.

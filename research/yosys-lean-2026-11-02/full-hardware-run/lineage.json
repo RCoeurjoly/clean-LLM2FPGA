@@ -1,0 +1,42 @@
+{
+  "status": "verified",
+  "chain": [
+    {
+      "derivation": "/nix/store/kp2y0xcrk1l0rciz4lbm1vf8026rhfw9-tinystories-netlist.drv",
+      "output": "/nix/store/4xp6xa0gdrmir6lpiwzl2q85ykp1058r-tinystories-netlist",
+      "name": "tinystories-netlist",
+      "next_dependency": "bz5h540cj8cmxwr49v8avrnwa87yxzmv-tinystories-ram.drv"
+    },
+    {
+      "derivation": "/nix/store/bz5h540cj8cmxwr49v8avrnwa87yxzmv-tinystories-ram.drv",
+      "output": "/nix/store/1p2lpclcg0jydfh5d2sfhfimrbsmn044-tinystories-ram",
+      "name": "tinystories-ram",
+      "next_dependency": "qvj1mbkkd7q9j77gpv7gykf7jv9r3kym-tinystories-dsp.drv"
+    },
+    {
+      "derivation": "/nix/store/qvj1mbkkd7q9j77gpv7gykf7jv9r3kym-tinystories-dsp.drv",
+      "output": "/nix/store/6vybsfl9mjql6961ynjg6d6zxyl4d5vz-tinystories-dsp",
+      "name": "tinystories-dsp",
+      "next_dependency": "f3g4sv7kfsbjimqraq3bmrf4pfcx684i-tinystories-prepared.drv"
+    },
+    {
+      "derivation": "/nix/store/f3g4sv7kfsbjimqraq3bmrf4pfcx684i-tinystories-prepared.drv",
+      "output": "/nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared",
+      "name": "tinystories-prepared",
+      "next_dependency": "z7j86hv5hvqq6r8s2444jasifwypidlh-tinystories-rtlil.drv"
+    },
+    {
+      "derivation": "/nix/store/z7j86hv5hvqq6r8s2444jasifwypidlh-tinystories-rtlil.drv",
+      "output": "/nix/store/qy5nn6a0y30wr8yz2xpqlgy7kkp4mnpx-tinystories-rtlil",
+      "name": "tinystories-rtlil",
+      "next_dependency": "sh22as83pssg8n4xv9qf9lz9qqagxr1p-tinystories-rtl.drv"
+    },
+    {
+      "derivation": "/nix/store/sh22as83pssg8n4xv9qf9lz9qqagxr1p-tinystories-rtl.drv",
+      "output": "/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl",
+      "name": "tinystories-rtl",
+      "next_dependency": null
+    }
+  ],
+  "same_rtl_as_probe": true
+}

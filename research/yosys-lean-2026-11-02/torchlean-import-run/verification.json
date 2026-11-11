@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-11-02T09:31:13.734501+00:00",
+  "status": "completed",
+  "python_optimization": 0,
+  "expected_embedding_rejection_verified": true,
+  "unchanged_upstream_modules_verified": 208,
+  "unchanged_pinned_dependency_checkouts_verified": 15,
+  "positive_controls_with_typed_import_and_bit_exact_outputs": 2,
+  "output_values_compared": 7,
+  "python_sources_parsed": 4,
+  "org_documents": {
+    "research/yosys-lean-2026-11-02/torchlean-import-run/runbook.org": "local links exist; blocks balanced",
+    "research/yosys-lean-2026-11-02/report.org": "local links exist; blocks balanced",
+    "research/yosys-lean-2026-11-02/model-probe/README.org": "local links exist; blocks balanced",
+    "research/lean-equivalence.org": "local links exist; blocks balanced"
+  },
+  "whole_model_imported_into_lean": false,
+  "first_blocker": "aten.embedding.default",
+  "operator_rules_modified": false,
+  "equivalence_proved": false
+}

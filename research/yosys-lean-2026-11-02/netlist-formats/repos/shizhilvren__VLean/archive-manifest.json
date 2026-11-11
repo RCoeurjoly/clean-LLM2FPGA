@@ -1,0 +1,84 @@
+{
+  "utc": "2026-11-01T23:13:09.796168+00:00",
+  "endpoint": "repos/shizhilvren/VLean/tarball/a000f17ce14854080c59bbe4a54cf27f862a090e",
+  "exit_code": 0,
+  "archive_bytes": 18185,
+  "sha256": "7bc52879914cb40da28f0c7ad6cbf60316a5e9fd47d949e240b3990f0e2be513",
+  "files": [
+    {
+      "path": "Main.lean",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1244,
+      "sha256": "86bd36bdd56d50e403aef398aba4067fb9db5e879e79649f2333cf9a532b1af4"
+    },
+    {
+      "path": "dff.lean",
+      "bytes": 1126,
+      "sha256": "30466376886fedd9d91c74a2df0b80f27ed7e7f3dfee8030637eea9f091ad34a"
+    },
+    {
+      "path": "dff_en.lean",
+      "bytes": 1927,
+      "sha256": "42d5b9238edb9b0f7ba1775df1a5a7ff199624d764144d65e9c30f63c29d2f64"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 121,
+      "sha256": "899c7c4858e31779727e81b168da23e5f02b875c96854ff1941c98c2032e5bc0"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "tests/file_verilog.lean",
+      "bytes": 3736,
+      "sha256": "479b163d5fb4cf79afc89cc37de907974a78888d9abe957a12ffceac1816f0c5"
+    },
+    {
+      "path": "vc.lean",
+      "bytes": 16,
+      "sha256": "c7230deb5bfc71bf0b47fa5ca1b422d4bc65cfc67541dbb8c1719a314d33d2ed"
+    },
+    {
+      "path": "vc/Basic.lean",
+      "bytes": 4168,
+      "sha256": "2f78d739bbd7e2917f685c63d0f8936ead3ac83107c2a8c0ac0827e4878f38eb"
+    },
+    {
+      "path": "vc/IMP.lean",
+      "bytes": 10167,
+      "sha256": "382bff225d46aee6187904b6a5789ff495f00a992c4cad3e19047c339f7d120f"
+    },
+    {
+      "path": "vc/paser/rules.lean",
+      "bytes": 6751,
+      "sha256": "9a43b01acb37faaa184a8af8f1b136d0a1c7561bc8d9a700acccc49c02da7a77"
+    },
+    {
+      "path": "vc/paser/syntax.lean",
+      "bytes": 1992,
+      "sha256": "af72bcdf44e05bb4fc2a022a1b1e9c0ba62f83e1d643e1699bbd9ba19b44d9aa"
+    },
+    {
+      "path": "vc/paser/syntax_tree.lean",
+      "bytes": 2973,
+      "sha256": "43a5915cb9b8966ad935454d9e9ec158db5072e36b9818f9856d2a9c4f717eeb"
+    },
+    {
+      "path": "vc/paser/token.lean",
+      "bytes": 1983,
+      "sha256": "72cc2b4fc522c4df5bd459075b00bea6c3661f5c437a0061546a118a210bdcd6"
+    },
+    {
+      "path": "vc/verilog.lean",
+      "bytes": 1996,
+      "sha256": "f178d1bbdbd8bc28e468f3412e2dd4e123af85a33829ec6daa60ad81e17a8470"
+    }
+  ]
+}

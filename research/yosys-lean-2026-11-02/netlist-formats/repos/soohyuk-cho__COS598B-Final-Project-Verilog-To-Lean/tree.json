@@ -1,0 +1,3539 @@
+{
+  "sha": "38aad0ea8f4af85c5b470df0a2f114d4f29b6d48",
+  "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/38aad0ea8f4af85c5b470df0a2f114d4f29b6d48",
+  "tree": [
+    {
+      "path": ".DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7ad19e963c4c4656feb0d47abb2a0ff6e5aa10e",
+      "size": 6148,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f7ad19e963c4c4656feb0d47abb2a0ff6e5aa10e"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f9819330b7e4e9e63fd94357d65f8b7b94cb4b8",
+      "size": 45,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5f9819330b7e4e9e63fd94357d65f8b7b94cb4b8"
+    },
+    {
+      "path": "COS598B_Project_Plan.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09f528b2c85c308901bc555ac9a88c19ce056f22",
+      "size": 106491,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/09f528b2c85c308901bc555ac9a88c19ce056f22"
+    },
+    {
+      "path": "COS598B_Project_Proposal.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5dffef3d45632b6fc6628f90d768582683f2581",
+      "size": 126706,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e5dffef3d45632b6fc6628f90d768582683f2581"
+    },
+    {
+      "path": "COS598B_Project_Report.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0184d043e7768f5011394c56e4d9e2fa0d3b422f",
+      "size": 391324,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0184d043e7768f5011394c56e4d9e2fa0d3b422f"
+    },
+    {
+      "path": "LeanHW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee5fda5fde7941850088a14b42108817f32ddc9e",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/ee5fda5fde7941850088a14b42108817f32ddc9e"
+    },
+    {
+      "path": "LeanHW/.lake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "905661b9eeac2fad4591e69e4e0a2c8b7bf0b2e8",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/905661b9eeac2fad4591e69e4e0a2c8b7bf0b2e8"
+    },
+    {
+      "path": "LeanHW/.lake/build",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d545e2face3c6cc633e8eb3b0e677d2eee4796d6",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/d545e2face3c6cc633e8eb3b0e677d2eee4796d6"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c751d3ce1844edecaf5eb700dc4a3be7c22ab85e",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/c751d3ce1844edecaf5eb700dc4a3be7c22ab85e"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d4b27adc707c6aef04f5cab6f3991fe27701149",
+      "size": 3652,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0d4b27adc707c6aef04f5cab6f3991fe27701149"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a191786c187c43c07221e1f84999a45a59e8977a",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a191786c187c43c07221e1f84999a45a59e8977a"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fa0772bfb78b3b7d8dbbb18ab3de65a6763c3e1",
+      "size": 2231,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4fa0772bfb78b3b7d8dbbb18ab3de65a6763c3e1"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6bf438d51f062db6ee3f5e79a31de4032a29a86f",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/6bf438d51f062db6ee3f5e79a31de4032a29a86f"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11fce980d1c0855ae76d884192f1d787f9404d83",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/11fce980d1c0855ae76d884192f1d787f9404d83"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/ALU_4_verA.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82c04b935bbb55a751017e8749e1ee69c9d030e0",
+      "size": 27483,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/82c04b935bbb55a751017e8749e1ee69c9d030e0"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/ALU_4_verA.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6edda0ea2dfb13ba2a6faa8598e28fc545369a1",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/d6edda0ea2dfb13ba2a6faa8598e28fc545369a1"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/ALU_4_verA.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1c8be496e00bd9dddf6dbbc6dcee7e1dedc9e09",
+      "size": 165,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f1c8be496e00bd9dddf6dbbc6dcee7e1dedc9e09"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/ALU_4_verB.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f45e266d8171cab56e7488a662e8f7fcce2084a8",
+      "size": 28867,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f45e266d8171cab56e7488a662e8f7fcce2084a8"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/ALU_4_verB.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff02fb80826ac8cec37d4be7614e6f1e4212b3a1",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ff02fb80826ac8cec37d4be7614e6f1e4212b3a1"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/ALU_4_verB.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb2281f1ba720bca88b58cea12c112702f1c1c0d",
+      "size": 165,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bb2281f1ba720bca88b58cea12c112702f1c1c0d"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Comparator_4bit_verA.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "211eb0a749d6a1b448fbea727c492fac1687b759",
+      "size": 34262,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/211eb0a749d6a1b448fbea727c492fac1687b759"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Comparator_4bit_verA.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acd9d49feb70bf1fd598dc59a3fd7e9d9ff366d6",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/acd9d49feb70bf1fd598dc59a3fd7e9d9ff366d6"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Comparator_4bit_verA.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f7b37b89d7f3b60da7a2a3fdc5342cb928ecadd",
+      "size": 175,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8f7b37b89d7f3b60da7a2a3fdc5342cb928ecadd"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Decoder_2_4_verA.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "677650a6bea4f2b2fd2ef32c9ff538236203d208",
+      "size": 25795,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/677650a6bea4f2b2fd2ef32c9ff538236203d208"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Decoder_2_4_verA.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccee9f1459d2a44f01c56d6446284935d28ab5e9",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ccee9f1459d2a44f01c56d6446284935d28ab5e9"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Decoder_2_4_verA.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf86c7283aaf140a1de9e3c25da174de6e9b0e13",
+      "size": 171,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/cf86c7283aaf140a1de9e3c25da174de6e9b0e13"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Decoder_2_4_verB.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ce4a30d481b5f67739a7fa411de879d2e9c9a14",
+      "size": 21718,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3ce4a30d481b5f67739a7fa411de879d2e9c9a14"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Decoder_2_4_verB.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6343437f95297965746641cadf96933b4f5775e6",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/6343437f95297965746641cadf96933b4f5775e6"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Decoder_2_4_verB.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4622ad5d471603f2c519788ebc807a186e477b92",
+      "size": 171,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4622ad5d471603f2c519788ebc807a186e477b92"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Encoder_4_2_verA.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a725fdbbc8712fe17d02d3c208b25b65d8a59053",
+      "size": 26659,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a725fdbbc8712fe17d02d3c208b25b65d8a59053"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Encoder_4_2_verA.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "737aa59372f1b00e8bc41b56b1b09a1a78f56ff9",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/737aa59372f1b00e8bc41b56b1b09a1a78f56ff9"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Encoder_4_2_verA.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc0b079093643118902827161d103d592c243837",
+      "size": 171,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/dc0b079093643118902827161d103d592c243837"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Encoder_4_2_verB.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9cb65ac4eabbf0d9646158a5123e82489262b42",
+      "size": 23244,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c9cb65ac4eabbf0d9646158a5123e82489262b42"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Encoder_4_2_verB.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10f80e19e77a4445d6c99220d75ccd9edcdd7291",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/10f80e19e77a4445d6c99220d75ccd9edcdd7291"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Encoder_4_2_verB.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ac2ce853b55c47674cbf734da1d974ae3958033",
+      "size": 171,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2ac2ce853b55c47674cbf734da1d974ae3958033"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Mux_2_1_verA.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da39fbf4e436e9f471269cb21d768e2fd539691b",
+      "size": 26075,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/da39fbf4e436e9f471269cb21d768e2fd539691b"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Mux_2_1_verA.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b4a29a9570ada34c607cd9a2ac800960455402f",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2b4a29a9570ada34c607cd9a2ac800960455402f"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Mux_2_1_verA.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92db29a30ed17cf933dee1121413ddfe2451c99f",
+      "size": 167,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/92db29a30ed17cf933dee1121413ddfe2451c99f"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Mux_2_1_verB.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08d455072c07a28ee0f606e0ad19eeaff8a81691",
+      "size": 26075,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/08d455072c07a28ee0f606e0ad19eeaff8a81691"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Mux_2_1_verB.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e03a0e8fe58ff9fba2b77a06d4d057814254c861",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e03a0e8fe58ff9fba2b77a06d4d057814254c861"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier1/Mux_2_1_verB.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc1de51d405028a29794f4bebb09b082652db98c",
+      "size": 167,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bc1de51d405028a29794f4bebb09b082652db98c"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6058082df3a59efbcaf6cb92ea7f4d39aec434c7",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/6058082df3a59efbcaf6cb92ea7f4d39aec434c7"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier2/counter_verA.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b101dac71cb9dfc0d2956b4893f218d21f60eada",
+      "size": 35881,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b101dac71cb9dfc0d2956b4893f218d21f60eada"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier2/counter_verA.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77f936c7ba7643fa701f770cc85f95871710cf03",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/77f936c7ba7643fa701f770cc85f95871710cf03"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier2/counter_verA.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69836947d7cee937a65b221c7a7812f4ad067587",
+      "size": 167,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/69836947d7cee937a65b221c7a7812f4ad067587"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier2/counter_verB.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e7206c8db335579f051d21847d7497fe9d483e7",
+      "size": 42837,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7e7206c8db335579f051d21847d7497fe9d483e7"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier2/counter_verB.c.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce1be5ffa79ea2a5cd88250c89f1a6f3df9e8362",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ce1be5ffa79ea2a5cd88250c89f1a6f3df9e8362"
+    },
+    {
+      "path": "LeanHW/.lake/build/ir/LeanHW/Tier2/counter_verB.setup.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e16542ef5f8fd64527fb4222ffb0bf25f27cd7c9",
+      "size": 167,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e16542ef5f8fd64527fb4222ffb0bf25f27cd7c9"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87115d71ebad70ea62bd80b6fd8ef1677152c260",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/87115d71ebad70ea62bd80b6fd8ef1677152c260"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "50dad370f22f3e5651dd5374d590f6304e02d452",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/50dad370f22f3e5651dd5374d590f6304e02d452"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b1d6a69664275be686c0e252a775bfd5f1e76a7",
+      "size": 624,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3b1d6a69664275be686c0e252a775bfd5f1e76a7"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d5606399dac946a47cffbfd6585a726e43c6dfd",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/9d5606399dac946a47cffbfd6585a726e43c6dfd"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49a1a2c3a1b67a8012681599ad9ee77648f20ca5",
+      "size": 2608,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/49a1a2c3a1b67a8012681599ad9ee77648f20ca5"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8431ade19a8c7a42a841f334f1bb1d5cf1796b38",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8431ade19a8c7a42a841f334f1bb1d5cf1796b38"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6d9bfea43e70601a439aee02e8e5ae24edf7147",
+      "size": 3821,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e6d9bfea43e70601a439aee02e8e5ae24edf7147"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a80cd1d0819d9c591625c264b4772c89769d7853",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/a80cd1d0819d9c591625c264b4772c89769d7853"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d9896df0a3d36232641842d7487295f5c5a982e",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/9d9896df0a3d36232641842d7487295f5c5a982e"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verA.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62e8f857315cb843076d7b7d2fac85f966d7584c",
+      "size": 5192,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/62e8f857315cb843076d7b7d2fac85f966d7584c"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verA.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72441bb9e878f70be1501e1b9b8b55d4ba2b8979",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/72441bb9e878f70be1501e1b9b8b55d4ba2b8979"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verA.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "017beefd5bcc682314d52fb48772c1e85c08010c",
+      "size": 170248,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/017beefd5bcc682314d52fb48772c1e85c08010c"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verA.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b4cd3fb9d66f1e18868726c2e8323f3ebf8e17c",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3b4cd3fb9d66f1e18868726c2e8323f3ebf8e17c"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verA.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edbc53e92872a1efaccf7b880638be3eb9335243",
+      "size": 2077,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/edbc53e92872a1efaccf7b880638be3eb9335243"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verB.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d606142b2774a1a11a62a2599bdf0bed6839b57",
+      "size": 5215,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5d606142b2774a1a11a62a2599bdf0bed6839b57"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verB.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f2d16a2cbe9e4eb3109cf48b733a3af46b6b4a6",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5f2d16a2cbe9e4eb3109cf48b733a3af46b6b4a6"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verB.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "898a9f04d509e4a2ef45935e9b183df373a71394",
+      "size": 168576,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/898a9f04d509e4a2ef45935e9b183df373a71394"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verB.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48b62353147a4dbd3cbece11f7ffb6cafd0a9db0",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/48b62353147a4dbd3cbece11f7ffb6cafd0a9db0"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/ALU_4_verB.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12dd63e404d403eecf913876adb08a85be6c4d4a",
+      "size": 2077,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/12dd63e404d403eecf913876adb08a85be6c4d4a"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Comparator_4bit_verA.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c300c92eeba124af38380d2390e5ac42f9f87398",
+      "size": 5726,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c300c92eeba124af38380d2390e5ac42f9f87398"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Comparator_4bit_verA.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e85023499bc22c67a4b15c529fb7f9f0602d91a5",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e85023499bc22c67a4b15c529fb7f9f0602d91a5"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Comparator_4bit_verA.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d81c6659b6c2e18b33686d07b031e99a9ee1b4f6",
+      "size": 172344,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/d81c6659b6c2e18b33686d07b031e99a9ee1b4f6"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Comparator_4bit_verA.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8969b32e6509d7da4f907fd9b06d3afc15964855",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8969b32e6509d7da4f907fd9b06d3afc15964855"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Comparator_4bit_verA.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26ff004cb79143594439dfe19b3bc26ca3e61349",
+      "size": 2157,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/26ff004cb79143594439dfe19b3bc26ca3e61349"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verA.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60460f6acf11e8912ed8a610a465990fffbe0c71",
+      "size": 4444,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/60460f6acf11e8912ed8a610a465990fffbe0c71"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verA.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35338d1b2c8c9bee3d720395f179824fed8c8101",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/35338d1b2c8c9bee3d720395f179824fed8c8101"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verA.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8177b17b311aedae32499ac81b04645dea09639",
+      "size": 122424,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/d8177b17b311aedae32499ac81b04645dea09639"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verA.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c85368078b44f43f70336b079803dcd5b30af336",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c85368078b44f43f70336b079803dcd5b30af336"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verA.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64f2a501f5c203bd8a77d0f290da7575f81cfe1f",
+      "size": 2125,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/64f2a501f5c203bd8a77d0f290da7575f81cfe1f"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verB.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2743f91c7adf0e4b3a960331f33f82dff2a09767",
+      "size": 4175,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2743f91c7adf0e4b3a960331f33f82dff2a09767"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verB.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bae54c0ae48cf123608e9cac5b9f9c61b5cf920",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8bae54c0ae48cf123608e9cac5b9f9c61b5cf920"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verB.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "939f598cf1e23d053067175180fbb3b5592a8dba",
+      "size": 112392,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/939f598cf1e23d053067175180fbb3b5592a8dba"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verB.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c3a2b9137a16fe245733948cec774dce14ff1bb",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5c3a2b9137a16fe245733948cec774dce14ff1bb"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Decoder_2_4_verB.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a092ab3858d2650e04fc4cdb2aa8590c65b6dc50",
+      "size": 2125,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a092ab3858d2650e04fc4cdb2aa8590c65b6dc50"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verA.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac35031c5e5783df054b8cbbcb19e8fcccd75dc0",
+      "size": 4587,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ac35031c5e5783df054b8cbbcb19e8fcccd75dc0"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verA.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a33d44796313bdd069c0c7771b949b36c465d2a",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/9a33d44796313bdd069c0c7771b949b36c465d2a"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verA.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08e23f621d3096321851969b8bdc05971f1e1d87",
+      "size": 125608,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/08e23f621d3096321851969b8bdc05971f1e1d87"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verA.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aec42efd3f36946f4cbaa884961da48b6216373",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5aec42efd3f36946f4cbaa884961da48b6216373"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verA.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c75c8b447cf112713f2e205b8e0109aa46934bde",
+      "size": 2125,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c75c8b447cf112713f2e205b8e0109aa46934bde"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verB.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c8c5dbdd1946d9751e07f193a00f7572dbf546b",
+      "size": 4539,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2c8c5dbdd1946d9751e07f193a00f7572dbf546b"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verB.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2ddd89e87724eb55e32687f1247eaa15b9ea0d4",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e2ddd89e87724eb55e32687f1247eaa15b9ea0d4"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verB.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da8235cf74688302ea5a5abd9d97fb720f3b4c34",
+      "size": 121760,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/da8235cf74688302ea5a5abd9d97fb720f3b4c34"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verB.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96e684d0cbb3139285a6fd720a294a216d14f728",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/96e684d0cbb3139285a6fd720a294a216d14f728"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Encoder_4_2_verB.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f18c6edb6d9fba9e81e83c2ba10e7b4527db5726",
+      "size": 2125,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f18c6edb6d9fba9e81e83c2ba10e7b4527db5726"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verA.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "630ea6e453698a00197ba05f2a27d319029e8ded",
+      "size": 3131,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/630ea6e453698a00197ba05f2a27d319029e8ded"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verA.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "760743e032fe3ff5e7ada0fbd9528332c1179088",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/760743e032fe3ff5e7ada0fbd9528332c1179088"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verA.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc6ca416061bcecdd109b4ad85dcac370a1c0d11",
+      "size": 146848,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/dc6ca416061bcecdd109b4ad85dcac370a1c0d11"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verA.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df38d2747ee1edd0f7bb01ceccea0b4fca3cc3f8",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/df38d2747ee1edd0f7bb01ceccea0b4fca3cc3f8"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verA.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06d8a94c210918788bc1c6373a02f2c7823272a5",
+      "size": 2093,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/06d8a94c210918788bc1c6373a02f2c7823272a5"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verB.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e2b0249e6b41d2398ca2f6dbfa3f5ef0e119e1e",
+      "size": 3193,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8e2b0249e6b41d2398ca2f6dbfa3f5ef0e119e1e"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verB.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba453b478e8b7a3bf2c30c7aaddf6e81c7a5dac7",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ba453b478e8b7a3bf2c30c7aaddf6e81c7a5dac7"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verB.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "966c68980c81fb1f94d0eab88b3b84b5847dc1ae",
+      "size": 148440,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/966c68980c81fb1f94d0eab88b3b84b5847dc1ae"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verB.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebd8775af84e8de4a56c821aff8ba5e27b7f5107",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ebd8775af84e8de4a56c821aff8ba5e27b7f5107"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier1/Mux_2_1_verB.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2b101f01f0298ea45e195bcbf2d155d93d2edd",
+      "size": 2093,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/6a2b101f01f0298ea45e195bcbf2d155d93d2edd"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e078ad10fb37467763a8ce5dca03d44f1c3c2dcf",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/e078ad10fb37467763a8ce5dca03d44f1c3c2dcf"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verA.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2093b7af204fe2b1086567a19ef9d5c129200e9",
+      "size": 8440,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/d2093b7af204fe2b1086567a19ef9d5c129200e9"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verA.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5dd794076defa1fc010fb392157fc908ba79d4c",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c5dd794076defa1fc010fb392157fc908ba79d4c"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verA.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3102cb62b68c716ea0e7249db65adbe5577246c",
+      "size": 210088,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e3102cb62b68c716ea0e7249db65adbe5577246c"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verA.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2cb75c3ed3eb2f7ee74046bae5f516d42d058fa",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e2cb75c3ed3eb2f7ee74046bae5f516d42d058fa"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verA.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56997d4a95a8e41f548d2aedda5cc9da61852f99",
+      "size": 2093,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/56997d4a95a8e41f548d2aedda5cc9da61852f99"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verB.ilean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd5f0a8f65f326487813d3011d7bf2f6e3f513b2",
+      "size": 12407,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/cd5f0a8f65f326487813d3011d7bf2f6e3f513b2"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verB.ilean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5041347628f6dd54ec3445d510a5b85e5935ae5b",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5041347628f6dd54ec3445d510a5b85e5935ae5b"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verB.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69597ca2df6f8835f5a6adcaee1f9fdd5c8c43e5",
+      "size": 260296,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/69597ca2df6f8835f5a6adcaee1f9fdd5c8c43e5"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verB.olean.hash",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3ea215fc406ebc73c2363627500e8a8400bb99f",
+      "size": 16,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/d3ea215fc406ebc73c2363627500e8a8400bb99f"
+    },
+    {
+      "path": "LeanHW/.lake/build/lib/lean/LeanHW/Tier2/counter_verB.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99c9b1b959d32e903ce4ec85b9934493cacaa9c4",
+      "size": 2093,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/99c9b1b959d32e903ce4ec85b9934493cacaa9c4"
+    },
+    {
+      "path": "LeanHW/.lake/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bebd349879a13969865c049173247b6d71d3cf73",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/bebd349879a13969865c049173247b6d71d3cf73"
+    },
+    {
+      "path": "LeanHW/.lake/config/[anonymous]",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99ef4cf6af462ced96760ef0be180faef328c5f9",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/99ef4cf6af462ced96760ef0be180faef328c5f9"
+    },
+    {
+      "path": "LeanHW/.lake/config/[anonymous]/lakefile.olean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76dbad84b4e953bd7ff816499f1fb50be2b35601",
+      "size": 104272,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/76dbad84b4e953bd7ff816499f1fb50be2b35601"
+    },
+    {
+      "path": "LeanHW/.lake/config/[anonymous]/lakefile.olean.trace",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88fbac43ee9a5c89b58cb9808f065516aef12909",
+      "size": 184,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/88fbac43ee9a5c89b58cb9808f065516aef12909"
+    },
+    {
+      "path": "LeanHW/LeanHW.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ea944dd4ac95ee11717d77b7a770c00fb6045f0",
+      "size": 516,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1ea944dd4ac95ee11717d77b7a770c00fb6045f0"
+    },
+    {
+      "path": "LeanHW/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc5212ba20735a2e0d4b3ac4d1c7746928a882b0",
+      "size": 112,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/cc5212ba20735a2e0d4b3ac4d1c7746928a882b0"
+    },
+    {
+      "path": "LeanHW/lakefile.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b118e61628ad22768498acc0a91c31f725ced918",
+      "size": 168,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b118e61628ad22768498acc0a91c31f725ced918"
+    },
+    {
+      "path": "LeanHW/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14791d727f9a9455fb1e828c6ce6c07fae007990",
+      "size": 25,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/14791d727f9a9455fb1e828c6ce6c07fae007990"
+    },
+    {
+      "path": "Leans-Chat-Repair",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f791abd7e208fe7deee547a07e3a3e296574386",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/0f791abd7e208fe7deee547a07e3a3e296574386"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b7e0e21222614a4442be7a23886f248e0083133",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/1b7e0e21222614a4442be7a23886f248e0083133"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0f3f986dc37d675d0b44af9a30cca226c7a7c3c",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/b0f3f986dc37d675d0b44af9a30cca226c7a7c3c"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 3/async_fifo_mem_buffer_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf223581e26d503a4e76ef914c840f7197340dd5",
+      "size": 6066,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/cf223581e26d503a4e76ef914c840f7197340dd5"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 3/async_shift_reg_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b2a385a348490194db8d50e75898c5866090473",
+      "size": 6436,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2b2a385a348490194db8d50e75898c5866090473"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 3/circular_buffer_fifo_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf7d9a619a5ddcec782a935df616fe8ba4f0e43b",
+      "size": 4612,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/cf7d9a619a5ddcec782a935df616fe8ba4f0e43b"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 3/dual_port_fifo_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8db1166ebfcea312479a878c1eb408ccc7795c4",
+      "size": 5196,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b8db1166ebfcea312479a878c1eb408ccc7795c4"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 3/sync_fifo_shif_reg_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459f38025fafa3d2f5e9a3b1caa02d5f0436ffa8",
+      "size": 3683,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/459f38025fafa3d2f5e9a3b1caa02d5f0436ffa8"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 3/threshold_buffer_fifo_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ddb1e65837633f3c2c8cad43073ae16ceb31c0e",
+      "size": 4351,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4ddb1e65837633f3c2c8cad43073ae16ceb31c0e"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c57d50a7e2db10dc1187bb6283cb9b3abcde411d",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/c57d50a7e2db10dc1187bb6283cb9b3abcde411d"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 4/divider_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "602c075820c1db6dbccee4cb63208412064c0440",
+      "size": 3448,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/602c075820c1db6dbccee4cb63208412064c0440"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 4/fpu_dp_div_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "316293dc363c749e7c2e37b290f646427e54976a",
+      "size": 10748,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/316293dc363c749e7c2e37b290f646427e54976a"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 4/fpu_dp_mul_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b744506b2e3a8f417db767ecfef61c2122d5d74",
+      "size": 12396,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1b744506b2e3a8f417db767ecfef61c2122d5d74"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 1/Tier 4/rob_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f89005916573ccdca9f05acf4ebdc499ebdce3fa",
+      "size": 18756,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f89005916573ccdca9f05acf4ebdc499ebdce3fa"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7de8b26f5bc92b9f4934d5b343fc257398826a82",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/7de8b26f5bc92b9f4934d5b343fc257398826a82"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 2/Tier 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b3c2c45606114df60dbd8ef8c3568114fa5f915",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/0b3c2c45606114df60dbd8ef8c3568114fa5f915"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 2/Tier 3/sync_fifo_shif_reg_fixed_v2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fec540d672762da3bf6ded8183abd10cff63b02",
+      "size": 2641,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3fec540d672762da3bf6ded8183abd10cff63b02"
+    },
+    {
+      "path": "Leans-Chat-Repair/Iter 2/Tier 3/threshold_buffer_fifo_fixed_v2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8759990e3c5999be60072af51848e0ed6fdc4483",
+      "size": 2937,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8759990e3c5999be60072af51848e0ed6fdc4483"
+    },
+    {
+      "path": "Leans-Chat",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6d75cb794390b85f1cecb140d92afcde18e8f83",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/e6d75cb794390b85f1cecb140d92afcde18e8f83"
+    },
+    {
+      "path": "Leans-Chat/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3648de9b5bbe4a1a8095e4398afa2898584bd445",
+      "size": 6148,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3648de9b5bbe4a1a8095e4398afa2898584bd445"
+    },
+    {
+      "path": "Leans-Chat/Tier 1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ed6fb89ce62f803579220fdceb02991df2480b9",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/5ed6fb89ce62f803579220fdceb02991df2480b9"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/ALU_4_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b30785d829c0968ef447af96218cdf40695b386c",
+      "size": 1071,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b30785d829c0968ef447af96218cdf40695b386c"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/ALU_4_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9952a344a97b625f393f73497ddf5466b913fc4e",
+      "size": 1184,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/9952a344a97b625f393f73497ddf5466b913fc4e"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/Comparator_4bit_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81f36767fd8cd6f6c9566a5c7daaa047c83e14a2",
+      "size": 858,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/81f36767fd8cd6f6c9566a5c7daaa047c83e14a2"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/Decoder_2_4_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffe76e1175893bd63539d547751dec90b2e53593",
+      "size": 901,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ffe76e1175893bd63539d547751dec90b2e53593"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/Decoder_2_4_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fa3e52c7466fb747bcc340e31226c2630275533",
+      "size": 811,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7fa3e52c7466fb747bcc340e31226c2630275533"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/Encoder_4_2_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdd6683fe8e184909cc1f45ed99dad8aa5dec479",
+      "size": 1118,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bdd6683fe8e184909cc1f45ed99dad8aa5dec479"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/Encoder_4_2_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bce8d451f68e42453da352fcfcaa381ca859f9c1",
+      "size": 944,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bce8d451f68e42453da352fcfcaa381ca859f9c1"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/Mux_2_1_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e78226d5a9ef088e778ba444ddeef28adabc968a",
+      "size": 554,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e78226d5a9ef088e778ba444ddeef28adabc968a"
+    },
+    {
+      "path": "Leans-Chat/Tier 1/Mux_2_1_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "871046362697ce9a15e7185c765a1620c712b790",
+      "size": 618,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/871046362697ce9a15e7185c765a1620c712b790"
+    },
+    {
+      "path": "Leans-Chat/Tier 2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f87df934b49fe3ee8c7b2f1365c1cab8af19c423",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/f87df934b49fe3ee8c7b2f1365c1cab8af19c423"
+    },
+    {
+      "path": "Leans-Chat/Tier 2/accumulator_verA_en.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2111c2e03ed213ad61120fa4317e9728841ac401",
+      "size": 1418,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2111c2e03ed213ad61120fa4317e9728841ac401"
+    },
+    {
+      "path": "Leans-Chat/Tier 2/accumulator_verB_addsub.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa18349dcbb0816721526555bb0f4da3c3a8fc8b",
+      "size": 1708,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/fa18349dcbb0816721526555bb0f4da3c3a8fc8b"
+    },
+    {
+      "path": "Leans-Chat/Tier 2/counter_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e657d2c1f4821dd357b929c1afa06544581e0a39",
+      "size": 1320,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e657d2c1f4821dd357b929c1afa06544581e0a39"
+    },
+    {
+      "path": "Leans-Chat/Tier 2/counter_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "723b712e804a30020e391cf21ca0ac430305a76f",
+      "size": 1548,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/723b712e804a30020e391cf21ca0ac430305a76f"
+    },
+    {
+      "path": "Leans-Chat/Tier 2/shift_reg_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "126f08b6e1853bd23b95adfc9a4a11dd7c2e084d",
+      "size": 1837,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/126f08b6e1853bd23b95adfc9a4a11dd7c2e084d"
+    },
+    {
+      "path": "Leans-Chat/Tier 2/shift_reg_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bc03a8162daf1ad249ba8de4fee708b7a3b3eac",
+      "size": 1844,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3bc03a8162daf1ad249ba8de4fee708b7a3b3eac"
+    },
+    {
+      "path": "Leans-Chat/Tier 2/small_fsm_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3091b110473adc14bb44f2bf2bb16c41e992a6ce",
+      "size": 1655,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3091b110473adc14bb44f2bf2bb16c41e992a6ce"
+    },
+    {
+      "path": "Leans-Chat/Tier 2/small_fsm_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1686fade30a85bdc6c6a9fc37d0ca705ac37afe2",
+      "size": 3046,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1686fade30a85bdc6c6a9fc37d0ca705ac37afe2"
+    },
+    {
+      "path": "Leans-Chat/Tier 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42979d33ce3d6d329f8979ce3667ed9dda54ed04",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/42979d33ce3d6d329f8979ce3667ed9dda54ed04"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/async_fifo_mem_buffer.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b04b3fc9c9b11f93ee3fe657362492c40f2e669",
+      "size": 5979,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/6b04b3fc9c9b11f93ee3fe657362492c40f2e669"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/async_shift_reg.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "337c6750434301cc773eee7fb24239b8cd8b5f80",
+      "size": 6349,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/337c6750434301cc773eee7fb24239b8cd8b5f80"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/circular_buffer_fifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b127e7dd4f21012f3cb16a0435f025e46356a98b",
+      "size": 4481,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b127e7dd4f21012f3cb16a0435f025e46356a98b"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/dual_port_fifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e2e856b229097564ffbc52aff0e5944e6c20c76",
+      "size": 5097,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3e2e856b229097564ffbc52aff0e5944e6c20c76"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/lottery_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84f128837b47dae70a5f307ef8af172cb66f1c75",
+      "size": 2361,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/84f128837b47dae70a5f307ef8af172cb66f1c75"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/parallel_prefix_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62ab3259ad1e0e42d59d59886aad237b0e966ed6",
+      "size": 2723,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/62ab3259ad1e0e42d59d59886aad237b0e966ed6"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/pq_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "585e617608d8a8f3ff3cbc5101f46a0a8db79dd0",
+      "size": 4950,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/585e617608d8a8f3ff3cbc5101f46a0a8db79dd0"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/rr_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8606ba6f1706a93be67d21f6a4fcff4a08865dcc",
+      "size": 2751,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8606ba6f1706a93be67d21f6a4fcff4a08865dcc"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/sync_fifo_mem_buffer.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fed98d81116aaa51f37057e50b82267489314cfe",
+      "size": 3485,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/fed98d81116aaa51f37057e50b82267489314cfe"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/sync_fifo_shif_reg.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c4ebeec86c467117194f0e330e32947bde7d411",
+      "size": 3733,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3c4ebeec86c467117194f0e330e32947bde7d411"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/threshold_buffer_fifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c73e42c90946248b7893e681fb805d003026a1b",
+      "size": 4241,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4c73e42c90946248b7893e681fb805d003026a1b"
+    },
+    {
+      "path": "Leans-Chat/Tier 3/token_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd5f3d9ba2787338641eb232d8d6288bf61c100e",
+      "size": 2247,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/fd5f3d9ba2787338641eb232d8d6288bf61c100e"
+    },
+    {
+      "path": "Leans-Chat/Tier 4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c793c32949ccaaa98eaed69799c9805ae2687d6",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/1c793c32949ccaaa98eaed69799c9805ae2687d6"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/divider.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c660fd51600697376cd06b6fd05192b169320459",
+      "size": 3388,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c660fd51600697376cd06b6fd05192b169320459"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/fpu_dp_add.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37205547649e99c294af0c26da0ed9df22179753",
+      "size": 13256,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/37205547649e99c294af0c26da0ed9df22179753"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/fpu_dp_div.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "075685b01f84dfcc885b6114fa7c4bced4efee97",
+      "size": 10544,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/075685b01f84dfcc885b6114fa7c4bced4efee97"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/fpu_dp_mul.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aed3051753a594bc6d0e552b3c66aa3346410fb9",
+      "size": 12162,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/aed3051753a594bc6d0e552b3c66aa3346410fb9"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/fpu_sp_add.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8eba7a7f99860a7a6af32e7341c93ad11f599853",
+      "size": 9443,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8eba7a7f99860a7a6af32e7341c93ad11f599853"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/fpu_sp_div.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41f023ed8f8c5e2137961b8a10cea8c5aa564ba5",
+      "size": 9408,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/41f023ed8f8c5e2137961b8a10cea8c5aa564ba5"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/fpu_sp_mul.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72248d1f09c5c314438b7cd0bde8d65f92c04df5",
+      "size": 12497,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/72248d1f09c5c314438b7cd0bde8d65f92c04df5"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/rob.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a990b64f1452b89494003327cb8808a933b7218d",
+      "size": 18756,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a990b64f1452b89494003327cb8808a933b7218d"
+    },
+    {
+      "path": "Leans-Chat/Tier 4/sqrt.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58cbd46486d773ea59e8e77f3ef4c6e1df76f526",
+      "size": 5077,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/58cbd46486d773ea59e8e77f3ef4c6e1df76f526"
+    },
+    {
+      "path": "Leans-Gemmini-Repair",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "539a8cd87dfc438480d2e9ffc9ac92879654f149",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/539a8cd87dfc438480d2e9ffc9ac92879654f149"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "058c3b6b210dd27afb1f0be646176fc58d4e124f",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/058c3b6b210dd27afb1f0be646176fc58d4e124f"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b1ac0951dce6b6f4306e0bc7355173947aee925",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/0b1ac0951dce6b6f4306e0bc7355173947aee925"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 3/async_fifo_mem_buffer_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ef568dfa85ea6a7101d4247256b2666a85ce30c",
+      "size": 4866,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3ef568dfa85ea6a7101d4247256b2666a85ce30c"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 3/rr_arbiter_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dab281e981a1e57c22b6aafffd28ec88ca5d2dd",
+      "size": 1621,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0dab281e981a1e57c22b6aafffd28ec88ca5d2dd"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 3/token_arbiter_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1395a2e153b056ab2fc2bfd4e03c8150ff132d4",
+      "size": 2136,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b1395a2e153b056ab2fc2bfd4e03c8150ff132d4"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd602b4032fc0464fb71ce01865f0a66134eae00",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/fd602b4032fc0464fb71ce01865f0a66134eae00"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 4/fpu_dp_add_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e922620f94a0847a7aa704327463f1ed9d345100",
+      "size": 9209,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e922620f94a0847a7aa704327463f1ed9d345100"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 4/fpu_dp_div_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a53fe0eca5c23874b28e1d46a03cb12ea0ad1fda",
+      "size": 7489,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a53fe0eca5c23874b28e1d46a03cb12ea0ad1fda"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 4/fpu_dp_mul_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12fc61651a2074083b01613c2d848955cf8e93c2",
+      "size": 9255,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/12fc61651a2074083b01613c2d848955cf8e93c2"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 4/fpu_sp_add_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5976260fb8d8f612fc3b26280529d48d38ba45c",
+      "size": 10949,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a5976260fb8d8f612fc3b26280529d48d38ba45c"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 4/fpu_sp_div_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e342c521d97c9750dcc01e15fb67d26bc9b328d7",
+      "size": 7682,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e342c521d97c9750dcc01e15fb67d26bc9b328d7"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 4/fpu_sp_mul_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af6b28b788bf0e7649677e185d13576cbe83996b",
+      "size": 7768,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/af6b28b788bf0e7649677e185d13576cbe83996b"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 1/Tier 4/rob_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03bc8d768d7c7547a4c4c34ab4ada42161bfb750",
+      "size": 12748,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/03bc8d768d7c7547a4c4c34ab4ada42161bfb750"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0824923522d0a142b44ae7672d38a140a6db602",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/f0824923522d0a142b44ae7672d38a140a6db602"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2/Tier 4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "decd7a75a312b1c682f04e5f2a47f6de0029f828",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/decd7a75a312b1c682f04e5f2a47f6de0029f828"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2/Tier 4/fpu_dp_add_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af98002ddf9641d2284e6e555d7b8731f0dd4a3f",
+      "size": 9364,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/af98002ddf9641d2284e6e555d7b8731f0dd4a3f"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2/Tier 4/fpu_dp_div_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc412143a2dde72523f41cf49f1b239a4e84de3f",
+      "size": 8639,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/dc412143a2dde72523f41cf49f1b239a4e84de3f"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2/Tier 4/fpu_dp_mul_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09093ca46ce31646852825d8c50a135b7fe27b97",
+      "size": 7451,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/09093ca46ce31646852825d8c50a135b7fe27b97"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2/Tier 4/fpu_sp_add_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3135520b6a4cebee92c61a3dbdb89a9457339cfd",
+      "size": 9699,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3135520b6a4cebee92c61a3dbdb89a9457339cfd"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2/Tier 4/fpu_sp_div_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74be3f7c4f3c2a8d77a648157d1ed5e2a5d580bf",
+      "size": 8676,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/74be3f7c4f3c2a8d77a648157d1ed5e2a5d580bf"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2/Tier 4/fpu_sp_mul_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "537db40b962617abc46a4282cb47409388315695",
+      "size": 8214,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/537db40b962617abc46a4282cb47409388315695"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 2/Tier 4/rob_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "881c52025af3e5015e9da654fcaa8e1e874e5ac7",
+      "size": 13394,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/881c52025af3e5015e9da654fcaa8e1e874e5ac7"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa8ab08e3c7e0af16332e9d15ebf6a5f9bbfaabf",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/aa8ab08e3c7e0af16332e9d15ebf6a5f9bbfaabf"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 3/Tier 4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f89f1bd5dd40e87b48c06bd7bec9ff4d9311b24",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/6f89f1bd5dd40e87b48c06bd7bec9ff4d9311b24"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 3/Tier 4/fpu_dp_add_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f22e04f9ed670109a4dbf53a1c60bfabd9cb0226",
+      "size": 9598,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f22e04f9ed670109a4dbf53a1c60bfabd9cb0226"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 3/Tier 4/fpu_dp_div_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f960d304debb23fe584d414c0fa51473ff19212",
+      "size": 8425,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5f960d304debb23fe584d414c0fa51473ff19212"
+    },
+    {
+      "path": "Leans-Gemmini-Repair/Iter 3/Tier 4/rob_fixed.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "726c50ba30c77b9d13938d2f6f6a1446d712b43c",
+      "size": 13429,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/726c50ba30c77b9d13938d2f6f6a1446d712b43c"
+    },
+    {
+      "path": "Leans-Gemmini",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a6675a995d5be21e39023803561407fa327b6c0",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/7a6675a995d5be21e39023803561407fa327b6c0"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82355b531d25c6749c76a85ba0ad88c7a0efa7ad",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/82355b531d25c6749c76a85ba0ad88c7a0efa7ad"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/ALU_4_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87d746f3ba4491830d8ddc47406cd0a6b766db00",
+      "size": 1085,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/87d746f3ba4491830d8ddc47406cd0a6b766db00"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/ALU_4_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcc50259cccd6d1b7a9bbbd956f14ebec95b452a",
+      "size": 1209,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/dcc50259cccd6d1b7a9bbbd956f14ebec95b452a"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/Comparator_4bit_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd3806a979f4203e2344bd6711d0f2020d81cf97",
+      "size": 846,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/dd3806a979f4203e2344bd6711d0f2020d81cf97"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/Decoder_2_4_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28d6a76579b5832be31f0e30dd5c7ec290e9ba14",
+      "size": 918,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/28d6a76579b5832be31f0e30dd5c7ec290e9ba14"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/Decoder_2_4_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda3d24e525a774a0a0ce0cbff0dbe7cdf4a25f5",
+      "size": 766,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bda3d24e525a774a0a0ce0cbff0dbe7cdf4a25f5"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/Encoder_4_2_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dfc1eb033064f74f751f0f57b112273383dae72",
+      "size": 1071,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8dfc1eb033064f74f751f0f57b112273383dae72"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/Encoder_4_2_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e556434f5bf222dfe5ede21611db83fc5f743d02",
+      "size": 1009,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e556434f5bf222dfe5ede21611db83fc5f743d02"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/Mux_2_1_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "553b9642d3845a4a3c0a16a2840ed2544827e5a2",
+      "size": 553,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/553b9642d3845a4a3c0a16a2840ed2544827e5a2"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 1/Mux_2_1_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a6b618536c942c2075bcb2309b40f040b2701c2",
+      "size": 575,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3a6b618536c942c2075bcb2309b40f040b2701c2"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a08a579fdd7a413536bb14b11771903b8bee9cf0",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/a08a579fdd7a413536bb14b11771903b8bee9cf0"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2/accumulator_verA_en.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd19c6776f4290a7c3577147cdc235af04e4fdfb",
+      "size": 1144,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/dd19c6776f4290a7c3577147cdc235af04e4fdfb"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2/accumulator_verB_addsub.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bca4a01c9c2df8b234305ffd46e3e87bbdbbd4c9",
+      "size": 1476,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bca4a01c9c2df8b234305ffd46e3e87bbdbbd4c9"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2/counter_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7037d9895b1719bbae8af4a5b46b7308db7c245a",
+      "size": 977,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7037d9895b1719bbae8af4a5b46b7308db7c245a"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2/counter_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d4b2e488cfd9bd03735f19665416d0b39a89aae",
+      "size": 1414,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/9d4b2e488cfd9bd03735f19665416d0b39a89aae"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2/shift_reg_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bbf43c2cbadbaf52ef283f7bb75bdf9138a63f2",
+      "size": 1246,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0bbf43c2cbadbaf52ef283f7bb75bdf9138a63f2"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2/shift_reg_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be48a7a6fd228e9567f06cda133723631b3c72c6",
+      "size": 1254,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/be48a7a6fd228e9567f06cda133723631b3c72c6"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2/small_fsm_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b98710778abf7ad0d1270da46540836be13926b7",
+      "size": 1499,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b98710778abf7ad0d1270da46540836be13926b7"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 2/small_fsm_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63c0639f09ba18be506d786491f91bf380b00b3c",
+      "size": 2006,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/63c0639f09ba18be506d786491f91bf380b00b3c"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e7194d7840357a22b9b0621aa3d7ac970e2b75c",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/0e7194d7840357a22b9b0621aa3d7ac970e2b75c"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/async_fifo_mem_buffer.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62b6fcd31bf770bc38b2dcd8dc17aeb6b992cd2c",
+      "size": 4571,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/62b6fcd31bf770bc38b2dcd8dc17aeb6b992cd2c"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/async_shift_reg.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "989b39cf82e39151f44f25071c31ced763d3d4b2",
+      "size": 3533,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/989b39cf82e39151f44f25071c31ced763d3d4b2"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/circular_buffer_fifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69e4e2a894bdb327e8ff48ad2c21f7ba87fc32f0",
+      "size": 2382,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/69e4e2a894bdb327e8ff48ad2c21f7ba87fc32f0"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/dual_port_fifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7cc6aec36a6b31515e5c4482bd47087c198ab04",
+      "size": 2235,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b7cc6aec36a6b31515e5c4482bd47087c198ab04"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/lottery_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37b0647e2ce298d736743730a829312aaf3d2da8",
+      "size": 1216,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/37b0647e2ce298d736743730a829312aaf3d2da8"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/parallel_prefix_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f57171980bc970553b59a18336ca86764a18cff",
+      "size": 1345,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0f57171980bc970553b59a18336ca86764a18cff"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/pq_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddb348c792b9a52340dddea72f73ff5379d4de60",
+      "size": 1094,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ddb348c792b9a52340dddea72f73ff5379d4de60"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/rr_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3321290324190d866c3ab0321a02a7f8c8d51e87",
+      "size": 1451,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3321290324190d866c3ab0321a02a7f8c8d51e87"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/sync_fifo_mem_buffer.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "519c9a496d85f5822c4a0cf9b810bea7c6035b8b",
+      "size": 1920,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/519c9a496d85f5822c4a0cf9b810bea7c6035b8b"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/sync_fifo_shif_reg.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "287e25e7cf5860be1f3f8258dfc5902e60ffde42",
+      "size": 2118,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/287e25e7cf5860be1f3f8258dfc5902e60ffde42"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/threshold_buffer_fifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "007e650aae6872c0fa66884091f5d8397e9a56b0",
+      "size": 2994,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/007e650aae6872c0fa66884091f5d8397e9a56b0"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 3/token_arbiter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c0d325fbf53f2c5a9ab4bf8203e4950dce6f79a",
+      "size": 3441,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4c0d325fbf53f2c5a9ab4bf8203e4950dce6f79a"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "814a63c14e65f53a1a7473e38457c6e7c2a288bb",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/814a63c14e65f53a1a7473e38457c6e7c2a288bb"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/divider.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9f852fc43655d68e24e89fe3848269a6ae1109c",
+      "size": 4626,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f9f852fc43655d68e24e89fe3848269a6ae1109c"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/fpu_dp_add.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65ab9e64afca9779c261b518a7f8b159fc2573fe",
+      "size": 9307,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/65ab9e64afca9779c261b518a7f8b159fc2573fe"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/fpu_dp_div.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4439ceb0012f1cf0b58401afb1aad78c33856b6d",
+      "size": 8639,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4439ceb0012f1cf0b58401afb1aad78c33856b6d"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/fpu_dp_mul.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "152ae44cd482d4c5e1a33ff792da97506b096055",
+      "size": 7659,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/152ae44cd482d4c5e1a33ff792da97506b096055"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/fpu_sp_add.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e772c641bc2ceee0b73df5a395d134b63a96df7",
+      "size": 9405,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5e772c641bc2ceee0b73df5a395d134b63a96df7"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/fpu_sp_div.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f31769a960b5d565c9c4d35bc7b70b4b0bf16dd5",
+      "size": 8575,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f31769a960b5d565c9c4d35bc7b70b4b0bf16dd5"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/fpu_sp_mul.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbe3e0cc226597c6600a7f78c07705c27d7d3cac",
+      "size": 7576,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/fbe3e0cc226597c6600a7f78c07705c27d7d3cac"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/rob.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51f161ca6dcd8c0c780c7b37a86092795080b7a7",
+      "size": 13245,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/51f161ca6dcd8c0c780c7b37a86092795080b7a7"
+    },
+    {
+      "path": "Leans-Gemmini/Tier 4/sqrt.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1320da9c2fec8398e5132e8fa7d40685aa0ff81",
+      "size": 2864,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b1320da9c2fec8398e5132e8fa7d40685aa0ff81"
+    },
+    {
+      "path": "Leans-Handcrafted",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "111dc98b16d5122a99c7ce0a81ff90bdc846202a",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/111dc98b16d5122a99c7ce0a81ff90bdc846202a"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "785526f88261be9048d9807a45133ed4c51bacd5",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/785526f88261be9048d9807a45133ed4c51bacd5"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/ALU_4_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e40bacd72adf1275c72e93df005aee916af651",
+      "size": 1073,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/93e40bacd72adf1275c72e93df005aee916af651"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/ALU_4_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88c17aef8e7d39be5cec28b73e71d969e3eeeb7d",
+      "size": 1237,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/88c17aef8e7d39be5cec28b73e71d969e3eeeb7d"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/Comparator_4bit_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de852ce04efdc1357460d38e7a6379349a56a8f4",
+      "size": 864,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/de852ce04efdc1357460d38e7a6379349a56a8f4"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/Decoder_2_4_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9729d7cd9703837c0a111282f3f4a94ef025f17",
+      "size": 958,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/d9729d7cd9703837c0a111282f3f4a94ef025f17"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/Decoder_2_4_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "700318da6c1b2689bfafade7102e8b0d2c8d6423",
+      "size": 796,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/700318da6c1b2689bfafade7102e8b0d2c8d6423"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/Encoder_4_2_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83382cc372db3026f68506ac3cc227c7bb1a37d4",
+      "size": 1019,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/83382cc372db3026f68506ac3cc227c7bb1a37d4"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/Encoder_4_2_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "deb395dcd42bb108e8c7137b2d6382cc4f58f290",
+      "size": 932,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/deb395dcd42bb108e8c7137b2d6382cc4f58f290"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/Mux_2_1_verA.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06fb9f53320bb1af39c116625f58462ad6f81d6d",
+      "size": 534,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/06fb9f53320bb1af39c116625f58462ad6f81d6d"
+    },
+    {
+      "path": "Leans-Handcrafted/Tier 1/Mux_2_1_verB.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b16981971081da12ee6d991f224bee03056a055b",
+      "size": 571,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b16981971081da12ee6d991f224bee03056a055b"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6158abadb4969ae938b1042d51c0ca285b58f0e",
+      "size": 8425,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a6158abadb4969ae938b1042d51c0ca285b58f0e"
+    },
+    {
+      "path": "Verilog Designs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ba631e08293db8b6af8d3e443d47e479d2e58bf",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/9ba631e08293db8b6af8d3e443d47e479d2e58bf"
+    },
+    {
+      "path": "Verilog Designs/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5a14efd0fe822a93a61588f8976857f2b6041f3",
+      "size": 8196,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e5a14efd0fe822a93a61588f8976857f2b6041f3"
+    },
+    {
+      "path": "Verilog Designs/Tier 1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "785a7aad5f35ac6995682caa2e38a505c3e61ef8",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/785a7aad5f35ac6995682caa2e38a505c3e61ef8"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/ALU_4_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86dce0b23a40a8c34ff5d75b8fb0474da8009756",
+      "size": 347,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/86dce0b23a40a8c34ff5d75b8fb0474da8009756"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/ALU_4_verB.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac4d8db07b88545a1d34366a7ed24b52da97bda6",
+      "size": 569,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ac4d8db07b88545a1d34366a7ed24b52da97bda6"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/Comparator_4bit_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a37f465a9646c43fe40dde6f86e853b7b17a882",
+      "size": 259,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8a37f465a9646c43fe40dde6f86e853b7b17a882"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/Decoder_2_4_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "452fa52bf64b34034061f5c4e937afe5bfb4213e",
+      "size": 291,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/452fa52bf64b34034061f5c4e937afe5bfb4213e"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/Decoder_2_4_verB.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6abc995093feac4cb4acd80d7022a1b08098f6bb",
+      "size": 123,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/6abc995093feac4cb4acd80d7022a1b08098f6bb"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/Encoder_4_2_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7f047cf2e96d1cc55aa2e3fafb86d7ec5155444",
+      "size": 325,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b7f047cf2e96d1cc55aa2e3fafb86d7ec5155444"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/Encoder_4_2_verB.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e5cb5d064f97280a55a914521fb2beaf8ae7bc9",
+      "size": 161,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0e5cb5d064f97280a55a914521fb2beaf8ae7bc9"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/Mux_2_1_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d77fffbc2e2e117686ddaa3e7e1d384155d76df",
+      "size": 152,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5d77fffbc2e2e117686ddaa3e7e1d384155d76df"
+    },
+    {
+      "path": "Verilog Designs/Tier 1/Mux_2_1_verB.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fa015f578a9f8c6df158672b7ba7a421abefc4c",
+      "size": 274,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0fa015f578a9f8c6df158672b7ba7a421abefc4c"
+    },
+    {
+      "path": "Verilog Designs/Tier 2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "479289e24f1453a476927251fb46b8fdbe0402e7",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/479289e24f1453a476927251fb46b8fdbe0402e7"
+    },
+    {
+      "path": "Verilog Designs/Tier 2/accumulator_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0202f1cdcea1a0cd3a61bc38c7886d860c3df330",
+      "size": 1157,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0202f1cdcea1a0cd3a61bc38c7886d860c3df330"
+    },
+    {
+      "path": "Verilog Designs/Tier 2/accumulator_verB.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80f11db90f086a1b447bc5f151e295e2881207ad",
+      "size": 1481,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/80f11db90f086a1b447bc5f151e295e2881207ad"
+    },
+    {
+      "path": "Verilog Designs/Tier 2/counter_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80976bd7cb75ad3cc99be09c13396bb9de9d0a4d",
+      "size": 991,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/80976bd7cb75ad3cc99be09c13396bb9de9d0a4d"
+    },
+    {
+      "path": "Verilog Designs/Tier 2/counter_verB.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "090ba7eeb23b3e0ca11840fdc24dc7bd285c8086",
+      "size": 1243,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/090ba7eeb23b3e0ca11840fdc24dc7bd285c8086"
+    },
+    {
+      "path": "Verilog Designs/Tier 2/shift_reg_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40a38fe82580b369edf9e2dc3a09b51a089a5bc1",
+      "size": 1442,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/40a38fe82580b369edf9e2dc3a09b51a089a5bc1"
+    },
+    {
+      "path": "Verilog Designs/Tier 2/shift_reg_verB.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2a3c716b93c80f6462a3c3033a8040125a66969",
+      "size": 1442,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e2a3c716b93c80f6462a3c3033a8040125a66969"
+    },
+    {
+      "path": "Verilog Designs/Tier 2/small_fsm_verA.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c907516a47d4f45293ee58c4cd7d9f1c037be96",
+      "size": 1647,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1c907516a47d4f45293ee58c4cd7d9f1c037be96"
+    },
+    {
+      "path": "Verilog Designs/Tier 2/small_fsm_verB.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ae6201b8a213eb52889eda616dfbb19502876a9",
+      "size": 2477,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8ae6201b8a213eb52889eda616dfbb19502876a9"
+    },
+    {
+      "path": "Verilog Designs/Tier 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88618478e07eee38d491c83574d843ce3a59afe8",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/88618478e07eee38d491c83574d843ce3a59afe8"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/async_fifo_mem_buffer_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84e4a2a53a7b0a53d79b0bee096f4f74cccdaf0f",
+      "size": 3081,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/84e4a2a53a7b0a53d79b0bee096f4f74cccdaf0f"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/async_fifo_shift_reg_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7abac2565e5df1aa623b408a20444b699b6319f",
+      "size": 3706,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f7abac2565e5df1aa623b408a20444b699b6319f"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/circular_buffer_fifo_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0308e5e041ab52f3fa6ad6bbbb75d0f4fb6f3536",
+      "size": 1950,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0308e5e041ab52f3fa6ad6bbbb75d0f4fb6f3536"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/dual_port_fifo_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd943c5cc1fc3edc86a1ec15957fd68d4685602c",
+      "size": 2042,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bd943c5cc1fc3edc86a1ec15957fd68d4685602c"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/lottery_arbiter_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "309ea78608f1e6b72c5448d35044fd0efdaa6968",
+      "size": 1178,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/309ea78608f1e6b72c5448d35044fd0efdaa6968"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/parallel_prefix_arbiter_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca80a5b16f2b5549068ba0f0ec49eb744d1c7eb5",
+      "size": 3675,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ca80a5b16f2b5549068ba0f0ec49eb744d1c7eb5"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/pq_arbiter_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c7fec250491526d1d408406aaaa88772a2b4cf4",
+      "size": 2112,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0c7fec250491526d1d408406aaaa88772a2b4cf4"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/rr_arbiter_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc5a81e70e527e8737bc7a605b4ba4047187a2b2",
+      "size": 1248,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bc5a81e70e527e8737bc7a605b4ba4047187a2b2"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/sync_fifo_mem_buffer_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90c672109d1b3d338bb65df01cdb98fb67c651e0",
+      "size": 1521,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/90c672109d1b3d338bb65df01cdb98fb67c651e0"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/sync_fifo_shift_reg_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6481c26ac5a2aa06906792e58e4f6352a979218",
+      "size": 2067,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b6481c26ac5a2aa06906792e58e4f6352a979218"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/threshold_buffer_fifo_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ab7fb6c19bea6b29f1e35100a375103ea967004",
+      "size": 2090,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3ab7fb6c19bea6b29f1e35100a375103ea967004"
+    },
+    {
+      "path": "Verilog Designs/Tier 3/token_arbiter_rtl.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4966319029e31279e8856e404b19307c263770bc",
+      "size": 1350,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4966319029e31279e8856e404b19307c263770bc"
+    },
+    {
+      "path": "Verilog Designs/Tier 4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf8b8169889a6384c04cf55e127bc8538ddbd810",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/cf8b8169889a6384c04cf55e127bc8538ddbd810"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/divider.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "858e89f4abf6a5df6bdd7637088bbdd4ff72ed70",
+      "size": 2918,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/858e89f4abf6a5df6bdd7637088bbdd4ff72ed70"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/fpu_dp_add.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6db15002290108810431a3353398bfb1af52896",
+      "size": 9096,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c6db15002290108810431a3353398bfb1af52896"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/fpu_dp_div.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b13e94f7fafc8595769429da7fc84e2646ce60c",
+      "size": 9543,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1b13e94f7fafc8595769429da7fc84e2646ce60c"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/fpu_dp_mul.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2938164039b712e0e0d689c029b66e6c77c70f3c",
+      "size": 8467,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2938164039b712e0e0d689c029b66e6c77c70f3c"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/fpu_sp_add.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64ce3a2cc323642321932ec24dcd4f21730a67ec",
+      "size": 9352,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/64ce3a2cc323642321932ec24dcd4f21730a67ec"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/fpu_sp_div.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e2d587af047fb731a680b3e22d86d8668d75748",
+      "size": 8931,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3e2d587af047fb731a680b3e22d86d8668d75748"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/fpu_sp_mul.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa25bc7a00d7d7f2a75781f619adc11d50444c7d",
+      "size": 8476,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/fa25bc7a00d7d7f2a75781f619adc11d50444c7d"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/rob.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c90cca525483486ea9e044018a4ac28a6d2e168",
+      "size": 20547,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8c90cca525483486ea9e044018a4ac28a6d2e168"
+    },
+    {
+      "path": "Verilog Designs/Tier 4/sqrt.v",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57eeb7761e900433b00b2b2308d8b9ae7788df52",
+      "size": 2269,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/57eeb7761e900433b00b2b2308d8b9ae7788df52"
+    },
+    {
+      "path": "check.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dea33975992b3af8cf855f06576a244211e765d1",
+      "size": 18647,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/dea33975992b3af8cf855f06576a244211e765d1"
+    },
+    {
+      "path": "logs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc8955b9546ea85d6fff81cbe4c531d036640fc0",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/fc8955b9546ea85d6fff81cbe4c531d036640fc0"
+    },
+    {
+      "path": "logs/Iter1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01f97c607cb83e1c744d615f2d4a178ed57b001c",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/01f97c607cb83e1c744d615f2d4a178ed57b001c"
+    },
+    {
+      "path": "logs/Iter1/Tier3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d966a612aff25bf8601b4214364b37cbeaa249c9",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/d966a612aff25bf8601b4214364b37cbeaa249c9"
+    },
+    {
+      "path": "logs/Iter1/Tier3/async_fifo_mem_buffer_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86b59f643bafa80c5bd3198e3daed65a7ef7727b",
+      "size": 557,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/86b59f643bafa80c5bd3198e3daed65a7ef7727b"
+    },
+    {
+      "path": "logs/Iter1/Tier3/async_fifo_mem_buffer_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84666af8d02d102df3b68207cdd7640976661e93",
+      "size": 567,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/84666af8d02d102df3b68207cdd7640976661e93"
+    },
+    {
+      "path": "logs/Iter1/Tier3/async_shift_reg_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "711a5e8288aab2dc430d796d5068c5bbc607d986",
+      "size": 551,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/711a5e8288aab2dc430d796d5068c5bbc607d986"
+    },
+    {
+      "path": "logs/Iter1/Tier3/circular_buffer_fifo_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "496256357a8770a581a7d5dc5e5be2cd18d10f8c",
+      "size": 556,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/496256357a8770a581a7d5dc5e5be2cd18d10f8c"
+    },
+    {
+      "path": "logs/Iter1/Tier3/dual_port_fifo_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24f76adea0f4a272393c94faba563570a36f4f45",
+      "size": 550,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/24f76adea0f4a272393c94faba563570a36f4f45"
+    },
+    {
+      "path": "logs/Iter1/Tier3/rr_arbiter_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3be7f9dcfc919d96dc9f89cab70931dda396fb80",
+      "size": 556,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3be7f9dcfc919d96dc9f89cab70931dda396fb80"
+    },
+    {
+      "path": "logs/Iter1/Tier3/sync_fifo_shif_reg_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11ff90d0faafcc13a6f1b5b582281720fbaf6da6",
+      "size": 2173,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/11ff90d0faafcc13a6f1b5b582281720fbaf6da6"
+    },
+    {
+      "path": "logs/Iter1/Tier3/threshold_buffer_fifo_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e80be5059d5f3609a10291ff508bce5fe0d26142",
+      "size": 3875,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e80be5059d5f3609a10291ff508bce5fe0d26142"
+    },
+    {
+      "path": "logs/Iter1/Tier3/token_arbiter_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c16976f91bd49cae50f10daf4d29e32b753d44c4",
+      "size": 559,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c16976f91bd49cae50f10daf4d29e32b753d44c4"
+    },
+    {
+      "path": "logs/Iter1/Tier4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1162411468c3cd92e522a84ed4f99a2aef933828",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/1162411468c3cd92e522a84ed4f99a2aef933828"
+    },
+    {
+      "path": "logs/Iter1/Tier4/divider_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "934faebb43a144f38e2d4a5346199501262f5c51",
+      "size": 543,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/934faebb43a144f38e2d4a5346199501262f5c51"
+    },
+    {
+      "path": "logs/Iter1/Tier4/fpu_dp_add_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "221fc65b176b7002fe5439574f8a68809c7faef7",
+      "size": 768,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/221fc65b176b7002fe5439574f8a68809c7faef7"
+    },
+    {
+      "path": "logs/Iter1/Tier4/fpu_dp_div_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26ac79ab6a2b54fa475cf80bc202ed11186df0b1",
+      "size": 546,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/26ac79ab6a2b54fa475cf80bc202ed11186df0b1"
+    },
+    {
+      "path": "logs/Iter1/Tier4/fpu_dp_div_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57544f335fb57c0b072165ca331337b1bc659f66",
+      "size": 768,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/57544f335fb57c0b072165ca331337b1bc659f66"
+    },
+    {
+      "path": "logs/Iter1/Tier4/fpu_dp_mul_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e64fddca6ef452e6dc9de328497b0592eb76a11a",
+      "size": 546,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e64fddca6ef452e6dc9de328497b0592eb76a11a"
+    },
+    {
+      "path": "logs/Iter1/Tier4/fpu_dp_mul_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42fcd6075642a98345d41297533524da0108d94f",
+      "size": 1361,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/42fcd6075642a98345d41297533524da0108d94f"
+    },
+    {
+      "path": "logs/Iter1/Tier4/fpu_sp_add_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a30bb4ad02250129b47d9da44d27261a74fd9fda",
+      "size": 1324,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a30bb4ad02250129b47d9da44d27261a74fd9fda"
+    },
+    {
+      "path": "logs/Iter1/Tier4/fpu_sp_div_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de43e4b7e29e274033c8d564cb273dd17bb6d0cf",
+      "size": 1153,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/de43e4b7e29e274033c8d564cb273dd17bb6d0cf"
+    },
+    {
+      "path": "logs/Iter1/Tier4/fpu_sp_mul_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c92df0b794a89f3bc77e95e58fb04a15a599acdb",
+      "size": 1526,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c92df0b794a89f3bc77e95e58fb04a15a599acdb"
+    },
+    {
+      "path": "logs/Iter1/Tier4/rob_fixed_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48242f797ad53fdc96befcc98368870820170724",
+      "size": 539,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/48242f797ad53fdc96befcc98368870820170724"
+    },
+    {
+      "path": "logs/Iter1/Tier4/rob_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71300040829685830c953ab9d34318caf3db37d4",
+      "size": 3513,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/71300040829685830c953ab9d34318caf3db37d4"
+    },
+    {
+      "path": "logs/Iter2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8001e4b7659077314da54db2cfa3d525f86d7308",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/8001e4b7659077314da54db2cfa3d525f86d7308"
+    },
+    {
+      "path": "logs/Iter2/Tier3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d6f2e751efda1a46d4cb99454fcc0f01faf8d74",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/6d6f2e751efda1a46d4cb99454fcc0f01faf8d74"
+    },
+    {
+      "path": "logs/Iter2/Tier3/sync_fifo_shif_reg_fixed_v2_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff04ea069d46591212acbd12fa12f02d395ab93a",
+      "size": 557,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ff04ea069d46591212acbd12fa12f02d395ab93a"
+    },
+    {
+      "path": "logs/Iter2/Tier3/threshold_buffer_fifo_fixed_v2_chat_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63378a1036a0180417d8e8fb51b04e3fc20da4f4",
+      "size": 560,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/63378a1036a0180417d8e8fb51b04e3fc20da4f4"
+    },
+    {
+      "path": "logs/Iter2/Tier4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c0b4718ac81af567894e4c9530c417d15d5eaa5",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/0c0b4718ac81af567894e4c9530c417d15d5eaa5"
+    },
+    {
+      "path": "logs/Iter2/Tier4/fpu_dp_add_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0520b281879e98f0f8585f69109bced65f4221ca",
+      "size": 1189,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0520b281879e98f0f8585f69109bced65f4221ca"
+    },
+    {
+      "path": "logs/Iter2/Tier4/fpu_dp_div_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b86c0150e8d350e62e7a84310591c34c515e023",
+      "size": 3784,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8b86c0150e8d350e62e7a84310591c34c515e023"
+    },
+    {
+      "path": "logs/Iter2/Tier4/fpu_dp_mul_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42f7aa25ae6a387d5d77ed0540d493728d2cdd53",
+      "size": 556,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/42f7aa25ae6a387d5d77ed0540d493728d2cdd53"
+    },
+    {
+      "path": "logs/Iter2/Tier4/fpu_sp_add_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a4d04653d816c0449450f020b75bcfc9de6a4b8",
+      "size": 556,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5a4d04653d816c0449450f020b75bcfc9de6a4b8"
+    },
+    {
+      "path": "logs/Iter2/Tier4/fpu_sp_div_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46ff391afd0cf269bd7f11c01167b7b6d6e4258d",
+      "size": 556,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/46ff391afd0cf269bd7f11c01167b7b6d6e4258d"
+    },
+    {
+      "path": "logs/Iter2/Tier4/fpu_sp_mul_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea8d3770f053e5c5bb161d5e9ea25be153e25707",
+      "size": 556,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ea8d3770f053e5c5bb161d5e9ea25be153e25707"
+    },
+    {
+      "path": "logs/Iter2/Tier4/rob_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a142ede99ddb1494755d0c957728184d4fd8661",
+      "size": 9830,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1a142ede99ddb1494755d0c957728184d4fd8661"
+    },
+    {
+      "path": "logs/Iter3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1717608e0cc2e1f620cc40b82afa78d4d5fc5b37",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/1717608e0cc2e1f620cc40b82afa78d4d5fc5b37"
+    },
+    {
+      "path": "logs/Iter3/Tier4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e11f9fe44559d6a5eaf0e55561553fd09fc0a99",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/9e11f9fe44559d6a5eaf0e55561553fd09fc0a99"
+    },
+    {
+      "path": "logs/Iter3/Tier4/fpu_dp_add_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00ef2c54c102f3b7703fbf4dfb7744e9e1161f22",
+      "size": 3255,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/00ef2c54c102f3b7703fbf4dfb7744e9e1161f22"
+    },
+    {
+      "path": "logs/Iter3/Tier4/fpu_dp_div_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3f76ebb881b3bcaff50f6bb8e06fe5e58f10b0f",
+      "size": 556,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b3f76ebb881b3bcaff50f6bb8e06fe5e58f10b0f"
+    },
+    {
+      "path": "logs/Iter3/Tier4/rob_fixed_gemmini_repair.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a7ade815186243dfdffab8ce723ef9e37cc4dbe",
+      "size": 3885,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8a7ade815186243dfdffab8ce723ef9e37cc4dbe"
+    },
+    {
+      "path": "logs/_stats.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2a943b8b90f5f7f72556eeb351e11ac1aed7e1",
+      "size": 5237,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ea2a943b8b90f5f7f72556eeb351e11ac1aed7e1"
+    },
+    {
+      "path": "logs/chat_repair_tierAll_iter1.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b77a9ba2ce59c539067da06b086e644222633cbe",
+      "size": 1713,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b77a9ba2ce59c539067da06b086e644222633cbe"
+    },
+    {
+      "path": "logs/chat_repair_tierAll_iter2.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "785d7ac828741bb1f28b1a4880d2b581d2519dcd",
+      "size": 633,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/785d7ac828741bb1f28b1a4880d2b581d2519dcd"
+    },
+    {
+      "path": "logs/chat_tierAll_iter0.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2a943b8b90f5f7f72556eeb351e11ac1aed7e1",
+      "size": 5237,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ea2a943b8b90f5f7f72556eeb351e11ac1aed7e1"
+    },
+    {
+      "path": "logs/chat_tierAll_iterAll.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2a943b8b90f5f7f72556eeb351e11ac1aed7e1",
+      "size": 5237,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ea2a943b8b90f5f7f72556eeb351e11ac1aed7e1"
+    },
+    {
+      "path": "logs/gemmini_repair_tierAll_iter1.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfc38632693a5af2c3bf1ac39c0a6067fa001507",
+      "size": 2384,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bfc38632693a5af2c3bf1ac39c0a6067fa001507"
+    },
+    {
+      "path": "logs/gemmini_repair_tierAll_iter2.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a406b9d466b301464038ddaf7ee3ad823a570de6",
+      "size": 1536,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a406b9d466b301464038ddaf7ee3ad823a570de6"
+    },
+    {
+      "path": "logs/gemmini_repair_tierAll_iter3.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2388e572f6194eaf42899afce2ce35bdc92d8fad",
+      "size": 963,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2388e572f6194eaf42899afce2ce35bdc92d8fad"
+    },
+    {
+      "path": "logs/gemmini_tierAll_iter0.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dab3d56919319327acbe87390e0ab01aff19e92",
+      "size": 5248,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2dab3d56919319327acbe87390e0ab01aff19e92"
+    },
+    {
+      "path": "logs/iter0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1608f804b5ddd97ac3966ef85890a1c95cb8c56d",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/1608f804b5ddd97ac3966ef85890a1c95cb8c56d"
+    },
+    {
+      "path": "logs/iter0/Tier1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc3c4a4033768385f09f2efb0a1e90b7b423621b",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/cc3c4a4033768385f09f2efb0a1e90b7b423621b"
+    },
+    {
+      "path": "logs/iter0/Tier1/ALU_4_verA_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a7fa757767c3d02d8c083427aa983cfe376c999",
+      "size": 497,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3a7fa757767c3d02d8c083427aa983cfe376c999"
+    },
+    {
+      "path": "logs/iter0/Tier1/ALU_4_verA_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04fe3444bd064629bffde50a0c352e1ef881d061",
+      "size": 507,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/04fe3444bd064629bffde50a0c352e1ef881d061"
+    },
+    {
+      "path": "logs/iter0/Tier1/ALU_4_verB_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77fd625d2c65127a9675d575b89c34dcccf3d8c1",
+      "size": 497,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/77fd625d2c65127a9675d575b89c34dcccf3d8c1"
+    },
+    {
+      "path": "logs/iter0/Tier1/ALU_4_verB_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd11d4dee44663bd37179bf4df4d3a014b46e994",
+      "size": 507,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/fd11d4dee44663bd37179bf4df4d3a014b46e994"
+    },
+    {
+      "path": "logs/iter0/Tier1/Comparator_4bit_verA_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "360693ad20b9e2cf47276d60dc7ba8a8cfa91c8e",
+      "size": 507,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/360693ad20b9e2cf47276d60dc7ba8a8cfa91c8e"
+    },
+    {
+      "path": "logs/iter0/Tier1/Comparator_4bit_verA_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e70d16deedf12bad8f1a07cb9ea04b08639cb98",
+      "size": 517,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5e70d16deedf12bad8f1a07cb9ea04b08639cb98"
+    },
+    {
+      "path": "logs/iter0/Tier1/Decoder_2_4_verA_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbfebb86aa21cf174efa1bef0f5dbd8a1fd119ca",
+      "size": 503,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/fbfebb86aa21cf174efa1bef0f5dbd8a1fd119ca"
+    },
+    {
+      "path": "logs/iter0/Tier1/Decoder_2_4_verA_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87373d579f077414667c593e2ce5395c5e41c5d9",
+      "size": 513,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/87373d579f077414667c593e2ce5395c5e41c5d9"
+    },
+    {
+      "path": "logs/iter0/Tier1/Decoder_2_4_verB_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bfef4efb011bcf55ab57eba7c1b2e8fa2e90b6c",
+      "size": 503,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/6bfef4efb011bcf55ab57eba7c1b2e8fa2e90b6c"
+    },
+    {
+      "path": "logs/iter0/Tier1/Decoder_2_4_verB_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95b7b58b90efa52cd32db5466b5200d868f9011e",
+      "size": 513,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/95b7b58b90efa52cd32db5466b5200d868f9011e"
+    },
+    {
+      "path": "logs/iter0/Tier1/Encoder_4_2_verA_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9150ae26d29df0401cb18e3e2872697e46548866",
+      "size": 503,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/9150ae26d29df0401cb18e3e2872697e46548866"
+    },
+    {
+      "path": "logs/iter0/Tier1/Encoder_4_2_verA_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cadfea6625071c64a1da370368fe27a9fbd9e0e",
+      "size": 513,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0cadfea6625071c64a1da370368fe27a9fbd9e0e"
+    },
+    {
+      "path": "logs/iter0/Tier1/Encoder_4_2_verB_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7870b072457d6ed6616fa6b96f46d50da7195f75",
+      "size": 503,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7870b072457d6ed6616fa6b96f46d50da7195f75"
+    },
+    {
+      "path": "logs/iter0/Tier1/Encoder_4_2_verB_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23b83b5bf4f6e5450e1c231d5b0b67be9ab6e17e",
+      "size": 513,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/23b83b5bf4f6e5450e1c231d5b0b67be9ab6e17e"
+    },
+    {
+      "path": "logs/iter0/Tier1/Mux_2_1_verA_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a5f74cff45accb63f2555dcd0989a18233400aa",
+      "size": 499,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7a5f74cff45accb63f2555dcd0989a18233400aa"
+    },
+    {
+      "path": "logs/iter0/Tier1/Mux_2_1_verA_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "638b68b736bd4acacb0885fc275808f019166c9f",
+      "size": 509,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/638b68b736bd4acacb0885fc275808f019166c9f"
+    },
+    {
+      "path": "logs/iter0/Tier1/Mux_2_1_verB_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b789b272d7652e46d8616b677abe1251f66171",
+      "size": 499,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/d9b789b272d7652e46d8616b677abe1251f66171"
+    },
+    {
+      "path": "logs/iter0/Tier1/Mux_2_1_verB_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "533b0dde99bc073e1aee82bc85686a1198d3a084",
+      "size": 509,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/533b0dde99bc073e1aee82bc85686a1198d3a084"
+    },
+    {
+      "path": "logs/iter0/Tier2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d2ee14c569a6c29f6a7585d11b63c0e799fc6b1",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/1d2ee14c569a6c29f6a7585d11b63c0e799fc6b1"
+    },
+    {
+      "path": "logs/iter0/Tier2/accumulator_verA_en_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edf9a8331332b1949136d0296476837f933d332e",
+      "size": 503,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/edf9a8331332b1949136d0296476837f933d332e"
+    },
+    {
+      "path": "logs/iter0/Tier2/accumulator_verA_en_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c887c7e3a8a83cf4293aeb9ccc62bf1bbe13553d",
+      "size": 513,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c887c7e3a8a83cf4293aeb9ccc62bf1bbe13553d"
+    },
+    {
+      "path": "logs/iter0/Tier2/accumulator_verB_addsub_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a278cf71f6dc0de6c895101c90b7358774e75acc",
+      "size": 507,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a278cf71f6dc0de6c895101c90b7358774e75acc"
+    },
+    {
+      "path": "logs/iter0/Tier2/accumulator_verB_addsub_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf832f4124621d3c2a85568782a577aae1cde94d",
+      "size": 517,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bf832f4124621d3c2a85568782a577aae1cde94d"
+    },
+    {
+      "path": "logs/iter0/Tier2/counter_verA_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fca7c84fa2af1d6a7781206fd411ba5809669938",
+      "size": 496,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/fca7c84fa2af1d6a7781206fd411ba5809669938"
+    },
+    {
+      "path": "logs/iter0/Tier2/counter_verA_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bc340df0cadf4fe82610ed651db51dab448c6c1",
+      "size": 506,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0bc340df0cadf4fe82610ed651db51dab448c6c1"
+    },
+    {
+      "path": "logs/iter0/Tier2/counter_verB_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6353b7d8eb6d03687a2d42d40359639d1adc97f",
+      "size": 496,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b6353b7d8eb6d03687a2d42d40359639d1adc97f"
+    },
+    {
+      "path": "logs/iter0/Tier2/counter_verB_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2524b6ae2a7bbfd9642c5e63f55bd422cbb8f8a",
+      "size": 506,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/c2524b6ae2a7bbfd9642c5e63f55bd422cbb8f8a"
+    },
+    {
+      "path": "logs/iter0/Tier2/shift_reg_verA_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47affd4c05977a36861499dd90ece594de31f9b7",
+      "size": 498,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/47affd4c05977a36861499dd90ece594de31f9b7"
+    },
+    {
+      "path": "logs/iter0/Tier2/shift_reg_verA_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "465c4e4d77e9a529472c85f9cb60922700379a58",
+      "size": 508,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/465c4e4d77e9a529472c85f9cb60922700379a58"
+    },
+    {
+      "path": "logs/iter0/Tier2/shift_reg_verB_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b629a7d9a2aa223cd178d8d50f12294160dafbbf",
+      "size": 498,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/b629a7d9a2aa223cd178d8d50f12294160dafbbf"
+    },
+    {
+      "path": "logs/iter0/Tier2/shift_reg_verB_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c8e5769eb198916a91ab8b87b2fff6b089d7452",
+      "size": 508,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/9c8e5769eb198916a91ab8b87b2fff6b089d7452"
+    },
+    {
+      "path": "logs/iter0/Tier2/small_fsm_verA_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3dde0e2966d42f696cc8096fcd3ef3f7a5adbaa",
+      "size": 498,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/a3dde0e2966d42f696cc8096fcd3ef3f7a5adbaa"
+    },
+    {
+      "path": "logs/iter0/Tier2/small_fsm_verA_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1780cc5839aaf249a0ec557d8e3ef4a61b01ca71",
+      "size": 508,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1780cc5839aaf249a0ec557d8e3ef4a61b01ca71"
+    },
+    {
+      "path": "logs/iter0/Tier2/small_fsm_verB_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ba832fffd535fcfd313beccb30972eeec2cdc86",
+      "size": 498,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/2ba832fffd535fcfd313beccb30972eeec2cdc86"
+    },
+    {
+      "path": "logs/iter0/Tier2/small_fsm_verB_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f9250460d88efc3b5f161355206c0347a051ac2",
+      "size": 508,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/9f9250460d88efc3b5f161355206c0347a051ac2"
+    },
+    {
+      "path": "logs/iter0/Tier3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "daf555826a148a226e91c4ad6422324bde60bdc1",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/daf555826a148a226e91c4ad6422324bde60bdc1"
+    },
+    {
+      "path": "logs/iter0/Tier3/async_fifo_mem_buffer_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b43e8a4a6b7893dfee92401afdb0b692eae363a",
+      "size": 3058,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/0b43e8a4a6b7893dfee92401afdb0b692eae363a"
+    },
+    {
+      "path": "logs/iter0/Tier3/async_fifo_mem_buffer_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8de892c6c989e7752d65391f98dca130d798df06",
+      "size": 839,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8de892c6c989e7752d65391f98dca130d798df06"
+    },
+    {
+      "path": "logs/iter0/Tier3/async_shift_reg_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09a1ee340be0c10157d48ed09b5200361a513d66",
+      "size": 3018,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/09a1ee340be0c10157d48ed09b5200361a513d66"
+    },
+    {
+      "path": "logs/iter0/Tier3/async_shift_reg_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4390dfa2c64a8840f2304fc8d23e53a301ad9357",
+      "size": 509,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4390dfa2c64a8840f2304fc8d23e53a301ad9357"
+    },
+    {
+      "path": "logs/iter0/Tier3/circular_buffer_fifo_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7647f5c49da340eb4ac29b8cb7b8feba4300a4b3",
+      "size": 5284,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7647f5c49da340eb4ac29b8cb7b8feba4300a4b3"
+    },
+    {
+      "path": "logs/iter0/Tier3/circular_buffer_fifo_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c57a5ff879f3edf3708c42012dc3ad3daf2a8e1",
+      "size": 514,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7c57a5ff879f3edf3708c42012dc3ad3daf2a8e1"
+    },
+    {
+      "path": "logs/iter0/Tier3/dual_port_fifo_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "538920f25e9f2031982f124041edf5cac1a70226",
+      "size": 4504,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/538920f25e9f2031982f124041edf5cac1a70226"
+    },
+    {
+      "path": "logs/iter0/Tier3/dual_port_fifo_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "372c59228714939a0fb00631ba064a766b8d3103",
+      "size": 508,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/372c59228714939a0fb00631ba064a766b8d3103"
+    },
+    {
+      "path": "logs/iter0/Tier3/lottery_arbiter_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03f5c10d85536cfee73383c15ba774e4fd00d263",
+      "size": 499,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/03f5c10d85536cfee73383c15ba774e4fd00d263"
+    },
+    {
+      "path": "logs/iter0/Tier3/lottery_arbiter_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61df4e8f1609f025ca11413e9803a0a515230090",
+      "size": 509,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/61df4e8f1609f025ca11413e9803a0a515230090"
+    },
+    {
+      "path": "logs/iter0/Tier3/parallel_prefix_arbiter_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e1bbb9a4627e7e6083f53fadb5b81e48764af14",
+      "size": 507,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7e1bbb9a4627e7e6083f53fadb5b81e48764af14"
+    },
+    {
+      "path": "logs/iter0/Tier3/parallel_prefix_arbiter_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b13c89c9e8019deac84161089e5e849ef53932",
+      "size": 517,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/19b13c89c9e8019deac84161089e5e849ef53932"
+    },
+    {
+      "path": "logs/iter0/Tier3/pq_arbiter_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea8cb9e554f0725f6565ec1c7f50564af9d6f974",
+      "size": 494,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ea8cb9e554f0725f6565ec1c7f50564af9d6f974"
+    },
+    {
+      "path": "logs/iter0/Tier3/pq_arbiter_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c01cfbcb90f9aef71365f7bf47b217d22b128f3",
+      "size": 504,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/6c01cfbcb90f9aef71365f7bf47b217d22b128f3"
+    },
+    {
+      "path": "logs/iter0/Tier3/rr_arbiter_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77a899fc0367b73c96e368ebd8b8f534351a5163",
+      "size": 494,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/77a899fc0367b73c96e368ebd8b8f534351a5163"
+    },
+    {
+      "path": "logs/iter0/Tier3/rr_arbiter_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "914a462782f5cfb61e40f813232e95e6f9cf469f",
+      "size": 803,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/914a462782f5cfb61e40f813232e95e6f9cf469f"
+    },
+    {
+      "path": "logs/iter0/Tier3/sync_fifo_mem_buffer_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3939fca0ce6710e3386bbc8f8d60f229d1585a7",
+      "size": 504,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f3939fca0ce6710e3386bbc8f8d60f229d1585a7"
+    },
+    {
+      "path": "logs/iter0/Tier3/sync_fifo_mem_buffer_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1086b8c8fe2fe0b28b3352abac15a8a8f0238bf6",
+      "size": 514,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1086b8c8fe2fe0b28b3352abac15a8a8f0238bf6"
+    },
+    {
+      "path": "logs/iter0/Tier3/sync_fifo_shif_reg_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73c0dfc8bfa01d34c652ea0e096e4bfd0d989b2e",
+      "size": 2061,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/73c0dfc8bfa01d34c652ea0e096e4bfd0d989b2e"
+    },
+    {
+      "path": "logs/iter0/Tier3/sync_fifo_shif_reg_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81b7abcabf8eab84f12f9de3beaf61ce8aac7aef",
+      "size": 512,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/81b7abcabf8eab84f12f9de3beaf61ce8aac7aef"
+    },
+    {
+      "path": "logs/iter0/Tier3/threshold_buffer_fifo_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06fdfa27aa55b6d5986849054c15831803475ac2",
+      "size": 5820,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/06fdfa27aa55b6d5986849054c15831803475ac2"
+    },
+    {
+      "path": "logs/iter0/Tier3/threshold_buffer_fifo_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a38f8276f558acb400d1ccbc68935c7c8287624",
+      "size": 515,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8a38f8276f558acb400d1ccbc68935c7c8287624"
+    },
+    {
+      "path": "logs/iter0/Tier3/token_arbiter_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dca20968cffcca1b79cfdaa872305c4dfc7fa4d",
+      "size": 497,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8dca20968cffcca1b79cfdaa872305c4dfc7fa4d"
+    },
+    {
+      "path": "logs/iter0/Tier3/token_arbiter_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a8c072f8db751dd70654170e70a3f7f6bbca443",
+      "size": 745,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/5a8c072f8db751dd70654170e70a3f7f6bbca443"
+    },
+    {
+      "path": "logs/iter0/Tier4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7695731d39bda8797de1f2468c02b9f64058932",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/e7695731d39bda8797de1f2468c02b9f64058932"
+    },
+    {
+      "path": "logs/iter0/Tier4/divider_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69c4b97c6a4ea649f9e08b53156ee1158c4c608c",
+      "size": 736,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/69c4b97c6a4ea649f9e08b53156ee1158c4c608c"
+    },
+    {
+      "path": "logs/iter0/Tier4/divider_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d071334e137e8c28d5d36809a6abae79b5f7b35",
+      "size": 501,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/6d071334e137e8c28d5d36809a6abae79b5f7b35"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_dp_add_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f81b6739218389fdc6a3272cb0f3e83dc5a3b7d",
+      "size": 494,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7f81b6739218389fdc6a3272cb0f3e83dc5a3b7d"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_dp_add_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f716ba83ce2ac49383478abc6d7678149ed596d1",
+      "size": 7006,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/f716ba83ce2ac49383478abc6d7678149ed596d1"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_dp_div_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f6d7864b07c2107b7178a65b9aa6391682f6016",
+      "size": 3568,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/4f6d7864b07c2107b7178a65b9aa6391682f6016"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_dp_div_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44c289e74d4f5c0529daea2f8a792c0a08a74d45",
+      "size": 4963,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/44c289e74d4f5c0529daea2f8a792c0a08a74d45"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_dp_mul_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "976e304f79101cb816cea2e2b092e8e65e1dd49e",
+      "size": 7518,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/976e304f79101cb816cea2e2b092e8e65e1dd49e"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_dp_mul_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa12cf0665455a6108c5ab4fc215c5e9bc116cee",
+      "size": 5370,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/aa12cf0665455a6108c5ab4fc215c5e9bc116cee"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_sp_add_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cc6aab705475a8cc15f2c264b786fdfa4c3f868",
+      "size": 494,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/6cc6aab705475a8cc15f2c264b786fdfa4c3f868"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_sp_add_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a734dfe3f032c6bb1a0943069b9510cb03a25e3",
+      "size": 7034,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/3a734dfe3f032c6bb1a0943069b9510cb03a25e3"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_sp_div_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af6360d3552bce4d8795a62fe2481832d934bd7a",
+      "size": 494,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/af6360d3552bce4d8795a62fe2481832d934bd7a"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_sp_div_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bef791348f49251a2c7ecec20b862c31215cd6b3",
+      "size": 4958,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/bef791348f49251a2c7ecec20b862c31215cd6b3"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_sp_mul_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53946182cfa100678dbe208bd3923898d2b0c71c",
+      "size": 494,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/53946182cfa100678dbe208bd3923898d2b0c71c"
+    },
+    {
+      "path": "logs/iter0/Tier4/fpu_sp_mul_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4d51021f5962b78978d14191817c19e680f9d42",
+      "size": 5021,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/e4d51021f5962b78978d14191817c19e680f9d42"
+    },
+    {
+      "path": "logs/iter0/Tier4/rob_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1666eb50485f7b2c90e1aad04d372acdded70f95",
+      "size": 1161,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1666eb50485f7b2c90e1aad04d372acdded70f95"
+    },
+    {
+      "path": "logs/iter0/Tier4/rob_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "746138fece11cab16046981ba8cfe34c6accb24d",
+      "size": 22512,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/746138fece11cab16046981ba8cfe34c6accb24d"
+    },
+    {
+      "path": "logs/iter0/Tier4/sqrt_chat.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95c2b674223bc06daa6f4c6e822afc6ec788bef8",
+      "size": 488,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/95c2b674223bc06daa6f4c6e822afc6ec788bef8"
+    },
+    {
+      "path": "logs/iter0/Tier4/sqrt_gemmini.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff782d04867bc66f68a7d2c2c4794f71078df69a",
+      "size": 498,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/ff782d04867bc66f68a7d2c2c4794f71078df69a"
+    },
+    {
+      "path": "pipeline_diagram.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f2c4a599db16510aacf23d90305357161a1aa76",
+      "size": 125970,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/1f2c4a599db16510aacf23d90305357161a1aa76"
+    },
+    {
+      "path": "pipeline_diagram.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25c6410a191003946955d8803c436beb4fd2280b",
+      "size": 84806,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/25c6410a191003946955d8803c436beb4fd2280b"
+    },
+    {
+      "path": "prompts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "785866a1ecac7361db1032a5b47bc473600c57b8",
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/trees/785866a1ecac7361db1032a5b47bc473600c57b8"
+    },
+    {
+      "path": "prompts/prompt_A_fewshot.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbeddfdbcbea9525319def162bda9288561faffe",
+      "size": 3313,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/cbeddfdbcbea9525319def162bda9288561faffe"
+    },
+    {
+      "path": "prompts/prompt_A_oneshot.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fabd6e6033fe198f20e2cb45fb937c09ca7dd8c",
+      "size": 2936,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/8fabd6e6033fe198f20e2cb45fb937c09ca7dd8c"
+    },
+    {
+      "path": "prompts/prompt_D_repair.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ef9a47c549a20336b888f0c60feb01bd5e313e2",
+      "size": 2037,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7ef9a47c549a20336b888f0c60feb01bd5e313e2"
+    },
+    {
+      "path": "schema.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f12ad91f91e5eaf708218248d69d7e12431623d",
+      "size": 4982,
+      "url": "https://api.github.com/repos/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/git/blobs/7f12ad91f91e5eaf708218248d69d7e12431623d"
+    }
+  ],
+  "truncated": false
+}

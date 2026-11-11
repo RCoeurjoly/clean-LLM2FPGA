@@ -1,0 +1,30 @@
+{
+  "stage": "04-import",
+  "command": [
+    "python3",
+    "research/yosys-lean-2026-11-02/full-hardware-run/import_worker.py",
+    "import",
+    "--upstream",
+    "research/yosys-lean-2026-11-02/netlist-formats/evidence/ErosSph__xiangshan2Lean",
+    "--work",
+    "/tmp/llm2fpga-full-hardware-20261102",
+    "--report",
+    "research/yosys-lean-2026-11-02/full-hardware-run/import.json"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:15:25.572556+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 757.1024519909988,
+  "finished_at": "2026-11-02T00:28:02.675206+00:00"
+}

@@ -1,0 +1,14 @@
+read_verilog -sv /nix/store/wnaqq1fv97r2dgck3nc9j8x03a4r7bw8-tinystories-core-rtl/core.sv /nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/model.sv /nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv
+hierarchy -check -top model_top
+proc
+flatten
+memory_collect
+opt_clean
+clk2fflogic -nolower -nopeepopt
+memory_nordff
+opt_clean
+setundef -undriven -anyseq
+check -assert
+write_json /tmp/llm2fpga-yosys-functional-probe/lowered.json
+select model_top
+write_functional_smt2 /tmp/llm2fpga-yosys-functional-probe/functional.smt2

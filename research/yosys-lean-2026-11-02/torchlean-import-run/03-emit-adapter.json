@@ -1,0 +1,29 @@
+{
+  "stage": "03-emit-adapter",
+  "command": [
+    "scripts/lake.sh",
+    "env",
+    "lean",
+    "--load-dynlib=/tmp/llm2fpga-torchlean-build/lean-dojo-TorchLean-f37cbc5-582c4f673202/cpu/lib/libtorchlean_tensor_cpu.so",
+    "--root=/tmp/llm2fpga-torchlean-import",
+    "--run",
+    "/tmp/llm2fpga-torchlean-import/EmitAdapter.lean",
+    "/tmp/llm2fpga-torchlean-import/capture_adapter.py"
+  ],
+  "cwd": "/tmp/torchlean-model-probe/lean-dojo-TorchLean-f37cbc5",
+  "started_at": "2026-11-02T09:19:40.327507+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 10.452837520977482,
+  "finished_at": "2026-11-02T09:19:50.780474+00:00"
+}

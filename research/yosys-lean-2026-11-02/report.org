@@ -1,0 +1,321 @@
+#+title: Yosys-to-Lean routes and whole-model feasibility probes
+#+date: 2026-11-02
+#+startup: overview
+
+* Decision supported by the new evidence
+
+Continue evaluating *TorchLean + FloatLib* for the frozen quantized
+reference. Prefer a *Yosys-normalized hardware representation* over
+committing to a general SystemVerilog frontend. The strongest newly found
+candidate for the memory-backed accelerator is:
+
+#+begin_example
+Generated SystemVerilog
+  -> Yosys normalization, retaining word operations and memories
+  -> write_functional_smt2 + matching JSON metadata
+  -> ErosSph/xiangshan2Lean importer
+  -> executable Lean state-transition model
+#+end_example
+
+This is a *candidate architecture*. The real production memory module
+now compiles in Lean and agrees with RTL simulation on one concrete trace.
+The subsequent full-machine run has also completed full-model native
+FunctionalIR/JSON export, xiangshan2Lean import, and a complete Lean 4.19.0
+build/table check. Its Yosys and Python translations are not
+proved correct, and no end-to-end equivalence theorem has been completed.
+
+Also investigate [[https://github.com/philzook58/yosys-lean][philzook58/yosys-lean]], which emits Lean directly from
+Yosys live RTLIL/FunctionalIR, for datapath and controller blocks without
+memories. Its inspected exporter explicitly rejects memories and some
+sequential features. [[https://github.com/opencompl/valaig][Valaig]] is a separate useful route for circuit-level
+safety certificates. Keep [[https://github.com/FORMiND-Lab/EquivFusion][EquivFusion]] available for existing checks
+and counterexamples.
+
+Velvet, direct Lean invariants, and lean-star remain proof-layer choices
+to evaluate on actual loop/memory contracts. Importing the two endpoints
+does not establish their numerical correspondence or their refinement.
+The original-Hugging-Face-to-quantized accuracy relationship remains
+outside our verification boundary.
+
+* Actual whole-model probes
+
+The [[file:full-hardware-run/runbook.org][subsequent full-machine run]] reproduces the existing production
+generic lowering without the 6 GiB cap. Both RTLIL checkpoints and the
+full FunctionalIR/JSON export succeeded, followed by whole-model import
+and table emission: 4,227,056 nodes, 88,074 state fields, 555 memories
+and three outputs. The importer used 17.7 GiB peak RSS, with no swap.
+The complete generated model compiled in Lean in 14 minutes 6.5 seconds,
+using 7.25 GiB peak RSS. Its preflight gap was 336 single-word memories,
+resolved by native Yosys mapping restricted to those words. The RTL-to-RTLIL stage used
+24,259.84 MB peak memory. A small production-memory control
+now compiles in Lean and matches 34 RTL output observations after reset.
+The full design additionally matches Verilator on 15 comparisons over
+five post-reset samples of one reset/idle trace (=go= held low). The native
+Lean trace takes 104.73 seconds; this does not exercise inference.
+The initial probe outcomes below are retained as history; the runbook
+tracks the later whole-model stages independently.
+
+** Quantized PyTorch frontend
+
+The [[file:torchlean-import-run/runbook.org][subsequent built-upstream run]] compiles TorchLean's actual emitter
+and typed importer with Lean 4.35.0 and the pinned FloatLib. Its emitted
+adapter is byte-for-byte identical to the initial reconstruction. The
+whole model again stops at =aten.embedding.default=. Small addition and
+Linear controls pass typed import and reference evaluation in Lean,
+matching all seven PyTorch Float32 output words. Minimal embedding,
+rounding, clamping, dynamic-qparameter and frozen-transposed-weight
+cases reproduce independent capture gaps. The initial frontend-only
+inventory below remains historical evidence; it is not a whole-model
+Lean import or a numerical proof.
+
+Used the existing 54,859,074-byte =model.pt2= with SHA256
+=c99488b62f34783c1ebc1033de7bb1b6beb75727561ac0fc663d6f0286be9f34=,
+without rebuilding or requantizing. It loads and executes successfully in
+its matching PyTorch 2.9.1 environment. Input is =int64[1,32]= and the
+sample produces finite =float32[1,32,50257]= logits.
+
+The TorchLean frontend attempt stops at *=aten.embedding.default=*.
+Inspecting the entire saved graph gives:
+
+| Measurement | Result |
+|-------------+--------|
+| Total FX nodes | 1,710 |
+| Call nodes / operator identities | 1,429 / 35 |
+| Recognized lowering / metadata calls | 884 / 230 |
+| Rejected call sites / identities | 315 / 18 |
+| Built Lean checker or all-input proof | Neither ran |
+
+The material blockers include 33 dynamic-qparameter calls, 33 rounds,
+115 clamps, two embeddings, eight selections, and 49 computed-weight
+Linear payloads. Those 49 weights have frozen-state-only dependency
+closures. Another 25 calls are dropout with =p=0, train=False=, and 24
+are an unsupported positional metadata-assertion schema. Some gaps may
+therefore need justified canonicalization or constant evaluation rather
+than a new mathematical operator.
+
+No Lean installation was present. The Python capture adapter was
+reconstructed from the pinned TorchLean string emitter with an explicit
+small evaluator, without adding or changing operator rules. A supported
+addition control captured successfully; six small failure reproducers
+also ran. This is a *frontend coverage spike*, not a successful import
+into a built Lean environment. Repeat with the upstream-generated
+adapter when that environment is available.
+
+Full method, scope, timing, hashes, call-site coverage, minimal examples,
+and tracebacks: [[file:model-probe/README.org][model-probe notes]], [[file:model-probe/results/report.json][report]], and
+[[file:model-probe/results/operator-coverage.csv][operator coverage CSV]]. Recognition of the remaining calls does not
+yet imply serialization, type, numerical, or proof success.
+
+** Whole generated hardware
+
+Probed the actual 41,783,062-byte =core.sv= with its production model and
+memory wrappers using the project's recorded Yosys 0.62 executable. The
+process aborted with =std::bad_alloc= during *=PROC_DLATCH=* after about
+80 seconds under a *6 GiB address-space cap*. It did not reach format
+export or the Lean importer. This establishes an observed resource
+failure for that command sequence and envelope, not a fundamental limit.
+
+*Clarification after comparison with successful synthesis:* this probe
+used Yosys's built-in =read_verilog -sv= frontend, not =yosys-slang=.
+The [[file:../../build/full-model/17-synthesis.log::8][earlier synthesis command]] and the current
+[[file:../../nix/direct/rtlil.nix::5][production RTLIL recipe]] also use =read_verilog -sv=. Parsing and
+hierarchy elaboration had completed in the failed probe; =PROC_DLATCH=
+is a later process-lowering pass.
+
+The [[file:../../build/full-model/27-native-ram-and-json.log::12021][successful RAM-mapping log]] reports *15,312.60 MB peak memory*,
+followed by successful JSON export. Its resource report includes 24,440
+=RAMB36E1= and 430 =RAMB18E1= cells. These are earlier successful
+production runs, not a freshly established identical-artifact comparison.
+Nevertheless, a new experiment capped at 6 GiB must not be presented as
+evidence that the existing synthesis flow cannot consume the RTL, or as
+a demonstrated Lean-import bottleneck. The measured failure is specific
+to the deliberately restricted probe. Future hardware import experiments
+should reuse an appropriate production checkpoint or allow resources
+consistent with prior successful runs.
+
+The cached workspace also has a 3,350,533,882-byte RAM-stage RTLIL file
+and a 4,022,901,774-byte final JSON netlist. Their source lineage was not
+freshly revalidated. These sizes motivate selecting an earlier
+word-level representation, retained memories, streaming import, and
+hierarchical boundaries. Fully expanded final JSON should not be our
+default proof representation merely because a JSON parser is available.
+
+Evidence: [[file:model-probe/hardware-results/report.json][hardware stage report]], [[file:model-probe/hardware-results/export.ys][exact attempted script]],
+[[file:model-probe/hardware-results/yosys.log.tail.txt][diagnostic tail]], and [[file:model-probe/hardware-results/yosys.log.gz][compressed full log]]. This probe used the
+existing project toolchain; latest-Yosys support below is a source survey.
+
+** Production memory module smoke check
+
+As a smaller reproducer, the unchanged production =model_memory= module
+with its default 16 words successfully passed through:
+
+1. Yosys normalization with explicit clock-edge state.
+2. The upstream =expose_arbitrary= helper for nondeterministic inputs.
+3. FunctionalIR SMT-LIB plus matching JSON export.
+4. The =xiangshan2Lean= Python importer and Lean source emitter.
+
+The generated model has *one memory, 11 state fields, and 79 expression
+nodes*. Its memory is a Lean address-to-word function. This validates a
+small real format connection through source generation. In the subsequent
+[[file:full-hardware-run/runbook.org][full-machine run]], both its source and table representations compile in
+Lean 4.19.0, and all 34 output comparisons after reset agree with Icarus
+on one 20-sample trace. This remains a concrete check rather than a
+refinement theorem.
+
+See [[file:model-probe/memory-results/report.json][smoke-check report]], [[file:model-probe/memory-results/model_memory.sv][input SV]], and
+[[file:model-probe/memory-results/TinyStoriesProbe.lean][generated Lean source]]. The initially omitted arbitrary-input exposure
+step and its correction are documented in the model-probe notes.
+
+* Every current upstream Yosys export backend
+
+Latest stable is [[https://github.com/YosysHQ/yosys/releases/tag/v0.70][v0.70]], published 2026-10-13, commit
+=28ba3cb926fe376fa05ebfc1b921747d011d4557=. Development snapshot is
+[[https://github.com/YosysHQ/yosys/commit/63eecf3ddca2f143750f11e37ebd18ecb16b51c7][63eecf3ddca2f143750f11e37ebd18ecb16b51c7]], committed 2026-10-29.
+Both snapshots register the same *22 production export backends*.
+
+The inventory scans all core Backend registrations and write_-named
+commands, checks the build manifest, and separately catalogs auxiliary
+writers. It verifies the downloaded core C++ sources against all 328
+main / 324 stable GitHub blob hashes, with zero mismatches. This is
+finite source completeness, not a claim about every optional plugin or
+which backends a distributor enables in a particular binary.
+
+| Command | Output | Discovered Lean support / limitation |
+|---------+--------+-------------------------------------|
+| =write_rtlil= | RTLIL text | HDLean reads its own canonical output. yosys-lean consumes live IR as a plugin, not arbitrary .il text in Lean. |
+| =write_json= | Yosys netlist JSON | Hardware Loom has a Python schema bridge to its Lean IR. xiangshan2Lean uses JSON as companion metadata. |
+| =write_verilog= | Verilog; =-sv= variant | lean-surfaces, leap, and Sparkle support subsets; parsing/generation and semantic adequacy need separate assessment. |
+| =write_blif= | BLIF / extended BLIF | No audited general Lean consumer established. |
+| =write_edif= | EDIF | No audited Lean consumer established; library cell meanings would still be required. |
+| =write_spice= | SPICE subcircuits | lean-surfaces has an analog subset parser, not a demonstrated Yosys netlist/library equivalence route. |
+| =write_firrtl= | FIRRTL | xiangshan2Lean has a real FIRRTL importer; Yosys-dialect compatibility is untested and memory restrictions matter. |
+| =write_intersynth= | InterSynth | No audited Lean consumer established. |
+| =write_aiger= | Binary AIGER / ASCII AAG | Valaig imports sequential models and checks safety certificates. Other readers have narrower subsets. |
+| =write_aiger2= | Experimental binary AIGER | Standard AIGER consumers are candidates; no command-specific compatibility run. Writer is combinational. |
+| =write_xaiger= | Extended AIGER with boxes | No audited Lean reader for the extensions established. |
+| =write_xaiger2= | Newer extended AIGER | Same extension gap; not implied by ordinary AIGER support. |
+| =write_btor= | BTOR2 | HardBench and PCEQ have restricted external translators/checkers; not a ready whole-model proof. |
+| =write_smt2= | Legacy SMT-LIB transition model | Generic Lean SMT syntax/proposition importers exist; Yosys-specific transition/initialization interpretation still needs a bridge. |
+| =write_smv= | SMV | leansmv family imports a small NuSMV subset; missing word types prevent treating it as a drop-in Yosys consumer. |
+| =write_cxxrtl= | C++ simulation model | No audited dedicated Lean CXXRTL importer established. General C++ syntax support is insufficient. |
+| =write_simplec= | C model | No audited dedicated Lean consumer established. |
+| =write_functional_cxx= | FunctionalIR C++ | No audited dedicated Lean consumer established. |
+| =write_functional_smt2= | FunctionalIR SMT-LIB | xiangshan2Lean imports its actual serializer, including memories; Shoumei has a more limited prototype. |
+| =write_functional_rosette= | FunctionalIR Rosette | Related symbolic-language research exists; no actual Yosys-format consumer established. |
+| =write_jny= | Structural metadata JSON | No dedicated Lean consumer established; this is metadata rather than complete hardware semantics. |
+| =write_table= | Connectivity table | No dedicated Lean consumer established. xiangshan2Lean's .table.json is a different private format. |
+
+Full restrictions, variants, pinned command sources, and auxiliary outputs:
+[[file:inventory/inventory.org][inventory.org]], [[file:inventory/export-inventory.json][structured inventory]], and the
+[[file:backend-support.csv][22-command Lean-support summary CSV]]. Auxiliaries include
+=test_autotb=, arbitrary =write_file= text, KISS2 FSM exports, DOT and
+rendered diagrams, waveforms, witnesses, reports, and optional
+Verific-related outputs. An optional frontend's VHDL pretty-printer is
+not a general RTLIL-to-VHDL backend. Plugins and delegated external tools
+can add formats without a finite universal list.
+
+* GitHub search and source audit
+
+The searches supplement the earlier 20,707-repository census with
+format-specific repository and code searches, including =extension:lean=
+and mixed-language queries. Forks, archived repositories, old projects,
+and zero-star projects remain eligible. No two-month activity cutoff was
+used as an acceptance rule.
+
+Search completeness is explicitly bounded. GitHub indexes default-branch
+code, misses some known files, limits result sets, and can change counts
+during pagination. For example, =RTLIL language:Lean= returned zero,
+while a quoted =extension:lean= query found relevant files. Broad queries
+that remained incomplete are recorded rather than presented as exhausted.
+Absence of an audited consumer means none was established by this search,
+not proof that no repository anywhere implements one.
+
+The formal-format stream records *39 distinct queries / 50 requests*;
+31 bounded returned sets were paginated completely and eight query
+variants remain explicitly incomplete. It read 100 files across 42
+projects, including implementation/proof/grammar source in 24 projects;
+some remaining projects received documentation-only screening.
+
+The netlist/HDL stream records *51 query families / 71 pages*: 42 were
+fully paginated and nine are explicitly capped. It scanned 8,919 candidate
+source files and inspected 29 fork trees, including 18 Sparkle forks
+retaining parser source. These are search/source-screening counts, not
+counts of verified importers. The two streams overlap; their project
+counts must not simply be added as distinct projects.
+
+Detailed findings, exact queries, counts, pagination, pins, source paths,
+and proof boundaries are in:
+
+- [[file:formal-formats/evidence.org][Formal/word-level evidence]] and [[file:formal-formats/support-mapping.csv][format/project mapping]].
+- [[file:formal-formats/query-coverage.csv][Formal query coverage]], with losslessly compressed raw responses.
+- [[file:netlist-formats/report.org][Netlist/HDL evidence]], its format mapping, query logs, and retained sources.
+
+* How the new candidates change the shortlist
+
+** Memory-backed hardware: xiangshan2Lean first
+
+[[https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/functional_ir.py][The FunctionalIR importer]] has a concrete serializer contract, typed word
+operations, explicit state, and function-valued memories. It checks
+ports/state against matching JSON. Known initialization bits come from
+that JSON; unknown bits remain unconstrained instead of accepting the
+SMT exporter's default zero interpretation. Clock normalization,
+nondeterministic inputs, and definedness predicates remain part of the
+execution contract. General source-translation correctness is unproved.
+
+This route has the strongest immediate fit for our memory-heavy
+accelerator among the inspected importers. The successful small memory
+source-generation probe increases its priority without settling the
+whole-model resource or proof questions.
+
+** Direct Yosys exporter: yosys-lean
+
+[[https://github.com/philzook58/yosys-lean/blob/9e575011c948f4ee6e422c7acfa5c453d9f8ebff/src/lean.cc][The Yosys plugin]] avoids an extra textual hardware parser and includes
+substantial arithmetic/controller proof examples. It still trusts Yosys
+and the C++ exporter and rejects memories, asynchronous resets, and
+other unsupported sequential structures. It is a strong block-level
+comparison candidate, not the current whole-memory solution.
+
+** Direct JSON bridge: hardware Loom
+
+[[https://github.com/deepai-org/loom][Loom]] supplies an actual Yosys JSON-to-own-IR adapter and Lean hardware
+semantics. Its proof/generation path has useful structure, but Yosys and
+the schema bridge are additional trust boundaries. Evaluate its exact
+cell/memory subset before selecting it over FunctionalIR. This is the
+hardware Loom project, separate from verse-lab's verifier infrastructure.
+
+** Certificates and reusable syntax
+
+[[https://github.com/opencompl/valaig][Valaig]] is valuable for sequential AIGER safety-certificate checking.
+Its parser is unverified, the checked flow has a single-bad restriction,
+justice/fairness are unsupported, and model constraints are not used by
+the inspected checker. Memory-heavy RTL would require additional
+lowering, so it is not our initial tensor/memory proof representation.
+
+[[https://github.com/onderjan/blazing-smtlib][BSmtLib]] is a particularly useful verified SMT-LIB syntax reader/writer.
+It does not supply hardware or SMT theory denotations by itself.
+[[https://github.com/LeanHorn/SMTLib-to-Lean][SMTLib-to-Lean]] imports richer propositions but does not supply the
+Yosys transition-system bridge and emits proof templates requiring work.
+BTOR2 projects provide additional bounded/certificate techniques; their
+restrictions are recorded in the formal-format audit.
+
+* Next concrete work
+
+1. Build a pinned Lean environment and repeat the frontend diagnosis
+   using TorchLean's own generated adapter. Keep the artifact frozen.
+2. Address the actual unsupported PyTorch cases through minimal and
+   original-shaped regressions, including numerical correspondence.
+3. Compile and validate the retained production-memory Lean model,
+   stating its reset/clock/initial-state contract explicitly.
+4. Run the latest-Yosys FunctionalIR path on model-derived arithmetic
+   and memory-backed fragments; record resource growth and importer gaps.
+5. Select an earlier word-level checkpoint and hierarchical strategy for
+   a larger hardware probe, using the existing production lowering and
+   resources consistent with prior successful synthesis. Measure export
+   and Lean import separately; the 6 GiB probe did not reach either.
+6. Prove a model-derived memory accumulation contract with invariants,
+   then checked composition into the actual final RTL. Start proofs
+   before both whole-model frontends are complete.
+
+The final claim must explicitly account for the trusted or verified
+=SV -> Yosys -> Lean= connection. A theorem solely about imported Lean
+definitions cannot silently establish IEEE SystemVerilog correspondence.

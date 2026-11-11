@@ -1,0 +1,289 @@
+{
+  "utc": "2026-11-01T23:14:58.910184+00:00",
+  "endpoint": "repos/Verilean/mechproof/tarball/71ea7ce7ac3feddfa1bdffafe976064df3c91fee",
+  "exit_code": 0,
+  "archive_bytes": 116373,
+  "sha256": "425a895556be7d0ee77dc30fe2426697cbce5941c7f417eeaacc317c44253923",
+  "files": [
+    {
+      "path": "MechProof.lean",
+      "bytes": 509,
+      "sha256": "c3f84bd326cb4caa9b34f6990521031102f8fa1d9ad588884b07caae01af9257"
+    },
+    {
+      "path": "MechProof/ArmAssembly.lean",
+      "bytes": 3398,
+      "sha256": "017d89a74da5f09b55e77d2f1f5814d6bd53f1c97910f267df880877c10cfaf2"
+    },
+    {
+      "path": "MechProof/Basic.lean",
+      "bytes": 1276,
+      "sha256": "6a4c56d561550540b03b4a32686d9dc17aa9d27a7d93c9106668071a4a4d0dfa"
+    },
+    {
+      "path": "MechProof/CapturePoint.lean",
+      "bytes": 2832,
+      "sha256": "c8cf85233690254bb1c8e336fa7eac165c73f39e1e4b11d88d5a121579754f85"
+    },
+    {
+      "path": "MechProof/DFM.lean",
+      "bytes": 3614,
+      "sha256": "f2118c4d1fb9caf15995d5de3983c7980f542361afd519782a16e47a1db024ec"
+    },
+    {
+      "path": "MechProof/Energy.lean",
+      "bytes": 3583,
+      "sha256": "a6b924d16ba38e1cc1f4f2ca7e04e127b8e617eb01d45091bd590f7efbc63605"
+    },
+    {
+      "path": "MechProof/Environment.lean",
+      "bytes": 3180,
+      "sha256": "5e1343624beacd37e095c0c1a2d192c2b08a4a19bd8720dcacb8f654e99d0666"
+    },
+    {
+      "path": "MechProof/Finger.lean",
+      "bytes": 2038,
+      "sha256": "c6379036428d5ea3b0238c018b4592eb9eeead62e9c148d0ddef9c3f8c74001c"
+    },
+    {
+      "path": "MechProof/HandAssembly.lean",
+      "bytes": 7942,
+      "sha256": "264be56675329c6dab0d5f0621fb8c8a04527c72e9062f602e019345dda6d632"
+    },
+    {
+      "path": "MechProof/HeavyMachinery.lean",
+      "bytes": 5485,
+      "sha256": "2f05295b5f9337f699c2acfebbedc7a5a7c69066dd6b1212ca56e6ff24aa6f6e"
+    },
+    {
+      "path": "MechProof/LegAssembly.lean",
+      "bytes": 4670,
+      "sha256": "6ded76a90c44e54a7c3af63ede05acf40c612df17719f9862ccceb66f1adf37f"
+    },
+    {
+      "path": "MechProof/PilotSafety.lean",
+      "bytes": 3802,
+      "sha256": "8bb6b45e26d971aad4c3439bcdc5cc2e357848f33254168829ff4f34bac93ef5"
+    },
+    {
+      "path": "MechProof/Subsea.lean",
+      "bytes": 4776,
+      "sha256": "f376876557ad0cc59dcb6b869384523c7a453b46a01f4aac000481784833fc98"
+    },
+    {
+      "path": "MechProof/TendonFinger.lean",
+      "bytes": 2350,
+      "sha256": "00f762e04eb267e5c5a62d60c2b2ccbf212c5d1d4cd9ca16fbf1b05aa7150185"
+    },
+    {
+      "path": "MechProof/Walking.lean",
+      "bytes": 2830,
+      "sha256": "52371eab8a96c272793d35d04559087db8d1f6612dd37168bd9ee29dfc7ab12d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16334,
+      "sha256": "d65ad55d7bc23ecc50ea628982d0a380178b96d6e6c7f0a1520e172621269a7d"
+    },
+    {
+      "path": "Tests/Main.lean",
+      "bytes": 1570,
+      "sha256": "bb2b839570197069c28d43a533bb5f6deffad8b29b8e803b7137be275351a506"
+    },
+    {
+      "path": "Tests/VerifyArm.lean",
+      "bytes": 2695,
+      "sha256": "ff4a66c543750cc93e581e66b67cf2e6908996a6be7451f6e9a74db8de96b540"
+    },
+    {
+      "path": "Tests/VerifyCapture.lean",
+      "bytes": 3884,
+      "sha256": "6ca2f4aac4941e4482bdfe562a05a486f2cd7649f1c4208ce7583c7e32e76284"
+    },
+    {
+      "path": "Tests/VerifyEnergy.lean",
+      "bytes": 5538,
+      "sha256": "ca43f4a590a3736331c8d4a88a5900704b2088389720945b15119c93499faf0c"
+    },
+    {
+      "path": "Tests/VerifyEnvMatrix.lean",
+      "bytes": 4758,
+      "sha256": "70619ec761ad9e9c2871f79070f857a020e849cadb4eab651739ff49b6d32f82"
+    },
+    {
+      "path": "Tests/VerifyFinger.lean",
+      "bytes": 1639,
+      "sha256": "0e21e467f0fb58e57e2140ea88f2a7f5aca64badbad19773f7bdb8c1b8bf7ee6"
+    },
+    {
+      "path": "Tests/VerifyHand.lean",
+      "bytes": 6853,
+      "sha256": "c56dd1cb508faefa5c6907577439f8ec766c16b636c31601c95c507df7f60ba8"
+    },
+    {
+      "path": "Tests/VerifyHeavy.lean",
+      "bytes": 3197,
+      "sha256": "94f3ad0bea7e175daf6c986f8e0ed010907f8b4b9becb74c91b550849ca87e4b"
+    },
+    {
+      "path": "Tests/VerifyLegs.lean",
+      "bytes": 4402,
+      "sha256": "b03305170385c2c4a96e9ea4a6bffabdce395b7a19f4234c53926303d51173e4"
+    },
+    {
+      "path": "Tests/VerifySafety.lean",
+      "bytes": 2565,
+      "sha256": "884a9503b0ada3e1052e8728917b23c4985403a73b4fa352d2fc32792f1fed60"
+    },
+    {
+      "path": "Tests/VerifySubsea.lean",
+      "bytes": 5862,
+      "sha256": "6d297a2ac1b2eff6941186f63b4f94d083cf43c476714ecf0987d6abe3d1cf8c"
+    },
+    {
+      "path": "Tests/VerifyTendon.lean",
+      "bytes": 1783,
+      "sha256": "4fe07f9de601751cf624523cfe4d4149454e74e312db05d2312dc89a82a0da75"
+    },
+    {
+      "path": "Tests/VerifyWalking.lean",
+      "bytes": 5109,
+      "sha256": "55d12f5890940e78ab4c60e126b2fa1c2ef62f149dc726a5b13801e2c8ce118c"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 1367,
+      "sha256": "263df758cdca807dc1e053e8626d0951371b0ee77947e034dfc69e60aa6d6304"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "7dc000621e0046d1aada809e2b7177e64454645cf4c741e9daaf79c99ec2e7a2"
+    },
+    {
+      "path": "python/export_urdf.py",
+      "bytes": 13809,
+      "sha256": "4f65af3cce4c683429cfcad5ca668284542c195e652f3f530039bd96ef9f4fc6"
+    },
+    {
+      "path": "python/generate_arm_cad.py",
+      "bytes": 6385,
+      "sha256": "112c5f0b05cdc609b5c7fbd47ce840a42cff3553a0ec20291ca326697501bf80"
+    },
+    {
+      "path": "python/generate_battery_certificate.py",
+      "bytes": 4795,
+      "sha256": "d6ce7c8e8f76895c159a658819581253603b877d1a3fe96943a92a170c5f7672"
+    },
+    {
+      "path": "python/generate_cad.py",
+      "bytes": 1512,
+      "sha256": "078549a00e832e74269e6115bf6a43ae3174daf69ea78a1dea5be77c57d0768f"
+    },
+    {
+      "path": "python/generate_dfm_report.py",
+      "bytes": 4686,
+      "sha256": "6819c638134b48760cce3aae5a5a78ef7807b82a5b7da7869ea4d58c283e937b"
+    },
+    {
+      "path": "python/generate_env_matrix.py",
+      "bytes": 6195,
+      "sha256": "0d99ee078f5a46f53a98448f1e722028fd4a373a055dbe842ef656db192ab044"
+    },
+    {
+      "path": "python/generate_executive_summary.py",
+      "bytes": 7626,
+      "sha256": "fe051413b1df5fe3000a22ee3c5050e336c65b08b022e6c12ba86e3689d989d3"
+    },
+    {
+      "path": "python/generate_finger_cad.py",
+      "bytes": 4067,
+      "sha256": "192bc7d1d048d74b85425025c945536992a8c24575d5d2a19b6c8bd23b435ab0"
+    },
+    {
+      "path": "python/generate_hand_cad.py",
+      "bytes": 6667,
+      "sha256": "7e3c82f68d1a05f4fe010b11e592ef932a2ecf01247a33f0bc6f1fbba4850193"
+    },
+    {
+      "path": "python/generate_humanoid_summary.py",
+      "bytes": 9209,
+      "sha256": "ec29d931692556a3e7681a638472aa8f66d26290f9976c73483b792c33f3e41b"
+    },
+    {
+      "path": "python/generate_leg_cad.py",
+      "bytes": 5093,
+      "sha256": "0cdfd303c028f7e76b51d19e06cbe97e852c721154b73178ac67481fee847441"
+    },
+    {
+      "path": "python/generate_tendon_cad.py",
+      "bytes": 4715,
+      "sha256": "49ee983a89110f8343e353a5b0a5d85a7fb1e78ddda7bd664581136d9828751a"
+    },
+    {
+      "path": "python/generate_walking_trajectory.py",
+      "bytes": 4089,
+      "sha256": "4533b850575b0745d7fa3d1904459c823d8ee4da5a049ab5e784702ea954ac5c"
+    },
+    {
+      "path": "python/render_overviews.py",
+      "bytes": 12105,
+      "sha256": "dc94e437cdc8152df9561b36fe4fbe0428a3e65b32006905eaee3b7fd7981645"
+    },
+    {
+      "path": "python/simulate_arm_hand.py",
+      "bytes": 21453,
+      "sha256": "1f520eaa8715cd2114915b52093514e23cc531d8efa24b0f0b62dd5be74382b1"
+    },
+    {
+      "path": "python/simulate_finger.py",
+      "bytes": 7089,
+      "sha256": "d9dc4596d328820eef23f716eeff88acd238a884a55906688618be7349077d76"
+    },
+    {
+      "path": "python/simulate_grasp.py",
+      "bytes": 12380,
+      "sha256": "58f97d35efc5de86de66dcf554b8b32f8e3e572fddec73fd4b15fb16336d497b"
+    },
+    {
+      "path": "python/simulate_grasp_matrix.py",
+      "bytes": 8559,
+      "sha256": "ecf76af4f89ece00a636fad1d85eb56ed33dceec35efeddf86c682b60b452809"
+    },
+    {
+      "path": "python/simulate_hand.py",
+      "bytes": 15914,
+      "sha256": "36ad63362b9294e540fdbb99394ff0f34e54ddc322894c92e328cff80c8a0cd4"
+    },
+    {
+      "path": "python/simulate_heavy.py",
+      "bytes": 16822,
+      "sha256": "5f20fd6dc1f0b2f87fd205d9fd32aba9b38c538966fb0e672cb98811bab985a0"
+    },
+    {
+      "path": "python/simulate_manned.py",
+      "bytes": 14879,
+      "sha256": "7b26a0fccb3f04bc981a0f4a5798c40e620862e85710f9f2b494fe373ed24bc0"
+    },
+    {
+      "path": "python/simulate_stand.py",
+      "bytes": 13395,
+      "sha256": "5da4110d65d23f89282abd1c4f83420b74736f484d25002651145a4fc0282b60"
+    },
+    {
+      "path": "python/simulate_subsea.py",
+      "bytes": 11695,
+      "sha256": "243b9679196f177c65adf159c867dcff2028c5f93eb4e43a9aa435addb660b7a"
+    },
+    {
+      "path": "python/simulate_v2.py",
+      "bytes": 16344,
+      "sha256": "961656dbb21531f2c3420d1d8fc658549a5160c944f028fb911f9fe5072e810c"
+    },
+    {
+      "path": "python/simulate_walking.py",
+      "bytes": 9368,
+      "sha256": "23b682587f58bb5b8195ce6d9eeb3f9fa3a42661e76c223a909e401f86881599"
+    }
+  ]
+}

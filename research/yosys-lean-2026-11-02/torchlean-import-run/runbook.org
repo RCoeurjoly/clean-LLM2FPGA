@@ -1,0 +1,209 @@
+#+title: Actual TorchLean import attempt for frozen quantized TinyStories
+#+date: 2026-11-02
+#+startup: overview
+
+* Scope and result
+
+The full frozen quantized =model.pt2= is rejected by TorchLean's actual
+Lean-generated capture adapter at =aten.embedding.default=. This run
+builds the pinned upstream Lean modules and evaluates
+=Export.PyTorch.TorchExport.script= in Lean; it does not reconstruct the
+adapter from string literals. No operator rules have been changed.
+
+The adapter is byte-for-byte identical to the earlier reconstruction:
+SHA256 =0b8ca3cc8d882a92de05ed1dc750ecbd6ef46d2497821aee3039aba1074d4565=.
+See [[file:adapter-provenance.json][adapter provenance]], [[file:03-emit-adapter.log][actual Lean generation]], and
+[[file:capture-report.json][capture results]]. The actual [[file:artifacts/capture_adapter.py][Lean-emitted adapter]] is retained too.
+The full model stops before producing graph JSON;
+it has not been imported into a Lean program.
+
+Two small supported saved exports pass the complete path: addition and
+a Linear layer with directly available frozen weights. Lean accepts
+their typed graphs and exact-word payloads, evaluates them using
+TorchLean/FloatLib, and matches all *seven Float32 output words* against
+PyTorch (four for addition, three for Linear). The addition case includes
+negative zero. See [[file:result.json][final result]], [[file:06-add-check.log][addition check]], and [[file:07-linear-check.log][Linear check]].
+
+Both examples take about 10.7 seconds per invocation and about 3.83 GiB
+peak RSS, including loading the Lean libraries. These tiny-example
+measurements do not determine whole-model import or execution memory.
+
+| Saved-export case | Actual adapter result |
+|-------------------+-----------------------|
+| Frozen quantized TinyStories | Rejects =aten.embedding.default= |
+| Addition | Captures two graph nodes |
+| Linear with direct frozen weights | Captures four graph nodes |
+| Minimal embedding | Rejects =aten.embedding.default= |
+| Linear with a frozen transposed weight | Cannot resolve computed weight into exported payload |
+| Rounding | Rejects =aten.round.default= |
+| Clamping | Rejects =aten.clamp.default= |
+| Dynamic quantization parameters | Rejects tuple-valued =quantized_decomposed.choose_qparams.tensor= |
+
+These cases confirm several independent frontend gaps. They are not a
+claim that adding embedding alone would import the complete model.
+The earlier full-graph inventory found 315 rejected call sites across
+18 operator identities; that inventory's limitations remain documented
+in [[file:../model-probe/README.org][the original probe]].
+
+* Frozen artifact and dependency provenance
+
+The reference remains:
+
+#+begin_example
+/nix/store/qvsldlg3biy0bj9yy1ys9hxvi9hn8sdp-tinystories-quantized/model.pt2
+SHA256 c99488b62f34783c1ebc1033de7bb1b6beb75727561ac0fc663d6f0286be9f34
+54,859,074 bytes; PyTorch 2.9.1; Python 3.11.14
+#+end_example
+
+It is loaded with =torch.export.load=, executed for a reference sample,
+then passed as =ExportedProgram.module()= with its saved example inputs
+to the upstream adapter. =require_torch_export=True= prevents an FX
+fallback. The reference artifact is neither rebuilt nor requantized.
+The sample output's hash and the final artifact hash check are in the
+[[file:capture-report.json][capture report]].
+
+The upstream source is [[https://github.com/lean-dojo/TorchLean/commit/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b][TorchLean f37cbc5…]], with Lean 4.35.0 and its
+original lockfile. All 15 dependency commits match that lockfile;
+FloatLib is =8c8871576a941a86e73dcf0882702b823139aa93= and Mathlib is
+=56a005855ea17e0b0958f73ec801ae140b0a1679=. See [[file:dependency-checkouts.json][verified checkouts]],
+[[file:upstream-lake-manifest.json][upstream lockfile]], [[file:source-closure.json][source fingerprints]], and [[file:environment.json][environment]]. The four
+key import/export and lockfile blobs also matched current =main= when
+checked: [[file:current-main-check.json][current-main comparison]].
+
+TorchLean's own interoperability requirements pin PyTorch 2.8.0+cpu.
+We retain 2.9.1 because it is the environment of the saved reference.
+This run establishes behavior for that concrete version combination.
+
+The upstream emitter target built successfully in 219.14 seconds, and
+the typed importer/reference target in another 265.25 seconds, reusing
+the emitter's artifacts. See [[file:02-emitter-build.json][emitter build]] and [[file:05-importer-build.json][typed importer build]]. These
+were selected module builds, not a run of the entire upstream test suite.
+
+* Toolchain provisioning
+
+The official Lean release archive was downloaded to =/tmp= and verified
+against the GitHub release asset's published SHA256 before the completed
+archive was extracted. Commands from the repository root:
+
+#+begin_src sh
+gh api repos/leanprover/lean4/releases/assets/634574462 \
+  -H 'Accept: application/octet-stream' > /tmp/lean-4.35.0-linux.tar.zst
+sha256sum -c <<'SHA256'
+7289597a44543246c9227b8cae501767e095ce17f6d448b95fc4a8dc97268f6d  /tmp/lean-4.35.0-linux.tar.zst
+SHA256
+mkdir -p /tmp/llm2fpga-tools
+tar --zstd -xf /tmp/lean-4.35.0-linux.tar.zst -C /tmp/llm2fpga-tools
+#+end_src
+
+The retained upstream source checkout is
+=/tmp/torchlean-model-probe/lean-dojo-TorchLean-f37cbc5=. A fresh source
+archive can be obtained from GitHub's tarball API for that full commit;
+the observed archive hash is in =environment.json=.
+
+Configure the isolated build from that source directory:
+
+#+begin_src sh
+export LEAN_NUM_THREADS=2
+export TORCHLEAN_LAKE=/tmp/llm2fpga-tools/lean-4.35.0-linux/bin/lake
+export TORCHLEAN_LEAN=/tmp/llm2fpga-tools/lean-4.35.0-linux/bin/lean
+export TORCHLEAN_BUILD_ROOT=/tmp/llm2fpga-torchlean-build
+export XDG_CACHE_HOME=/tmp/llm2fpga-torchlean-cache
+export MATHLIB_CACHE_DIR=/tmp/llm2fpga-mathlib-cache
+export PATH=/tmp/llm2fpga-tools/lean-4.35.0-linux/bin:$PATH
+cd /tmp/torchlean-model-probe/lean-dojo-TorchLean-f37cbc5
+scripts/lake.sh exe cache get
+scripts/lake.sh build +NN.Runtime.PyTorch.Export.TorchExport
+scripts/lake.sh build +NN.Runtime.IR
+#+end_src
+
+The cache contains 9,031 files. Six initial transfers ended with broken
+pipes; a retry fetched those six and completed successfully. Both attempts
+are preserved: [[file:01-cache.json][initial setup result]] and [[file:01-cache-retry.json][successful retry]]. This was a cache
+download failure, not a TorchLean graph-import result.
+
+* Generate and exercise the upstream adapter
+
+Copy [[file:EmitAdapter.lean][EmitAdapter.lean]] and [[file:CheckArtifact.lean][CheckArtifact.lean]] into
+=/tmp/llm2fpga-torchlean-import/= first. With the environment above,
+the exact CPU shared-library path for this source/profile is used below.
+It is built by the unmodified upstream Lake target.
+
+#+begin_src sh
+scripts/lake.sh env lean \
+  --load-dynlib=/tmp/llm2fpga-torchlean-build/lean-dojo-TorchLean-f37cbc5-582c4f673202/cpu/lib/libtorchlean_tensor_cpu.so \
+  --root=/tmp/llm2fpga-torchlean-import \
+  --run /tmp/llm2fpga-torchlean-import/EmitAdapter.lean \
+  /tmp/llm2fpga-torchlean-import/capture_adapter.py
+#+end_src
+
+Then, from this repository's root:
+
+#+begin_src sh
+/nix/store/bwk9j00hwqwq5x7b7n23hpf893pa7bnz-python3-3.11.14-env/bin/python \
+  research/yosys-lean-2026-11-02/torchlean-import-run/capture_probe.py \
+  --adapter /tmp/llm2fpga-torchlean-import/capture_adapter.py
+#+end_src
+
+[[file:capture_probe.py][capture_probe.py]] tries the whole frozen model and the small saved
+exports. Successful small graph artifacts and their numerical requests
+are retained in [[file:artifacts/][artifacts/]]. Large or original =.pt2= files remain under
+=/tmp= or the immutable Nix store, with paths/hashes in the report.
+
+* Typed Lean and numerical controls
+
+[[file:CheckArtifact.lean][CheckArtifact.lean]] calls =Import.IR.parseProgram=, which checks graph
+structure, shapes, dtypes and the interface. Given a numerical request,
+it also loads exact element words through =NN.IR.Reference.load=,
+loads the typed payload, and evaluates the program using TorchLean's
+FloatLib-backed reference interpreter. It compares complete output
+words against PyTorch's output for that example. No numerical rules
+are replaced by the probe.
+
+For each supported case (=add= and =linear=), use the environment above
+and invoke the checker from the TorchLean source directory. For addition:
+
+#+begin_src sh
+scripts/lake.sh env lean \
+  --load-dynlib=/tmp/llm2fpga-torchlean-build/lean-dojo-TorchLean-f37cbc5-582c4f673202/cpu/lib/libtorchlean_tensor_cpu.so \
+  --root=/tmp/llm2fpga-torchlean-import \
+  --run /tmp/llm2fpga-torchlean-import/CheckArtifact.lean \
+  /tmp/llm2fpga-torchlean-import/add.json \
+  /home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/torchlean-import-run/artifacts/add-request.json
+#+end_src
+
+These checks concern small examples. They do not prove numerical
+correspondence for arbitrary PyTorch inputs, the frozen TinyStories
+model, or generated RTL.
+
+* First feature reproducer
+
+[[file:minimal_embedding.py][minimal_embedding.py]] retains the same first unsupported operator in
+an =Embedding(8,4)= module with fixed weights and four =int64= token
+indices. It saves and reloads a tiny =.pt2= before invoking the actual
+adapter. This is a minimal operator/schema reproducer, not a proof that
+the full-model embedding subgraph has been extracted without change.
+
+#+begin_src sh
+/nix/store/bwk9j00hwqwq5x7b7n23hpf893pa7bnz-python3-3.11.14-env/bin/python \
+  research/yosys-lean-2026-11-02/torchlean-import-run/minimal_embedding.py \
+  /tmp/llm2fpga-torchlean-import/capture_adapter.py \
+  /tmp/llm2fpga-torchlean-import/minimal-embedding.json
+#+end_src
+
+The expected current outcome is rejection of =aten.embedding.default=.
+The [[file:08-embedding-reproducer.log][standalone reproducer]] was also executed and gives that exact error;
+its [[file:08-embedding-reproducer.json][nonzero exit]] is an expected rejection.
+
+The first extension should connect the existing
+[[https://github.com/lean-dojo/TorchLean/blob/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b/NN/Spec/Layers/Embedding.lean][Spec.Embedding.lookup]] semantics to this import/execution path. That
+specification uses =Fin vocab= indices and appends the embedding width to
+the index tensor's shape. The bridge must handle PyTorch's =int64=
+indices, their legal bounds, frozen weight words, heterogeneous element
+types and lookup execution. The later quantization and computed-weight
+gaps remain separate obligations.
+
+[[file:verification.json][Final verification]] checks the successful build/control stages, the
+expected embedding rejection, all 208 fingerprinted upstream modules,
+the 15 pinned dependency checkouts, the unchanged frozen model/sample,
+the retained adapter, all seven compared output words, and local document
+links. The whole-model import and equivalence flags remain false.

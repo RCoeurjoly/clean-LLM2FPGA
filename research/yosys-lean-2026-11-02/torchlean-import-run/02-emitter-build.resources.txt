@@ -1,0 +1,23 @@
+	Command being timed: "scripts/lake.sh build +NN.Runtime.PyTorch.Export.TorchExport"
+	User time (seconds): 525.17
+	System time (seconds): 78.08
+	Percent of CPU this job got: 275%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:39.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1881124
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 299
+	Minor (reclaiming a frame) page faults: 10976540
+	Voluntary context switches: 789870
+	Involuntary context switches: 13570
+	Swaps: 0
+	File system inputs: 51056
+	File system outputs: 1396408
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

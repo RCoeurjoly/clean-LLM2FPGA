@@ -1,0 +1,23 @@
+{
+  "stage": "15-native-full-trace",
+  "command": [
+    "/tmp/llm2fpga-full-hardware-20261102/full-reset-lean",
+    "/tmp/llm2fpga-full-hardware-20261102/TinyStoriesFull.circuit.bin"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:49:04.598705+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 104.7293676219997,
+  "finished_at": "2026-11-02T00:50:49.328213+00:00"
+}

@@ -1,0 +1,77 @@
+{
+  "stage": "import",
+  "upstream_commit": "a1299b564831e571b9b80f816219ae06c91db342",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "ijson_version": "3.4.0.post0",
+  "platform_adaptation": "Linux ijson loader; upstream helpers unchanged",
+  "all_input_equivalence_proved": false,
+  "projection": {
+    "full_export": "/tmp/llm2fpga-full-hardware-20261102/functional.smt2",
+    "full_bytes": 10879385560,
+    "transfer": "/tmp/llm2fpga-full-hardware-20261102/transfer.smt2",
+    "transfer_bytes": 632948862,
+    "transfer_sha256": "ca8c3a3148277c6c3ed2502f253c4170a3676e2d462f1212ff1ad79e224ae92a",
+    "record_declarations": 3,
+    "functions": 1,
+    "projection": "exact prefix before native initializer roots",
+    "initialization_source": "unchanged upstream JSON known-bit constraints"
+  },
+  "imported": {
+    "nodes": 4227056,
+    "inputs": 538088,
+    "states": 88074,
+    "outputs": 3,
+    "memory_states": 555,
+    "node_storage": "PackedNodes"
+  },
+  "table": {
+    "runtime": "Chisel2Lean/Functional.lean",
+    "binary": "TinyStoriesFull.circuit.bin",
+    "hexadecimal": "TinyStoriesFull.circuit.hex",
+    "binary_bytes": 364104799,
+    "representation": "typed FunctionalIR data evaluated by pure Lean BitVec operations"
+  },
+  "generated_lean": "/tmp/llm2fpga-full-hardware-20261102/TinyStoriesFull.lean",
+  "status": "completed",
+  "artifacts": [
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/TinyStoriesFull.lean",
+      "bytes": 1119,
+      "sha256": "39d42874a654a5cf496f16181e1fb1ecabf3496b201d7ab11f871752c99b05e3"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/Chisel2Lean/Functional.lean",
+      "bytes": 25122,
+      "sha256": "4cde7f082e77dd896513ee59354cac3d84141ac1747150ba41ace5bab4f46306"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/TinyStoriesFull.circuit.bin",
+      "bytes": 364104799,
+      "sha256": "bf66daac2bc9396426f6527ef3510ab576c750abee279556b8676f5dcf9f02d5"
+    },
+    {
+      "path": "/tmp/llm2fpga-full-hardware-20261102/TinyStoriesFull.circuit.hex",
+      "bytes": 728209598,
+      "sha256": "2771e5a0412ca4c68a0029a15bbbaede88094f56d7f256b49ea6a3df7c146d4c"
+    }
+  ],
+  "seconds": 750.8371428880055,
+  "peak_rss_kib": 18552916,
+  "arbitrary_inputs": {
+    "count": 538080,
+    "total_bits": 886461,
+    "full_metadata": "import.json.gz"
+  },
+  "archived_raw_files": [
+    {
+      "path": "import.json.gz",
+      "uncompressed_bytes": 58978891,
+      "uncompressed_sha256": "bb45d72669cac08db8b03cca6cae2963532898d0243cba958728e9b925400fe2"
+    },
+    {
+      "path": "04-import.log.gz",
+      "uncompressed_bytes": 58979512,
+      "uncompressed_sha256": "d5190fd18a2faf04da9720479e329ae8dbd448752301303f2f2dba188e4b210a"
+    }
+  ]
+}

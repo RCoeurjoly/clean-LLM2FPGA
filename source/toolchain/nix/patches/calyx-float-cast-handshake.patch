@@ -1,0 +1,11 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -714,7 +714,7 @@
+     op.getResult().replaceAllUsesWith(reg.getOut());
+
+     calyx::AssignOp::create(rewriter, loc, reg.getIn(), calyxOp.getOut());
+-    calyx::AssignOp::create(rewriter, loc, reg.getWriteEn(), c1);
++    calyx::AssignOp::create(rewriter, loc, reg.getWriteEn(), calyxOp.getDone());
+
+     calyx::AssignOp::create(
+         rewriter, loc, calyxOp.getGo(), c1,

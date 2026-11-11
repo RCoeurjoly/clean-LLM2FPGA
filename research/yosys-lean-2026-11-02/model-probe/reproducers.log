@@ -1,0 +1,133 @@
+[
+  {
+    "name": "supported_add",
+    "inputs": [
+      {
+        "shape": [
+          2,
+          4
+        ],
+        "dtype": "torch.float32"
+      }
+    ],
+    "status": "captured",
+    "nodes": 2
+  },
+  {
+    "name": "embedding",
+    "inputs": [
+      {
+        "shape": [
+          8,
+          4
+        ],
+        "dtype": "torch.float32"
+      },
+      {
+        "shape": [
+          1,
+          2
+        ],
+        "dtype": "torch.int64"
+      }
+    ],
+    "status": "failed",
+    "error_type": "NotImplementedError",
+    "error": "unsupported PyTorch op: aten.embedding.default"
+  },
+  {
+    "name": "dynamic_qparams",
+    "inputs": [
+      {
+        "shape": [
+          2,
+          4
+        ],
+        "dtype": "torch.float32"
+      }
+    ],
+    "status": "failed",
+    "error_type": "NotImplementedError",
+    "error": "unsupported tuple-valued PyTorch op: quantized_decomposed.choose_qparams.tensor"
+  },
+  {
+    "name": "round",
+    "inputs": [
+      {
+        "shape": [
+          2,
+          4
+        ],
+        "dtype": "torch.float32"
+      }
+    ],
+    "status": "failed",
+    "error_type": "NotImplementedError",
+    "error": "unsupported PyTorch op: aten.round.default"
+  },
+  {
+    "name": "clamp",
+    "inputs": [
+      {
+        "shape": [
+          3
+        ],
+        "dtype": "torch.int64"
+      }
+    ],
+    "status": "failed",
+    "error_type": "NotImplementedError",
+    "error": "unsupported PyTorch op: aten.clamp.default"
+  },
+  {
+    "name": "where",
+    "inputs": [
+      {
+        "shape": [
+          2,
+          4
+        ],
+        "dtype": "torch.bool"
+      },
+      {
+        "shape": [
+          2,
+          4
+        ],
+        "dtype": "torch.float32"
+      },
+      {
+        "shape": [
+          2,
+          4
+        ],
+        "dtype": "torch.float32"
+      }
+    ],
+    "status": "failed",
+    "error_type": "NotImplementedError",
+    "error": "unsupported PyTorch op: aten.where.self"
+  },
+  {
+    "name": "computed_linear_weight",
+    "inputs": [
+      {
+        "shape": [
+          2,
+          4
+        ],
+        "dtype": "torch.float32"
+      },
+      {
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "torch.float32"
+      }
+    ],
+    "status": "failed",
+    "error_type": "NotImplementedError",
+    "error": "could not resolve tensor argument transpose into the exported payload"
+  }
+]

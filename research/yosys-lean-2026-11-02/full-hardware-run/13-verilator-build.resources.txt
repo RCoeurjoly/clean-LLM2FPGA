@@ -1,0 +1,23 @@
+	Command being timed: "/nix/store/i5hjqqy2qk6jac8mnnaxnlh8yfi49wjh-verilator-5.052/bin/verilator --binary --timing -j 2 --output-split 10000 --output-split-cfuncs 2000 -Wno-fatal --top-module full_reset_tb --Mdir /tmp/llm2fpga-full-hardware-20261102/verilator -o full-reset-sim research/yosys-lean-2026-11-02/full-hardware-run/full-reset-tb.sv /nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/core.sv /tmp/llm2fpga-full-hardware-20261102/model-formatted.sv /nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv"
+	User time (seconds): 269.17
+	System time (seconds): 4.30
+	Percent of CPU this job got: 106%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:17.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6832976
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 607
+	Minor (reclaiming a frame) page faults: 2635860
+	Voluntary context switches: 1864
+	Involuntary context switches: 1491
+	Swaps: 0
+	File system inputs: 94224
+	File system outputs: 642144
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

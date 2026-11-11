@@ -1,0 +1,60 @@
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$f2d7187b9f6b2c1598d6ea4f7a97012722ac6177\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335587'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335586_EN[63:0]$335601
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335586_DATA[63:0]$335600
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335586_ADDR[0:0]$335599
+     4/4: $0\read_data[63:0]
+Creating decoders for process `$paramod$b38649b18fe3160acb049c3f34c07903a0eded7c\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335569'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335568_EN[31:0]$335583
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335568_DATA[31:0]$335582
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335568_ADDR[0:0]$335581
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$db841f132cc5199787780966967b19ff7ad5b867\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335551'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335550_EN[63:0]$335565
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335550_DATA[63:0]$335564
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335550_ADDR[4:0]$335563
+     4/4: $0\read_data[63:0]
+Creating decoders for process `$paramod$5ca07a831ae96d775c1f2d37320d5b1734b9a0e4\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335533'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335532_EN[31:0]$335547
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335532_DATA[31:0]$335546
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335532_ADDR[4:0]$335545
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$f4aec3db8d73bea3fcb5f28e51867a44735ee82a\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335515'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335514_EN[31:0]$335529
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335514_DATA[31:0]$335528
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335514_ADDR[4:0]$335527
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$e7f4ba8960a745ee1ae90f57d2fde1e95daec9a5\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335497'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335496_EN[31:0]$335511
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335496_DATA[31:0]$335510
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335496_ADDR[10:0]$335509
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$c8f7bc7a6fbfead88096830d44280178dfc8d7fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335479'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335478_EN[31:0]$335493
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335478_DATA[31:0]$335492
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335478_ADDR[4:0]$335491
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$321cceb8cbef68dcb3302aa3791788fc68000208\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335461'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335460_EN[31:0]$335475
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335460_DATA[31:0]$335474
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335460_ADDR[10:0]$335473
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$4eb368123f432444b525a6e0671275eaaff01287\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335443'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335442_EN[31:0]$335457
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335442_DATA[31:0]$335456
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335442_ADDR[10:0]$335455
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$7afdc620058074055f9bf70582c1e526cceeb470\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335425'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335424_EN[7:0]$335439
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335424_DATA[7:0]$335438
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335424_ADDR[11:0]$335437
+     4/4: $0\read_data[7:0]
+Creating decoders for process `$paramod$4972ad6198e7bc0cca02d5fb8eef82c5b85a7a0a\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$335407'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335406_EN[31:0]$335421
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335406_DATA[31:0]$335420
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$335406_ADDR[0:0]$335419
+     4/4: $0\read_data[31:0]
+
+5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc

@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""Structural obligations on a SKY130 gate-level netlist (L0/06, L3 well-formedness).
+
+Checks, in the order the documents cite them:
+  W1  every net has exactly one driver          (no contention  -> V1)
+  W2  every read net has a driver               (no floating reads)
+  W3  no combinational cycle                    (acyclicity; every bistable inside a cell)
+  W4  physical-only cells touch rails only      (inertness, licences the 85% deletion)
+
+Usage: netgraph.py <gate-level.v> [--top MODULE]
+
+Pin directions are declared explicitly below rather than guessed; any pin name not in
+the table is reported and the run fails, because a silently misclassified pin would turn
+a real contention into a clean bill of health.
+"""
+import re, sys, collections
+
+OUT = {'X', 'Y', 'Q', 'Q_N', 'HI', 'LO', 'COUT', 'COUT_N', 'SUM', 'GCLK',
+       'Z'}   # Z: output of einvn/einvp, the tri-state enabled inverters
+PWR = {'VPWR', 'VGND', 'VNB', 'VPB', 'KAPWR', 'LOWLVPWR', 'VPWRIN'}
+
+# SRAM22 hard-macro pins (the Chipyard target's memories). The macros are
+# sequential (clocked) — they cut the combinational graph like flops do.
+MACRO_OUT = {'dout'}
+MACRO_IN = {'clk', 'rstb', 'ce', 'we', 'wmask', 'addr', 'din'}
+MACRO_PWR = {'vdd', 'vss'}
+MACRO_PREFIX = 'sram22_'
+IN = {'A', 'A0', 'A1', 'A2', 'A3', 'A4', 'A_N', 'A1_N', 'A2_N', 'B', 'B1', 'B2',
+      'B_N', 'B1_N', 'B2_N', 'C', 'C1', 'C_N', 'D', 'D1', 'D_N', 'S', 'S0', 'S1',
+      'CLK', 'CLK_N', 'RESET_B', 'SET_B', 'GATE', 'GATE_N', 'SLEEP', 'SLEEP_B',
+      'DE', 'TE', 'TE_B', 'SCD', 'SCE', 'NOTIFIER', 'DIODE', 'CIN', 'M', 'H'}
+# cells that cut the graph (contain a bistable): flops (df*/sdf*/edf*/sedf*),
+# latches (dlx*/dlr*), clock gates (dlclk*/sdlclk*).
+# NB: the dly* delay buffers (dlybuf/dlygate/dlymetal) are COMBINATIONAL and must
+# NOT be here — an earlier over-broad 'dl' alternative matched them, silently
+# cutting the combinational graph at every hold-fix buffer (a W3 soundness hole,
+# caught when synccheck.py misfiled them as sequential).
+SEQ = re.compile(r'__(sdf|edf|sedf|df|dlx|dlr|dlclk|sdlclk)')
+# NB: conb_1 is NOT physical -- it is a constant *generator* (drives HI/LO), so it is a
+# functional cell with a signal output, not an inert filler. W4 caught this
+# misclassification on its first run, which is the check working as intended.
+PHYS = re.compile(r'__(decap|fill|tapvpwrvgnd|tap_|diode)')
+# tri-state drivers: may legitimately share a net, so W1 must not count them as contention
+TRI = re.compile(r'__(einv|ebuf)')
+
+
+def parse(path):
+    txt = open(path, errors='replace').read()
+    inst = re.compile(r'((?:sky130|sram22)_\w+)\s+(\\?\S+?)\s*\(([^;]*?)\)\s*;', re.S)
+    conn = re.compile(r'\.(\w+)\s*\(\s*([^)]*?)\s*\)')
+    out = []
+    for m in inst.finditer(txt):
+        pins = []
+        for pname, net in conn.findall(m.group(3)):
+            net = net.strip()
+            if net.startswith('{'):
+                # concatenation: register each element against the same pin
+                for i, elem in enumerate(net.strip('{}').split(',')):
+                    elem = elem.strip()
+                    if elem:
+                        pins.append((f"{pname}[{i}]", elem))
+            else:
+                pins.append((pname, net))
+        out.append((m.group(1), m.group(2), pins))
+    ports = set()
+    pm = re.search(r'\bmodule\s+\w+\s*\((.*?)\)\s*;', txt, re.S)
+    if pm:
+        ports = {t.strip().lstrip('\\') for t in pm.group(1).split(',') if t.strip()}
+    return out, ports, txt
+
+
+def run(path):
+    """Compute W1-W4 over the netlist; return a results dict (no printing)."""
+    insts, ports, _ = parse(path)
+    unknown = collections.Counter()
+    drivers = collections.defaultdict(list)   # net -> [(cell, inst, pin)]
+    readers = collections.defaultdict(list)
+    edges = collections.defaultdict(set)      # net -> {nets it combinationally drives}
+    phys_bad = []
+    ncells = collections.Counter()
+
+    for cell, name, pins in insts:
+        ncells[cell] += 1
+        ins, outs = [], []
+        is_macro = cell.startswith(MACRO_PREFIX)
+        _out, _in, _pwr = (MACRO_OUT, MACRO_IN, MACRO_PWR) if is_macro else (OUT, IN, PWR)
+        for p, net in pins:
+            # bus pins arrive as base names or base[idx]; normalise
+            base = p.split('[')[0] if is_macro else p
+            if base in _pwr:
+                continue
+            elif base in _out:
+                outs.append(net); drivers[net].append((cell, name, p))
+            elif base in _in:
+                ins.append(net); readers[net].append((cell, name, p))
+            else:
+                unknown[p] += 1
+        if PHYS.search(cell):
+            # inertness: a physical-only cell must have no signal pins at all.
+            # (antenna diodes have a DIODE pin, which is a pure load -- allowed)
+            sig = [p for p, _ in pins if p not in PWR and p != 'DIODE']
+            if sig:
+                phys_bad.append((cell, name, sig))
+        if not SEQ.search(cell) and not is_macro:
+            for i in ins:
+                edges[i] |= set(outs)
+
+    # W1 contention -- tri-state drivers separated out, they may legitimately share
+    multi = {n: d for n, d in drivers.items() if len(d) > 1}
+    tri = {n: d for n, d in multi.items() if all(TRI.search(c) for c, _, _ in d)}
+    hard = {n: d for n, d in multi.items() if n not in tri}
+
+    # W2 floating reads
+    def base(n):
+        return n.lstrip('\\').split('[')[0].strip()
+    undriven = [n for n in readers
+                if n not in drivers and n.lstrip('\\') not in ports
+                and base(n) not in ports
+                and not n.startswith("1'b")]
+
+    # W3 combinational cycles (iterative Tarjan)
+    idx, low, on, stk, cyc = {}, {}, set(), [], []
+    counter = [0]
+    for root in list(edges):
+        if root in idx:
+            continue
+        work = [(root, iter(edges.get(root, ())))]
+        idx[root] = low[root] = counter[0]; counter[0] += 1
+        stk.append(root); on.add(root)
+        while work:
+            v, it = work[-1]
+            adv = False
+            for w in it:
+                if w not in idx:
+                    idx[w] = low[w] = counter[0]; counter[0] += 1
+                    stk.append(w); on.add(w)
+                    work.append((w, iter(edges.get(w, ()))))
+                    adv = True
+                    break
+                elif w in on:
+                    low[v] = min(low[v], idx[w])
+            if adv:
+                continue
+            work.pop()
+            if work:
+                low[work[-1][0]] = min(low[work[-1][0]], low[v])
+            if low[v] == idx[v]:
+                comp = []
+                while True:
+                    w = stk.pop(); on.discard(w); comp.append(w)
+                    if w == v:
+                        break
+                if len(comp) > 1 or v in edges.get(v, ()):
+                    cyc.append(comp)
+
+    tot = sum(ncells.values())
+    return {
+        'path': path, 'ninsts': len(insts), 'nports': len(ports),
+        'unknown': unknown, 'ncells': ncells, 'readers': readers,
+        'w1_multi': multi, 'w1_tri': tri, 'w1_hard': hard,
+        'w2_undriven': undriven, 'w3_sccs': cyc, 'w4_bad': phys_bad,
+        'ntotal': tot,
+        'nphys': sum(k for c, k in ncells.items() if PHYS.search(c)),
+        'nseq': sum(k for c, k in ncells.items() if SEQ.search(c)),
+        'nnets': len(set(drivers) | set(readers)),
+    }
+
+
+def main():
+    path = sys.argv[1]
+    r = run(path)
+    print(f'{path}: {r["ninsts"]:,} instances, {r["nports"]} top-level ports\n')
+
+    if r['unknown']:
+        print('!! UNCLASSIFIED PINS -- fix the table before trusting anything below:')
+        for p, k in r['unknown'].most_common():
+            print(f'   {p} ({k:,})')
+        sys.exit(1)
+
+    multi, tri, hard = r['w1_multi'], r['w1_tri'], r['w1_hard']
+    print(f'W1  nets with >1 driver          : {len(multi):,}'
+          f'   (tri-state-only {len(tri):,}, mixed/static {len(hard):,})')
+    for n, d in list(hard.items())[:6]:
+        print(f'    ! {n}  <- ' + ', '.join(f'{c.split("__")[-1]}.{p}' for c, _, p in d[:4]))
+    for n, d in list(tri.items())[:4]:
+        print(f'      tri {n}  <- ' + ', '.join(f'{c.split("__")[-1]}.{p}' for c, _, p in d[:4]))
+
+    undriven = r['w2_undriven']
+    print(f'W2  read nets with no driver     : {len(undriven):,}')
+    for n in undriven[:6]:
+        print(f'      {n}  read by {len(r["readers"][n])}')
+
+    cyc = r['w3_sccs']
+    print(f'W3  combinational cycles (SCCs)  : {len(cyc):,}'
+          + (f'   sizes {sorted((len(c) for c in cyc), reverse=True)[:8]}' if cyc else ''))
+    for c in sorted(cyc, key=len, reverse=True)[:3]:
+        print(f'      SCC of {len(c)} nets, e.g. {c[:3]}')
+
+    print(f'W4  physical cells w/ signal pins: {len(r["w4_bad"]):,}')
+    for c, n, s in r['w4_bad'][:6]:
+        print(f'      {c} {n}: {s}')
+
+    print(f'\n    cells: {r["ntotal"]:,}  physical {r["nphys"]:,} ({100*r["nphys"]/r["ntotal"]:.1f}%)  '
+          f'sequential {r["nseq"]:,}  nets {r["nnets"]:,}')
+
+
+if __name__ == '__main__':
+    main()

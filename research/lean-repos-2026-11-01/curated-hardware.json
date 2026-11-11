@@ -1,0 +1,702 @@
+[
+  {
+    "full_name": "plum-umd/wavelet",
+    "priority": 1,
+    "category": "verified-hardware-compiler",
+    "relevance": "Closest discovered compiler-correctness case study for control flow to asynchronous dataflow/CIRCT.",
+    "capability": "Lean core sequential→dataflow forward simulation and strong normalization theorem; Rust DSL front end, CIRCT Handshake/CGRA backends.",
+    "limitations": "Theorems require affine-use, valid/confluent/frame-preserving operators and deterministic/nonblocking interpretation. Inspected core proof does not itself certify Rust parsing or CIRCT backend. cargo build does not check Lean proofs; requires lake build Thm.",
+    "evidence_urls": [
+      "https://github.com/plum-umd/wavelet/blob/main/README.md",
+      "https://github.com/plum-umd/wavelet/blob/main/wavelet-core/lean/Wavelet/Thm/HighLevel.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "nathsou/HDLean",
+    "priority": 1,
+    "category": "hardware-dsl-refinement",
+    "relevance": "Word RTL, memories and bit-level lowering useful for a proof-producing final RTL stage.",
+    "capability": "Executable word RTL; source→DAG correctness; proved SV/RTLIL/AIGER parser roundtrips; validated ABC optimization; FIFO, RAM, CPU refinement examples.",
+    "limitations": "Formal meaning of output is its own parser, cross-checked by Yosys/Icarus rather than a standard SV theorem. Exact runtime bytes not kernel-checked. Multiclock top decoded from comments plus exact reprint; no sequential optimization or existing PyTorch/MLIR importer.",
+    "evidence_urls": [
+      "https://github.com/nathsou/HDLean/blob/main/README.md",
+      "https://github.com/nathsou/HDLean/blob/main/HDLean/Rtl/RTLILProof.lean",
+      "https://github.com/nathsou/HDLean/blob/main/docs/Status.md",
+      "https://github.com/nathsou/HDLean/blob/main/docs/Trust.md"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "deepai-org/loom",
+    "priority": 1,
+    "category": "hardware-dsl-refinement",
+    "relevance": "Generic Design→µVerilog cycle preservation and selected exact-byte releases offer lower-level proof architecture.",
+    "capability": "Typed synchronous/multiclock hardware, memories/channels; compile_cycle theorem; release invariant transport; RTL import through Yosys normalization.",
+    "limitations": "Formal release ends at own two-state µVerilog semantics and bytes; real Verilog interpretation needs extra adequacy premise. No synthesis/netlist theorem; arbitrary hierarchy separate compilation unfinished. Snapshot STATUS notes partial CI recheck.",
+    "evidence_urls": [
+      "https://github.com/deepai-org/loom/blob/main/README.md",
+      "https://github.com/deepai-org/loom/blob/main/Loom/Hw/CompileCorrect.lean",
+      "https://github.com/deepai-org/loom/blob/main/TCB.md",
+      "https://github.com/deepai-org/loom/blob/main/STATUS.md"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "deepai-org/lean_hw",
+    "priority": 2,
+    "category": "hardware-dsl-related-repository",
+    "relevance": "Same Loom README and advertised hardware stack as deepai-org/loom.",
+    "capability": "Typed Design, certified execution, Verilog and multiclock channels, as documented.",
+    "limitations": "Treat as related repository, not an independent verification framework; only its README inspected. Use loom source audit for semantic boundary, not as proof that histories are identical.",
+    "evidence_urls": [
+      "https://github.com/deepai-org/lean_hw/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "VCA-EPFL/lean-star",
+    "priority": 1,
+    "category": "transition-refinement-hardware",
+    "relevance": "Reusable stuttering/internal-step refinement particularly relevant to scheduling and dataflow lowering.",
+    "capability": "Flush-based simulation/trace inclusion theory; source-inspected join-join reassociation refinement; Bluespec allocator case study documented.",
+    "limitations": "Abstract event/LTS model; no Calyx/Torch/MemRef parser or general RTL compiler theorem. Must establish confluence, commutation and flush relation for each pass.",
+    "evidence_urls": [
+      "https://github.com/VCA-EPFL/lean-star/blob/main/README.md",
+      "https://github.com/VCA-EPFL/lean-star/blob/main/Star/Evaluation/join_join.lean",
+      "https://github.com/VCA-EPFL/lean-star/blob/main/Star/Theory/ARS.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "opencompl/lean-mlir",
+    "priority": 1,
+    "category": "mlir-ssa-framework",
+    "relevance": "Existing SSA/MLIR rewrite infrastructure plus experimental CIRCT closest to current compiler IR.",
+    "capability": "Core denotation-preserving peephole rewriting; BitVec/LLVM proofs; experimental Comb, Handshake/DC and SCF.",
+    "limitations": "CIRCT experiments are outside polished core. Inspected Comb semantics folds AND from zero and computes parity as LSB, so hardware semantics require independent review. Tree has no Calyx/MemRef/Linalg/Torch paths; absence is tree/name inspection, not comprehensive semantic proof.",
+    "evidence_urls": [
+      "https://github.com/opencompl/lean-mlir/blob/main/README.md",
+      "https://github.com/opencompl/lean-mlir/blob/main/SSA/Projects/CIRCT/Comb/Semantics.lean",
+      "https://github.com/opencompl/lean-mlir/blob/main/SSA/Projects/CIRCT/HandshakeToHW/fork_buffer.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "opencompl/veir",
+    "priority": 1,
+    "category": "mlir-compiler-framework",
+    "relevance": "Mutable MLIR IR, verification and proved compiler passes can host missing pipeline semantics.",
+    "capability": "HW/Comb/Seq opcodes, attribute/width/effect checks; mature non-hardware interpreter/refinement/pass infrastructure.",
+    "limitations": "Inspected Comb interpretOp' handles only add, all other opcodes none, and HasOpInfo instance does not register it. Seq file registers verifier/effects, not sequential execution. No Calyx/MemRef/Linalg/Torch paths in tree. IR well-formedness is not equivalence.",
+    "evidence_urls": [
+      "https://github.com/opencompl/veir/blob/main/README.md",
+      "https://github.com/opencompl/veir/blob/main/Veir/Dialects/Comb/OpInfo.lean",
+      "https://github.com/opencompl/veir/blob/main/Veir/Dialects/Seq/OpInfo.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "Verilean/sparkle",
+    "priority": 1,
+    "category": "hardware-dsl-ml-accelerators",
+    "relevance": "Lean HDL with SV/Yosys flow and concrete quantized BitNet accelerator examples.",
+    "capability": "Signal DSL; bitvector equivalence and bounded latency checks; simulation/JIT; BitNet/CPU/IP catalog.",
+    "limitations": "BitNet status distinguishes bounded small-width properties, golden testing and unfinished inference integration; its prose transitivity across golden tests is not a universal equivalence proof. Prior audit found admitted BitNet obligations; fresh pass reviewed status documentation, not rebuilt whole repository.",
+    "evidence_urls": [
+      "https://github.com/Verilean/sparkle/blob/main/README.md",
+      "https://github.com/Verilean/sparkle/blob/main/docs/ip-catalog/BitNet_FPGA_Status.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "atvrager/Shoumei-RTL",
+    "priority": 2,
+    "category": "hardware-dsl-cpu",
+    "relevance": "Rich circuit semantics, reflection and concrete arithmetic/sequential refinement examples.",
+    "capability": "SV/netlist/C++ generation, hierarchical simulation; inspected registry of 13 real nonvacuous refinement atoms; extensive CPU validation.",
+    "limitations": "Inspected CPUProofs.lean proves structural names/port counts/leafness, not ISA equivalence. Full CPU marketing claims must be separated from component refinement and Spike cosimulation. Uses native_decide; no inspected theorem connecting entire SV renderer/CPU to ISA.",
+    "evidence_urls": [
+      "https://github.com/atvrager/Shoumei-RTL/blob/main/README.md",
+      "https://github.com/atvrager/Shoumei-RTL/blob/main/lean/Shoumei/Verification/Refinements.lean",
+      "https://github.com/atvrager/Shoumei-RTL/blob/main/lean/Shoumei/RISCV/CPUProofs.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "benreynwar/silean",
+    "priority": 2,
+    "category": "fixed-point-hardware-refinement",
+    "relevance": "Strong numerical refinement pattern for quantized datapath vs mathematical specification.",
+    "capability": "Streaming fixed-point FFT→Mathlib DFT error bounds with range/no-overflow conditions; structural circuits and FIRRTL generation.",
+    "limitations": "Formal boundary is ModuleStructure, renderer unverified; two-state model. Author calls AI-heavy Silean1 proof-of-concept unsuitable base and is developing Silean2. Error tolerance theorem differs from bit-exact exported PyTorch equivalence.",
+    "evidence_urls": [
+      "https://github.com/benreynwar/silean/blob/main/README.md",
+      "https://github.com/benreynwar/silean/blob/main/Silean1/README.md",
+      "https://github.com/benreynwar/silean/blob/main/HTFFT/Silean/FFT/FFTCorrectness.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "rewire-hardware/ReWire",
+    "priority": 2,
+    "category": "translation-validation-hardware",
+    "relevance": "Mature hardware compiler with Lean validator acceptance→trace refinement architecture.",
+    "capability": "Haskell→Verilog/VHDL/Cryptol; Lean validateBundle_sound/refines for machine IR→Hyle; source-inspected bundle gate.",
+    "limitations": "Certified middle/backend IR passes only; source front end, eta preprocessing and HDL renderer outside theorem. Multiple processes and sequential externs unsupported. Parser/native execution/selected executable remain trust boundary.",
+    "evidence_urls": [
+      "https://github.com/rewire-hardware/ReWire/blob/master/README.md",
+      "https://github.com/rewire-hardware/ReWire/blob/master/doc/certify.md",
+      "https://github.com/rewire-hardware/ReWire/blob/master/verify/Rwv/Bundle.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "stephenneuendorffer/CircuitHDL",
+    "priority": 2,
+    "category": "hardware-dsl-circt",
+    "relevance": "Small executable HDL connected to VeIR HW/Comb/Seq and memory op support.",
+    "capability": "Verilog-like Lean syntax, BitVec process semantics, clock/memory handling; CIRCT lowering with unsupported-case errors.",
+    "limitations": "Inspected Circt.lean has no theorem declarations. VeIR verification checks generated IR structure, not lowering semantics. Local sibling VeIR path dependency; no arbitrary SV parser or pipeline proof.",
+    "evidence_urls": [
+      "https://github.com/stephenneuendorffer/CircuitHDL/blob/main/README.md",
+      "https://github.com/stephenneuendorffer/CircuitHDL/blob/main/CircuitHdl/Circt.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "muzafferkal/circuitprover-sv",
+    "priority": 2,
+    "category": "sv-modeling-proof-harness",
+    "relevance": "Practical SV→Lean unsigned parameterized models with one-step→all-traces proof pattern.",
+    "capability": "Frozen model/spec/axiom audit, Verilator cosimulation, LLM proof loop; source-inspected generic trace lifting and counter theorem.",
+    "limitations": "Translator validated by finite small-width cosimulation, not proved. Restricted single-module SV subset: no memories, hierarchy, always_comb or signed arithmetic; async-reset modeled synchronously with warning.",
+    "evidence_urls": [
+      "https://github.com/muzafferkal/circuitprover-sv/blob/main/README.md",
+      "https://github.com/muzafferkal/circuitprover-sv/blob/main/proofs/evidence/counter_trace_standalone.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "KelvinChung2000/async-lean",
+    "priority": 2,
+    "category": "lts-liveness-hardware",
+    "relevance": "Proved finite-state deadlock/livelock machinery could complement accelerator scheduling/handshake correctness.",
+    "capability": "Source-inspected ExplicitLTS certificate soundness for deadlock/livelock/liveness; Petri/STG/gate and RTL-router front ends documented.",
+    "limitations": "Properties concern supplied formal LTS; not numeric tensor equivalence or general compiler correctness. Needs modeled RTL import boundary and state-space scalability evaluation.",
+    "evidence_urls": [
+      "https://github.com/KelvinChung2000/async-lean/blob/main/README.md",
+      "https://github.com/KelvinChung2000/async-lean/blob/main/AsyncLean/Checker/Explicit.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "pauljiang03/HardwarePrimitives",
+    "priority": 2,
+    "category": "bit-accurate-matmul-semantics",
+    "relevance": "Useful reference for specifying actual mixed-precision matrix primitive behavior.",
+    "capability": "NVIDIA/AMD matrix-core executable Lean models; bitvector datapath evalBlock_eq proof; error/rounding/nonmonotonicity results and FloatLib bridges.",
+    "limitations": "GPU primitive models, not FPGA RTL compiler or quantized PyTorch import. Agreement with physical devices is testing evidence; parameters/accepted domains must match target arithmetic.",
+    "evidence_urls": [
+      "https://github.com/pauljiang03/HardwarePrimitives/blob/main/README.md",
+      "https://github.com/pauljiang03/HardwarePrimitives/blob/main/tensor-core/TensorCore/Kernels/Datapath/Correctness.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "satnam6502/rebase-2026",
+    "priority": 2,
+    "category": "hardware-combinators-pipeline-layout",
+    "relevance": "General circuit-to-netlist and latency reasoning useful for structural accelerators.",
+    "capability": "Ruby-style Lean HDL; all-degree sorter proofs, stream latency theorem and netlist/layout guarantees; Xilinx SV primitives.",
+    "limitations": "SV text renderer unverified. Netlist correctness treats registers transparently; timed theorem is over circuit terms and timed netlist checked by simulation. Reset/primitive physical behavior assumptions.",
+    "evidence_urls": [
+      "https://github.com/satnam6502/rebase-2026/blob/main/README.md",
+      "https://github.com/satnam6502/rebase-2026/blob/main/Ruby/Summary.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "satnam6502/bird-meertens",
+    "priority": 3,
+    "category": "equational-hardware-derivation",
+    "relevance": "Reusable algebraic derivations from mathematical list spec toward adder/CRC hardware.",
+    "capability": "Carry-lookahead derivation, CRC polynomial→LFSR, sorter equations; Verilog/netlist examples documented.",
+    "limitations": "Case-specific derivations; standalone sorter checks fixed sizes unlike rebase-2026 general proofs. No MLIR/Calyx pass or complete tensor→RTL bridge.",
+    "evidence_urls": [
+      "https://github.com/satnam6502/bird-meertens/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "satnam6502/escher-fish",
+    "priority": 4,
+    "category": "circuit-layout-background",
+    "relevance": "Historical algebraic layout inspiration for FPGA combinators.",
+    "capability": "Exact-rational functional geometry laws and hardware-layout discussion.",
+    "limitations": "Primarily picture/SVG formalization, not an RTL equivalence framework; rebase-2026 is materially stronger for hardware.",
+    "evidence_urls": [
+      "https://github.com/satnam6502/escher-fish/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "verilog-proof/VerilLean",
+    "priority": 3,
+    "category": "verilog-formal-semantics",
+    "relevance": "External RTL semantic modeling candidate.",
+    "capability": "Source-inspected expression/statement evaluation and module transition construction, state maps and explicit failure cases.",
+    "limitations": "README only says TBA. Inspected semantics implementation is not a parser-correctness, standard-SV adequacy or external-module equivalence theorem; requires substantial audit.",
+    "evidence_urls": [
+      "https://github.com/verilog-proof/VerilLean/blob/main/README.md",
+      "https://github.com/verilog-proof/VerilLean/blob/main/VerilLean/Lang/Semantics.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "alok/koika-lean4",
+    "priority": 3,
+    "category": "unfinished-hardware-compiler",
+    "relevance": "Koika-style rules/schedules/Verilog architecture may provide design ideas.",
+    "capability": "Typed action syntax, interpreter, lowering and Verilog backend files.",
+    "limitations": "Source-inspected Lower.lean has sorry for struct/array packing/unpacking and unary/binary action lowering. Not a completed verified compiler; README minimal.",
+    "evidence_urls": [
+      "https://github.com/alok/koika-lean4/blob/main/README.md",
+      "https://github.com/alok/koika-lean4/blob/main/Koika/Compile/Lower.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "frieszadam/formal-hdl",
+    "priority": 3,
+    "category": "gate-level-circuit-contracts",
+    "relevance": "Small verified arithmetic/netlist component patterns.",
+    "capability": "Typed DAG gate model, simulator and natural-number contracts for adders/counters/decoders; Python generator.",
+    "limitations": "Small fixed-width component library; no inspected SV renderer or whole compiler proof. Gate vocabulary includes compound cells whose semantics need independent decomposition review.",
+    "evidence_urls": [
+      "https://github.com/frieszadam/formal-hdl/blob/main/README.md",
+      "https://github.com/frieszadam/formal-hdl/blob/main/FormalHdl/Defs.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "formalized-si/redstone-verify",
+    "priority": 3,
+    "category": "certified-equivalence-case-study",
+    "relevance": "Interesting SAT/LRAT/model extraction trust-boundary methodology.",
+    "capability": "Verilog spec vs redstone graph, LRAT certificates, Lean arithmetic/steady-state theorems and cosimulation.",
+    "limitations": "Minecraft rather than FPGA. Main claim acyclic steady state; general timing not proved, sequential support small. Documentation reviewed only.",
+    "evidence_urls": [
+      "https://github.com/formalized-si/redstone-verify/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "ErosSph/xiangshan2Lean",
+    "priority": 3,
+    "category": "rtl-to-lean-front-end",
+    "relevance": "Practical Chisel/FIRRTL/SV→executable Lean model import reference.",
+    "capability": "Python translation scripts including Yosys normalized SV route; explicit subset/support semantics.",
+    "limitations": "README explicitly says finite regression does not imply arbitrary-source/all-trace equivalence. Different frontends preserve different parameters/semantics; four-state route experimental.",
+    "evidence_urls": [
+      "https://github.com/ErosSph/xiangshan2Lean/blob/main/README.md",
+      "https://github.com/ErosSph/xiangshan2Lean/blob/main/docs/semantics.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "shizhilvren/VLean",
+    "priority": 4,
+    "category": "tiny-verilog-edsl",
+    "relevance": "Minimal Boolean waveform embedding reference.",
+    "capability": "Single-bit combinational Verilog-like syntax maps to Nat→Bool wires.",
+    "limitations": "No external .v parser, modules, ports, vectors, arithmetic, four-state behavior, feedback or sequential blocks.",
+    "evidence_urls": [
+      "https://github.com/shizhilvren/VLean/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean",
+    "priority": 3,
+    "category": "llm-rtl-translation-benchmark",
+    "relevance": "Useful negative control for distinguishing compiling Lean from source equivalence.",
+    "capability": "38 Verilog modules with generated Lean schemas; compile/sorry/schema checker and iterative repair results.",
+    "limitations": "Compilation and schema conformance are the reported result; no universal semantic translation theorem demonstrated. Generated spec/theorem may encode wrong source behavior.",
+    "evidence_urls": [
+      "https://github.com/soohyuk-cho/COS598B-Final-Project-Verilog-To-Lean/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "jn555/HardBench",
+    "priority": 3,
+    "category": "hardware-proof-benchmark",
+    "relevance": "Real production-derived hardware statements and LRAT scaling evidence useful for evaluator design.",
+    "capability": "Sail ISA, BTOR2/Yosys word-level miters, CIRCT Comb before/after bitvector tasks; frozen theorem/axiom scoring.",
+    "limitations": "Benchmark not general frontend or end-to-end compiler verifier. Read README only; upstream model licensing caveat explicitly documented.",
+    "evidence_urls": [
+      "https://github.com/jn555/HardBench/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "verse-lab/veil",
+    "priority": 2,
+    "category": "transition-system-verification",
+    "relevance": "Invariant/model-checking framework for controller and accelerator transition semantics.",
+    "capability": "Lean transition-system DSL, concrete/symbolic model checking and invariant checking with optional proof reconstruction.",
+    "limitations": "Mostly protocol/state reasoning; requires separate datapath/RTL semantics. Source test explicitly supports veil.smt.trust true, warns trusted SMT goals; require false/reconstructed proofs for Lean-level assurance.",
+    "evidence_urls": [
+      "https://github.com/verse-lab/veil/blob/main/README.md",
+      "https://github.com/verse-lab/veil/blob/main/VeilTest/WarnTrustingSmtSolver.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "verse-lab/loom",
+    "priority": 2,
+    "category": "foundational-program-verification",
+    "relevance": "Generic executable semantics→weakest-preconditions layer for imperative compiler stages.",
+    "capability": "Monad-transformer algebra framework, nondeterminism, WP generation; source-inspected triple/loop reasoning; documented sparse matrix example.",
+    "limitations": "Different project from deepai-org/loom. No hardware/MLIR/Calyx frontend; SMT tactics depend on selected reconstruction/trust policy and case-study semantics.",
+    "evidence_urls": [
+      "https://github.com/verse-lab/loom/blob/master/README.md",
+      "https://github.com/verse-lab/loom/blob/master/Loom/MonadAlgebras/WP/Basic.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "strata-org/Strata",
+    "priority": 2,
+    "category": "language-semantics-verification",
+    "relevance": "Extensible dialects and imperative/map/bitvector verification can model missing Python/IR stages.",
+    "capability": "Language/analysis definition platform; Python/Java/JS→Laurel→Core; symbolic VC generation and SMT solver pipeline.",
+    "limitations": "Active-breaking-change platform, not existing PyTorch→RTL equivalence. Architecture describes verifying own implementation/Lean reasoning partly as longer-term aims; inspect individual proof and SMT boundaries before claiming foundational end-to-end.",
+    "evidence_urls": [
+      "https://github.com/strata-org/Strata/blob/main/README.md",
+      "https://github.com/strata-org/Strata/blob/main/docs/Architecture.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "benkeks/eq-checking-abstract-interpretation-lean",
+    "priority": 2,
+    "category": "certified-process-equivalence",
+    "relevance": "Direct reusable trace-preorder/equivalence decision theory for finite controller LTSs.",
+    "capability": "CCS/finite LTS, abstract interpretation, trace/ready semantics; source-inspected tracePreordered_correct theorem.",
+    "limitations": "Abstract labelled-state machines, not bitvector datapath/SV/MLIR importer. Need produce faithful finite semantics and assess state explosion.",
+    "evidence_urls": [
+      "https://github.com/benkeks/eq-checking-abstract-interpretation-lean/blob/main/README.md",
+      "https://github.com/benkeks/eq-checking-abstract-interpretation-lean/blob/main/EqCheckingAbstractInterpretation/Trace/FiniteEvaluatorCorrectness.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "teodorov/lean-transition-systems",
+    "priority": 4,
+    "category": "transition-systems-library-candidate",
+    "relevance": "Potential generic transition-system foundation.",
+    "capability": "Repository identified by indexed transition systems search.",
+    "limitations": "README only project title; capability/proof maturity not established. Preserve as investigation candidate, not recommendation.",
+    "evidence_urls": [
+      "https://github.com/teodorov/lean-transition-systems/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "Verified-zkEVM/clean",
+    "priority": 3,
+    "category": "zk-arithmetic-circuits",
+    "relevance": "Verified arithmetic DSL and backend trust patterns potentially reusable.",
+    "capability": "Lean embedded zk circuit DSL targeting AIR/PLONK/R1CS and witness generation.",
+    "limitations": "Arithmetic constraints over fields, not clocked hardware circuits. No current Calyx/SV compiler chain; names like circuit/compiler should not be counted as FPGA semantics. README + top-level aggregator inspected, no leaf proof audit.",
+    "evidence_urls": [
+      "https://github.com/Verified-zkEVM/clean/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "fractalyze/lean-stablehlo",
+    "priority": 3,
+    "category": "crypto-stablehlo-dsl",
+    "relevance": "StableHLO AST/extraction pattern useful as narrow MLIR semantic example.",
+    "capability": "Deep-embedded ZMod crypto AST, KZG/evaluation theorems, MLIR serializer.",
+    "limitations": "Despite StableHLO name, field/KZG semantics rather than general tensor/float StableHLO; pairing axiomatized and serializer unverified. Library ergonomics/serializer conformance/production milestones planned.",
+    "evidence_urls": [
+      "https://github.com/fractalyze/lean-stablehlo/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "lambdaclass/supertensor_lean",
+    "priority": 2,
+    "category": "tensor-graph-optimization",
+    "relevance": "Proof-carrying tensor rewrites could formalize upper optimization stages.",
+    "capability": "CommRing-indexed TensorExpr, sound rewrite rules, equality saturation/validation and C/Rust/CUDA code generation claimed.",
+    "limitations": "Documentation-only in this pass. CommRing laws differ from floating/saturating arithmetic; advertised lower_kernelCount_eq_opCount is not alone a numerical preservation theorem. Must source-audit lowering/codegen before integration.",
+    "evidence_urls": [
+      "https://github.com/lambdaclass/supertensor_lean/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "Verilean/hesper",
+    "priority": 3,
+    "category": "gpu-ml-dsl",
+    "relevance": "Typed tensors, BitNet and verified fusion/AD examples relevant to source semantics.",
+    "capability": "Lean WGSL/PTX DSL and GPU runtime, verified-operation claims.",
+    "limitations": "Alpha GPU framework, not FPGA pipeline. Only README audited; typed shaders/selected fusion proofs do not establish backend/whole-model equivalence.",
+    "evidence_urls": [
+      "https://github.com/Verilean/hesper/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "menik1126/NL2Chip",
+    "priority": 3,
+    "category": "agentic-hardware-generation",
+    "relevance": "Benchmark harness for Lean HDL generation and simulation/physical evaluation.",
+    "capability": "Sparkle-derived CKTLean, LLM emits typed circuits; SV simulation/synthesis/place-route evaluation.",
+    "limitations": "Typechecking and testbench pass are not source→RTL equivalence. Need independently frozen model spec and semantic compiler proof for target assurance.",
+    "evidence_urls": [
+      "https://github.com/menik1126/NL2Chip/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "agent-maestro/monogate-lean",
+    "priority": 4,
+    "category": "operator-theory-indirect",
+    "relevance": "Only indirect arithmetic/operator algebra relevance.",
+    "capability": "Exp/log operator separation/lower-bound formalization; README mentions companion multi-target compiler.",
+    "limitations": "Repository scope is real-analysis operator theory, not evidenced FPGA compiler semantics. Five open sorries documented; multi-target cross-equivalence claim not source-audited.",
+    "evidence_urls": [
+      "https://github.com/agent-maestro/monogate-lean/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "opencompl/lean-mlir-old",
+    "priority": 4,
+    "category": "superseded-project",
+    "relevance": "Preserve historical pointer without treating duplicate as new candidate.",
+    "capability": "README redirects to opencompl/lean-mlir.",
+    "limitations": "Superseded; use active repository for integration and proof audit.",
+    "evidence_urls": [
+      "https://github.com/opencompl/lean-mlir-old/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "opencompl/lean-mlir-semantics",
+    "priority": 4,
+    "category": "superseded-project",
+    "relevance": "Historical semantics repository pointer.",
+    "capability": "README says archived/merged into opencompl/lean-mlir.",
+    "limitations": "Do not count as independent active framework.",
+    "evidence_urls": [
+      "https://github.com/opencompl/lean-mlir-semantics/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "thomasnormal/lean-surfaces",
+    "priority": 1,
+    "category": "external-python-sv-deep-semantics",
+    "relevance": "Strong new candidate for importing actual source-shaped Python and SystemVerilog rather than rewriting both into an HDL.",
+    "capability": "CPython/slang AST envelope import, executable Python and four-state SV embeddings; source-inspected counter total execution and from-reset trace refinement over every cycle-model schedule; axiom pins.",
+    "limitations": "No inspected PyTorch/native tensor semantics or Python↔SV equivalence. Extractor fidelity and CPython/IEEE adequacy rely on differential validation. CRITICAL: Adequacy.lean explicitly states CycleAdequacy (cycle↔region/timed scheduler) as a Prop, NOT a proved theorem. Counter proof concerns cycle model. README coverage percentages are differential-row ratios, not semantic language completeness.",
+    "evidence_urls": [
+      "https://github.com/thomasnormal/lean-surfaces/blob/master/README.md",
+      "https://github.com/thomasnormal/lean-surfaces/blob/master/Examples/system-verilog/counter/spec.lean",
+      "https://github.com/thomasnormal/lean-surfaces/blob/master/Examples/system-verilog/counter/proof.lean",
+      "https://github.com/thomasnormal/lean-surfaces/blob/master/LeanModels/Sv/Adequacy.lean",
+      "https://github.com/thomasnormal/lean-surfaces/blob/master/LeanModels/Sv/PinAxioms.lean",
+      "https://github.com/thomasnormal/lean-surfaces/blob/master/docs/DESIGN.md"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "GrigoryEvko/FX",
+    "priority": 3,
+    "category": "typed-language-hardware-plans",
+    "relevance": "Potential source language/type-theory and fixed-width arithmetic material.",
+    "capability": "README proposes 19 grade dimensions, typed SSA/native backends and bit-precise hardware→Verilog.",
+    "limitations": "README calls project active design/bootstrapping. Complete nontruncated 12,188-path tree has no Verilog/RTL/hardware backend filenames; register field and clock-domain lattice theory exists. No demonstrated hardware generation or input-model↔RTL theorem found. README/tree review only.",
+    "evidence_urls": [
+      "https://github.com/GrigoryEvko/FX/blob/master/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "ranvier-labs/j-machine",
+    "priority": 3,
+    "category": "lean-c-compiler-rtl-cosimulation",
+    "relevance": "Concrete Lean-written compiler producing programs executed by actual SystemVerilog hardware.",
+    "capability": "C11/MDC subset→MDP machine images, independent C++ model and Verilator runs; FPGA F2 target.",
+    "limitations": "Inspected docs show compiler implementation/tests and golden↔RTL conformance, not compiler semantic preservation or universal RTL refinement. Lean implementation language alone supplies no such guarantee.",
+    "evidence_urls": [
+      "https://github.com/ranvier-labs/j-machine/blob/main/README.md",
+      "https://github.com/ranvier-labs/j-machine/blob/main/compiler/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "xiangze/Gem5Lean",
+    "priority": 2,
+    "category": "transaction-simulator-refinement",
+    "relevance": "Executable event-driven/TLM semantics and latency-independent refinement reusable for accelerator simulation.",
+    "capability": "Source-inspected soc_refines_isa and instruction/transaction lemmas; documented scheduler progress, retry protocol, NoC and mesh refinement.",
+    "limitations": "Formalization of gem5-inspired modules, not gem5 C++ or generated RTL. ISA exec/decode are shared between source spec and CPU: refinement chiefly proves distributed port/event/XBar/memory behavior, not decoder conformity to RISC-V. README explicitly leaves RTL-to-TLM abstraction as future work, omits RTL memory-address wrap, and reports signed-div/rem mismatch in related TileRiscV model. No tensor/MLIR import.",
+    "evidence_urls": [
+      "https://github.com/xiangze/Gem5Lean/blob/master/README.md",
+      "https://github.com/xiangze/Gem5Lean/blob/master/Gem5Lean/SoC.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "jn555/lean-hw-autoresearcrh",
+    "priority": 2,
+    "category": "proof-gated-hardware-optimization",
+    "relevance": "Small proof+PPA loop suitable for verified structural optimization experiments.",
+    "capability": "Frozen ∀opcode/input circuit-eval=8-bit ALU spec theorem using bv_decide; emits Verilog and compares Yosys cell count.",
+    "limitations": "Emitter explicitly calls its input naming a trusted seam. Proof is of internal circuit AST, not emitted text/Yosys implementation; small combinational widths, no tensor/controller memory pipeline theorem.",
+    "evidence_urls": [
+      "https://github.com/jn555/lean-hw-autoresearcrh/blob/main/README.md",
+      "https://github.com/jn555/lean-hw-autoresearcrh/blob/main/lean/Equiv/Alu.lean",
+      "https://github.com/jn555/lean-hw-autoresearcrh/blob/main/lean/Emit.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "xiangze/NTT_FTT",
+    "priority": 2,
+    "category": "fixed-point-signal-latency",
+    "relevance": "Explicit circuit/reference and pipelining theorems relevant to fixed-point accelerator datapaths.",
+    "capability": "Source-inspected carrier-parametric Cooley–Tukey sampling and pipeline-delay proofs, NTT/fixed-point coefficients, Sparkle Verilog tops.",
+    "limitations": "Model and circuit share network term at different carriers; no inspected external model import or renderer theorem. Four-step=DFT appears only as dftFourStep_eq_dft_statement, NOT proved. Fixed-point algebra cannot assume commutative ring laws for rounded multiplication.",
+    "evidence_urls": [
+      "https://github.com/xiangze/NTT_FTT/blob/master/README.md",
+      "https://github.com/xiangze/NTT_FTT/blob/master/FFT/Equiv.lean",
+      "https://github.com/xiangze/NTT_FTT/blob/master/FFT/README.md"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "xiangze/Riscv-Tile",
+    "priority": 3,
+    "category": "matmul-tiling-and-cpu-models",
+    "relevance": "Matrix tiling transparency proof may inform algebraic SCF/tile lowering.",
+    "capability": "Source-inspected integer matrix 4×4 vs 2×2+RAM model equivalence, recursive tiling and abstract execution transparency; separate CPU equivalence files.",
+    "limitations": "MatMul theorem is over integer mathematical/abstract execution definitions; no direct link to emitted Chisel SV or actual quantized PyTorch. README mostly Chisel RTL testing; Gem5Lean documents division convention mismatch in related CPU semantics.",
+    "evidence_urls": [
+      "https://github.com/xiangze/Riscv-Tile/blob/master/README.md",
+      "https://github.com/xiangze/Riscv-Tile/blob/master/lean/RISCVarray/MatMul_Tiling_Equiv.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "iamkarthikbk/edith",
+    "priority": 4,
+    "category": "unfinished-eda-theorem-sketches",
+    "relevance": "Background EDA mathematical statements only.",
+    "capability": "Boolean synthesis/SAT/layout algorithm theorem catalog.",
+    "limitations": "README warns sorry placeholders. Inspected quine_mccluskey_theorem proof is sorry; no usable RTL/MLIR semantic equivalence framework demonstrated.",
+    "evidence_urls": [
+      "https://github.com/iamkarthikbk/edith/blob/main/README.md",
+      "https://github.com/iamkarthikbk/edith/blob/main/syn/QuineMcCluskey.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "rk5697648-nietzsche/erdosnix",
+    "priority": 4,
+    "category": "false-positive-rtl-category-sketch",
+    "relevance": "Hardware keyword false positive for practical equivalence work.",
+    "capability": "LDPC modules as category objects, illustrative identity trace/debug functors.",
+    "limitations": "Inspected file represents traces as list of signal names and maps as identity, no value/time behavior. Category/Unit composition sketch is not actual RTL semantics or functional proof; do not recommend as verification capability.",
+    "evidence_urls": [
+      "https://github.com/rk5697648-nietzsche/erdosnix/blob/main/README.md",
+      "https://github.com/rk5697648-nietzsche/erdosnix/blob/main/src/LDPC/Category.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "fduxiao/HDLTest1.lean",
+    "priority": 3,
+    "category": "bluespec-rule-compiler-prototype",
+    "relevance": "Rule-based hardware syntax/scheduling/compiler design reference.",
+    "capability": "Deep action/rule semantics and source-inspected action/schedule→Circuit compiler.",
+    "limitations": "Inspected Compile.lean has no theorem declarations; README lists compiler correctness, composition and bit-width typing as unanswered questions. Not completed verified compiler or arbitrary SV importer.",
+    "evidence_urls": [
+      "https://github.com/fduxiao/HDLTest1.lean/blob/main/README.md",
+      "https://github.com/fduxiao/HDLTest1.lean/blob/main/HDLTest1/Compile.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "dz7903/lean-sv-examples",
+    "priority": 4,
+    "category": "sv-lean-teaching-examples",
+    "relevance": "Teaching/reference examples only.",
+    "capability": "Six parallel SV/Lean examples, BitVec arithmetic, register/counter behavior and counter invariants.",
+    "limitations": "Lean model proofs/tests separate from SV; README explicitly says Lean build checks Lean and Icarus invocation only checks source. No translator correctness, external-source correspondence or tensor semantics.",
+    "evidence_urls": [
+      "https://github.com/dz7903/lean-sv-examples/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "Verilean/eproof",
+    "priority": 2,
+    "category": "proof-claim-audit-tool",
+    "relevance": "Directly useful for mapping claimed model↔RTL guarantee onto exact theorems/axioms and missing correspondence.",
+    "capability": "Extracts Lean declarations, statement/proof dependencies and axioms into interactive reports and requirements manifests; Sparkle compilation-gap example.",
+    "limitations": "Audit/evidence navigation tool, not an equivalence prover. Recorded mappings and external reports are assertions, not authenticated proofs; requires trusted baseline/extractor/executable. Hash identity is not semantic equivalence.",
+    "evidence_urls": [
+      "https://github.com/Verilean/eproof/blob/main/README.md"
+    ],
+    "proof_status": "documentation_only"
+  },
+  {
+    "full_name": "xuhongxu96/lean-nano-llvm",
+    "priority": 3,
+    "category": "small-llvm-refinement-semantics",
+    "relevance": "Readable integer/undef/poison refinement example for compiler pass design.",
+    "capability": "Source-inspected refinement relation with source/target definedness and return-value components; symbolic-width optimization examples.",
+    "limitations": "Research single-block integer IR only: no memory, loads/stores, pointers, phi or calls. Freeze maps poison to zero, explicitly simplified vs LLVM; cannot substitute for actual LLVM/MLIR semantics without correcting boundary.",
+    "evidence_urls": [
+      "https://github.com/xuhongxu96/lean-nano-llvm/blob/main/README.md",
+      "https://github.com/xuhongxu96/lean-nano-llvm/blob/main/LeanNanoLlvm/Refinement/Refinement.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "dominicmkennedy/synth-xfer",
+    "priority": 2,
+    "category": "abstract-interpretation-bitvectors",
+    "relevance": "KnownBits and integer-range completeness results useful for range/overflow side conditions and abstract compiler analyses.",
+    "capability": "MLIR abstract transformer synthesizer plus Lean all-width KnownBits/unsigned/signed range completeness classifications; source-inspected proof-carrying certification and axiom audit.",
+    "limitations": "Abstract-analysis correctness/completeness differs from program transformation equivalence. Operands abstracted independently (correlations lost); poison/UB empty-set semantics must match chosen source contract. No current tensor↔RTL integration.",
+    "evidence_urls": [
+      "https://github.com/dominicmkennedy/synth-xfer/blob/main/README.md",
+      "https://github.com/dominicmkennedy/synth-xfer/blob/main/lean/README.md",
+      "https://github.com/dominicmkennedy/synth-xfer/blob/main/lean/SynthXfer/Certification.lean"
+    ],
+    "proof_status": "source_inspected"
+  },
+  {
+    "full_name": "julian-lagattuta/wavelet-patched",
+    "priority": 2,
+    "category": "wavelet-related-integration-branch",
+    "relevance": "Potential SCF→Wavelet integration lead beyond upstream Rust DSL.",
+    "capability": "Branch scftowavelet; source-inspected Wavelet forward simulation/strong normalization theorem analogous to upstream. Repository description says patches align specification.",
+    "limitations": "README unchanged from upstream and does not document patch delta. No additional SCF frontend theorem established in this inspection; source theorem still core sequential→dataflow with affinity/operator premises. Treat as related version, not independent verified compiler.",
+    "evidence_urls": [
+      "https://github.com/julian-lagattuta/wavelet-patched/blob/scftowavelet/README.md",
+      "https://github.com/julian-lagattuta/wavelet-patched/blob/scftowavelet/wavelet-core/lean/Wavelet/Thm/HighLevel.lean"
+    ],
+    "proof_status": "source_inspected"
+  }
+]

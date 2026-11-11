@@ -1,0 +1,5 @@
+read_json /tmp/llm2fpga-yosys-memory-probe/exposed.json
+check -assert
+write_json /tmp/llm2fpga-yosys-memory-probe/lowered.json
+select model_memory
+write_functional_smt2 /tmp/llm2fpga-yosys-memory-probe/functional.smt2

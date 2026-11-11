@@ -1,0 +1,23 @@
+{
+  "stage": "memory-trace-self-contained",
+  "command": [
+    "python3",
+    "research/yosys-lean-2026-11-02/full-hardware-run/memory_trace.py"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-01T23:43:49.316350+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 3.5819167029985692,
+  "finished_at": "2026-11-01T23:43:52.898412+00:00"
+}

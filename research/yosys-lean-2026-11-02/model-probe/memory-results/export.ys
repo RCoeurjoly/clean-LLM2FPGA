@@ -1,0 +1,13 @@
+read_verilog -sv /nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv
+hierarchy -check -top model_memory
+proc
+flatten
+memory_collect
+opt_clean
+write_json /tmp/llm2fpga-yosys-memory-probe/before.json
+clk2fflogic -nolower -nopeepopt
+memory_nordff
+opt_clean
+setundef -undriven -anyseq
+check -assert
+write_json /tmp/llm2fpga-yosys-memory-probe/unconstrained.json

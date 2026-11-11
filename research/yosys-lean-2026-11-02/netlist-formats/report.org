@@ -1,0 +1,46 @@
+#+title: Lean importers for Yosys netlist outputs — 2026-11-02
+#+options: toc:2
+
+* Result
+
+The strongest direct netlist result is deepai-org/loom: its Python adapter reads actual Yosys JSON schema and Lean parses and lowers the resulting neutral IR into executable hardware semantics. The adapter and Yosys remain untrusted, and its source requires independent equivalence evidence.
+
+Restricted SystemVerilog import routes exist in lean-surfaces, LEAP and circuitprover-sv. Sparkle has a real parser but the source still skips failed always blocks and missing modules and can emit admitted proofs. All 18 inspected parser-bearing forks retained the three principal inherited gaps. HDLean's proved SV parser reads its own rigid emitted grammar; VerilLean supplies modified Lean-embedded syntax.
+
+Lean-surfaces has real hierarchical SPICE parsing and circuit semantics, but a working bridge from Yosys digital SPICE output was not established. No source-verified Lean importer was found for BLIF/EBLIF, EDIF, JNY, Intersynth, SimpleC, Functional C++, CXXRTL or Yosys connection tables within this bounded audit. The xiangshan2Lean runtime table is a different format from Yosys write_table.
+
+* Detailed evidence
+
+- [[file:REPORT.md][Full source audit and trust-boundary analysis]]
+- [[file:format-mapping.csv][22 project/format assessments with pinned source URLs]]
+- [[file:format-mapping.json][Machine-readable format assessments]]
+- [[file:backend-coverage.csv][Explicit coverage of all 22 production Yosys backends]] (11 assigned here, 11 delegated to the formal-format audit)
+- [[file:auxiliary-coverage.csv][28 auxiliary output command groups and independent-audit limits]]
+- [[file:evidence-manifest.json][Selected source commit/blob/SHA-256 manifest]]
+- [[file:license-audit.json][Upstream license/notice inventory]]
+- [[file:snapshot-locations.json][Full source snapshots relocated under /tmp]]
+
+* Search coverage
+
+The existing 20,707-repository census was reused without activity, archive or fork exclusions. This audit records 51 distinct GitHub query families and 71 saved result pages: 42 families have complete reported pagination and 9 noisy/broad families are explicitly capped. These counts describe query/page retrieval, not exhaustive semantic coverage of all GitHub source.
+
+- [[file:query-coverage.csv][Exact queries, counts, pages, caps and index-drift flags]]
+- [[file:query-coverage.json][Detailed page-by-page coverage]]
+- [[file:requests.jsonl][Read-only GitHub request log]]
+- [[file:local-source-hits.json][8,919 candidate text files scanned for backend/source signatures]]
+- [[file:fork-audit.json][29 discovered hardware fork trees]]
+- [[file:fork-source-flags.json][54 parser/lowering/verification observations across 18 forks and 16 distinct source blobs]]
+- [[file:late-spice-evidence.json][Limited late LSDL switch-network source observation]]
+
+Raw search and fork responses are compressed in searches/, fork-trees/ and fork-blobs/. The code index does not cover every repository or revision, and mathematical substring matches create noise. No universal public/private/non-default-branch nonexistence claim follows from negative rows. Several auxiliary schemas and late adjacent leads received no independent whole-project importer audit.
+
+* Verification
+
+Two executed Python Loom adapter probes covered a supported AND cell and an explicit unsupported-cell blocker. A lexical proof-token audit records the SV tactic error-recovery admission and Thinking Sand's external netlist axioms. No Lean compiler or pyslang installation was available in this worker, so no fresh project build or end-to-end translation proof is claimed.
+
+- [[file:loom-adapter-probes.json][Adapter-only probe inputs/results]]
+- [[file:proof-token-audit.json][Comment/string-stripped lexical findings and scope]]
+- [[file:verification.json][Artifact counts, source hash validation and build limitations]]
+- [[file:collect.py][Read-only collection/replay helper]]
+
+The root audit separately reproduced production memory-RTL FunctionalIR export plus matching JSON and xiangshan2Lean source generation, including from the compact retained helper files. Source generation does not establish a Lean-checked equivalence proof.

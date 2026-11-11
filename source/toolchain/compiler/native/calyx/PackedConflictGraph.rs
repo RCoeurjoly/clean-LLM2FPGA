@@ -69,7 +69,10 @@ impl Iterator for Neighbors<'_> {
         None
     }
 }
-impl GraphBase for PackedConflictGraph { type NodeId = NodeIndex; type EdgeId = (NodeIndex,NodeIndex); }
+impl GraphBase for PackedConflictGraph {
+    type NodeId = NodeIndex;
+    type EdgeId = (NodeIndex,NodeIndex);
+}
 impl NodeIndexable for PackedConflictGraph {
     fn node_bound(&self) -> usize { self.nodes }
     fn to_index(&self, node: NodeIndex) -> usize { node.index() }
@@ -77,7 +80,9 @@ impl NodeIndexable for PackedConflictGraph {
 }
 impl<'a> IntoNeighbors for &'a PackedConflictGraph {
     type Neighbors = Neighbors<'a>;
-    fn neighbors(self, node: NodeIndex) -> Self::Neighbors { PackedConflictGraph::neighbors(self,node) }
+    fn neighbors(self, node: NodeIndex) -> Self::Neighbors {
+        PackedConflictGraph::neighbors(self,node)
+    }
 }
 impl IntoNodeIdentifiers for &PackedConflictGraph {
     type NodeIdentifiers = std::iter::Map<std::ops::Range<usize>,fn(usize)->NodeIndex>;

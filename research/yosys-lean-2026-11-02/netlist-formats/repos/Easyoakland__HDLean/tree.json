@@ -1,0 +1,385 @@
+{
+  "sha": "0c4637326055c9ee38e9d9ecff9cf167d664f7ec",
+  "url": "https://api.github.com/repos/Easyoakland/HDLean/git/trees/0c4637326055c9ee38e9d9ecff9cf167d664f7ec",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b0095269262a259e61bc31cca4523fd73865541",
+      "size": 6,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/2b0095269262a259e61bc31cca4523fd73865541"
+    },
+    {
+      "path": "Help.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f179cc78a01493509e0e106107d90e10257e77d",
+      "size": 437,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/9f179cc78a01493509e0e106107d90e10257e77d"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc8981b3a38bed8883c0ffb4f6f2d48ced5dcfc6",
+      "size": 39,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/cc8981b3a38bed8883c0ffb4f6f2d48ced5dcfc6"
+    },
+    {
+      "path": "Why.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df06a279605be6daaef0dece64376008b3651465",
+      "size": 11705,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/df06a279605be6daaef0dece64376008b3651465"
+    },
+    {
+      "path": "comparison.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f8d9e5bd8b2faee5abbbf6c4bab5d3f87a1db4f",
+      "size": 1928,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/1f8d9e5bd8b2faee5abbbf6c4bab5d3f87a1db4f"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "251840fa7e3d4b16de483a1d0259c724649a43f3",
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/trees/251840fa7e3d4b16de483a1d0259c724649a43f3"
+    },
+    {
+      "path": "examples/RISCV",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "559766ab1fbfd24ca0612c1694a9c0fda3c0efa0",
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/trees/559766ab1fbfd24ca0612c1694a9c0fda3c0efa0"
+    },
+    {
+      "path": "examples/RISCV/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c",
+      "size": 7,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c"
+    },
+    {
+      "path": "examples/RISCV/Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9e53e0aa1665dc481202bf73bc4677d882a571f",
+      "size": 1655,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/a9e53e0aa1665dc481202bf73bc4677d882a571f"
+    },
+    {
+      "path": "examples/RISCV/RISCV.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddcccb7ab667197952e45de14999a65038540722",
+      "size": 145,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/ddcccb7ab667197952e45de14999a65038540722"
+    },
+    {
+      "path": "examples/RISCV/RISCV",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "468963696987abc36c625226a9184607e453aca8",
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/trees/468963696987abc36c625226a9184607e453aca8"
+    },
+    {
+      "path": "examples/RISCV/RISCV/Alu.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06a88c45e1f23364f586d9bb7f9accf9c364bd87",
+      "size": 968,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/06a88c45e1f23364f586d9bb7f9accf9c364bd87"
+    },
+    {
+      "path": "examples/RISCV/RISCV/AluDecode.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "163d06d9ec119616edb9f5224830f055bc5f60a2",
+      "size": 2821,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/163d06d9ec119616edb9f5224830f055bc5f60a2"
+    },
+    {
+      "path": "examples/RISCV/RISCV/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "297737bb526249abc44e6eafcff85868592e6699",
+      "size": 11374,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/297737bb526249abc44e6eafcff85868592e6699"
+    },
+    {
+      "path": "examples/RISCV/RISCV/ForwardingUnit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "670c9c20ee3c1dbe629840d48e76b198355fa458",
+      "size": 2276,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/670c9c20ee3c1dbe629840d48e76b198355fa458"
+    },
+    {
+      "path": "examples/RISCV/RISCV/ImmGen.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62c21d395c405fef1ad59e22de47250f428e188c",
+      "size": 1064,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/62c21d395c405fef1ad59e22de47250f428e188c"
+    },
+    {
+      "path": "examples/RISCV/RISCV/InstrDecode.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6874d36349911d48e6bc347ce4b69e20936c40af",
+      "size": 4136,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/6874d36349911d48e6bc347ce4b69e20936c40af"
+    },
+    {
+      "path": "examples/RISCV/RISCV/PipelineCtrl.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b5bf6dfa815ff2c96cce12708689b9da11a10a2",
+      "size": 3505,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/9b5bf6dfa815ff2c96cce12708689b9da11a10a2"
+    },
+    {
+      "path": "examples/RISCV/RISCV/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c21cc380709c2a57c65bbbc4eee421782255644d",
+      "size": 93,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/c21cc380709c2a57c65bbbc4eee421782255644d"
+    },
+    {
+      "path": "examples/RISCV/RISCV/RegisterFile.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "586934fc1988309fc69139d91ed27c2d27cb71b7",
+      "size": 2356,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/586934fc1988309fc69139d91ed27c2d27cb71b7"
+    },
+    {
+      "path": "examples/RISCV/RISCV/SingleCycleProc.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94ba0913532d61757b15df4ffb3b555838395368",
+      "size": 2334,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/94ba0913532d61757b15df4ffb3b555838395368"
+    },
+    {
+      "path": "examples/RISCV/RISCV/SingleProcTb.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5be07c314e0e013c535325ef15961822c1cc357d",
+      "size": 3169,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/5be07c314e0e013c535325ef15961822c1cc357d"
+    },
+    {
+      "path": "examples/RISCV/RISCV/Types.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3e45f7804b393cdee42e0f0c9d874776907c6fe",
+      "size": 815,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/f3e45f7804b393cdee42e0f0c9d874776907c6fe"
+    },
+    {
+      "path": "examples/RISCV/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa5f850e0e25e04a6b97b4277513a54e56b7ab70",
+      "size": 286,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/fa5f850e0e25e04a6b97b4277513a54e56b7ab70"
+    },
+    {
+      "path": "examples/RISCV/lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7d15fce54a6c954390899a91aa1d8c203d08bf4",
+      "size": 229,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/e7d15fce54a6c954390899a91aa1d8c203d08bf4"
+    },
+    {
+      "path": "examples/RISCV/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c00a53503cc3cc776c290056ed21ce7e5d80b083",
+      "size": 25,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/c00a53503cc3cc776c290056ed21ce7e5d80b083"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5174b590eef774a37f724fa19fa5fd30e1f3780f",
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/trees/5174b590eef774a37f724fa19fa5fd30e1f3780f"
+    },
+    {
+      "path": "src/Compiler.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7a863fe620e5ec598d04fbe755bc80fc9401820",
+      "size": 122,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/f7a863fe620e5ec598d04fbe755bc80fc9401820"
+    },
+    {
+      "path": "src/Compiler",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe8089497a4562fb20fe7552d94ff740a852a1a6",
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/trees/fe8089497a4562fb20fe7552d94ff740a852a1a6"
+    },
+    {
+      "path": "src/Compiler/ANF.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ef0bb064cbb018546d96d8454de766081cec9c2",
+      "size": 2420,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/7ef0bb064cbb018546d96d8454de766081cec9c2"
+    },
+    {
+      "path": "src/Compiler/BitShape.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "109edd3bfdabe751d1f048e09fa1a55a4ef197c1",
+      "size": 8127,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/109edd3bfdabe751d1f048e09fa1a55a4ef197c1"
+    },
+    {
+      "path": "src/Compiler/BitVecThm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb622c5cd7e1c08bdf83d67027652541af83b6ae",
+      "size": 1686,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/bb622c5cd7e1c08bdf83d67027652541af83b6ae"
+    },
+    {
+      "path": "src/Compiler/ImplementedByHWAttr.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54cd4380328ac49d756cef4dc4aff6bf2ca785c7",
+      "size": 3120,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/54cd4380328ac49d756cef4dc4aff6bf2ca785c7"
+    },
+    {
+      "path": "src/Compiler/Netlist.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ad055e1fb9fb78994a0d5558ef610965ce49105",
+      "size": 19973,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/0ad055e1fb9fb78994a0d5558ef610965ce49105"
+    },
+    {
+      "path": "src/Compiler/ToSystemVerilog.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2f2731fef9f74de6c5e54fa937d12d6f5562db9",
+      "size": 59660,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/e2f2731fef9f74de6c5e54fa937d12d6f5562db9"
+    },
+    {
+      "path": "src/Compiler/Trace.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "891a7ab3eec4874cb61d20dc4e722ce503dec759",
+      "size": 981,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/891a7ab3eec4874cb61d20dc4e722ce503dec759"
+    },
+    {
+      "path": "src/Compiler/WHNF.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f97e6edc03f3e63ab783bb604ef73ecdd6f8c311",
+      "size": 6782,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/f97e6edc03f3e63ab783bb604ef73ecdd6f8c311"
+    },
+    {
+      "path": "src/Hdlean.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6ba43f0514bc835b1827d3727a9ecdf4a60e366",
+      "size": 81,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/b6ba43f0514bc835b1827d3727a9ecdf4a60e366"
+    },
+    {
+      "path": "src/Hdlean",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "142ba37a2d4680ddd24823fd500ecd93b98f6fe1",
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/trees/142ba37a2d4680ddd24823fd500ecd93b98f6fe1"
+    },
+    {
+      "path": "src/Hdlean/Arrow.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2adc4b5a121025b8fc1bc9e3f6c932919f2970a",
+      "size": 3389,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/c2adc4b5a121025b8fc1bc9e3f6c932919f2970a"
+    },
+    {
+      "path": "src/Hdlean/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb19768b821e3df58621798131d67446a16c066b",
+      "size": 6098,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/cb19768b821e3df58621798131d67446a16c066b"
+    },
+    {
+      "path": "src/Hdlean/SigmaMealy.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a30e6e891a352ea6b987a7cafb85b334210a365e",
+      "size": 33446,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/a30e6e891a352ea6b987a7cafb85b334210a365e"
+    },
+    {
+      "path": "src/Hdlean/Tactic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c260244e1ac5e747ffebfd384dbf3ca754e59f7",
+      "size": 707,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/4c260244e1ac5e747ffebfd384dbf3ca754e59f7"
+    },
+    {
+      "path": "src/Main.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd9270557963b1537075a9335d6f8e0a45932315",
+      "size": 654,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/dd9270557963b1537075a9335d6f8e0a45932315"
+    },
+    {
+      "path": "src/Test.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0f0f77c7ccae935de10ddee0317533b0b632460",
+      "size": 1959,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/f0f0f77c7ccae935de10ddee0317533b0b632460"
+    },
+    {
+      "path": "src/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a4fc075607fe9ee9e59bff97c66fbc9035304f0",
+      "size": 112,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/7a4fc075607fe9ee9e59bff97c66fbc9035304f0"
+    },
+    {
+      "path": "src/lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be39da5298ceb9f4ce1601909d09fbad4d6beb55",
+      "size": 450,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/be39da5298ceb9f4ce1601909d09fbad4d6beb55"
+    },
+    {
+      "path": "src/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "870bbe4e50e63443576fccd3629221355357475d",
+      "size": 6,
+      "url": "https://api.github.com/repos/Easyoakland/HDLean/git/blobs/870bbe4e50e63443576fccd3629221355357475d"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,9 @@
+C2L_TABLE_CHECK {"states":88074,"outputs":3,"nodes":4227056,"inputs":538088}
+{"sample":0,"outputs":{"logits_valid":0,"logits_data":0,"done":0}}
+{"sample":1,"outputs":{"logits_valid":0,"logits_data":0,"done":0}}
+{"sample":2,"outputs":{"logits_valid":0,"logits_data":0,"done":0}}
+{"sample":3,"outputs":{"logits_valid":0,"logits_data":0,"done":0}}
+{"sample":4,"outputs":{"logits_valid":0,"logits_data":0,"done":0}}
+{"sample":5,"outputs":{"logits_valid":0,"logits_data":0,"done":0}}
+{"sample":6,"outputs":{"logits_valid":0,"logits_data":0,"done":0}}
+{"sample":7,"outputs":{"logits_valid":0,"logits_data":0,"done":0}}

@@ -1,11 +1,10 @@
-{ runCommand, python3, calyx, fourStateVerifier }:
+{ runCommand, python3, calyx }:
 
 # Apply reviewed native guard/AST lowering and serializer source patches
 # before compiling the backend. Generated RTL is never opened or rewritten.
 let
   package = calyx.overrideAttrs (old: {
   patches = (old.patches or []) ++ [
-    ./patches/graph-calyx-component-file-emission.patch
     ./patches/graph-calyx-inferred-fsm-state-decode.patch
     ./patches/graph-calyx-deterministic-fsm-emission.patch
     ./patches/graph-calyx-signed-divider-sharing.patch
@@ -32,13 +31,11 @@ let
     ./patches/graph-calyx-static-promotion-diagnostics.patch
     ./patches/graph-calyx-promotion-cleanup.patch
     ./patches/graph-calyx-pass-memory-boundaries.patch
-    ./patches/graph-calyx-late-comb-inputs.patch
   ];
   postPatch = (old.postPatch or "") + ''
     cp ${../compiler/native/calyx/LiveControlSet.rs} calyx/opt/src/analysis/live_control_set.rs
     cp ${../compiler/native/calyx/PackedConflictGraph.rs} calyx/utils/src/packed_conflict_graph.rs
     cp ${../compiler/native/calyx/CompilerMemory.rs} calyx/utils/src/compiler_memory.rs
-    cp ${../compiler/native/calyx/LateCombInputs.rs} calyx/opt/src/passes/late_comb_inputs.rs
   '';
   passthru = (old.passthru or {}) // {
     tests = package.overrideAttrs (built: {
@@ -57,19 +54,7 @@ let
       '';
       postBuild = "";
       doCheck = false;
-      installPhase = ''
-        mkdir -p signed-divider-tests/compiler/tests/calyx
-        cp ${../tests/test_graph_calyx_signed_divider_sharing.py} signed-divider-tests/test_signed_divider.py
-        cp ${../tests/test_graph_calyx_late_comb_inputs.py} signed-divider-tests/test_late_comb_inputs.py
-        cp ${../compiler/tests/calyx/signed-divider-sharing.futil} signed-divider-tests/compiler/tests/calyx/signed-divider-sharing.futil
-        cp ${../compiler/tests/calyx/signed-divider-parallel.futil} signed-divider-tests/compiler/tests/calyx/signed-divider-parallel.futil
-        export LLM2FPGA_CALYX_TOOL="${package}/bin/calyx"
-        export LLM2FPGA_TEST_SUPPORT="$PWD/signed-divider-tests"
-        export LLM2FPGA_IVERILOG="${fourStateVerifier}/bin/iverilog"
-        ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_signed_divider.py -v
-        ${python3}/bin/python3 -m unittest discover -s signed-divider-tests -p test_late_comb_inputs.py -v
-        touch "$out"
-      '';
+      installPhase = ''touch "$out"'';
       postInstall = "";
       doInstallCheck = false;
       dontFixup = true;

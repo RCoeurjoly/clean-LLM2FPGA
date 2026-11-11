@@ -1,0 +1,331 @@
+#+TITLE: Lean consumers for Yosys formal and word-level formats
+#+DATE: 2026-11-02
+#+PROPERTY: header-args :eval never
+#+STARTUP: overview
+
+* Scope and result
+
+This source audit covers RTLIL (.il), legacy SMT2, FunctionalIR SMT-LIB and
+Rosette, original BTOR and BTOR2, binary/ASCII AIGER, write_aiger2 compatibility,
+XAIGER, SMV, and FIRRTL. It supplements the 20,707-repository Lean census from
+2026-11-01. It includes mixed-language projects, forks, stale projects and projects
+with zero stars. Stars, activity and primary language were never acceptance filters.
+
+There are real format consumers. The strongest practical word-level importer found
+for an external generated design with memories is ErosSph/xiangshan2Lean's Python
+reader of Yosys *write_functional_smt2*, with matching Yosys JSON metadata.
+The strongest direct sequential AIGER safety/certificate route found is
+opencompl/valaig. Neither establishes a universal correct translation from
+quantized PyTorch through Calyx/Yosys into Lean. Generic model semantics,
+frontend fidelity, and accelerator-specific refinement remain separate obligations.
+
+* Evidence and coverage
+
+- [[file:query-log.json][Readable query log]] and [[file:query-log.csv][query CSV]] record 50 requests.
+- [[file:query-log-raw.json.gz][Losslessly compressed raw search responses]] preserve API counts, incomplete flags,
+  pages, and returned item metadata.
+- [[file:query-coverage.csv][Coverage CSV]] / [[file:query-coverage.json][coverage JSON]] summarize 39 distinct queries:
+  31 bounded returned sets were exhausted by pagination; 8 are explicitly incomplete.
+- [[file:census-leads.json][Census leads]] records all 20,707 scanned rows, the exact metadata fields/terms,
+  and 18 matching repository leads.
+- [[file:support-mapping.csv][Format/project mapping CSV]] / [[file:support-mapping.json][JSON]] have 26 detailed rows.
+- [[file:source-file-index.json][Selected source index]] stores paths, blob SHAs, source URLs and known commit pins.
+- [[file:source-tree-index.json.gz][Recursive source tree responses]] preserve their truncation flags.
+- [[file:head-metadata.json][Head/repository metadata]] stores fork/archive/push fields for main candidates.
+- [[file:fork-metadata.json][Fork metadata]] records additional AIGER forks.
+- [[file:archive-manifest.json][SHA256 manifest]] binds retained local evidence bytes.
+- [[file:license-provenance.json][License provenance]] records 34 upstream license/notice files beside
+  the sources, 13 projects without a matching root license file, and exact Git blob
+  validation of all 134 retained source/license files. These housekeeping reads do
+  not change the survey's original source-read or search counts.
+
+This is bounded search coverage, not a claim to enumerate every GitHub repository.
+GitHub code search covers the default branch and has an indexing/result ceiling.
+The first broad BTOR and SMV searches returned many mathematical/identifier
+substring matches. They were sampled then refined rather than silently treated
+as exhausted. A broad FIRRTL+Lean code query exceeded 18,000 hits; mixed-language
+repository queries plus targeted source/extension queries supplied useful leads.
+Repository searches AIGER+Lean (219), FIRRTL+Lean (315), SMT2+Lean (122),
+SMV+Lean (76), smtlib+Lean (76), BTOR2+Lean (15), RTL2Lean (18), RTLIL+Lean
+(2), BTOR+Lean (2), XAIGER+Lean (0), and the other logged variants were paginated
+to their reported counts.
+
+Language filtering alone is unreliable. =RTLIL language:Lean= returned zero,
+whereas ="RTLIL" extension:lean= found 22 files including philzook58/yosys-lean
+and ErosSph/xiangshan2Lean. Known HDLean sources prove a further indexing miss.
+SMT-LIB code-search totals changed from 144 to 152 between pages; even fetching
+all numbered pages is not a frozen-index completeness proof. Repository connector
+search omits totals; read-only =gh api search/repositories= was used to preserve
+counts/pagination. The connector rejected =search/repositories= through its fetch
+URL allowlist; this error and repeat queries are retained.
+
+The source snapshots were read, not freshly built with every pinned Lean version.
+Statements about proof closure below describe inspected definitions/theorems and
+documented audits. They are not new local clean-build certificates. No production
+code, repository history, or external service was modified.
+
+* Format-level conclusions
+
+| Yosys format | Real candidate | Direction and practical limit |
+|-------------+----------------+-------------------------------|
+| RTLIL .il | nathsou/HDLean | Own-output parser and proved printer roundtrip; comments/exact reprint required |
+| RTLIL live IR | philzook58/yosys-lean | C++ Yosys plugin emits Lean; no standalone generic Lean .il parser |
+| legacy SMT2 | LeanHorn/SMTLib-to-Lean | Generic SMT propositions incl. BV/arrays; no audited Yosys transition adapter |
+| generic SMT2 syntax | onderjan/blazing-smtlib | Verified syntax reader/writer; theory/hardware semantics still required |
+| FunctionalIR SMT2 | ErosSph/xiangshan2Lean | Actual serializer importer, executable state and memories; translator not proved |
+| FunctionalIR SMT2 | atvrager/Shoumei-RTL | Pure Lean prototype translator with unsafe fallbacks and no array support |
+| FunctionalIR Rosette | none established | Leanette formalizes related symbolic semantics, not this Yosys format |
+| original BTOR | none established | exoverifier's btor namespace is an internal BV DAG, not a file parser |
+| BTOR2 | jn555/HardBench | External BV-only parser to fixed-bound BMC Lean obligations |
+| BTOR2 | WorlesEnric/pceq | Rust parser/product to restricted symbolic Lean VC/certificate exports |
+| binary AIGER .aig | opencompl/valaig | Sequential parser plus proved checker, single bad, no fairness/justice |
+| ASCII AIGER .aag | opencompl/valaig | Same sequential/checker route through ASCII grammar |
+| AIGER .aig/.aag | uw-unsat/exoverifier | Lean3 binary import/ASCII emit, explicitly combinational only |
+| AIGER .aag | nathsou/HDLean | Own subset printer/parser theorem; binary bridge ignores reset init/symbols |
+| AIGER .aag | jn555/HardBench | External unrolled combinational L=0,O=1 reader |
+| write_aiger2 | Valaig compatibility candidate | Same ordinary AIGER grammar may apply; no end-to-end compatibility run |
+| XAIGER | none established | Standard AIGER support does not imply boxes/extensions |
+| SMV | ttj/leansmv family | Genuine small NuSMV subset importer; missing Yosys word types |
+| FIRRTL | ErosSph/xiangshan2Lean | Real classic/modern text importer, restricted single-clock register subset |
+| FIRRTL | benreynwar/silean | Emitter; no incoming external FIRRTL capability established |
+
+* Source audit: practical importers
+
+** ErosSph/xiangshan2Lean — FunctionalIR SMT2 with memories
+
+Pinned commit: =a1299b564831e571b9b80f816219ae06c91db342=, pushed 2026-10-19,
+not archived, not a fork.
+
+[[https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/functional_ir.py][functional_ir.py]]
+implements an actual strict reader, not an SMT solver.
+=import_functional= requires exactly one =define-fun= with the serializer's
+=(inputs,state)->Pair outputs state= shape, record datatypes and single-binding
+nested lets. It checks input/output names and widths against matching JSON and
+uses serializer comments for original state/output names. =select/store= become
+memory reads/writes; emitted source memories are functions from address BitVecs
+to data BitVecs. A separate table/interpreter backend supports large graphs.
+
+[[https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys2lean.py][yosys2lean.py]]
+uses the exact new =write_functional_smt2= command. Its normal lowering includes
+=clk2fflogic -nolower -nopeepopt; memory_nordff; opt_clean; setundef -undriven -anyseq=.
+Matching lowered JSON is emitted alongside SMT. It is not interchangeable with
+legacy =write_smt2=, whose state predicates/functions have another organization.
+
+The init correction matters: the FunctionalIR serializer prints unknown initial
+bits as zero. The importer discards SMT initial assertions and reconstructs
+known-bit constraints from Yosys JSON; every remaining initial bit and memory word
+is caller-supplied. Extra inputs represent data unknowns. This is a two-state
+completion semantics, not IEEE four-state simulation.
+
+The default preflight limits single direct rising clocks. Explicit global mode
+uses official edge detection for multiple/gated/falling clocks, latches and
+supported asynchronous controls, under the documented stable-data/reset-release
+sampling contract. Memory support is zero-based with at least two words; async
+writes require another contract. Effects preservation exposes assertions,
+assumptions, covers and print observations. Their fail-on-execution check is not
+itself a universal safety proof.
+
+[[https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/verification/yosys/Counter.lean][Counter.lean]]
+proves cycle counter/output facts and =arbitrary_finite_sequences= for the
+generated four-bit counter model, including explicit arbitrary unknown input.
+The sampling-state hypothesis is explicit. The proof does not establish generic
+Python reader, Yosys lowering, native tool or all-memory correctness.
+=Functional.lean= supplies executable typed operations, decoder checks and
+bounded-shift equalities. Differential campaigns are evidence, not that missing theorem.
+
+The full CLI bootstraps pinned Windows tools. The Python low-level reader and
+its stdlib/helper modules can be exercised with local matching SMT+JSON without
+building Scala or bootstrapping that Windows driver.
+
+** philzook58/yosys-lean — substantial proofs, currently memory-free
+
+Pinned commit: =9e575011c948f4ee6e422c7acfa5c453d9f8ebff=, pushed 2026-10-25.
+
+[[https://github.com/philzook58/yosys-lean/blob/9e575011c948f4ee6e422c7acfa5c453d9f8ebff/src/lean.cc][src/lean.cc]]
+registers =lean_prepare= and =write_lean=. It consumes the live Yosys design /
+FunctionalIR and emits ordinary BitVec =Inputs/State/Outputs/eval/initial=.
+One eval means the validated rising edge; outputs read pre-edge state and
+register updates happen simultaneously. Known initial bits constrain a Prop,
+while unknown initial bits remain arbitrary. All non-memory FunctionalIR
+operations are handled. Formal checks become named observations/predicates.
+
+The repository contains independent arithmetic/ISA/refinement examples, including
+32-bit signed/unsigned divider completion and stored-program NERV executions.
+[[https://github.com/philzook58/yosys-lean/blob/9e575011c948f4ee6e422c7acfa5c453d9f8ebff/docs/validation.md][Validation documentation]]
+distinguishes ordinary compilation from audited entry claims and says audited
+closures exclude sorry, native evaluation axioms and custom axioms. It explicitly
+trusts Yosys elaboration/lowering and the C++ exporter. Memories, asynchronous
+reset, multiclock/gated/falling clocks and liveness/fairness are rejected.
+This is a useful independent proof workflow, not yet a drop-in Calyx RAM importer.
+
+** opencompl/valaig — sequential AIGER and checked safety certificates
+
+Pinned commit: =f7e58661ddc7c06cbaa09c90505abd11dc2925cb=, pushed 2026-10-01.
+
+[[https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Aiger/Parser.lean][Parser.lean]]
+recognizes =aig= and =aag=, binary delta-coded and ASCII gates, latches and
+optional reset values, outputs, bad properties, constraints, symbols and comments.
+It explicitly rejects nonzero justice or fairness sections.
+[[https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/README.md][README]]
+warns that the parser is unverified and likely contains bugs.
+
+[[https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Cert/Basic.lean][Cert.Checker.unreachable_of]]
+reduces an invariant certificate to initiation, consecution and implication.
+[[https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Valaig/External/Sat/External.lean][External.lean]]
+runs a SAT solver, parses and checks LRAT, and applies =LRAT.check_sound=.
+[[https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/Tools/ValaigCert.lean][CLI]]
+reads model/certificate binaries and derives =model.aig.Unreachable bad= before
+printing success.
+
+Important constraint distinction: the file parser stores model constraints, but
+the inspected checker does not incorporate them into sequential semantics.
+=appendCert= rejects constraints in the certificate; model constraints are not
+used in the safety theorem. A successful unconditional proof is stronger than
+constrained safety, but many assumption-dependent safe designs will not certify.
+The implementation expects one bad property. Sequential safety is not functional
+specification equivalence or unbounded go-to-done progress.
+
+The =Mr-Pine/valaig= fork is recorded; its pushed date is 2026-09-17.
+It is not silently counted as a separate independent verified implementation.
+
+** BTOR2: HardBench and PCEQ
+
+[[https://github.com/jn555/HardBench/blob/ba9fb00a9b386352b1c15273d3534c2aa07c1ef3/scripts/btor2_ir.py][HardBench scripts/btor2_ir.py]]
+is a real external parser to BitVec expressions. Its grammar explicitly lists
+sort/input/state/init/next/bad and selected arithmetic/bitwise/comparison/extension
+operations. It rejects arrays, shifts, concat/slice, constraints/fairness,
+negative refs and nonliteral initialization. A depth-k statement covers
+=bad_0..bad_k=, with k+1 input frames. No unbounded claim follows from it.
+=mine_btor2_ladder.py= creates sorry-stub benchmark statements and separately
+splices/checks completed proof bodies. Original BTOR2 is run through btormc for
+independent labels/witnesses; this is differential validation of translation.
+
+[[https://github.com/WorlesEnric/pceq/blob/77ffc62f91f2315f52c9d66b053822875490b8cf/crates/pceq-cert/src/symbolic_lean.rs][PCEQ symbolic_lean.rs]]
+reconstructs restricted Boolean/BV VCs as Lean =bv_decide= statements, rejects
+arrays/quantifiers and unknown SMT, and binds deterministic rerenders/digests.
+=lean_export.rs= uses =native_decide= for the separate ground-literal path.
+Its [[https://github.com/WorlesEnric/pceq/blob/77ffc62f91f2315f52c9d66b053822875490b8cf/docs/tcb.md][TCB document]]
+explicitly distinguishes structural =FULL_COVERAGE_SHAPE= ledger acceptance from
+semantic =FULL_COVERAGE=, which still needs model/RTL/segmentation reflection
+witnesses. Generic composition theorems do not verify Rust BTOR2 parsing or Yosys.
+
+** SMT2 syntax, SMT propositions and solver tactics are different capabilities
+
+[[https://github.com/onderjan/blazing-smtlib/blob/42b45c20b0045495a40b9eaf0a717e0f1c976bed/lean/BSmtLib/Facts/Reader.lean][BSmtLib Reader facts]]
+include =library_finishes_iff_file=, =reader_reads_files= and
+=reader_finishes_only_on_files=. Parser facts connect handler calls to syntax
+traversals; public facts include lossless lexing, slicing independence and
+reprinting. These are actual theorem statements with standard-three axiom reports.
+[[https://github.com/onderjan/blazing-smtlib/blob/42b45c20b0045495a40b9eaf0a717e0f1c976bed/lean/BSmtLibSpec.lean][BSmtLibSpec]]
+documents the standard interpretation and exclusions. The layer parses syntax
+and delivers handler callbacks; it does not interpret hardware theories.
+
+[[https://github.com/LeanHorn/SMTLib-to-Lean/blob/9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee/README.md][SMTLib-to-Lean]]
+goes further to checked propositions (BV, arrays, UF, quantifiers, datatypes,
+incremental sessions and restricted CHCs), using cvc5 parsing and reconstruction.
+Its output proof templates contain sorry until proved. Optional equivalence
+checking compares expanded and structured Lean statements, not the source
+SMT standard or Yosys transition semantics.
+
+Leanwuzla has a real QF_BV terminal file frontend; its README explicitly warns that
+it is a development tool and does not necessarily produce a sound reduction.
+Shoumei's =Smt2Lean.lean= directly targets functional Yosys SMT, but erases
+=zero_extend=, falls back to =0#1= for unknown syntax and emits sorry if a transfer
+function is missing. These fallbacks prevent treating it as a robust certifier.
+
+=ufmg-smite/lean-smt= starts from Lean goals, emits SMT and reconstructs cvc5 proofs.
+Unsupported reconstruction steps remain goals; the optional native mode expands
+trust. It is not an incoming Yosys transition-system frontend.
+=SmtLibDsl=, =lsmt2= and =SmtLibLean= supply solver/DSL/S-expression/model plumbing.
+ROana-coder's parser/evaluator has concrete native-decide examples, but its own gap
+analysis says bitvectors and arrays are missing. =pmatos/z3-to-lean= parses proof
+logs but explicitly accepts inference steps without deep validity checking.
+These are separate levels of evidence and must not be merged into a generic
+“SMT2 hardware verification” claim.
+
+** SMV and FIRRTL
+
+ttj/leansmv really parses .smv text and emits Lean =TransitionSystem= values.
+The [[https://github.com/ttj/leansmv/blob/2349edc2eddb9a4f479f98c23f3d257a72945472/scripts/smv_grammar.lark][grammar]]
+has Bool, enum, range and process types but no =word[N]=, signed/unsigned word or
+arrays. It lacks the general IVAR/INIT/TRANS section surface. Its generated
+INVARSPEC stubs are commented, so generating a file is not proving its properties.
+Actual Counter/Mutex proofs are separate. Fairness and temporal syntax may parse
+but the generator's proof output is INVARSPEC-focused. The Yosys word-level
+write_smv dialect therefore needs an adapter/extension.
+ttj/fmaiv explicitly vendors this family; Kiguli/leansmv is an older fork that
+describes active sorry stubs.
+
+ErosSph/xiangshan2Lean's FIRRTL frontend calls the official classic Scala parser
+or pinned CIRCT for modern versions, normalizes, adapts to its hardware IR and emits
+Lean. The source/contract distinguishes supported UInt/SInt/aggregate/hierarchy/
+single-clock register semantics from rejected Mem/SyncReadMem, multiclock, async
+reset, black boxes and verification effects. Counter/RightShift bridge proofs
+compare particular generated models, not all translator inputs.
+Silean's FIRRTL surface is explicitly a backend emitter, not an external reader.
+
+* Other leads and negative controls
+
+- nathsou/HDLean's RTLIL reader requires canonical project comments and exact reprint.
+  Its =Design.parse_rtlil= and =Aag.parse_print= are real roundtrip theorems.
+  They do not establish a generic Yosys importer or external language adequacy.
+- Easyoakland/HDLean is a distinct older Lean HDL with a SystemVerilog compiler,
+  not the same repository or new RTLIL importer.
+- uw-unsat/exoverifier's binary AIGER header explicitly requires zero latches and
+  zero B/C/J/F extensions. Its =btor= graph is internal QF_BV semantics.
+  Main source is from 2022 and last repository push from 2023; it was retained.
+- opencompl/lean-mlir's =Blase/Fast/Aiger.lean= exports FSMs and explicitly declares
+  =axiom valaigExternalSolverAx (α : Sort u) : α=. This emitter/solver route must
+  not inherit the assurance claim of standalone Valaig's checked LRAT route.
+- Lean core =Std.Sat.AIG= and deprecated LeanSAT are internal combinational AIG /
+  proof engines, not AIGER parsers or sequential hardware models. Lean's documented
+  =bv_decide= compiled-check reflection and debug trust options must be audited per use.
+- Ghonimo/kernelcert-artifact proves semantic witness-circuit soundness and reset
+  stratification. Its README explicitly says AIG-backed syntax, file frontend,
+  verified check encoders and CNF/LRAT discharge remain missing; Pipeline is a stub.
+- deepai-org/loom is a semantics/compiler/own micro-Verilog route, distinct from
+  verse-lab/loom. It explicitly stops before generic synthesis/mapped equivalence.
+  It does not supply these requested format readers.
+- SMC17/logic-zig and alabsystems/ty parse hardware formats in Zig/Rust, but the
+  inspected trees/readmes do not establish a Lean hardware-format importer.
+  “Lean” often means low memory use or a planned oracle in these hits.
+- valeria-org/bitwright imports a restricted SMT subset in Rust and emits Lean
+  rule theorems. Its importer rejects parameterized define-fun and array equality;
+  it is not a Yosys transition reader.
+- LeanHorn/Flex supplies CHC invariant tactics and distinguishes trusted
+  =flex_auto= from proof-reconstructing =flex_smt=. No Yosys format adapter was found.
+- riaqn/smtlean / avigad/smtlean are older Lean3 Boolean CVC4 projects with an
+  explicitly incomplete SMT-LIB parser and trust_f TODO. They were retained.
+- All 18 census metadata leads were screened; AD1024/Lean-SMT-Benchmarks and
+  small lean-smt usage/demo projects are tactic benchmarks/examples, PratherConid's
+  tree contains ordinary mathematics, VTrelat/BEer emits SMT from Atelier B,
+  and SNAPKITTYWEST/aes-formal co-locates language-specific formalisations rather
+  than demonstrating a Yosys file importer. Fork and stale metadata are retained
+  in logs rather than discarded.
+
+* Implications for quantized PyTorch -> Calyx -> SystemVerilog
+
+For an actual external generated accelerator containing memories, state and control,
+start experimentally at the new FunctionalIR SMT2 route with matching JSON.
+Keep reset and initial-state constraints explicit; identify whether observations
+are pre-edge or post-edge; quantify arbitrary inputs and all allowed memory states.
+A controller loop is a repeated state transition, not a finite host-language loop
+that can be assumed unrolled without justification.
+
+The required theorem is a relation between accelerator states and the intended
+fixed-width tensor computation. It must cover accumulator widths, signedness,
+wrap/saturation, rounding, tensor layouts/addressing, memory read/write timing and
+the transaction protocol. Typically, prove invariant preservation at every edge,
+then a result relation at done after go. Eventual done additionally needs an
+environment/progress argument; safety/BMC alone does not establish it.
+No audited repository here provides that entire quantized-PyTorch/Calyx refinement.
+
+Valaig is a promising second route when synthesis to a bit-level sequential AIGER
+model is acceptable and an inductive safety property/certificate can be generated.
+Memory lowering can cause severe expansion and lose word structure. Parser
+fidelity, artifact binding and property adequacy remain explicit boundaries.
+For memory-free arithmetic kernels, philzook58/yosys-lean offers richer existing
+proof examples and readable BitVec proof boundaries. HDLean is most valuable
+when generating hardware from its verified DSL; its roundtrip parser does not
+convert an arbitrary pre-existing Calyx design into that DSL.
+

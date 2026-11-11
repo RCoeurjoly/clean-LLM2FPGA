@@ -1,0 +1,14 @@
+{
+  "source": "/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/model.sv",
+  "target": "/tmp/llm2fpga-full-hardware-20261102/model-formatted.sv",
+  "changed": [
+    {
+      "line": 8027,
+      "bytes": 237086,
+      "added_newlines": 7131
+    }
+  ],
+  "transformation": "Only insert newlines immediately after commas on guarded lines; no tokens replaced",
+  "source_sha256": "1b477f3dfe75e578b777dbfddf32446d15dee8f03953056d313d5daeffa05727",
+  "target_sha256": "c1021bffa558e57b3179ce6eeadf494a5e28874969b6f3273daae4164fcbca0f"
+}

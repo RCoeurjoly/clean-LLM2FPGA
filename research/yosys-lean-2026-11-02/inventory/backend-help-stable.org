@@ -1,0 +1,1319 @@
+#+title: Upstream Yosys stable export command help literals
+
+* write_aiger
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/aiger/aiger.cc#L893
+
+#+begin_example
+
+    write_aiger [options] [filename]
+
+Write the current design to an AIGER file. The design must be flattened and
+must not contain any cell types except $_AND_, $_NOT_, simple FF types,
+$assert and $assume cells, and $initstate cells.
+
+$assert and $assume cells are converted to AIGER bad state properties and
+invariant constraints.
+
+    -ascii
+        write ASCII version of AIGER format
+
+    -zinit
+        convert FFs to zero-initialized FFs, adding additional inputs for
+        uninitialized FFs.
+
+    -miter
+        design outputs are AIGER bad state properties
+
+    -symbols
+        include a symbol table in the generated AIGER file
+
+    -no-sort
+        don't sort input/output ports
+
+    -map <filename>
+        write an extra file with port and latch symbols
+
+    -vmap <filename>
+        like -map, but more verbose
+
+    -no-startoffset
+        make indexes zero based, enable using map files with smt solvers.
+
+    -ywmap <filename>
+        write a map file for conversion to and from yosys witness traces,
+        also allows for mapping AIGER bad-state properties and invariant
+        constraints back to individual formal properties by name.
+
+    -I, -O, -B, -L
+        If the design contains no input/output/assert/flip-flop then create one
+        dummy input/output/bad_state-pin or latch to make the tools reading the
+        AIGER file happy.
+
+#+end_example
+
+* write_xaiger
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/aiger/xaiger.cc#L722
+
+#+begin_example
+
+    write_xaiger [options] [filename]
+
+Write the top module (according to the (* top *) attribute or if only one module
+is currently selected) to an XAIGER file. Any non $_NOT_, $_AND_, (optionally
+$_DFF_N_, $_DFF_P_), or non (* abc9_box *) cells will be converted into psuedo-
+inputs and pseudo-outputs. Whitebox contents will be taken from the equivalent
+module in the '$abc9_holes' design, if it exists.
+
+    -ascii
+        write ASCII version of AIGER format
+
+    -map <filename>
+        write an extra file with port and box symbols
+
+    -dff
+        write $_DFF_[NP]_ cells
+
+#+end_example
+
+* write_aiger2
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/aiger2/aiger.cc#L1795
+
+#+begin_example
+
+    write_aiger2 [options] [filename]
+
+Write the selected module to an AIGER file.
+
+    -strash
+        perform structural hashing while writing
+
+    -flatten
+        allow descending into submodules and write a flattened view of the design
+        hierarchy starting at the selected top
+
+This command is able to ingest all combinational cells except for:
+
+    %s
+    %s
+
+And all combinational gates except for:
+
+    %s
+    %s
+
+#+end_example
+
+* write_xaiger2
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/aiger2/aiger.cc#L1901
+
+#+begin_example
+
+    write_xaiger2 [options] [filename]
+
+Write the selected module to a XAIGER file including the 'h' and 'a' extensions
+with box information for ABC.
+
+    -strash
+        perform structural hashing while writing
+
+    -flatten
+        allow descending into submodules and write a flattened view of the design
+        hierarchy starting at the selected top
+
+    -mapping_prep
+        after the file is written, prepare the module for reintegration of
+        a mapping in a subsequent command. all cells which are not blackboxed nor
+        whiteboxed are removed from the design as well as all wires which only
+        connect to removed cells
+        (conflicts with -flatten)
+
+    -map2 <file>
+        write a map2 file which 'abc_ops_reintegrate' can read to
+        reintegrate a mapping
+        (conflicts with -flatten)
+
+#+end_example
+
+* write_blif
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/blif/blif.cc#L494
+
+#+begin_example
+
+    write_blif [options] [filename]
+
+Write the current design to an BLIF file.
+
+    -top top_module
+        set the specified module as design top module
+
+    -buf <cell-type> <in-port> <out-port>
+        use cells of type <cell-type> with the specified port names for buffers
+
+    -unbuf <cell-type> <in-port> <out-port>
+        replace buffer cells with the specified name and port names with
+        a .names statement that models a buffer
+
+    -true <cell-type> <out-port>
+    -false <cell-type> <out-port>
+    -undef <cell-type> <out-port>
+        use the specified cell types to drive nets that are constant 1, 0, or
+        undefined. when '-' is used as <cell-type>, then <out-port> specifies
+        the wire name to be used for the constant signal and no cell driving
+        that wire is generated. when '+' is used as <cell-type>, then <out-port>
+        specifies the wire name to be used for the constant signal and a .names
+        statement is generated to drive the wire.
+
+    -noalias
+        if a net name is aliasing another net name, then by default a net
+        without fanout is created that is driven by the other net. This option
+        suppresses the generation of this nets without fanout.
+
+The following options can be useful when the generated file is not going to be
+read by a BLIF parser but a custom tool. It is recommended not to name the
+output file *.blif when any of these options are used.
+
+    -icells
+        do not translate Yosys's internal gates to generic BLIF logic
+        functions. Instead create .subckt or .gate lines for all cells.
+
+    -gates
+        print .gate instead of .subckt lines for all cells that are not
+        instantiations of other modules from this design.
+
+    -conn
+        do not generate buffers for connected wires. instead use the
+        non-standard .conn statement.
+
+    -attr
+        use the non-standard .attr statement to write cell attributes
+
+    -param
+        use the non-standard .param statement to write cell parameters
+
+    -cname
+        use the non-standard .cname statement to write cell names
+
+    -iname, -iattr
+        enable -cname and -attr functionality for .names statements
+        (the .cname and .attr statements will be included in the BLIF
+        output after the truth table for the .names statement)
+
+    -blackbox
+        write blackbox cells with .blackbox statement.
+
+    -impltf
+        do not write definitions for the $true, $false and $undef wires.
+
+    -gatesi
+        write initial bit(s) with .gateinit for gates that needs to be initialized.
+
+#+end_example
+
+* write_btor
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/btor/btor.cc#L1566
+
+#+begin_example
+
+    write_btor [options] [filename]
+
+Write a BTOR description of the current design.
+
+  -v
+    Add comments and indentation to BTOR output file
+
+  -s
+    Output only a single bad property for all asserts
+
+  -c
+    Output cover properties using 'bad' statements instead of asserts
+
+  -i <filename>
+    Create additional info file with auxiliary information
+
+  -x
+    Output symbols for internal netnames (starting with '$')
+
+  -ywmap <filename>
+    Create a map file for conversion to and from Yosys witness traces
+
+#+end_example
+
+* write_cxxrtl
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/cxxrtl/cxxrtl_backend.cc#L3477
+
+#+begin_example
+
+    write_cxxrtl [options] [filename]
+
+Write C++ code that simulates the design. The generated code requires a driver
+that instantiates the design, toggles its clock, and interacts with its ports.
+
+The following driver may be used as an example for a design with a single clock
+driving rising edge triggered flip-flops:
+
+    #include "top.cc"
+
+    int main() {
+      cxxrtl_design::p_top top;
+      top.step();
+      while (1) {
+        /* user logic */
+        top.p_clk.set(false);
+        top.step();
+        top.p_clk.set(true);
+        top.step();
+      }
+    }
+
+Note that CXXRTL simulations, just like the hardware they are simulating, are
+subject to race conditions. If, in the example above, the user logic would run
+simultaneously with the rising edge of the clock, the design would malfunction.
+
+This backend supports replacing parts of the design with black boxes implemented
+in C++. If a module marked as a CXXRTL black box, its implementation is ignored,
+and the generated code consists only of an interface and a factory function.
+The driver must implement the factory function that creates an implementation of
+the black box, taking into account the parameters it is instantiated with.
+
+For example, the following Verilog code defines a CXXRTL black box interface for
+a synchronous debug sink:
+
+    (* cxxrtl_blackbox *)
+    module debug(...);
+      (* cxxrtl_edge = "p" *) input clk;
+      input en;
+      input [7:0] i_data;
+      (* cxxrtl_sync *) output [7:0] o_data;
+    endmodule
+
+For this HDL interface, this backend will generate the following C++ interface:
+
+    struct bb_p_debug : public module {
+      value<1> p_clk;
+      bool posedge_p_clk() const { /* ... */ }
+      value<1> p_en;
+      value<8> p_i_data;
+      wire<8> p_o_data;
+
+      bool eval(performer *performer) override;
+      virtual bool commit(observer &observer);
+      bool commit() override;
+
+      static std::unique_ptr<bb_p_debug>
+      create(std::string name, metadata_map parameters, metadata_map attributes);
+    };
+
+The `create' function must be implemented by the driver. For example, it could
+always provide an implementation logging the values to standard error stream:
+
+    namespace cxxrtl_design {
+
+    struct stderr_debug : public bb_p_debug {
+      bool eval(performer *performer) override {
+        if (posedge_p_clk() && p_en)
+          fprintf(stderr, "debug: %%02x\n", p_i_data.data[0]);
+        p_o_data.next = p_i_data;
+        return bb_p_debug::eval(performer);
+      }
+    };
+
+    std::unique_ptr<bb_p_debug>
+    bb_p_debug::create(std::string name, cxxrtl::metadata_map parameters,
+                       cxxrtl::metadata_map attributes) {
+      return std::make_unique<stderr_debug>();
+    }
+
+    }
+
+For complex applications of black boxes, it is possible to parameterize their
+port widths. For example, the following Verilog code defines a CXXRTL black box
+interface for a configurable width debug sink:
+
+    (* cxxrtl_blackbox, cxxrtl_template = "WIDTH" *)
+    module debug(...);
+      parameter WIDTH = 8;
+      (* cxxrtl_edge = "p" *) input clk;
+      input en;
+      (* cxxrtl_width = "WIDTH" *) input [WIDTH - 1:0] i_data;
+      (* cxxrtl_width = "WIDTH" *) output [WIDTH - 1:0] o_data;
+    endmodule
+
+For this parametric HDL interface, this backend will generate the following C++
+interface (only the differences are shown):
+
+    template<size_t WIDTH>
+    struct bb_p_debug : public module {
+      // ...
+      value<WIDTH> p_i_data;
+      wire<WIDTH> p_o_data;
+      // ...
+      static std::unique_ptr<bb_p_debug<WIDTH>>
+      create(std::string name, metadata_map parameters, metadata_map attributes);
+    };
+
+The `create' function must be implemented by the driver, specialized for every
+possible combination of template parameters. (Specialization is necessary to
+enable separate compilation of generated code and black box implementations.)
+
+    template<size_t SIZE>
+    struct stderr_debug : public bb_p_debug<SIZE> {
+      // ...
+    };
+
+    template<>
+    std::unique_ptr<bb_p_debug<8>>
+    bb_p_debug<8>::create(std::string name, cxxrtl::metadata_map parameters,
+                          cxxrtl::metadata_map attributes) {
+      return std::make_unique<stderr_debug<8>>();
+    }
+
+The following attributes are recognized by this backend:
+
+    cxxrtl_blackbox
+        only valid on modules. if specified, the module contents are ignored,
+        and the generated code includes only the module interface and a factory
+        function, which will be called to instantiate the module.
+
+    cxxrtl_edge
+        only valid on inputs of black boxes. must be one of "p", "n", "a".
+        if specified on signal `clk`, the generated code includes edge detectors
+        `posedge_p_clk()` (if "p"), `negedge_p_clk()` (if "n"), or both (if
+        "a"), simplifying implementation of clocked black boxes.
+
+    cxxrtl_template
+        only valid on black boxes. must contain a space separated sequence of
+        identifiers that have a corresponding black box parameters. for each
+        of them, the generated code includes a `size_t` template parameter.
+
+    cxxrtl_width
+        only valid on ports of black boxes. must be a constant expression, which
+        is directly inserted into generated code.
+
+    cxxrtl_comb, cxxrtl_sync
+        only valid on outputs of black boxes. if specified, indicates that every
+        bit of the output port is driven, correspondingly, by combinatorial or
+        synchronous logic. this knowledge is used for scheduling optimizations.
+        if neither is specified, the output will be pessimistically treated as
+        driven by both combinatorial and synchronous logic.
+
+The following options are supported by this backend:
+
+    -print-wire-types, -print-debug-wire-types
+        enable additional debug logging, for pass developers.
+
+    -header
+        generate separate interface (.h) and implementation (.cc) files.
+        if specified, the backend must be called with a filename, and filename
+        of the interface is derived from filename of the implementation.
+        otherwise, interface and implementation are generated together.
+
+    -namespace <ns-name>
+        place the generated code into namespace <ns-name>. if not specified,
+        "cxxrtl_design" is used.
+
+    -print-output <stream>
+        $print cells in the generated code direct their output to <stream>.
+        must be one of "std::cout", "std::cerr". if not specified,
+        "std::cout" is used. explicitly provided performer overrides this.
+
+    -nohierarchy
+        use design hierarchy as-is. in most designs, a top module should be
+        present as it is exposed through the C API and has unbuffered outputs
+        for improved performance; it will be determined automatically if absent.
+
+    -noflatten
+        don't flatten the design. fully flattened designs can evaluate within
+        one delta cycle if they have no combinatorial feedback.
+        note that the debug interface and waveform dumps use full hierarchical
+        names for all wires even in flattened designs.
+
+    -noproc
+        don't convert processes to netlists. in most designs, converting
+        processes significantly improves evaluation performance at the cost of
+        slight increase in compilation time.
+
+    -O <level>
+        set the optimization level. the default is -O%d. higher optimization
+        levels dramatically decrease compile and run time, and highest level
+        possible for a design should be used.
+
+    -O0
+        no optimization.
+
+    -O1
+        unbuffer internal wires if possible.
+
+    -O2
+        like -O1, and localize internal wires if possible.
+
+    -O3
+        like -O2, and inline internal wires if possible.
+
+    -O4
+        like -O3, and unbuffer public wires not marked (*keep*) if possible.
+
+    -O5
+        like -O4, and localize public wires not marked (*keep*) if possible.
+
+    -O6
+        like -O5, and inline public wires not marked (*keep*) if possible.
+
+    -g <level>
+        set the debug level. the default is -g%d. higher debug levels provide
+        more visibility and generate more code, but do not pessimize evaluation.
+
+    -g0
+        no debug information. the C API is disabled.
+
+    -g1
+        include bare minimum of debug information necessary to access all design
+        state. the C API is enabled.
+
+    -g2
+        like -g1, but include debug information for all public wires that are
+        directly accessible through the C++ interface.
+
+    -g3
+        like -g2, and include debug information for public wires that are tied
+        to a constant or another public wire.
+
+    -g4
+        like -g3, and compute debug information on demand for all public wires
+        that were optimized out.
+
+#+end_example
+
+* write_edif
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/edif/edif.cc#L94
+
+#+begin_example
+
+    write_edif [options] [filename]
+
+Write the current design to an EDIF netlist file.
+
+    -top top_module
+        set the specified module as design top module
+
+    -nogndvcc
+        do not create "GND" and "VCC" cells. (this will produce an error
+        if the design contains constant nets. use "hilomap" to map to custom
+        constant drivers first)
+
+    -gndvccy
+        create "GND" and "VCC" cells with "Y" outputs. (the default is
+        "G" for "GND" and "P" for "VCC".)
+
+    -attrprop
+        create EDIF properties for cell attributes
+
+    -keep
+        create extra KEEP nets by allowing a cell to drive multiple nets.
+
+    -pvector {par|bra|ang}
+        sets the delimiting character for module port rename clauses to
+        parentheses, square brackets, or angle brackets.
+
+    -lsbidx
+        use index 0 for the LSB bit of a net or port instead of MSB.
+
+Unfortunately there are different "flavors" of the EDIF file format. This
+command generates EDIF files for the Xilinx place&route tools. It might be
+necessary to make small modifications to this command when a different tool
+is targeted.
+
+#+end_example
+
+* write_firrtl
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/firrtl/firrtl.cc#L1190
+
+#+begin_example
+
+    write_firrtl [options] [filename]
+
+Write a FIRRTL netlist of the current design.
+The following commands are executed by this command:
+        pmuxtree
+        bmuxmap
+        demuxmap
+        bwmuxmap
+
+#+end_example
+
+* write_functional_cxx
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/functional/cxx.cc#L243
+
+#+begin_example
+
+TODO: add help message
+
+#+end_example
+
+* write_functional_smt2
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/functional/smtlib.cc#L276
+
+#+begin_example
+
+Functional SMT Backend.
+
+#+end_example
+
+* write_functional_rosette
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/functional/smtlib_rosette.cc#L324
+
+#+begin_example
+
+    write_functional_rosette [options] [filename]
+
+Functional Rosette Backend.
+
+    -provides
+        include 'provide' statement(s) for loading output as a module
+    -assoc-list-helpers
+        provide helper functions which convert inputs/outputs from/to association lists
+        
+
+#+end_example
+
+* write_intersynth
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/intersynth/intersynth.cc#L48
+
+#+begin_example
+
+    write_intersynth [options] [filename]
+
+Write the current design to an 'intersynth' netlist file. InterSynth is
+a tool for Coarse-Grain Example-Driven Interconnect Synthesis.
+
+    -notypes
+        do not generate celltypes and conntypes commands. i.e. just output
+        the netlists. this is used for postsilicon synthesis.
+
+    -lib <verilog_or_rtlil_file>
+        Use the specified library file for determining whether cell ports are
+        inputs or outputs. This option can be used multiple times to specify
+        more than one library.
+
+    -selected
+        only write selected modules. modules must be selected entirely or
+        not at all.
+
+http://bygone.clairexen.net/intersynth/
+
+#+end_example
+
+* write_jny
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/jny/jny.cc#L411
+
+#+begin_example
+
+    jny [options] [selection]
+
+Write JSON netlist metadata for the current design
+
+    -no-connections
+        Don't include connection information in the netlist output.
+
+    -no-attributes
+        Don't include attributed information in the netlist output.
+
+    -no-properties
+        Don't include property information in the netlist output.
+
+The JSON schema for JNY output files is located in the "jny.schema.json" file
+which is located at "https://raw.githubusercontent.com/YosysHQ/yosys/main/misc/jny.schema.json"
+
+#+end_example
+
+* write_json
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/json/json.cc#L339
+
+#+begin_example
+
+    write_json [options] [filename]
+
+Write a JSON netlist of the current design.
+
+    -aig
+        include AIG models for the different gate types
+
+    -compat-int
+        emit 32-bit or smaller fully-defined parameter values directly
+        as JSON numbers (for compatibility with old parsers)
+
+    -selected
+        output only select module
+
+    -noscopeinfo
+        don't include $scopeinfo cells in the output
+
+
+The general syntax of the JSON output created by this command is as follows:
+
+    {
+      "creator": "Yosys <version info>",
+      "modules": {
+        <module_name>: {
+          "attributes": {
+            <attribute_name>: <attribute_value>,
+            ...
+          },
+          "parameter_default_values": {
+            <parameter_name>: <parameter_value>,
+            ...
+          },
+          "ports": {
+            <port_name>: <port_details>,
+            ...
+          },
+          "cells": {
+            <cell_name>: <cell_details>,
+            ...
+          },
+          "memories": {
+            <memory_name>: <memory_details>,
+            ...
+          },
+          "netnames": {
+            <net_name>: <net_details>,
+            ...
+          }
+        }
+      },
+      "models": {
+        ...
+      },
+    }
+
+Where <port_details> is:
+
+    {
+      "direction": <"input" | "output" | "inout">,
+      "bits": <bit_vector>
+      "offset": <the lowest bit index in use, if non-0>
+      "upto": <1 if the port bit indexing is MSB-first>
+      "signed": <1 if the port is signed>
+    }
+
+The "offset" and "upto" fields are skipped if their value would be 0.
+They don't affect connection semantics, and are only used to preserve original
+HDL bit indexing.
+And <cell_details> is:
+
+    {
+      "hide_name": <1 | 0>,
+      "type": <cell_type>,
+      "model": <AIG model name, if -aig option used>,
+      "parameters": {
+        <parameter_name>: <parameter_value>,
+        ...
+      },
+      "attributes": {
+        <attribute_name>: <attribute_value>,
+        ...
+      },
+      "port_directions": {
+        <port_name>: <"input" | "output" | "inout">,
+        ...
+      },
+      "connections": {
+        <port_name>: <bit_vector>,
+        ...
+      },
+    }
+
+And <memory_details> is:
+
+    {
+      "hide_name": <1 | 0>,
+      "attributes": {
+        <attribute_name>: <attribute_value>,
+        ...
+      },
+      "width": <memory width>
+      "start_offset": <the lowest valid memory address>
+      "size": <memory size>
+    }
+
+And <net_details> is:
+
+    {
+      "hide_name": <1 | 0>,
+      "bits": <bit_vector>
+      "offset": <the lowest bit index in use, if non-0>
+      "upto": <1 if the port bit indexing is MSB-first>
+      "signed": <1 if the port is signed>
+    }
+
+The "hide_name" fields are set to 1 when the name of this cell or net is
+automatically created and is likely not of interest for a regular user.
+
+The "port_directions" section is only included for cells for which the
+interface is known.
+
+Module and cell ports and nets can be single bit wide or vectors of multiple
+bits. Each individual signal bit is assigned a unique integer. The <bit_vector>
+values referenced above are vectors of this integers. Signal bits that are
+connected to a constant driver are denoted as string "0", "1", "x", or
+"z" instead of a number.
+
+Bit vectors (including integers) are written as string holding the binary
+representation of the value. Strings are written as strings, with an appended
+blank in cases of strings of the form /[01xz]* */.
+
+For example the following Verilog code:
+
+    module test(input x, y);
+      (* keep *) foo #(.P(42), .Q(1337))
+          foo_inst (.A({x, y}), .B({y, x}), .C({4'd10, {4{x}}}));
+    endmodule
+
+Translates to the following JSON output:
+
+    {
+      "creator": "Yosys 0.9+2406 (git sha1 fb1168d8, clang 9.0.1 -fPIC -Os)",
+      "modules": {
+        "test": {
+          "attributes": {
+            "cells_not_processed": "00000000000000000000000000000001",
+            "src": "test.v:1.1-4.10"
+          },
+          "ports": {
+            "x": {
+              "direction": "input",
+              "bits": [ 2 ]
+            },
+            "y": {
+              "direction": "input",
+              "bits": [ 3 ]
+            }
+          },
+          "cells": {
+            "foo_inst": {
+              "hide_name": 0,
+              "type": "foo",
+              "parameters": {
+                "P": "00000000000000000000000000101010",
+                "Q": "00000000000000000000010100111001"
+              },
+              "attributes": {
+                "keep": "00000000000000000000000000000001",
+                "module_not_derived": "00000000000000000000000000000001",
+                "src": "test.v:3.1-3.55"
+              },
+              "connections": {
+                "A": [ 3, 2 ],
+                "B": [ 2, 3 ],
+                "C": [ 2, 2, 2, 2, "0", "1", "0", "1" ]
+              }
+            }
+          },
+          "netnames": {
+            "x": {
+              "hide_name": 0,
+              "bits": [ 2 ],
+              "attributes": {
+                "src": "test.v:1.19-1.20"
+              }
+            },
+            "y": {
+              "hide_name": 0,
+              "bits": [ 3 ],
+              "attributes": {
+                "src": "test.v:1.22-1.23"
+              }
+            }
+          }
+        }
+      }
+    }
+
+The models are given as And-Inverter-Graphs (AIGs) in the following form:
+
+    "models": {
+      <model_name>: [
+        /*   0 */ [ <node-spec> ],
+        /*   1 */ [ <node-spec> ],
+        /*   2 */ [ <node-spec> ],
+        ...
+      ],
+      ...
+    },
+
+The following node-types may be used:
+
+    [ "port", <portname>, <bitindex>, <out-list> ]
+      - the value of the specified input port bit
+
+    [ "nport", <portname>, <bitindex>, <out-list> ]
+      - the inverted value of the specified input port bit
+
+    [ "and", <node-index>, <node-index>, <out-list> ]
+      - the ANDed value of the specified nodes
+
+    [ "nand", <node-index>, <node-index>, <out-list> ]
+      - the inverted ANDed value of the specified nodes
+
+    [ "true", <out-list> ]
+      - the constant value 1
+
+    [ "false", <out-list> ]
+      - the constant value 0
+
+All nodes appear in topological order. I.e. only nodes with smaller indices
+are referenced by "and" and "nand" nodes.
+
+The optional <out-list> at the end of a node specification is a list of
+output portname and bitindex pairs, specifying the outputs driven by this node.
+
+For example, the following is the model for a 3-input 3-output $reduce_and cell
+inferred by the following code:
+
+    module test(input [2:0] in, output [2:0] out);
+      assign in = &out;
+    endmodule
+
+    "$reduce_and:3U:3": [
+      /*   0 */ [ "port", "A", 0 ],
+      /*   1 */ [ "port", "A", 1 ],
+      /*   2 */ [ "and", 0, 1 ],
+      /*   3 */ [ "port", "A", 2 ],
+      /*   4 */ [ "and", 2, 3, "Y", 0 ],
+      /*   5 */ [ "false", "Y", 1, "Y", 2 ]
+    ]
+
+Future version of Yosys might add support for additional fields in the JSON
+format. A program processing this format must ignore all unknown fields.
+
+#+end_example
+
+* write_rtlil
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/rtlil/rtlil_backend.cc#L410
+
+#+begin_example
+
+    write_rtlil [filename]
+
+Write the current design to an RTLIL file. (RTLIL is a text representation
+of a design in yosys's internal format.)
+
+    -selected
+        only write selected parts of the design.
+
+    -sort
+        sort design in-place (used to be default).
+
+#+end_example
+
+* write_simplec
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/simplec/simplec.cc#L746
+
+#+begin_example
+
+    write_simplec [options] [filename]
+
+Write simple C code for simulating the design. The C code written can be used to
+simulate the design in a C environment, but the purpose of this command is to
+generate code that works well with C-based formal verification.
+
+    -verbose
+        this will print the recursive walk used to export the modules.
+
+    -i8, -i16, -i32, -i64
+        set the maximum integer bit width to use in the generated code.
+
+THIS COMMAND IS UNDER CONSTRUCTION
+
+#+end_example
+
+* write_smt2
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/smt2/smt2.cc#L1605
+
+#+begin_example
+
+    write_smt2 [options] [filename]
+
+Write a SMT-LIBv2 [1] description of the current design. For a module with name
+'<mod>' this will declare the sort '<mod>_s' (state of the module) and will
+define and declare functions operating on that state.
+
+The following SMT2 functions are generated for a module with name '<mod>'.
+Some declarations/definitions are printed with a special comment. A prover
+using the SMT2 files can use those comments to collect all relevant metadata
+about the design.
+
+    ; yosys-smt2-module <mod>
+    (declare-sort |<mod>_s| 0)
+        The sort representing a state of module <mod>.
+
+    (define-fun |<mod>_h| ((state |<mod>_s|)) Bool (...))
+        This function must be asserted for each state to establish the
+        design hierarchy.
+
+    ; yosys-smt2-input <wirename> <width>
+    ; yosys-smt2-output <wirename> <width>
+    ; yosys-smt2-register <wirename> <width>
+    ; yosys-smt2-wire <wirename> <width>
+    (define-fun |<mod>_n <wirename>| (|<mod>_s|) (_ BitVec <width>))
+    (define-fun |<mod>_n <wirename>| (|<mod>_s|) Bool)
+        For each port, register, and wire with the 'keep' attribute set an
+        accessor function is generated. Single-bit wires are returned as Bool,
+        multi-bit wires as BitVec.
+
+    ; yosys-smt2-cell <submod> <instancename>
+    (declare-fun |<mod>_h <instancename>| (|<mod>_s|) |<submod>_s|)
+        There is a function like that for each hierarchical instance. It
+        returns the sort that represents the state of the sub-module that
+        implements the instance.
+
+    (declare-fun |<mod>_is| (|<mod>_s|) Bool)
+        This function must be asserted 'true' for initial states, and 'false'
+        otherwise.
+
+    (define-fun |<mod>_i| ((state |<mod>_s|)) Bool (...))
+        This function must be asserted 'true' for initial states. For
+        non-initial states it must be left unconstrained.
+
+    (define-fun |<mod>_t| ((state |<mod>_s|) (next_state |<mod>_s|)) Bool (...))
+        This function evaluates to 'true' if the states 'state' and
+        'next_state' form a valid state transition.
+
+    (define-fun |<mod>_a| ((state |<mod>_s|)) Bool (...))
+        This function evaluates to 'true' if all assertions hold in the state.
+
+    (define-fun |<mod>_u| ((state |<mod>_s|)) Bool (...))
+        This function evaluates to 'true' if all assumptions hold in the state.
+
+    ; yosys-smt2-assert <id> <filename:linenum>
+    (define-fun |<mod>_a <id>| ((state |<mod>_s|)) Bool (...))
+        Each $assert cell is converted into one of this functions. The function
+        evaluates to 'true' if the assert statement holds in the state.
+
+    ; yosys-smt2-assume <id> <filename:linenum>
+    (define-fun |<mod>_u <id>| ((state |<mod>_s|)) Bool (...))
+        Each $assume cell is converted into one of this functions. The function
+        evaluates to 'true' if the assume statement holds in the state.
+
+    ; yosys-smt2-cover <id> <filename:linenum>
+    (define-fun |<mod>_c <id>| ((state |<mod>_s|)) Bool (...))
+        Each $cover cell is converted into one of this functions. The function
+        evaluates to 'true' if the cover statement is activated in the state.
+
+Options:
+
+    -verbose
+        this will print the recursive walk used to export the modules.
+
+    -stbv
+        Use a BitVec sort to represent a state instead of an uninterpreted
+        sort. As a side-effect this will prevent use of arrays to model
+        memories.
+
+    -stdt
+        Use SMT-LIB 2.6 style datatypes to represent a state instead of an
+        uninterpreted sort.
+
+    -nobv
+        disable support for BitVec (FixedSizeBitVectors theory). without this
+        option multi-bit wires are represented using the BitVec sort and
+        support for coarse grain cells (incl. arithmetic) is enabled.
+
+    -nomem
+        disable support for memories (via ArraysEx theory). this option is
+        implied by -nobv. only $mem cells without merged registers in
+        read ports are supported. call "memory" with -nordff to make sure
+        that no registers are merged into $mem read ports. '<mod>_m' functions
+        will be generated for accessing the arrays that are used to represent
+        memories.
+
+    -wires
+        create '<mod>_n' functions for all public wires. by default only ports,
+        registers, and wires with the 'keep' attribute are exported.
+
+    -tpl <template_file>
+        use the given template file. the line containing only the token '%%%%'
+        is replaced with the regular output of this command.
+
+    -solver-option <option> <value>
+        emit a `; yosys-smt2-solver-option` directive for yosys-smtbmc to write
+        the given option as a `(set-option ...)` command in the SMT-LIBv2.
+
+[1] For more information on SMT-LIBv2 visit http://smt-lib.org/ or read David
+R. Cok's tutorial: https://smtlib.github.io/jSMTLIB/SMTLIBTutorial.pdf
+
+---------------------------------------------------------------------------
+
+Example:
+
+Consider the following module (test.v). We want to prove that the output can
+never transition from a non-zero value to a zero value.
+
+        module test(input clk, output reg [3:0] y);
+          always @(posedge clk)
+            y <= (y << 1) | ^y;
+        endmodule
+
+For this proof we create the following template (test.tpl).
+
+        ; we need QF_UFBV for this proof
+        (set-logic QF_UFBV)
+
+        ; insert the auto-generated code here
+        %%%%
+
+        ; declare two state variables s1 and s2
+        (declare-fun s1 () test_s)
+        (declare-fun s2 () test_s)
+
+        ; state s2 is the successor of state s1
+        (assert (test_t s1 s2))
+
+        ; we are looking for a model with y non-zero in s1
+        (assert (distinct (|test_n y| s1) #b0000))
+
+        ; we are looking for a model with y zero in s2
+        (assert (= (|test_n y| s2) #b0000))
+
+        ; is there such a model?
+        (check-sat)
+
+The following yosys script will create a 'test.smt2' file for our proof:
+
+        read_verilog test.v
+        hierarchy -check; proc; opt; check -assert
+        write_smt2 -bv -tpl test.tpl test.smt2
+
+Running 'cvc4 test.smt2' will print 'unsat' because y can never transition
+from non-zero to zero in the test design.
+
+#+end_example
+
+* write_smv
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/smv/smv.cc#L721
+
+#+begin_example
+
+    write_smv [options] [filename]
+
+Write an SMV description of the current design.
+
+    -verbose
+        this will print the recursive walk used to export the modules.
+
+    -tpl <template_file>
+        use the given template file. the line containing only the token '%%%%'
+        is replaced with the regular output of this command.
+
+THIS COMMAND IS UNDER CONSTRUCTION
+
+#+end_example
+
+* write_spice
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/spice/spice.cc#L135
+
+#+begin_example
+
+    write_spice [options] [filename]
+
+Write the current design to an SPICE netlist file.
+
+    -big_endian
+        generate multi-bit ports in MSB first order
+        (default is LSB first)
+
+    -neg net_name
+        set the net name for constant 0 (default: Vss)
+
+    -pos net_name
+        set the net name for constant 1 (default: Vdd)
+
+    -buf DC|subckt_name
+        set the name for jumper element (default: DC)
+        (used to connect different nets)
+
+    -nc_prefix
+        prefix for not-connected nets (default: _NC)
+
+    -inames
+        include names of internal ($-prefixed) nets in outputs
+        (default is to use net numbers instead)
+
+    -top top_module
+        set the specified module as design top module
+
+#+end_example
+
+* write_table
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/table/table.cc#L31
+
+#+begin_example
+
+    write_table [options] [filename]
+
+Write the current design as connectivity table. The output is a tab-separated
+ASCII table with the following columns:
+
+  module name
+  cell name
+  cell type
+  cell port
+  direction
+  signal
+
+module inputs and outputs are output using cell type and port '-' and with
+'pi' (primary input) or 'po' (primary output) or 'pio' as direction.
+#+end_example
+
+* write_verilog
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/backends/verilog/verilog_backend.cc#L2546
+
+#+begin_example
+
+    write_verilog [options] [filename]
+
+Write the current design to a Verilog file.
+
+    -sv
+        with this option, SystemVerilog constructs like always_comb are used
+
+    -norename
+        without this option all internal object names (the ones with a dollar
+        instead of a backslash prefix) are changed to short names in the
+        format '_<number>_'.
+
+    -renameprefix <prefix>
+        insert this prefix in front of auto-generated instance names
+
+    -noattr
+        with this option no attributes are included in the output
+
+    -attr2comment
+        with this option attributes are included as comments in the output
+
+    -noexpr
+        without this option all internal cells are converted to Verilog
+        expressions.
+
+    -noparallelcase
+        With this option no parallel_case attributes are used. Instead, a case
+        statement that assigns don't-care values for priority dependent inputs
+        is generated.
+
+    -siminit
+        add initial statements with hierarchical refs to initialize FFs when
+        in -noexpr mode.
+
+    -nodec
+        32-bit constant values are by default dumped as decimal numbers,
+        not bit pattern. This option deactivates this feature and instead
+        will write out all constants in binary.
+
+    -decimal
+        dump 32-bit constants in decimal and without size and radix
+
+    -nohex
+        constant values that are compatible with hex output are usually
+        dumped as hex values. This option deactivates this feature and
+        instead will write out all constants in binary.
+
+    -nostr
+        Parameters and attributes that are specified as strings in the
+        original input will be output as strings by this back-end. This
+        deactivates this feature and instead will write string constants
+        as binary numbers.
+
+    -simple-lhs
+        Connection assignments with simple left hand side without
+        concatenations.
+
+    -extmem
+        instead of initializing memories using assignments to individual
+        elements, use the '$readmemh' function to read initialization data
+        from a file. This data is written to a file named by appending
+        a sequential index to the Verilog filename and replacing the extension
+        with '.mem', e.g. 'write_verilog -extmem foo.v' writes 'foo-1.mem',
+        'foo-2.mem' and so on.
+
+    -defparam
+        use 'defparam' statements instead of the Verilog-2001 syntax for
+        cell parameters.
+
+    -default_params
+        emit module parameter declarations from
+        parameter_default_values.
+
+    -blackboxes
+        usually modules with the 'blackbox' attribute are ignored. with
+        this option set only the modules with the 'blackbox' attribute
+        are written to the output file.
+
+    -selected
+        only write selected modules. modules must be selected entirely or
+        not at all.
+
+    -v
+        verbose output (print new names of all renamed wires and cells)
+
+Note that RTLIL processes can't always be mapped directly to Verilog
+always blocks. This frontend should only be used to export an RTLIL
+netlist, i.e. after the "proc" pass has been used to convert all
+processes to logic networks and registers. A warning is generated when
+this command is called on a design with RTLIL processes.
+
+#+end_example
+
+* test_autotb
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/passes/tests/test_autotb.cc#L329
+
+#+begin_example
+
+    test_autotb [options] [filename]
+
+Automatically create primitive Verilog test benches for all modules in the
+design. The generated testbenches toggle the input pins of the module in
+a semi-random manner and dumps the resulting output signals.
+
+This can be used to check the synthesis results for simple circuits by
+comparing the testbench output for the input files and the synthesis results.
+
+The backend automatically detects clock signals. Additionally a signal can
+be forced to be interpreted as clock signal by setting the attribute
+'gentb_clock' on the signal.
+
+The attribute 'gentb_constant' can be used to force a signal to a constant
+value after initialization. This can e.g. be used to force a reset signal
+low in order to explore more inner states in a state machine.
+
+The attribute 'gentb_skip' can be attached to modules to suppress testbench
+generation.
+
+    -n <int>
+        number of iterations the test bench should run (default = 1000)
+
+    -seed <int>
+        seed used for pseudo-random number generation (default = 0).
+        a value of 0 will cause an arbitrary seed to be chosen, based on
+        the current system time.
+
+#+end_example
+
+* write_file
+Source: https://github.com/YosysHQ/yosys/blob/28ba3cb926fe376fa05ebfc1b921747d011d4557/passes/cmds/write_file.cc#L28
+
+#+begin_example
+
+    write_file [options] output_file [input_file]
+
+Write the text from the input file to the output file.
+
+    -a
+        Append to output file (instead of overwriting)
+
+
+Inside a script the input file can also can a here-document:
+
+    write_file hello.txt <<EOT
+    Hello World!
+    EOT
+
+#+end_example

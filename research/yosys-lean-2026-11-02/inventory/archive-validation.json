@@ -1,0 +1,25 @@
+{
+  "main": {
+    "verified_cpp_source_files": 328,
+    "mismatches": []
+  },
+  "stable": {
+    "verified_cpp_source_files": 324,
+    "mismatches": []
+  },
+  "backend_help_differences": {
+    "write_xaiger": "--- v0.70\n+++ main\n@@ -11,7 +11,13 @@\n         write ASCII version of AIGER format\n \n     -map <filename>\n-        write an extra file with port and box symbols\n+        write an extra file with port and box symbols, as opaque name\n+        references that 'abc_ops_reintegrate' resolves. They are only\n+        valid within the run of yosys that wrote them.\n+\n+    -map-strings\n+        write strings into the -map file instead of internal ID integers.\n+        Not readable with read_xaiger, for debugging only.\n \n     -dff\n         write $_DFF_[NP]_ cells\n",
+    "write_aiger2": "",
+    "write_rtlil": "--- v0.70\n+++ main\n@@ -10,3 +10,11 @@\n     -sort\n         sort design in-place (used to be default).\n \n+    -readable\n+        print human-readable names. Loses twine id information,\n+        breaking perfect replayability.\n+\n+    -small\n+        like the default replayable form but omit the `# name`\n+        comments, for smaller files.\n+\n"
+  },
+  "archives": {
+    "main": {
+      "url": "https://codeload.github.com/YosysHQ/yosys/tar.gz/63eecf3ddca2f143750f11e37ebd18ecb16b51c7",
+      "sha256": "6f59b18f67671c56c45567cc5d3b9038f8c4b1bcdb0f5566ceb04b8db86bd9bd"
+    },
+    "stable": {
+      "url": "https://codeload.github.com/YosysHQ/yosys/tar.gz/28ba3cb926fe376fa05ebfc1b921747d011d4557",
+      "sha256": "6a134c366622795f98c9b3e0588dde625f96ae5b80304813f73f2c261e317602"
+    }
+  }
+}

@@ -1,0 +1,2952 @@
+{
+  "sha": "3f162837521fa295c12fc9f7435a820b3fe53f9b",
+  "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/3f162837521fa295c12fc9f7435a820b3fe53f9b",
+  "tree": [
+    {
+      "path": ".claude",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "661dc7554cb31c04cd1d2e3fafd0d91afcf486ef",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/661dc7554cb31c04cd1d2e3fafd0d91afcf486ef"
+    },
+    {
+      "path": ".claude/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba8e6384b2cba35f3d5f551c8d65095d83c381d6",
+      "size": 77,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ba8e6384b2cba35f3d5f551c8d65095d83c381d6"
+    },
+    {
+      "path": ".claude/skills",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "6d243c2f37475099be53717b2737e6c1e1dd25fb",
+      "size": 13,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/6d243c2f37475099be53717b2737e6c1e1dd25fb"
+    },
+    {
+      "path": ".codex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "828671d25afe9f1f402edaca61f959f5e2bc27ea",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/828671d25afe9f1f402edaca61f959f5e2bc27ea"
+    },
+    {
+      "path": ".codex/config.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23731129147b7541dcbd246d0714c9549c76f6f1",
+      "size": 63,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/23731129147b7541dcbd246d0714c9549c76f6f1"
+    },
+    {
+      "path": ".codex/skills",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "6d243c2f37475099be53717b2737e6c1e1dd25fb",
+      "size": 13,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/6d243c2f37475099be53717b2737e6c1e1dd25fb"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23ddbdebc3cf30d147494744584df22b02b4ef38",
+      "size": 324,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/23ddbdebc3cf30d147494744584df22b02b4ef38"
+    },
+    {
+      "path": ".mcp.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27ca94faa1aa005264ffa5440c9431d73bf1d6d5",
+      "size": 105,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/27ca94faa1aa005264ffa5440c9431d73bf1d6d5"
+    },
+    {
+      "path": "Brewfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b61c3ad4d97a7463b4bf12f69c338db3cb07a879",
+      "size": 291,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b61c3ad4d97a7463b4bf12f69c338db3cb07a879"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c593f20329244d86deb41c8573e438d1afc52f09",
+      "size": 22609,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c593f20329244d86deb41c8573e438d1afc52f09"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a33929409e3bdd8be9ba236d5024c2caf70ad26c",
+      "size": 10636,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a33929409e3bdd8be9ba236d5024c2caf70ad26c"
+    },
+    {
+      "path": "agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a93bc7d9339f80f26376b4fa5cee75a9f58c005c",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/a93bc7d9339f80f26376b4fa5cee75a9f58c005c"
+    },
+    {
+      "path": "agents/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a60e7a59d7e1feac56ccda73a7185d328f2c68c2",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/a60e7a59d7e1feac56ccda73a7185d328f2c68c2"
+    },
+    {
+      "path": "agents/skills/lean-bisect",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca555ee8fa80f9c323bae62beb09ca89cc09c2e0",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/ca555ee8fa80f9c323bae62beb09ca89cc09c2e0"
+    },
+    {
+      "path": "agents/skills/lean-bisect/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "092c2787f5f904b46e552e228a4b528126e7c06f",
+      "size": 2127,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/092c2787f5f904b46e552e228a4b528126e7c06f"
+    },
+    {
+      "path": "agents/skills/lean-mwe",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d025db1fd31acfcd40384b0739d76ebd3fc46ac",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/4d025db1fd31acfcd40384b0739d76ebd3fc46ac"
+    },
+    {
+      "path": "agents/skills/lean-mwe/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cb2391892e00dbd99f4899e3513844ffd3fa9a3",
+      "size": 2242,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8cb2391892e00dbd99f4899e3513844ffd3fa9a3"
+    },
+    {
+      "path": "agents/skills/lean-pr",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e268ae39bc160ec50549e3d67b677504bfa1028d",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/e268ae39bc160ec50549e3d67b677504bfa1028d"
+    },
+    {
+      "path": "agents/skills/lean-pr/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86168b8ca54754dd4102b966e6c36b78137c42cd",
+      "size": 2512,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/86168b8ca54754dd4102b966e6c36b78137c42cd"
+    },
+    {
+      "path": "agents/skills/lean-proof",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "174421224756c3ef0e993e553682cf792999a42b",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/174421224756c3ef0e993e553682cf792999a42b"
+    },
+    {
+      "path": "agents/skills/lean-proof/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24bb64b9bf938db4a5793f1e9293e4ccd7bb6bde",
+      "size": 3053,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/24bb64b9bf938db4a5793f1e9293e4ccd7bb6bde"
+    },
+    {
+      "path": "agents/skills/lean-proof/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "54cbf2142d2d1dfc6f99bc70c497cbd5a0527e69",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/54cbf2142d2d1dfc6f99bc70c497cbd5a0527e69"
+    },
+    {
+      "path": "agents/skills/lean-proof/tests/example.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c00be23eaf60ce3b7a1befd59dcfcaca0ed6c5f6",
+      "size": 258,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c00be23eaf60ce3b7a1befd59dcfcaca0ed6c5f6"
+    },
+    {
+      "path": "agents/skills/lean-setup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3525c35640c083119698d6d434eaf26b9b8b3609",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/3525c35640c083119698d6d434eaf26b9b8b3609"
+    },
+    {
+      "path": "agents/skills/lean-setup/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3df6e452c257005116aec63c15a5a76fe4dda790",
+      "size": 1886,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/3df6e452c257005116aec63c15a5a76fe4dda790"
+    },
+    {
+      "path": "agents/skills/mathlib-build",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7d70d193c2b1ef12a12809a57ff287ff4925a93",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/b7d70d193c2b1ef12a12809a57ff287ff4925a93"
+    },
+    {
+      "path": "agents/skills/mathlib-build/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5d6ff6dd5e119db9f41708e47b1bcc68567b4c4",
+      "size": 645,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c5d6ff6dd5e119db9f41708e47b1bcc68567b4c4"
+    },
+    {
+      "path": "agents/skills/mathlib-pr",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec9835e7119c810e0375361445db34daaa2949e1",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/ec9835e7119c810e0375361445db34daaa2949e1"
+    },
+    {
+      "path": "agents/skills/mathlib-pr/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04836c2feff2f382b6e464507d7350311c2efac7",
+      "size": 2309,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/04836c2feff2f382b6e464507d7350311c2efac7"
+    },
+    {
+      "path": "agents/skills/mathlib-review",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f04f70e48538e7a395f4fc067e43b2805facdb9a",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/f04f70e48538e7a395f4fc067e43b2805facdb9a"
+    },
+    {
+      "path": "agents/skills/mathlib-review/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cacc9394d490685aca1fd3bc52a338d753c2d2d8",
+      "size": 1495,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/cacc9394d490685aca1fd3bc52a338d753c2d2d8"
+    },
+    {
+      "path": "agents/skills/nightly-testing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9647f6f3f3f310daeeced44a177dc3da987810f6",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/9647f6f3f3f310daeeced44a177dc3da987810f6"
+    },
+    {
+      "path": "agents/skills/nightly-testing/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "305c66539b9e222bfd997ffd43b0e59a13c273c3",
+      "size": 1918,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/305c66539b9e222bfd997ffd43b0e59a13c273c3"
+    },
+    {
+      "path": "ann",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0e00332733c61b49a4e09457f976ad1c517837d",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/c0e00332733c61b49a4e09457f976ad1c517837d"
+    },
+    {
+      "path": "ann/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed0ea86da96f23e4c1b188d2a40a426ad17695ce",
+      "size": 3639,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ed0ea86da96f23e4c1b188d2a40a426ad17695ce"
+    },
+    {
+      "path": "ann/cli",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a6c6bb5f058c83d0515ea7e5154f99d6164f4356",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/a6c6bb5f058c83d0515ea7e5154f99d6164f4356"
+    },
+    {
+      "path": "ann/cli/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b54b83e98c066ff7861a4a74792bb7f321c8b9ab",
+      "size": 51,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b54b83e98c066ff7861a4a74792bb7f321c8b9ab"
+    },
+    {
+      "path": "ann/cli/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4186a5d95d2ef4c4f342b0831def4e082a8c0689",
+      "size": 222,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/4186a5d95d2ef4c4f342b0831def4e082a8c0689"
+    },
+    {
+      "path": "ann/results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71095f4f56780a44b9c4046f3108a101026c1c06",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/71095f4f56780a44b9c4046f3108a101026c1c06"
+    },
+    {
+      "path": "ann/results/canonical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e8f228502ff123ed7c1a3fb5d263edda205a6dbb",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/e8f228502ff123ed7c1a3fb5d263edda205a6dbb"
+    },
+    {
+      "path": "ann/results/canonical/dataset_snapshot.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49ec8bba822a08c87753486cbb0ef700697c3074",
+      "size": 76,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/49ec8bba822a08c87753486cbb0ef700697c3074"
+    },
+    {
+      "path": "ann/results/canonical/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea5934ea4700b240369771e777640cae8f9d5aca",
+      "size": 896,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ea5934ea4700b240369771e777640cae8f9d5aca"
+    },
+    {
+      "path": "ann/results/canonical/metrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c25ecf87a441b1539ba4e37edc480a22d310d475",
+      "size": 28097,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c25ecf87a441b1539ba4e37edc480a22d310d475"
+    },
+    {
+      "path": "ann/results/canonical/training_summary.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e90575ba29bca9439d3a02ba161c4c260cf85ae8",
+      "size": 660,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e90575ba29bca9439d3a02ba161c4c260cf85ae8"
+    },
+    {
+      "path": "ann/results/canonical/weights_float.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c5da2af1107046ef28d65bc15fef1c283e8cfdb",
+      "size": 1651,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/6c5da2af1107046ef28d65bc15fef1c283e8cfdb"
+    },
+    {
+      "path": "ann/results/canonical/weights_float_selected.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3c7a99222e810d2043c005c00b3ddb1f2d186e3",
+      "size": 1682,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c3c7a99222e810d2043c005c00b3ddb1f2d186e3"
+    },
+    {
+      "path": "ann/results/canonical/weights_quantized.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0124226a9e670a7062cb0bb0cccee3442e122ec2",
+      "size": 762,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/0124226a9e670a7062cb0bb0cccee3442e122ec2"
+    },
+    {
+      "path": "ann/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84c9a5645c28e28bd1cad74d045cad514e8e8a6f",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/84c9a5645c28e28bd1cad74d045cad514e8e8a6f"
+    },
+    {
+      "path": "ann/runners/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5813da50a931ef76cc2b8f4a9e7a26b070be1dd5",
+      "size": 37,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/5813da50a931ef76cc2b8f4a9e7a26b070be1dd5"
+    },
+    {
+      "path": "ann/runners/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8aa5d475f1fea67133d7ce98e5504af5a02553d",
+      "size": 7680,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f8aa5d475f1fea67133d7ce98e5504af5a02553d"
+    },
+    {
+      "path": "ann/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34bb00dd748aa0e4b6caa01d5a9830cca25002bb",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/34bb00dd748aa0e4b6caa01d5a9830cca25002bb"
+    },
+    {
+      "path": "ann/src/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a2e2806dc6606e728d6b5bf38f4962075037e10",
+      "size": 37,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8a2e2806dc6606e728d6b5bf38f4962075037e10"
+    },
+    {
+      "path": "ann/src/artifacts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d95612244ec237fcf0226c458085a25a47b56799",
+      "size": 7217,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/d95612244ec237fcf0226c458085a25a47b56799"
+    },
+    {
+      "path": "ann/src/dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b97acc9e0c2026319941a241965a380c607a8013",
+      "size": 4299,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b97acc9e0c2026319941a241965a380c607a8013"
+    },
+    {
+      "path": "ann/src/evaluate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e2b7a03a2027af648d480bad3c7360900fbb83e",
+      "size": 5790,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7e2b7a03a2027af648d480bad3c7360900fbb83e"
+    },
+    {
+      "path": "ann/src/model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44ecd7bf5e15f34a15e127a220d4050257196eb7",
+      "size": 2241,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/44ecd7bf5e15f34a15e127a220d4050257196eb7"
+    },
+    {
+      "path": "ann/src/params.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c95ba7d047dde09785966b4a83def0991358fae2",
+      "size": 31,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c95ba7d047dde09785966b4a83def0991358fae2"
+    },
+    {
+      "path": "ann/src/quantize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19c7a2aaa6a7270618ffef002a8dc784489ea645",
+      "size": 8464,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/19c7a2aaa6a7270618ffef002a8dc784489ea645"
+    },
+    {
+      "path": "ann/src/teacher.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "579a95ac83bd8b9ebfa5b55562d9ae3962f39a92",
+      "size": 869,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/579a95ac83bd8b9ebfa5b55562d9ae3962f39a92"
+    },
+    {
+      "path": "ann/src/train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f468c0bdfcfea7f708fcc8cd4f2e98c9f1411d7",
+      "size": 21329,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/2f468c0bdfcfea7f708fcc8cd4f2e98c9f1411d7"
+    },
+    {
+      "path": "ann/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3dd52e098ab0c2c9bd84d97100bfe9a40e244e84",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/3dd52e098ab0c2c9bd84d97100bfe9a40e244e84"
+    },
+    {
+      "path": "ann/test/test_ann_cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8522d4afa3e9353a5eeccf96893e603f2a7355ae",
+      "size": 4237,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8522d4afa3e9353a5eeccf96893e603f2a7355ae"
+    },
+    {
+      "path": "asic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5963cc1d8372237dba3b1ac3d8b69de8572fffc",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/e5963cc1d8372237dba3b1ac3d8b69de8572fffc"
+    },
+    {
+      "path": "asic/openlane",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6524d7b8d782a80b9bb5e7bb231fdf2ffe437163",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/6524d7b8d782a80b9bb5e7bb231fdf2ffe437163"
+    },
+    {
+      "path": "asic/openlane/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9b8407054c38eb35e8362e21970880253b67a82",
+      "size": 486,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e9b8407054c38eb35e8362e21970880253b67a82"
+    },
+    {
+      "path": "asic/openlane/floorplan.tcl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea473611e90dc040377f7366d7627c87c2c981a0",
+      "size": 135,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ea473611e90dc040377f7366d7627c87c2c981a0"
+    },
+    {
+      "path": "asic/yosys.tcl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "588eb0f806bdc297da8553c5fd3373079aadb6ce",
+      "size": 728,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/588eb0f806bdc297da8553c5fd3373079aadb6ce"
+    },
+    {
+      "path": "contract",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "244a62c59db87efd85c2e544d7da1fc7498e17b2",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/244a62c59db87efd85c2e544d7da1fc7498e17b2"
+    },
+    {
+      "path": "contract/readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e926d5282b80def7bcd296bc235036ee995e1102",
+      "size": 4046,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e926d5282b80def7bcd296bc235036ee995e1102"
+    },
+    {
+      "path": "contract/results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d8ef42154b4aa3d4f0403406d600f012e3b37fb",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/4d8ef42154b4aa3d4f0403406d600f012e3b37fb"
+    },
+    {
+      "path": "contract/results/canonical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a2788e327440db22a31772e72a0654986ec83fa",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/3a2788e327440db22a31772e72a0654986ec83fa"
+    },
+    {
+      "path": "contract/results/canonical/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a94d73d06b2f37e7064de2cc03b6ae08db9ffcff",
+      "size": 744,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a94d73d06b2f37e7064de2cc03b6ae08db9ffcff"
+    },
+    {
+      "path": "contract/results/canonical/model.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eed49977dbda2d1ea06c2f431c8da721dd07002a",
+      "size": 2754,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/eed49977dbda2d1ea06c2f431c8da721dd07002a"
+    },
+    {
+      "path": "contract/results/canonical/weights.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "492baee1931d2c92bd01068b032e5f910e77eb6e",
+      "size": 2161,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/492baee1931d2c92bd01068b032e5f910e77eb6e"
+    },
+    {
+      "path": "contract/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "695b3499823792c8cc2a725f47f443f4e1c5ffce",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/695b3499823792c8cc2a725f47f443f4e1c5ffce"
+    },
+    {
+      "path": "contract/runners/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "646f3a7e4b96703e4b974d7110df62992cddaba3",
+      "size": 42,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/646f3a7e4b96703e4b974d7110df62992cddaba3"
+    },
+    {
+      "path": "contract/runners/freeze.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0249146d98d80cdddf4ca8cc5e88349cfb75ccd",
+      "size": 430,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c0249146d98d80cdddf4ca8cc5e88349cfb75ccd"
+    },
+    {
+      "path": "contract/runners/gen_vectors.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed75abacfefffc35ebdeb2be3041d5d10dc13f17",
+      "size": 445,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ed75abacfefffc35ebdeb2be3041d5d10dc13f17"
+    },
+    {
+      "path": "contract/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67656788c62f1ac84963f0b27aacd06edab83520",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/67656788c62f1ac84963f0b27aacd06edab83520"
+    },
+    {
+      "path": "contract/src/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c1cf49a1cc9f4c9e306dceb0f7eaeabdd1accb6",
+      "size": 38,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/9c1cf49a1cc9f4c9e306dceb0f7eaeabdd1accb6"
+    },
+    {
+      "path": "contract/src/artifacts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06ddc4d66bcb7e89e9b24387677f85bb8671990f",
+      "size": 9056,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/06ddc4d66bcb7e89e9b24387677f85bb8671990f"
+    },
+    {
+      "path": "contract/src/boundedness.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9928140346383a4c6a5ba852fece7497643f0343",
+      "size": 4636,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/9928140346383a4c6a5ba852fece7497643f0343"
+    },
+    {
+      "path": "contract/src/downstream_sync.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "361a4a7390c9feb36362918f380e877fa8d35ed5",
+      "size": 11205,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/361a4a7390c9feb36362918f380e877fa8d35ed5"
+    },
+    {
+      "path": "contract/src/freeze.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b92f9dd2a02004c1c5b3e2ad86ba1cb131c4316",
+      "size": 18464,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/3b92f9dd2a02004c1c5b3e2ad86ba1cb131c4316"
+    },
+    {
+      "path": "contract/src/gen_vectors.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2b36bca54f05e17d5dcf8e830f8fabe34657b2a",
+      "size": 11051,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b2b36bca54f05e17d5dcf8e830f8fabe34657b2a"
+    },
+    {
+      "path": "contract/src/params.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c95ba7d047dde09785966b4a83def0991358fae2",
+      "size": 31,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c95ba7d047dde09785966b4a83def0991358fae2"
+    },
+    {
+      "path": "contract/src/quantize_helpers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ce379e01fce7332968202a8f49340665b2e37cf",
+      "size": 656,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7ce379e01fce7332968202a8f49340665b2e37cf"
+    },
+    {
+      "path": "contract/src/schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4cda3cefd0a918df774897b1290d68652651662",
+      "size": 15087,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c4cda3cefd0a918df774897b1290d68652651662"
+    },
+    {
+      "path": "contract/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f75f0af7a98ab5bbb93abe037b9aa1cf48a2e48",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/5f75f0af7a98ab5bbb93abe037b9aa1cf48a2e48"
+    },
+    {
+      "path": "contract/test/test_contract_freeze.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d306d93ef8d80ac0a2ef240f658d010d9e7c4b57",
+      "size": 15190,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/d306d93ef8d80ac0a2ef240f658d010d9e7c4b57"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0bc98d8cc4662613f70254bb976e364138b9225",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/c0bc98d8cc4662613f70254bb976e364138b9225"
+    },
+    {
+      "path": "docs/from-ann-to-proven-hardware.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2418426ab513d29db171cfd9546471c9d6fb9ef1",
+      "size": 32228,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/2418426ab513d29db171cfd9546471c9d6fb9ef1"
+    },
+    {
+      "path": "docs/generated-rtl.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a637e7a2895159de9b52e5a4262778522477ba75",
+      "size": 43420,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a637e7a2895159de9b52e5a4262778522477ba75"
+    },
+    {
+      "path": "docs/hardware-mathematics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a12c6f8a4ccbf241cb49bda8bae64a60c12ccb4e",
+      "size": 78280,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a12c6f8a4ccbf241cb49bda8bae64a60c12ccb4e"
+    },
+    {
+      "path": "docs/research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a0e0116bb13b2be5998ac66b1f6b265bf31bd3fe",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/a0e0116bb13b2be5998ac66b1f6b265bf31bd3fe"
+    },
+    {
+      "path": "docs/research/ann-asic-status.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66933a11476c20a575f70a3586cf6ee0df846ff0",
+      "size": 6663,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/66933a11476c20a575f70a3586cf6ee0df846ff0"
+    },
+    {
+      "path": "docs/research/cnn-asic-status.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef7a2cad056a36768ac22088f054759a28b1bb01",
+      "size": 6392,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ef7a2cad056a36768ac22088f054759a28b1bb01"
+    },
+    {
+      "path": "docs/research/custom-asic-overview.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b49c2e37264f222385cb64efd9e5e038b70bc4fa",
+      "size": 6093,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b49c2e37264f222385cb64efd9e5e038b70bc4fa"
+    },
+    {
+      "path": "docs/research/dl-asic-status.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7678919884aad11087e156242f4b53cacce29e5",
+      "size": 7288,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a7678919884aad11087e156242f4b53cacce29e5"
+    },
+    {
+      "path": "docs/research/hardware-formal-verification-ecosystem.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e76ebd7cbc70ffcbc43c52eea177a8a1630dc44",
+      "size": 10495,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/1e76ebd7cbc70ffcbc43c52eea177a8a1630dc44"
+    },
+    {
+      "path": "docs/research/hardware-mathematics-open-questions-manifest.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8963d89dcbd7e25756918f1f187fdbc548063ea",
+      "size": 23820,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b8963d89dcbd7e25756918f1f187fdbc548063ea"
+    },
+    {
+      "path": "docs/research/hardware-mathematics-open-questions.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc88e258a206c6e39125eeba67dc5ba8180bee93",
+      "size": 48423,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/cc88e258a206c6e39125eeba67dc5ba8180bee93"
+    },
+    {
+      "path": "docs/research/llm-asic-status.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcb5f6d73219d84da7e424050c62e648315bf7c0",
+      "size": 8294,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/dcb5f6d73219d84da7e424050c62e648315bf7c0"
+    },
+    {
+      "path": "docs/research/sparkle-hesper-large-examples.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1e07a4022d98049c9211face1cdba4bac880f7e",
+      "size": 14118,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/d1e07a4022d98049c9211face1cdba4bac880f7e"
+    },
+    {
+      "path": "docs/solver-backed-verification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c8f7ebdf01e782dee7c4e8b74f5e808263d31ec",
+      "size": 30457,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7c8f7ebdf01e782dee7c4e8b74f5e808263d31ec"
+    },
+    {
+      "path": "docs/temporal-verification-of-reactive-hardware.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f5da2c2b8ee5fe3be49a7c925f9de80b03e136f",
+      "size": 32164,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8f5da2c2b8ee5fe3be49a7c925f9de80b03e136f"
+    },
+    {
+      "path": "experiments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b49e26c95e726582431ecd8ee499c250ed92f510",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/b49e26c95e726582431ecd8ee499c250ed92f510"
+    },
+    {
+      "path": "experiments/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b48044aa3972090bef764e4ef3a88514dbb1d43",
+      "size": 1531,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/3b48044aa3972090bef764e4ef3a88514dbb1d43"
+    },
+    {
+      "path": "experiments/implementation-branch-comparison.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad95b668133cf6914ffad26e59b69d4258517712",
+      "size": 5401,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ad95b668133cf6914ffad26e59b69d4258517712"
+    },
+    {
+      "path": "experiments/rtl-formalize-synthesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4000579bbd18df1114640966babb11929178fda0",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/4000579bbd18df1114640966babb11929178fda0"
+    },
+    {
+      "path": "experiments/rtl-formalize-synthesis/sparkle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fed975b843aacbc8d7906e211013d1a8cd8cb279",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/fed975b843aacbc8d7906e211013d1a8cd8cb279"
+    },
+    {
+      "path": "experiments/rtl-formalize-synthesis/sparkle/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48596e57d8faae672439c828d336c1dc28f21699",
+      "size": 4926,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/48596e57d8faae672439c828d336c1dc28f21699"
+    },
+    {
+      "path": "experiments/rtl-synthesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92488bb36f9ef0c317cc0263a91d3cef3b53ff18",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/92488bb36f9ef0c317cc0263a91d3cef3b53ff18"
+    },
+    {
+      "path": "experiments/rtl-synthesis/spot",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd227db0ab64258d35d05ce8d1a22e39b689292b",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/cd227db0ab64258d35d05ce8d1a22e39b689292b"
+    },
+    {
+      "path": "experiments/rtl-synthesis/spot/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7227c5fd9e50a087ff3bc3afcb63e59a902760cd",
+      "size": 2051,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7227c5fd9e50a087ff3bc3afcb63e59a902760cd"
+    },
+    {
+      "path": "experiments/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c18838d7344783c834da304805387dcd20946fd",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/9c18838d7344783c834da304805387dcd20946fd"
+    },
+    {
+      "path": "experiments/runners/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55d1758fd5df7b016c01437ad9d73c3ea58dd639",
+      "size": 45,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/55d1758fd5df7b016c01437ad9d73c3ea58dd639"
+    },
+    {
+      "path": "experiments/runners/run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f58abc94a60846a05cba0445638467a989a12a04",
+      "size": 428,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f58abc94a60846a05cba0445638467a989a12a04"
+    },
+    {
+      "path": "experiments/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70585dff888203bd296dfb10fe6b763154409e90",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/70585dff888203bd296dfb10fe6b763154409e90"
+    },
+    {
+      "path": "experiments/src/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f34098080eb58404eb0de27bded508112f159a4",
+      "size": 50,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/5f34098080eb58404eb0de27bded508112f159a4"
+    },
+    {
+      "path": "experiments/src/common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fa1ccf6d86e280cb71f741ccc0a0aeecc4efdd8",
+      "size": 2226,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/0fa1ccf6d86e280cb71f741ccc0a0aeecc4efdd8"
+    },
+    {
+      "path": "experiments/src/run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7067ecae2a3c62a58dc62876648419316c27d5f3",
+      "size": 116639,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7067ecae2a3c62a58dc62876648419316c27d5f3"
+    },
+    {
+      "path": "experiments/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3461a52b9e775aafe672f6d6ff6a9b4d8d72f985",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/3461a52b9e775aafe672f6d6ff6a9b4d8d72f985"
+    },
+    {
+      "path": "experiments/test/test_experiments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1351dea9e2ce8d20e9dc5753b8501fdcd7c440d7",
+      "size": 70065,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/1351dea9e2ce8d20e9dc5753b8501fdcd7c440d7"
+    },
+    {
+      "path": "experiments/test/test_formalize_smt_surface.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ecd1b0c180512074d3961f712bd3fedadbe5aa1",
+      "size": 2305,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/0ecd1b0c180512074d3961f712bd3fedadbe5aa1"
+    },
+    {
+      "path": "experiments/test/test_simulation_commands.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c398c7cec82d7a223139a804111fab98a979982",
+      "size": 9252,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/5c398c7cec82d7a223139a804111fab98a979982"
+    },
+    {
+      "path": "formalize-smt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c697df3a9420f434dd831803c0c05199928f8dc",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/4c697df3a9420f434dd831803c0c05199928f8dc"
+    },
+    {
+      "path": "formalize-smt/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad16eeab2c7a06b8ec870cf0b9d8fd6ce5bcf7c4",
+      "size": 3230,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ad16eeab2c7a06b8ec870cf0b9d8fd6ce5bcf7c4"
+    },
+    {
+      "path": "formalize-smt/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "630afc27b5932ca75c90e144a1aa45593a904e67",
+      "size": 4238,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/630afc27b5932ca75c90e144a1aa45593a904e67"
+    },
+    {
+      "path": "formalize-smt/lakefile.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f8a327299ebfa2d293503ec93c9578cdf93fb04",
+      "size": 1902,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/3f8a327299ebfa2d293503ec93c9578cdf93fb04"
+    },
+    {
+      "path": "formalize-smt/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5249182c0dd885dfd2c6fb87ed4b4113a2449a6c",
+      "size": 25,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/5249182c0dd885dfd2c6fb87ed4b4113a2449a6c"
+    },
+    {
+      "path": "formalize-smt/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a296c2d86e71677d3181c96d4c5b65b2b2fdfe37",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/a296c2d86e71677d3181c96d4c5b65b2b2fdfe37"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca06b9488cecfe18dd7311212c4b12ac9ab16308",
+      "size": 219,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ca06b9488cecfe18dd7311212c4b12ac9ab16308"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42fcdb2a2500cdffa437a2ad52a075e448c72ec3",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/42fcdb2a2500cdffa437a2ad52a075e448c72ec3"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt/Arithmetic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c8a7d9f6460fb4fac41778a744971c8e84158bb",
+      "size": 40,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/0c8a7d9f6460fb4fac41778a744971c8e84158bb"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt/Proofs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5cb45560ed9d9bf088ada195fa897a2f6389a36f",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/5cb45560ed9d9bf088ada195fa897a2f6389a36f"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt/Proofs/Correctness.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd9f025d2fdf0ff5511d3569da06521352cddfee",
+      "size": 8765,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/fd9f025d2fdf0ff5511d3569da06521352cddfee"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt/Proofs/FixedPoint.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe6552b1800237f476eedf02a3ade907ba62b0fb",
+      "size": 13226,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/fe6552b1800237f476eedf02a3ade907ba62b0fb"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt/Proofs/Invariants.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "434025cf670528707fb57034ebd3e78862b9e53d",
+      "size": 5966,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/434025cf670528707fb57034ebd3e78862b9e53d"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt/Proofs/Simulation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9754f8f02efc2dc858b54436691eec6ddd495bb4",
+      "size": 15116,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/9754f8f02efc2dc858b54436691eec6ddd495bb4"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt/Proofs/SpecArithmetic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "134f9611fa0a3d33153bc8a68cab25fe840d2b0d",
+      "size": 18876,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/134f9611fa0a3d33153bc8a68cab25fe840d2b0d"
+    },
+    {
+      "path": "formalize-smt/src/MlpCoreSmt/Proofs/Temporal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23f45de3218ab4079381c623d0e925b229e9bfaa",
+      "size": 27039,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/23f45de3218ab4079381c623d0e925b229e9bfaa"
+    },
+    {
+      "path": "formalize",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1050ad651602125db74fa86df1d643a62103fbc2",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/1050ad651602125db74fa86df1d643a62103fbc2"
+    },
+    {
+      "path": "formalize/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc62d9df4975dee47bdba593b65dde15f1f246cb",
+      "size": 3098,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/fc62d9df4975dee47bdba593b65dde15f1f246cb"
+    },
+    {
+      "path": "formalize/lakefile.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64ab6b7ace052c440ee19a4ed5dea3bc52133512",
+      "size": 247,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/64ab6b7ace052c440ee19a4ed5dea3bc52133512"
+    },
+    {
+      "path": "formalize/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5249182c0dd885dfd2c6fb87ed4b4113a2449a6c",
+      "size": 25,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/5249182c0dd885dfd2c6fb87ed4b4113a2449a6c"
+    },
+    {
+      "path": "formalize/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d7bfd07370a98c9f9c90d52902e83f4a8e495838",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/d7bfd07370a98c9f9c90d52902e83f4a8e495838"
+    },
+    {
+      "path": "formalize/scripts/ExportSemanticBridge.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5167f113705b396f9ca28a99feebc776fe56e69",
+      "size": 2698,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e5167f113705b396f9ca28a99feebc776fe56e69"
+    },
+    {
+      "path": "formalize/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa117e43ebdcd4fcf4dc5527c6ccf8097fd35cad",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/aa117e43ebdcd4fcf4dc5527c6ccf8097fd35cad"
+    },
+    {
+      "path": "formalize/src/MlpCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cb4c7ae40447451f2ff3d606d61e087000522bb",
+      "size": 417,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/1cb4c7ae40447451f2ff3d606d61e087000522bb"
+    },
+    {
+      "path": "formalize/src/MlpCore",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d23c0e0523074930347449c3a22956018da8009",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/1d23c0e0523074930347449c3a22956018da8009"
+    },
+    {
+      "path": "formalize/src/MlpCore/Defs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "078cb6bb0ff62982c085ca201cf7d3081ab3d6a2",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/078cb6bb0ff62982c085ca201cf7d3081ab3d6a2"
+    },
+    {
+      "path": "formalize/src/MlpCore/Defs/CorrectnessGoals.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2874869657bc372256bceee4100fafafbb9b72e6",
+      "size": 372,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/2874869657bc372256bceee4100fafafbb9b72e6"
+    },
+    {
+      "path": "formalize/src/MlpCore/Defs/FixedPointCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d05a6b9785cf67d6a86fdcf434113957fb3ffde4",
+      "size": 2830,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/d05a6b9785cf67d6a86fdcf434113957fb3ffde4"
+    },
+    {
+      "path": "formalize/src/MlpCore/Defs/MachineCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1a43113bdfb62f9748ee8431a71c2d7fbbec166",
+      "size": 2356,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a1a43113bdfb62f9748ee8431a71c2d7fbbec166"
+    },
+    {
+      "path": "formalize/src/MlpCore/Defs/SpecCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab991ffc6f09e8f003988d2eae188c21862e03d4",
+      "size": 13372,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ab991ffc6f09e8f003988d2eae188c21862e03d4"
+    },
+    {
+      "path": "formalize/src/MlpCore/Defs/TemporalCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dad806cf65df3dcc0ad632ac6b467e077114b64",
+      "size": 4428,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7dad806cf65df3dcc0ad632ac6b467e077114b64"
+    },
+    {
+      "path": "formalize/src/MlpCore/Generated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "536c49e526096a781529f8d5662d4e7e3dd0884a",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/536c49e526096a781529f8d5662d4e7e3dd0884a"
+    },
+    {
+      "path": "formalize/src/MlpCore/Generated/Contract.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72c2d7486a242b4d98e3f1628e5ed9f685b6df8c",
+      "size": 871,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/72c2d7486a242b4d98e3f1628e5ed9f685b6df8c"
+    },
+    {
+      "path": "formalize/src/MlpCore/Interfaces",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "84a6bc8c020d3a474bac661c509eaf2996b7d45f",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/84a6bc8c020d3a474bac661c509eaf2996b7d45f"
+    },
+    {
+      "path": "formalize/src/MlpCore/Interfaces/ArithmeticProofProvider.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52ed77c698b407fb91fccd15069af8f054c77872",
+      "size": 395,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/52ed77c698b407fb91fccd15069af8f054c77872"
+    },
+    {
+      "path": "formalize/src/MlpCore/Proofs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77eac081960e564171d4b3848f46dc5bb60d031a",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/77eac081960e564171d4b3848f46dc5bb60d031a"
+    },
+    {
+      "path": "formalize/src/MlpCore/Proofs/Correctness.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98834c02eddee1dc94982725957197cff4bea569",
+      "size": 8746,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/98834c02eddee1dc94982725957197cff4bea569"
+    },
+    {
+      "path": "formalize/src/MlpCore/Proofs/FixedPoint.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c907d7fd975d918e1f5326283e631135933301a9",
+      "size": 13207,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c907d7fd975d918e1f5326283e631135933301a9"
+    },
+    {
+      "path": "formalize/src/MlpCore/Proofs/Invariants.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f41d23f6bc715eebee0562706872a9d767660c7d",
+      "size": 5947,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f41d23f6bc715eebee0562706872a9d767660c7d"
+    },
+    {
+      "path": "formalize/src/MlpCore/Proofs/Simulation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5fa4651bb4f4cb5e53ac2c8ee8b7535249dac33",
+      "size": 15094,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b5fa4651bb4f4cb5e53ac2c8ee8b7535249dac33"
+    },
+    {
+      "path": "formalize/src/MlpCore/Proofs/SpecArithmetic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b23d2face27b9d18dd9b80b4082fa2a4142aa84",
+      "size": 18636,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/2b23d2face27b9d18dd9b80b4082fa2a4142aa84"
+    },
+    {
+      "path": "formalize/src/MlpCore/Proofs/Temporal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14ee7618929f1eba4cb2f834777ce21a0f2b275d",
+      "size": 27020,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/14ee7618929f1eba4cb2f834777ce21a0f2b275d"
+    },
+    {
+      "path": "playground",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be2e9da44a783be69a3dbcc53e9e8471460fd638",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/be2e9da44a783be69a3dbcc53e9e8471460fd638"
+    },
+    {
+      "path": "playground/fsm-stepper.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "779719cb2f41cc6aa0300388b9f84b3b691555ef",
+      "size": 36175,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/779719cb2f41cc6aa0300388b9f84b3b691555ef"
+    },
+    {
+      "path": "playground/reactive-state-explosion.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ea252cbf68c8a07015243b2977056284f03f5d4",
+      "size": 31928,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/3ea252cbf68c8a07015243b2977056284f03f5d4"
+    },
+    {
+      "path": "rtl-formalize-synthesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3733fd63a985001d5766816723837909c50bf985",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/3733fd63a985001d5766816723837909c50bf985"
+    },
+    {
+      "path": "rtl-formalize-synthesis/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d624607452e273a26c53a95b92e1f752ea1d639",
+      "size": 1677,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/5d624607452e273a26c53a95b92e1f752ea1d639"
+    },
+    {
+      "path": "rtl-formalize-synthesis/lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71029fbc03505732b132baf0a8d691795c01bebd",
+      "size": 4996,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/71029fbc03505732b132baf0a8d691795c01bebd"
+    },
+    {
+      "path": "rtl-formalize-synthesis/lakefile.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfa23f349e8153948745f84bfaf6bda801f16e6d",
+      "size": 253,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/dfa23f349e8153948745f84bfaf6bda801f16e6d"
+    },
+    {
+      "path": "rtl-formalize-synthesis/lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5249182c0dd885dfd2c6fb87ed4b4113a2449a6c",
+      "size": 25,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/5249182c0dd885dfd2c6fb87ed4b4113a2449a6c"
+    },
+    {
+      "path": "rtl-formalize-synthesis/patches",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4edfdc218392a6146f003f44ebb3e73c0c423d3",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/f4edfdc218392a6146f003f44ebb3e73c0c423d3"
+    },
+    {
+      "path": "rtl-formalize-synthesis/patches/sparkle-local.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aa5b9a4fc4456456b782de582be1e8ab6b87754",
+      "size": 1790,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/1aa5b9a4fc4456456b782de582be1e8ab6b87754"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5dec4f2ec90efe5164202315e3a1ad526aba9db",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/a5dec4f2ec90efe5164202315e3a1ad526aba9db"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae0cd07495d601367563dea77e2919ea831e5967",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/ae0cd07495d601367563dea77e2919ea831e5967"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical/blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "245e241f2c6adb1245dae1d67f1a9d9b375035cc",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/245e241f2c6adb1245dae1d67f1a9d9b375035cc"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical/blueprint/blueprint.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af9adf4d0208fdde479a43440c2b589ca1320523",
+      "size": 700813,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/af9adf4d0208fdde479a43440c2b589ca1320523"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical/blueprint/mlp_core.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0bbdccae697e453e9ffa4a39d238d3a7c8b7874",
+      "size": 11044,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f0bbdccae697e453e9ffa4a39d238d3a7c8b7874"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical/blueprint/sparkle_mlp_core.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59fcf3eac8381b659b7df2a49b89dd5f90fae6ab",
+      "size": 678318,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/59fcf3eac8381b659b7df2a49b89dd5f90fae6ab"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical/sv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a96d6f1f9454f6161c345e7d48a7febd6654aceb",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/a96d6f1f9454f6161c345e7d48a7febd6654aceb"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical/sv/mlp_core.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f99fefcd679ff48cbe94f32baed9d5e75e495a26",
+      "size": 6039,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f99fefcd679ff48cbe94f32baed9d5e75e495a26"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical/sv/sparkle_mlp_core.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "255793e6ee4c23fc802621a0ad066abb566a7d89",
+      "size": 1668663,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/255793e6ee4c23fc802621a0ad066abb566a7d89"
+    },
+    {
+      "path": "rtl-formalize-synthesis/results/canonical/verification_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54941e49f4080459dd7fd1c36c88a41f52dc997c",
+      "size": 5019,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/54941e49f4080459dd7fd1c36c88a41f52dc997c"
+    },
+    {
+      "path": "rtl-formalize-synthesis/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "823a19d8a1ef55c9e2b7048c7060b85c74ceafde",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/823a19d8a1ef55c9e2b7048c7060b85c74ceafde"
+    },
+    {
+      "path": "rtl-formalize-synthesis/runners/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2401439bd625784407491e571f14ff91530f6034",
+      "size": 57,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/2401439bd625784407491e571f14ff91530f6034"
+    },
+    {
+      "path": "rtl-formalize-synthesis/runners/blueprint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83463358b0c8a085314f7cff94fb444ee43373be",
+      "size": 2893,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/83463358b0c8a085314f7cff94fb444ee43373be"
+    },
+    {
+      "path": "rtl-formalize-synthesis/runners/emit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "649d69fa4cae5689043494664b717776ded0584f",
+      "size": 3495,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/649d69fa4cae5689043494664b717776ded0584f"
+    },
+    {
+      "path": "rtl-formalize-synthesis/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "117133c707e0d09e1b33b84e62e71d02472efd78",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/117133c707e0d09e1b33b84e62e71d02472efd78"
+    },
+    {
+      "path": "rtl-formalize-synthesis/scripts/configure_proof_lane.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "084ed5bf947dcc93afe2632fb24c21f76bea1f7e",
+      "size": 2700,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/084ed5bf947dcc93afe2632fb24c21f76bea1f7e"
+    },
+    {
+      "path": "rtl-formalize-synthesis/scripts/export_backend_metadata.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7265c57e143aae358dfc932506f6acb24c3f9770",
+      "size": 2327,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7265c57e143aae358dfc932506f6acb24c3f9770"
+    },
+    {
+      "path": "rtl-formalize-synthesis/scripts/generate_wrapper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5bfc4440d369c422c0b7f54e4dbf1259e4cd89c",
+      "size": 22395,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c5bfc4440d369c422c0b7f54e4dbf1259e4cd89c"
+    },
+    {
+      "path": "rtl-formalize-synthesis/scripts/prepare_sparkle.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "52561edddb1920d835232a60ece15c87fe7d62c0",
+      "size": 805,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/52561edddb1920d835232a60ece15c87fe7d62c0"
+    },
+    {
+      "path": "rtl-formalize-synthesis/scripts/refresh_verification_manifest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbbaf35eaba12ed048081b30ce3427c72f53282c",
+      "size": 5038,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/bbbaf35eaba12ed048081b30ce3427c72f53282c"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c72586f6e28b618fb764c582ce3b2a330ccc36c0",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/c72586f6e28b618fb764c582ce3b2a330ccc36c0"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e00c3a9a54a23eab775333d55683aa5fdfe6cf81",
+      "size": 247,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e00c3a9a54a23eab775333d55683aa5fdfe6cf81"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "815174a8cfd52f5202c03ea4b9770b9ee72c0bbf",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/815174a8cfd52f5202c03ea4b9770b9ee72c0bbf"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/BackendSemantics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f649470f6a28b41bd733170f77a82a9692cb135",
+      "size": 7438,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/9f649470f6a28b41bd733170f77a82a9692cb135"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/ContractData.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faac184526edbc6fd37a1c656d36ce9bd965d160",
+      "size": 5389,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/faac184526edbc6fd37a1c656d36ce9bd965d160"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/ControllerSignal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49b5b158f99636b33d7d357cd8462ce2b9cefbe1",
+      "size": 8672,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/49b5b158f99636b33d7d357cd8462ce2b9cefbe1"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/DatapathSignal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36a6dc118579753db688f9f88c1dad5d82b35401",
+      "size": 6010,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/36a6dc118579753db688f9f88c1dad5d82b35401"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/Emit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86b479c38bcdca03642e802b62806d5059a81e7e",
+      "size": 756,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/86b479c38bcdca03642e802b62806d5059a81e7e"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/MlpCoreSignal.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0fe2df743fff52445e157a112e545c1c8390e14",
+      "size": 38858,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f0fe2df743fff52445e157a112e545c1c8390e14"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/ProofConfig.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "698c2bce59df228415a5613fe41d464b431b9fac",
+      "size": 872,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/698c2bce59df228415a5613fe41d464b431b9fac"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/Refinement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5089eb88b950dead8454db734072e616a2ab488",
+      "size": 98265,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e5089eb88b950dead8454db734072e616a2ab488"
+    },
+    {
+      "path": "rtl-formalize-synthesis/src/MlpCoreSparkle/Types.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "973b4067b0372a2a56f3ea334769a809d3412500",
+      "size": 3578,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/973b4067b0372a2a56f3ea334769a809d3412500"
+    },
+    {
+      "path": "rtl-formalize-synthesis/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "adce9fac64398df1170945d2f0c075564c230ff6",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/adce9fac64398df1170945d2f0c075564c230ff6"
+    },
+    {
+      "path": "rtl-formalize-synthesis/test/test_generate_wrapper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7243abc882743d711c4263f4883ce0daafef16af",
+      "size": 7881,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7243abc882743d711c4263f4883ce0daafef16af"
+    },
+    {
+      "path": "rtl-hls4ml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "386dc55a2eb4f099a56c9a402f00f05b9a2514b1",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/386dc55a2eb4f099a56c9a402f00f05b9a2514b1"
+    },
+    {
+      "path": "rtl-hls4ml/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "442258cdb5e099780b6b6b7174334f7c534a2572",
+      "size": 2025,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/442258cdb5e099780b6b6b7174334f7c534a2572"
+    },
+    {
+      "path": "rtl-hls4ml/results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "132970af252b265d44552b3ee7905d85ef610a5c",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/132970af252b265d44552b3ee7905d85ef610a5c"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3a15e7bf717062f8d2df0ab18c2952779da23e6",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/d3a15e7bf717062f8d2df0ab18c2952779da23e6"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18658eca5ad6d8131955775c168c70d95bedee6b",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/18658eca5ad6d8131955775c168c70d95bedee6b"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/blueprint/blueprint.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "596adf6d0110fb8b5f74a6e4ec8552b4cf2d2d7a",
+      "size": 340404,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/596adf6d0110fb8b5f74a6e4ec8552b4cf2d2d7a"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/blueprint/mlp_core.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d4d0f7f0d4e3738743b386d05e204407bacbe3d",
+      "size": 230573,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7d4d0f7f0d4e3738743b386d05e204407bacbe3d"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/sv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1726226979c00d0b35810055994eae426a0eb77a",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/1726226979c00d0b35810055994eae426a0eb77a"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/sv/controller.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54980deb284c939ab4d5f9fe3dff1e3bbc61fa1c",
+      "size": 2711,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/54980deb284c939ab4d5f9fe3dff1e3bbc61fa1c"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/sv/mac_unit.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b423023202eaafc9b950432cd641921857d5b9b6",
+      "size": 509,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b423023202eaafc9b950432cd641921857d5b9b6"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/sv/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "625965b48781e7c6715c51d919555bcf234b6eb6",
+      "size": 244,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/625965b48781e7c6715c51d919555bcf234b6eb6"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/sv/mlp_core.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2f749ba9b28beddd0aaf32f00137a90563bc8a0",
+      "size": 8049,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f2f749ba9b28beddd0aaf32f00137a90563bc8a0"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/sv/relu_unit.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2da9e492be57373301ef309abc635e09687bf83",
+      "size": 421,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c2da9e492be57373301ef309abc635e09687bf83"
+    },
+    {
+      "path": "rtl-hls4ml/results/canonical/sv/weight_rom.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80b7100dd5e23e488fb4517b021b40b3010499f2",
+      "size": 2520,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/80b7100dd5e23e488fb4517b021b40b3010499f2"
+    },
+    {
+      "path": "rtl-hls4ml/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "898920f29d2c308dab87e1505280c4fb70f19398",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/898920f29d2c308dab87e1505280c4fb70f19398"
+    },
+    {
+      "path": "rtl-hls4ml/runners/blueprint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c18f095d6ae23c69d19ac4f245e13f7ceaa2c5c",
+      "size": 2701,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/1c18f095d6ae23c69d19ac4f245e13f7ceaa2c5c"
+    },
+    {
+      "path": "rtl-hls4ml/runners/emit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2f12934b24e4e8ab3a38a9eafec3d3e90cbe6c7",
+      "size": 2337,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e2f12934b24e4e8ab3a38a9eafec3d3e90cbe6c7"
+    },
+    {
+      "path": "rtl-hls4ml/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70a7bce16e69d358a47e8b9544b8db3a44e57b89",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/70a7bce16e69d358a47e8b9544b8db3a44e57b89"
+    },
+    {
+      "path": "rtl-hls4ml/scripts/generate_wrapper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "988e772e16f73636bbd72a23b4f77483557fb9de",
+      "size": 17485,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/988e772e16f73636bbd72a23b4f77483557fb9de"
+    },
+    {
+      "path": "rtl-hls4ml/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8067f1835434cc95aa129f1525d7cab2f2c2bf5b",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/8067f1835434cc95aa129f1525d7cab2f2c2bf5b"
+    },
+    {
+      "path": "rtl-hls4ml/src/generate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e6331dda8065adb0948fadd0f76950f2105aa35",
+      "size": 3502,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/0e6331dda8065adb0948fadd0f76950f2105aa35"
+    },
+    {
+      "path": "rtl-synthesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8df213ba20e0b2cde5903d479a6ce2e8ec7fd57b",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/8df213ba20e0b2cde5903d479a6ce2e8ec7fd57b"
+    },
+    {
+      "path": "rtl-synthesis/controller",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4194288b3e65f55487dbca3a61e554ff2f2ab20",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/c4194288b3e65f55487dbca3a61e554ff2f2ab20"
+    },
+    {
+      "path": "rtl-synthesis/controller/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1409cb4a2190bb41aa1cf31aca6fdab3f976598",
+      "size": 3812,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e1409cb4a2190bb41aa1cf31aca6fdab3f976598"
+    },
+    {
+      "path": "rtl-synthesis/controller/controller.tlsf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47a81547a5497fbe968d85b44a46eff28e5e632b",
+      "size": 17913,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/47a81547a5497fbe968d85b44a46eff28e5e632b"
+    },
+    {
+      "path": "rtl-synthesis/controller/formal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0884d2dc5cddeeb6ac20f353fd736f803b1f67f",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/e0884d2dc5cddeeb6ac20f353fd736f803b1f67f"
+    },
+    {
+      "path": "rtl-synthesis/controller/formal/formal_closed_loop_mlp_core_equivalence.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99509671a8119f90c4d570a82834fe76659933a2",
+      "size": 1437,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/99509671a8119f90c4d570a82834fe76659933a2"
+    },
+    {
+      "path": "rtl-synthesis/controller/formal/formal_controller_spot_equivalence.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88caf95bad876cd5b4c8f8fdb1dbf642b91dedbe",
+      "size": 10936,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/88caf95bad876cd5b4c8f8fdb1dbf642b91dedbe"
+    },
+    {
+      "path": "rtl-synthesis/controller/run_flow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "246b3dffa7bc49b7d55723af6e472e9a65da4ddd",
+      "size": 38982,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/246b3dffa7bc49b7d55723af6e472e9a65da4ddd"
+    },
+    {
+      "path": "rtl-synthesis/results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96791d8ad47beb5411fe89d58247e8e610a6942e",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/96791d8ad47beb5411fe89d58247e8e610a6942e"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae83b1b4e7fd874f2eccab7c2e5238ecf6a0dbc5",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/ae83b1b4e7fd874f2eccab7c2e5238ecf6a0dbc5"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f628bd928e5d0714955e36b73aa2843a1d8fab2",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/7f628bd928e5d0714955e36b73aa2843a1d8fab2"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/blueprint/blueprint.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b756d4a52bfa181f53eedf4598fed3e53de7a7ee",
+      "size": 374133,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b756d4a52bfa181f53eedf4598fed3e53de7a7ee"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/blueprint/controller.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40d9bb3bccd02e642b03e180566c4df9a38acaa5",
+      "size": 12500,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/40d9bb3bccd02e642b03e180566c4df9a38acaa5"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/blueprint/controller_spot_core.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73fb66ce3be1580642e474800095d2b9441625d5",
+      "size": 38737,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/73fb66ce3be1580642e474800095d2b9441625d5"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/blueprint/mac_unit.svg",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "d6eb59d7b53bb2dd3f92a8384d30570a211f5543",
+      "size": 56,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/d6eb59d7b53bb2dd3f92a8384d30570a211f5543"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/blueprint/mlp_core.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a3ada6043174e487ea31cb2581df8fdca04608",
+      "size": 233048,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e0a3ada6043174e487ea31cb2581df8fdca04608"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/blueprint/relu_unit.svg",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "8704ba88aaa596864e6050324ad8e65ef9f94a22",
+      "size": 57,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8704ba88aaa596864e6050324ad8e65ef9f94a22"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/blueprint/weight_rom.svg",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "215bb7d54fa5e5107b6d683b2a2f925100167ab5",
+      "size": 58,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/215bb7d54fa5e5107b6d683b2a2f925100167ab5"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/sv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da085660a32c212109a54b0f26dcbd47b85ffc7d",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/da085660a32c212109a54b0f26dcbd47b85ffc7d"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/sv/controller.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20cae79c74d9ba60a910299358546d2b6059a4ed",
+      "size": 1181,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/20cae79c74d9ba60a910299358546d2b6059a4ed"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/sv/controller_spot_compat.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa71c564b558b3d93389ffad18e90231fa8ae56a",
+      "size": 5978,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/aa71c564b558b3d93389ffad18e90231fa8ae56a"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/sv/controller_spot_core.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc54c70fd307b17d71eb0a612e46cc162f0c1a8f",
+      "size": 3504,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/cc54c70fd307b17d71eb0a612e46cc162f0c1a8f"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/sv/mac_unit.sv",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "29db415f24a0fcd9ff926862d19ac8253b132a69",
+      "size": 48,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/29db415f24a0fcd9ff926862d19ac8253b132a69"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/sv/mlp_core.sv",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "83df3b281f8c54cc55c62ec89d791cc83ad4b074",
+      "size": 48,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/83df3b281f8c54cc55c62ec89d791cc83ad4b074"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/sv/relu_unit.sv",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "b7ddab3aa252087459511d89a28e5bea0e34bfd4",
+      "size": 49,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b7ddab3aa252087459511d89a28e5bea0e34bfd4"
+    },
+    {
+      "path": "rtl-synthesis/results/canonical/sv/weight_rom.sv",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "598a729ea0e9cec7fb44c0d2a0faf9f4ef019b84",
+      "size": 50,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/598a729ea0e9cec7fb44c0d2a0faf9f4ef019b84"
+    },
+    {
+      "path": "rtl-synthesis/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35ecd14da531f74464b4b394306cd9ce0c04c8e8",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/35ecd14da531f74464b4b394306cd9ce0c04c8e8"
+    },
+    {
+      "path": "rtl-synthesis/runners/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc11487b4897e70d7c2fabe5cc4b07bd06764ec0",
+      "size": 47,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/cc11487b4897e70d7c2fabe5cc4b07bd06764ec0"
+    },
+    {
+      "path": "rtl-synthesis/runners/blueprint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd718b4203e20f3c2c736aedc81fb471e7b25917",
+      "size": 3938,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/dd718b4203e20f3c2c736aedc81fb471e7b25917"
+    },
+    {
+      "path": "rtl-synthesis/runners/spot_flow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "598780a3a58ab034d0449dbd07af60d3693a9457",
+      "size": 543,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/598780a3a58ab034d0449dbd07af60d3693a9457"
+    },
+    {
+      "path": "rtl-synthesis/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "623b8089ae5e06c497ceff0b972f91b066fc2b3f",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/623b8089ae5e06c497ceff0b972f91b066fc2b3f"
+    },
+    {
+      "path": "rtl-synthesis/test/test_rtl_synthesis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bc2b6fda4d888e15f3955389954ae0f39c79a66",
+      "size": 53492,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/2bc2b6fda4d888e15f3955389954ae0f39c79a66"
+    },
+    {
+      "path": "rtl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a2560d960c001d7ab8938800b6356efd9505b97",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/1a2560d960c001d7ab8938800b6356efd9505b97"
+    },
+    {
+      "path": "rtl/results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eeab11d402db2c816363659b11c0a2167cef02bc",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/eeab11d402db2c816363659b11c0a2167cef02bc"
+    },
+    {
+      "path": "rtl/results/canonical",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "65261134823b479eaa3f75805821b473d5cfb592",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/65261134823b479eaa3f75805821b473d5cfb592"
+    },
+    {
+      "path": "rtl/results/canonical/blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c4c3a47b314f2636e520b082dc237e257a999dc",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/7c4c3a47b314f2636e520b082dc237e257a999dc"
+    },
+    {
+      "path": "rtl/results/canonical/blueprint/blueprint.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d93c3d21c95c54f19cdb15d5f8860070adf846b",
+      "size": 327823,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/6d93c3d21c95c54f19cdb15d5f8860070adf846b"
+    },
+    {
+      "path": "rtl/results/canonical/blueprint/controller.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d326a4970f4c7c0bb6e0baca7141cfb0cbeaf753",
+      "size": 50108,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/d326a4970f4c7c0bb6e0baca7141cfb0cbeaf753"
+    },
+    {
+      "path": "rtl/results/canonical/blueprint/mac_unit.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a97e8c703022b986df7cf244993982feb3a0276e",
+      "size": 10227,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a97e8c703022b986df7cf244993982feb3a0276e"
+    },
+    {
+      "path": "rtl/results/canonical/blueprint/mlp_core.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4071048c2eefe28b7a5b84b8787c95a42d99aabe",
+      "size": 232658,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/4071048c2eefe28b7a5b84b8787c95a42d99aabe"
+    },
+    {
+      "path": "rtl/results/canonical/blueprint/relu_unit.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c74d0ad56c7f5cb885c5bfb05a1ed0ce166c3f51",
+      "size": 5410,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c74d0ad56c7f5cb885c5bfb05a1ed0ce166c3f51"
+    },
+    {
+      "path": "rtl/results/canonical/blueprint/weight_rom.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01c44ebaa05b44be450e425c8618c0b2d157eb51",
+      "size": 35232,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/01c44ebaa05b44be450e425c8618c0b2d157eb51"
+    },
+    {
+      "path": "rtl/results/canonical/sv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23a7f3e73afde6dab93a5705300fee4c85d49cbc",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/23a7f3e73afde6dab93a5705300fee4c85d49cbc"
+    },
+    {
+      "path": "rtl/results/canonical/sv/controller.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0746e86231238cba4376d5f027bcb381bcf1dab3",
+      "size": 2611,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/0746e86231238cba4376d5f027bcb381bcf1dab3"
+    },
+    {
+      "path": "rtl/results/canonical/sv/mac_unit.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "198fae7cda8a36625144bb363cc0492c28ce1044",
+      "size": 562,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/198fae7cda8a36625144bb363cc0492c28ce1044"
+    },
+    {
+      "path": "rtl/results/canonical/sv/mlp_core.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6d83fe9e8412600fc88d86d403bb56e470679ce",
+      "size": 7992,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e6d83fe9e8412600fc88d86d403bb56e470679ce"
+    },
+    {
+      "path": "rtl/results/canonical/sv/relu_unit.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54528e126464985a1a344a5728ce7584288a0aa5",
+      "size": 351,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/54528e126464985a1a344a5728ce7584288a0aa5"
+    },
+    {
+      "path": "rtl/results/canonical/sv/weight_rom.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "996cdbb1ecc292325b681484fa192067d66f06d7",
+      "size": 2403,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/996cdbb1ecc292325b681484fa192067d66f06d7"
+    },
+    {
+      "path": "rtl/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f484d6bc48989e001bd016fcd401237969b5f1e",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/9f484d6bc48989e001bd016fcd401237969b5f1e"
+    },
+    {
+      "path": "rtl/runners/blueprint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f07a5b098e1d034684e2f4207e937a84987582b",
+      "size": 3648,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7f07a5b098e1d034684e2f4207e937a84987582b"
+    },
+    {
+      "path": "runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67c4b77a779df1b6d670496f7ad31a392bec3d7e",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/67c4b77a779df1b6d670496f7ad31a392bec3d7e"
+    },
+    {
+      "path": "runners/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d48db4f9f85e1752cf424c49ee18a6907c3f160",
+      "size": 35,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/9d48db4f9f85e1752cf424c49ee18a6907c3f160"
+    },
+    {
+      "path": "runners/module_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b33664ed92c018bba0419a011ead4a2eb7613371",
+      "size": 533,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b33664ed92c018bba0419a011ead4a2eb7613371"
+    },
+    {
+      "path": "runners/runtime_artifacts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2c1ccc6f1541a342250c11dcd8a4bd79ad2c4d2",
+      "size": 6063,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b2c1ccc6f1541a342250c11dcd8a4bd79ad2c4d2"
+    },
+    {
+      "path": "runners/sparkle_proof_lane.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14dbbeed8981c7b59ab9bda2e6ed5be07ddb393e",
+      "size": 3083,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/14dbbeed8981c7b59ab9bda2e6ed5be07ddb393e"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e772d47927eab9794d7ff4ab468f6c6b13216c8",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/6e772d47927eab9794d7ff4ab468f6c6b13216c8"
+    },
+    {
+      "path": "scripts/prepare_vendor_tools.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e1786af07e0e334ae74263d7a0a9f69c069d1c3d",
+      "size": 5850,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e1786af07e0e334ae74263d7a0a9f69c069d1c3d"
+    },
+    {
+      "path": "simulations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b45918d76869d97a6cdb64a763698514ab4b57a4",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/b45918d76869d97a6cdb64a763698514ab4b57a4"
+    },
+    {
+      "path": "simulations/rtl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ed4821bc781392f2ca1b869fa7d3e77e7347cc1",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/0ed4821bc781392f2ca1b869fa7d3e77e7347cc1"
+    },
+    {
+      "path": "simulations/rtl/testbench.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb3b86bd8828e11bf3da8189482a1ed7fc9c772e",
+      "size": 13774,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/bb3b86bd8828e11bf3da8189482a1ed7fc9c772e"
+    },
+    {
+      "path": "simulations/rtl/testbench_internal.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fce419bd94a59e35c6b61bf49af1fe84d36aa2f1",
+      "size": 22256,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/fce419bd94a59e35c6b61bf49af1fe84d36aa2f1"
+    },
+    {
+      "path": "simulations/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e1d66b5450ff7aa48cdd7bcd7b1d6af4234594d",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/2e1d66b5450ff7aa48cdd7bcd7b1d6af4234594d"
+    },
+    {
+      "path": "simulations/runners/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03059f2028a3f2505c1cccd845da125c46c07d27",
+      "size": 44,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/03059f2028a3f2505c1cccd845da125c46c07d27"
+    },
+    {
+      "path": "simulations/runners/run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c19904811aadfe189c13d21a614588f3bb53e3e4",
+      "size": 19320,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c19904811aadfe189c13d21a614588f3bb53e3e4"
+    },
+    {
+      "path": "simulations/shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76af7e1fe76a7ad3a02a57664d78787d590e1dfb",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/76af7e1fe76a7ad3a02a57664d78787d590e1dfb"
+    },
+    {
+      "path": "simulations/shared/test_vectors.mem",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48f3426c8a191c969ea184f6e41a73b71379cf34",
+      "size": 684,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/48f3426c8a191c969ea184f6e41a73b71379cf34"
+    },
+    {
+      "path": "simulations/shared/test_vectors_meta.svh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11c9dd661d704de6614614381b4aaa12aad8da8a",
+      "size": 88,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/11c9dd661d704de6614614381b4aaa12aad8da8a"
+    },
+    {
+      "path": "simulations/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1bdb457d817fae1ca534f6fbdf69cda1e724a07c",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/1bdb457d817fae1ca534f6fbdf69cda1e724a07c"
+    },
+    {
+      "path": "simulations/test/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d4fd1f858cdffd886380cfc8f18c281519ada0a",
+      "size": 31,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/9d4fd1f858cdffd886380cfc8f18c281519ada0a"
+    },
+    {
+      "path": "simulations/test/test_run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b19118cba6b90a78b8bdc7f38369ed68687a7448",
+      "size": 13454,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b19118cba6b90a78b8bdc7f38369ed68687a7448"
+    },
+    {
+      "path": "smt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e11c14f39434456da22c5b4fd04aa3946f285f8",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/4e11c14f39434456da22c5b4fd04aa3946f285f8"
+    },
+    {
+      "path": "smt/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24046dc3ca80b570455802480b62d987b99b0c70",
+      "size": 3254,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/24046dc3ca80b570455802480b62d987b99b0c70"
+    },
+    {
+      "path": "smt/contract",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "768117fde3c650791243d18972db2b5a34018d16",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/768117fde3c650791243d18972db2b5a34018d16"
+    },
+    {
+      "path": "smt/contract/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e7670a91b83f03cef9f33f84d1f4f234094c964",
+      "size": 1817,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8e7670a91b83f03cef9f33f84d1f4f234094c964"
+    },
+    {
+      "path": "smt/contract/common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1856cd979ae8a63a5ca4b594e07e6d0476236d13",
+      "size": 17340,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/1856cd979ae8a63a5ca4b594e07e6d0476236d13"
+    },
+    {
+      "path": "smt/contract/equivalence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f8ec507194d60b1d580db36be6976fd775bc23d",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/7f8ec507194d60b1d580db36be6976fd775bc23d"
+    },
+    {
+      "path": "smt/contract/equivalence/check_equivalence.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a00453e86a2b2ff4a93b8a800d146800c76162f",
+      "size": 13576,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/0a00453e86a2b2ff4a93b8a800d146800c76162f"
+    },
+    {
+      "path": "smt/contract/export_assumptions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "642f15e5de9b1b418a3efb0fd33d850ae42db029",
+      "size": 4608,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/642f15e5de9b1b418a3efb0fd33d850ae42db029"
+    },
+    {
+      "path": "smt/contract/overflow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f1f4aae3ff8e428c6d0d0290a8b874682b274b3",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/4f1f4aae3ff8e428c6d0d0290a8b874682b274b3"
+    },
+    {
+      "path": "smt/contract/overflow/check_bounds.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93c239248f4ceefd039f6e2f1e89144173188265",
+      "size": 17391,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/93c239248f4ceefd039f6e2f1e89144173188265"
+    },
+    {
+      "path": "smt/rtl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ee4feaeb9014b6a92fc67daed83e65176d9b611",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/5ee4feaeb9014b6a92fc67daed83e65176d9b611"
+    },
+    {
+      "path": "smt/rtl/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19f0ad1247ba0f591afd9aac28c7c4110caa1048",
+      "size": 3056,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/19f0ad1247ba0f591afd9aac28c7c4110caa1048"
+    },
+    {
+      "path": "smt/rtl/check_control.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cf8290c6f42afe58345f3d3da718a3fa3176fd4",
+      "size": 21794,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8cf8290c6f42afe58345f3d3da718a3fa3176fd4"
+    },
+    {
+      "path": "smt/rtl/controller",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e566fc8a0a0cb576cbecfe4c777a32ccf6a87b12",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/e566fc8a0a0cb576cbecfe4c777a32ccf6a87b12"
+    },
+    {
+      "path": "smt/rtl/controller/formal_controller_interface.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c29bd4a1855dc160dc43e9597d61107321997e5",
+      "size": 3902,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8c29bd4a1855dc160dc43e9597d61107321997e5"
+    },
+    {
+      "path": "smt/rtl/mlp_core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39bd4ac7e7740bf5176593cbef9804d25b6040be",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/39bd4ac7e7740bf5176593cbef9804d25b6040be"
+    },
+    {
+      "path": "smt/rtl/mlp_core/formal_mlp_core_boundaries.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7da37b31b2807c850523ff08d353d3b8c9cc6740",
+      "size": 4626,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7da37b31b2807c850523ff08d353d3b8c9cc6740"
+    },
+    {
+      "path": "smt/rtl/mlp_core/formal_mlp_core_latency.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df8dd0fea78213a9f1eaff4be68657d8d1ba3c90",
+      "size": 2916,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/df8dd0fea78213a9f1eaff4be68657d8d1ba3c90"
+    },
+    {
+      "path": "smt/rtl/mlp_core/formal_mlp_core_range_safety.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9a89262a6d544846edf60a446aec7b1c7fd909f",
+      "size": 4435,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a9a89262a6d544846edf60a446aec7b1c7fd909f"
+    },
+    {
+      "path": "smt/rtl/mlp_core/formal_mlp_core_transaction_capture.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaead909fd2e5e10e8d7eff15e28263e50d7746a",
+      "size": 3962,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/aaead909fd2e5e10e8d7eff15e28263e50d7746a"
+    },
+    {
+      "path": "smt/rtl/mlp_core/formal_sparkle_wrapper_equivalence.sv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a932892478d158a5905e3fdce6c47c53c065b2e",
+      "size": 4340,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7a932892478d158a5905e3fdce6c47c53c065b2e"
+    },
+    {
+      "path": "smt/runners",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9405c1cceb932147fd569cd2a5d40de20df52852",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/9405c1cceb932147fd569cd2a5d40de20df52852"
+    },
+    {
+      "path": "smt/runners/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd63c23100c8427cdd570cdef7f41172ded6eb02",
+      "size": 37,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/bd63c23100c8427cdd570cdef7f41172ded6eb02"
+    },
+    {
+      "path": "smt/runners/all.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99539a358008dd697aac64e364e1eed5cc50e757",
+      "size": 2916,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/99539a358008dd697aac64e364e1eed5cc50e757"
+    },
+    {
+      "path": "smt/runners/contract_assumptions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee832b50182c33c14de8deccb53f9e9766ea7464",
+      "size": 446,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ee832b50182c33c14de8deccb53f9e9766ea7464"
+    },
+    {
+      "path": "smt/runners/contract_equivalence.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8805df6c366c02236ea557cf1177f34d4008d80",
+      "size": 457,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b8805df6c366c02236ea557cf1177f34d4008d80"
+    },
+    {
+      "path": "smt/runners/contract_overflow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1736f7e903308d142c5d4f08a11e69d5582aa459",
+      "size": 443,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/1736f7e903308d142c5d4f08a11e69d5582aa459"
+    },
+    {
+      "path": "smt/runners/rtl.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f375caadf579f5f75099888596d1f98b1a6fddf",
+      "size": 420,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/6f375caadf579f5f75099888596d1f98b1a6fddf"
+    },
+    {
+      "path": "smt/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "56c2915eebac7004fe945b14a4dd06106f475cf4",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/56c2915eebac7004fe945b14a4dd06106f475cf4"
+    },
+    {
+      "path": "smt/test/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f61732f2e38fa158b8f2529b391d1689126dc271",
+      "size": 71,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f61732f2e38fa158b8f2529b391d1689126dc271"
+    },
+    {
+      "path": "smt/test/test_smt_flow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b56fa1ab0c69fa4d6a15a1a47410b034ec93194",
+      "size": 6433,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/1b56fa1ab0c69fa4d6a15a1a47410b034ec93194"
+    },
+    {
+      "path": "specs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e744c4b1e6bb3dab05804db4208799deaa91a86a",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/e744c4b1e6bb3dab05804db4208799deaa91a86a"
+    },
+    {
+      "path": "specs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bfdecefb405e25c3f626dd00b47043f91a92415",
+      "size": 8272,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/3bfdecefb405e25c3f626dd00b47043f91a92415"
+    },
+    {
+      "path": "specs/ann",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bc0803068ccf5075b34668883e3cb313c9d98b43",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/bc0803068ccf5075b34668883e3cb313c9d98b43"
+    },
+    {
+      "path": "specs/ann/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25fe7bbfd03ca880e0ca524172aa546caebc0232",
+      "size": 4760,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/25fe7bbfd03ca880e0ca524172aa546caebc0232"
+    },
+    {
+      "path": "specs/ann/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0cb04764b25c51563c9fde9e0e91af916e48762",
+      "size": 6346,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/a0cb04764b25c51563c9fde9e0e91af916e48762"
+    },
+    {
+      "path": "specs/asic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c0ffb7f1d5e6eb12b627e9abb56bac90bdfb455",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/6c0ffb7f1d5e6eb12b627e9abb56bac90bdfb455"
+    },
+    {
+      "path": "specs/asic/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "623c2d4793dfb5b34ad70e7c5b385cba16fd3265",
+      "size": 1499,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/623c2d4793dfb5b34ad70e7c5b385cba16fd3265"
+    },
+    {
+      "path": "specs/asic/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25e635445ce7a5087bf7b5413583d52f984f3e72",
+      "size": 1526,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/25e635445ce7a5087bf7b5413583d52f984f3e72"
+    },
+    {
+      "path": "specs/contract",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64b0a7e984bf631960a9b3be3ce036f1ab8f22cd",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/64b0a7e984bf631960a9b3be3ce036f1ab8f22cd"
+    },
+    {
+      "path": "specs/contract/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2a0dfadc161b351d099466278fcbb558a9bd35e",
+      "size": 4184,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/c2a0dfadc161b351d099466278fcbb558a9bd35e"
+    },
+    {
+      "path": "specs/contract/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "819de6697bc84a069205b9b8d64787604a3e2dd4",
+      "size": 5032,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/819de6697bc84a069205b9b8d64787604a3e2dd4"
+    },
+    {
+      "path": "specs/experiments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10428d2e0ebf59467dc5fd5d79542482c2e0257f",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/10428d2e0ebf59467dc5fd5d79542482c2e0257f"
+    },
+    {
+      "path": "specs/experiments/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bee552c6584e8926ab99f26fb64abc0168207452",
+      "size": 9707,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/bee552c6584e8926ab99f26fb64abc0168207452"
+    },
+    {
+      "path": "specs/experiments/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f18b4cf81db4a109173c1427089910a32f8192e9",
+      "size": 8428,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f18b4cf81db4a109173c1427089910a32f8192e9"
+    },
+    {
+      "path": "specs/formalize-smt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07c97ee69976678cefb0484ce91b21cf8b0cbbee",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/07c97ee69976678cefb0484ce91b21cf8b0cbbee"
+    },
+    {
+      "path": "specs/formalize-smt/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68db3fb2442bea4b6525f474796dca5a7fc05879",
+      "size": 6659,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/68db3fb2442bea4b6525f474796dca5a7fc05879"
+    },
+    {
+      "path": "specs/formalize-smt/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67b4e51937e0590735092fd7e32c0dcaa0008f3e",
+      "size": 7372,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/67b4e51937e0590735092fd7e32c0dcaa0008f3e"
+    },
+    {
+      "path": "specs/formalize",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bebfd2c17d0cbc98b05121ac069d4a26d10e6cfe",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/bebfd2c17d0cbc98b05121ac069d4a26d10e6cfe"
+    },
+    {
+      "path": "specs/formalize/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d802cf5ad94440c450fc6fd1e264562626788cf",
+      "size": 16900,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/7d802cf5ad94440c450fc6fd1e264562626788cf"
+    },
+    {
+      "path": "specs/formalize/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f93642826b03491ee4d810ea814fe0f1e211a351",
+      "size": 17132,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/f93642826b03491ee4d810ea814fe0f1e211a351"
+    },
+    {
+      "path": "specs/formalize/research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8bd2e09aae27d0e28aa5f79ba8f407e9def02783",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/8bd2e09aae27d0e28aa5f79ba8f407e9def02783"
+    },
+    {
+      "path": "specs/formalize/research/lean-temopral-logic.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9efd8bd6c2521f8287f78aaf2c2c7445c3478656",
+      "size": 7209,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/9efd8bd6c2521f8287f78aaf2c2c7445c3478656"
+    },
+    {
+      "path": "specs/rtl-formalize-synthesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b9bcc40d32fff8b776673954ff90d1a92638228b",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/b9bcc40d32fff8b776673954ff90d1a92638228b"
+    },
+    {
+      "path": "specs/rtl-formalize-synthesis/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "393bd846932f143abfab6ca3132881608beb3e29",
+      "size": 16157,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/393bd846932f143abfab6ca3132881608beb3e29"
+    },
+    {
+      "path": "specs/rtl-formalize-synthesis/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09d61e39dfcf096ffef9bf13fe0b9acb8c4a541f",
+      "size": 18251,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/09d61e39dfcf096ffef9bf13fe0b9acb8c4a541f"
+    },
+    {
+      "path": "specs/rtl-hls4ml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "afd25a2f43391ba27c2a62251be809c381529d4c",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/afd25a2f43391ba27c2a62251be809c381529d4c"
+    },
+    {
+      "path": "specs/rtl-hls4ml/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55b9fac89f0e84b9f0ace0dfd48e9c54a7cf5997",
+      "size": 4449,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/55b9fac89f0e84b9f0ace0dfd48e9c54a7cf5997"
+    },
+    {
+      "path": "specs/rtl-hls4ml/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb40a18d943c59f2bb737f6129f16c2d9b2a6eb9",
+      "size": 5709,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/bb40a18d943c59f2bb737f6129f16c2d9b2a6eb9"
+    },
+    {
+      "path": "specs/rtl-synthesis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "87f403ed7801b1f3faa7c9aa8cfdcf7552d7b800",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/87f403ed7801b1f3faa7c9aa8cfdcf7552d7b800"
+    },
+    {
+      "path": "specs/rtl-synthesis/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e70f85708881c9074e77daff4f64a98351e2dabc",
+      "size": 16558,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/e70f85708881c9074e77daff4f64a98351e2dabc"
+    },
+    {
+      "path": "specs/rtl-synthesis/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "946ca3dc65a7e881f0aa30008357e0937ac26c63",
+      "size": 17287,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/946ca3dc65a7e881f0aa30008357e0937ac26c63"
+    },
+    {
+      "path": "specs/rtl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ca91222ca0e20301855d6213352c85401ad4406",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/2ca91222ca0e20301855d6213352c85401ad4406"
+    },
+    {
+      "path": "specs/rtl/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97d43e39f506aa9f09223125a76dd09fa6b84c5f",
+      "size": 10193,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/97d43e39f506aa9f09223125a76dd09fa6b84c5f"
+    },
+    {
+      "path": "specs/rtl/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56ad3db82708140bd6f63d57354965f7f67a2d21",
+      "size": 10639,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/56ad3db82708140bd6f63d57354965f7f67a2d21"
+    },
+    {
+      "path": "specs/rtl/research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a49a98e2011dfe2249c7938303bbc03b64725a05",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/a49a98e2011dfe2249c7938303bbc03b64725a05"
+    },
+    {
+      "path": "specs/rtl/research/design-doc-for-rtl.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9fa04809ba7fdddad767c205d31caa183a22829",
+      "size": 3658,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/d9fa04809ba7fdddad767c205d31caa183a22829"
+    },
+    {
+      "path": "specs/rtl/research/rtl-verification.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd79870e93d9be948bb284589237ea0cca1cff34",
+      "size": 9640,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/cd79870e93d9be948bb284589237ea0cca1cff34"
+    },
+    {
+      "path": "specs/rtl/research/tools.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad227048b376364c7367dfbdcede4f4d103906a4",
+      "size": 16033,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/ad227048b376364c7367dfbdcede4f4d103906a4"
+    },
+    {
+      "path": "specs/simulations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "310fc7b5c9bc92b631e238832a16cf106b673323",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/310fc7b5c9bc92b631e238832a16cf106b673323"
+    },
+    {
+      "path": "specs/simulations/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0ce2b4547b5accdb45292ebdcbc577ed415c973",
+      "size": 8598,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b0ce2b4547b5accdb45292ebdcbc577ed415c973"
+    },
+    {
+      "path": "specs/simulations/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "213310a7bff34da246e83832b93f2ebe5d0019d3",
+      "size": 7799,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/213310a7bff34da246e83832b93f2ebe5d0019d3"
+    },
+    {
+      "path": "specs/smt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "79c1c689b9c6450c5793ca5e039fdd83af1a4698",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/79c1c689b9c6450c5793ca5e039fdd83af1a4698"
+    },
+    {
+      "path": "specs/smt/design.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b863bbe24d5979718f866a00bdb54d9437f1bd78",
+      "size": 7129,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/b863bbe24d5979718f866a00bdb54d9437f1bd78"
+    },
+    {
+      "path": "specs/smt/requirement.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96fdf17220b6dca7ccee06811ebe516eb8a18dff",
+      "size": 8188,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/96fdf17220b6dca7ccee06811ebe516eb8a18dff"
+    },
+    {
+      "path": "specs/smt/research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aed7322d50c1931a8722a2a25057f2036465b21f",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/aed7322d50c1931a8722a2a25057f2036465b21f"
+    },
+    {
+      "path": "specs/smt/research/tools.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae7f3aacceeceaa5722a5cb05502c068f74399e",
+      "size": 13873,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/eae7f3aacceeceaa5722a5cb05502c068f74399e"
+    },
+    {
+      "path": "vendor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bfad2b3f8e483b6b173d8aaff19597e84626f15",
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/trees/5bfad2b3f8e483b6b173d8aaff19597e84626f15"
+    },
+    {
+      "path": "vendor/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1,
+      "url": "https://api.github.com/repos/dfdgsdfg/ann-rtl-lean-poc/git/blobs/8b137891791fe96927ad78e64b0aad7bded08bdc"
+    }
+  ],
+  "truncated": false
+}

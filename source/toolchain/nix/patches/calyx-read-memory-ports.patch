@@ -1,0 +1,13 @@
+--- a/SCFToCalyx.cpp
++++ b/SCFToCalyx.cpp
+@@ -829,6 +829,10 @@
+                             memoryInterface.contentEn(), oneI1);
+     calyx::AssignOp::create(rewriter, loadOp.getLoc(),
+                             memoryInterface.writeEn(), zeroI1);
++    auto zeroData = calyx::createConstant(loadOp.getLoc(), rewriter, getComponent(),
++        memoryInterface.writeData().getType().getIntOrFloatBitWidth(), 0);
++    calyx::AssignOp::create(rewriter, loadOp.getLoc(),
++                            memoryInterface.writeData(), zeroData);
+     regWriteEn = memoryInterface.done();
+     if (calyx::noStoresToMemory(memref) &&
+         calyx::singleLoadFromMemory(memref)) {

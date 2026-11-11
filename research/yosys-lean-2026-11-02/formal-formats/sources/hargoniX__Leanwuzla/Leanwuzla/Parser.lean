@@ -1,0 +1,658 @@
+import Leanwuzla.Auxiliary
+import Leanwuzla.Sexp
+
+open Lean
+
+structure Parser.State where
+  /-- Current de Bruijn level. -/
+  level : Nat := 0
+  /-- A mapping from variable names to their corresponding type and de Bruijn
+      level (not index). So, the variables are indexed from the bottom of the
+      stack rather than from the top (i.e., the order in which the symbols are
+      introduced in the SMT-LIB file). To compute the de Bruijn index, we
+      subtract the variable's level from the current level. -/
+  bvars : Std.HashMap Name (Expr × Nat) := {}
+  /-- A mapping from user-defined types (i.e., aliases) to their corresponding
+      canonical types. We need this mapping to provide correct type-class
+      instances for user-defined types. -/
+  uvars : Std.HashMap Name Expr := {}
+deriving Repr
+
+abbrev ParserM := StateT Parser.State (Except MessageData)
+
+namespace Parser
+
+private def mkBool : Expr :=
+  .const ``Bool []
+
+private def mkBitVec (w : Nat) : Expr :=
+  .app (.const ``BitVec []) (mkNatLit w)
+
+private def getBitVecWidth (α : Expr) : ParserM Nat := do
+  match α with
+  | .app (.const ``BitVec []) w => return w.nat?.get!
+  | _ => throw m!"Error: expected BitVec type, got {α}"
+
+private def mkInstBEqBool : Expr :=
+  mkApp2 (.const ``instBEqOfDecidableEq [0]) mkBool
+         (.const ``instDecidableEqBool [])
+
+private def mkInstBEqBitVec (w : Nat) : Expr :=
+  mkApp2 (.const ``instBEqOfDecidableEq [0]) (mkBitVec w)
+         (.app (.const ``instDecidableEqBitVec []) (mkNatLit w))
+
+private def mkBitVecAppend (w v : Nat) : Expr :=
+  mkApp4 (.const ``HAppend.hAppend [0, 0, 0])
+         (mkBitVec w) (mkBitVec v) (mkBitVec (w + v))
+         (mkApp2 (.const ``BitVec.instHAppendHAddNat []) (mkNatLit w) (mkNatLit v))
+
+private def mkBitVecAnd (w : Nat) : Expr :=
+  mkApp4 (.const ``HAnd.hAnd [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``instHAndOfAndOp [0]) (mkBitVec w)
+                 (.app (.const ``BitVec.instAndOp []) (mkNatLit w)))
+
+private def mkBitVecOr (w : Nat) : Expr :=
+  mkApp4 (.const ``HOr.hOr [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``instHOrOfOrOp [0]) (mkBitVec w)
+                 (.app (.const ``BitVec.instOrOp []) (mkNatLit w)))
+
+private def mkBitVecXor (w : Nat) : Expr :=
+  mkApp4 (.const ``HXor.hXor [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``instHXorOfXorOp [0]) (mkBitVec w)
+                 (.app (.const ``BitVec.instXorOp []) (mkNatLit w)))
+
+private def mkBitVecNot (w : Nat) : Expr :=
+  mkApp2 (.const ``Complement.complement [0])
+         (mkBitVec w)
+         (.app (.const ``BitVec.instComplement []) (mkNatLit w))
+
+private def mkBitVecNeg (w : Nat) : Expr :=
+  mkApp2 (.const ``Neg.neg [0])
+         (mkBitVec w)
+         (.app (.const ``BitVec.instNeg []) (mkNatLit w))
+
+private def mkBitVecAdd (w : Nat) : Expr :=
+  mkApp4 (.const ``HAdd.hAdd [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``instHAdd [0]) (mkBitVec w)
+                 (.app (.const ``BitVec.instAdd []) (mkNatLit w)))
+
+private def mkBitVecSub (w : Nat) : Expr :=
+  mkApp4 (.const ``HSub.hSub [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``instHSub [0]) (mkBitVec w)
+                 (.app (.const ``BitVec.instSub []) (mkNatLit w)))
+
+private def mkBitVecMul (w : Nat) : Expr :=
+  mkApp4 (.const ``HMul.hMul [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``instHMul [0]) (mkBitVec w)
+                 (.app (.const ``BitVec.instMul []) (mkNatLit w)))
+
+private def mkBitVecMod (w : Nat) : Expr :=
+  mkApp4 (.const ``HMod.hMod [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``instHMod [0]) (mkBitVec w)
+                 (.app (.const ``BitVec.instMod []) (mkNatLit w)))
+
+private def mkBitVecShiftLeft (w : Nat) : Expr :=
+  mkApp4 (.const ``HShiftLeft.hShiftLeft [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``BitVec.instHShiftLeft []) (mkNatLit w) (mkNatLit w))
+
+private def mkBitVecShiftRight (w : Nat) : Expr :=
+  mkApp4 (.const ``HShiftRight.hShiftRight [0, 0, 0])
+         (mkBitVec w) (mkBitVec w) (mkBitVec w)
+         (mkApp2 (.const ``BitVec.instHShiftRight []) (mkNatLit w) (mkNatLit w))
+
+def smtSymbolToName (s : String) : Name :=
+  let s := if s.startsWith "|" && s.endsWith "|" then String.Pos.Raw.extract s (s.rawStartPos + '|') (s.rawEndPos - '|') else s
+  -- SMT-LIB symbols are flat (non-hierarchical) strings, so we always build a
+  -- single-component name rather than splitting on `.`. This keeps the exact
+  -- symbol intact -- so it can be printed back faithfully (e.g. in models, see
+  -- `formatSmtSymbol`) -- and avoids conflating distinct symbols that only
+  -- differ in a way `String.toName` normalizes away, such as `a.0` and `a.00`.
+  Name.mkSimple s
+
+/-- Returns two types: the first is the canonical type and the second is the
+    user-provided one (mainly for pretty-printing). -/
+def parseSort (s  : Sexp) : ParserM (Expr × Expr) := do
+  match s with
+  | sexp!{Bool} =>
+    return (mkBool, mkBool)
+  | sexp!{(_ BitVec {w})} =>
+    let w := w.serialize.toNat!
+    return (mkBitVec w, mkBitVec w)
+  | sexp!{({sc} ⦃as⦄)} =>
+    let (bsc, sc) ← parseSort sc
+    let as ← as.mapM parseSort
+    let (bas, as) := as.unzip
+    return (mkAppN bsc bas.toArray, mkAppN sc as.toArray)
+  | .atom n =>
+    let state ← get
+    let n := smtSymbolToName n
+    let some (.sort 1, i) := state.bvars[n]? | throw m!"Error: unexpected sort {s}"
+    let ut := .bvar (state.level - i - 1)
+    let ct := match state.uvars[n]? with
+      | some ct => ct
+      | none    => ut
+    return (ct, ut)
+  | _ => throw m!"Error: unsupported sort {s}"
+
+partial def parseTerm (s : Sexp) : ParserM (Expr × Expr) := do
+  try
+    go s
+  catch e =>
+    throw m!"Error: {e}\nfailed to parse term {s}"
+where
+  go (e : Sexp) : ParserM (Expr × Expr) := do
+    if let sexp!{(let (⦃_⦄) {_})} := e then
+      -- SMT-LIB supports nesting of parallel let expressions. Both can be
+      -- very long. So, we use tail-call recursion to avoid stack overflows.
+      let state ← get
+      let (bindings, b) := getNestedLetBindingsAndBody [] e
+      let bindings ← parseNestedBindings bindings
+      let (tb, b) ← parseTerm b
+      set state
+      let e := bindings.foldr (fun (n, t, v) b => .letE n t v b true) b
+      return (tb, e)
+    if let sexp!{true} := e then
+      return (mkBool, .const ``true [])
+    if let sexp!{false} := e then
+      return (mkBool, .const ``false [])
+    if let sexp!{(not {p})} := e then
+      let (_, p) ← parseTerm p
+      return (mkBool, .app (.const ``not []) p)
+    if let sexp!{(=> ⦃ps⦄)} := e then
+      let ps ← ps.mapM (fun p => return (← parseTerm p).snd)
+      let p := ps.dropLast.foldr (mkApp2 (.const ``implies [])) ps.getLast!
+      return (mkBool, p)
+    if let sexp!{(and ⦃ps⦄)} := e then
+      return ← leftAssocOpBool (.const ``and []) ps
+    if let sexp!{(or ⦃ps⦄)} := e then
+      return ← leftAssocOpBool (.const ``or []) ps
+    if let sexp!{(xor ⦃ps⦄)} := e then
+      return ← leftAssocOpBool (.const ``xor []) ps
+    if let sexp!{(= {x} {y})} := e then
+      let (uα, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let hα ← if uα == mkBool then pure mkInstBEqBool
+        else if uα.isAppOfArity ``BitVec 1 then pure (mkInstBEqBitVec (← getBitVecWidth uα))
+        else throw m!"Error: unsupported type for equality: {uα}"
+      return (mkBool, mkApp4 (.const ``BEq.beq [0]) uα hα x y)
+    if let sexp!{(distinct ⦃xs⦄)} := e then
+      return ← pairwiseDistinct xs
+    if let sexp!{(ite {c} {t} {e})} := e then
+      let (_, c) ← parseTerm c
+      let (α, t) ← parseTerm t
+      let (_, e) ← parseTerm e
+      return (α, mkApp4 (mkConst ``cond [1]) α c t e)
+    if let sexp!{(concat ⦃xs⦄)} := e then
+      let (α, acc) ← parseTerm xs.head!
+      let w ← getBitVecWidth α
+      let f := fun (w, acc) x => do
+        let (β, x) ← parseTerm x
+        let v ← getBitVecWidth β
+        return (w + v, mkApp2 (mkBitVecAppend w v) acc x)
+      let (w, acc) ← xs.tail.foldlM f (w, acc)
+      return (mkBitVec w, acc)
+    if let sexp!{(bvand ⦃xs⦄)} := e then
+      return ← leftAssocOpBitVec mkBitVecAnd xs
+    if let sexp!{(bvor ⦃xs⦄)} := e then
+      return ← leftAssocOpBitVec mkBitVecOr xs
+    if let sexp!{(bvxor ⦃xs⦄)} := e then
+      return ← leftAssocOpBitVec mkBitVecXor xs
+    if let sexp!{(bvnot {x})} := e then
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      return (α, .app (mkBitVecNot w) x)
+    if let sexp!{(bvnand {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.nand []) (mkNatLit w) x y)
+    if let sexp!{(bvnor {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.nor []) (mkNatLit w) x y)
+    if let sexp!{(bvxnor {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.xnor []) (mkNatLit w) x y)
+    if let sexp!{(bvcomp {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBitVec 1, mkApp3 (.const ``BitVec.compare []) (mkNatLit w) x y)
+    if let sexp!{(bvmul ⦃xs⦄)} := e then
+      return ← leftAssocOpBitVec mkBitVecMul xs
+    if let sexp!{(bvadd ⦃xs⦄)} := e then
+      return ← leftAssocOpBitVec mkBitVecAdd xs
+    if let sexp!{(bvsub ⦃xs⦄)} := e then
+      return ← leftAssocOpBitVec mkBitVecSub xs
+    if let sexp!{(bvneg {x})} := e then
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      return (α, .app (mkBitVecNeg w) x)
+    if let sexp!{(bvudiv {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.smtUDiv []) (mkNatLit w) x y)
+    if let sexp!{(bvurem {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp2 (mkBitVecMod w) x y)
+    if let sexp!{(bvsdiv {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.smtSDiv []) (mkNatLit w) x y)
+    if let sexp!{(bvsrem {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.srem []) (mkNatLit w) x y)
+    if let sexp!{(bvsmod {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.smod []) (mkNatLit w) x y)
+    if let sexp!{(bvshl {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp2 (mkBitVecShiftLeft w) x y)
+    if let sexp!{(bvlshr {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp2 (mkBitVecShiftRight w) x y)
+    if let sexp!{(bvashr {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (α, mkApp4 (.const ``BitVec.sshiftRight' []) (mkNatLit w) (mkNatLit w) x y)
+    if let sexp!{(bvult {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.ult []) (mkNatLit w) x y)
+    if let sexp!{(bvule {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.ule []) (mkNatLit w) x y)
+    if let sexp!{(bvugt {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.ugt []) (mkNatLit w) x y)
+    if let sexp!{(bvuge {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.uge []) (mkNatLit w) x y)
+    if let sexp!{(bvslt {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.slt []) (mkNatLit w) x y)
+    if let sexp!{(bvsle {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.sle []) (mkNatLit w) x y)
+    if let sexp!{(bvsgt {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.sgt []) (mkNatLit w) x y)
+    if let sexp!{(bvsge {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.sge []) (mkNatLit w) x y)
+    if let sexp!{((_ extract {i} {j}) {x})} := e then
+      let i := i.serialize.toNat!
+      let j := j.serialize.toNat!
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      let start := j
+      let len := i - j + 1
+      return (mkBitVec (i - j + 1), mkApp4 (.const ``BitVec.extractLsb' []) (mkNatLit w) (mkNatLit start) (mkNatLit len) x)
+    if let sexp!{((_ repeat {i}) {x})} := e then
+      let i := i.serialize.toNat!
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      return (mkBitVec (w * i), mkApp3 (.const ``BitVec.replicate []) (mkNatLit w) (mkNatLit i) x)
+    if let sexp!{((_ zero_extend {i}) {x})} := e then
+      let i := i.serialize.toNat!
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      return (mkBitVec (w + i), mkApp3 (.const ``BitVec.setWidth []) (mkNatLit w) (mkNatLit (w + i)) x)
+    if let sexp!{((_ sign_extend {i}) {x})} := e then
+      let i := i.serialize.toNat!
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      return (mkBitVec (w + i), mkApp3 (.const ``BitVec.signExtend []) (mkNatLit w) (mkNatLit (w + i)) x)
+    if let sexp!{((_ rotate_left {i}) {x})} := e then
+      let i := i.serialize.toNat!
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.rotateLeft []) (mkNatLit w) x (mkNatLit i))
+    if let sexp!{((_ rotate_right {i}) {x})} := e then
+      let i := i.serialize.toNat!
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      return (α, mkApp3 (.const ``BitVec.rotateRight []) (mkNatLit w) x (mkNatLit i))
+    if let sexp!{(bvnego {x})} := e then
+      let (α, x) ← parseTerm x
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp2 (.const ``BitVec.negOverflow []) (mkNatLit w) x)
+    if let sexp!{(bvuaddo {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.uaddOverflow []) (mkNatLit w) x y)
+    if let sexp!{(bvsaddo {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.saddOverflow []) (mkNatLit w) x y)
+    if let sexp!{(bvumulo {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.umulOverflow []) (mkNatLit w) x y)
+    if let sexp!{(bvsmulo {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.smulOverflow []) (mkNatLit w) x y)
+    if let sexp!{(bvusubo {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.usubOverflow []) (mkNatLit w) x y)
+    if let sexp!{(bvssubo {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.ssubOverflow []) (mkNatLit w) x y)
+    if let sexp!{(bvsdivo {x} {y})} := e then
+      let (α, x) ← parseTerm x
+      let (_, y) ← parseTerm y
+      let w ← getBitVecWidth α
+      return (mkBool, mkApp3 (.const ``BitVec.sdivOverflow []) (mkNatLit w) x y)
+    if let some r ← parseVar? e then
+      return r
+    if let some ⟨w, x⟩ := parseBVLiteral? s then
+      return (mkBitVec w, toExpr x)
+    if let sexp!{({f} ⦃as⦄)} := s then
+      let (α, f) ← parseTerm f
+      let as ← as.mapM (fun a => return (← parseTerm a).snd)
+      return (retType α, mkAppN f as.toArray)
+    throw m!"Error: unsupported term {e}"
+  retType : Expr → Expr
+    | .forallE _ _ b _ => retType b
+    | e                => e
+  parseVar? (s : Sexp) : ParserM (Option (Expr × Expr)) := do
+    let .atom n := s | return none
+    let state ← get
+    let n := smtSymbolToName n
+    let some (t, i) := state.bvars[n]? | return none
+    return some (t, .bvar (state.level - i - 1))
+  parseBVLiteral? (s : Sexp) : Option ((w : Nat) × BitVec w) :=
+    match s with
+    | sexp!{(_ {.atom v} {.atom w})} =>
+      if v.startsWith "bv" then
+        let v := v.drop 2
+        let w := w.toNat!
+        let v := v.toNat!
+        some ⟨w, BitVec.ofNat w v⟩
+      else
+        none
+    | sexp!{{.atom s}} =>
+      if s.startsWith "#b" then
+        let w := s.length - 2
+        let s := s.drop 2
+        let v := s.foldl (fun v c => v <<< 1 + (if c == '1' then 1 else 0)) 0
+        some ⟨w, BitVec.ofNat w v⟩
+      else if s.startsWith "#x" then
+        let s := (s.drop 2).copy.toUpper
+        let w := 4 * s.length
+        let f v c :=
+          let d := if c.isDigit then c.toNat - '0'.toNat else c.toNat - 'A'.toNat + 10
+          v <<< 4 + d
+        let v := s.foldl f 0
+        some ⟨w, BitVec.ofNat w v⟩
+      else
+        none
+    | _ =>
+      none
+  leftAssocOpBool (op : Expr) (as : List Sexp) : ParserM (Expr × Expr) := do
+    let as ← as.mapM (fun a => return (← parseTerm a).snd)
+    return (mkBool, as.tail.foldl (mkApp2 op) as.head!)
+  leftAssocOpBitVec (op : Nat → Expr) (as : List Sexp) : ParserM (Expr × Expr) := do
+    let (α, a) ← parseTerm as.head!
+    let op := op (← getBitVecWidth α)
+    -- Do not reparse a!
+    let as ← as.tail.mapM (fun a => return (← parseTerm a).snd)
+    return (α, as.foldl (mkApp2 op) a)
+  pairwiseDistinct (as : List Sexp) : ParserM (Expr × Expr) := do
+    if h : as.length < 2 then
+      throw m!"Error: expected at least two arguments for `distinct`"
+    else
+      let (α, as0) ← parseTerm as[0]
+      let (_, as1) ← parseTerm as[1]
+      let hα ← if α == mkBool
+        then pure mkInstBEqBool
+        else if α.isAppOfArity ``BitVec 1 then pure (mkInstBEqBitVec (← getBitVecWidth α))
+        else throw m!"Error: unsupported type for `distinct`: {α}"
+      let mut acc : Expr := mkApp4 (.const ``bne [0]) α hα as0 as1
+      for hi : i in [2:as.length] do
+        let (_, asi) ← parseTerm as[i]
+        acc := mkApp2 (.const ``and []) acc (mkApp4 (.const ``bne [0]) α hα as0 asi)
+      for hi : i in [1:as.length] do
+        for hj : j in [i + 1:as.length] do
+          let (_, asi) ← parseTerm as[i]
+          let (_, asj) ← parseTerm as[j]
+          acc :=  mkApp2 (.const ``and []) acc (mkApp4 (.const ``bne [0]) α hα asi asj)
+      return (mkBool, acc)
+  parseNestedBindings (bindings : List (List Sexp)) : ParserM (List (Name × Expr × Expr)) := do
+    let bindings ← bindings.mapM parseParallelBindings
+    return bindings.flatten
+  parseParallelBindings (bindings : List Sexp) : ParserM (List (Name × Expr × Expr)) := do
+    -- Note: bindings in a parallel let expression use the same context. In
+    -- particular, variable shadowing only applies after all the bindings are
+    -- parsed.
+    let state ← get
+    let bindings ← bindings.mapM parseBinding
+    let (level, bvars) := bindings.foldl (fun (lvl, bvs) (n, t, _) => (lvl + 1, bvs.insert n (t, lvl))) (state.level, state.bvars)
+    set { state with bvars, level }
+    return bindings
+  parseBinding (binding : Sexp) : ParserM (Name × Expr × Expr) := do
+    match binding with
+    | sexp!{({n} {v})} =>
+      let n := smtSymbolToName n.serialize
+      let (t, v) ← parseTerm v
+      modify fun state => { state with level := state.level + 1 }
+      return (n, t, v)
+    | _ =>
+      throw m!"Error: unsupported binding {binding}"
+  getNestedLetBindingsAndBody (bindings : List (List Sexp)) : Sexp → (List (List Sexp) × Sexp)
+    | sexp!{(let (⦃bs⦄) {b})} => getNestedLetBindingsAndBody (bs :: bindings) b
+    | b => (bindings.reverse, b)
+
+def withTypeDefs (defs : List Sexp) (k : ParserM Expr) : ParserM Expr := do
+  let state ← get
+  let defs ← defs.mapM parseTypeDef
+  let b ← k
+  set state
+  -- Note: We set `nonDep` to `false` for user-defined types to ensure
+  -- type-checking works. Although this could be inefficient, it should be
+  -- acceptable since user-defined types are rare.
+  return defs.foldr (fun (n, t, v) b => .letE n t v b false) b
+where
+  parseTypeDef (defn : Sexp) : ParserM (Name × Expr × Expr) := do
+    match defn with
+    | sexp!{(define-sort {n} (⦃ps⦄) {b})} =>
+      let state ← get
+      let ps ← ps.mapM parseParam
+      let rt := .sort 1
+      let (cb, ub) ← parseSort b
+      let n := smtSymbolToName n.serialize
+      let t := ps.foldr (fun (n, t) b => .forallE n t b .default) rt
+      let bv := ps.foldr (fun (n, t) b => .lam n t b .default) cb
+      let nv := ps.foldr (fun (n, t) b => .lam n t b .default) ub
+      let bvars := state.bvars.insert n (t, state.level)
+      let uvars := state.uvars.insert n bv
+      let level := state.level + 1
+      set { level, bvars, uvars : Parser.State }
+      return (n, t, nv)
+    | _ =>
+      throw m!"Error: unsupported type def {defn}"
+  parseParam (p : Sexp) : ParserM (Name × Expr) := do
+    match p with
+    | .atom n =>
+      let n := smtSymbolToName n
+      let t := .sort 1
+      modify fun state => { level := state.level + 1, bvars := state.bvars.insert n (t, state.level) }
+      return (n, t)
+    | _ =>
+      throw m!"Error: unsupported type param {p}"
+
+def withFunDecls (decls : List Sexp) (k : ParserM Expr) : ParserM Expr := do
+  let state ← get
+  let decls ← decls.mapM parseFunDecl
+  let b ← k
+  set state
+  return decls.foldr (fun (n, t) b => .forallE n t b .default) b
+where
+  parseFunDecl (decl : Sexp) : ParserM (Name × Expr) := do
+    match decl with
+    | sexp!{(declare-fun {n} (⦃ps⦄) {s})} =>
+      let state ← get
+      let ps ← ps.mapM parseParamSort
+      let (crt, urt) ← parseSort s
+      let n := smtSymbolToName n.serialize
+      let (ct, ut) := ps.foldr (fun (ct, ut) (cb, ub) => (.forallE n ct cb .default, .forallE n ut ub .default)) (crt, urt)
+      let bvars := state.bvars.insert n (ct, state.level)
+      let level := state.level + 1
+      set { state with bvars, level }
+      return (n, ut)
+    | _ =>
+      throw m!"Error: unsupported fun decl {decl}"
+  parseParamSort (s : Sexp) : ParserM (Expr × Expr) := do
+    let tp ← parseSort s
+    modify fun state => { state with level := state.level + 1 }
+    return tp
+
+def withFunDefs (defs : List Sexp) (k : ParserM Expr) : ParserM Expr := do
+  let state ← get
+  -- it's common for SMT-LIB queries to be "letified" using define-fun to
+  -- minimize their size. We don't recurse on each definition to avoid stack
+  -- overflows.
+  let defs ← defs.mapM parseFunDef
+  let b ← k
+  set state
+  return defs.foldr (fun (n, t, v) b => .letE n t v b true) b
+where
+  parseFunDef (defn : Sexp) : ParserM (Name × Expr × Expr) := do
+    match defn with
+    | sexp!{(define-fun {n} (⦃ps⦄) {s} {b})} =>
+      let state ← get
+      let ps ← ps.mapM parseParam
+      let (crt, urt) ← parseSort s
+      let (_, b) ← parseTerm b
+      let n := smtSymbolToName n.serialize
+      let (ct, ut) := ps.foldr (fun (n, ct, ut) (cb, ub) => (.forallE n ct cb .default, .forallE n ut ub .default)) (crt, urt)
+      let v := ps.foldr (fun (n, _, t) b => .lam n t b .default) b
+      let bvars := state.bvars.insert n (ct, state.level)
+      let level := state.level + 1
+      set { state with bvars, level }
+      return (n, ut, v)
+    | _ =>
+      throw m!"Error: unsupported fun def {defn}"
+  parseParam (p : Sexp) : ParserM (Name × Expr × Expr) := do
+    match p with
+    | sexp!{({n} {s})} =>
+      let n := smtSymbolToName n.serialize
+      let (ct, ut) ← parseSort s
+      modify fun state => { level := state.level + 1, bvars := state.bvars.insert n (ct, state.level) }
+      return (n, ct, ut)
+    | _ =>
+      throw m!"Error: unsupported fun param {p}"
+
+def parseAssert : Sexp → ParserM Expr
+  | sexp!{(assert {p})} =>
+    return (← parseTerm p).snd
+  | s =>
+    throw m!"Error: unsupported assert {s}"
+
+structure Query where
+  typeDefs : List Sexp := []
+  funDecls : List Sexp := []
+  funDefs : List Sexp := []
+  asserts : List Sexp := []
+  /-- Whether the query contains a `(get-model)` command, in which case a model
+      should be printed when the query is satisfiable. -/
+  getModel : Bool := false
+
+def parseQuery (query : Query) : ParserM Expr := do
+  withTypeDefs query.typeDefs <| withFunDecls query.funDecls <| withFunDefs query.funDefs do
+    let conjs ← query.asserts.mapM parseAssert
+    let p := if h : 0 < conjs.length
+      then conjs.tail.foldl (mkApp2 (.const ``and [])) conjs[0]
+      else .const ``true []
+    return mkApp3 (.const ``Eq [1]) (.const ``Bool []) (.app (.const ``not []) p) (.const ``true [])
+
+def filterCmds (sexps : List Sexp) : Query :=
+  go {} sexps
+where
+  go (query : Query) : List Sexp → Query
+    | sexp!{(define-sort {n} {ps} {b})} :: cmds =>
+      go { query with typeDefs := sexp!{(define-sort {n} {ps} {b})} :: query.typeDefs } cmds
+    | sexp!{(declare-const {n} {s})} :: cmds =>
+      go { query with funDecls := sexp!{(declare-fun {n} () {s})} :: query.funDecls } cmds
+    | sexp!{(declare-fun {n} {ps} {s})} :: cmds =>
+      go { query with funDecls := sexp!{(declare-fun {n} {ps} {s})} :: query.funDecls } cmds
+    | sexp!{(define-const {n} {s} {b})} :: cmds =>
+      go { query with funDefs := sexp!{(define-fun {n} () {s} {b})} :: query.funDefs } cmds
+    | sexp!{(define-fun {n} {ps} {s} {b})} :: cmds =>
+      go { query with funDefs := sexp!{(define-fun {n} {ps} {s} {b})} :: query.funDefs } cmds
+    | sexp!{(assert {p})} :: cmds =>
+      go { query with asserts := sexp!{(assert {p})} :: query.asserts } cmds
+    | sexp!{(get-model)} :: cmds =>
+      go { query with getModel := true } cmds
+    -- TODO: We should parse `(check-sat)` command. We currently return `sat` if
+    -- `(check-sat)` command is missing.
+    | _ :: cmds =>
+      go query cmds
+    | [] =>
+      { typeDefs := query.typeDefs.reverse
+        funDecls := query.funDecls.reverse
+        funDefs := query.funDefs.reverse
+        asserts := query.asserts.reverse
+        getModel := query.getModel }
+
+/-- Parse an SMT-LIB2 query, returning the goal expression together with a flag
+    indicating whether a model should be printed (i.e. whether the query
+    contained a `(get-model)` command). -/
+def parseSmt2Query (query : String) : Except MessageData (Expr × Bool) := do
+  match Sexp.Parser.manySexps!.run query with
+  | Except.error e =>
+    .error s!"{e}"
+  | Except.ok cmds =>
+    let query := filterCmds cmds
+    let e ← (parseQuery query).run' {}
+    return (e, query.getModel)
+
+end Parser

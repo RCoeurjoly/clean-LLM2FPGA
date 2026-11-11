@@ -1,0 +1,1696 @@
+{
+  "upstream_commit": "f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b",
+  "source": "/tmp/torchlean-model-probe/lean-dojo-TorchLean-f37cbc5",
+  "roots": [
+    "NN.Runtime.PyTorch.Export.TorchExport",
+    "NN.Runtime.PyTorch.Import.TorchExport",
+    "NN.Runtime.IR"
+  ],
+  "local_module_count": 208,
+  "external_imports": [
+    "Batteries.Data.Fin.Fold",
+    "Batteries.Data.Vector.Lemmas",
+    "FloatLib.Floats.ExecFloat.Conversion.Core",
+    "FloatLib.Floats.Formats.BinaryInterchange.Algebraic.Rounding.SqrtRuntime",
+    "FloatLib.Floats.Formats.BinaryInterchange.Configured",
+    "FloatLib.Floats.Formats.BinaryInterchange.Configured.Rounding.Runtime",
+    "FloatLib.Floats.Formats.BinaryInterchange.Configured.Transcendentals",
+    "FloatLib.Floats.Formats.BinaryInterchange.Configured.Value.CoreProof",
+    "FloatLib.Floats.Formats.BinaryInterchange.Conversion.Cast.Proof",
+    "FloatLib.Floats.Formats.BinaryInterchange.Conversion.Cast.Runtime",
+    "FloatLib.Floats.Formats.BinaryInterchange.DirectedSemantics.Rational.Conversion",
+    "FloatLib.Floats.Formats.BinaryInterchange.Dyadic.Rational",
+    "FloatLib.Floats.Formats.BinaryInterchange.Format.Catalog",
+    "FloatLib.Floats.Formats.BinaryInterchange.Rounding.Mode",
+    "FloatLib.Floats.Formats.DecimalInterchange.Format",
+    "FloatLib.Floats.Formats.IEEE754.Native",
+    "FloatLib.Floats.Formats.IEEE754.Native.Model",
+    "FloatLib.Floats.Formats.IEEE754.Native.Representation",
+    "FloatLib.Numerics.Capabilities.Elementary",
+    "FloatLib.Numerics.Enclosure.Elementary.BinaryGridProof",
+    "FloatLib.Numerics.Enclosure.Elementary.BinaryGridRuntime",
+    "FloatLib.Numerics.Enclosure.Interval.Hyperbolic",
+    "FloatLib.Numerics.Enclosure.Interval.Real",
+    "Init.Data.BitVec.Lemmas",
+    "Lean.Data.Json.FromToJson.Basic",
+    "Lean.Data.Name",
+    "Lean.Elab.Tactic",
+    "Lean.Exception",
+    "Lean.Meta.MatchUtil",
+    "Lean.Meta.Tactic.SplitIf",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.Multiset.Basic",
+    "Mathlib.Algebra.BigOperators.GroupWithZero.Action",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.BigOperators.Ring.List",
+    "Mathlib.Algebra.CharZero.Defs",
+    "Mathlib.Algebra.Field.Defs",
+    "Mathlib.Algebra.GroupWithZero.Nat",
+    "Mathlib.Algebra.Module.Defs",
+    "Mathlib.Algebra.Order.Field.Basic",
+    "Mathlib.Algebra.Ring.Int.Parity",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Basic.Logic.Basic",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.List.GetD",
+    "Mathlib.Data.List.OfFn",
+    "Mathlib.Data.Matrix.Mul",
+    "Mathlib.Init",
+    "Mathlib.Logic.Equiv.Fin.Basic",
+    "Mathlib.Logic.Function.Basic",
+    "Mathlib.Tactic.Bound.Init",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.NormNum.Inv",
+    "Mathlib.Tactic.NormNum.Pow",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Positivity.Finset",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.Ring.RingNF",
+    "Mathlib.Util.SynthesizeUsing",
+    "ProofWidgets.Component.HtmlDisplay",
+    "Std.Data.String.ToNat"
+  ],
+  "modules": {
+    "NN.API.Arguments": {
+      "sha256": "bff6d57405c343b0ba09bff21d991d1a16605ed4eab4db8f72106de9c14bf37f",
+      "imports": [
+        "NN.Tensor.Pack",
+        "NN.Tensor"
+      ]
+    },
+    "NN.Backend.Types": {
+      "sha256": "94c426ffb4db9409c5fead1689680fa4a2a00ce3ad99412ef0e3084b51309757",
+      "imports": []
+    },
+    "NN.Core.Numeric": {
+      "sha256": "2912b62e84130a893f8ef1806b4fe33ff883fb45b3132cf9e546bced98be4745",
+      "imports": [
+        "FloatLib.Numerics.Capabilities.Elementary",
+        "NN.Core.Numeric.Enclosure"
+      ]
+    },
+    "NN.Core.Numeric.Angle": {
+      "sha256": "622659f067d28d1c33d7fc626c4b0f3c111483b4eb5f85ac67b099cf9f1975c9",
+      "imports": []
+    },
+    "NN.Core.Numeric.Enclosure": {
+      "sha256": "09924b4ea93aa99ee3f6f1c4e33103b9f2f588461c7c92c8e931f720f4d3e3c8",
+      "imports": [
+        "FloatLib.Numerics.Enclosure.Elementary.BinaryGridRuntime",
+        "FloatLib.Numerics.Enclosure.Interval.Hyperbolic",
+        "NN.Core.Numeric.Quotient",
+        "FloatLib.Numerics.Enclosure.Elementary.BinaryGridProof",
+        "FloatLib.Numerics.Enclosure.Interval.Real",
+        "Mathlib.Algebra.Ring.Int.Parity",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+      ]
+    },
+    "NN.Core.Numeric.Quotient": {
+      "sha256": "a6294efdfde037f68003a1a5e53fc41746e6deec1b22cff98b1c48a913ddb37e",
+      "imports": [
+        "FloatLib.Floats.Formats.IEEE754.Native",
+        "FloatLib.Floats.Formats.BinaryInterchange.Configured.Rounding.Runtime",
+        "FloatLib.Floats.Formats.BinaryInterchange.DirectedSemantics.Rational.Conversion"
+      ]
+    },
+    "NN.IR.Binary": {
+      "sha256": "f51c52900b98526f09c2a724e7f3dcacc6a8102d0efe396e52dd7aa24c934836",
+      "imports": [
+        "NN.IR.Interpreter",
+        "NN.Spec.Core.FloatInstances",
+        "FloatLib.Floats.Formats.BinaryInterchange.Conversion.Cast.Runtime"
+      ]
+    },
+    "NN.IR.BinaryProofs": {
+      "sha256": "296e8fd800e3275dfe67b91212db30519036e90964b5f05280b0cd9d28a63c12",
+      "imports": [
+        "NN.IR.Binary",
+        "FloatLib.Floats.Formats.BinaryInterchange.Conversion.Cast.Proof",
+        "FloatLib.Floats.Formats.BinaryInterchange.Configured.Value.CoreProof"
+      ]
+    },
+    "NN.IR.Check": {
+      "sha256": "7e567d7854fa2b892c9360c259c3776aa35bf53a70bd4c56600f19f69367bde1",
+      "imports": [
+        "NN.IR.Infer"
+      ]
+    },
+    "NN.IR.DType": {
+      "sha256": "9708b72622544ee67cfe6275e3396a4ea029944feef35c6d4fbcc239908f24c0",
+      "imports": [
+        "FloatLib.Floats.Formats.BinaryInterchange.Format.Catalog",
+        "FloatLib.Floats.Formats.DecimalInterchange.Format",
+        "Lean.Data.Json.FromToJson.Basic",
+        "Lean.Data.Name"
+      ]
+    },
+    "NN.IR.Graph": {
+      "sha256": "21eedd8f64e3f517cadde48809377d05ae7102a1d6aa0d62df880038b0fb137b",
+      "imports": [
+        "NN.IR.Operator"
+      ]
+    },
+    "NN.IR.HardMask": {
+      "sha256": "6f21a690cd6639b12133b461fd2c8117c71e1c7ddffdb005a8e24cef70578124",
+      "imports": [
+        "NN.IR.Graph",
+        "NN.Spec.Core.TensorReductionShape.ShapeChange"
+      ]
+    },
+    "NN.IR.Infer": {
+      "sha256": "039a3e1366ab0977eca8b956ac7b8ba80549491605f613a5669581d53ee35290",
+      "imports": [
+        "NN.IR.HardMask",
+        "NN.IR.OpContracts",
+        "NN.Spec.Core.TensorReductionShape.Reductions"
+      ]
+    },
+    "NN.IR.Interpreter": {
+      "sha256": "28e43a4dd9d6176b578250b137f6dd4186fdd6308aa156924ee65b4315c27eb2",
+      "imports": [
+        "NN.IR.Program",
+        "NN.IR.Semantics",
+        "FloatLib.Floats.ExecFloat.Conversion.Core"
+      ]
+    },
+    "NN.IR.OpContracts": {
+      "sha256": "6cdb24bd82694f9a12900fcdb3921953324bfbbe2f9e4aaddf8316de5059e7c2",
+      "imports": [
+        "NN.IR.Graph",
+        "NN.Tensor.Conversion",
+        "NN.Spec.Layers.Pooling"
+      ]
+    },
+    "NN.IR.Operator": {
+      "sha256": "8d5520c2f75a9df02f47f9f5850e8b77f2d3b9d209c28f728b0c6a03c99466b2",
+      "imports": [
+        "NN.Spec.Core.Pointwise",
+        "NN.Spec.Core.Tensor.Core"
+      ]
+    },
+    "NN.IR.Payload": {
+      "sha256": "9cb2d64419fb21839222102479c1e000c59184b1cb1b3a45d26804c1ebb14c93",
+      "imports": [
+        "NN.Spec.Layers.Conv",
+        "NN.IR.Graph",
+        "NN.Kernel.Program",
+        "NN.Tensor.Conversion"
+      ]
+    },
+    "NN.IR.Program": {
+      "sha256": "5a843d139911dbd185863524bbe55988b3aff9cda2f0d019464dfc2a5a107417",
+      "imports": [
+        "NN.IR.Check",
+        "NN.IR.DType",
+        "FloatLib.Floats.Formats.BinaryInterchange.Rounding.Mode"
+      ]
+    },
+    "NN.IR.Reference": {
+      "sha256": "c3d1f57e44aef218c11aebef2208c61d9ac2ed107d3c2cb3a2ed3778946a4a45",
+      "imports": [
+        "Init.Data.BitVec.Lemmas",
+        "NN.IR.BinaryProofs"
+      ]
+    },
+    "NN.IR.Semantics": {
+      "sha256": "9e6f96f4c2ab9c5ea92ead97ca7b2c9706abb7a3e1eb78e45e87c663694870b1",
+      "imports": [
+        "NN.IR.HardMask",
+        "NN.IR.Infer",
+        "NN.IR.Payload",
+        "NN.Kernel.Tensor",
+        "NN.Tensor.ShapeErasure",
+        "NN.Spec.Core.Random",
+        "NN.Spec.Core.Sequence",
+        "NN.Spec.Core.Tensor.SomeTensor",
+        "NN.Spec.Layers.Attention",
+        "NN.Spec.Layers.Loss",
+        "NN.Spec.Layers.MoE",
+        "NN.Spec.Layers.Normalization.BatchNorm",
+        "NN.Spec.Layers.Pointwise",
+        "NN.IR.OpContracts",
+        "NN.Spec.Core.TensorReductionShape.ConcatSlice"
+      ]
+    },
+    "NN.Kernel.Cuda": {
+      "sha256": "7961676d0d5d0ebb93a52597fdf7bcb8ee6c1c84590acfe7bd3dcdb141d479fc",
+      "imports": [
+        "NN.Kernel.Target",
+        "Mathlib.Logic.Function.Basic",
+        "FloatLib.Floats.Formats.IEEE754.Native.Representation",
+        "Std.Data.String.ToNat"
+      ]
+    },
+    "NN.Kernel.Cuda.Binary": {
+      "sha256": "a05838b9bd658421229530bafed8b12db41a26aa76675b20ffacef4ac7c83aa0",
+      "imports": [
+        "NN.Kernel.Scalar"
+      ]
+    },
+    "NN.Kernel.Cuda.Correctness": {
+      "sha256": "e2be4be4715801af2d7db59a936b819844a42f911e2d5d70a419ad7f4aa924d3",
+      "imports": [
+        "NN.Kernel.Cuda"
+      ]
+    },
+    "NN.Kernel.Expr": {
+      "sha256": "fda25e4acb5298233f45d9b0bb5030ece0bc2bcee08064dd09ba6131ad30358e",
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "NN.Kernel.Program": {
+      "sha256": "18b3c0b0634ac1517971d00f808d97076cf60809437fd852222f87eb4d1eb4b0",
+      "imports": [
+        "NN.Kernel.Cuda.Correctness",
+        "NN.Kernel.Scalar"
+      ]
+    },
+    "NN.Kernel.Runtime": {
+      "sha256": "ac70f22d5b42e9bbd38b4ea8dde93a133f7b370a79a5aed3ef2f7d293d9b0139",
+      "imports": [
+        "NN.Kernel.Cuda",
+        "NN.Kernel.Cuda.Binary",
+        "NN.Runtime.Autograd.Engine.LibTorch.Buffer"
+      ]
+    },
+    "NN.Kernel.Scalar": {
+      "sha256": "5d2202c8d810e7f6ff90b0a81ce67ec3467049ea42d572c1362e5ec82c481a75",
+      "imports": [
+        "NN.Kernel.Cuda",
+        "NN.Tensor.Constructors",
+        "FloatLib.Floats.Formats.BinaryInterchange.Configured.Value.CoreProof"
+      ]
+    },
+    "NN.Kernel.Target": {
+      "sha256": "68634554bd81e61a7eb2d21226f2d1da663468ed19c4197bbf4431a4da7c4e2f",
+      "imports": [
+        "NN.Kernel.Expr"
+      ]
+    },
+    "NN.Kernel.Tensor": {
+      "sha256": "7d426100aa4b91e1456c29e6a136cb59e93206f570bd894625b3d0740d486cab",
+      "imports": [
+        "NN.Backend.Types",
+        "NN.Kernel.Program",
+        "NN.Kernel.Runtime",
+        "NN.Tensor.Constructors",
+        "NN.API.Arguments"
+      ]
+    },
+    "NN.Runtime.Autograd.Engine.LibTorch.Buffer": {
+      "sha256": "34b1d0ae8ee1949fefb0f8ae16cc7bd5d39d06825d06e7f8815ee5fe6d314e6b",
+      "imports": [
+        "NN.Runtime.Autograd.Engine.LibTorch.Controls",
+        "NN.Runtime.Autograd.Engine.LibTorch.Trusted",
+        "NN.Kernel.Cuda.Binary"
+      ]
+    },
+    "NN.Runtime.Autograd.Engine.LibTorch.Controls": {
+      "sha256": "82d62679dcc0c5f5ea36cfe155e69dc75597f63b4759871705976f3c81f127e2",
+      "imports": []
+    },
+    "NN.Runtime.Autograd.Engine.LibTorch.Trusted": {
+      "sha256": "663ae2746223b37602b0557bdea413ae9d43cfab069e00b624d6f6ff28f044fd",
+      "imports": []
+    },
+    "NN.Runtime.IR": {
+      "sha256": "abf8a6b7301a32a3566adf9195fdef1dd4e6f5e21a8c7350c968970cfdb07964",
+      "imports": [
+        "NN.IR.Reference",
+        "NN.Runtime.PyTorch.Import.TorchExport"
+      ]
+    },
+    "NN.Runtime.PyTorch.Export.Core": {
+      "sha256": "957f7449408edb06afed757009efd3a0a56f10c6355bfd560d6ee2432effd484",
+      "imports": [
+        "NN.Spec.Core.Tensor",
+        "NN.Spec.Module.Core",
+        "NN.Tensor.Conversion"
+      ]
+    },
+    "NN.Runtime.PyTorch.Export.TorchExport": {
+      "sha256": "b595e6852d82dce64e7c7068f1f885909d6369456fb80adc74244f999573f25b",
+      "imports": [
+        "NN.Runtime.PyTorch.Export.Core",
+        "NN.Runtime.PyTorch.Wire"
+      ]
+    },
+    "NN.Runtime.PyTorch.Import.Core": {
+      "sha256": "67f69483e0a0817918cf3223389d012090b32356fb6cec44ac32e80732a9b129",
+      "imports": [
+        "NN.Spec.Core.Tensor"
+      ]
+    },
+    "NN.Runtime.PyTorch.Import.TorchExport": {
+      "sha256": "edb62fae82c152b61544157fda9029bb95d8ab5f2081cf500484d1972a50f974",
+      "imports": [
+        "NN.IR.Check",
+        "NN.IR.DType",
+        "NN.IR.Payload",
+        "NN.Runtime.PyTorch.Import.Core",
+        "NN.Runtime.PyTorch.Wire"
+      ]
+    },
+    "NN.Runtime.PyTorch.Wire": {
+      "sha256": "1f39b2de83227ebe49dbf758100a68db5e15b509c51ba8521d0c8ed1fb069874",
+      "imports": [
+        "NN.IR.Operator"
+      ]
+    },
+    "NN.Spec.Core.Complex": {
+      "sha256": "7116a91d8835f16116bd15a9fb97289075dc0aac689955e883e5143c6edb2df8",
+      "imports": [
+        "NN.Spec.Core.Context",
+        "NN.Core.Numeric.Angle"
+      ]
+    },
+    "NN.Spec.Core.Context": {
+      "sha256": "c529ff61a41705f5485d1574c56437616d0dfe09b3edf3fbec6ee8b832b67396",
+      "imports": [
+        "NN.Core.Numeric",
+        "NN.Core.Numeric.Quotient",
+        "NN.Spec.Core.Pointwise",
+        "FloatLib.Floats.Formats.BinaryInterchange.Algebraic.Rounding.SqrtRuntime"
+      ]
+    },
+    "NN.Spec.Core.FloatInstances": {
+      "sha256": "bb88245f969500ee2e8d88f44685410c4cd98658516063eebe008751d210dcf8",
+      "imports": [
+        "NN.Spec.Core.Context",
+        "NN.Tensor.Internal.Representation.Storage",
+        "FloatLib.Floats.Formats.BinaryInterchange.Configured",
+        "FloatLib.Floats.Formats.BinaryInterchange.Configured.Transcendentals"
+      ]
+    },
+    "NN.Spec.Core.Pointwise": {
+      "sha256": "b74f6d4cd2290067c61795f495da2d4b6a9eab18422e9853ab67cd9f22c3f4f2",
+      "imports": []
+    },
+    "NN.Spec.Core.Random": {
+      "sha256": "167c76b3591d0b932dd1800c82abbcb59c81f71874a23303a215f401302afb90",
+      "imports": [
+        "NN.Spec.Core.Context",
+        "NN.Spec.Core.Tensor.Core"
+      ]
+    },
+    "NN.Spec.Core.Sequence": {
+      "sha256": "3972189227c5f86baadc43c5f6149a3f2f447cb2e67f7241f409b2a5e598907a",
+      "imports": [
+        "NN.Spec.Core.Tensor.Constructors"
+      ]
+    },
+    "NN.Spec.Core.Shape": {
+      "sha256": "586078d33b3204fc6fa23d85d8078a0d872aa23fdd93cd77b5c1c1c688eb189e",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Shape"
+      ]
+    },
+    "NN.Spec.Core.Tensor": {
+      "sha256": "d38d195f5ab86f0e46c2d9a6b5c9f31f0ea3baa7663f8429170ab84509e150ff",
+      "imports": [
+        "NN.Spec.Core.Tensor.Constructors",
+        "NN.Spec.Core.Tensor.Core",
+        "NN.Spec.Core.Tensor.Linalg"
+      ]
+    },
+    "NN.Spec.Core.Tensor.Constructors": {
+      "sha256": "a8549481069f1bffcfea076233262fbabdb58992fbffb547cfcf6e966701e2ff",
+      "imports": [
+        "NN.Spec.Core.Tensor.Core",
+        "Mathlib.Tactic.Bound.Init"
+      ]
+    },
+    "NN.Spec.Core.Tensor.Core": {
+      "sha256": "21b93a79421c90ca1007bbec63d77fa61c0cd3739963cb3d9c2a31f684290ddb",
+      "imports": [
+        "NN.Tensor.Coordinate",
+        "NN.Tensor.Internal.Representation.Basic.Reindex"
+      ]
+    },
+    "NN.Spec.Core.Tensor.Factorizations": {
+      "sha256": "de9434712d1ff9d8f85e1aa598639a025b6829f68b063498cb9d3462068705ae",
+      "imports": [
+        "NN.Spec.Core.Context",
+        "NN.Spec.Core.Tensor.Constructors"
+      ]
+    },
+    "NN.Spec.Core.Tensor.Linalg": {
+      "sha256": "ddd13bde77228d1a9c9052bb308630d636f8c2d60ebad91a9ce6008bf6fcd862",
+      "imports": [
+        "NN.Spec.Core.Tensor.Core"
+      ]
+    },
+    "NN.Spec.Core.Tensor.SomeTensor": {
+      "sha256": "14c0e4670d6c0c8d72a42a9eedf15d2a6904cff58e6c6725b11dd391fc592c04",
+      "imports": [
+        "NN.Spec.Core.TensorReductionShape.LinearAlgebra"
+      ]
+    },
+    "NN.Spec.Core.TensorOps": {
+      "sha256": "539e54a5a91ccbcb10b84c0bbab3743e1eba2222a0dff7c2b21c3fe38351cde7",
+      "imports": [
+        "NN.Spec.Core.Context",
+        "NN.Spec.Core.Tensor"
+      ]
+    },
+    "NN.Spec.Core.TensorReductionShape.Broadcasting": {
+      "sha256": "4dee54e7f54e31d4a4de3d37205fcd1c669a1409b124eba6cb3c912f13f16e28",
+      "imports": [
+        "NN.Spec.Core.TensorOps"
+      ]
+    },
+    "NN.Spec.Core.TensorReductionShape.ConcatSlice": {
+      "sha256": "47c19cb85759a1bf631299bf017f5f5c6aa596dd2cc0ba26b22a8cfe0153415f",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Segment",
+        "NN.Spec.Core.TensorReductionShape.ShapeChange",
+        "NN.Spec.Core.Context"
+      ]
+    },
+    "NN.Spec.Core.TensorReductionShape.LinearAlgebra": {
+      "sha256": "d59e24b60a92966ae98330001d7321c741afc363a854b5ed87da5741a169ebca",
+      "imports": [
+        "NN.Spec.Core.TensorReductionShape.Broadcasting",
+        "NN.Spec.Core.TensorReductionShape.Reductions"
+      ]
+    },
+    "NN.Spec.Core.TensorReductionShape.Reductions": {
+      "sha256": "f9c9ce470d0da18f45e501dbe1f65e4808ad5ff8799bfd8191fbad9a17ad3ca6",
+      "imports": [
+        "NN.Spec.Core.TensorReductionShape.ShapeChange",
+        "NN.Spec.Core.TensorOps",
+        "NN.Tensor.Internal.Representation.Basic.Traversal"
+      ]
+    },
+    "NN.Spec.Core.TensorReductionShape.ShapeChange": {
+      "sha256": "4a95a79ffa9f07d67ceff1ef537474410718e2803671e6dad0810eac82b98dc8",
+      "imports": [
+        "Mathlib.Tactic.Bound.Init",
+        "NN.Spec.Core.Tensor.Core"
+      ]
+    },
+    "NN.Spec.Layers.Activation": {
+      "sha256": "653423a960c2c302e84edce1f3996b4f6499956fc4501856a903826a266b4fa2",
+      "imports": [
+        "NN.Spec.Core.TensorReductionShape.LinearAlgebra"
+      ]
+    },
+    "NN.Spec.Layers.Attention": {
+      "sha256": "a6f86f0ab2ace5ad56ae7ff41285a3f0083ea50196230755e2e51d8d3e0526ca",
+      "imports": [
+        "NN.Spec.Layers.Activation"
+      ]
+    },
+    "NN.Spec.Layers.Conv": {
+      "sha256": "02a5d71574f9f26e9071ca0103aa60416f979caabe968e19cea80d9e708e5b21",
+      "imports": [
+        "NN.Spec.Core.TensorOps"
+      ]
+    },
+    "NN.Spec.Layers.Linear": {
+      "sha256": "5899db4f4bd86727337d31b77e55ebed7cc697dddd9c3efe320b602324e94891",
+      "imports": [
+        "NN.Spec.Core.TensorReductionShape.LinearAlgebra",
+        "NN.Spec.Core.Sequence"
+      ]
+    },
+    "NN.Spec.Layers.Loss": {
+      "sha256": "7851c5d3c756cc7ccbca9c0d9a1e61d3d76686b9b0212e864a1bc5a6c02ebc12",
+      "imports": [
+        "NN.Spec.Layers.Activation"
+      ]
+    },
+    "NN.Spec.Layers.MoE": {
+      "sha256": "9e92b9d915190d8442258c8f053cf1f2dd7007e6a4eeea106fadfcaf4a830869",
+      "imports": [
+        "NN.Spec.Layers.Activation"
+      ]
+    },
+    "NN.Spec.Layers.Normalization.BatchNorm": {
+      "sha256": "cf039e233eb5f3a02eaf337eb55601dac44770f26c5c03dbce4e91a5757ee9ca",
+      "imports": [
+        "NN.Spec.Layers.Normalization.Core"
+      ]
+    },
+    "NN.Spec.Layers.Normalization.Core": {
+      "sha256": "b1d95a214372f1074cba4f71be8366773c614465d3f2fccfd3334e2c7c1d898e",
+      "imports": [
+        "NN.Spec.Core.TensorReductionShape.Broadcasting",
+        "NN.Spec.Core.TensorReductionShape.Reductions"
+      ]
+    },
+    "NN.Spec.Layers.Pointwise": {
+      "sha256": "b6f6b2241395717eeef2ecc02909b590b1ed786cacd3e1c77e99cc2a91ea1815",
+      "imports": [
+        "NN.Spec.Layers.Activation"
+      ]
+    },
+    "NN.Spec.Layers.Pooling": {
+      "sha256": "7b0830a1497298c971f17ac033fb00d39db17ca0d5a0fe5ddd87dbd36c9011d8",
+      "imports": [
+        "NN.Spec.Layers.Conv"
+      ]
+    },
+    "NN.Spec.Module.Core": {
+      "sha256": "dc50f690f207ab18cd4c77037036cf55269c8b5030a4ae4bbcea772a2d42916f",
+      "imports": [
+        "NN.Spec.Core.Context",
+        "NN.Spec.Core.Tensor.Core"
+      ]
+    },
+    "NN.Tactic.Einops": {
+      "sha256": "94aafa1ce7c35d5342afba6b7911ff80f4845926792baad8368a97c20abeaab2",
+      "imports": [
+        "NN.Tactic.Einops.Report",
+        "NN.Tactic.Einops.Proof"
+      ]
+    },
+    "NN.Tactic.Einops.Proof": {
+      "sha256": "ffaed32bfce27d46957656253e4fee0b47da588ab69255eb813099be41b68ec1",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Transform.View",
+        "NN.Tensor.Internal.Lowering.Pack",
+        "NN.Tensor.Internal.Laws.MixedRadix",
+        "NN.Tensor.Internal.Lowering.Reduce",
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Util.SynthesizeUsing"
+      ]
+    },
+    "NN.Tactic.Einops.Report": {
+      "sha256": "e7c4ef5743f3e3de6f8a8f9ba17aff6a9579ecb84582dd20a7982f9ea4bac051",
+      "imports": [
+        "NN.Tactic.Einops.Report.Analysis.Render",
+        "ProofWidgets.Component.HtmlDisplay",
+        "NN.Tactic.Einops.Report.Analysis.Render",
+        "ProofWidgets.Component.HtmlDisplay"
+      ]
+    },
+    "NN.Tactic.Einops.Report.Analysis.Common": {
+      "sha256": "925e3be9c99c9e93eeb4fc450d67ac3f8d4c604a8ace1399134acdb4b6ab110f",
+      "imports": [
+        "NN.Tactic.Einops.Proof",
+        "NN.Tensor.Internal.Elab.Einsum.ParallelOutput",
+        "NN.Tensor.Internal.Check.ParseShape",
+        "NN.Tactic.Einops.Proof"
+      ]
+    },
+    "NN.Tactic.Einops.Report.Analysis.Einsum": {
+      "sha256": "17516d68591ecbc909db7162a271f468f06478b0c973131bd0e18a9649c72845",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Output.Planning",
+        "NN.Tensor.Internal.Elab.Einsum.ParallelOutput",
+        "NN.Tensor.Internal.Elab.Einsum.Planning",
+        "NN.Tactic.Einops.Report.Analysis.Common",
+        "NN.Tensor.Internal.Elab.Einsum.Output.Planning",
+        "NN.Tensor.Internal.Elab.Einsum.Planning",
+        "NN.Tactic.Einops.Report.Analysis.Common"
+      ]
+    },
+    "NN.Tactic.Einops.Report.Analysis.Pack": {
+      "sha256": "f4cba66a9309c6df2437d140849ff2cd43790a7b658a9850ac4874ea89cab5ad",
+      "imports": [
+        "NN.Tactic.Einops.Report.Analysis.Common",
+        "NN.Tactic.Einops.Report.Analysis.Common"
+      ]
+    },
+    "NN.Tactic.Einops.Report.Analysis.ParseShape": {
+      "sha256": "fe119ca382a06e54a6038f6e6c86dd6aa45e66f8a8bb85b1ff97be03cf2aaed7",
+      "imports": [
+        "NN.Tactic.Einops.Report.Analysis.Common",
+        "NN.Tactic.Einops.Report.Analysis.Common"
+      ]
+    },
+    "NN.Tactic.Einops.Report.Analysis.Render": {
+      "sha256": "6dc3f8308fb47b27456d854c7b89a53d90b0ae344bd2846b2a5ac98b4a61de3d",
+      "imports": [
+        "NN.Tactic.Einops.Report.Analysis.Einsum",
+        "NN.Tactic.Einops.Report.Analysis.Pack",
+        "NN.Tactic.Einops.Report.Analysis.ParseShape",
+        "NN.Tactic.Einops.Report.Analysis.Symbolic",
+        "NN.Tactic.Einops.Report.Analysis.Transform",
+        "NN.Tactic.Einops.Report.Analysis.Einsum",
+        "NN.Tactic.Einops.Report.Analysis.Pack",
+        "NN.Tactic.Einops.Report.Analysis.ParseShape",
+        "NN.Tactic.Einops.Report.Analysis.Symbolic",
+        "NN.Tactic.Einops.Report.Analysis.Transform"
+      ]
+    },
+    "NN.Tactic.Einops.Report.Analysis.Symbolic": {
+      "sha256": "fa973ba343cf6625032ae0234481e20ba612c552df458dca8486d1e806a36281",
+      "imports": [
+        "NN.Tactic.Einops.Report.Analysis.Common",
+        "NN.Tactic.Einops.Report.Analysis.Common"
+      ]
+    },
+    "NN.Tactic.Einops.Report.Analysis.Transform": {
+      "sha256": "bce2ed29de8c785e22281a9125cf35ad9a773cc7e26697d32ed1f2b6ac8cd6d3",
+      "imports": [
+        "NN.Tactic.Einops.Report.Analysis.Common",
+        "NN.Tactic.Einops.Report.Analysis.Common"
+      ]
+    },
+    "NN.Tensor": {
+      "sha256": "e209a55c310e7b01d54c5eb57514ff13c3884166be583d528387c3030701b535",
+      "imports": [
+        "NN.Tensor.Internal.Interface",
+        "NN.Tensor.Conversion",
+        "NN.Tensor.Constructors",
+        "NN.Tensor.Coordinate",
+        "NN.Tensor.LinearAlgebra",
+        "NN.Tensor.Operations",
+        "NN.Tensor.Packing",
+        "NN.Tensor.Reductions",
+        "NN.Tensor.Storage"
+      ]
+    },
+    "NN.Tensor.Constructors": {
+      "sha256": "79f2b31abbec9559b34e42be2d1067a1cfb222b457bd0e3c24808fdcc67419ee",
+      "imports": [
+        "NN.Spec.Core.FloatInstances",
+        "NN.Spec.Core.Complex",
+        "NN.Tensor.Conversion"
+      ]
+    },
+    "NN.Tensor.Conversion": {
+      "sha256": "625186c4016cf2a1ac679f4b95304d6ca480457414f6e1c57e79b4efcb3ea90b",
+      "imports": [
+        "NN.Spec.Core.Tensor"
+      ]
+    },
+    "NN.Tensor.Coordinate": {
+      "sha256": "f1ada85c7dbfc4906d754bac14fe8630d68a9ae6e1bcd5aab143a63785391cc7",
+      "imports": [
+        "NN.Spec.Core.Shape"
+      ]
+    },
+    "NN.Tensor.Internal.Check.Diagnostic": {
+      "sha256": "09fa0d70bee6c287169665cd72d0c2eafc24bfdd41c38b217f86fdb2fad9db56",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Diagnostic"
+      ]
+    },
+    "NN.Tensor.Internal.Check.Einsum": {
+      "sha256": "68e1362e533fb7b0a933a1467676a41fecf49cabd9c7b3390c19264a8380bb49",
+      "imports": [
+        "NN.Tensor.Internal.Check.Diagnostic",
+        "NN.Tensor.Internal.Representation.Shape",
+        "NN.Tensor.Internal.Syntax.Parser"
+      ]
+    },
+    "NN.Tensor.Internal.Check.Normalize": {
+      "sha256": "14433cbee2378a714f3bcc3860687e63cc38ea57122a35b8e6b196e48712f69a",
+      "imports": [
+        "NN.Tensor.Internal.Check.Diagnostic",
+        "NN.Tensor.Internal.Representation.Shape",
+        "NN.Tensor.Internal.Syntax.Parser"
+      ]
+    },
+    "NN.Tensor.Internal.Check.Pack": {
+      "sha256": "7fd0d975d3c2d399a0e754cf45760c08c760964658c8195a9cacca98d62f72e6",
+      "imports": [
+        "NN.Tensor.Internal.Check.Diagnostic",
+        "NN.Tensor.Internal.Representation.Shape",
+        "NN.Tensor.Internal.Syntax.Parser"
+      ]
+    },
+    "NN.Tensor.Internal.Check.ParseShape": {
+      "sha256": "56c08bfa5dfcdb64b479add63733ffa568a3c6303b65b0c4e219986bb246e0c0",
+      "imports": [
+        "NN.Tensor.Internal.Check.Transform"
+      ]
+    },
+    "NN.Tensor.Internal.Check.Transform": {
+      "sha256": "321ecb461e3f60217abd0dc9ac5ab7c7090e8eb19516c75d8b27d17e4bd1cbe4",
+      "imports": [
+        "NN.Tensor.Internal.Check.Normalize"
+      ]
+    },
+    "NN.Tensor.Internal.Elab": {
+      "sha256": "c238cd2ecd26be56476ef1f1031c02797d96428d18fe2978e7636b02655e0fa4",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum",
+        "NN.Tensor.Internal.Elab.Pack",
+        "NN.Tensor.Internal.Elab.TensorLiteral",
+        "NN.Tensor.Internal.Elab.Transform",
+        "NN.Tensor.Internal.Runtime",
+        "NN.Spec.Core.Tensor"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Common": {
+      "sha256": "370247e1834c4165db59679dccf479e02d398db1624fa403433f490797323144",
+      "imports": [
+        "NN.Tensor.Internal.Check.Einsum",
+        "NN.Tensor.Internal.Check.Pack",
+        "NN.Tensor.Internal.Representation.Promotion",
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Tactic.Positivity.Finset",
+        "Mathlib.Tactic.Ring.RingNF",
+        "NN.Spec.Core.Tensor.Core",
+        "NN.Tensor.Internal.Check.Einsum",
+        "NN.Tensor.Internal.Check.Pack",
+        "NN.Tensor.Internal.Check.Transform",
+        "NN.Tensor.Internal.Elab.Native.Tensor",
+        "NN.Tensor.Internal.Elab.Syntax",
+        "Lean.Elab.Tactic",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring",
+        "NN.Tensor.Internal.Check.ParseShape",
+        "NN.Tensor.Internal.Semantics.Transform",
+        "Mathlib.Tactic.FinCases",
+        "NN.Spec.Core.Tensor.Core",
+        "NN.Tensor.Internal.Elab.Native.Tensor",
+        "NN.Tensor.Internal.Elab.Syntax"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum": {
+      "sha256": "baa2272f69827b37627153c913ef499501b5ced0cccaf4b28c60f363225132f1",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Product",
+        "NN.Tensor.Internal.Elab.Einsum.Output",
+        "NN.Tensor.Internal.Elab.Einsum.Planning",
+        "NN.Tensor.Internal.Elab.Transform.View",
+        "NN.Tensor.Internal.Elab.Einsum.Output",
+        "NN.Tensor.Internal.Elab.Einsum.Planning",
+        "NN.Tensor.Internal.Elab.Syntax",
+        "NN.Tensor.Internal.Elab.Transform.View"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Contraction.Flat": {
+      "sha256": "62210deb56ed851167f36396a8c14c39281b7314b45542e29321f948cd67fedc",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Scalarize",
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Common",
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Scalarize"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Contraction.Hoist": {
+      "sha256": "0df5b0998d7f4d2add02a16347ef4f1ec543fd6953cb03515a3ac3e7f43b95c2",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Index",
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Contraction.Index": {
+      "sha256": "df14a87ff4094d4ed2c4237364a575faf2c6baf0427229bae638ca5db9ac9f31",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Einsum.Tiling"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Contraction.Loop": {
+      "sha256": "35ba100d50e7239b64e6b6772b3846751b2baff21b18ca9218d7a9c5b31cfcbb",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Flat",
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Hoist",
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Flat",
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Hoist"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Contraction.Scalarize": {
+      "sha256": "c522bcd433c65bd88bde5330d00bcd805068188c0ff0812d268af75a9a618a5c",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Width4",
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Width8",
+        "NN.Tensor.Internal.Elab.Einsum.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Index": {
+      "sha256": "b59a08efc3b1986d934a47d01fb77d8d8dcb48fc478b05526edea968742459a8",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Loop",
+        "NN.Tensor.Internal.Lowering.Einsum.Planning",
+        "Lean.Meta.Tactic.SplitIf",
+        "NN.Tensor.Internal.Elab.Einsum.Symbolic",
+        "NN.Tensor.Internal.Elab.Common"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Kernel.Affine": {
+      "sha256": "107e984928c6d1101278536134d4384b147be4613f2e0653729c3695235ff26c",
+      "imports": [
+        "NN.Tensor.Internal.Laws.MixedRadix",
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "Mathlib.Algebra.Order.Field.Basic",
+        "NN.Tensor.Internal.Elab.Einsum.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Kernel.Analysis": {
+      "sha256": "3f80a04c227678c184c847c0285e0aeefad7bfb1dcf56b020bb2103de1c415b4",
+      "imports": [
+        "NN.Tensor.Internal.Check.Einsum",
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Loop"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Kernel.Index": {
+      "sha256": "3e66571a6862f32a5811ac766c2598e3bc279a85fba0db32154c6f9db6bc593b",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Einsum.Symbolic",
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Loop"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Kernel.Product": {
+      "sha256": "a68b861afc6d14c06ada1ca50ded392e0a213a2005402a64431c79c6e925c253",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Analysis",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Utilities",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.View",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Analysis",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Utilities",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.View"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Kernel.Utilities": {
+      "sha256": "548365c4a79d48c3ded4df9dff042e519415bdb0066cd4620fcd6a05b2789265",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Loop"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Kernel.View": {
+      "sha256": "08b31f3145d42fd52eae78062a31bcf4d47dbb8cc02087d372b95e16bcc3d3d0",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Affine",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Index",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Affine",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Loop": {
+      "sha256": "61e76802880db975dfa7c87b4e66ec34465ccb5659719f7b705d3d324e739e2d",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Traversal",
+        "NN.Tensor.Internal.Representation.Basic.Reindex"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Output": {
+      "sha256": "8e843b8a77668650734152d02b3a129f809936560f13f405544cde540cec4c1b",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Loop",
+        "NN.Tensor.Internal.Elab.Einsum.Output.Fusion",
+        "NN.Tensor.Internal.Elab.Einsum.Output.Planning",
+        "NN.Tensor.Internal.Elab.Einsum.ParallelOutput",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Product",
+        "NN.Tensor.Internal.Elab.Einsum.Output.Planning",
+        "NN.Tensor.Internal.Elab.Einsum.OutputIndex",
+        "NN.Tensor.Internal.Elab.Einsum.ParallelOutput",
+        "NN.Tensor.Internal.Elab.Einsum.Output.Fusion"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Output.Fusion": {
+      "sha256": "a7a34f1060e1b4485226851a5777231ec16eb6532ac0e54727c9c96592269f28",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Width4",
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Width8",
+        "NN.Tensor.Internal.Elab.Einsum.Tiling"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Output.Planning": {
+      "sha256": "e5f95d2cf044e84ddf451e5f01e178e99d5a8e99083eff86583034f52333620e",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Core",
+        "NN.Tensor.Internal.Elab.Einsum.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.OutputIndex": {
+      "sha256": "d8825481a9c98c431903a20413868b1440da922669f92f3084c151826e7ba657",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Hoist",
+        "NN.Tensor.Internal.Elab.Einsum.Contraction.Loop"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Parallel": {
+      "sha256": "673147ca83b881a8ddeaf4a53108c0dedd9f1d75b97d643745bb0da0580785cc",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Partition"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.ParallelOutput": {
+      "sha256": "ee5698bf9c29038f3a2f74c198f0be0eca37c45f42e502dbbc666d95e8fc44b7",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Parallel",
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Einsum.OutputIndex",
+        "NN.Tensor.Internal.Elab.Common"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Partition": {
+      "sha256": "3a0d2e5e77f074d7099b06aea57da0b1832c71a203aa7f6708f8c1d065a96513",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Loop"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Planning": {
+      "sha256": "3b6b7ada6c5e43b3ea57b2be136413bb9f69c7e25391b1cbcd3b10d27f9a3028",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Common",
+        "NN.Tensor.Internal.Elab.Einsum.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Symbolic": {
+      "sha256": "8a7cb3b515af9530a54b3e5002d61e2c59d3cba73e18eeca29ed16fd2863c1f8",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Common",
+        "NN.Tensor.Internal.Elab.Common"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Tiling": {
+      "sha256": "0c6e2ace08ac2f9fe80ce62f5041725b9bbf8bf148c579c69b59e781edc4989c",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Semantics",
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Width4",
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Width8"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Tiling.Semantics": {
+      "sha256": "e12e17aca859594f0b6c0584e9515a3319745ec922c6b29746489fd41b65802a",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Loop",
+        "NN.Tensor.Internal.Lowering.Einsum",
+        "Batteries.Data.Vector.Lemmas"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Tiling.Width4": {
+      "sha256": "d4e73ad7017aef252ae2598ca4dad98cac02332072b202b6dd49ba00228bc9f5",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Semantics",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Einsum.Tiling.Width8": {
+      "sha256": "fce02407a11211ba86bf6e200c86ad12aa2518b47ab6067db28fc873a90db49a",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Tiling.Semantics",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Index": {
+      "sha256": "5d2d7866325c56d14be1293e699595ac7760a796d02848c369623c8e80c1ba3c",
+      "imports": [
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.Pow",
+        "Mathlib.Tactic.Positivity.Finset",
+        "NN.Tensor.Internal.Elab.Common",
+        "NN.Tensor.Internal.Laws.Equivalence"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Loop": {
+      "sha256": "d928e52794dbb456bcb03a60fe9af08539dcf6acae2adf5d72926490bbe73293",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Storage"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Pack.Dispatch": {
+      "sha256": "cc6fcfb55cc01c5d1ce9b8a69963ad00a2a7fec2ab7699b47f85fb450600a80a",
+      "imports": [
+        "Mathlib.Basic.Logic.Basic",
+        "NN.Tensor.Internal.Laws.PackIndex",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Index",
+        "NN.Tensor.Internal.Elab.Native.Pull",
+        "NN.Tensor.Internal.Elab.Native.Index",
+        "NN.Tensor.Internal.Elab.Native.Tensor"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Pack.Unpack": {
+      "sha256": "be4b9816bdb661bdb3df14b95f27a8a3bd573ae98e44418fb8b60e3e6b54d3d5",
+      "imports": [
+        "NN.Tensor.Internal.Laws.PackIndex",
+        "NN.Tensor.Internal.Lowering.Pack",
+        "NN.Tensor.Internal.Elab.Native.Pull",
+        "NN.Tensor.Internal.Elab.Common",
+        "NN.Tensor.Internal.Elab.Native.Pull",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Index",
+        "NN.Tensor.Internal.Elab.Native.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Pointwise": {
+      "sha256": "e9d1744ff30d5fdc3e178c513477b5ea2061f43821bcc3cafe6c8281fe6e43ce",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Pointwise"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Pull": {
+      "sha256": "2fda3e1e8f72c72037c422d83b216bc0c0498730edb00184308a5813858a4de2",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Native.Transpose",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Affine",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Index",
+        "NN.Tensor.Internal.Elab.Transform.Index",
+        "NN.Tensor.Internal.Elab.Native.Tensor",
+        "NN.Tensor.Internal.Lowering.TransformFusion",
+        "NN.Tensor.Internal.Elab.Transform.Index",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Affine",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Index",
+        "NN.Tensor.Internal.Elab.Native.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Reduce": {
+      "sha256": "4f0d0c517e8462dc9111ed399da91630653a4022e554a21f9c75102c709dd764",
+      "imports": [
+        "NN.Tensor.Internal.Lowering.Reduce.View",
+        "NN.Tensor.Internal.Elab.Native.Tensor",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Affine",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Index",
+        "NN.Tensor.Internal.Elab.Native.ReductionIndex",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Affine",
+        "NN.Tensor.Internal.Elab.Einsum.Kernel.Index",
+        "NN.Tensor.Internal.Elab.Native.ReductionIndex"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.ReductionIndex": {
+      "sha256": "aeb2d417b776d4736b20b717d1ab1e5062426b86b2c23367402c0e5b2042741a",
+      "imports": [
+        "NN.Tensor.Internal.Laws.ReductionIndex",
+        "NN.Tensor.Internal.Elab.Native.Index",
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Native.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Slice": {
+      "sha256": "395f62a3ca069de04196f3042451260b61008c4e029f79783c0c7d6046c1fd9c",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Reindex",
+        "NN.Tensor.Internal.Representation.Basic.Traversal"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Tensor": {
+      "sha256": "3bd4ef5dfab5850b35f154105705a69528f8bd5a90342ae9f949a8a59045c1cc",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Reindex",
+        "NN.Tensor.Internal.Representation.Basic.Traversal"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Native.Transpose": {
+      "sha256": "57a45c0d1dd820fe68dea9260a24ed1f2e9b43ab875796b6c0b0799c021102ae",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Native.Slice"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Pack": {
+      "sha256": "f62dbb0116a577ecb7b57c138e866fbe4bb1a9f03ecf7168a37f1e661eb5789c",
+      "imports": [
+        "NN.Tensor.Packing",
+        "NN.Tensor.Internal.Elab.Native.Pack.Dispatch",
+        "NN.Tensor.Internal.Elab.Native.Pack.Unpack",
+        "NN.Tensor.Internal.Elab.Native.Pack.Dispatch",
+        "NN.Tensor.Internal.Elab.Native.Pack.Unpack",
+        "NN.Tensor.Internal.Elab.Syntax"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Syntax": {
+      "sha256": "4a5084baaf9a6f39ef6f6efde3bbd77e1564da34adc70d0d2917d3bbd02c31ca",
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.TensorLiteral": {
+      "sha256": "81ca56ac11a2645e6dac0a9c1fb18c67b66375c70a0dc745e32e0375f0688eac",
+      "imports": [
+        "NN.Spec.Core.Shape",
+        "NN.Tensor.Internal.Representation.Basic",
+        "NN.Spec.Core.Shape"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Transform": {
+      "sha256": "2e162d1d6079c367fec55a913b21f0d48d189eb34573250f4a3beee41ded316c",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Native.Pull",
+        "NN.Tensor.Internal.Elab.Native.Reduce",
+        "NN.Tensor.Internal.Elab.Transform.View",
+        "NN.Tensor.Internal.Elab.Native.Pull",
+        "NN.Tensor.Internal.Elab.Native.Reduce",
+        "NN.Tensor.Internal.Elab.Syntax",
+        "NN.Tensor.Internal.Elab.Transform.View"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Transform.Index": {
+      "sha256": "07816a0316840d37d6feafa076c3027dacd0f87d23abdd427c1887669ccf0134",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Native.Index",
+        "NN.Tensor.Internal.Laws.Equivalence",
+        "NN.Tensor.Internal.Elab.Einsum.Index",
+        "NN.Tensor.Internal.Elab.Native.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Transform.View": {
+      "sha256": "10b7a4f339ed315a4aeb59ba738866b26421f35e4d0bfd09c61bfe54105cd809",
+      "imports": [
+        "NN.Tensor.Internal.Lowering.TransformFusion",
+        "NN.Tensor.Internal.Elab.Transform.Index",
+        "NN.Tensor.Internal.Elab.Transform.ViewAttribute",
+        "NN.Tensor.Internal.Elab.Native.Tensor",
+        "NN.Tensor.Internal.Elab.Transform.Index",
+        "NN.Tensor.Internal.Elab.Transform.ViewAttribute"
+      ]
+    },
+    "NN.Tensor.Internal.Elab.Transform.ViewAttribute": {
+      "sha256": "b6547e780762fcc33c0c7144d843f072d8c292e918169ab31f889984c1111613",
+      "imports": [
+        "Lean.Meta.MatchUtil",
+        "Lean.Exception"
+      ]
+    },
+    "NN.Tensor.Internal.Interface": {
+      "sha256": "d291102d863b94df78744ec9213827178c14e10ed29373124bf26b7722362df3",
+      "imports": [
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.Pow",
+        "Mathlib.Tactic.Positivity.Finset",
+        "NN.Tensor.Internal.Elab",
+        "NN.Tactic.Einops",
+        "NN.Tensor.Internal.Elab.Syntax",
+        "NN.Tensor.Internal.Elab.TensorLiteral",
+        "NN.Tensor.Internal.Language",
+        "NN.Tensor.Internal.Laws",
+        "NN.Tensor.Internal.Lowering",
+        "NN.Tensor.Internal.Runtime",
+        "NN.Tensor.Internal.Semantics",
+        "NN.Tensor.Internal.Representation",
+        "NN.Spec.Core.Tensor"
+      ]
+    },
+    "NN.Tensor.Internal.Language": {
+      "sha256": "7745981f605224b3a3005d225e33c3acde3dfe925a408783b80ef12a2d9be959",
+      "imports": [
+        "NN.Tensor.Internal.Check.Einsum",
+        "NN.Tensor.Internal.Check.Pack",
+        "NN.Tensor.Internal.Check.ParseShape"
+      ]
+    },
+    "NN.Tensor.Internal.Laws": {
+      "sha256": "33865f6c01efe155a55148c93c07d57700afa15165122ed828892b61ab4eb1c4",
+      "imports": [
+        "NN.Tensor.Internal.Laws.Equivalence",
+        "NN.Tensor.Internal.Laws.MixedRadix",
+        "NN.Tensor.Internal.Laws.PackIndex",
+        "NN.Tensor.Internal.Laws.ReductionIndex",
+        "NN.Tensor.Internal.Laws.RowMajor"
+      ]
+    },
+    "NN.Tensor.Internal.Laws.Equivalence": {
+      "sha256": "d56302d08144e4f9bff500fc4ebad620a105cc697f55afc7e7022b5b3dadd142",
+      "imports": [
+        "NN.Tensor.Internal.Laws.Equivalence.Index",
+        "NN.Tensor.Internal.Laws.Equivalence.Lowering",
+        "NN.Tensor.Internal.Laws.Equivalence.Plan",
+        "NN.Tensor.Internal.Laws.Equivalence.Semantics"
+      ]
+    },
+    "NN.Tensor.Internal.Laws.Equivalence.Index": {
+      "sha256": "618976d0605e7c45832c4718e43ead23becdb40dc2457d9064b0e094a21726ee",
+      "imports": [
+        "Mathlib.Data.List.GetD",
+        "NN.Tensor.Internal.Lowering.Rearrange"
+      ]
+    },
+    "NN.Tensor.Internal.Laws.Equivalence.Lowering": {
+      "sha256": "7d0b5d1c7f27df8d7fb8787274497b2193340e9082a86a3eb613b6da1164d5a8",
+      "imports": [
+        "NN.Tensor.Internal.Laws.Equivalence.Semantics"
+      ]
+    },
+    "NN.Tensor.Internal.Laws.Equivalence.Plan": {
+      "sha256": "e48727fbc4c0f272994d15099d9bb7a0c180f12522f4410c4dc4eb20d2d9bf76",
+      "imports": [
+        "NN.Tensor.Internal.Laws.Equivalence.Index"
+      ]
+    },
+    "NN.Tensor.Internal.Laws.Equivalence.Semantics": {
+      "sha256": "5d3e6eaa82f4956aa5298cb9b495a66871140ed37ace4954aeaa93c161739d35",
+      "imports": [
+        "NN.Tensor.Internal.Laws.Equivalence.Plan"
+      ]
+    },
+    "NN.Tensor.Internal.Laws.MixedRadix": {
+      "sha256": "ddccbfd4c06ff397ff9ec01a6fd14446a7bfa867128cc5bc4f5af8ca87ac19b1",
+      "imports": []
+    },
+    "NN.Tensor.Internal.Laws.PackIndex": {
+      "sha256": "79fd2ca70b524f23a0157b8aa9c832a522bee5a6702f6907a595d17484927efd",
+      "imports": [
+        "NN.Tensor.Internal.Laws.MixedRadix",
+        "NN.Tensor.Internal.Laws.RowMajor",
+        "NN.Tensor.Internal.Semantics.Pack",
+        "Mathlib.Tactic.Ring",
+        "NN.Tensor.Internal.Laws.Equivalence"
+      ]
+    },
+    "NN.Tensor.Internal.Laws.ReductionIndex": {
+      "sha256": "f00b7d7e9981914096a41593985ec594bca841414b58905f4e5e90599a7682e3",
+      "imports": [
+        "NN.Tensor.Internal.Laws.RowMajor",
+        "NN.Tensor.Internal.Lowering.Reduce",
+        "NN.Tensor.Internal.Laws.Equivalence"
+      ]
+    },
+    "NN.Tensor.Internal.Laws.RowMajor": {
+      "sha256": "667832130c25f28a73d3f19c2ea2044d5c061bd518927d1f491eea6d7cb19abf",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Coordinate",
+        "NN.Tensor.Internal.Representation.Segment",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering": {
+      "sha256": "2f79866fd649298903e81b1767eaa876092127a984046e043eee7bba123cecaf",
+      "imports": [
+        "NN.Tensor.Internal.Lowering.Einsum.Planning",
+        "NN.Tensor.Internal.Lowering.Pack",
+        "NN.Tensor.Internal.Lowering.Rearrange",
+        "NN.Tensor.Internal.Lowering.Reduce.View",
+        "NN.Tensor.Internal.Lowering.Repeat",
+        "NN.Tensor.Internal.Lowering.TransformFusion"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering.Einsum": {
+      "sha256": "0e3abe53691508c0181fa5b2a546556115c97142d8007aab606f4dd5df4643d3",
+      "imports": [
+        "NN.Tensor.Internal.Semantics.Einsum"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering.Einsum.Planning": {
+      "sha256": "04217ece59d7c1d6fb2d40b7d047d3dd80db9c1363726abaea7f79855cc897d3",
+      "imports": [
+        "NN.Tensor.Internal.Lowering.Einsum"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering.Pack": {
+      "sha256": "3de9d3d92bdf8fa0ff63eaca5613f390d83ff50d0d27a97aa24c8666ce103176",
+      "imports": [
+        "NN.Tensor.Internal.Semantics.Pack"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering.Rearrange": {
+      "sha256": "1d2b7c29cb8615d9f9c4c926deacfaf430c594c04e215a1f97f8839348b3ddd2",
+      "imports": [
+        "NN.Tensor.Internal.Semantics.Transform"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering.Reduce": {
+      "sha256": "2efc91e2442b56e5679ed1ee430fb64b9a465a75e5c00184485abfa1c3f18fdc",
+      "imports": [
+        "NN.Tensor.Internal.Lowering.Rearrange"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering.Reduce.View": {
+      "sha256": "117043b3d80e480288ca6257c05efe7e150a465edd2bf9aad0c8797e5c9f8a56",
+      "imports": [
+        "NN.Tensor.Internal.Lowering.Reduce"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering.Repeat": {
+      "sha256": "ded4216f9f77e830ff6a575a32e2b0226f258dd101488018e8b678d0d83c57ae",
+      "imports": [
+        "NN.Tensor.Internal.Semantics.Transform"
+      ]
+    },
+    "NN.Tensor.Internal.Lowering.TransformFusion": {
+      "sha256": "047cf7e0919695c33851efeef5585ba14e395ef528ae34e6758eb5781eb1f68c",
+      "imports": [
+        "NN.Tensor.Internal.Lowering.Repeat",
+        "NN.Tensor.Internal.Laws.Equivalence"
+      ]
+    },
+    "NN.Tensor.Internal.Representation": {
+      "sha256": "789283a8e5727bc716d542f5764b0b158249e7cd5ac7acb1f90ea938e61e7cae",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic",
+        "NN.Tensor.Internal.Representation.Coordinate",
+        "NN.Tensor.Internal.Representation.Fiber",
+        "NN.Tensor.Internal.Representation.Promotion",
+        "NN.Tensor.Internal.Representation.Reduction",
+        "NN.Tensor.Internal.Representation.Segment",
+        "NN.Tensor.Internal.Representation.Vector"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Basic": {
+      "sha256": "91decefb0b01b3f3c1c318cd4520666abd6dfb47fc452a052eda7b61cbc932c9",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Core",
+        "NN.Tensor.Internal.Representation.Basic.Pointwise",
+        "NN.Tensor.Internal.Representation.Basic.Reindex",
+        "NN.Tensor.Internal.Representation.Basic.Traversal"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Basic.Core": {
+      "sha256": "98d323f2d2c9422b2e8382bcf77f8388792139eabbbb7dce5c97af8a1ff99d72",
+      "imports": [
+        "NN.Tensor.Internal.Elab.Native.Loop",
+        "NN.Tensor.Internal.Representation.Shape"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Basic.Pointwise": {
+      "sha256": "047b775449f1186deb06d9e5a25a5617bc00583083218ef3e7fdb04529280545",
+      "imports": [
+        "Mathlib.Algebra.Module.Defs",
+        "NN.Tensor.Internal.Representation.Basic.Core"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Basic.Reindex": {
+      "sha256": "7805d8774d57319643d2b52149a9ee5cf100e8e049330627d10e355987b53aaf",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Pointwise"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Basic.Traversal": {
+      "sha256": "a6d4db4153dcf195e6b120d9e8dd6b6f51e0321bc9d76dabe896ec7c4ff29f10",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Pointwise"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Coordinate": {
+      "sha256": "5696db1f15df1cf68389a1a942db2bfd01234f2aa3987d3bb42812de1de9d684",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Shape"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Fiber": {
+      "sha256": "41ba3ae0fee00435fe8eda1546bcdb55b52fb5204176f0ff9da5d96f9c2dc0c3",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Fiber.Aggregation",
+        "NN.Tensor.Internal.Representation.Fiber.Axis",
+        "NN.Tensor.Internal.Representation.Fiber.Basic",
+        "NN.Tensor.Internal.Representation.Fiber.Differential",
+        "NN.Tensor.Internal.Representation.Fiber.Mean",
+        "NN.Tensor.Internal.Representation.Fiber.Product",
+        "NN.Tensor.Internal.Representation.Fiber.Tie"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Fiber.Aggregation": {
+      "sha256": "92613f6c18e55e5c620f699c5353f723b09f950f160733c884a1198ca91302b2",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Basic.Reindex",
+        "NN.Tensor.Internal.Representation.Fiber.Basic",
+        "NN.Tensor.Internal.Representation.Reduction",
+        "Mathlib.Algebra.BigOperators.Ring.Finset"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Fiber.Axis": {
+      "sha256": "08fec5db8ed7f338b8b9962702635c4b2649b0796c38703e8e9d9694231569f9",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Coordinate",
+        "NN.Tensor.Internal.Representation.Basic.Pointwise",
+        "Mathlib.Data.Fintype.BigOperators"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Fiber.Basic": {
+      "sha256": "acd57ece4c4fa7f0bc6c1487d98ebd662216d5cd152d975aa0f4618215feddc9",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Fiber.Axis"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Fiber.Differential": {
+      "sha256": "eb78ad09d7f6feca910ee73a2e5bd588c77bf658088eb1ca5741fb06e433d152",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Fiber.Aggregation"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Fiber.Mean": {
+      "sha256": "9781d470ee782d540d08d91aa85ec0e7a61931f1a7a12df8c3a37d0294cb2ef0",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Fiber.Differential"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Fiber.Product": {
+      "sha256": "5a8aeac1bcfd8b84d6424a81a4f19963087296c7f92df2c16cf4da9fe612fdf1",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Fiber.Differential"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Fiber.Tie": {
+      "sha256": "252529403ca48b248d740839f32e51abc7e0ec760faef1eaca9104f9d5f8f1b7",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Fiber.Differential"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Promotion": {
+      "sha256": "431b0f493cd68052a983c2f88506701162a543433f6f96044c37ef1ac9684e1a",
+      "imports": [
+        "FloatLib.Floats.Formats.BinaryInterchange.Dyadic.Rational",
+        "FloatLib.Floats.Formats.IEEE754.Native.Model",
+        "NN.Tensor.Internal.Elab.Native.Pointwise"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Reduction": {
+      "sha256": "d165d6282ab7dbe824e030be3d157fcde82b030a5d4384686f0cdc19d15b96d7",
+      "imports": [
+        "Mathlib.Algebra.CharZero.Defs",
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Algebra.BigOperators.Group.Multiset.Basic"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Segment": {
+      "sha256": "1d3a4d1906b4ebf09fa02c0f6d31e2a193cc6869918c136bcf6077387090899c",
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Fin",
+        "NN.Tensor.Internal.Representation.Basic.Reindex",
+        "NN.Tensor.Internal.Representation.Basic.Traversal"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Shape": {
+      "sha256": "d6bc9f269b9653ce3d2b17d5b073ba206fdab75f0520fe76f4417b45a2a31c91",
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Ring.List",
+        "Mathlib.Algebra.GroupWithZero.Nat",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Logic.Equiv.Fin.Basic"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Storage": {
+      "sha256": "9d43e06ad880da35b898c8fddf04944890b5f7e72ee42f3a478cd4a619281811",
+      "imports": [
+        "Batteries.Data.Fin.Fold",
+        "Mathlib.Data.List.OfFn"
+      ]
+    },
+    "NN.Tensor.Internal.Representation.Vector": {
+      "sha256": "b18d2f91ae86619005fbd86f8a53533a910e17b8e4294924a558aa4a673541ab",
+      "imports": [
+        "Batteries.Data.Vector.Lemmas",
+        "NN.Tensor.Internal.Representation.Basic.Reindex",
+        "NN.Tensor.Internal.Representation.Basic.Traversal"
+      ]
+    },
+    "NN.Tensor.Internal.Runtime": {
+      "sha256": "cd22a96c0f452ca82a3134b1eb28f24db9b8eef5fbffdd658d92343d55ac3602",
+      "imports": [
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.Pow",
+        "Mathlib.Tactic.Positivity.Finset",
+        "NN.Tensor.Internal.Elab.Einsum.Parallel",
+        "NN.Tensor.Internal.Elab.Einsum.Tiling",
+        "NN.Tensor.Internal.Elab.Native.Reduce",
+        "NN.Tensor.Internal.Elab.Native.Transpose"
+      ]
+    },
+    "NN.Tensor.Internal.Semantics": {
+      "sha256": "0cc994051b3d7fe08b63d58d29379bb6588606fc64a528bc058eb06f3213f7e3",
+      "imports": [
+        "NN.Tensor.Internal.Semantics.Einsum",
+        "NN.Tensor.Internal.Semantics.Pack",
+        "NN.Tensor.Internal.Semantics.Transform"
+      ]
+    },
+    "NN.Tensor.Internal.Semantics.Einsum": {
+      "sha256": "61666b28ff329860a41f7286e44212265dddc53059c3bfcfbbb187ede0b3afaa",
+      "imports": [
+        "NN.Tensor.Internal.Check.Einsum",
+        "Mathlib.Algebra.BigOperators.Fin",
+        "NN.Tensor.Internal.Representation.Fiber",
+        "Mathlib.Data.Matrix.Mul"
+      ]
+    },
+    "NN.Tensor.Internal.Semantics.Pack": {
+      "sha256": "830c6265ea118bd5d391bb1cf91214c9ce6d16ffb5fbbd5862d82c25de45925e",
+      "imports": [
+        "NN.Tensor.Internal.Check.Pack",
+        "NN.Tensor.Internal.Representation.Segment",
+        "NN.Tensor.Internal.Representation.Fiber"
+      ]
+    },
+    "NN.Tensor.Internal.Semantics.Transform": {
+      "sha256": "a37841ef1a2ae3f3a6dbad958579dd11058134b0330e4345698a422e15af94c7",
+      "imports": [
+        "NN.Tensor.Internal.Semantics.Transform.Geometry",
+        "NN.Tensor.Internal.Semantics.Transform.RearrangeRepeat",
+        "NN.Tensor.Internal.Semantics.Transform.Reduction"
+      ]
+    },
+    "NN.Tensor.Internal.Semantics.Transform.Geometry": {
+      "sha256": "fac94e62f7796a020066c00851acb54c8674ad25f95fc1ade075758f8412edee",
+      "imports": [
+        "NN.Tensor.Internal.Check.Transform",
+        "NN.Tensor.Internal.Representation.Fiber",
+        "Mathlib.Algebra.BigOperators.GroupWithZero.Action"
+      ]
+    },
+    "NN.Tensor.Internal.Semantics.Transform.RearrangeRepeat": {
+      "sha256": "cdb629726803f58100af63306dbd1dba48855493037e57aefe63bcf13b4db142",
+      "imports": [
+        "NN.Tensor.Internal.Semantics.Transform.Geometry"
+      ]
+    },
+    "NN.Tensor.Internal.Semantics.Transform.Reduction": {
+      "sha256": "1b8638a8fca9e9fd1f65788bcdc692a22d19e6fa21712251c265e9d99261153b",
+      "imports": [
+        "NN.Tensor.Internal.Semantics.Transform.Geometry"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Ast": {
+      "sha256": "89540ae6eb3e525f2b55b4516a62c897ee5e15bbc2bf2f84b692ce100b8d6d6f",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Span"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Diagnostic": {
+      "sha256": "80f531062982beef42c9b98fa7a3eaa6c7699e9041264e2962eaa08672d7c181",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Span"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Lexer": {
+      "sha256": "2a8c8a5751aef7f1578acd554b1e8e5b38d2dfe770ee1d0118893f978220eb4b",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Diagnostic",
+        "NN.Tensor.Internal.Syntax.UnicodeData"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser": {
+      "sha256": "aa7ccfa84af3aeaacaaa7f636e39e4008f724629c060fc019e87851b49bc4b44",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Einsum",
+        "NN.Tensor.Internal.Syntax.Parser.Pack",
+        "NN.Tensor.Internal.Syntax.Parser.Transform"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Einsum": {
+      "sha256": "71e572b473502cec15c5f3b0b7d91d3501fbbccc64ccfe1ff0484ea6250c9e03",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Expression"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Expression": {
+      "sha256": "1dc3a104f1bad520ca8c57dbeaac9349bb072e435271fb609cf7f3f30d0582d3",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Expression.Config",
+        "NN.Tensor.Internal.Syntax.Parser.Expression.Parse",
+        "NN.Tensor.Internal.Syntax.Parser.Expression.Roundtrip",
+        "NN.Tensor.Internal.Syntax.Parser.Expression.Split",
+        "NN.Tensor.Internal.Syntax.Parser.Expression.State"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Expression.Config": {
+      "sha256": "2dce40cc33bcd9adf16743129f542e7b829c8bc3a84dce07e49d6b664a4717c7",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Ast"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Expression.Parse": {
+      "sha256": "badf5bc02ec14018a86e517cbff44196f2f9b4fcbe1af812de19222de3741729",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Expression.State"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Expression.Roundtrip": {
+      "sha256": "0120fa9cab4ef124387919c699f04f9658912e30645438768bdb5756c865e691",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Expression.Parse"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Expression.Split": {
+      "sha256": "39b934affd8998d9f54c4d854c4ab837483d5b6890bf8bee72c860650e953aca",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Expression.State"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Expression.State": {
+      "sha256": "02c36b42c9b5c37c04c070ad6a9b852958331e2431b59bc70bc922f6f980dc61",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Expression.Config",
+        "NN.Tensor.Internal.Syntax.Render"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Pack": {
+      "sha256": "0f0c69d26989995f9816fad8082ba4963ee7493cccefed9175c7b317dc7ac4ae",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Expression"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Parser.Transform": {
+      "sha256": "b7a4b0d1e1401481b890646aa522648c1a1ee4b44c0ec26e811e42f7e6239769",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Parser.Expression"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Render": {
+      "sha256": "a0d6dbac870f22516e343e74687fe71038da10e9eb11a190dc39ee63e84084a0",
+      "imports": [
+        "NN.Tensor.Internal.Syntax.Ast",
+        "NN.Tensor.Internal.Syntax.Lexer"
+      ]
+    },
+    "NN.Tensor.Internal.Syntax.Span": {
+      "sha256": "386e47b48f9fd715799365a49a33e09bc0d6932a7abb196e8fd174e44956f01e",
+      "imports": []
+    },
+    "NN.Tensor.Internal.Syntax.UnicodeData": {
+      "sha256": "732299b465a58f925ce5ce9186a37623f561b633e1d6faba0dddf82b8c12e2df",
+      "imports": []
+    },
+    "NN.Tensor.LinearAlgebra": {
+      "sha256": "49daa8498a187fd9d47f08cfda2760de4127037cec6f8fe20e5b609f2e32f1d0",
+      "imports": [
+        "NN.Spec.Core.Tensor.Factorizations",
+        "NN.Tensor.Reductions"
+      ]
+    },
+    "NN.Tensor.Operations": {
+      "sha256": "2e2f5c503e2adb7a15ccc5002c759ecc2eb91e4ca649d4999067fa5f011a51dc",
+      "imports": [
+        "NN.Spec.Layers.Activation",
+        "NN.Spec.Layers.Linear",
+        "NN.Tensor.Internal.Representation.Promotion",
+        "NN.Spec.Core.TensorReductionShape.ConcatSlice",
+        "NN.Tensor.Constructors"
+      ]
+    },
+    "NN.Tensor.Pack": {
+      "sha256": "2b0d1e6fec40d172723d2a689ab8c2474baa631e5d069c89f6ac6c1d6aa7e9db",
+      "imports": [
+        "NN.Spec.Core.TensorOps"
+      ]
+    },
+    "NN.Tensor.Packing": {
+      "sha256": "ccb8af8e6dd95baf094e65a4e121295ab46247561fbff19d66627fc6419916aa",
+      "imports": [
+        "NN.Spec.Core.Tensor"
+      ]
+    },
+    "NN.Tensor.Reductions": {
+      "sha256": "d386341d37d14726247ec72391c2a39aab98eb11e597bdf80311981f479a38c3",
+      "imports": [
+        "NN.Tensor.Operations"
+      ]
+    },
+    "NN.Tensor.ShapeErasure": {
+      "sha256": "a645224136fb4277ca0548408c3650116ec96a52904b6217433986511fdcc847",
+      "imports": [
+        "NN.Spec.Core.Tensor.SomeTensor",
+        "NN.Tensor.Pack"
+      ]
+    },
+    "NN.Tensor.Storage": {
+      "sha256": "01db68664dce9ddc96b6d48d3426bcc28bdb9c4d197c98fc2ecafa23699db8c3",
+      "imports": [
+        "NN.Tensor.Internal.Representation.Storage"
+      ]
+    }
+  }
+}

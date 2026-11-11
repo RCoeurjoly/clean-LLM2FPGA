@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-02 09:12:37 UTC",
+  "pinned_commit": "f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b",
+  "files": [
+    {
+      "path": "NN/Runtime/PyTorch/Export/TorchExport.lean",
+      "git_blob_sha": "8b8acb8b32f7b4fda8122ff409a8da6db8182866",
+      "url": "https://github.com/lean-dojo/TorchLean/blob/main/NN/Runtime/PyTorch/Export/TorchExport.lean",
+      "matches_local_pinned_blob": true
+    },
+    {
+      "path": "NN/Runtime/PyTorch/Import/TorchExport.lean",
+      "git_blob_sha": "9bc47b9ec1aaf903377ad21c7a09b0bfcffe8347",
+      "url": "https://github.com/lean-dojo/TorchLean/blob/main/NN/Runtime/PyTorch/Import/TorchExport.lean",
+      "matches_local_pinned_blob": true
+    },
+    {
+      "path": "NN/Runtime/IR.lean",
+      "git_blob_sha": "77365470a44a220741839a4a0067dc7e62da0f2b",
+      "url": "https://github.com/lean-dojo/TorchLean/blob/main/NN/Runtime/IR.lean",
+      "matches_local_pinned_blob": true
+    },
+    {
+      "path": "lake-manifest.json",
+      "git_blob_sha": "98b9e80903fa0b192afec06ad3a9c3a3829c9bb5",
+      "url": "https://github.com/lean-dojo/TorchLean/blob/main/lake-manifest.json",
+      "matches_local_pinned_blob": true
+    }
+  ]
+}

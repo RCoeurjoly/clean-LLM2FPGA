@@ -1,0 +1,10 @@
+{
+  "generated_by": "Export.PyTorch.TorchExport.script evaluated in Lean 4.35.0",
+  "path": "/tmp/llm2fpga-torchlean-import/capture_adapter.py",
+  "sha256": "0b8ca3cc8d882a92de05ed1dc750ecbd6ef46d2497821aee3039aba1074d4565",
+  "byte_for_byte_equal_to_reconstructed_adapter": true,
+  "generation_command_report": "03-emit-adapter.json",
+  "operator_rules_modified": false,
+  "retained_adapter": "research/yosys-lean-2026-11-02/torchlean-import-run/artifacts/capture_adapter.py",
+  "retained_sha256": "0b8ca3cc8d882a92de05ed1dc750ecbd6ef46d2497821aee3039aba1074d4565"
+}

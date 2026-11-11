@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-11-02T00:36:05.401341+00:00",
+  "scope": "One whole-design reset/idle trace; no inference or all-input theorem",
+  "initial_completion": "Known initial bits retained; unknown bits and arbitrary inputs zero for this trace only",
+  "status": "failed",
+  "completed": [
+    "10-native-runtime-c",
+    "11-native-trace-c",
+    "12-native-link"
+  ],
+  "active": "07-rtl-compile",
+  "failed_stage": "07-rtl-compile",
+  "returncode": 143,
+  "finished_at": "2026-11-02T00:53:03.980637+00:00"
+}

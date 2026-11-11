@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-01T23:14:59.613934+00:00",
+  "endpoint": "repos/unbalancedparentheses/verified-hardware-synthesis/tarball/11195d4e50e0670dd209e2682ae15b57414e63cf",
+  "exit_code": 0,
+  "archive_bytes": 5372,
+  "sha256": "0852c0c72cad177a04685c030acbdf900c00a263219c1c8dd54b6821c2332744",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 11184,
+      "sha256": "3c00eb7b4ec507f2f14694905032652de4d87e97cae49894c19bfcf227f0af4f"
+    }
+  ]
+}

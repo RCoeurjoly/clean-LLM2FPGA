@@ -1,0 +1,27 @@
+{
+  "stage": "12-native-link",
+  "command": [
+    "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/leanc",
+    "-O3",
+    "-o",
+    "/tmp/llm2fpga-full-hardware-20261102/full-reset-lean",
+    "/tmp/llm2fpga-full-hardware-20261102/Functional.c",
+    "/tmp/llm2fpga-full-hardware-20261102/FullReset.c"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:36:08.222987+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 6.842556663003052,
+  "finished_at": "2026-11-02T00:36:15.065664+00:00"
+}

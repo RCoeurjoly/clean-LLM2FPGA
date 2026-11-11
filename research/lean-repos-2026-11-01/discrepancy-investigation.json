@@ -1,0 +1,101 @@
+[
+  {
+    "query": "language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+    "sort": "stars",
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": []
+  },
+  {
+    "query": "language:lean is:public created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+    "sort": "stars",
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": []
+  },
+  {
+    "query": "created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+    "sort": "stars",
+    "total_count": 8,
+    "incomplete_results": false,
+    "items": [
+      {
+        "id": 1377321798,
+        "full_name": "taiduydinh/event-sleep-former",
+        "private": false,
+        "visibility": "public",
+        "language": "Python",
+        "created_at": "2026-09-19T15:34:11Z",
+        "archived": false,
+        "disabled": false
+      },
+      {
+        "id": 1377321809,
+        "full_name": "ChuninRegenerate/iodjewmf",
+        "private": false,
+        "visibility": "public",
+        "language": null,
+        "created_at": "2026-09-19T15:34:11Z",
+        "archived": false,
+        "disabled": false
+      },
+      {
+        "id": 1377321796,
+        "full_name": "ChJL/view-dash",
+        "private": false,
+        "visibility": "public",
+        "language": "HTML",
+        "created_at": "2026-09-19T15:34:11Z",
+        "archived": false,
+        "disabled": false
+      },
+      {
+        "id": 1377321807,
+        "full_name": "smithvanessa66/gwealc",
+        "private": false,
+        "visibility": "public",
+        "language": null,
+        "created_at": "2026-09-19T15:34:11Z",
+        "archived": false,
+        "disabled": false
+      },
+      {
+        "id": 1377321801,
+        "full_name": "Alvaroabtj/Elisa",
+        "private": false,
+        "visibility": "public",
+        "language": "CSS",
+        "created_at": "2026-09-19T15:34:11Z",
+        "archived": false,
+        "disabled": false
+      },
+      {
+        "id": 1377321795,
+        "full_name": "garciatodd42/ygctpj",
+        "private": false,
+        "visibility": "public",
+        "language": null,
+        "created_at": "2026-09-19T15:34:11Z",
+        "archived": false,
+        "disabled": false
+      },
+      {
+        "id": 1377321808,
+        "full_name": "douglasrichard93/bcnyne",
+        "private": false,
+        "visibility": "public",
+        "language": null,
+        "created_at": "2026-09-19T15:34:11Z",
+        "archived": false,
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "query": "language:lean created:2026-09-19T15:34:11Z..2026-09-19T15:34:11Z",
+    "sort": "updated",
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": []
+  }
+]

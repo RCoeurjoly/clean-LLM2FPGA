@@ -1,0 +1,8 @@
+{
+  "package_source": "/nix/store/3b1gijjb08jm6wdg2dr1ml7pl6a428gx-source",
+  "ref": "v0.62",
+  "file": "backends/functional/smtlib.cc",
+  "git_blob_sha": "1504c8fbad83b07d9c07b59e0708d52dc2357fa9",
+  "sha256": "433755f36cd859e076c0f0336849757aa783fce0d889d12a1047b8afe5f19448",
+  "ordering": "records, Pair, complete transfer, initializer declaration/assertions"
+}

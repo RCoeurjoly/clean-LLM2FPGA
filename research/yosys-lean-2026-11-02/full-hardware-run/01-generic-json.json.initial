@@ -1,0 +1,26 @@
+{
+  "stage": "01-generic-json",
+  "command": [
+    "/nix/store/vjqba2jj3231f14vhspj2mvs1k1z4mm4-llm2fpga-yosys-sdp72-parity/bin/yosys",
+    "-Q",
+    "-T",
+    "-s",
+    "/home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/full-hardware-run/01-generic-json.ys"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-01T23:53:24.006273+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 38.15176855800382,
+  "finished_at": "2026-11-01T23:54:02.158168+00:00"
+}

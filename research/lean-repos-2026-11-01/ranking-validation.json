@@ -1,0 +1,16 @@
+{
+  "fresh_query_total": 8672,
+  "fresh_query_incomplete": false,
+  "fresh_query_returned": 100,
+  "same_top100_set": false,
+  "only_in_fresh": [
+    "The-Last-Math-Competition/The-Last-Math-Competition",
+    "emilyriehl/ReintroductionToProofs"
+  ],
+  "only_in_census_ranking": [
+    "marcusrossel/lean-egg",
+    "sunblaze-ucb/vero"
+  ],
+  "fresh_cutoff_stars": 74,
+  "census_cutoff_stars": 78
+}

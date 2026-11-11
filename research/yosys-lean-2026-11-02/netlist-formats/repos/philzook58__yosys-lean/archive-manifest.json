@@ -1,0 +1,779 @@
+{
+  "utc": "2026-11-01T23:15:01.651826+00:00",
+  "endpoint": "repos/philzook58/yosys-lean/tarball/9e575011c948f4ee6e422c7acfa5c453d9f8ebff",
+  "exit_code": 0,
+  "archive_bytes": 764205,
+  "sha256": "ed4fb7b95978da6c9ab734d1c2162625fcfd28c367a3c22c48ad8b8a3d776888",
+  "files": [
+    {
+      "path": "Examples.lean",
+      "bytes": 88,
+      "sha256": "b9cd14fdd9c6e5234b521e0d7a3d16308728b3b48c60c4d45c35eb3681e20f32"
+    },
+    {
+      "path": "Examples/AXILProofs.lean",
+      "bytes": 7305,
+      "sha256": "18283efbf6814d4185a0986b8c2938ddf7bb03e7016714c552d39d88a3653528"
+    },
+    {
+      "path": "Examples/AdderProofs.lean",
+      "bytes": 591,
+      "sha256": "01850394a96daf8a707fae1d06a6cfa1e11eadc393c4c7c14eb1651208dd708d"
+    },
+    {
+      "path": "Examples/AdderSupport.lean",
+      "bytes": 7064,
+      "sha256": "e811cb0fa0326d0885ead4c4a3bd94a4b1d7bf98c8309b090ec40dc28ff13016"
+    },
+    {
+      "path": "Examples/BarrelMultiplierProofs.lean",
+      "bytes": 8575,
+      "sha256": "87dd6de4dad1e01849f0356e26c0c04e0818150e689db109c07b017223cebbf5"
+    },
+    {
+      "path": "Examples/BugCounterexamples.lean",
+      "bytes": 4436,
+      "sha256": "67e5179aa403e88059111612455f5a957b87318f600b9798c7b89b8b1ae4d1ce"
+    },
+    {
+      "path": "Examples/BusCounterexamples.lean",
+      "bytes": 4313,
+      "sha256": "ac779f28d260e7b327c867d596b42e207c09a8836e491b2cda9ec2bb30ce54c0"
+    },
+    {
+      "path": "Examples/CrcProofs.lean",
+      "bytes": 6736,
+      "sha256": "1a23fe192219ef774e31724af0adb1674e233ebcc065547790130aaed4735e63"
+    },
+    {
+      "path": "Examples/Divider32Proofs.lean",
+      "bytes": 15769,
+      "sha256": "111452bd7e0cec6116e930e7421c2ff266d687e000079ac58b39a6a3382bfa20"
+    },
+    {
+      "path": "Examples/DividerArithmetic.lean",
+      "bytes": 3220,
+      "sha256": "d6b5d4354c464a10a11b1df47273e20d141f2a2dbd8db7ff6375370d6c388698"
+    },
+    {
+      "path": "Examples/DividerProofs.lean",
+      "bytes": 7358,
+      "sha256": "cf0da2267bc50caf7ff81aa2e2bb2e21c0b8b937bd9ca459f0ec2c61d70e971e"
+    },
+    {
+      "path": "Examples/DividerSignedProofs.lean",
+      "bytes": 12287,
+      "sha256": "64c60ae65f4b1bbe24f688de919f089906750310bfd12e9e0eaa3a19c564647e"
+    },
+    {
+      "path": "Examples/ElasticProofs.lean",
+      "bytes": 4774,
+      "sha256": "2f808aabd58c7d8421f8ce1e3c8c60979b86a13e92182d7e80e715b1c1aa6447"
+    },
+    {
+      "path": "Examples/FormalTutorialProofs.lean",
+      "bytes": 5220,
+      "sha256": "3c0f0e46ccfe21ef131d4eba74c7b34b567582caeea961b7ebca6d4bf7728ff1"
+    },
+    {
+      "path": "Examples/Generated/BarrelMul.lean",
+      "bytes": 9394,
+      "sha256": "905615feaa1fcd9a84832059852d9b860638b9a21e2d0d8dad376428add7b047"
+    },
+    {
+      "path": "Examples/Generated/BugCounter.lean",
+      "bytes": 4521,
+      "sha256": "ee2527a290d62147f29938078f95ede1d389c57d54bba4df949c3079ce1e174a"
+    },
+    {
+      "path": "Examples/Generated/BugShift.lean",
+      "bytes": 2642,
+      "sha256": "d318d54eb89cc2aa7d12b28f48a70f1217b12b8b64e6675963cd8af5316ae193"
+    },
+    {
+      "path": "Examples/Generated/BugStall.lean",
+      "bytes": 7424,
+      "sha256": "db9f05c7859deb04d078fd8911fdd3a569facd68df94e6ab6b4fefdfea645936"
+    },
+    {
+      "path": "Examples/Generated/CrcByte.lean",
+      "bytes": 9180,
+      "sha256": "8c9dbc989b2c88f0c7f4e682f7fa62e47d65ecdb5b457cc752275f3cf561e4a1"
+    },
+    {
+      "path": "Examples/Generated/CrcSerial.lean",
+      "bytes": 4867,
+      "sha256": "d760833f5388bd7dd3ca8c3c660257443f4682247487ca39def3853bd995dea1"
+    },
+    {
+      "path": "Examples/Generated/EQYFSM.lean",
+      "bytes": 9030,
+      "sha256": "f55cdddec0c7dfe92c0a99791c7f700919337b40768b6c81705149765a371991"
+    },
+    {
+      "path": "Examples/Generated/EQYFSMBad.lean",
+      "bytes": 9336,
+      "sha256": "fb24c988d7b14e46aed1f620077fe04637492fd63e62300f3e10a9e7f90e8d56"
+    },
+    {
+      "path": "Examples/Generated/Elastic.lean",
+      "bytes": 4651,
+      "sha256": "00e2c4c4d67922532b5a0857192eab754d5ce01f7f2881c327e7ff5ff4b14172"
+    },
+    {
+      "path": "Examples/Generated/FixedCounter.lean",
+      "bytes": 4524,
+      "sha256": "34ac9a306be0f0996ecfb9298b44148fd5298d71df35d650da31b302859253b2"
+    },
+    {
+      "path": "Examples/Generated/FixedShift.lean",
+      "bytes": 2160,
+      "sha256": "b88f5a1b44cc4e73c562c7bf34934fe8a673346fa45676f72b6af49de629458d"
+    },
+    {
+      "path": "Examples/Generated/FixedStall.lean",
+      "bytes": 7591,
+      "sha256": "4207cd03e5cb80c305ded4a4a2dd6d8a8c0ca3856a3871766f96154469924179"
+    },
+    {
+      "path": "Examples/Generated/Hack.lean",
+      "bytes": 9642,
+      "sha256": "731a33bae017f2b5d5f5d192a3f67c373d5761781cb7a774b5e2bbafd3101629"
+    },
+    {
+      "path": "Examples/Generated/IbexALU.lean",
+      "bytes": 39384,
+      "sha256": "6b941af5d758f0d871bdeb437b1fa6558e1c52ea6d02df35c8d94ccdfa4b089f"
+    },
+    {
+      "path": "Examples/Generated/NervAdd.lean",
+      "bytes": 181791,
+      "sha256": "eb0b9192c25ac05d54c38e03d00bf5ca0da43398461a26713566010731063df6"
+    },
+    {
+      "path": "Examples/Generated/NervAddView.lean",
+      "bytes": 242032,
+      "sha256": "75afe6c4a1c41d8e92d91c68379602a856b0564c9ab92e886d8a2510137396fd"
+    },
+    {
+      "path": "Examples/Generated/NervAddi.lean",
+      "bytes": 179080,
+      "sha256": "80273662b3bd470e833c9c73fa6b7a6e2803a13d97f0d591407ed7794e05b3a7"
+    },
+    {
+      "path": "Examples/Generated/NervAddiBad.lean",
+      "bytes": 179958,
+      "sha256": "6c2626c5f240c01364d699c01aa6c28f182ca40722af838be9e9b2ecb2e46977"
+    },
+    {
+      "path": "Examples/Generated/NervFaultAlias.lean",
+      "bytes": 218954,
+      "sha256": "03ed5ec65bc7b00c147adbcb4baeea58f20ee67e8d369dc05307f72af93252b4"
+    },
+    {
+      "path": "Examples/Generated/NervFaultControl.lean",
+      "bytes": 223318,
+      "sha256": "cb862b827a5ebdbf0cc59e0632136437b125fd1ec56f7de02d3f26e2847c2d5e"
+    },
+    {
+      "path": "Examples/Generated/NervFaultFetch.lean",
+      "bytes": 220900,
+      "sha256": "deddf030e9a586f8a779876de6753a74b74501a73283bde18b21b252e100be07"
+    },
+    {
+      "path": "Examples/Generated/NervFaultLoad.lean",
+      "bytes": 224721,
+      "sha256": "5d21d0e88c8914ad73b3ef8d62e0687088975791a5db9b9133bd9cd3368e8591"
+    },
+    {
+      "path": "Examples/Generated/NervFaultOperand.lean",
+      "bytes": 217155,
+      "sha256": "32b514d243dac59baab7b39f9869924c37ed648188fb902527678e1479516f29"
+    },
+    {
+      "path": "Examples/Generated/NervFaultStall.lean",
+      "bytes": 219113,
+      "sha256": "17abd3f8b65ec7b1dc5c97d23349717420f48940cee66a030d9c5667a4668fff"
+    },
+    {
+      "path": "Examples/Generated/NervFetch.lean",
+      "bytes": 183837,
+      "sha256": "7cfec9542ea6a6912271299ffb3b0ef5d532f11dbbbe8e4034840a74fcb6bcb6"
+    },
+    {
+      "path": "Examples/Generated/NervFetchBridge.lean",
+      "bytes": 14664,
+      "sha256": "233667c0fa9ad5467e063a0e87c0e96993f247197471bb2b9df1926ba7801b18"
+    },
+    {
+      "path": "Examples/Generated/NervFetchView.lean",
+      "bytes": 244281,
+      "sha256": "77f17f650546e528008a9926a2bc73f63d9d10d11c7d935d38ff2f0c3ea0bb26"
+    },
+    {
+      "path": "Examples/Generated/NervWriteBad.lean",
+      "bytes": 181067,
+      "sha256": "fa207b1cff606be97ce7558d388104a0fd88be94b3cfa3c6c229bb3913a532ee"
+    },
+    {
+      "path": "Examples/Generated/Original.lean",
+      "bytes": 9248,
+      "sha256": "2ff7b42fa096d11d9b3df5554bb432f56132862d9e48b97edcb4a438071905a5"
+    },
+    {
+      "path": "Examples/Generated/Prefix32.lean",
+      "bytes": 48524,
+      "sha256": "0808e97d6c07eab9920420dac3af116ca75723fca740e8b05446e23a5f94cd56"
+    },
+    {
+      "path": "Examples/Generated/Prefix32Wires.lean",
+      "bytes": 49004,
+      "sha256": "a4bb794c89b7b73aca9c9c10fdba4fead59346f6c49ff671bfaba2036f761d0b"
+    },
+    {
+      "path": "Examples/Generated/Ripple32.lean",
+      "bytes": 34810,
+      "sha256": "5e8878322374897abf8a1cb48e3aa4f30fcc7efd4b6833ff80161ffa1e3a4af4"
+    },
+    {
+      "path": "Examples/Generated/Ripple32Wires.lean",
+      "bytes": 35882,
+      "sha256": "7a21b883348f342381ff3b0f85a8621c6516a4edf71a8e4cf3d7bfa95725dd96"
+    },
+    {
+      "path": "Examples/Generated/SBYAccumulator.lean",
+      "bytes": 8810,
+      "sha256": "40c37f2c240e094c2c9ac65b229f2980f4227fc2bb962cad502ca2a0d1c25087"
+    },
+    {
+      "path": "Examples/Generated/SBYCounter.lean",
+      "bytes": 3220,
+      "sha256": "12f8bd7d0a6b5403f8b574c575037edcce48c254bce8760f47bce7a6dfe2ab0f"
+    },
+    {
+      "path": "Examples/Generated/SBYCover.lean",
+      "bytes": 3735,
+      "sha256": "1f28adcd0c56dc83c4eab527b386d9e59ce87553e4b0cb0965fd8a04b91b0172"
+    },
+    {
+      "path": "Examples/Generated/SMTIncrement.lean",
+      "bytes": 5843,
+      "sha256": "218d14cd5c060d60bd7a9e537c19d14523c9d35a1fcfe3b29594f17a52b1c24c"
+    },
+    {
+      "path": "Examples/Generated/ShiftAdd.lean",
+      "bytes": 7821,
+      "sha256": "856b2393f473d1afa3f80e0c5828f8a3164f4b38cb5e46e256d671e8834eeb68"
+    },
+    {
+      "path": "Examples/Generated/TwoCycle.lean",
+      "bytes": 10997,
+      "sha256": "9882422796af6549c95fd303310e26987ae0d43c11b7c2e9a4928e22b371021c"
+    },
+    {
+      "path": "Examples/Generated/ZipAXIL.lean",
+      "bytes": 19163,
+      "sha256": "22817520b2f5e3d2c8e3b8586b7b743ae14a9aee191ce6683135ae5d3de1b839"
+    },
+    {
+      "path": "Examples/Generated/ZipAXILBad.lean",
+      "bytes": 13085,
+      "sha256": "c99a7fe5aeb2454e63902e0905af0e4db20c8810c2bacbf2577b4845eca05e1f"
+    },
+    {
+      "path": "Examples/Generated/ZipAXILBadFormal.lean",
+      "bytes": 137782,
+      "sha256": "a4a07d242951a4694f566c7c6c36b0167dd33f86b0f345bf3f15909e3fe45ee8"
+    },
+    {
+      "path": "Examples/Generated/ZipAXILFormal.lean",
+      "bytes": 143349,
+      "sha256": "947ea7ca129a826366b7b9300c0a0de6d4ae2068a79901de692da81971b1f173"
+    },
+    {
+      "path": "Examples/Generated/ZipDiv32.lean",
+      "bytes": 20755,
+      "sha256": "92e5bed549329b4e565f59e4eea0428e0ca26abf866db282756a0b70af9577da"
+    },
+    {
+      "path": "Examples/Generated/ZipDiv4.lean",
+      "bytes": 20180,
+      "sha256": "40eb8cc1a8d039965c402cf0c423b81012a3e0ffefc7ccecf12a4e443aed3190"
+    },
+    {
+      "path": "Examples/Generated/ZipDivFormal.lean",
+      "bytes": 56004,
+      "sha256": "bf6f2b8357f9e6d99585a5cebde5cff083e8db20eabe8cdd0543149836bdec80"
+    },
+    {
+      "path": "Examples/Generated/ZipSkid.lean",
+      "bytes": 4688,
+      "sha256": "ee6ae554ec69ec2e15599f2f53463a5863242e0882aee049c5f78ddaa3bba2e6"
+    },
+    {
+      "path": "Examples/Generated/ZipSkidBad.lean",
+      "bytes": 4967,
+      "sha256": "1c76f3f770e9aec04fc1dd92f7c5f14731023719b1ec17b9bcd48c958726a656"
+    },
+    {
+      "path": "Examples/Generated/ZipSkidBadFormal.lean",
+      "bytes": 32796,
+      "sha256": "2b51d0c200ce26ad8095bd258132305fa052ea7044764578de06ecc71ffb6dcd"
+    },
+    {
+      "path": "Examples/Generated/ZipSkidFormal.lean",
+      "bytes": 33385,
+      "sha256": "43f530986f25f7e20ebc6b6764d19c5094cd9209649ad21c17ff55251f9416cd"
+    },
+    {
+      "path": "Examples/HackProofs.lean",
+      "bytes": 5449,
+      "sha256": "949f10dad1816a6b61d707eda50a484c285db15524badebb6163e2dd216aa844"
+    },
+    {
+      "path": "Examples/HackSpec.lean",
+      "bytes": 1905,
+      "sha256": "ad856a89b7e7dbc32513ef3f5943933bb45cc834176f3efcb9ffedf0dabddd98"
+    },
+    {
+      "path": "Examples/IbexALUProofs.lean",
+      "bytes": 3364,
+      "sha256": "ef530183020a3523c7bf028b1164d515743c843c332ff7dc9aa9dbb2e7ee3fc0"
+    },
+    {
+      "path": "Examples/KernelBV.lean",
+      "bytes": 613,
+      "sha256": "605bba62bf590766cff164b146eb0134c0b8dcea62c065419b8dfbe8e3192822"
+    },
+    {
+      "path": "Examples/MultiplierProofs.lean",
+      "bytes": 8215,
+      "sha256": "687eee16ebdcb18861ff63c037f55ab4e2b229d44b4d412aaabf734c653835a5"
+    },
+    {
+      "path": "Examples/NervArchitecture.lean",
+      "bytes": 11240,
+      "sha256": "3680c05eb27cc0129e0a4bb6a010429c7230cc099073403c0219a53f718637c0"
+    },
+    {
+      "path": "Examples/NervArchitectureCounterexample.lean",
+      "bytes": 1404,
+      "sha256": "8053902c3d7234eca5582c4272a22902de15bb8be065f8db1f027343060f4395"
+    },
+    {
+      "path": "Examples/NervArithmetic.lean",
+      "bytes": 7727,
+      "sha256": "9d239aa6ae79a01c0c7d7648dc68f4ce254c474dadc1e44cfc6b3935e28a5a87"
+    },
+    {
+      "path": "Examples/NervControl.lean",
+      "bytes": 7763,
+      "sha256": "10e721915f744d4190a1b931d620a6e82670f2883b0a25c04e23a0e650ae7305"
+    },
+    {
+      "path": "Examples/NervControlDecode.lean",
+      "bytes": 12647,
+      "sha256": "37c99d8018525cf6427aa16bb98aee9073c5de650b8fc0beb10d258fe84766dc"
+    },
+    {
+      "path": "Examples/NervControlExample.lean",
+      "bytes": 5859,
+      "sha256": "463553142bb386075610364feb72ddcbe2a72e89c32f6cab2d1459855e5dcc75"
+    },
+    {
+      "path": "Examples/NervControlProgram.lean",
+      "bytes": 5470,
+      "sha256": "cd1f17d77b8e8c11d2e5c5e156497bd9592014528a57951fdfeb7a0539654fa9"
+    },
+    {
+      "path": "Examples/NervCounterexamples.lean",
+      "bytes": 878,
+      "sha256": "70b544308df1724e86a1411aa72b3937f0cb77132226048812246e0da038167b"
+    },
+    {
+      "path": "Examples/NervFaultAlias.lean",
+      "bytes": 1118,
+      "sha256": "5cc21e529ff2bd505021e6abca4335170e2304c2ca2a86b9bda60480c2cd1eae"
+    },
+    {
+      "path": "Examples/NervFaultControls.lean",
+      "bytes": 1051,
+      "sha256": "9b513fbb43953b7f53dcaf6855dc04b2495c5b6d181dafa06524da214f616bd1"
+    },
+    {
+      "path": "Examples/NervFaultFetch.lean",
+      "bytes": 1115,
+      "sha256": "dad7c6d389656f8568d1115962e375011a3b9d2b8a7b00df3ebfbf675accbc53"
+    },
+    {
+      "path": "Examples/NervFaultLoad.lean",
+      "bytes": 1114,
+      "sha256": "1311b1d8e5028faac22c232bade2b84caa67b53483c09da3fea39fe26ff67851"
+    },
+    {
+      "path": "Examples/NervFaultOperand.lean",
+      "bytes": 1126,
+      "sha256": "4f6ed382cd9beea5f2a1856c6a5240636154f622be4fd0d8e0c14226788b5396"
+    },
+    {
+      "path": "Examples/NervFaultStall.lean",
+      "bytes": 1118,
+      "sha256": "9c58c7bfb75e8d2769a1ee048616135da0b28eea8e18daaa9a0cbe0ef6d6ee79"
+    },
+    {
+      "path": "Examples/NervFaults/Control.lean",
+      "bytes": 926,
+      "sha256": "c763e22bde13ede43dec9263d860bcafbd6e8e5516042ddbda7b84422ed7dea2"
+    },
+    {
+      "path": "Examples/NervFaults/ControlAlias.lean",
+      "bytes": 558,
+      "sha256": "cbb50e33e58e81adde750a02191459dfcb21a3a4a65b612f34628a731efc75e9"
+    },
+    {
+      "path": "Examples/NervFaults/ControlFetch.lean",
+      "bytes": 558,
+      "sha256": "debc6d51b98f41bbd9fa58cb19df568ff47d141789ddb9e05cf6bb2d96c4b873"
+    },
+    {
+      "path": "Examples/NervFaults/ControlLoad.lean",
+      "bytes": 556,
+      "sha256": "f350503d76c7872c966491c6d0b919774eff095e9f59d1890023f4ccd7157d87"
+    },
+    {
+      "path": "Examples/NervFaults/ControlOperand.lean",
+      "bytes": 562,
+      "sha256": "8c4dcd5a3b503bc1949bb33cf473ab9194630d8724206c909a78873232df6b4c"
+    },
+    {
+      "path": "Examples/NervFaults/ControlStall.lean",
+      "bytes": 558,
+      "sha256": "68970b527956f067de859c447f26dcf2c2fc23612584ba2ff7a580f5655603fa"
+    },
+    {
+      "path": "Examples/NervFetch.lean",
+      "bytes": 3524,
+      "sha256": "bd30a6d3f98ba6e39a9748345667fa9c3612fff85f51974d1e67a7960a4c8885"
+    },
+    {
+      "path": "Examples/NervImmediate.lean",
+      "bytes": 5122,
+      "sha256": "cd1a0330d3b968bde70bbd006ef18729d998861a1fc9bf4ac4c78392ba867d26"
+    },
+    {
+      "path": "Examples/NervProgram.lean",
+      "bytes": 8464,
+      "sha256": "5dfca8766ae4f53738d3fd5ad79f3e0349c8fd514a1035664522a836bd9f2c63"
+    },
+    {
+      "path": "Examples/NervProofs.lean",
+      "bytes": 3192,
+      "sha256": "953e8a34b29d14f3f2bb38b09d7960881c3f88ec387a98c43a452d3ddca565f7"
+    },
+    {
+      "path": "Examples/NervRegisters.lean",
+      "bytes": 4167,
+      "sha256": "2a9092dcc8bb9aec82c4618f91da9a664e3d8d1990ef8aad2a4e253d742cd8f5"
+    },
+    {
+      "path": "Examples/NervSafety.lean",
+      "bytes": 14978,
+      "sha256": "4b161181eadfa4d5faec6701e5d06837834ebc2b0823e5081ff50f6e2fa735a1"
+    },
+    {
+      "path": "Examples/Prefix32Carries.lean",
+      "bytes": 18857,
+      "sha256": "a8cfe3ec96194dd7c05328be5d8090112d8a2cb8ddb44dc7a032dc7bb5b543e6"
+    },
+    {
+      "path": "Examples/Prefix32Proofs.lean",
+      "bytes": 5863,
+      "sha256": "0ac8f37c803482d18f45906c9267fe7664eb2e1ce152f35613746da326d4001c"
+    },
+    {
+      "path": "Examples/RepairProofs.lean",
+      "bytes": 3844,
+      "sha256": "e047173e5a25986a24fa0041ea86059b9513b55c441e963a06befbccc7d9e6ea"
+    },
+    {
+      "path": "Examples/ReplayCounterexamples.lean",
+      "bytes": 4169,
+      "sha256": "f357ca3d12496f8aadfc66db847e909dee849bf0b3dc765a02f3ffaa7b38d535"
+    },
+    {
+      "path": "Examples/Ripple32Carries.lean",
+      "bytes": 20285,
+      "sha256": "6155e4a55718106a6ffbd02c13b18b0a17c39c5faa5c37a2a5d6175a19d711f6"
+    },
+    {
+      "path": "Examples/Ripple32Proofs.lean",
+      "bytes": 6332,
+      "sha256": "ddafcde1221c49f2edc146fbd9a66675e6503e344518cec139fbaedcc793cccd"
+    },
+    {
+      "path": "Examples/SBYAccumulatorProofs.lean",
+      "bytes": 4896,
+      "sha256": "f4fe60d80c0607401a806deb7af00fc34671d70cd5ca1f23647483ef72a535ca"
+    },
+    {
+      "path": "Examples/SBYCoverProofs.lean",
+      "bytes": 1185,
+      "sha256": "f2f57f43029d7d380f28b986d3e4b76af7f85cdd82d6acb9d44d643d22c3fd55"
+    },
+    {
+      "path": "Examples/SkidFormalProofs.lean",
+      "bytes": 4436,
+      "sha256": "b6081827fea55d4d31e1ae67e5f61d808c0c76f8aef185e68ed0e15c33e8345b"
+    },
+    {
+      "path": "Examples/SkidProofs.lean",
+      "bytes": 3026,
+      "sha256": "3732e07f25cdc109f6146f03c41cac008b31932e1efc4f51471f066830c34222"
+    },
+    {
+      "path": "Examples/TwoCycleProofs.lean",
+      "bytes": 11410,
+      "sha256": "5aa20912135b03f2ef0a2989cb58979f4c4cc55995e9889a898f48b8ae0b66c7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5145,
+      "sha256": "81d0ea3303979846ddf4918ad6b2d9fecc6c6f31b875989283939d2b1add2745"
+    },
+    {
+      "path": "ROADMAP.md",
+      "bytes": 9460,
+      "sha256": "a3ee3419f053217d8ee7967fbce962d66d7a75272090c93e4c05ba68eb245038"
+    },
+    {
+      "path": "YosysLean.lean",
+      "bytes": 23,
+      "sha256": "07d535d27f1e1a82da26bd794411f7dd575f509768389cec7e13a9228902560a"
+    },
+    {
+      "path": "YosysLean/Basic.lean",
+      "bytes": 4183,
+      "sha256": "81339e353b2191d807feb515b728c6e6383184a7b86370d302b19880906775e6"
+    },
+    {
+      "path": "YosysLean/BitVec.lean",
+      "bytes": 730,
+      "sha256": "49bad94c35b919b92c710b8799a88c56e70ca2b4c9f19f0c2a346685dbe5f902"
+    },
+    {
+      "path": "YosysLean/Check.lean",
+      "bytes": 831,
+      "sha256": "0b9f3be1f42ce8bd018727d728d3212ad061e8c92120ddacc9768602273eb3f0"
+    },
+    {
+      "path": "YosysLean/Formal.lean",
+      "bytes": 2635,
+      "sha256": "fa3b7d2530d17164d5bde94563e2a208220da182134e7f72e46e721e60dc32f0"
+    },
+    {
+      "path": "YosysLean/Tactic.lean",
+      "bytes": 732,
+      "sha256": "98e22bc764b8c6d640118a66701df7fc98a263f7500e89f6d73d601e2b0ee5f2"
+    },
+    {
+      "path": "YosysLean/Trace.lean",
+      "bytes": 4765,
+      "sha256": "52e93d0d90419c1479970e14670ba1553a42239eab2f117f056509cff0521b58"
+    },
+    {
+      "path": "docs/build.md",
+      "bytes": 2371,
+      "sha256": "34c91425c1356943fa3d85a6cd567b4d6401db6b6691f9e64e8a68ba8ea30f24"
+    },
+    {
+      "path": "docs/confidence.md",
+      "bytes": 10692,
+      "sha256": "fa2124c0f558dda519a094a52f684817e4eda55a02239e82a2fdf155b47c871f"
+    },
+    {
+      "path": "docs/divider.md",
+      "bytes": 2457,
+      "sha256": "5b1527b48cc623d123082dd406440cf91cb5f087b856fa3c435cee8d38152714"
+    },
+    {
+      "path": "docs/proving.md",
+      "bytes": 9991,
+      "sha256": "9ea59b9518cce89897a5d0507df9019ccc6918cf7bbe88f25ca76d45ccb6faff"
+    },
+    {
+      "path": "docs/semantics.md",
+      "bytes": 5012,
+      "sha256": "e7a48335043174d9a794d9c7b2ad03e8f001574b5e9638cf3d12a57328f41fbe"
+    },
+    {
+      "path": "docs/validation.md",
+      "bytes": 6681,
+      "sha256": "73cc84a7da16674ec297510a6a9071bee21c1a0c458b296e987ad38804c04a3c"
+    },
+    {
+      "path": "examples/bird/README.md",
+      "bytes": 2284,
+      "sha256": "9da7dec4c3ae5e408743590de682377660c03a67405b3a2483cb5f2c660d1a80"
+    },
+    {
+      "path": "examples/bugs/README.md",
+      "bytes": 7105,
+      "sha256": "ce608a12d0c92aaeef7361733567e600258ff79e55a0439933c9334a97ffb056"
+    },
+    {
+      "path": "examples/bus/README.md",
+      "bytes": 4544,
+      "sha256": "81eb4d606cc1fc98e91d36e68efdadaebe2c66a7d2d2bb0eeb7dba7e70583a6f"
+    },
+    {
+      "path": "examples/elastic/README.md",
+      "bytes": 1133,
+      "sha256": "741b6a807e4fa98b9ab0c813989010a0ec0a3876575c1d52ca2c391dcdbb0451"
+    },
+    {
+      "path": "examples/formal/README.md",
+      "bytes": 8799,
+      "sha256": "0948a67e00ac8341fd74fe08be346c4e81eab7afe6c4d342803ab30410a4c6b1"
+    },
+    {
+      "path": "examples/hack/README.md",
+      "bytes": 4648,
+      "sha256": "bc818ebb706650662bc53bfe18a885ddad725610af043f5d68b076c0c5756f1b"
+    },
+    {
+      "path": "examples/ibex/README.md",
+      "bytes": 2387,
+      "sha256": "bae974ff3e3ac52951b664fc52c47f5fc880202f871ea392fb002c4488b44cb0"
+    },
+    {
+      "path": "examples/multiplier/README.md",
+      "bytes": 4385,
+      "sha256": "1c577191250d54a5a6bc5d3bf0a526bae9cad60887f7dcb94aa28597a738a1cb"
+    },
+    {
+      "path": "examples/riscv/README.md",
+      "bytes": 8793,
+      "sha256": "e0a1f09967face4672526d893b8bb6f236028c9580922ca5f059763c04e2942c"
+    },
+    {
+      "path": "examples/zipcpu/README.md",
+      "bytes": 10531,
+      "sha256": "f4c41155c3f2c043c40fb32fe30b2868af2de5816b48e60ec7d112acc3285d3a"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 145,
+      "sha256": "9fd8f958402d40801a6b364bc1aba2b6cb9254474ea39668e1da062ea9217714"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "scripts/benchmark_divider.py",
+      "bytes": 4712,
+      "sha256": "f70f1bdb4da75b97c15fea4876fba513931d702bff2a616960ab9418493d340a"
+    },
+    {
+      "path": "scripts/check_lean.py",
+      "bytes": 6465,
+      "sha256": "d0cfb5667999762dd9154b5d2d601f361d78d0bdb814ea856185674f675db506"
+    },
+    {
+      "path": "scripts/convert_ibex.py",
+      "bytes": 1174,
+      "sha256": "db1bb084e51ba3739435fdb86985bd7f0510563b5b89deaa8c6feb893271cdba"
+    },
+    {
+      "path": "scripts/export.py",
+      "bytes": 14720,
+      "sha256": "9102636e4b2f0547d6efab119ee888d5a8213d586aee0716dff1559455975afe"
+    },
+    {
+      "path": "scripts/nerv_faults.py",
+      "bytes": 3802,
+      "sha256": "6ef77c69f3d13d73dbbd8af621a957f27133525cfe49e84e26cbf0f982446755"
+    },
+    {
+      "path": "scripts/nerv_fetch.py",
+      "bytes": 2649,
+      "sha256": "871c262d8eb02879410579891825af6097b1b98acad75bd7c9c248ec27e58d95"
+    },
+    {
+      "path": "tests/bug_examples.py",
+      "bytes": 3804,
+      "sha256": "8200e4dfdd996162025fbc694278f31da58e73ea18f74ed6a048a7fa4587ed4c"
+    },
+    {
+      "path": "tests/bus.py",
+      "bytes": 2786,
+      "sha256": "842c1f04dd634e267d993400ff8d75c2f903e083736592835191531dae4c30d7"
+    },
+    {
+      "path": "tests/checker.py",
+      "bytes": 5181,
+      "sha256": "c5a87e649c5ea7bfb9fdb14a7c2d2a999ecb588be5c7249984e6df225f575e95"
+    },
+    {
+      "path": "tests/cpu.py",
+      "bytes": 10639,
+      "sha256": "67fda82318bd12f041917e7627ac2b60a2eb9beee87e57f99e1a322c34c1b0f3"
+    },
+    {
+      "path": "tests/divider.py",
+      "bytes": 7448,
+      "sha256": "2b56ad81e992d6f363b8baec076417c88d810c0d5678f166cf93c43dd2990d73"
+    },
+    {
+      "path": "tests/formal_tutorials.py",
+      "bytes": 2663,
+      "sha256": "79daaf706f3fd5a4e646340bf2d4a995fdfe64c67c30ab4eabcdba3b8b3b4bdd"
+    },
+    {
+      "path": "tests/multiplier.py",
+      "bytes": 5544,
+      "sha256": "9e098eb58a7eaf32fa91234afd2b878ebeeeed380aa26a1c394109d38fa4f871"
+    },
+    {
+      "path": "tests/named.py",
+      "bytes": 5066,
+      "sha256": "78cfa328d5d227bda349732bab32b0cd6312508da700edefc091b60ffd430faf"
+    },
+    {
+      "path": "tests/nerv_faults.py",
+      "bytes": 9756,
+      "sha256": "5723b4f552a1a189dd8b375adc7bd4bb6da6a9ca4da4ba423a0e2c3fee8c219c"
+    },
+    {
+      "path": "tests/nerv_program.py",
+      "bytes": 14546,
+      "sha256": "b80f3976fb8388b46f5387d70c977e392291459eea143b201729d32036230ba5"
+    },
+    {
+      "path": "tests/properties.py",
+      "bytes": 2328,
+      "sha256": "1e3869bf0b1ccf0a6e343a11b515c1b358676a7740ea95f08da7a2a34a253561"
+    },
+    {
+      "path": "tests/run.py",
+      "bytes": 22614,
+      "sha256": "8656555f74b00ffa0eeaa9d85f6819f191b12826bd39735e8cc6d15387bb28f0"
+    },
+    {
+      "path": "tests/smt.py",
+      "bytes": 10993,
+      "sha256": "19ae59ce48b097b5393f596f509e7940d3148706528d15690b76c09552e757bf"
+    },
+    {
+      "path": "tests/stream_examples.py",
+      "bytes": 10830,
+      "sha256": "48a949a0cca1c695b544c42db5d8ab1713ae0e9aed3b3ed434628a8987610c42"
+    },
+    {
+      "path": "tests/two_cycle.py",
+      "bytes": 3491,
+      "sha256": "795f40ab918833dfc6cd738207f1051a1d842b1faeb62588ec3d2a60022d9631"
+    }
+  ]
+}

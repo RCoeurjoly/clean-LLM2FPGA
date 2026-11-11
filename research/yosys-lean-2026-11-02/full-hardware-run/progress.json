@@ -1,0 +1,42 @@
+{
+  "updated_at": "2026-11-02T00:53:32.169201+00:00",
+  "status": "completed",
+  "active": null,
+  "exec_session_id": null,
+  "completed": [
+    "synthesis cached baseline provenance",
+    "direct-rtlil fresh rebuild",
+    "Lean4.19 provisioning",
+    "Linux ijson provisioning",
+    "memory source compilation",
+    "memory table compilation",
+    "memory RTL/Lean concrete trace comparison",
+    "direct-prepared fresh rebuild",
+    "selective scalar-memory normalization",
+    "full supported-subset preflight",
+    "native global-clock normalization",
+    "full native FunctionalIR SMT-LIB and matching JSON export",
+    "transfer projection control equivalence",
+    "whole-model xiangshan2Lean import and table emission",
+    "native Lean runtime and trace driver compilation",
+    "native/bytecode memory execution-mode agreement",
+    "full binary/hex byte-for-byte agreement",
+    "pinned upstream source hash verification",
+    "whole-model Lean compilation and complete table validation",
+    "whole-model native Lean reset/idle trace, all 8 samples",
+    "Verilator full-design build with comma-newline-only formatting",
+    "whole-design reset/idle RTL/Lean comparison: 15 output comparisons passed",
+    "redundant Icarus full-model build intentionally superseded"
+  ],
+  "next": [],
+  "artificial_memory_cap": false,
+  "full_model_equivalence_proved": false,
+  "prepared_peak_mb": 22415.47,
+  "observed_importer_gap": {
+    "single_word_memories": 336,
+    "normalization": "Yosys memory_map restricted to SIZE=1; remaining555 kept as memories"
+  },
+  "exec_sessions": [],
+  "completion_scope": "Production generic lowering; full FunctionalIR/JSON export; whole-model Lean import and compilation; whole-design reset/idle trace comparison",
+  "full_bram_mapping": "Existing successful cached derivation lineage validated; generic checkpoints freshly rebuilt"
+}

@@ -1,0 +1,298 @@
+#+title: Quantized TinyStories-1M to SystemVerilog: formal equivalence route
+#+date: 2026-11-02
+
+* Recommendation
+
+The reference-side candidates to prototype are *TorchLean + FloatLib*.
+The hardware route should use *Yosys to import the generated SystemVerilog*,
+then consume FunctionalIR SMT-LIB plus matching JSON through
+=xiangshan2Lean=. This route has now imported the whole generated RTL in
+this workspace. Direct =lean-surfaces= SV import remains a comparison
+candidate. The Yosys/Python translation is still a trusted boundary.
+
+Evaluate *Velvet*, direct Lean invariants, and *lean-star* for the proof
+layer. Use =bv_decide= where fixed-width obligations are small enough.
+Repository discovery establishes a shortlist; an actual model-derived
+proof must establish that the selected components fit together.
+
+*TorchLean + FloatLib are already integrated*: TorchLean explicitly
+depends on FloatLib. See its [[https://github.com/lean-dojo/TorchLean/blob/main/lake-manifest.json][dependency manifest]]. Existing Yosys-to-Lean
+frontends provide hardware-side connections; connecting those models to
+the neural reference and proving refinement would be our work.
+
+The [[file:yosys-lean-2026-11-02/report.org][2026-11-02 follow-up]] inventories current Yosys export backends,
+searches GitHub for Lean format support, and records the whole-model
+frontend probe. These findings supersede the earlier tentative choice
+of =lean-surfaces + lean-star= as the default hardware/proof stack.
+
+The [[file:yosys-lean-2026-11-02/full-hardware-run/runbook.org][full-machine reproduction runbook]] records how the successful
+synthesis was performed and the subsequent FunctionalIR branch. The
+production RTL-to-RTLIL rebuild has now succeeded on this same machine
+at 24,259.84 MB peak memory, followed by the prepared checkpoint and full
+FunctionalIR/JSON export and whole-model import: 4,227,056 nodes, 88,074
+state fields and 555 memory states, at 17.7 GiB importer peak RSS.
+The whole generated model also compiles in Lean 4.19.0: 14 minutes
+6.5 seconds and 7.25 GiB peak RSS, including its full table check.
+The production memory model also compiles in Lean and agrees with RTL
+simulation on a concrete reset/write/read
+trace. The complete design also matches Verilator on 15 output
+comparisons over one reset/idle trace, with =go= held low; this does not
+exercise inference. Commands, diagnostics and results are in the runbook.
+
+The [[file:yosys-lean-2026-11-02/torchlean-import-run/runbook.org][built TorchLean import attempt]] now confirms the reference-side
+bottleneck with the actual upstream adapter emitted in Lean 4.35.0.
+The frozen quantized =model.pt2= stops at =aten.embedding.default= before
+graph JSON is produced. Two small saved-export controls (addition and
+Linear) pass typed Lean import, exact-word payload loading and reference
+execution, matching all seven Float32 output words against PyTorch.
+The artifact and upstream operator rules remain unchanged. The next
+feature bridge can reuse =Spec.Embedding.lookup=; quantization operators
+and frozen computed-weight resolution also have reproduced gaps.
+
+Keep EquivFusion alongside this stack for existing block checks and
+counterexamples. This is a proposed integration, not an already verified
+pipeline.
+
+* Verification boundary
+
+The reference model needs to be precise. The repository pins the
+[[https://huggingface.co/roneneldan/TinyStories-1M][Hugging Face TinyStories-1M checkpoint]] at revision =ac533fb…=, then
+dynamically quantizes its =Linear= modules and exports inference for token
+tensors of shape =(1, 32)=, with caching disabled. See the
+[[file:../nix/selected-toolchain.nix::34][checkpoint pin]] and [[file:../model/quantize.py::19][quantization/export code]].
+
+*The saved quantized =model.pt2= is the reference specification.*
+
+Quantization is an upstream engineering choice. Selecting an established
+recipe and accepting its model quality precede the formal verification
+task. Proving an accuracy or equivalence relationship between the original
+Hugging Face model and the quantized export is outside this project's
+formal proof scope.
+
+The formal obligation is:
+
+#+begin_example
+For every legal input and permitted execution protocol:
+  the RTL completes and produces the same observable result
+  as the frozen quantized model.
+#+end_example
+
+The input domain, weights, numerical behavior, memory initialization,
+reset, handshake, and completion contract must be explicit. The current
+export targets logits for token tensors of shape =(1, 32)= with caching
+disabled.
+
+** Quantization baseline
+
+Use a conventional INT8 post-training quantization recipe for =Linear=
+layers: per-channel INT8 weights and dynamic INT8 activation quantization.
+This is a conservative documented baseline, not a claim that one recipe
+is universally optimal. PyTorch documents this family in its
+[[https://docs.pytorch.org/ao/stable/api_reference/generated/torchao.quantization.Int8DynamicActivationInt8WeightConfig.html][INT8 dynamic-activation / INT8-weight workflow]].
+
+The existing pinned PT2E/XNNPACK setup is in this family. Keep its
+reference export as the initial artifact rather than changing the
+quantizer as part of the equivalence work. The precise granularity,
+mapping rules, and operation sequence are those in the saved export;
+different APIs in the same family need not produce identical models.
+
+Record the checkpoint revision, quantizer configuration, package/tool
+versions, any calibration inputs used, and the exported artifact hash.
+Freeze the graph, weights, and static quantization parameters. Dynamic
+activation parameters remain runtime computations in that frozen graph.
+
+** Operations inside the proof boundary
+
+The RTL must reproduce the quantized model's own operations, including
+runtime qparameter calculation, rounding, clamping, conversions,
+accumulation, and any remaining floating-point operations. This is
+implementation equivalence; it does not require proving that quantization
+preserves the original model's accuracy.
+
+The compiler introduces polynomial approximations for =exp= and =tanh=.
+See [[file:../source/toolchain/compiler/passes/calyx/PrepareMath.cpp::27][PrepareMath.cpp]]. These downstream transformations must be checked
+against the frozen quantized reference. They do not create an obligation
+to compare with the original unquantized model.
+
+* Lean components and supporting checker
+
+For the quantized-model-to-RTL obligation, prioritize these projects:
+
+| Project | Specific role for TinyStories | Remaining work |
+|---------+------------------------------+----------------|
+| [[https://github.com/lean-dojo/TorchLean][TorchLean]] | Represent the exported neural computation, tensor shapes, dtypes, and operator semantics in Lean. | Map the operators and decompositions in the actual =model.pt2=. Its import guarantees do not establish numerical equivalence to the originating PyTorch execution. |
+| [[https://github.com/lean-dojo/FloatLib][FloatLib]] | Supply floating-point arithmetic, conversions, rounding, and quantization specifications. | Connect those specifications to the dynamic qparameter calculation, accumulation order, and generated arithmetic, including the transcendental approximations. |
+| [[https://github.com/thomasnormal/lean-surfaces][lean-surfaces]] | Direct-SV frontend to compare with Yosys-based routes. | Establish coverage and faithful interpretation of the generated SV subset. Its general cycle-to-scheduler adequacy relation remains unproved. |
+| [[https://github.com/VCA-EPFL/lean-star][lean-star]] | Provide a framework for relating implementation transitions to specification transitions despite additional internal steps. | Instantiate its abstract transition systems and relations for the accelerator. Completion/progress requires its own argument. |
+| [[https://github.com/verse-lab/velvet][Velvet]] | Candidate verification infrastructure for imperative loops, arrays, invariants, and termination. | Connect the imported tensor and hardware models to its program semantics; inspect which automation produces checked proofs. |
+| [[https://lean-lang.org/doc/api/Lean/Elab/Tactic/BVDecide.html][Lean's bv_decide]] | Discharge suitably decomposed fixed-width arithmetic and logic obligations using checked SAT certificates. | Supply the semantic encoding of each obligation and decompose large datapaths. This tactic does not provide model or RTL semantics. |
+
+TorchLean's [[https://github.com/lean-dojo/TorchLean/blob/main/docs/TRUST_BOUNDARIES.md][trust-boundary documentation]] is particularly relevant: a
+well-shaped imported graph and a numerically faithful model are separate
+claims.
+
+[[https://github.com/FORMiND-Lab/EquivFusion][EquivFusion]], particularly the [[file:../../EquivFusion/][local fork]], remains a supporting
+checker for actual generated RTL and a source of counterexamples. Its
+solver results do not automatically become Lean proofs. Using those
+results to discharge Lean obligations would require an appropriate
+certificate and encoding-correctness bridge.
+
+* Integration work
+
+Three substantial pieces remain to be built or established:
+
+1. *Model correspondence.* Map the operators in the actual =model.pt2=
+   into TorchLean and establish matching numerical behavior. Successful
+   graph import currently provides structural/shape guarantees, rather
+   than full numerical correspondence. See the [[https://github.com/lean-dojo/TorchLean/blob/main/NN/Runtime/PyTorch/Import/TorchExport.lean][importer]].
+2. *RTL correspondence.* Establish that the Lean hardware model faithfully
+   represents the generated SV subset through the selected Yosys output.
+   Account for cell semantics, memories, initial state, reset, and clock
+   normalization. Yosys and an unverified importer remain explicit trusted
+   boundaries unless their translations are proved or independently checked.
+   The direct-SV alternative =lean-surfaces= explicitly leaves its general
+   [[https://github.com/thomasnormal/lean-surfaces/blob/master/LeanModels/Sv/Adequacy.lean][cycle-to-scheduler adequacy theorem unproved]]. We would need an
+   adequate result for our supported subset or an explicit trusted
+   boundary.
+3. *The actual refinement proof.* Supply invariants connecting tensor
+   elements, memory addresses, accumulators, controller states, and
+   completion. Lean-star supplies a framework for simulation and trace
+   inclusion; progress/completion still needs proof. See the [[https://github.com/VCA-EPFL/lean-star][framework]].
+
+An [[https://arxiv.org/html/2610.24548v1][October 2026 kernel-verification paper]] already combines TorchLean and
+Velvet for floating-point loop proofs. Its experiment trusts the source
+translation and SMT results and assumes matching transcendental
+interpretations. It is relevant prior art, not an existing solution to
+our FPGA obligation.
+
+* Toolchain compatibility
+
+The inspected projects currently pin different Lean versions:
+
+| Project | Lean toolchain |
+|---------+----------------|
+| TorchLean | [[https://github.com/lean-dojo/TorchLean/blob/main/lean-toolchain][4.35.0]] |
+| FloatLib | [[https://github.com/lean-dojo/FloatLib/blob/main/lean-toolchain][4.35.0]] |
+| lean-surfaces | [[https://github.com/thomasnormal/lean-surfaces/blob/master/lean-toolchain][4.33.0-rc1]] |
+| lean-star | [[https://github.com/VCA-EPFL/lean-star/blob/main/lean-toolchain][4.29.0]] |
+
+These projects have not been built together. A common Lean/Mathlib
+toolchain is a real integration step. Start from TorchLean and its pinned
+FloatLib dependency.
+
+* Useful proof examples
+
+Three smaller projects are especially useful as proof examples:
+
+- [[https://github.com/TheNetherWatcher/ort-dequant-proof][ort-dequant-proof]]: probably the most relevant example for
+  quantization-loop addressing, scale indexing, packed representations,
+  and disjoint memory writes. Its actual target is ONNX int2/int4
+  dequantization; the reusable contribution is its proof structure.
+- [[https://github.com/lschiemanowski/ptxlean_relu_layer][ptxlean_relu_layer]]: demonstrates a concrete bridge between modeled
+  FP32 machine arithmetic and a TorchLean neural specification. Its
+  result is an error bound under explicit assumptions, rather than
+  PyTorch-backend bit equality.
+- [[https://github.com/scasella/certified-int-narrowing][certified-int-narrowing]]: demonstrates checking properties of captured
+  PyTorch Inductor kernels through a restricted semantic model. It is
+  useful architectural guidance for translation validation; its source
+  extraction remains a trusted boundary.
+
+* Importing existing SystemVerilog
+
+[[https://github.com/thomasnormal/lean-surfaces][lean-surfaces]] is worth a focused experiment. It uses external Python/SV
+AST extraction and executable semantic models. However, parsing Python
+calls does not supply PyTorch tensor-operation semantics, and its
+[[https://github.com/thomasnormal/lean-surfaces/blob/master/LeanModels/Sv/Adequacy.lean][cycle-to-scheduler adequacy relation is explicitly unproved]]. Test it
+against a small production-generated module before making it a dependency.
+
+* Other frameworks
+
+[[https://github.com/opencompl/lean-mlir][Lean-MLIR]] and [[https://github.com/opencompl/veir][VeIR]] remain useful infrastructure candidates, but neither
+supplies the missing Calyx/MemRef bridge. [[https://github.com/plum-umd/wavelet][Wavelet]], [[https://github.com/nathsou/HDLean][HDLean]],
+[[https://github.com/deepai-org/loom][Loom]], and [[https://github.com/Verilean/sparkle][Sparkle]] are valuable hardware/compiler references; their
+strongest demonstrations concern their own intermediate representations
+and generation paths.
+
+* Proposed proof architecture
+
+#+begin_example
+Upstream engineering choice, outside the formal proof:
+Hugging Face checkpoint → pinned quantization recipe → frozen model.pt2
+
+Formal proof begins at the frozen quantized artifact:
+
+Frozen quantized model.pt2          Generated SystemVerilog
+             |                                |
+PyTorch-to-Lean correspondence                Yosys
+       (to establish)                         |
+             |                    Selected word-level or circuit format
+             |                                |
+TorchLean + FloatLib specification  Clocked RTL model in Lean
+             |                                |
+             +---------------+----------------+
+                             |
+                Our refinement proofs using
+               invariants, selected automation,
+                and checked arithmetic lemmas
+                             |
+              Every accepted transaction completes
+                    with matching outputs
+#+end_example
+
+MLIR and Calyx can provide correspondence information and proof
+boundaries. A model-specific proof can check the final RTL against those
+contracts without first proving every compiler pass correct.
+
+* Implementation order
+
+1. Establish *TorchLean + its pinned FloatLib* as the reference side.
+2. Probe the *whole saved model* to identify frontend blockers, then keep
+   both original-shaped regressions and minimal feature reproducers.
+3. Compare *Yosys-format-to-Lean frontends on actual generated RTL*,
+   preserving word-level operations and memories where possible.
+4. Prove one memory-backed computation, choosing Velvet, direct
+   invariants, or lean-star according to the obligations it exposes.
+
+Keep EquivFusion available for bug finding and concrete block checks as
+this grows. The SV semantic bridge is the first major feasibility gate.
+
+* Incremental coverage and proof workflow
+
+Attempt whole-artifact imports early. Unsupported operations or hardware
+constructs should become minimal reproducers and explicit coverage
+entries. Extending syntax support must include its numerical or hardware
+meaning; accepting the input alone does not establish correspondence.
+
+Extract fragments from the frozen =model.pt2=, preserving weights,
+qparameters, shapes, dtypes, guards, and source-node provenance. Compile
+them through the production passes, import both endpoints, and prove
+their local contracts. Start with a small arithmetic/cast case, then
+qparameters, a memory-backed accumulation loop, a Linear subgraph, and
+adjacent blocks. Prove loop invariants instead of expanding every trip.
+
+Two existing tests supply useful foundations: [[file:../tests/extract_operation.py][FX operation extraction]]
+and [[file:../tests/test_qparams.py][actual-model qparameter extraction]] on the software side, plus
+[[file:../tests/test_calyx_arithmetic.py][small MLIR-to-Calyx-to-SV simulations]] on the hardware side. A reusable
+=pt2 fragment -> production pipeline -> SV= runner still needs to connect
+these paths. The current [[file:../tools/bind_memories.py][memory binder]] hardcodes TinyStories token and
+logit buffers, so arbitrary fragments may fail packaging despite core
+compiler support.
+
+Independently compiled fragments may be scheduled, shared, or stored
+differently inside the whole-model RTL. Whole-model verification therefore
+also needs checked mappings and composition over the actual final
+wiring, memory, and controller. A collection of isolated fragment proofs
+does not supply that composition.
+
+Keep reset, initialization, go/done, repeated transactions, and termination
+inside the contracts. A failed proof or timeout is inconclusive. A local
+counterexample disproves its local contract; lifting it to a whole-model
+counterexample requires reachability from legal model inputs.
+
+* First substantial milestone
+
+Prove *one actual quantized Linear subgraph*, including its frozen
+weights, qparameter computation, arithmetic, memory accesses, and repeated
+transactions. Then prove composition with an adjacent subgraph. That
+would test the essential missing connections before attempting the entire
+transformer.

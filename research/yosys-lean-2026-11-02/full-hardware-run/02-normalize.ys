@@ -1,0 +1,7 @@
+read_rtlil /tmp/llm2fpga-full-hardware-20261102/canonical.il
+clk2fflogic -nolower -nopeepopt
+memory_nordff
+opt_clean
+setundef -undriven -anyseq
+check -assert
+write_rtlil /tmp/llm2fpga-full-hardware-20261102/normalized.il

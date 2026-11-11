@@ -1,0 +1,85 @@
+operator,status,error,count,first_node
+<built-in function getitem>,recognized_lowering,,66,getitem
+aten._assert_tensor_metadata.default,recognized_metadata,,230,_assert_tensor_metadata_default
+aten._assert_tensor_metadata.default,unsupported,unsupported tensor metadata assertion,24,_assert_tensor_metadata_default_10
+aten.add.Tensor,recognized_lowering,,74,add
+aten.arange.default,unsupported,unsupported PyTorch op: aten.arange.default,1,arange_1
+aten.arange.start,unsupported,unsupported PyTorch op: aten.arange.start,1,arange
+aten.clamp.default,unsupported,unsupported PyTorch op: aten.clamp.default,115,clamp
+aten.contiguous.default,recognized_lowering,,8,contiguous
+aten.detach_.default,unsupported,unsupported PyTorch op: aten.detach_.default,8,detach_
+aten.div.Tensor,recognized_lowering,,33,div
+aten.dropout.default,unsupported,unsupported PyTorch op: aten.dropout.default,25,dropout
+aten.embedding.default,unsupported,unsupported PyTorch op: aten.embedding.default,2,embedding
+aten.expand.default,unsupported,unsupported PyTorch op: aten.expand.default,1,expand
+aten.full.default,unsupported,unsupported PyTorch op: aten.full.default,1,full
+aten.gt.Tensor,unsupported,unsupported PyTorch op: aten.gt.Tensor,1,gt
+aten.layer_norm.default,recognized_lowering,,17,layer_norm
+aten.lift_fresh_copy.default,unsupported,unsupported PyTorch op: aten.lift_fresh_copy.default,8,lift_fresh_copy
+aten.linear.default,unsupported,could not resolve tensor argument transpose_1 into the exported payload,1,linear
+aten.linear.default,unsupported,could not resolve tensor argument transpose_10 into the exported payload,1,linear_4
+aten.linear.default,unsupported,could not resolve tensor argument transpose_101 into the exported payload,1,linear_46
+aten.linear.default,unsupported,could not resolve tensor argument transpose_103 into the exported payload,1,linear_47
+aten.linear.default,unsupported,could not resolve tensor argument transpose_105 into the exported payload,1,linear_48
+aten.linear.default,unsupported,could not resolve tensor argument transpose_12 into the exported payload,1,linear_5
+aten.linear.default,unsupported,could not resolve tensor argument transpose_14 into the exported payload,1,linear_6
+aten.linear.default,unsupported,could not resolve tensor argument transpose_16 into the exported payload,1,linear_7
+aten.linear.default,unsupported,could not resolve tensor argument transpose_18 into the exported payload,1,linear_8
+aten.linear.default,unsupported,could not resolve tensor argument transpose_21 into the exported payload,1,linear_9
+aten.linear.default,unsupported,could not resolve tensor argument transpose_23 into the exported payload,1,linear_10
+aten.linear.default,unsupported,could not resolve tensor argument transpose_25 into the exported payload,1,linear_11
+aten.linear.default,unsupported,could not resolve tensor argument transpose_27 into the exported payload,1,linear_12
+aten.linear.default,unsupported,could not resolve tensor argument transpose_29 into the exported payload,1,linear_13
+aten.linear.default,unsupported,could not resolve tensor argument transpose_3 into the exported payload,1,linear_1
+aten.linear.default,unsupported,could not resolve tensor argument transpose_31 into the exported payload,1,linear_14
+aten.linear.default,unsupported,could not resolve tensor argument transpose_34 into the exported payload,1,linear_15
+aten.linear.default,unsupported,could not resolve tensor argument transpose_36 into the exported payload,1,linear_16
+aten.linear.default,unsupported,could not resolve tensor argument transpose_38 into the exported payload,1,linear_17
+aten.linear.default,unsupported,could not resolve tensor argument transpose_40 into the exported payload,1,linear_18
+aten.linear.default,unsupported,could not resolve tensor argument transpose_42 into the exported payload,1,linear_19
+aten.linear.default,unsupported,could not resolve tensor argument transpose_44 into the exported payload,1,linear_20
+aten.linear.default,unsupported,could not resolve tensor argument transpose_47 into the exported payload,1,linear_21
+aten.linear.default,unsupported,could not resolve tensor argument transpose_49 into the exported payload,1,linear_22
+aten.linear.default,unsupported,could not resolve tensor argument transpose_5 into the exported payload,1,linear_2
+aten.linear.default,unsupported,could not resolve tensor argument transpose_51 into the exported payload,1,linear_23
+aten.linear.default,unsupported,could not resolve tensor argument transpose_53 into the exported payload,1,linear_24
+aten.linear.default,unsupported,could not resolve tensor argument transpose_55 into the exported payload,1,linear_25
+aten.linear.default,unsupported,could not resolve tensor argument transpose_57 into the exported payload,1,linear_26
+aten.linear.default,unsupported,could not resolve tensor argument transpose_60 into the exported payload,1,linear_27
+aten.linear.default,unsupported,could not resolve tensor argument transpose_62 into the exported payload,1,linear_28
+aten.linear.default,unsupported,could not resolve tensor argument transpose_64 into the exported payload,1,linear_29
+aten.linear.default,unsupported,could not resolve tensor argument transpose_66 into the exported payload,1,linear_30
+aten.linear.default,unsupported,could not resolve tensor argument transpose_68 into the exported payload,1,linear_31
+aten.linear.default,unsupported,could not resolve tensor argument transpose_70 into the exported payload,1,linear_32
+aten.linear.default,unsupported,could not resolve tensor argument transpose_73 into the exported payload,1,linear_33
+aten.linear.default,unsupported,could not resolve tensor argument transpose_75 into the exported payload,1,linear_34
+aten.linear.default,unsupported,could not resolve tensor argument transpose_77 into the exported payload,1,linear_35
+aten.linear.default,unsupported,could not resolve tensor argument transpose_79 into the exported payload,1,linear_36
+aten.linear.default,unsupported,could not resolve tensor argument transpose_8 into the exported payload,1,linear_3
+aten.linear.default,unsupported,could not resolve tensor argument transpose_81 into the exported payload,1,linear_37
+aten.linear.default,unsupported,could not resolve tensor argument transpose_83 into the exported payload,1,linear_38
+aten.linear.default,unsupported,could not resolve tensor argument transpose_86 into the exported payload,1,linear_39
+aten.linear.default,unsupported,could not resolve tensor argument transpose_88 into the exported payload,1,linear_40
+aten.linear.default,unsupported,could not resolve tensor argument transpose_90 into the exported payload,1,linear_41
+aten.linear.default,unsupported,could not resolve tensor argument transpose_92 into the exported payload,1,linear_42
+aten.linear.default,unsupported,could not resolve tensor argument transpose_94 into the exported payload,1,linear_43
+aten.linear.default,unsupported,could not resolve tensor argument transpose_96 into the exported payload,1,linear_44
+aten.linear.default,unsupported,could not resolve tensor argument transpose_99 into the exported payload,1,linear_45
+aten.matmul.default,recognized_lowering,,16,matmul
+aten.mul.Tensor,recognized_lowering,,114,mul
+aten.mul_.Tensor,unsupported,unsupported PyTorch op: aten.mul_.Tensor,1,mul_
+aten.permute.default,recognized_lowering,,32,permute
+aten.pow.Tensor_Scalar,recognized_lowering,,8,pow_1
+aten.reshape.default,recognized_lowering,,1,reshape
+aten.round.default,unsupported,unsupported PyTorch op: aten.round.default,33,round_1
+aten.slice.Tensor,recognized_lowering,,24,slice_1
+aten.softmax.int,recognized_lowering,,8,softmax
+aten.sub.Tensor,recognized_lowering,,82,sub
+aten.tanh.default,recognized_lowering,,8,tanh
+aten.to.dtype,recognized_lowering,,254,to
+aten.transpose.int,recognized_lowering,,106,transpose
+aten.triu.default,unsupported,unsupported PyTorch op: aten.triu.default,1,triu
+aten.unsqueeze.default,unsupported,unsupported PyTorch op: aten.unsqueeze.default,3,unsqueeze
+aten.view.default,recognized_lowering,,33,view
+aten.where.self,unsupported,unsupported PyTorch op: aten.where.self,8,where
+quantized_decomposed.choose_qparams.tensor,unsupported,unsupported tuple-valued PyTorch op: quantized_decomposed.choose_qparams.tensor,33,choose_qparams_tensor

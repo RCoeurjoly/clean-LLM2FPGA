@@ -1,0 +1,41 @@
+{
+  "stage": "13-verilator-build",
+  "command": [
+    "/nix/store/i5hjqqy2qk6jac8mnnaxnlh8yfi49wjh-verilator-5.052/bin/verilator",
+    "--binary",
+    "--timing",
+    "-j",
+    "2",
+    "--output-split",
+    "10000",
+    "--output-split-cfuncs",
+    "2000",
+    "-Wno-fatal",
+    "--top-module",
+    "full_reset_tb",
+    "--Mdir",
+    "/tmp/llm2fpga-full-hardware-20261102/verilator",
+    "-o",
+    "full-reset-sim",
+    "research/yosys-lean-2026-11-02/full-hardware-run/full-reset-tb.sv",
+    "/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/core.sv",
+    "/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/model.sv",
+    "/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-02T00:47:00.771521+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "failed",
+  "returncode": 1,
+  "elapsed_seconds": 3.6989926919923164,
+  "finished_at": "2026-11-02T00:47:04.470653+00:00"
+}

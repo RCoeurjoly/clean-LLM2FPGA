@@ -1,0 +1,162 @@
+#+title: Whole-model frontend coverage probe
+#+date: 2026-11-02
+
+* Result and scope
+
+This section records the initial frontend-only probe. The subsequent
+[[file:../torchlean-import-run/runbook.org][built TorchLean attempt]] uses the actual Lean-generated adapter and
+confirms the same whole-model embedding failure. Its two small controls
+pass typed import and numerical reference execution in Lean, with seven
+matching Float32 output words. The full model remains unimported.
+
+The existing quantized TinyStories artifact loads and runs in its original
+PyTorch environment. The TorchLean frontend attempt stops at
+=aten.embedding.default=. A scan of all 1,429 call nodes identifies
+315 rejected call sites across 18 of the graph's 35 operator identities.
+The graph has 1,710 total nodes, including 280 placeholders and one output.
+
+*No Lean checker or all-input equivalence proof ran in the initial probe.*
+Lean/Lake had not yet been installed then. That spike reconstructed the default Python
+capture adapter from the pinned upstream Lean string emitter, using the
+small explicit evaluator in [[file:extract_adapter.py][extract_adapter.py]]. It rejects unfamiliar
+emitter syntax and does not add or change operator rules. The generated
+[[file:capture_adapter.py][adapter]] passes Python parsing, a supported addition control captures
+successfully, and six minimized frontend cases reproduce failures.
+This is frontend diagnosis, not a completed import into a built Lean
+environment. Recheck with the upstream Lean-generated adapter when that
+environment is available.
+
+The captured original graph and the full-model failed re-export path are
+different views: the coverage scan inspects every call in the original
+saved graph, while the whole frontend follows TorchLean's re-export-first
+entry point. Both fail on embedding as expected, but later coverage
+counts are not a claim about a fully serialized or type-checked program.
+
+* Frozen inputs and provenance
+
+- Artifact: =/nix/store/qvsldlg3biy0bj9yy1ys9hxvi9hn8sdp-tinystories-quantized/model.pt2=.
+- SHA256: =c99488b62f34783c1ebc1033de7bb1b6beb75727561ac0fc663d6f0286be9f34=.
+- Artifact size: 54,859,074 bytes. It was neither rebuilt nor requantized.
+- PyTorch 2.9.1, Python 3.11.14, one CPU thread.
+- Input: =int64[1,32]=. Sample output: finite =float32[1,32,50257]=.
+- TorchLean: [[https://github.com/lean-dojo/TorchLean/commit/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b][f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b]].
+- Upstream emitter: [[https://github.com/lean-dojo/TorchLean/blob/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b/NN/Runtime/PyTorch/Export/TorchExport.lean][TorchExport.lean]], SHA256 =b595e6852d82dce64e7c7068f1f885909d6369456fb80adc74244f999573f25b=.
+- Upstream wire table SHA256: =1f39b2de83227ebe49dbf758100a68db5e15b509c51ba8521d0c8ed1fb069874=.
+- Reconstructed adapter SHA256: =0b8ca3cc8d882a92de05ed1dc750ecbd6ef46d2497821aee3039aba1074d4565=.
+
+* Observed blockers
+
+| Feature | Rejected calls | Meaning of the observed failure |
+|---------+----------------+---------------------------------|
+| Embedding | 2 | No lowering for =aten.embedding.default=; first whole-import failure. |
+| Dynamic qparameters | 33 | Tuple-valued =quantized_decomposed.choose_qparams.tensor= lacks lowering. |
+| Rounding | 33 | =aten.round.default= lacks lowering. |
+| Clamping | 115 | =aten.clamp.default= lacks lowering. |
+| Linear payload resolution | 49 | Existing Linear rule cannot resolve computed weight =transpose= nodes into its frozen payload. |
+| Metadata assertion variant | 24 | Positional schema variant rejected; 230 other metadata assertions are recognized. |
+| Dropout | 25 | Saved calls use =(p=0.0, train=False)=; an identity rule would still need a justified contract. |
+| Selection | 8 | =aten.where.self= lacks lowering. |
+| Other shape, factory, comparison, alias/mutation operations | 26 | arange/default+start, unsqueeze, full, triu, gt, mul_, expand, lift_fresh_copy, detach_. |
+
+All 49 Linear weight operands have dependency closures involving only
+frozen state, according to graph data dependencies. This suggests checked
+constant evaluation or a more general Linear rule as alternatives; the
+probe does not prove either transformation correct. The minimized Linear
+case uses a runtime weight to isolate the payload restriction, whereas the
+original-shaped regression retains the actual frozen-state closure.
+
+The remaining 884 calls are recognized by lowering rules and 230 by the
+metadata handler. Recognition does not establish serialization success,
+type checking, numerical correspondence, or proof scalability. The
+present measured bottleneck is frontend coverage. Solver/proof scaling
+remains unmeasured.
+
+* Reproduce
+
+The scripts operate on existing artifacts and write their reports below
+this directory. Obtain the source at the pinned revision before rebuilding
+the adapter; no installation of TorchLean is required for this spike.
+
+#+begin_src sh
+python3 extract_adapter.py /path/to/TorchLean capture_adapter.py
+/nix/store/bwk9j00hwqwq5x7b7n23hpf893pa7bnz-python3-3.11.14-env/bin/python \
+  probe_model.py /nix/store/qvsldlg3biy0bj9yy1ys9hxvi9hn8sdp-tinystories-quantized/model.pt2
+/nix/store/bwk9j00hwqwq5x7b7n23hpf893pa7bnz-python3-3.11.14-env/bin/python reproducers.py
+#+end_src
+
+Results: [[file:results/report.json][stage/provenance report]], [[file:results/operator-coverage.csv][operator coverage]],
+[[file:results/nodes.json][per-node coverage]], [[file:results/minimal-reproducers.json][minimized reproducer results]], and
+[[file:results/whole_frontend_import.traceback.txt][whole-import traceback]].
+
+The optional [[file:probe_hardware.py][hardware probe]] attempts the actual generated SV through the
+existing project Yosys and the newly discovered FunctionalIR importer.
+Its stage results are separate from the PyTorch frontend coverage.
+
+The compact retained source tree at
+=../netlist-formats/evidence/ErosSph__xiangshan2Lean= is sufficient for the
+Python hardware emitter. For example, from the repository root:
+
+#+begin_src sh
+python3 research/yosys-lean-2026-11-02/model-probe/probe_hardware.py \
+  --yosys /nix/store/vjqba2jj3231f14vhspj2mvs1k1z4mm4-llm2fpga-yosys-sdp72-parity/bin/yosys \
+  --importer-source research/yosys-lean-2026-11-02/netlist-formats/evidence/ErosSph__xiangshan2Lean \
+  --sv result-model-rtl/memory.sv --top model_memory \
+  --out research/yosys-lean-2026-11-02/model-probe/memory-results \
+  --work /tmp/llm2fpga-yosys-memory-probe
+#+end_src
+
+* Hardware probe results
+
+These are the initial capped-probe results. The subsequent
+[[file:../full-hardware-run/runbook.org][full-machine reproduction]] rebuilt both generic production checkpoints
+and completed full-model FunctionalIR/JSON export, import and Lean
+compilation on this same machine.
+It also established the current cached netlist's dependency lineage to
+the exact RTL input, and compiled and trace-checked the small memory model.
+
+The actual generated =core.sv= is 41,783,062 bytes. Together with its
+production =model.sv= and =memory.sv=, it was processed using the project
+Yosys 0.62 executable recorded in [[file:hardware-results/report.json][the hardware report]]. The process
+aborted with =std::bad_alloc= during =PROC_DLATCH= after about 80 seconds
+under a *6 GiB address-space cap*. It had not reached FunctionalIR export
+or Lean import. This is a measured failure under that resource envelope,
+not evidence of a fundamental scaling limit or a failure of the Lean
+importer. The exact command sequence and compressed diagnostic log are
+retained in [[file:hardware-results/export.ys][export.ys]] and [[file:hardware-results/yosys.log.gz][yosys.log.gz]].
+
+The frontend was built-in =read_verilog -sv=, not =yosys-slang=. The
+current [[file:../../../nix/direct/rtlil.nix::5][production recipe]] and [[file:../../../build/full-model/17-synthesis.log::8][earlier synthesis command]] use the same
+frontend. The probe had already parsed and elaborated the design when it
+failed during process lowering. A [[file:../../../build/full-model/27-native-ram-and-json.log::12021][successful production RAM-mapping run]]
+reports 15,312.60 MB peak memory and 24,440 =RAMB36E1= / 430 =RAMB18E1=
+cells, followed by successful JSON export. Those earlier runs have not
+been established to use byte-identical RTL to this probe. The 6 GiB cap
+was our experimental choice and is below the reported resource demand
+of that successful flow. It does not demonstrate a new RTL-consumption
+or Lean-import limitation.
+
+The workspace also contains a 3,350,533,882-byte RAM-stage RTLIL file and
+a 4,022,901,774-byte final JSON netlist. Their lineage was not freshly
+revalidated against the probed RTL. Their sizes illustrate why a compact
+earlier representation, retained memories, streaming readers, and
+hierarchical proof boundaries deserve priority over generic full-file
+JSON parsing or Boolean expansion.
+
+Following the minimal-reproducer approach, the unchanged production
+=model_memory= module was tested separately with its default 16 words.
+Yosys normalization, FunctionalIR SMT-LIB export with matching JSON, and
+the =xiangshan2Lean= Python importer/Lean emitter all completed. The model
+contains *one memory, 11 state fields, and 79 expression nodes*. The
+generated source represents memory as an address-to-word function.
+
+The exact upstream =expose_arbitrary= helper is required between
+normalization and FunctionalIR export. A first stripped-down memory
+attempt omitted that step and hit a Yosys assertion on =$anyseq=; the
+corrected runner exposes those values as explicit inputs, as the upstream
+driver does. This was a runner omission, not evidence of an upstream bug.
+
+Retained evidence: [[file:memory-results/report.json][memory probe report]], [[file:memory-results/functional.smt2][FunctionalIR]],
+[[file:memory-results/lowered.json][matching Yosys JSON]], [[file:memory-results/TinyStoriesProbe.lean][generated Lean source]], and
+[[file:memory-results/model_memory.sv][the production memory module]]. The initial probe stopped at source
+generation. The [[file:../full-hardware-run/memory-trace-result.json][subsequent compiled trace check]] records 34 matching RTL/Lean
+output observations after reset. No refinement theorem has been proved.

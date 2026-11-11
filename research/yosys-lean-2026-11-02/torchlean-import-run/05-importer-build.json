@@ -1,0 +1,24 @@
+{
+  "stage": "05-importer-build",
+  "command": [
+    "scripts/lake.sh",
+    "build",
+    "+NN.Runtime.IR"
+  ],
+  "cwd": "/tmp/torchlean-model-probe/lean-dojo-TorchLean-f37cbc5",
+  "started_at": "2026-11-02T09:19:50.878550+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 265.24564759698114,
+  "finished_at": "2026-11-02T09:24:16.124328+00:00"
+}

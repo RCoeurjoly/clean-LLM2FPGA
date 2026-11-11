@@ -1,0 +1,25 @@
+{
+  "stage": "memory-source-compile",
+  "command": [
+    "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/lean",
+    "-o",
+    "/tmp/llm2fpga-yosys-memory-probe/Memory.olean",
+    "research/yosys-lean-2026-11-02/model-probe/memory-results/TinyStoriesProbe.lean"
+  ],
+  "cwd": "/home/roland/clean-LLM2FPGA",
+  "started_at": "2026-11-01T23:37:17.942798+00:00",
+  "inherited_limits": {
+    "address_space": [
+      -1,
+      -1
+    ],
+    "cpu_seconds": [
+      -1,
+      -1
+    ]
+  },
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_seconds": 1.8483402010024292,
+  "finished_at": "2026-11-01T23:37:19.791277+00:00"
+}

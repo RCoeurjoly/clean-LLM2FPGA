@@ -1,0 +1,172 @@
+
+-- Executing script file `research/yosys-lean-2026-11-02/full-hardware-run/scalar-reproducer.ys' --
+
+1. Executing Verilog-2005 frontend: /nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv
+Parsing SystemVerilog input from `/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv' to AST representation.
+Generating RTLIL representation for module `\model_memory'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: research/yosys-lean-2026-11-02/full-hardware-run/scalar-reproducer.sv
+Parsing SystemVerilog input from `research/yosys-lean-2026-11-02/full-hardware-run/scalar-reproducer.sv' to AST representation.
+Generating RTLIL representation for module `\ScalarRepro'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \ScalarRepro
+Used module:     \model_memory
+Parameter 1 (\WIDTH) = 32
+Parameter 2 (\SIZE) = 16
+Parameter 3 (\ADDR) = 4
+Parameter 4 (\IMAGE) = { }
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\model_memory'.
+Parameter 1 (\WIDTH) = 32
+Parameter 2 (\SIZE) = 16
+Parameter 3 (\ADDR) = 4
+Parameter 4 (\IMAGE) = { }
+Generating RTLIL representation for module `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory'.
+Parameter 1 (\WIDTH) = 64
+Parameter 2 (\SIZE) = 1
+Parameter 3 (\ADDR) = 1
+Parameter 4 (\IMAGE) = 624'001011110110111001101001011110000010111101110011011101000110111101110010011001010010111101100011001110010011100000110011011011010111011001110001001100000011100101101001011011100110001001100011011011100111001101111001011011010110101101101001011100100111000001110111001100110110100000111001011110100011001101101110011010010111001101101001001110000010110101110100011010010110111001111001011100110111010001101111011100100110100101100101011100110010110101110010011101000110110000101111011010010110110101100001011001110110010101110011001011110110110101100101011011010101111100110001001110000011011000101110011010000110010101111000
+
+3.3. Executing AST frontend in derive mode using pre-parsed AST for module `\model_memory'.
+Parameter 1 (\WIDTH) = 64
+Parameter 2 (\SIZE) = 1
+Parameter 3 (\ADDR) = 1
+Parameter 4 (\IMAGE) = 624'001011110110111001101001011110000010111101110011011101000110111101110010011001010010111101100011001110010011100000110011011011010111011001110001001100000011100101101001011011100110001001100011011011100111001101111001011011010110101101101001011100100111000001110111001100110110100000111001011110100011001101101110011010010111001101101001001110000010110101110100011010010110111001111001011100110111010001101111011100100110100101100101011100110010110101110010011101000110110000101111011010010110110101100001011001110110010101110011001011110110110101100101011011010101111100110001001110000011011000101110011010000110010101111000
+Generating RTLIL representation for module `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory'.
+
+3.4. Analyzing design hierarchy..
+Top module:  \ScalarRepro
+Used module:     $paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory
+Used module:     $paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory
+
+3.5. Analyzing design hierarchy..
+Top module:  \ScalarRepro
+Used module:     $paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory
+Used module:     $paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory
+Removing unused module `\model_memory'.
+Removed 1 unused modules.
+
+4. Executing PROC pass (convert processes to netlists).
+
+4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:11$34'.
+Removing empty process `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:11$34'.
+Found and cleaned up 1 empty switch in `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:11$52'.
+Removing empty process `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:11$52'.
+Cleaned up 2 empty switches.
+
+4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19 in module $paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.
+Marked 2 switch rules as full_case in process $proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36 in module $paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.
+Removed a total of 0 dead cases.
+
+4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Skipping alias analysis for ScalarRepro: no processes
+Removed 0 redundant assignments.
+Promoted 8 assignments to connections.
+
+4.4. Executing PROC_INIT pass (extract init attributes).
+
+4.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~6 debug messages>
+
+4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$18_EN[31:0]$33
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$18_DATA[31:0]$32
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$18_ADDR[3:0]$31
+     4/4: $0\read_data[31:0]
+Creating decoders for process `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36'.
+     1/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$35_EN[63:0]$50
+     2/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$35_DATA[63:0]$49
+     3/4: $1$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$35_ADDR[0:0]$48
+     4/4: $0\read_data[63:0]
+
+4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.\read_data' using process `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19'.
+  created $dff cell `$procdff$81' with positive edge clock.
+Creating register for signal `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.\done' using process `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19'.
+  created $dff cell `$procdff$82' with positive edge clock.
+Creating register for signal `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$18_ADDR' using process `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19'.
+  created $dff cell `$procdff$83' with positive edge clock.
+Creating register for signal `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$18_DATA' using process `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19'.
+  created $dff cell `$procdff$84' with positive edge clock.
+Creating register for signal `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$18_EN' using process `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19'.
+  created $dff cell `$procdff$85' with positive edge clock.
+Creating register for signal `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.\read_data' using process `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36'.
+  created $dff cell `$procdff$86' with positive edge clock.
+Creating register for signal `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.\done' using process `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36'.
+  created $dff cell `$procdff$87' with positive edge clock.
+Creating register for signal `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$35_ADDR' using process `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36'.
+  created $dff cell `$procdff$88' with positive edge clock.
+Creating register for signal `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$35_DATA' using process `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36'.
+  created $dff cell `$procdff$89' with positive edge clock.
+Creating register for signal `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$memwr$\mem$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:16$35_EN' using process `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36'.
+  created $dff cell `$procdff$90' with positive edge clock.
+
+4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19'.
+Removing empty process `$paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$19'.
+Found and cleaned up 3 empty switches in `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36'.
+Removing empty process `$paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.$proc$/nix/store/c983mvq09inbcnsymkirpw3h9z3nisi8-tinystories-rtl/memory.sv:12$36'.
+Cleaned up 6 empty switches.
+
+4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.
+Optimizing module ScalarRepro.
+Optimizing module $paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.
+
+5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$aa2cdf5b0dda26a4ff4b0c02609fb7844c7731fc\model_memory.
+Deleting now unused module $paramod$e94e25f5e700779076844ed32bfb0c29ef3b25cb\model_memory.
+<suppressed ~2 debug messages>
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \ScalarRepro
+
+7.2. Analyzing design hierarchy..
+Top module:  \ScalarRepro
+Removed 0 unused modules.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ScalarRepro..
+Removed 6 unused cells and 32 unused wires.
+<suppressed ~7 debug messages>
+
+9. Executing JSON backend.
+
+10. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \one.mem in module \ScalarRepro:
+  created 1 $dff cells and 0 static cells of width 64.
+  read interface: 0 $dff and 0 $mux cells.
+  write interface: 64 write mux blocks.
+
+11. Executing CHECK pass (checking for obvious problems).
+Checking module ScalarRepro...
+Found and reported 0 problems.
+
+12. Executing JSON backend.
+Renaming module \ScalarRepro to \ScalarReproLowered.
+
+13. Executing Verilog backend.
+
+13.1. Executing BMUXMAP pass.
+
+13.2. Executing DEMUXMAP pass.
+Dumping module `\ScalarReproLowered'.

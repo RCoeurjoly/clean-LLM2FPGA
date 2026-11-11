@@ -1,0 +1,1387 @@
+[
+  {
+    "kind": "repository",
+    "query": "language:Lean yosys in:name,description,readme fork:true",
+    "totals_reported": [
+      25
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 25,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 25,
+        "returned": 25,
+        "incomplete_results": false,
+        "file": "searches/repo-00-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean verilog in:name,description,readme fork:true",
+    "totals_reported": [
+      57
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 57,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 57,
+        "returned": 57,
+        "incomplete_results": false,
+        "file": "searches/repo-01-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean SystemVerilog in:name,description,readme fork:true",
+    "totals_reported": [
+      43
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 43,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 43,
+        "returned": 43,
+        "incomplete_results": false,
+        "file": "searches/repo-02-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean netlist in:name,description,readme fork:true",
+    "totals_reported": [
+      31
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 31,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 31,
+        "returned": 31,
+        "incomplete_results": false,
+        "file": "searches/repo-03-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean BLIF in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/repo-04-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean EBLIF in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/repo-05-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean EDIF in:name,description,readme fork:true",
+    "totals_reported": [
+      1
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 1,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 1,
+        "returned": 1,
+        "incomplete_results": false,
+        "file": "searches/repo-06-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean CXXRTL in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/repo-07-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean intersynth in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/repo-08-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean simplec in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/repo-09-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "language:Lean \"write_json\" in:name,description,readme fork:true",
+    "totals_reported": [
+      18
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 18,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 18,
+        "returned": 18,
+        "incomplete_results": false,
+        "file": "searches/repo-10-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "Lean yosys in:name,description,readme fork:true",
+    "totals_reported": [
+      4046
+    ],
+    "pages_retrieved": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "returned": 1000,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-1.json.gz"
+      },
+      {
+        "page": 2,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-2.json.gz"
+      },
+      {
+        "page": 3,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-3.json.gz"
+      },
+      {
+        "page": 4,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-4.json.gz"
+      },
+      {
+        "page": 5,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-5.json.gz"
+      },
+      {
+        "page": 6,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-6.json.gz"
+      },
+      {
+        "page": 7,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-7.json.gz"
+      },
+      {
+        "page": 8,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-8.json.gz"
+      },
+      {
+        "page": 9,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-9.json.gz"
+      },
+      {
+        "page": 10,
+        "total_count": 4046,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/repo-11-10.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "Lean BLIF in:name,description,readme fork:true",
+    "totals_reported": [
+      3
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 3,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 3,
+        "returned": 3,
+        "incomplete_results": false,
+        "file": "searches/repo-12-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "Lean EDIF in:name,description,readme fork:true",
+    "totals_reported": [
+      8
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 8,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 8,
+        "returned": 8,
+        "incomplete_results": false,
+        "file": "searches/repo-13-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "Lean CXXRTL in:name,description,readme fork:true",
+    "totals_reported": [
+      1
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 1,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 1,
+        "returned": 1,
+        "incomplete_results": false,
+        "file": "searches/repo-14-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "Lean \"write_jny\" in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/repo-15-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository",
+    "query": "hardwareLoom in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/repo-16-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "yosys language:Lean",
+    "totals_reported": [
+      3
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 3,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 3,
+        "returned": 3,
+        "incomplete_results": false,
+        "file": "searches/code-00-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "BLIF language:Lean",
+    "totals_reported": [
+      256,
+      271
+    ],
+    "pages_retrieved": [
+      1,
+      2,
+      3
+    ],
+    "returned": 271,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": true,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 256,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-01-1.json.gz"
+      },
+      {
+        "page": 2,
+        "total_count": 256,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-01-2.json.gz"
+      },
+      {
+        "page": 3,
+        "total_count": 271,
+        "returned": 71,
+        "incomplete_results": false,
+        "file": "searches/code-01-3.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "EBLIF language:Lean",
+    "totals_reported": [
+      11
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 11,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 11,
+        "returned": 11,
+        "incomplete_results": false,
+        "file": "searches/code-02-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "EDIF language:Lean",
+    "totals_reported": [
+      3896
+    ],
+    "pages_retrieved": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "returned": 400,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 3896,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-03-1.json.gz"
+      },
+      {
+        "page": 2,
+        "total_count": 3896,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-03-2.json.gz"
+      },
+      {
+        "page": 3,
+        "total_count": 3896,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-03-3.json.gz"
+      },
+      {
+        "page": 4,
+        "total_count": 3896,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-03-4.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "CXXRTL language:Lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/code-04-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "intersynth language:Lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/code-05-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "simplec language:Lean",
+    "totals_reported": [
+      2460
+    ],
+    "pages_retrieved": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "returned": 600,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 2460,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-06-1.json.gz"
+      },
+      {
+        "page": 2,
+        "total_count": 2460,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-06-2.json.gz"
+      },
+      {
+        "page": 3,
+        "total_count": 2460,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-06-3.json.gz"
+      },
+      {
+        "page": 4,
+        "total_count": 2460,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-06-4.json.gz"
+      },
+      {
+        "page": 5,
+        "total_count": 2460,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-06-5.json.gz"
+      },
+      {
+        "page": 6,
+        "total_count": 2460,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-06-6.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "write_jny language:Lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/code-07-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "write_table language:Lean",
+    "totals_reported": [
+      1
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 1,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 1,
+        "returned": 1,
+        "incomplete_results": false,
+        "file": "searches/code-08-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "write_spice language:Lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/code-09-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "\"$dff\" language:Lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/code-10-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "\"netnames\" language:Lean",
+    "totals_reported": [
+      52
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 52,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 52,
+        "returned": 52,
+        "incomplete_results": false,
+        "file": "searches/code-11-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "\"write_json\" language:Lean",
+    "totals_reported": [
+      4
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 4,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 4,
+        "returned": 4,
+        "incomplete_results": false,
+        "file": "searches/code-12-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "\"yosys\" \"lean\" extension:py",
+    "totals_reported": [
+      5712
+    ],
+    "pages_retrieved": [
+      1,
+      2
+    ],
+    "returned": 200,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 5712,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-13-1.json.gz"
+      },
+      {
+        "page": 2,
+        "total_count": 5712,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-13-2.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "\"cxxrtl\" \"lean\"",
+    "totals_reported": [
+      940
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 100,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 940,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-14-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code",
+    "query": "\"blif\" \"lean\"",
+    "totals_reported": [
+      268288
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 100,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 268288,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/code-15-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean4\" yosys in:name,description,readme fork:true",
+    "totals_reported": [
+      22
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 22,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 22,
+        "returned": 22,
+        "incomplete_results": false,
+        "file": "searches/refined-00-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean 4\" yosys in:name,description,readme fork:true",
+    "totals_reported": [
+      90
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 90,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 90,
+        "returned": 90,
+        "incomplete_results": false,
+        "file": "searches/refined-01-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean theorem\" yosys in:name,description,readme fork:true",
+    "totals_reported": [
+      3155
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 100,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 3155,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/refined-02-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "language:Lean spice in:name,description,readme fork:true",
+    "totals_reported": [
+      7
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 7,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 7,
+        "returned": 7,
+        "incomplete_results": false,
+        "file": "searches/refined-03-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean4\" spice in:name,description,readme fork:true",
+    "totals_reported": [
+      101
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 100,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 101,
+        "returned": 100,
+        "incomplete_results": false,
+        "file": "searches/refined-04-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean 4\" spice in:name,description,readme fork:true",
+    "totals_reported": [
+      374
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 99,
+    "pagination_complete": false,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "Broad noisy query intentionally capped; narrower source/census evidence used.",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 374,
+        "returned": 99,
+        "incomplete_results": false,
+        "file": "searches/refined-05-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean4\" intersynth in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/refined-06-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean4\" simplec in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/refined-07-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean4\" \"write_table\" in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/refined-08-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean4\" \"write_functional_cxx\" in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/refined-09-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean 4\" EDIF in:name,description,readme fork:true",
+    "totals_reported": [
+      1
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 1,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 1,
+        "returned": 1,
+        "incomplete_results": false,
+        "file": "searches/refined-10-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "repository-refined",
+    "query": "\"Lean4\" BLIF in:name,description,readme fork:true",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/refined-11-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code-refined",
+    "query": "write_simplec language:Lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/narrow-code-00-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code-refined",
+    "query": "read_blif language:Lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/narrow-code-01-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code-refined",
+    "query": "edifVersion language:Lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/narrow-code-02-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code-refined",
+    "query": "spice language:Lean",
+    "totals_reported": [
+      8
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 8,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 8,
+        "returned": 8,
+        "incomplete_results": false,
+        "file": "searches/narrow-code-03-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code-refined",
+    "query": "CXXRTL extension:lean",
+    "totals_reported": [
+      0
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 0,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 0,
+        "returned": 0,
+        "incomplete_results": false,
+        "file": "searches/narrow-code-04-1.json.gz"
+      }
+    ]
+  },
+  {
+    "kind": "code-refined",
+    "query": "repo:deepai-org/loom yosys",
+    "totals_reported": [
+      54
+    ],
+    "pages_retrieved": [
+      1
+    ],
+    "returned": 54,
+    "pagination_complete": true,
+    "index_reports_incomplete_results": false,
+    "snapshot_drift": false,
+    "limit_note": "",
+    "pages": [
+      {
+        "page": 1,
+        "total_count": 54,
+        "returned": 54,
+        "incomplete_results": false,
+        "file": "searches/narrow-code-05-1.json.gz"
+      }
+    ]
+  }
+]

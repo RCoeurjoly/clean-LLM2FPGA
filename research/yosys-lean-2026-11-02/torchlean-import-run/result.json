@@ -1,0 +1,70 @@
+{
+  "completed_at": "2026-11-02T09:26:52.570775+00:00",
+  "status": "completed",
+  "scope": "Actual upstream import feasibility probe, including built Lean typed/numerical controls",
+  "upstream_commit": "f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b",
+  "whole_model_import": {
+    "status": "blocked",
+    "phase": "Python capture/lowering before graph JSON",
+    "error": "unsupported PyTorch op: aten.embedding.default",
+    "whole_model_imported_into_lean": false
+  },
+  "adapter_emitted_by_lean": true,
+  "operator_rules_modified": false,
+  "controls": {
+    "add": {
+      "status": "completed",
+      "check": {
+        "inputs": 1,
+        "nodes": 2,
+        "numerical_control": true,
+        "output_words": [
+          [
+            2147483648,
+            1065353216,
+            3223322624,
+            1086324736
+          ]
+        ],
+        "outputs": 1
+      },
+      "output_values_compared": 4,
+      "seconds": 10.74679992799065,
+      "peak_rss_kib": 4018732,
+      "command_report": "06-add-check.json"
+    },
+    "linear": {
+      "status": "completed",
+      "check": {
+        "inputs": 1,
+        "nodes": 4,
+        "numerical_control": true,
+        "output_words": [
+          [
+            3217031168,
+            3222274048,
+            1077936128
+          ]
+        ],
+        "outputs": 1
+      },
+      "output_values_compared": 3,
+      "seconds": 10.668283512000926,
+      "peak_rss_kib": 4018920,
+      "command_report": "07-linear-check.json"
+    }
+  },
+  "output_values_compared": 7,
+  "expected_reproducers": {
+    "embedding": "unsupported PyTorch op: aten.embedding.default",
+    "frozen-transposed-linear": "could not resolve tensor argument transpose into the exported payload",
+    "round": "unsupported PyTorch op: aten.round.default",
+    "clamp": "unsupported PyTorch op: aten.clamp.default",
+    "choose-qparams": "unsupported tuple-valued PyTorch op: quantized_decomposed.choose_qparams.tensor"
+  },
+  "frozen_model_unchanged": true,
+  "reference_sample_output_hashes": [
+    "fa0b5d595c2bd3d23fb34d9d055984c0000e0e930d6bdfdee97988bdd3142b78"
+  ],
+  "equivalence_proved": false
+}

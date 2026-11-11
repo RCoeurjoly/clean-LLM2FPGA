@@ -1,0 +1,15 @@
+{
+  "distinct_query_families": 51,
+  "saved_result_pages": 71,
+  "pagination_complete": 42,
+  "explicitly_capped": 9,
+  "backend_coverage_rows": 22,
+  "auxiliary_coverage_rows": 28,
+  "mapping_assessment_rows": 22,
+  "request_successes": 195,
+  "request_failures": 0,
+  "retained_manifest_files": 180,
+  "retained_bytes": 3844224,
+  "retained_hash_mismatches": [],
+  "fresh_lean_build": false
+}

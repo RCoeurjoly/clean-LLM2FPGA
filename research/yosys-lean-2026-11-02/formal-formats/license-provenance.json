@@ -1,0 +1,1977 @@
+{
+  "scope": "Existing retained upstream source projects only; root license/notice housekeeping, no new survey",
+  "date": "2026-11-02",
+  "repositories": [
+    {
+      "repo": "AD1024/Lean-SMT-Benchmarks",
+      "ref": null,
+      "root_license_paths": [],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "AdrienChampion/lsmt2",
+      "ref": "3e7fcfbf0a45a4a3a086ff65d43b04464fef81ae",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "Easyoakland/HDLean",
+      "ref": "0c4637326055c9ee38e9d9ecff9cf167d664f7ec",
+      "root_license_paths": [],
+      "tree_known": true
+    },
+    {
+      "repo": "ErosSph/xiangshan2Lean",
+      "ref": "a1299b564831e571b9b80f816219ae06c91db342",
+      "root_license_paths": [
+        "LICENSE",
+        "NOTICE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "Ghonimo/kernelcert-artifact",
+      "ref": "d11802bf5b054e5341943199b5a10b7f57a821d3",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "JamesGallicchio/SmtLibLean",
+      "ref": "da6099deb61fd18c241bbdfb68123c2b2e4d52c4",
+      "root_license_paths": [],
+      "tree_known": true
+    },
+    {
+      "repo": "Kiguli/leansmv",
+      "ref": "15c082888efb87144375a36bf64d20dca02bd477",
+      "root_license_paths": [],
+      "tree_known": true
+    },
+    {
+      "repo": "LeanHorn/Flex",
+      "ref": null,
+      "root_license_paths": [],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "LeanHorn/SMTLib-to-Lean",
+      "ref": "9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "ROana-coder/SMT-LIB-Parser",
+      "ref": "15dbdd12aa9be8d23f474d0634234c8e3b94ae62",
+      "root_license_paths": [],
+      "tree_known": true
+    },
+    {
+      "repo": "SMC17/logic-zig",
+      "ref": "1098ae1e58c3f76961271833dc8dd1f87a25d46a",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "Stefan-Mocanu/SMT-LIB-Parser",
+      "ref": null,
+      "root_license_paths": [],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "VTrelat/BEer",
+      "ref": "d846712bf296520d4f4b39d0e0ae48211a7e4e15",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "WorlesEnric/pceq",
+      "ref": "77ffc62f91f2315f52c9d66b053822875490b8cf",
+      "root_license_paths": [],
+      "tree_known": true
+    },
+    {
+      "repo": "abdoo8080/lean-smt-demo",
+      "ref": null,
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "alabsystems/ty",
+      "ref": "a13fc3bcca38a65e2be43aeb97086b6cd649dc76",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "arjunvish/lfsc-parser",
+      "ref": null,
+      "root_license_paths": [],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "atvrager/Shoumei-RTL",
+      "ref": "1d8119704838948670f71d5d8ce5d371fe8a9eec",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "avigad/smtlean",
+      "ref": null,
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "benreynwar/silean",
+      "ref": "436467ba1b38cd41dbe1279b7fc6218db9041ea3",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "deepai-org/loom",
+      "ref": "ea1770339296375988b42121db599b4cb36184d7",
+      "root_license_paths": [
+        "LICENSE",
+        "NOTICE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "dranov/lean-smt-usage-example",
+      "ref": null,
+      "root_license_paths": [],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "hargoniX/Leanwuzla",
+      "ref": "b752f8b2f8f420aa95a106cc57dd5ea8e9794ab9",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "jn555/HardBench",
+      "ref": "ba9fb00a9b386352b1c15273d3534c2aa07c1ef3",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "leanprover/lean4",
+      "ref": null,
+      "root_license_paths": [
+        "LICENSE",
+        "LICENSES"
+      ],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "leanprover/leansat",
+      "ref": "b83b5d8631ee54bc913b0e6aaf44711c34a50e0d",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "mjbommar/axeyum",
+      "ref": null,
+      "root_license_paths": [
+        "LICENSE-APACHE",
+        "LICENSE-MIT"
+      ],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "nathsou/HDLean",
+      "ref": "c3808e57b342c63eaff677abca7f9391a4dc954a",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "onderjan/blazing-smtlib",
+      "ref": "42b45c20b0045495a40b9eaf0a717e0f1c976bed",
+      "root_license_paths": [
+        "LICENSE-APACHE",
+        "LICENSE-MIT"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "opencompl/lean-mlir",
+      "ref": "b8c4a771319a044854a4bbb49b8821381ef86ff8",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "opencompl/valaig",
+      "ref": "f7e58661ddc7c06cbaa09c90505abd11dc2925cb",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "palladin/SmtLibDsl",
+      "ref": "3ba92c91136ddd02db008be4e35e2c4d8c9761af",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "philzook58/yosys-lean",
+      "ref": "9e575011c948f4ee6e422c7acfa5c453d9f8ebff",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "pmatos/z3-to-lean",
+      "ref": null,
+      "root_license_paths": [],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "riaqn/smtlean",
+      "ref": "c11768cfb43cd634340b552f5039cba094701a87",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "salinhkuhn/lean-mlir",
+      "ref": null,
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "ttj/fmaiv",
+      "ref": "6c8847c7d109f489339ce938b8b8eec901ae2087",
+      "root_license_paths": [],
+      "tree_known": true
+    },
+    {
+      "repo": "ttj/leansmv",
+      "ref": "2349edc2eddb9a4f479f98c23f3d257a72945472",
+      "root_license_paths": [],
+      "tree_known": true
+    },
+    {
+      "repo": "ufmg-smite/lean-smt",
+      "ref": "db545bebe2de1e06dc2df62a6ff6c20e5736bfc0",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "uw-unsat/exoverifier",
+      "ref": "a0166f68ae181d3045cc03662ac723faeb3eaeb2",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    },
+    {
+      "repo": "uw-unsat/leanette-popl22-artifact",
+      "ref": null,
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": false,
+      "license_tree_read": "contents"
+    },
+    {
+      "repo": "valeria-org/bitwright",
+      "ref": "79be0c1093e5dca3fbd26c1c74d5120cc83efd8b",
+      "root_license_paths": [
+        "LICENSE"
+      ],
+      "tree_known": true
+    }
+  ],
+  "additional_root_listings": [
+    {
+      "repo": "AD1024/Lean-SMT-Benchmarks",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "200548f59dc962f4b8573ef3e6b6d9587ebe20ac"
+        },
+        {
+          "name": "Curated.lean",
+          "path": "Curated.lean",
+          "type": "file",
+          "sha": "153df1f2333ed81165b754e111e62f5cceca070d"
+        },
+        {
+          "name": "Curated",
+          "path": "Curated",
+          "type": "dir",
+          "sha": "157ed1bd532431e642a0e7edb66fd126803769ce"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "64c752a658535a749b5deb348934c58353fa7224"
+        },
+        {
+          "name": "lakefile.toml",
+          "path": "lakefile.toml",
+          "type": "file",
+          "sha": "67b1c4c3c1211b4b087ba37ce155020372e38169"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "0ec5999cc044e45c8e7c613fc6830e018b47d595"
+        },
+        {
+          "name": "run.sh",
+          "path": "run.sh",
+          "type": "file",
+          "sha": "bb3197f5ca716bcdb2be110edddd4bf0d5196ff4"
+        }
+      ],
+      "root_license_paths": []
+    },
+    {
+      "repo": "LeanHorn/Flex",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".github",
+          "path": ".github",
+          "type": "dir",
+          "sha": "aae2722ab84767d78252a4a4f8e6dcb5b45a9b7e"
+        },
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "c01cf7f786d00deff705c91f3c4105ea02f779d7"
+        },
+        {
+          "name": "Benchmarks",
+          "path": "Benchmarks",
+          "type": "dir",
+          "sha": "708f041f6e9005acced82ec1c672d3d2a6e9e643"
+        },
+        {
+          "name": "Demo",
+          "path": "Demo",
+          "type": "dir",
+          "sha": "c9d80673163ec377ff6683cf9d0621fc8119e75d"
+        },
+        {
+          "name": "Flex.lean",
+          "path": "Flex.lean",
+          "type": "file",
+          "sha": "2a544e70e46ff243472ff6cd410f2fa1d43dfe32"
+        },
+        {
+          "name": "Flex",
+          "path": "Flex",
+          "type": "dir",
+          "sha": "bf03a307a9e15e571144e589b03c3fc6d3106a51"
+        },
+        {
+          "name": "Main.lean",
+          "path": "Main.lean",
+          "type": "file",
+          "sha": "5be170b7aedc3c3b00f7c2a7eae6c03e0de1dbc7"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "453f2f046e09c7c5ff3939ed716300ba256d2d58"
+        },
+        {
+          "name": "Tests",
+          "path": "Tests",
+          "type": "dir",
+          "sha": "b401da3de23b0b068fc9fef5de329f9f5d8a9fe7"
+        },
+        {
+          "name": "docs",
+          "path": "docs",
+          "type": "dir",
+          "sha": "cf9480e8c7099a9016f01675d8ab0955d5c19705"
+        },
+        {
+          "name": "eval",
+          "path": "eval",
+          "type": "dir",
+          "sha": "fb87d64e19aeba02cdf5daa6d6eac7835c28200b"
+        },
+        {
+          "name": "evaluation",
+          "path": "evaluation",
+          "type": "dir",
+          "sha": "e8d06886eb47269f982c4ced2b44891906352d42"
+        },
+        {
+          "name": "lake-manifest.json",
+          "path": "lake-manifest.json",
+          "type": "file",
+          "sha": "30aaa2808238b7e3834992ddc4ef5284a730a5ed"
+        },
+        {
+          "name": "lakefile.lean",
+          "path": "lakefile.lean",
+          "type": "file",
+          "sha": "2a8d92ac15abc7a352e3e0e514f047c400da25e7"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "12359f928f18e4a89ebd1444a0310b025931b17d"
+        },
+        {
+          "name": "native",
+          "path": "native",
+          "type": "dir",
+          "sha": "4cc3c5dd994d5cbc2180e11b1075a33f5d64a868"
+        },
+        {
+          "name": "scripts",
+          "path": "scripts",
+          "type": "dir",
+          "sha": "28a9dcd7ce443ee2acd9fc570868499122fc16fc"
+        }
+      ],
+      "root_license_paths": []
+    },
+    {
+      "repo": "Stefan-Mocanu/SMT-LIB-Parser",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".DS_Store",
+          "path": ".DS_Store",
+          "type": "file",
+          "sha": "db1e6f3d212db9df7a63e39dc6fc14672b963b75"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "809cbb525d3ecf9f23336c1ccba6068dd0292140"
+        },
+        {
+          "name": "smt-lib-parser",
+          "path": "smt-lib-parser",
+          "type": "dir",
+          "sha": "3c01bf4bac77ad39352f2c31c4ff6f0353879cbc"
+        }
+      ],
+      "root_license_paths": []
+    },
+    {
+      "repo": "abdoo8080/lean-smt-demo",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".github",
+          "path": ".github",
+          "type": "dir",
+          "sha": "48e49898ba93b136824f5dac337c437efb4fbcea"
+        },
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c"
+        },
+        {
+          "name": "Demo.lean",
+          "path": "Demo.lean",
+          "type": "file",
+          "sha": "c8147b329cfc0f5a7904181d20329dd8146d1ab9"
+        },
+        {
+          "name": "LICENSE",
+          "path": "LICENSE",
+          "type": "file",
+          "sha": "16edd59c71db7fef53a0fa17d4008c22de1cdeb7"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "69fd958fa3fa235e1952e74f3573609693035bdb"
+        },
+        {
+          "name": "lake-manifest.json",
+          "path": "lake-manifest.json",
+          "type": "file",
+          "sha": "fed5ab28d4d749bcd6b001a4ffa7e4883c503f0e"
+        },
+        {
+          "name": "lakefile.toml",
+          "path": "lakefile.toml",
+          "type": "file",
+          "sha": "6c2ee3dfd1dc548e64cbd99c3773bb5de9c8256b"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "d0eb99ff68d76c831521c84404ad1fd549f51ac0"
+        }
+      ],
+      "root_license_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "arjunvish/lfsc-parser",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "9725cc3d18de27e23cebd2e80cf92386bebaff71"
+        },
+        {
+          "name": "Makefile",
+          "path": "Makefile",
+          "type": "file",
+          "sha": "47256a3f580e4a207b6728942be189764f30bace"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "f5806af1ac8f3c8bc08b2f99b8a8805c8091d27b"
+        },
+        {
+          "name": "lfscAst.ml",
+          "path": "lfscAst.ml",
+          "type": "file",
+          "sha": "fca7ea6984e35ae9461a132dd478d1c0c42b4b87"
+        },
+        {
+          "name": "lfscLexer.mll",
+          "path": "lfscLexer.mll",
+          "type": "file",
+          "sha": "43e4ab4699903175776a9c8318c61517e998f314"
+        },
+        {
+          "name": "lfscParser.mly",
+          "path": "lfscParser.mly",
+          "type": "file",
+          "sha": "fe528333b1d2a8251e6b32f71a283d6c152339fe"
+        },
+        {
+          "name": "lfsc_sigs",
+          "path": "lfsc_sigs",
+          "type": "dir",
+          "sha": "c3d3da90f5998139504f8ebdbb9b157ac32875f1"
+        },
+        {
+          "name": "main.ml",
+          "path": "main.ml",
+          "type": "file",
+          "sha": "22be4eacf2028365e4c7f034ac1a3d73c6600154"
+        },
+        {
+          "name": "runtests.sh",
+          "path": "runtests.sh",
+          "type": "file",
+          "sha": "d30bec4075e4c8cb1262da881fcefbd0c3365329"
+        },
+        {
+          "name": "test",
+          "path": "test",
+          "type": "dir",
+          "sha": "1511f2d154362a932148e219aaa8d3a80fe0223b"
+        }
+      ],
+      "root_license_paths": []
+    },
+    {
+      "repo": "avigad/smtlean",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": "LICENSE",
+          "path": "LICENSE",
+          "type": "file",
+          "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+        },
+        {
+          "name": "README.org",
+          "path": "README.org",
+          "type": "file",
+          "sha": "80ece9bde55b7563701a37e9b517795ce7456cb0"
+        },
+        {
+          "name": "src",
+          "path": "src",
+          "type": "dir",
+          "sha": "bdf1b4aa062c538aa32f7e542d439e23ed02fc52"
+        }
+      ],
+      "root_license_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "dranov/lean-smt-usage-example",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c"
+        },
+        {
+          "name": "Main.lean",
+          "path": "Main.lean",
+          "type": "file",
+          "sha": "3d67d07f9350bf7e14814b5cddd4532577b132e7"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "41c62e8b87984405594734be854dc8d9eb430bbc"
+        },
+        {
+          "name": "Smter.lean",
+          "path": "Smter.lean",
+          "type": "file",
+          "sha": "52ba4cfdfd107141cfc4c30f5a40017e59aac966"
+        },
+        {
+          "name": "Smter",
+          "path": "Smter",
+          "type": "dir",
+          "sha": "5eb4d7895aafab7c931c3e96cf3b3a216a2196d4"
+        },
+        {
+          "name": "lake-manifest.json",
+          "path": "lake-manifest.json",
+          "type": "file",
+          "sha": "6e841b68e0d0ee507fea141f455b041dd8bbdc23"
+        },
+        {
+          "name": "lakefile.lean",
+          "path": "lakefile.lean",
+          "type": "file",
+          "sha": "6372120dd7f0e920a4e640d82136cfd2db097a09"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "ef1f67e9e663aef7b6c7ebfa1faed1a42f9c8efd"
+        }
+      ],
+      "root_license_paths": []
+    },
+    {
+      "repo": "leanprover/lean4",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".claude",
+          "path": ".claude",
+          "type": "dir",
+          "sha": "d89b5e5713fdc8969bd88504ecaf4a6feac89096"
+        },
+        {
+          "name": ".gitattributes",
+          "path": ".gitattributes",
+          "type": "file",
+          "sha": "2de469af161aa9ee7c412e60817757aadc34c5d5"
+        },
+        {
+          "name": ".github",
+          "path": ".github",
+          "type": "dir",
+          "sha": "2c64e8e1483a8a1f216e9c9910ee62ae12cb4b54"
+        },
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "752fbe9f6497b52a70c12966c243cd355e1188bb"
+        },
+        {
+          "name": ".gitpod.Dockerfile",
+          "path": ".gitpod.Dockerfile",
+          "type": "file",
+          "sha": "7472f7741d83f98d950f96de6a2155b59edfbd2f"
+        },
+        {
+          "name": ".gitpod.yml",
+          "path": ".gitpod.yml",
+          "type": "file",
+          "sha": "1b0aec77357676e81c2a0a9f8b2abdba302c7eaa"
+        },
+        {
+          "name": ".ignore",
+          "path": ".ignore",
+          "type": "file",
+          "sha": "f4b348ddd94299131da0742efdab21d1d619701e"
+        },
+        {
+          "name": ".tombi.toml",
+          "path": ".tombi.toml",
+          "type": "file",
+          "sha": "435d3f00d0f5d729fba802ac8e9c5695006fd632"
+        },
+        {
+          "name": ".vscode",
+          "path": ".vscode",
+          "type": "dir",
+          "sha": "4b8a2ff4681a14ce57e7ce3fb0851bd3c591ac8e"
+        },
+        {
+          "name": "AGENTS.md",
+          "path": "AGENTS.md",
+          "type": "file",
+          "sha": "ac55cbdc9c3fc104980dc194fcd819ebe47e9e6d"
+        },
+        {
+          "name": "CMakeLists.txt",
+          "path": "CMakeLists.txt",
+          "type": "file",
+          "sha": "a273a44faa4392046c7f6e5799fcef89938f7130"
+        },
+        {
+          "name": "CMakePresets.json",
+          "path": "CMakePresets.json",
+          "type": "file",
+          "sha": "4ec17a720671242c1f4f40b692c91b2172dd58b0"
+        },
+        {
+          "name": "CODEOWNERS",
+          "path": "CODEOWNERS",
+          "type": "file",
+          "sha": "9960c0844b4902b774eff4c782a75224a03623c0"
+        },
+        {
+          "name": "CONTRIBUTING.md",
+          "path": "CONTRIBUTING.md",
+          "type": "file",
+          "sha": "4cf8d308bc5274765504a02ed9306d5a5c960de8"
+        },
+        {
+          "name": "LICENSE",
+          "path": "LICENSE",
+          "type": "file",
+          "sha": "813da297567374691eaae7a88739dbbefd2afdfd"
+        },
+        {
+          "name": "LICENSES",
+          "path": "LICENSES",
+          "type": "file",
+          "sha": "99e93a046391fcd3f5ba5580f50e248ad38a510d"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "49a5704ebfdc0a13164623b1876954638302ba69"
+        },
+        {
+          "name": "RELEASES.md",
+          "path": "RELEASES.md",
+          "type": "file",
+          "sha": "be1f3e4d9742bcffd6734119d40f76c0c18e0979"
+        },
+        {
+          "name": "doc",
+          "path": "doc",
+          "type": "dir",
+          "sha": "48428211204364fc1b7677dd2ee490cbdcb344d6"
+        },
+        {
+          "name": "flake.lock",
+          "path": "flake.lock",
+          "type": "file",
+          "sha": "f3046deb986b87de310225a1bd5d58e0a1df63fc"
+        },
+        {
+          "name": "flake.nix",
+          "path": "flake.nix",
+          "type": "file",
+          "sha": "c3288fb7bb79434801cf347c78a20d771fbe2ecb"
+        },
+        {
+          "name": "images",
+          "path": "images",
+          "type": "dir",
+          "sha": "3c5ec05e6d54fa1bde2e0bbe0c428b7520013353"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "83c5d0ac9283bf4c9c302b0884fe7980ee1c1320"
+        },
+        {
+          "name": "script",
+          "path": "script",
+          "type": "dir",
+          "sha": "94f7ed89d8e186a63fea8f19bb14474b1ed66219"
+        },
+        {
+          "name": "src",
+          "path": "src",
+          "type": "dir",
+          "sha": "035af873d09a43b797355fdf04859e4c667e8c0a"
+        },
+        {
+          "name": "stage0",
+          "path": "stage0",
+          "type": "dir",
+          "sha": "c4e7bc610ff6109ec249cbffd18e16d9596bc7e5"
+        },
+        {
+          "name": "tests",
+          "path": "tests",
+          "type": "dir",
+          "sha": "282b1cb36de74f2faf837b745b329abd78a4ec2a"
+        }
+      ],
+      "root_license_paths": [
+        "LICENSE",
+        "LICENSES"
+      ]
+    },
+    {
+      "repo": "mjbommar/axeyum",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".cargo",
+          "path": ".cargo",
+          "type": "dir",
+          "sha": "c2beccb1611bc448723c0a90bfd37adfac0b0db0"
+        },
+        {
+          "name": ".config",
+          "path": ".config",
+          "type": "dir",
+          "sha": "5a3e81f2946d59e7f7097cc0bec71f5053a71e14"
+        },
+        {
+          "name": ".editorconfig",
+          "path": ".editorconfig",
+          "type": "file",
+          "sha": "c5a7eb75185ae3ce7e97243b92b836c9fe23f1e9"
+        },
+        {
+          "name": ".github",
+          "path": ".github",
+          "type": "dir",
+          "sha": "dd6318ddfd5c5c2e282d3dd2986baa848ec49973"
+        },
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "a783ceab1dab78c661c8cc993ce8be0d0348ce75"
+        },
+        {
+          "name": ".python-version",
+          "path": ".python-version",
+          "type": "file",
+          "sha": "e4fba2183587225f216eeada4c78dfab6b2e65f5"
+        },
+        {
+          "name": "AGENTS.md",
+          "path": "AGENTS.md",
+          "type": "file",
+          "sha": "c4e66af54ecc09b502a01910f319024161cf8792"
+        },
+        {
+          "name": "CHANGELOG.md",
+          "path": "CHANGELOG.md",
+          "type": "file",
+          "sha": "e52004284763ccfa8c768733bf7f67fbbb4a19a5"
+        },
+        {
+          "name": "CITATION.cff",
+          "path": "CITATION.cff",
+          "type": "file",
+          "sha": "13bfe6ab8adcae7807e56fbc4bdf825e9c2473af"
+        },
+        {
+          "name": "CLAUDE.md",
+          "path": "CLAUDE.md",
+          "type": "file",
+          "sha": "d3941b756a9af2c9ac70d4dd631936ab627cbcdb"
+        },
+        {
+          "name": "CONTRIBUTING.md",
+          "path": "CONTRIBUTING.md",
+          "type": "file",
+          "sha": "6068d2bb55aee3202f0c5e2d6f888106558ad5d0"
+        },
+        {
+          "name": "Cargo.lock",
+          "path": "Cargo.lock",
+          "type": "file",
+          "sha": "7fb65af768517d734404f56f6a723785fc86f141"
+        },
+        {
+          "name": "Cargo.toml",
+          "path": "Cargo.toml",
+          "type": "file",
+          "sha": "738a2c2d6d2eaeb0e7ddd11999381a892794408b"
+        },
+        {
+          "name": "LICENSE-APACHE",
+          "path": "LICENSE-APACHE",
+          "type": "file",
+          "sha": "da484ee097404ee9046629df7804a50d7ef1d613"
+        },
+        {
+          "name": "LICENSE-MIT",
+          "path": "LICENSE-MIT",
+          "type": "file",
+          "sha": "01e04dffb6019e742e985bb2c9933b1142e043ed"
+        },
+        {
+          "name": "PLAN.md",
+          "path": "PLAN.md",
+          "type": "file",
+          "sha": "ecbecb23812b88b23cbd875d928a19d20456f367"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "0e902f1af21d625bded531e07ec563d21639702f"
+        },
+        {
+          "name": "STATUS.md",
+          "path": "STATUS.md",
+          "type": "file",
+          "sha": "df7aaeccebf510b970710fc5b4bdde5b1c5b2e6c"
+        },
+        {
+          "name": "artifacts",
+          "path": "artifacts",
+          "type": "dir",
+          "sha": "7f1a09f179b3db20e385a3d10d574d05fa6a0eff"
+        },
+        {
+          "name": "bench-results",
+          "path": "bench-results",
+          "type": "dir",
+          "sha": "8eeb63e7896bf87b009cb118bdb3d356f15f9d21"
+        },
+        {
+          "name": "book.toml",
+          "path": "book.toml",
+          "type": "file",
+          "sha": "66571ac0401b8d01aa47bd8843c983eb3b6ac12c"
+        },
+        {
+          "name": "corpus",
+          "path": "corpus",
+          "type": "dir",
+          "sha": "09e414ff8a3aba20ad6b8c25bd5db8340c26b8ca"
+        },
+        {
+          "name": "crates",
+          "path": "crates",
+          "type": "dir",
+          "sha": "fe66d4f3e034b9f86b42df282b3efaf748f7cce0"
+        },
+        {
+          "name": "deny.toml",
+          "path": "deny.toml",
+          "type": "file",
+          "sha": "1a1fcc8e6f125065139fabd3f5e38296afc9a9ad"
+        },
+        {
+          "name": "docs",
+          "path": "docs",
+          "type": "dir",
+          "sha": "ce5a7a8225e0ec6847921edd162d54638ff924ca"
+        },
+        {
+          "name": "hooks",
+          "path": "hooks",
+          "type": "dir",
+          "sha": "a91a49659c379956544ade987b8d4ce7058cc7db"
+        },
+        {
+          "name": "justfile",
+          "path": "justfile",
+          "type": "file",
+          "sha": "ed5ad72c6fca12a2cca180f859eb0bee25488a53"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "75def60936d3c4cf2f7edea699117d6cf7299a04"
+        },
+        {
+          "name": "lean",
+          "path": "lean",
+          "type": "dir",
+          "sha": "170570073beab061b651cb16176d6f9b804011e9"
+        },
+        {
+          "name": "pyproject.toml",
+          "path": "pyproject.toml",
+          "type": "file",
+          "sha": "bc7d7dd7d8d31a7b2a01f6522e26909d9c282839"
+        },
+        {
+          "name": "python",
+          "path": "python",
+          "type": "dir",
+          "sha": "421d29ab9e03e8e7e36cbe0aefe9da99927fa8d0"
+        },
+        {
+          "name": "references",
+          "path": "references",
+          "type": "dir",
+          "sha": "aabf3e3948cf69b957f1a27dd44e0bc0a5c75741"
+        },
+        {
+          "name": "render",
+          "path": "render",
+          "type": "dir",
+          "sha": "5a8716558b23c8f793ce09f00d5d688bf073b833"
+        },
+        {
+          "name": "rustfmt.toml",
+          "path": "rustfmt.toml",
+          "type": "file",
+          "sha": "3501136812cb639f6f93412fc9ef5bb7ce177a64"
+        },
+        {
+          "name": "scripts",
+          "path": "scripts",
+          "type": "dir",
+          "sha": "67bdbc5afc27644774b2fe147f1fa969813ca626"
+        },
+        {
+          "name": "tools",
+          "path": "tools",
+          "type": "dir",
+          "sha": "0cbbf1928cc7a1342fdf452e4f50e48fdac24119"
+        },
+        {
+          "name": "uv.lock",
+          "path": "uv.lock",
+          "type": "file",
+          "sha": "6ff4155a1cc1fb50bad44f8940f0107a10d6be25"
+        }
+      ],
+      "root_license_paths": [
+        "LICENSE-APACHE",
+        "LICENSE-MIT"
+      ]
+    },
+    {
+      "repo": "pmatos/z3-to-lean",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".github",
+          "path": ".github",
+          "type": "dir",
+          "sha": "1fccb4e9c6bbfd571c595639b235eb5498ba2a1c"
+        },
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c"
+        },
+        {
+          "name": "CLAUDE.md",
+          "path": "CLAUDE.md",
+          "type": "file",
+          "sha": "61d1c0b97f15b66488e43312399e2e134c6c8a01"
+        },
+        {
+          "name": "Examples",
+          "path": "Examples",
+          "type": "dir",
+          "sha": "cfd18eab44824b9409a3ca431f4dc00376fffc0c"
+        },
+        {
+          "name": "Main.lean",
+          "path": "Main.lean",
+          "type": "file",
+          "sha": "50532e6c0cc143cbb58add5bbf2030d17c419ac0"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "d8d04ba9b20fe430e0c1d7490a88cdd380798457"
+        },
+        {
+          "name": "RESEARCH_REPORT.md",
+          "path": "RESEARCH_REPORT.md",
+          "type": "file",
+          "sha": "c5e64794e43d1dbd6dab6d99252a7c6a07a43415"
+        },
+        {
+          "name": "TESTING.md",
+          "path": "TESTING.md",
+          "type": "file",
+          "sha": "f558cad20605364b77cdd0ff7ac7e20dbb9405b2"
+        },
+        {
+          "name": "TUTORIAL.md",
+          "path": "TUTORIAL.md",
+          "type": "file",
+          "sha": "782c98949cdec233ae67e3c739ffed0f40fac0a2"
+        },
+        {
+          "name": "Z3ToLean.lean",
+          "path": "Z3ToLean.lean",
+          "type": "file",
+          "sha": "fe228e435fa29e873b0379c851fba7b0c39c6a06"
+        },
+        {
+          "name": "Z3ToLean",
+          "path": "Z3ToLean",
+          "type": "dir",
+          "sha": "dd3926ef421232c6c1856a31d3c956c25bfc8459"
+        },
+        {
+          "name": "demo.sh",
+          "path": "demo.sh",
+          "type": "file",
+          "sha": "8b8bb41fbcb64fec48fe0ab2e4156a1aa1f9baf6"
+        },
+        {
+          "name": "lake-manifest.json",
+          "path": "lake-manifest.json",
+          "type": "file",
+          "sha": "1d7fee4edf9ef6294e2cd5d4d3e8b6fb4e095157"
+        },
+        {
+          "name": "lakefile.toml",
+          "path": "lakefile.toml",
+          "type": "file",
+          "sha": "ba602ddc7b44868645496c4cd705c16a76042662"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "c00a53503cc3cc776c290056ed21ce7e5d80b083"
+        }
+      ],
+      "root_license_paths": []
+    },
+    {
+      "repo": "salinhkuhn/lean-mlir",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".devcontainer",
+          "path": ".devcontainer",
+          "type": "dir",
+          "sha": "3292145c473e026baf3b5d29f7b007418fd2fa98"
+        },
+        {
+          "name": ".dockerignore",
+          "path": ".dockerignore",
+          "type": "file",
+          "sha": "3b3709af3a202d838d2e4fdda4af417e754d4368"
+        },
+        {
+          "name": ".dockerscripts",
+          "path": ".dockerscripts",
+          "type": "dir",
+          "sha": "f147fdbdd229bea43aeaac8e9a4610363e448c36"
+        },
+        {
+          "name": ".envrc",
+          "path": ".envrc",
+          "type": "file",
+          "sha": "c5391c11cbfb0dd77744f3cf904f4f38a8490e62"
+        },
+        {
+          "name": ".gitattributes",
+          "path": ".gitattributes",
+          "type": "file",
+          "sha": "c20182ffae32188e0deb89d3256da778f7c8dbd5"
+        },
+        {
+          "name": ".github",
+          "path": ".github",
+          "type": "dir",
+          "sha": "b7b8a24f05c7fd8b4773ff20c69074d6bc419143"
+        },
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "4136dae45dfa0dde9e036b9e789d2155ed2cf554"
+        },
+        {
+          "name": ".gitmodules",
+          "path": ".gitmodules",
+          "type": "file",
+          "sha": "73c5f3c705881767600c831139411d7160631f7a"
+        },
+        {
+          "name": "Blase",
+          "path": "Blase",
+          "type": "dir",
+          "sha": "0df934f9031b3ae8e58c31fa88f1b877be8a2774"
+        },
+        {
+          "name": "Dockerfile",
+          "path": "Dockerfile",
+          "type": "file",
+          "sha": "939adb6e90e0812a8d428f3fab3c4fed06f86cec"
+        },
+        {
+          "name": "LICENSE",
+          "path": "LICENSE",
+          "type": "file",
+          "sha": "4d7b2ade34a8e9e7578afeb758ab4fed3de7a5c8"
+        },
+        {
+          "name": "LeanMLIR",
+          "path": "LeanMLIR",
+          "type": "dir",
+          "sha": "bc828bb73284d951d71ee8595ab49ec4d0e0349b"
+        },
+        {
+          "name": "Medusa",
+          "path": "Medusa",
+          "type": "dir",
+          "sha": "471d833d8e8de659f6df882944738620d0ead51f"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "322af8bf4faef55b2d429e5af4c78b519cd6432c"
+        },
+        {
+          "name": "SSA.lean",
+          "path": "SSA.lean",
+          "type": "file",
+          "sha": "c3661555a13a19ec47b480f3fbcfe29431297606"
+        },
+        {
+          "name": "SSA",
+          "path": "SSA",
+          "type": "dir",
+          "sha": "e2c9b218ad4805ec2e2cfd8578eda3df73721cc3"
+        },
+        {
+          "name": "SexprPBV",
+          "path": "SexprPBV",
+          "type": "dir",
+          "sha": "57b7dd5e342cdfe2cff177ec4278084eb1e2febe"
+        },
+        {
+          "name": "TacBench",
+          "path": "TacBench",
+          "type": "dir",
+          "sha": "5f63dbd9581054dd33cf1d37a0415a6383f24b73"
+        },
+        {
+          "name": "artifacts",
+          "path": "artifacts",
+          "type": "dir",
+          "sha": "17de88b257dab3b1bbe3ede67e67754f011d7808"
+        },
+        {
+          "name": "bv-evaluation",
+          "path": "bv-evaluation",
+          "type": "dir",
+          "sha": "5248f62188e73b3719bace20b0611e49c2069676"
+        },
+        {
+          "name": "docgen.sh",
+          "path": "docgen.sh",
+          "type": "file",
+          "sha": "cef4a8941efc40df5dba392c4ff8654f29edb3c3"
+        },
+        {
+          "name": "evallib",
+          "path": "evallib",
+          "type": "dir",
+          "sha": "756fd370a3985371eb459a9ae240f24ffe07c080"
+        },
+        {
+          "name": "flake.lock",
+          "path": "flake.lock",
+          "type": "file",
+          "sha": "ee9634dd0749e250db88c64f283232eca4454d94"
+        },
+        {
+          "name": "flake.nix",
+          "path": "flake.nix",
+          "type": "file",
+          "sha": "28434196028131e27926189575b162af88322112"
+        },
+        {
+          "name": "images",
+          "path": "images",
+          "type": "dir",
+          "sha": "ed3128e3427f2c4bf4b7eb99750dde8d85848e57"
+        },
+        {
+          "name": "lake-manifest.json",
+          "path": "lake-manifest.json",
+          "type": "file",
+          "sha": "98206d9686be4097c4229b7d9ab697ab41ce5b80"
+        },
+        {
+          "name": "lakefile.toml",
+          "path": "lakefile.toml",
+          "type": "file",
+          "sha": "8da98018785b956a76eb2f2d18061230e779a6f2"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "182fbbd2ed6333d126fe36f250ad660755597b3c"
+        },
+        {
+          "name": "requirements.txt",
+          "path": "requirements.txt",
+          "type": "file",
+          "sha": "924a6f3cb083589a264d068eddaf226e07e44c01"
+        },
+        {
+          "name": "ssa.code-workspace",
+          "path": "ssa.code-workspace",
+          "type": "file",
+          "sha": "7a3c8848e8e658ab644c56900665edaf6bbb3cf9"
+        },
+        {
+          "name": "test",
+          "path": "test",
+          "type": "dir",
+          "sha": "577a79ab10323e001f2214910ff5f657e0dff60c"
+        },
+        {
+          "name": "xdsl.nix",
+          "path": "xdsl.nix",
+          "type": "file",
+          "sha": "ee66ba8998b74b01c4ef9ce385519f0b91e7739a"
+        }
+      ],
+      "root_license_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "ufmg-smite/lean-smt",
+      "ref": "db545bebe2de1e06dc2df62a6ff6c20e5736bfc0",
+      "root_entries": [
+        {
+          "name": ".github",
+          "path": ".github",
+          "type": "dir",
+          "sha": "e48760b34705e7faae8c8f088aa1613ee95edbe7"
+        },
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "d3624cb254d20fb61191f909eb85a722c5ac91e3"
+        },
+        {
+          "name": "AUTHORS",
+          "path": "AUTHORS",
+          "type": "file",
+          "sha": "a2a116bd5ee7fce068a8973f575bcab7af43de48"
+        },
+        {
+          "name": "LICENSE",
+          "path": "LICENSE",
+          "type": "file",
+          "sha": "0bdd59716b414937c51ea5a30b7670cea6cb3638"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "8337ce17f28b8912289f6670cecc88023a09d0fa"
+        },
+        {
+          "name": "Smt.lean",
+          "path": "Smt.lean",
+          "type": "file",
+          "sha": "f1fec437fa790e68d787546ba95857a78ffdd5be"
+        },
+        {
+          "name": "Smt",
+          "path": "Smt",
+          "type": "dir",
+          "sha": "bfdfb14524563a92006f340d275b87109c59ca0c"
+        },
+        {
+          "name": "Test",
+          "path": "Test",
+          "type": "dir",
+          "sha": "34dcf5bfb60fb4278451c5085397ece31f668940"
+        },
+        {
+          "name": "lake-manifest.json",
+          "path": "lake-manifest.json",
+          "type": "file",
+          "sha": "522e8df6ead96e71f4a9c9abe68a4233637577dd"
+        },
+        {
+          "name": "lakefile.lean",
+          "path": "lakefile.lean",
+          "type": "file",
+          "sha": "7717f66da0e5a69e6115272805d8a0776951905d"
+        },
+        {
+          "name": "lean-toolchain",
+          "path": "lean-toolchain",
+          "type": "file",
+          "sha": "12359f928f18e4a89ebd1444a0310b025931b17d"
+        }
+      ],
+      "root_license_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "repo": "uw-unsat/leanette-popl22-artifact",
+      "ref": "HEAD",
+      "root_entries": [
+        {
+          "name": ".gitignore",
+          "path": ".gitignore",
+          "type": "file",
+          "sha": "89a08a6f9febba32a7f084f919123ee8c8ef2fce"
+        },
+        {
+          "name": "Dockerfile",
+          "path": "Dockerfile",
+          "type": "file",
+          "sha": "88ceddb431f4be98145e6177d4f1e28f50b6992b"
+        },
+        {
+          "name": "LICENSE",
+          "path": "LICENSE",
+          "type": "file",
+          "sha": "858a35f7d59169def170ca906fbafbc2d12a0f76"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "type": "file",
+          "sha": "8fa6df087926566f9191e357bac1722d2d5eaabc"
+        },
+        {
+          "name": "diff-testing",
+          "path": "diff-testing",
+          "type": "dir",
+          "sha": "1c051364fadc0c61d15dc2a18f33dc9b67f92b12"
+        },
+        {
+          "name": "examples",
+          "path": "examples",
+          "type": "dir",
+          "sha": "6b2b9126fc36d5ed561c5418b30184d0c39bb44d"
+        },
+        {
+          "name": "interface",
+          "path": "interface",
+          "type": "dir",
+          "sha": "3f47e6753f4741b6ac8182b1e86efa393efdca5f"
+        },
+        {
+          "name": "jitterbug-benchmarks",
+          "path": "jitterbug-benchmarks",
+          "type": "dir",
+          "sha": "3bea9084625445ba6f8ee5b53c7193ffbe2e5620"
+        },
+        {
+          "name": "lean",
+          "path": "lean",
+          "type": "dir",
+          "sha": "7d898fa73fb419bb50b44e25888b8bf8d3642c2f"
+        },
+        {
+          "name": "paper.pdf",
+          "path": "paper.pdf",
+          "type": "file",
+          "sha": "4b0d5161fd67347cc7d43d2102a0598554a5c388"
+        },
+        {
+          "name": "perf",
+          "path": "perf",
+          "type": "dir",
+          "sha": "899ef54141eed0ef77fca0de96814c575d9f1d17"
+        },
+        {
+          "name": "reference.md",
+          "path": "reference.md",
+          "type": "file",
+          "sha": "0ff27491c6f3e5fcd1a27fe58b18fdaa7cf58314"
+        },
+        {
+          "name": "rosette-benchmarks-3",
+          "path": "rosette-benchmarks-3",
+          "type": "dir",
+          "sha": "a4219c2448f438c983ef19a0f6cda82adf112d83"
+        },
+        {
+          "name": "rosette-benchmarks-4",
+          "path": "rosette-benchmarks-4",
+          "type": "dir",
+          "sha": "d32653c0eb7fb1a634173141bd6e8255579d26e6"
+        }
+      ],
+      "root_license_paths": [
+        "LICENSE"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "repo": "AdrienChampion/lsmt2",
+      "path": "LICENSE",
+      "ref": "3e7fcfbf0a45a4a3a086ff65d43b04464fef81ae",
+      "blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "url": "https://github.com/AdrienChampion/lsmt2/blob/3e7fcfbf0a45a4a3a086ff65d43b04464fef81ae/LICENSE",
+      "local_path": "sources/AdrienChampion__lsmt2/LICENSE",
+      "bytes": 11357,
+      "retained_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "LICENSE",
+      "ref": "a1299b564831e571b9b80f816219ae06c91db342",
+      "blob_sha": "29f81d812f3e768fa89638d1f72920dbfd1413a8",
+      "url": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/LICENSE",
+      "local_path": "sources/ErosSph__xiangshan2Lean/LICENSE",
+      "bytes": 11558,
+      "retained_git_blob_sha1": "29f81d812f3e768fa89638d1f72920dbfd1413a8",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "ErosSph/xiangshan2Lean",
+      "path": "NOTICE",
+      "ref": "a1299b564831e571b9b80f816219ae06c91db342",
+      "blob_sha": "b0e7a1fff8129ed8a8d2d9a736976396299542c9",
+      "url": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/NOTICE",
+      "local_path": "sources/ErosSph__xiangshan2Lean/NOTICE",
+      "bytes": 2583,
+      "retained_git_blob_sha1": "b0e7a1fff8129ed8a8d2d9a736976396299542c9",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "Ghonimo/kernelcert-artifact",
+      "path": "LICENSE",
+      "ref": "d11802bf5b054e5341943199b5a10b7f57a821d3",
+      "blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "url": "https://github.com/Ghonimo/kernelcert-artifact/blob/d11802bf5b054e5341943199b5a10b7f57a821d3/LICENSE",
+      "local_path": "sources/Ghonimo__kernelcert-artifact/LICENSE",
+      "bytes": 11358,
+      "retained_git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "LeanHorn/SMTLib-to-Lean",
+      "path": "LICENSE",
+      "ref": "9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee",
+      "blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "url": "https://github.com/LeanHorn/SMTLib-to-Lean/blob/9fd49dfecfc1bdc2c3b5f031f76b8dc65fe55cee/LICENSE",
+      "local_path": "sources/LeanHorn__SMTLib-to-Lean/LICENSE",
+      "bytes": 11357,
+      "retained_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "SMC17/logic-zig",
+      "path": "LICENSE",
+      "ref": "1098ae1e58c3f76961271833dc8dd1f87a25d46a",
+      "blob_sha": "a4c080c1229bd46330ebb230c84f74827fd4fff3",
+      "url": "https://github.com/SMC17/logic-zig/blob/1098ae1e58c3f76961271833dc8dd1f87a25d46a/LICENSE",
+      "local_path": "sources/SMC17__logic-zig/LICENSE",
+      "bytes": 10171,
+      "retained_git_blob_sha1": "a4c080c1229bd46330ebb230c84f74827fd4fff3",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "VTrelat/BEer",
+      "path": "LICENSE",
+      "ref": "d846712bf296520d4f4b39d0e0ae48211a7e4e15",
+      "blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "url": "https://github.com/VTrelat/BEer/blob/d846712bf296520d4f4b39d0e0ae48211a7e4e15/LICENSE",
+      "local_path": "sources/VTrelat__BEer/LICENSE",
+      "bytes": 11357,
+      "retained_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "abdoo8080/lean-smt-demo",
+      "path": "LICENSE",
+      "ref": "HEAD",
+      "blob_sha": "16edd59c71db7fef53a0fa17d4008c22de1cdeb7",
+      "url": "https://github.com/abdoo8080/lean-smt-demo/blob/HEAD/LICENSE",
+      "local_path": "sources/abdoo8080__lean-smt-demo/LICENSE",
+      "bytes": 10763,
+      "retained_git_blob_sha1": "16edd59c71db7fef53a0fa17d4008c22de1cdeb7",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "alabsystems/ty",
+      "path": "LICENSE",
+      "ref": "a13fc3bcca38a65e2be43aeb97086b6cd649dc76",
+      "blob_sha": "b42947eb5cbb23491517afed2e1c58d5ecf70ced",
+      "url": "https://github.com/alabsystems/ty/blob/a13fc3bcca38a65e2be43aeb97086b6cd649dc76/LICENSE",
+      "local_path": "sources/alabsystems__ty/LICENSE",
+      "bytes": 10832,
+      "retained_git_blob_sha1": "b42947eb5cbb23491517afed2e1c58d5ecf70ced",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "atvrager/Shoumei-RTL",
+      "path": "LICENSE",
+      "ref": "1d8119704838948670f71d5d8ce5d371fe8a9eec",
+      "blob_sha": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+      "url": "https://github.com/atvrager/Shoumei-RTL/blob/1d8119704838948670f71d5d8ce5d371fe8a9eec/LICENSE",
+      "local_path": "sources/atvrager__Shoumei-RTL/LICENSE",
+      "bytes": 34523,
+      "retained_git_blob_sha1": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "avigad/smtlean",
+      "path": "LICENSE",
+      "ref": "HEAD",
+      "blob_sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "url": "https://github.com/avigad/smtlean/blob/HEAD/LICENSE",
+      "local_path": "sources/avigad__smtlean/LICENSE",
+      "bytes": 35149,
+      "retained_git_blob_sha1": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "benreynwar/silean",
+      "path": "LICENSE",
+      "ref": "436467ba1b38cd41dbe1279b7fc6218db9041ea3",
+      "blob_sha": "67056a6f2682f12fa8e92d4bc1dceb6536bdf471",
+      "url": "https://github.com/benreynwar/silean/blob/436467ba1b38cd41dbe1279b7fc6218db9041ea3/LICENSE",
+      "local_path": "sources/benreynwar__silean/LICENSE",
+      "bytes": 1068,
+      "retained_git_blob_sha1": "67056a6f2682f12fa8e92d4bc1dceb6536bdf471",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "deepai-org/loom",
+      "path": "LICENSE",
+      "ref": "ea1770339296375988b42121db599b4cb36184d7",
+      "blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/LICENSE",
+      "local_path": "sources/deepai-org__loom/LICENSE",
+      "bytes": 11358,
+      "retained_git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "deepai-org/loom",
+      "path": "NOTICE",
+      "ref": "ea1770339296375988b42121db599b4cb36184d7",
+      "blob_sha": "77dc0dc86fcea66154bb1936a8843e633469bb91",
+      "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/NOTICE",
+      "local_path": "sources/deepai-org__loom/NOTICE",
+      "bytes": 1259,
+      "retained_git_blob_sha1": "77dc0dc86fcea66154bb1936a8843e633469bb91",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "hargoniX/Leanwuzla",
+      "path": "LICENSE",
+      "ref": "b752f8b2f8f420aa95a106cc57dd5ea8e9794ab9",
+      "blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "url": "https://github.com/hargoniX/Leanwuzla/blob/b752f8b2f8f420aa95a106cc57dd5ea8e9794ab9/LICENSE",
+      "local_path": "sources/hargoniX__Leanwuzla/LICENSE",
+      "bytes": 11357,
+      "retained_git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "jn555/HardBench",
+      "path": "LICENSE",
+      "ref": "ba9fb00a9b386352b1c15273d3534c2aa07c1ef3",
+      "blob_sha": "58498f69ddccf9591383de5efd6b6d62e8762c73",
+      "url": "https://github.com/jn555/HardBench/blob/ba9fb00a9b386352b1c15273d3534c2aa07c1ef3/LICENSE",
+      "local_path": "sources/jn555__HardBench/LICENSE",
+      "bytes": 11352,
+      "retained_git_blob_sha1": "58498f69ddccf9591383de5efd6b6d62e8762c73",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "leanprover/lean4",
+      "path": "LICENSE",
+      "ref": "HEAD",
+      "blob_sha": "813da297567374691eaae7a88739dbbefd2afdfd",
+      "url": "https://github.com/leanprover/lean4/blob/HEAD/LICENSE",
+      "local_path": "sources/leanprover__lean4/LICENSE",
+      "bytes": 9160,
+      "retained_git_blob_sha1": "813da297567374691eaae7a88739dbbefd2afdfd",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "leanprover/lean4",
+      "path": "LICENSES",
+      "ref": "HEAD",
+      "blob_sha": "99e93a046391fcd3f5ba5580f50e248ad38a510d",
+      "url": "https://github.com/leanprover/lean4/blob/HEAD/LICENSES",
+      "local_path": "sources/leanprover__lean4/LICENSES",
+      "bytes": 81952,
+      "retained_git_blob_sha1": "99e93a046391fcd3f5ba5580f50e248ad38a510d",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "leanprover/leansat",
+      "path": "LICENSE",
+      "ref": "b83b5d8631ee54bc913b0e6aaf44711c34a50e0d",
+      "blob_sha": "813da297567374691eaae7a88739dbbefd2afdfd",
+      "url": "https://github.com/leanprover/leansat/blob/b83b5d8631ee54bc913b0e6aaf44711c34a50e0d/LICENSE",
+      "local_path": "sources/leanprover__leansat/LICENSE",
+      "bytes": 9160,
+      "retained_git_blob_sha1": "813da297567374691eaae7a88739dbbefd2afdfd",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "mjbommar/axeyum",
+      "path": "LICENSE-APACHE",
+      "ref": "HEAD",
+      "blob_sha": "da484ee097404ee9046629df7804a50d7ef1d613",
+      "url": "https://github.com/mjbommar/axeyum/blob/HEAD/LICENSE-APACHE",
+      "local_path": "sources/mjbommar__axeyum/LICENSE-APACHE",
+      "bytes": 11347,
+      "retained_git_blob_sha1": "da484ee097404ee9046629df7804a50d7ef1d613",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "mjbommar/axeyum",
+      "path": "LICENSE-MIT",
+      "ref": "HEAD",
+      "blob_sha": "01e04dffb6019e742e985bb2c9933b1142e043ed",
+      "url": "https://github.com/mjbommar/axeyum/blob/HEAD/LICENSE-MIT",
+      "local_path": "sources/mjbommar__axeyum/LICENSE-MIT",
+      "bytes": 1074,
+      "retained_git_blob_sha1": "01e04dffb6019e742e985bb2c9933b1142e043ed",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "nathsou/HDLean",
+      "path": "LICENSE",
+      "ref": "c3808e57b342c63eaff677abca7f9391a4dc954a",
+      "blob_sha": "90d91775edb02f65148fc681d0311de02e958f58",
+      "url": "https://github.com/nathsou/HDLean/blob/c3808e57b342c63eaff677abca7f9391a4dc954a/LICENSE",
+      "local_path": "sources/nathsou__HDLean/LICENSE",
+      "bytes": 1076,
+      "retained_git_blob_sha1": "90d91775edb02f65148fc681d0311de02e958f58",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "onderjan/blazing-smtlib",
+      "path": "LICENSE-APACHE",
+      "ref": "42b45c20b0045495a40b9eaf0a717e0f1c976bed",
+      "blob_sha": "a7e77cb28d386ec6eddeaabf441f91473ddefa1e",
+      "url": "https://github.com/onderjan/blazing-smtlib/blob/42b45c20b0045495a40b9eaf0a717e0f1c976bed/LICENSE-APACHE",
+      "local_path": "sources/onderjan__blazing-smtlib/LICENSE-APACHE",
+      "bytes": 9722,
+      "retained_git_blob_sha1": "a7e77cb28d386ec6eddeaabf441f91473ddefa1e",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "onderjan/blazing-smtlib",
+      "path": "LICENSE-MIT",
+      "ref": "42b45c20b0045495a40b9eaf0a717e0f1c976bed",
+      "blob_sha": "468cd79a8f6e50f2b24558c41ed3abafa5bb40ae",
+      "url": "https://github.com/onderjan/blazing-smtlib/blob/42b45c20b0045495a40b9eaf0a717e0f1c976bed/LICENSE-MIT",
+      "local_path": "sources/onderjan__blazing-smtlib/LICENSE-MIT",
+      "bytes": 1022,
+      "retained_git_blob_sha1": "468cd79a8f6e50f2b24558c41ed3abafa5bb40ae",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "opencompl/lean-mlir",
+      "path": "LICENSE",
+      "ref": "b8c4a771319a044854a4bbb49b8821381ef86ff8",
+      "blob_sha": "4d7b2ade34a8e9e7578afeb758ab4fed3de7a5c8",
+      "url": "https://github.com/opencompl/lean-mlir/blob/b8c4a771319a044854a4bbb49b8821381ef86ff8/LICENSE",
+      "local_path": "sources/opencompl__lean-mlir/LICENSE",
+      "bytes": 9537,
+      "retained_git_blob_sha1": "4d7b2ade34a8e9e7578afeb758ab4fed3de7a5c8",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "opencompl/valaig",
+      "path": "LICENSE",
+      "ref": "f7e58661ddc7c06cbaa09c90505abd11dc2925cb",
+      "blob_sha": "c4deffb4ff271b627277de9774e99667db5c0a43",
+      "url": "https://github.com/opencompl/valaig/blob/f7e58661ddc7c06cbaa09c90505abd11dc2925cb/LICENSE",
+      "local_path": "sources/opencompl__valaig/LICENSE",
+      "bytes": 12484,
+      "retained_git_blob_sha1": "c4deffb4ff271b627277de9774e99667db5c0a43",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "palladin/SmtLibDsl",
+      "path": "LICENSE",
+      "ref": "3ba92c91136ddd02db008be4e35e2c4d8c9761af",
+      "blob_sha": "0b1a670181dea6e2a07f917575903e17033a4ae3",
+      "url": "https://github.com/palladin/SmtLibDsl/blob/3ba92c91136ddd02db008be4e35e2c4d8c9761af/LICENSE",
+      "local_path": "sources/palladin__SmtLibDsl/LICENSE",
+      "bytes": 1072,
+      "retained_git_blob_sha1": "0b1a670181dea6e2a07f917575903e17033a4ae3",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "philzook58/yosys-lean",
+      "path": "LICENSE",
+      "ref": "9e575011c948f4ee6e422c7acfa5c453d9f8ebff",
+      "blob_sha": "f280fbcaead086eab3faf3940518a744e5c978e8",
+      "url": "https://github.com/philzook58/yosys-lean/blob/9e575011c948f4ee6e422c7acfa5c453d9f8ebff/LICENSE",
+      "local_path": "sources/philzook58__yosys-lean/LICENSE",
+      "bytes": 1098,
+      "retained_git_blob_sha1": "f280fbcaead086eab3faf3940518a744e5c978e8",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "riaqn/smtlean",
+      "path": "LICENSE",
+      "ref": "c11768cfb43cd634340b552f5039cba094701a87",
+      "blob_sha": "846397b3cbd714b19dfd15a2af572548362cbdfc",
+      "url": "https://github.com/riaqn/smtlean/blob/c11768cfb43cd634340b552f5039cba094701a87/LICENSE",
+      "local_path": "sources/riaqn__smtlean/LICENSE",
+      "bytes": 1067,
+      "retained_git_blob_sha1": "846397b3cbd714b19dfd15a2af572548362cbdfc",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "salinhkuhn/lean-mlir",
+      "path": "LICENSE",
+      "ref": "HEAD",
+      "blob_sha": "4d7b2ade34a8e9e7578afeb758ab4fed3de7a5c8",
+      "url": "https://github.com/salinhkuhn/lean-mlir/blob/HEAD/LICENSE",
+      "local_path": "sources/salinhkuhn__lean-mlir/LICENSE",
+      "bytes": 9537,
+      "retained_git_blob_sha1": "4d7b2ade34a8e9e7578afeb758ab4fed3de7a5c8",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "ufmg-smite/lean-smt",
+      "path": "LICENSE",
+      "ref": "db545bebe2de1e06dc2df62a6ff6c20e5736bfc0",
+      "blob_sha": "0bdd59716b414937c51ea5a30b7670cea6cb3638",
+      "url": "https://github.com/ufmg-smite/lean-smt/blob/db545bebe2de1e06dc2df62a6ff6c20e5736bfc0/LICENSE",
+      "local_path": "sources/ufmg-smite__lean-smt/LICENSE",
+      "bytes": 10837,
+      "retained_git_blob_sha1": "0bdd59716b414937c51ea5a30b7670cea6cb3638",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "uw-unsat/exoverifier",
+      "path": "LICENSE",
+      "ref": "a0166f68ae181d3045cc03662ac723faeb3eaeb2",
+      "blob_sha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "url": "https://github.com/uw-unsat/exoverifier/blob/a0166f68ae181d3045cc03662ac723faeb3eaeb2/LICENSE",
+      "local_path": "sources/uw-unsat__exoverifier/LICENSE",
+      "bytes": 11357,
+      "retained_git_blob_sha1": "8dada3edaf50dbc082c9a125058f25def75e625a",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "uw-unsat/leanette-popl22-artifact",
+      "path": "LICENSE",
+      "ref": "HEAD",
+      "blob_sha": "858a35f7d59169def170ca906fbafbc2d12a0f76",
+      "url": "https://github.com/uw-unsat/leanette-popl22-artifact/blob/HEAD/LICENSE",
+      "local_path": "sources/uw-unsat__leanette-popl22-artifact/LICENSE",
+      "bytes": 1117,
+      "retained_git_blob_sha1": "858a35f7d59169def170ca906fbafbc2d12a0f76",
+      "matches_upstream_blob": true
+    },
+    {
+      "repo": "valeria-org/bitwright",
+      "path": "LICENSE",
+      "ref": "79be0c1093e5dca3fbd26c1c74d5120cc83efd8b",
+      "blob_sha": "2accb05a7b2ffc849048ba80e0345b0469afc21c",
+      "url": "https://github.com/valeria-org/bitwright/blob/79be0c1093e5dca3fbd26c1c74d5120cc83efd8b/LICENSE",
+      "local_path": "sources/valeria-org__bitwright/LICENSE",
+      "bytes": 4677,
+      "retained_git_blob_sha1": "2accb05a7b2ffc849048ba80e0345b0469afc21c",
+      "matches_upstream_blob": true
+    }
+  ],
+  "source_snapshot_validation": {
+    "source_paths_checked": 134,
+    "existing_line_endings_restored_to_upstream_git_blobs": 100,
+    "unmatched_blob_paths": [],
+    "note": "Existing patch-saved source evidence was normalized at EOF/line endings. Restored only candidates that exactly match the already-recorded upstream Git blob hash; no source behavior changed."
+  }
+}

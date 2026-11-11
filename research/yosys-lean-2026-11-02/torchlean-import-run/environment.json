@@ -1,0 +1,34 @@
+{
+  "upstream_commit": "f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b",
+  "source": "/tmp/torchlean-model-probe/lean-dojo-TorchLean-f37cbc5",
+  "source_archive_sha256": "7c5166b78231956d1d37258c85c81a42cf74a88ca504fad762c80ed7c192bc70",
+  "lean_release": {
+    "tag": "v4.35.0",
+    "published_at": "2026-10-12T18:13:12Z",
+    "asset_id": 634574462,
+    "asset_bytes": 594481375,
+    "official_digest": "sha256:7289597a44543246c9227b8cae501767e095ce17f6d448b95fc4a8dc97268f6d",
+    "download_verified": true
+  },
+  "lean_version": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "model_path": "/nix/store/qvsldlg3biy0bj9yy1ys9hxvi9hn8sdp-tinystories-quantized/model.pt2",
+  "model_sha256": "c99488b62f34783c1ebc1033de7bb1b6beb75727561ac0fc663d6f0286be9f34",
+  "address_space_limit": [
+    -1,
+    -1
+  ],
+  "cpu_limit": [
+    -1,
+    -1
+  ],
+  "modifications_to_operator_rules": false,
+  "timestamp": "2026-11-02T09:05:44.021555+00:00",
+  "isolated_build_environment": {
+    "LEAN_NUM_THREADS": "2",
+    "TORCHLEAN_BUILD_ROOT": "/tmp/llm2fpga-torchlean-build",
+    "XDG_CACHE_HOME": "/tmp/llm2fpga-torchlean-cache",
+    "MATHLIB_CACHE_DIR": "/tmp/llm2fpga-mathlib-cache",
+    "TORCHLEAN_LAKE": "/tmp/llm2fpga-tools/lean-4.35.0-linux/bin/lake",
+    "TORCHLEAN_LEAN": "/tmp/llm2fpga-tools/lean-4.35.0-linux/bin/lean"
+  }
+}

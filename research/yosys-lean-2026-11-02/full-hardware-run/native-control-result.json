@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "control": "Existing 79-node production-memory table",
+  "commands": [
+    [
+      "/tmp/llm2fpga-tools/lean-4.19.0-linux/bin/lean",
+      "--root=/tmp/llm2fpga-full-hardware-20261102",
+      "--run",
+      "/tmp/llm2fpga-full-hardware-20261102/FullReset.lean",
+      "/tmp/llm2fpga-lean-memory-table/TinyStoriesMemory.circuit.bin"
+    ],
+    [
+      "/tmp/llm2fpga-full-hardware-20261102/full-reset-lean",
+      "/tmp/llm2fpga-lean-memory-table/TinyStoriesMemory.circuit.bin"
+    ]
+  ],
+  "identical_bytecode_and_native_output": true,
+  "trace_samples": 8,
+  "scope": "Execution-mode and binary-decoder control, not a translation theorem"
+}

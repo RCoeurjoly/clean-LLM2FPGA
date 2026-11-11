@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-11-02T00:54:09.097670+00:00",
+  "python_optimization": 0,
+  "completed_stages_verified": 13,
+  "pinned_upstream_files_verified": 106,
+  "python_sources_parsed": 9,
+  "org_files": {
+    "research/yosys-lean-2026-11-02/full-hardware-run/runbook.org": {
+      "file_links_exist": true,
+      "blocks_balanced": true
+    },
+    "research/yosys-lean-2026-11-02/report.org": {
+      "file_links_exist": true,
+      "blocks_balanced": true
+    },
+    "research/yosys-lean-2026-11-02/model-probe/README.org": {
+      "file_links_exist": true,
+      "blocks_balanced": true
+    },
+    "research/lean-equivalence.org": {
+      "file_links_exist": true,
+      "blocks_balanced": true
+    }
+  },
+  "status": "completed",
+  "table_counts": {
+    "nodes": 4227056,
+    "inputs": 538088,
+    "states": 88074,
+    "outputs": 3
+  },
+  "whole_rtl_trace_comparisons": 15,
+  "memory_trace_comparisons": 34,
+  "full_model_equivalence_proved": false
+}

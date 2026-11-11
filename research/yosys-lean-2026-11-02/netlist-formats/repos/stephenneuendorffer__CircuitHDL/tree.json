@@ -1,0 +1,292 @@
+{
+  "sha": "0b027aeee9205d6a343022a3247dc18e41189276",
+  "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/trees/0b027aeee9205d6a343022a3247dc18e41189276",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3ee4a3d1044db433898e271ceb72db31e25653e",
+      "size": 330,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/d3ee4a3d1044db433898e271ceb72db31e25653e"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13ae459487ec3f1698d1a9dce024b0dc1df11276",
+      "size": 7914,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/13ae459487ec3f1698d1a9dce024b0dc1df11276"
+    },
+    {
+      "path": "CircuitHdl.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa3853aaa5a81bb78a8a532c0d076e69cd387476",
+      "size": 2208,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/fa3853aaa5a81bb78a8a532c0d076e69cd387476"
+    },
+    {
+      "path": "CircuitHdl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4a2977c1b6a48f8f667eacb8ebac2c7b2ce796c",
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/trees/b4a2977c1b6a48f8f667eacb8ebac2c7b2ce796c"
+    },
+    {
+      "path": "CircuitHdl/Circt.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "deb2124cedbbe962bae4a93323fb95b59ab79c1c",
+      "size": 25830,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/deb2124cedbbe962bae4a93323fb95b59ab79c1c"
+    },
+    {
+      "path": "CircuitHdl/Clocks.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79976abd3c665831bad8b9c6e117d37be26f082f",
+      "size": 2752,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/79976abd3c665831bad8b9c6e117d37be26f082f"
+    },
+    {
+      "path": "CircuitHdl/Core.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5febaf6f535e9de3077a31e3948c48464dfbcc23",
+      "size": 12213,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/5febaf6f535e9de3077a31e3948c48464dfbcc23"
+    },
+    {
+      "path": "CircuitHdl/Examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1dc773419e33d27d002e5527b48150256a4c5412",
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/trees/1dc773419e33d27d002e5527b48150256a4c5412"
+    },
+    {
+      "path": "CircuitHdl/Examples/AbstractFifoModel.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "614e9cb283d7763bfcf70cd67a4ed05b09ad3e59",
+      "size": 4996,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/614e9cb283d7763bfcf70cd67a4ed05b09ad3e59"
+    },
+    {
+      "path": "CircuitHdl/Examples/AbstractQueueModel.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9244d3b94dda5b8f943de01f0720ea09fd6e9b0",
+      "size": 8079,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/d9244d3b94dda5b8f943de01f0720ea09fd6e9b0"
+    },
+    {
+      "path": "CircuitHdl/Examples/Alu.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41772147cc0d7ddd865f5815bc4fb1bae236127c",
+      "size": 942,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/41772147cc0d7ddd865f5815bc4fb1bae236127c"
+    },
+    {
+      "path": "CircuitHdl/Examples/And2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcf7649c59064a861ac3493cb27bc870ef5c675a",
+      "size": 565,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/dcf7649c59064a861ac3493cb27bc870ef5c675a"
+    },
+    {
+      "path": "CircuitHdl/Examples/AsyncFifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3446791ed3c72288d2df54179a237fb7a403db3a",
+      "size": 7098,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/3446791ed3c72288d2df54179a237fb7a403db3a"
+    },
+    {
+      "path": "CircuitHdl/Examples/Counter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dc431cab95a64534ceddbb467bfbc0e3d959d0c",
+      "size": 803,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/2dc431cab95a64534ceddbb467bfbc0e3d959d0c"
+    },
+    {
+      "path": "CircuitHdl/Examples/ShiftFifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3493d0cca340b91c7bb197a3863c79c60bab67f9",
+      "size": 3770,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/3493d0cca340b91c7bb197a3863c79c60bab67f9"
+    },
+    {
+      "path": "CircuitHdl/Examples/Shifter.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95beeafd7bb3a36a4ac0a98551d4a277560ff369",
+      "size": 861,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/95beeafd7bb3a36a4ac0a98551d4a277560ff369"
+    },
+    {
+      "path": "CircuitHdl/Examples/Swap.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "469811aaaa50d9834178d2cc29fff687a37c4468",
+      "size": 1563,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/469811aaaa50d9834178d2cc29fff687a37c4468"
+    },
+    {
+      "path": "CircuitHdl/Semantics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe0f99880ac2118f6eb3391a3e50e14359a2775a",
+      "size": 13167,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/fe0f99880ac2118f6eb3391a3e50e14359a2775a"
+    },
+    {
+      "path": "CircuitHdl/Syntax.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459fa664c113351d2ccb759636a7bee7b09ab5cd",
+      "size": 33837,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/459fa664c113351d2ccb759636a7bee7b09ab5cd"
+    },
+    {
+      "path": "CircuitHdl/Transactions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b43cd4582820e2ff82a0d9023bc654d0873105e1",
+      "size": 5073,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/b43cd4582820e2ff82a0d9023bc654d0873105e1"
+    },
+    {
+      "path": "CircuitHdl/Width.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58615474250e3d725fc64013c360a429b86704e7",
+      "size": 11181,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/58615474250e3d725fc64013c360a429b86704e7"
+    },
+    {
+      "path": "CircuitHdlTest.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "846e57784c53a6d30a99285d17def709e665f64d",
+      "size": 2147,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/846e57784c53a6d30a99285d17def709e665f64d"
+    },
+    {
+      "path": "CircuitHdlTest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a4ba5142358d96939d36b5b214ff23a42a1fb59a",
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/trees/a4ba5142358d96939d36b5b214ff23a42a1fb59a"
+    },
+    {
+      "path": "CircuitHdlTest/AbstractFifoModel.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af0b6f8605cf46fb01189bd8242957769ba2349d",
+      "size": 3372,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/af0b6f8605cf46fb01189bd8242957769ba2349d"
+    },
+    {
+      "path": "CircuitHdlTest/AbstractQueueModel.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e674fb77515084ac0afd4609e5ec8c709ccbbba5",
+      "size": 4428,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/e674fb77515084ac0afd4609e5ec8c709ccbbba5"
+    },
+    {
+      "path": "CircuitHdlTest/AsyncFifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "686a9b53a4dde6d93e11b10bddb2d2266af7b5e2",
+      "size": 26183,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/686a9b53a4dde6d93e11b10bddb2d2266af7b5e2"
+    },
+    {
+      "path": "CircuitHdlTest/Circt.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "672a84032d3ac60ec12b3395d537f5d61c7fcaa5",
+      "size": 7896,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/672a84032d3ac60ec12b3395d537f5d61c7fcaa5"
+    },
+    {
+      "path": "CircuitHdlTest/Clocks.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86f4045707cbc1df402c78bb6fa4d3b83b80af14",
+      "size": 4157,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/86f4045707cbc1df402c78bb6fa4d3b83b80af14"
+    },
+    {
+      "path": "CircuitHdlTest/FifoHarness.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0f259aa33c496e9305f589cb8d99713a49e0f3e",
+      "size": 9520,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/d0f259aa33c496e9305f589cb8d99713a49e0f3e"
+    },
+    {
+      "path": "CircuitHdlTest/Semantics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e95e6b0a4e36d4e73f9b8518b0eff9539e4388a",
+      "size": 9143,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/3e95e6b0a4e36d4e73f9b8518b0eff9539e4388a"
+    },
+    {
+      "path": "CircuitHdlTest/ShiftFifo.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82bdf1a56cfde79d6d36a5da5c526223ce2a070f",
+      "size": 7191,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/82bdf1a56cfde79d6d36a5da5c526223ce2a070f"
+    },
+    {
+      "path": "CircuitHdlTest/Syntax.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7862411e0e14cb87efd66c78cba4e802d28ea49",
+      "size": 15088,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/f7862411e0e14cb87efd66c78cba4e802d28ea49"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "655ea02eb0a351b7b8dacedf580c2a50a57eaf79",
+      "size": 30254,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/655ea02eb0a351b7b8dacedf580c2a50a57eaf79"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "126841738cf4ff6c29944cf27c73a1c752d7074e",
+      "size": 1054,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/126841738cf4ff6c29944cf27c73a1c752d7074e"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef73ffcbd1d7be85fd5edeabd6307432fff11e2d",
+      "size": 737,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/ef73ffcbd1d7be85fd5edeabd6307432fff11e2d"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9532ebf33701f2ff0a999f12b21fb7a675f24e6e",
+      "size": 29,
+      "url": "https://api.github.com/repos/stephenneuendorffer/CircuitHDL/git/blobs/9532ebf33701f2ff0a999f12b21fb7a675f24e6e"
+    }
+  ],
+  "truncated": false
+}

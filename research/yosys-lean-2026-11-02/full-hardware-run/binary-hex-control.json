@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "decoded_hex_equals_binary_byte_for_byte": true,
+  "binary_bytes": 364104799,
+  "binary_sha256": "bf66daac2bc9396426f6527ef3510ab576c750abee279556b8676f5dcf9f02d5",
+  "scope": "Same serialized circuit data; unchanged Lean decode and interpreter definitions"
+}

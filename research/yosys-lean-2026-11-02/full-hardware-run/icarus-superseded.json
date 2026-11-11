@@ -1,0 +1,9 @@
+{
+  "reason": "Superseded after Verilator completed the same full-design reset/idle fixture and all 15 post-reset RTL/Lean comparisons passed",
+  "replacement": "verilator-reset-result.json",
+  "time": "2026-11-02T00:53:03.848267+00:00",
+  "pid": 219861,
+  "executable": "/nix/store/smablxy777s8dd47vcm36qzhl1npjw7m-iverilog-12.0/lib/ivl/ivl",
+  "cpu_seconds": 1008.64,
+  "action": "Sent SIGTERM only to this probe\u2019s ivl compiler"
+}

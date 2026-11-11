@@ -1,0 +1,164 @@
+{
+  "utc": "2026-11-01T23:13:20.394718+00:00",
+  "endpoint": "repos/stephenneuendorffer/CircuitHDL/tarball/0b027aeee9205d6a343022a3247dc18e41189276",
+  "exit_code": 0,
+  "archive_bytes": 81878,
+  "sha256": "26dfff4e52a1180cd9ac5feda3446c5aeb0816707439102999936d48721385fa",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 7914,
+      "sha256": "cfa956d6801f8d52d5df08ebe0970c83b41884636c8cb704ac48383e781dc536"
+    },
+    {
+      "path": "CircuitHdl.lean",
+      "bytes": 2208,
+      "sha256": "fd9f709639357afa73db04e7fc37468694488e767bc9335fa84e34e8605a4bea"
+    },
+    {
+      "path": "CircuitHdl/Circt.lean",
+      "bytes": 25830,
+      "sha256": "abc162a16808c4303a37df40118c9ef663c71e2643dcd0daaca7379941302c42"
+    },
+    {
+      "path": "CircuitHdl/Clocks.lean",
+      "bytes": 2752,
+      "sha256": "d8a17367287647b69d48c00a1af33b11f15525f5ed78f90d41282401a9b64918"
+    },
+    {
+      "path": "CircuitHdl/Core.lean",
+      "bytes": 12213,
+      "sha256": "d06a7fa3ec3adf62837f255522966cd2e8d35a6868f7bb5be534ae19e5ce58c9"
+    },
+    {
+      "path": "CircuitHdl/Examples/AbstractFifoModel.lean",
+      "bytes": 4996,
+      "sha256": "9d6ae8ea873c1f91e9cd7e2d8fb5ae08eca7894b39ec381e17e74c3a42d90599"
+    },
+    {
+      "path": "CircuitHdl/Examples/AbstractQueueModel.lean",
+      "bytes": 8079,
+      "sha256": "d96b528e55fdf5d44ffbf1691cd0be2e08dde57e799ca7bd966587cc888e31c7"
+    },
+    {
+      "path": "CircuitHdl/Examples/Alu.lean",
+      "bytes": 942,
+      "sha256": "320f079888b7c8ebcd178141e59375c65b6731b7f29f55a4cc71ecbf8c497466"
+    },
+    {
+      "path": "CircuitHdl/Examples/And2.lean",
+      "bytes": 565,
+      "sha256": "67ef71bdb25978e599e043093afcc11e69fdbd2e375daa1cd3dbb0e49e89626d"
+    },
+    {
+      "path": "CircuitHdl/Examples/AsyncFifo.lean",
+      "bytes": 7098,
+      "sha256": "518acf3a40a8d7e5ad199a5cde965281794fa1e154c790ab7857b1cee45c3083"
+    },
+    {
+      "path": "CircuitHdl/Examples/Counter.lean",
+      "bytes": 803,
+      "sha256": "526b92e55d0b38e04dacf0a0148c6185a6a2c3b7f84d5b30f52066086a27dc39"
+    },
+    {
+      "path": "CircuitHdl/Examples/ShiftFifo.lean",
+      "bytes": 3770,
+      "sha256": "2426d087378598f77e17a3932fab57b1cafda3ce7ba492185d27ba0248b69fd9"
+    },
+    {
+      "path": "CircuitHdl/Examples/Shifter.lean",
+      "bytes": 861,
+      "sha256": "2066bf060b2497993583381b788d051b074dde941175397be5dd479ef6ee034f"
+    },
+    {
+      "path": "CircuitHdl/Examples/Swap.lean",
+      "bytes": 1563,
+      "sha256": "c1e12b9bc5c4a9a7b6d03eb95fc30dbc5a72c813718e81541bfc0b7adf31c9ee"
+    },
+    {
+      "path": "CircuitHdl/Semantics.lean",
+      "bytes": 13167,
+      "sha256": "ec47fe4eecfe7c56a74adbcba5a744792e17ea6fd7571558dbf051e979b1a927"
+    },
+    {
+      "path": "CircuitHdl/Syntax.lean",
+      "bytes": 33837,
+      "sha256": "b201ddf368fb5e27e4b80ee9c95f93edc9790fe8ed93f89821a2e0de32d935fe"
+    },
+    {
+      "path": "CircuitHdl/Transactions.lean",
+      "bytes": 5073,
+      "sha256": "90fcb8618d8f75eba20c8f9b62234ab6bc0c7d0d60e7706b6b30f82cb2853e7f"
+    },
+    {
+      "path": "CircuitHdl/Width.lean",
+      "bytes": 11181,
+      "sha256": "a8ff6799e1d1bc5f2872731c2046a804967768cd8f154a03e9137b32a1a32920"
+    },
+    {
+      "path": "CircuitHdlTest.lean",
+      "bytes": 2147,
+      "sha256": "d4cc08c8d83c81d635171d84eb6df12d36b2a6f1cd4d9aa4277ead916083faa8"
+    },
+    {
+      "path": "CircuitHdlTest/AbstractFifoModel.lean",
+      "bytes": 3372,
+      "sha256": "2f02695ce6dff347349576f9dbfbc3715129193220300a99dabcfbf49b7f2760"
+    },
+    {
+      "path": "CircuitHdlTest/AbstractQueueModel.lean",
+      "bytes": 4428,
+      "sha256": "3380fff2960d7db9c1e129d4eadcdda098c025e222c7582492b2f46a6ea9559e"
+    },
+    {
+      "path": "CircuitHdlTest/AsyncFifo.lean",
+      "bytes": 26183,
+      "sha256": "acd2088834d72f79d6d3b10660090ea2b340f041fed5f64d7bf6f3f47f8cba51"
+    },
+    {
+      "path": "CircuitHdlTest/Circt.lean",
+      "bytes": 7896,
+      "sha256": "718d736919d523fa984e9016e83d47e4e63582c5f29f397d52f97fd8a0a0dcd8"
+    },
+    {
+      "path": "CircuitHdlTest/Clocks.lean",
+      "bytes": 4157,
+      "sha256": "734d2f91776c1df2b1979ab2863b8f0f06e0a7d300b906f613faaa933a481fc5"
+    },
+    {
+      "path": "CircuitHdlTest/FifoHarness.lean",
+      "bytes": 9520,
+      "sha256": "c65713e4868274c31b21deee27346ae9abd3ff14c46c93728b09e144931d7a3d"
+    },
+    {
+      "path": "CircuitHdlTest/Semantics.lean",
+      "bytes": 9143,
+      "sha256": "8189e41dc534e0bd4c15671bb834264c6cbc3195fe1f7c59b84efdad67de25a7"
+    },
+    {
+      "path": "CircuitHdlTest/ShiftFifo.lean",
+      "bytes": 7191,
+      "sha256": "efe5a42c849d7284427a23a928040c0fe79ad6042ed7c2c9954d65a4e0b6cc3d"
+    },
+    {
+      "path": "CircuitHdlTest/Syntax.lean",
+      "bytes": 15088,
+      "sha256": "7ee0ad7eb6ab52befb55fb243e06bba823e4ebb0810e1140237ac53ca6a02894"
+    },
+    {
+      "path": "README.md",
+      "bytes": 30254,
+      "sha256": "818538c22dfa059bb913793fbd3c190fda232b00d9441d31b93a8707ec8f8d10"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 737,
+      "sha256": "027fe21a2d03ed14a42875341abc4dee134a2fbed3bb350e3517b7148d28ff32"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 29,
+      "sha256": "8f89aa44fccdb1a0b6cc768c7c9f54b94cd40e47a08d582f82d1235f13075cf7"
+    }
+  ]
+}

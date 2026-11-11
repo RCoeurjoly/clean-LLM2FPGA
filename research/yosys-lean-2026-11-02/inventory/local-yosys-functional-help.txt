@@ -1,0 +1,19 @@
+
+-- Running command `help write_functional_smt2; help write_functional_rosette; help write_functional_cxx' --
+
+Functional SMT Backend.
+
+
+    write_functional_rosette [options] [filename]
+
+Functional Rosette Backend.
+
+    -provides
+        include 'provide' statement(s) for loading output as a module
+    -assoc-list-helpers
+        provide helper functions which convert inputs/outputs from/to association lists
+        
+
+
+TODO: add help message
+

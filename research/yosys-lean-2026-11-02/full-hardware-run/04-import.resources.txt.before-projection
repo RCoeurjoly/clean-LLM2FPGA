@@ -1,0 +1,24 @@
+Command terminated by signal 15
+	Command being timed: "/usr/bin/python3 /home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/full-hardware-run/import_worker.py import --upstream /home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/netlist-formats/evidence/ErosSph__xiangshan2Lean --work /tmp/llm2fpga-full-hardware-20261102 --report /home/roland/clean-LLM2FPGA/research/yosys-lean-2026-11-02/full-hardware-run/import.json"
+	User time (seconds): 76.99
+	System time (seconds): 0.99
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:18.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1657172
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 419146
+	Voluntary context switches: 142
+	Involuntary context switches: 668
+	Swaps: 0
+	File system inputs: 3828600
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

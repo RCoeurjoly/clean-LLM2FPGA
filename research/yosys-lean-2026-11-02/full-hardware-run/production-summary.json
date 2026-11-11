@@ -1,0 +1,21 @@
+{
+  "stages": [
+    {
+      "stage": "tinystories-rtlil",
+      "log_hash": "c74f80b84c",
+      "user_cpu_seconds": 345.19,
+      "system_cpu_seconds": 29.95,
+      "peak_memory_mb": 24259.84
+    },
+    {
+      "stage": "tinystories-prepared",
+      "log_hash": "99834f371a",
+      "user_cpu_seconds": 689.15,
+      "system_cpu_seconds": 21.53,
+      "peak_memory_mb": 22415.47
+    }
+  ],
+  "raw_log_bytes": 175848578,
+  "raw_log_sha256": "e90f21ed13ac1212b532fe033beaf9a5482a33e9d47b56bd93f221204879b72c",
+  "compressed_log": "production-build.log.gz"
+}

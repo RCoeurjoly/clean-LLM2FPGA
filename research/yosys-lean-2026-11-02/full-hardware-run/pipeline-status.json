@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-01T23:59:59.190726+00:00",
+  "status": "completed",
+  "completed": [
+    "01-generic-json",
+    "01-preflight",
+    "02-normalize",
+    "03-functional-export",
+    "04-import",
+    "05-runtime-compile",
+    "06-model-compile"
+  ],
+  "checkpoint": "/nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared/model.il",
+  "equivalence_proved": false,
+  "active": null,
+  "continuation": "Import restarted with exact native transfer projection; initial conditions still from JSON",
+  "finished_at": "2026-11-02T00:42:26.726714+00:00"
+}

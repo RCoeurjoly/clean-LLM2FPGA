@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-11-01T23:53:23.984083+00:00",
+  "status": "failed",
+  "completed": [
+    "01-generic-json"
+  ],
+  "checkpoint": "/nix/store/nmncbcxfrj9qxb3cpx726ay4qvgx6122-tinystories-prepared/model.il",
+  "equivalence_proved": false,
+  "active": "01-preflight",
+  "failed_stage": "01-preflight",
+  "returncode": 1,
+  "finished_at": "2026-11-01T23:57:34.047928+00:00"
+}

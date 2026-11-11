@@ -1,0 +1,3544 @@
+[
+  {
+    "kind": "code",
+    "query": "yosys language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 3,
+    "total_count": 3,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "nickharris808/pqc-bounds-lean",
+        "path": "Bound/Bound.lean",
+        "url": "https://github.com/nickharris808/pqc-bounds-lean/blob/3bf013c33985e9fc72b9562ec68842dbf8261650/Bound/Bound.lean"
+      },
+      {
+        "repo": "atvrager/Shoumei-RTL",
+        "path": "generators/Smt2Lean.lean",
+        "url": "https://github.com/atvrager/Shoumei-RTL/blob/1d8119704838948670f71d5d8ce5d371fe8a9eec/generators/Smt2Lean.lean"
+      },
+      {
+        "repo": "atvrager/Shoumei-RTL",
+        "path": "generators/Sva2Lean.lean",
+        "url": "https://github.com/atvrager/Shoumei-RTL/blob/1d8119704838948670f71d5d8ce5d371fe8a9eec/generators/Sva2Lean.lean"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "BLIF language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 100,
+    "total_count": 256,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "linglib-community/linglib",
+        "path": "Studies/Berent2026.lean",
+        "url": "https://github.com/linglib-community/linglib/blob/21610d34bbce06bfcf233ae596ddbb849ac440a2/Studies/Berent2026.lean"
+      },
+      {
+        "repo": "leanprover/lean4",
+        "path": "src/Lean/Elab/Tactic/Conv/Lets.lean",
+        "url": "https://github.com/leanprover/lean4/blob/b1204e253cf38e0fe3c3fe141e69e821ef1bd389/src/Lean/Elab/Tactic/Conv/Lets.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/RegtsSevenster/RS/Novel/Envelope/BlockTower.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/RegtsSevenster/RS/Novel/Envelope/BlockTower.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GH74/Uniqueness/SU/SU8B202.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GH74/Uniqueness/SU/SU8B202.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/OmegaPilotBLiftAniso.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/OmegaPilotBLiftAniso.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GH74/Uniqueness/SU/SU8BTr.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GH74/Uniqueness/SU/SU8BTr.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/LinearPilotFourParam.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/LinearPilotFourParam.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/OmegaPilotSwapParam.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/OmegaPilotSwapParam.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GH74/Uniqueness/SU/SU8BK1.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GH74/Uniqueness/SU/SU8BK1.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GH74/Uniqueness/SU/SU8BLift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GH74/Uniqueness/SU/SU8BLift.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GH74/Uniqueness/SU/SU8BK2.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GH74/Uniqueness/SU/SU8BK2.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GH74/Uniqueness/SU/SU8BK3.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GH74/Uniqueness/SU/SU8BK3.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Base.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Base.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/RankThree/PartOne/Q1327C/BU5.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/RankThree/PartOne/Q1327C/BU5.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/OmegaPilotQ2SwapLift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/OmegaPilotQ2SwapLift.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/RankThree/PartOne/K133B/NC5Lift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/RankThree/PartOne/K133B/NC5Lift.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/LinearPilotQ2SmallJ.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/LinearPilotQ2SmallJ.lean"
+      },
+      {
+        "repo": "leanprover-community/lean-auto",
+        "path": "Auto/EmbedLam/Lift.lean",
+        "url": "https://github.com/leanprover-community/lean-auto/blob/30f46ddb9a68d6878f5a1337eb2565ba4e70126b/Auto/EmbedLam/Lift.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Comparison.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Comparison.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/StabilizerWords.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/StabilizerWords.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/OmegaPilotQ2FieldNbr.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/OmegaPilotQ2FieldNbr.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/OmegaPilotEightCommSwapParam.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/OmegaPilotEightCommSwapParam.lean"
+      },
+      {
+        "repo": "leanprover-community/lean-auto",
+        "path": "Auto/EmbedLam/LamBase/Const.lean",
+        "url": "https://github.com/leanprover-community/lean-auto/blob/30f46ddb9a68d6878f5a1337eb2565ba4e70126b/Auto/EmbedLam/LamBase/Const.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/F4PilotMainGraphPiecesLift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/F4PilotMainGraphPiecesLift.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/SymplecticPilotParamSwap.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/SymplecticPilotParamSwap.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/OmegaPilotEightParamAniso.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/OmegaPilotEightParamAniso.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Faithfulness/FirstFour/WordBridge.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Faithfulness/FirstFour/WordBridge.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/SymplecticPilotQ2SwapParam.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/SymplecticPilotQ2SwapParam.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Comparison/SourceActions/Comparison.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Comparison/SourceActions/Comparison.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/OmegaPilotMinusEightInputsHR8.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/OmegaPilotMinusEightInputsHR8.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/OmegaPilotMinusEightInputsAniso.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/OmegaPilotMinusEightInputsAniso.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/CatalogueBProjectiveInvolutionCharacter.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/CatalogueBProjectiveInvolutionCharacter.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/WordSetup.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/WordSetup.lean"
+      },
+      {
+        "repo": "Verified-zkEVM/VCVio",
+        "path": "HashSig/SLHDSA/Security/LabEquiv/Experiment.lean",
+        "url": "https://github.com/Verified-zkEVM/VCVio/blob/aae1c9cbd6c00311091d691b74f2d0032d76d9bd/HashSig/SLHDSA/Security/LabEquiv/Experiment.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Faithfulness/LastFour/Transitions/WordModel.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/SpecificGroups/Fischer/AtlasCarriers/Fi23InFi24Prime/Faithfulness/LastFour/Transitions/WordModel.lean"
+      },
+      {
+        "repo": "leanprover-community/lean-auto",
+        "path": "Auto/EmbedLam/LamBase/BitVec.lean",
+        "url": "https://github.com/leanprover-community/lean-auto/blob/30f46ddb9a68d6878f5a1337eb2565ba4e70126b/Auto/EmbedLam/LamBase/BitVec.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/M24S/NSGL3.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/M24S/NSGL3.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "CFSG/Quasithin/ChapterF/Section01/SourceRecognition/FongSeitzBinary/TrialitySource/TensorTorus.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/CFSG/Quasithin/ChapterF/Section01/SourceRecognition/FongSeitzBinary/TrialitySource/TensorTorus.lean"
+      },
+      {
+        "repo": "mo271/FormalBook",
+        "path": "FormalBook/Chapter_19.lean",
+        "url": "https://github.com/mo271/FormalBook/blob/7df264a4d5e57f9036acdf85f7a2702b3ad82a06/FormalBook/Chapter_19.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "Certificates/Certificate24857.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/Certificates/Certificate24857.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Sporadic/Schreier/Co1Cert.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Sporadic/Schreier/Co1Cert.lean"
+      },
+      {
+        "repo": "Verified-zkEVM/VCVio",
+        "path": "HashSigTest/SLHDSA/LabScheme.lean",
+        "url": "https://github.com/Verified-zkEVM/VCVio/blob/aae1c9cbd6c00311091d691b74f2d0032d76d9bd/HashSigTest/SLHDSA/LabScheme.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/SeitzQ2BLift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/SeitzQ2BLift.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/EmbCbOne.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/EmbCbOne.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/EmbCbTwo.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/EmbCbTwo.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/EmbCbDefs.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/EmbCbDefs.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/EmbCbFinal.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/EmbCbFinal.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/ClassicalInvolution/Q3/Q3VLocDef.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/ClassicalInvolution/Q3/Q3VLocDef.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/EmbCbStruct.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/EmbCbStruct.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/ClassicalInvolution/Q3/Q3VF4SMain.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/ClassicalInvolution/Q3/Q3VF4SMain.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/TwistedE6PilotBLift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/TwistedE6PilotBLift.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/EmbCbOneBase.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/EmbCbOneBase.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/E7PilotNeighbourBLift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/E7PilotNeighbourBLift.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/ClassicalInvolution/Q3/Q3VFrameDisj.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/ClassicalInvolution/Q3/Q3VFrameDisj.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/F4PilotSwapBLiftSchur.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/F4PilotSwapBLiftSchur.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/TwistedE6PilotQ2BLift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/TwistedE6PilotQ2BLift.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/ClassicalInvolution/Q3/Q3VFrameMain.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/ClassicalInvolution/Q3/Q3VFrameMain.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/RankThree/PartOne/K159W/CoverWeyl.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/RankThree/PartOne/K159W/CoverWeyl.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/E6PilotQ2Main.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/E6PilotQ2Main.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/TwistedE6PilotBLiftY.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/TwistedE6PilotBLiftY.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/Sec4IBLiftCent.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/Sec4IBLiftCent.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/ClassicalInvolution/Q3/Q3VF4SLink.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/ClassicalInvolution/Q3/Q3VF4SLink.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/Sec5BSwB.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/Sec5BSwB.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/EmbCbApiConj.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/EmbCbApiConj.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/Sec4IBFinal.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/Sec4IBFinal.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/EvenSporadicStandard/M24Std/FirstHalf.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/EvenSporadicStandard/M24Std/FirstHalf.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/EmbCbOneEnd.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/EmbCbOneEnd.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/LinearPilotQ2LFiveMData.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/LinearPilotQ2LFiveMData.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/M24S/NSTypeA3.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/M24S/NSTypeA3.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GH74/Generic/BProg/B3/DictRepair.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GH74/Generic/BProg/B3/DictRepair.lean"
+      },
+      {
+        "repo": "vidick/MIPRE-formalization",
+        "path": "MIPRE/LCS/EPR.lean",
+        "url": "https://github.com/vidick/MIPRE-formalization/blob/5926bdff5db621f44682a101007ef2fe3ae8d970/MIPRE/LCS/EPR.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/FGOutZetaBMain.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/FGOutZetaBMain.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Sporadic/Co1Block/Iota.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Sporadic/Co1Block/Iota.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/BurgoyneDXPicture.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/BurgoyneDXPicture.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/UnitaryPilotSwapLiftDecomp.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/UnitaryPilotSwapLiftDecomp.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/E7PilotQ2SwapParam.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/E7PilotQ2SwapParam.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/E6PilotQ2RowParam.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/E6PilotQ2RowParam.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/E8PilotQ2SwapParam.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/E8PilotQ2SwapParam.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Sporadic/Co1Block/PointStab.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Sporadic/Co1Block/PointStab.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicRuEnd.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicRuEnd.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicSuzEnd.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicSuzEnd.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/StepLarge.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/StepLarge.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/ToolFaith.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/ToolFaith.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/Sec4IBLiftType.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/OddStandard/SmallF3/Omega/Sec4IBLiftType.lean"
+      },
+      {
+        "repo": "QuAIR/Lean-QIT",
+        "path": "QIT/Nonlocality/Tsirelson.lean",
+        "url": "https://github.com/QuAIR/Lean-QIT/blob/8a931d4bda61ba503cfc0728704cfef5dedf2cff/QIT/Nonlocality/Tsirelson.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicRuCover.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicRuCover.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicRuCheck.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicRuCheck.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Sporadic/Co1Block/IotaBase.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Sporadic/Co1Block/IotaBase.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/ClassicalInvolution/Q3/Q3VFrameLayer.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/ClassicalInvolution/Q3/Q3VFrameLayer.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/StepPairOdd.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/StepPairOdd.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicSuzCover.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicSuzCover.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicRuEnd175.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicRuEnd175.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/ExitSixteen.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/ExitSixteen.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/TwistedE6PilotSwapNormalizeBasic.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/TwistedE6PilotSwapNormalizeBasic.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/SeitzReduction/E7PilotHR8Lift.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/SeitzReduction/E7PilotHR8Lift.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/QuantumParallelRepetition/Part04.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/QuantumParallelRepetition/Part04.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicSuzEnd175.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/RankTwoSporadicSuzEnd175.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/ExitLargeNat.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/HardMathSupport/Cooperstein/Coordinator/EightFive/ExitLargeNat.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Stellmacher/SectionNine/NineFourCentralActionRecognition.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Stellmacher/SectionNine/NineFourCentralActionRecognition.lean"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "EBLIF language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 11,
+    "total_count": 11,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/BurgoyneDXPicture.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/BurgoyneDXPicture.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/StandardType/GGTBJWeyl.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/StandardType/GGTBJWeyl.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/StandardType/GGSecFiveSplitNbrRowZKSide.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/StandardType/GGSecFiveSplitNbrRowZKSide.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/StandardType/GGTBRowFrame.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/StandardType/GGTBRowFrame.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/StandardType/GGTypeANbrCore.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/StandardType/GGTypeANbrCore.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/StandardType/GGTypeANbrCoreSix.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/StandardType/GGTypeANbrCoreSix.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/BurgoyneBTwin.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/BurgoyneBTwin.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/StandardType/GGCorFourTwoRestSpTorus.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/StandardType/GGCorFourTwoRestSpTorus.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/CatFactsL4U4BurgDUb.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/CatFactsL4U4BurgDUb.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/StandardType/GGCorFourTwoTableBTypeA.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/StandardType/GGCorFourTwoTableBTypeA.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/ComponentClassification/BurgoyneBOTwin.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/ComponentClassification/BurgoyneBOTwin.lean"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "EDIF language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 100,
+    "total_count": 3896,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/ChipFiring/ChipFiringWithLean/Rank.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/ChipFiring/ChipFiringWithLean/Rank.lean"
+      },
+      {
+        "repo": "ah1112/synthetic_euclid_4",
+        "path": "changes_to_synthetic.lean",
+        "url": "https://github.com/ah1112/synthetic_euclid_4/blob/4e20409da008849747314d734855ba4f745cd30a/changes_to_synthetic.lean"
+      },
+      {
+        "repo": "DhyeyMavani2003/chip-firing-with-lean",
+        "path": "ChipFiringWithLean/Rank.lean",
+        "url": "https://github.com/DhyeyMavani2003/chip-firing-with-lean/blob/b24ecdb21344befdc4f6cb3430fef659eee20066/ChipFiringWithLean/Rank.lean"
+      },
+      {
+        "repo": "ufmg-smite/lean-smt",
+        "path": "Smt/Reconstruct/Real/TransFns/Utils.lean",
+        "url": "https://github.com/ufmg-smite/lean-smt/blob/db545bebe2de1e06dc2df62a6ff6c20e5736bfc0/Smt/Reconstruct/Real/TransFns/Utils.lean"
+      },
+      {
+        "repo": "leanprover/verso",
+        "path": "src/verso/Verso/Output/Html/Tags.lean",
+        "url": "https://github.com/leanprover/verso/blob/a62a15bbe7719a9086442c5bbe83140f5334aa6f/src/verso/Verso/Output/Html/Tags.lean"
+      },
+      {
+        "repo": "ufmg-smite/lean-smt",
+        "path": "Smt/Reconstruct/Real/TransFns/TaylorComp.lean",
+        "url": "https://github.com/ufmg-smite/lean-smt/blob/db545bebe2de1e06dc2df62a6ff6c20e5736bfc0/Smt/Reconstruct/Real/TransFns/TaylorComp.lean"
+      },
+      {
+        "repo": "emap-nlp/book",
+        "path": "CSwL/IntroCS.lean",
+        "url": "https://github.com/emap-nlp/book/blob/a8d5749bb4a7a7359304b9646c1704fed1800a8a/CSwL/IntroCS.lean"
+      },
+      {
+        "repo": "nktkt/gondolin",
+        "path": "NN/Floats/IEEEExec/RatScaling.lean",
+        "url": "https://github.com/nktkt/gondolin/blob/fb352077da12a5e8052c147be94b491868e18694/NN/Floats/IEEEExec/RatScaling.lean"
+      },
+      {
+        "repo": "klavins/LeanW26",
+        "path": "LeanW26/Maths/Algebra.lean",
+        "url": "https://github.com/klavins/LeanW26/blob/13507e9263f6f2980cebd2f17b1afaac862680af/LeanW26/Maths/Algebra.lean"
+      },
+      {
+        "repo": "vidick/MIPRE-formalization",
+        "path": "MIPRE/Foundations/Introspection/ParserGuard.lean",
+        "url": "https://github.com/vidick/MIPRE-formalization/blob/5926bdff5db621f44682a101007ef2fe3ae8d970/MIPRE/Foundations/Introspection/ParserGuard.lean"
+      },
+      {
+        "repo": "newspeaklanguage/newspeak",
+        "path": "formal-semantics/lean/Newspeak/FiniteStore.lean",
+        "url": "https://github.com/newspeaklanguage/newspeak/blob/e2232d8fdb9a6061d00419fa83134e4e60caf172/formal-semantics/lean/Newspeak/FiniteStore.lean"
+      },
+      {
+        "repo": "facebookresearch/atlas-lean",
+        "path": "WantedExt/Analysis/HermanProblem290Wanted.lean",
+        "url": "https://github.com/facebookresearch/atlas-lean/blob/4b1c449f04bcb7f7bff6a83a15e0d82bbde3773a/WantedExt/Analysis/HermanProblem290Wanted.lean"
+      },
+      {
+        "repo": "az9713/torchlean-demo",
+        "path": "NN/Floats/IEEEExec/Rounding/RatScaling.lean",
+        "url": "https://github.com/az9713/torchlean-demo/blob/1b4e2e4ac3b096f7857fb1710693bc8453eae00e/NN/Floats/IEEEExec/Rounding/RatScaling.lean"
+      },
+      {
+        "repo": "ufmg-smite/lean-smt",
+        "path": "Smt/Reconstruct/Real/TransFns/ArithTransExpApproxBelow.lean",
+        "url": "https://github.com/ufmg-smite/lean-smt/blob/db545bebe2de1e06dc2df62a6ff6c20e5736bfc0/Smt/Reconstruct/Real/TransFns/ArithTransExpApproxBelow.lean"
+      },
+      {
+        "repo": "facebookresearch/atlas-lean",
+        "path": "MathlibExtTest/RingTheory/DiscreteValuationRing/TameDifferent.lean",
+        "url": "https://github.com/facebookresearch/atlas-lean/blob/4b1c449f04bcb7f7bff6a83a15e0d82bbde3773a/MathlibExtTest/RingTheory/DiscreteValuationRing/TameDifferent.lean"
+      },
+      {
+        "repo": "teorth/expdb",
+        "path": "Expdb/Mathlib/IteratedDeriv.lean",
+        "url": "https://github.com/teorth/expdb/blob/c8eda5e4f1f51024b6cbf70c7bef6c33da74c691/Expdb/Mathlib/IteratedDeriv.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/HardSphereNBC.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/HardSphereNBC.lean"
+      },
+      {
+        "repo": "leanprover-community/batteries",
+        "path": "Batteries/Tactic/Lint/Simp.lean",
+        "url": "https://github.com/leanprover-community/batteries/blob/6d971e7e6b3f7d0a501c5418815aa9022edd3499/Batteries/Tactic/Lint/Simp.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Analysis/ODE/Regularity.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Analysis/ODE/Regularity.lean"
+      },
+      {
+        "repo": "JobPetrovcic/mathlib-archive",
+        "path": "Archive/Examples/IfNormalization/Statement.lean",
+        "url": "https://github.com/JobPetrovcic/mathlib-archive/blob/29dcec074de168ac2bf835a77ef68bbe069194c5/Archive/Examples/IfNormalization/Statement.lean"
+      },
+      {
+        "repo": "ufmg-smite/lean-smt",
+        "path": "Smt/Reconstruct/Real/TransFns/ArithTransSineApproxAboveNeg.lean",
+        "url": "https://github.com/ufmg-smite/lean-smt/blob/db545bebe2de1e06dc2df62a6ff6c20e5736bfc0/Smt/Reconstruct/Real/TransFns/ArithTransSineApproxAboveNeg.lean"
+      },
+      {
+        "repo": "psinary-sketch/SIDE-effects",
+        "path": "SIDEEffects/ExhaustivenessLicense.lean",
+        "url": "https://github.com/psinary-sketch/SIDE-effects/blob/78bbcff533b7273b2d26accd0726b126c961e401/SIDEEffects/ExhaustivenessLicense.lean"
+      },
+      {
+        "repo": "verse-lab/velvet",
+        "path": "Velvet/Examples/HypNaming.lean",
+        "url": "https://github.com/verse-lab/velvet/blob/836ed5a163b36c09081ed1d8aeecd3cec040f87e/Velvet/Examples/HypNaming.lean"
+      },
+      {
+        "repo": "fplaunchpad/cs3300_m26",
+        "path": "lectures/03_parsing/dangling_else_equivalence.lean",
+        "url": "https://github.com/fplaunchpad/cs3300_m26/blob/aadeafd5686a3ed97c44f20db4f2276b3f71f2f2/lectures/03_parsing/dangling_else_equivalence.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/LowDimTopology/Plumbing/Tower.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/LowDimTopology/Plumbing/Tower.lean"
+      },
+      {
+        "repo": "dwrensha/compfiles",
+        "path": "Compfiles/Usa2001P1.lean",
+        "url": "https://github.com/dwrensha/compfiles/blob/1745e6ced3e671bd74417548494b034eb2c87da8/Compfiles/Usa2001P1.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/HardSphereNBC/Imports.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/HardSphereNBC/Imports.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/LowDimTopology/Plumbing/Grading.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/LowDimTopology/Plumbing/Grading.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/AlgebraicTopology/Sphere/Equator.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/AlgebraicTopology/Sphere/Equator.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Geometry/Diffeomorphism/Disc.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Geometry/Diffeomorphism/Disc.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Homology/DG/Bimodule/OfHom.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Homology/DG/Bimodule/OfHom.lean"
+      },
+      {
+        "repo": "lean-dojo/TorchLean",
+        "path": "NN/Tensor/Internal/Laws/DualNumberReduction.lean",
+        "url": "https://github.com/lean-dojo/TorchLean/blob/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b/NN/Tensor/Internal/Laws/DualNumberReduction.lean"
+      },
+      {
+        "repo": "lean-dojo/TorchLean",
+        "path": "NN/Tensor/Internal/Representation/Fiber/Tie.lean",
+        "url": "https://github.com/lean-dojo/TorchLean/blob/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b/NN/Tensor/Internal/Representation/Fiber/Tie.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/Nivat/Descent/FiberBudget.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/Nivat/Descent/FiberBudget.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/LowDimTopology/Plumbing/Maslov/Basic.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/LowDimTopology/Plumbing/Maslov/Basic.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/LowDimTopology/Plumbing/ChainComplex.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/LowDimTopology/Plumbing/ChainComplex.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/NaslundCounterexample/Main.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/NaslundCounterexample/Main.lean"
+      },
+      {
+        "repo": "AdArya125/formalizing-logic-in-lean",
+        "path": "prac5.lean",
+        "url": "https://github.com/AdArya125/formalizing-logic-in-lean/blob/f99ecaabd3ec987b52be6a051adda74b3ffa695e/prac5.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Geometry/Diffeomorphism/RelativeCongr.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Geometry/Diffeomorphism/RelativeCongr.lean"
+      },
+      {
+        "repo": "az9713/torchlean-demo",
+        "path": "NN/Floats/IEEEExec/Exec32/Arithmetic.lean",
+        "url": "https://github.com/az9713/torchlean-demo/blob/1b4e2e4ac3b096f7857fb1710693bc8453eae00e/NN/Floats/IEEEExec/Exec32/Arithmetic.lean"
+      },
+      {
+        "repo": "lean-dojo/TorchLean",
+        "path": "NN/Tensor/Internal/Representation/Fiber/Product.lean",
+        "url": "https://github.com/lean-dojo/TorchLean/blob/f37cbc5aca8e79943b0ef0e3d3499ca9719d7c2b/NN/Tensor/Internal/Representation/Fiber/Product.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/HardSphereNBC/HardSphereTree.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/HardSphereNBC/HardSphereTree.lean"
+      },
+      {
+        "repo": "leanprover/downstream-lean4",
+        "path": "mathlib4/Archive/Examples/IfNormalization/Result.lean",
+        "url": "https://github.com/leanprover/downstream-lean4/blob/725d86127ba9b1a4f0d2ac242a581e795a7ce326/mathlib4/Archive/Examples/IfNormalization/Result.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/LowDimTopology/Plumbing/Signed/Homology.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/LowDimTopology/Plumbing/Signed/Homology.lean"
+      },
+      {
+        "repo": "competemath/tengoku",
+        "path": "Tengoku/Seed/RingTheory/Smooth/Quotient.lean",
+        "url": "https://github.com/competemath/tengoku/blob/44c34cf1d2605f2bfdcb0439f5e32c9d1eb69ed1/Tengoku/Seed/RingTheory/Smooth/Quotient.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Geometry/Manifold/VectorBundle/Translate.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Geometry/Manifold/VectorBundle/Translate.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Geometry/Toric/Analytic/Fan/Affine/Basic.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Geometry/Toric/Analytic/Fan/Affine/Basic.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Geometry/Toric/Analytic/Fan/Affine/Space.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Geometry/Toric/Analytic/Fan/Affine/Space.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/NaslundCounterexample/Families.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/NaslundCounterexample/Families.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Homology/DG/Twisted/Noncommutative.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Homology/DG/Twisted/Noncommutative.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/FieldTheory/FunctionField/Different/Galois.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/FieldTheory/FunctionField/Different/Galois.lean"
+      },
+      {
+        "repo": "brettkoonce/lean4-mlir",
+        "path": "Bestiary/StableDiffusion.lean",
+        "url": "https://github.com/brettkoonce/lean4-mlir/blob/be55287603d63c08d29cfb50713cc4651f422331/Bestiary/StableDiffusion.lean"
+      },
+      {
+        "repo": "az9713/torchlean-demo",
+        "path": "NN/Floats/IEEEExec/Exec32/Directed.lean",
+        "url": "https://github.com/az9713/torchlean-demo/blob/1b4e2e4ac3b096f7857fb1710693bc8453eae00e/NN/Floats/IEEEExec/Exec32/Directed.lean"
+      },
+      {
+        "repo": "Verified-zkEVM/ArkLib",
+        "path": "ArkLib/ToMathlib/RingTheory/MvPolynomial/AffineHilbertBidegree.lean",
+        "url": "https://github.com/Verified-zkEVM/ArkLib/blob/a339839779068693fd0aa6a401264f82123ba960/ArkLib/ToMathlib/RingTheory/MvPolynomial/AffineHilbertBidegree.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/HardSphereNBC/HardSphereTreeEdges.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/HardSphereNBC/HardSphereTreeEdges.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/NaslundCounterexample/Definitions.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/NaslundCounterexample/Definitions.lean"
+      },
+      {
+        "repo": "LukeBailey181/certainty-machine",
+        "path": "mathlib4/Archive/Examples/IfNormalization/Statement.lean",
+        "url": "https://github.com/LukeBailey181/certainty-machine/blob/ed04dcaac31319e3fac1157ea4039dd33790b1b5/mathlib4/Archive/Examples/IfNormalization/Statement.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Homology/Ginzburg/ThreeDimensional.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Homology/Ginzburg/ThreeDimensional.lean"
+      },
+      {
+        "repo": "leanprover/downstream-lean4",
+        "path": "mathlib4/Mathlib/RingTheory/Smooth/Quotient.lean",
+        "url": "https://github.com/leanprover/downstream-lean4/blob/725d86127ba9b1a4f0d2ac242a581e795a7ce326/mathlib4/Mathlib/RingTheory/Smooth/Quotient.lean"
+      },
+      {
+        "repo": "bansal-yash/COL703-Logic-For-Computer-Science",
+        "path": "Assignment_5.lean",
+        "url": "https://github.com/bansal-yash/COL703-Logic-For-Computer-Science/blob/8796738bedb286a3c1f31abf5503ed956bbaf328/Assignment_5.lean"
+      },
+      {
+        "repo": "Beneficial-AI-Foundation/vericoding-benchmark",
+        "path": "specs/LF2512_specs.lean",
+        "url": "https://github.com/Beneficial-AI-Foundation/vericoding-benchmark/blob/387cd69996792d452ead7b0460f36ee4c5cdd148/specs/LF2512_specs.lean"
+      },
+      {
+        "repo": "Beneficial-AI-Foundation/vericoding-benchmark",
+        "path": "specs/LF2386_specs.lean",
+        "url": "https://github.com/Beneficial-AI-Foundation/vericoding-benchmark/blob/387cd69996792d452ead7b0460f36ee4c5cdd148/specs/LF2386_specs.lean"
+      },
+      {
+        "repo": "Beneficial-AI-Foundation/vericoding-benchmark",
+        "path": "specs/LF4618_specs.lean",
+        "url": "https://github.com/Beneficial-AI-Foundation/vericoding-benchmark/blob/387cd69996792d452ead7b0460f36ee4c5cdd148/specs/LF4618_specs.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/AlgebraicGeometry/Modules/Differentials/Spec.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/AlgebraicGeometry/Modules/Differentials/Spec.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Analysis/Calculus/DifferentialForm/HalfSpace.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Analysis/Calculus/DifferentialForm/HalfSpace.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/SumDifferenceExponent/Construction.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/SumDifferenceExponent/Construction.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/LowDimTopology/Plumbing/Signed/Differential.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/LowDimTopology/Plumbing/Signed/Differential.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/AlgebraicGeometry/Modules/Differentials/Stalk.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/AlgebraicGeometry/Modules/Differentials/Stalk.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/AlgebraicGeometry/Modules/Differentials/Basic.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/AlgebraicGeometry/Modules/Differentials/Basic.lean"
+      },
+      {
+        "repo": "Jiyuan-Tan/CausalSmith",
+        "path": "Causalean/Stat/CLT/Martingale/Main.lean",
+        "url": "https://github.com/Jiyuan-Tan/CausalSmith/blob/a7085d88d2e4b30003db7097ca374f4718da0f01/Causalean/Stat/CLT/Martingale/Main.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/AlgebraicGeometry/WeilDivisor/AbelJacobi/Basic.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/AlgebraicGeometry/WeilDivisor/AbelJacobi/Basic.lean"
+      },
+      {
+        "repo": "Jiyuan-Tan/CausalSmith",
+        "path": "Causalean/Stat/CLT/Martingale/Basic.lean",
+        "url": "https://github.com/Jiyuan-Tan/CausalSmith/blob/a7085d88d2e4b30003db7097ca374f4718da0f01/Causalean/Stat/CLT/Martingale/Basic.lean"
+      },
+      {
+        "repo": "Jiyuan-Tan/CausalSmith",
+        "path": "Causalean/Stat/DoobInformation.lean",
+        "url": "https://github.com/Jiyuan-Tan/CausalSmith/blob/a7085d88d2e4b30003db7097ca374f4718da0f01/Causalean/Stat/DoobInformation.lean"
+      },
+      {
+        "repo": "nktkt/gondolin",
+        "path": "NN/Floats/IEEEExec/Exec32.lean",
+        "url": "https://github.com/nktkt/gondolin/blob/fb352077da12a5e8052c147be94b491868e18694/NN/Floats/IEEEExec/Exec32.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/NaslundCounterexample/Bases.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/NaslundCounterexample/Bases.lean"
+      },
+      {
+        "repo": "Jiyuan-Tan/CausalSmith",
+        "path": "Causalean/Graph/MarkovEquiv/Decompose.lean",
+        "url": "https://github.com/Jiyuan-Tan/CausalSmith/blob/a7085d88d2e4b30003db7097ca374f4718da0f01/Causalean/Graph/MarkovEquiv/Decompose.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Analysis/CompletelyMonotone/Limits.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Analysis/CompletelyMonotone/Limits.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/AlgebraicGeometry/Modules/Differentials/Canonical.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/AlgebraicGeometry/Modules/Differentials/Canonical.lean"
+      },
+      {
+        "repo": "Jiyuan-Tan/CausalSmith",
+        "path": "Causalean/Stat/CLT/Martingale/Lyapunov.lean",
+        "url": "https://github.com/Jiyuan-Tan/CausalSmith/blob/a7085d88d2e4b30003db7097ca374f4718da0f01/Causalean/Stat/CLT/Martingale/Lyapunov.lean"
+      },
+      {
+        "repo": "sarthak-panda/sem7",
+        "path": "COL703/lab5/prac5.lean",
+        "url": "https://github.com/sarthak-panda/sem7/blob/26a07507f358883a9dc2d693d18c73991f264d1e/COL703/lab5/prac5.lean"
+      },
+      {
+        "repo": "briangmilnes/ScottLean4",
+        "path": "Beeson/inf5.lean",
+        "url": "https://github.com/briangmilnes/ScottLean4/blob/b85e7f9f18e00c954f59909f0ecd366bdd0b1b7f/Beeson/inf5.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/AlgebraicGeometry/WeilDivisor/BasepointChange.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/AlgebraicGeometry/WeilDivisor/BasepointChange.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Geometry/Manifold/Riemannian/Isometry/Sphere/Basic.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Geometry/Manifold/Riemannian/Isometry/Sphere/Basic.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Analysis/PositiveDefinite/SemigroupGroup/Time/Axis.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Analysis/PositiveDefinite/SemigroupGroup/Time/Axis.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/BrillNoetherGraphs/Utilities/Foundations.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/BrillNoetherGraphs/Utilities/Foundations.lean"
+      },
+      {
+        "repo": "briangmilnes/ScottLean4",
+        "path": "Beeson/inf21.lean",
+        "url": "https://github.com/briangmilnes/ScottLean4/blob/b85e7f9f18e00c954f59909f0ecd366bdd0b1b7f/Beeson/inf21.lean"
+      },
+      {
+        "repo": "Axiomatic-AI/mathlib4",
+        "path": "Mathlib/RingTheory/Smooth/Quotient.lean",
+        "url": "https://github.com/Axiomatic-AI/mathlib4/blob/fdd194a8087ad4ae0f6ddd737e06af1ffde55efb/Mathlib/RingTheory/Smooth/Quotient.lean"
+      },
+      {
+        "repo": "briangmilnes/ScottLean4",
+        "path": "Beeson/inf3.lean",
+        "url": "https://github.com/briangmilnes/ScottLean4/blob/b85e7f9f18e00c954f59909f0ecd366bdd0b1b7f/Beeson/inf3.lean"
+      },
+      {
+        "repo": "briangmilnes/ScottLean4",
+        "path": "Beeson/inf32.lean",
+        "url": "https://github.com/briangmilnes/ScottLean4/blob/b85e7f9f18e00c954f59909f0ecd366bdd0b1b7f/Beeson/inf32.lean"
+      },
+      {
+        "repo": "LeanPool/lean-pool",
+        "path": "LeanPool/EscauriazaSereginSverak/LPS/SmoothingShift.lean",
+        "url": "https://github.com/LeanPool/lean-pool/blob/edbe5bd56f476cc2965564676b66199f281ab714/LeanPool/EscauriazaSereginSverak/LPS/SmoothingShift.lean"
+      },
+      {
+        "repo": "TUMcps/CORALean",
+        "path": "src/CORALean/ContSet/PolyZonotope/Real/Operations/RelaxWidth.lean",
+        "url": "https://github.com/TUMcps/CORALean/blob/0a9650b49cfd81ccaf4a1cd6ebd0c1082599109a/src/CORALean/ContSet/PolyZonotope/Real/Operations/RelaxWidth.lean"
+      },
+      {
+        "repo": "argumentcomputer/ix",
+        "path": "Ix/Tc/Egress.lean",
+        "url": "https://github.com/argumentcomputer/ix/blob/7a313fdfb6290b073387ac3de7f355402304cbfc/Ix/Tc/Egress.lean"
+      },
+      {
+        "repo": "briangmilnes/ScottLean4",
+        "path": "Beeson/inf22.lean",
+        "url": "https://github.com/briangmilnes/ScottLean4/blob/b85e7f9f18e00c954f59909f0ecd366bdd0b1b7f/Beeson/inf22.lean"
+      },
+      {
+        "repo": "briangmilnes/ScottLean4",
+        "path": "Beeson/inf9.lean",
+        "url": "https://github.com/briangmilnes/ScottLean4/blob/b85e7f9f18e00c954f59909f0ecd366bdd0b1b7f/Beeson/inf9.lean"
+      },
+      {
+        "repo": "Jiyuan-Tan/CausalSmith",
+        "path": "Causalean/Stat/CLT/Martingale/StoppedArray.lean",
+        "url": "https://github.com/Jiyuan-Tan/CausalSmith/blob/a7085d88d2e4b30003db7097ca374f4718da0f01/Causalean/Stat/CLT/Martingale/StoppedArray.lean"
+      },
+      {
+        "repo": "TUMcps/CORALean",
+        "path": "src/CORALean/ContSet/PolyZonotope/Float/Operations/RelaxWidth.lean",
+        "url": "https://github.com/TUMcps/CORALean/blob/0a9650b49cfd81ccaf4a1cd6ebd0c1082599109a/src/CORALean/ContSet/PolyZonotope/Float/Operations/RelaxWidth.lean"
+      },
+      {
+        "repo": "sdiehl/zero-to-qed",
+        "path": "src/Examples/ATM.lean",
+        "url": "https://github.com/sdiehl/zero-to-qed/blob/cf59ccfb809928cde99890a6522695ed7ceed658/src/Examples/ATM.lean"
+      },
+      {
+        "repo": "briangmilnes/ScottLean4",
+        "path": "Beeson/inf27.lean",
+        "url": "https://github.com/briangmilnes/ScottLean4/blob/b85e7f9f18e00c954f59909f0ecd366bdd0b1b7f/Beeson/inf27.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/AlgebraicTopology/DGLocalSystem/Path/Bimodule.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/AlgebraicTopology/DGLocalSystem/Path/Bimodule.lean"
+      },
+      {
+        "repo": "briangmilnes/ScottLean4",
+        "path": "Beeson/inf24.lean",
+        "url": "https://github.com/briangmilnes/ScottLean4/blob/b85e7f9f18e00c954f59909f0ecd366bdd0b1b7f/Beeson/inf24.lean"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "CXXRTL language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "total_count": 0,
+    "incomplete_results": false,
+    "items": [],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "intersynth language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "total_count": 0,
+    "incomplete_results": false,
+    "items": [],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "simplec language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 100,
+    "total_count": 2460,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "QinxiangCao/QualifiedCProgramming",
+        "path": "Lean/examples/SimpleC/EE/QCP_demos_LLM.lean",
+        "url": "https://github.com/QinxiangCao/QualifiedCProgramming/blob/14ca1ba02f0ed41f94af5c6d342bf4baa1cbc216/Lean/examples/SimpleC/EE/QCP_demos_LLM.lean"
+      },
+      {
+        "repo": "QinxiangCao/QualifiedCProgramming",
+        "path": "Lean/SeparationLogic/SimpleC/Common/CTypes.lean",
+        "url": "https://github.com/QinxiangCao/QualifiedCProgramming/blob/14ca1ba02f0ed41f94af5c6d342bf4baa1cbc216/Lean/SeparationLogic/SimpleC/Common/CTypes.lean"
+      },
+      {
+        "repo": "QinxiangCao/QualifiedCProgramming",
+        "path": "Lean/SeparationLogic/SimpleC/SL/FloatLib.lean",
+        "url": "https://github.com/QinxiangCao/QualifiedCProgramming/blob/14ca1ba02f0ed41f94af5c6d342bf4baa1cbc216/Lean/SeparationLogic/SimpleC/SL/FloatLib.lean"
+      },
+      {
+        "repo": "QinxiangCao/QualifiedCProgramming",
+        "path": "Lean/SeparationLogic/SimpleC/SL/CArch.lean",
+        "url": "https://github.com/QinxiangCao/QualifiedCProgramming/blob/14ca1ba02f0ed41f94af5c6d342bf4baa1cbc216/Lean/SeparationLogic/SimpleC/SL/CArch.lean"
+      },
+      {
+        "repo": "QinxiangCao/QualifiedCProgramming",
+        "path": "Lean/SeparationLogic/SimpleC/SL/IntLib.lean",
+        "url": "https://github.com/QinxiangCao/QualifiedCProgramming/blob/14ca1ba02f0ed41f94af5c6d342bf4baa1cbc216/Lean/SeparationLogic/SimpleC/SL/IntLib.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/SimpleCase.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/SimpleCase.lean"
+      },
+      {
+        "repo": "facebookresearch/atlas-lean",
+        "path": "WantedExt/GroupTheory/SimpleCompositionFactorFormationKourovka12Problem97Wanted.lean",
+        "url": "https://github.com/facebookresearch/atlas-lean/blob/4b1c449f04bcb7f7bff6a83a15e0d82bbde3773a/WantedExt/GroupTheory/SimpleCompositionFactorFormationKourovka12Problem97Wanted.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/GroupTheory/CComponent/SimpleCoreImage.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/GroupTheory/CComponent/SimpleCoreImage.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/Representation/SimpleCopies.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/Representation/SimpleCopies.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/Representation/BinaryOffender/SimpleCoreKernel.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/Representation/BinaryOffender/SimpleCoreKernel.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/Representation/SimpleCoreQuotientDegree.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/Representation/SimpleCoreQuotientDegree.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Simple/Rigid.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Simple/Rigid.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Simple/Classes.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Simple/Classes.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Semisimple/Rigid.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Semisimple/Rigid.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Semisimple/Finrank.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Semisimple/Finrank.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Semisimple/CatCenter.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Semisimple/CatCenter.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/TorusAction.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/TorusAction.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Semisimple/Equivalence.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Semisimple/Equivalence.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Semisimple/Multiplicity.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Semisimple/Multiplicity.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Basis.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Basis.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Action.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Action.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/Quotient/Action.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/Quotient/Action.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Lattice.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Lattice.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Monoidal/Grading/Universal.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Monoidal/Grading/Universal.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Monoidal/Grading/Character.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Monoidal/Grading/Character.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Semisimple/FrobeniusPerron.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Semisimple/FrobeniusPerron.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Monoidal/Pivotal/GlobalDim.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Monoidal/Pivotal/GlobalDim.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Monoidal/Pivotal/Character.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Monoidal/Pivotal/Character.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Semisimple/GrothendieckRing.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Semisimple/GrothendieckRing.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Monoidal/Grading/MonoidalAut.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Monoidal/Grading/MonoidalAut.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Monoidal/Pivotal/PseudoUnitary.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Monoidal/Pivotal/PseudoUnitary.lean"
+      },
+      {
+        "repo": "az9713/torchlean-demo",
+        "path": "NN/Examples/Quickstart/SimpleCnnTrain.lean",
+        "url": "https://github.com/az9713/torchlean-demo/blob/1b4e2e4ac3b096f7857fb1710693bc8453eae00e/NN/Examples/Quickstart/SimpleCnnTrain.lean"
+      },
+      {
+        "repo": "nktkt/gondolin",
+        "path": "NN/Examples/Quickstart/SimpleCnnTrain.lean",
+        "url": "https://github.com/nktkt/gondolin/blob/fb352077da12a5e8052c147be94b491868e18694/NN/Examples/Quickstart/SimpleCnnTrain.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Walter/Assembly.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Walter/Assembly.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/Represented/Flag/Torus.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/Represented/Flag/Torus.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/CategoryTheory/Monoidal/Pivotal/FrobeniusPerron.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/CategoryTheory/Monoidal/Pivotal/FrobeniusPerron.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/RepresentationTheory/GrothendieckGroup/SimpleBasis.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/RepresentationTheory/GrothendieckGroup/SimpleBasis.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/RepresentationTheory/GrothendieckGroup/CartanMatrix.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/RepresentationTheory/GrothendieckGroup/CartanMatrix.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/Main.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/Main.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LargeExtraspecial/S8KU.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LargeExtraspecial/S8KU.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/Form2.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/Form2.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/Final.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/Final.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/RepresentationTheory/GrothendieckGroup/ExtEulerMatrix.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/RepresentationTheory/GrothendieckGroup/ExtEulerMatrix.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Category/GradedModuleCat/CartanMap/SimpleBasis.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Category/GradedModuleCat/CartanMap/SimpleBasis.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/Modular/DividedAction.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/Modular/DividedAction.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/Sec66Step.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/Sec66Step.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Quasithin/Vol2/Ch10SecKRRc.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Quasithin/Vol2/Ch10SecKRRc.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/RepresentationTheory/GrothendieckGroup/CompositionFactors.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/RepresentationTheory/GrothendieckGroup/CompositionFactors.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/RepresentationTheory/GrothendieckGroup/Finrank.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/RepresentationTheory/GrothendieckGroup/Finrank.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LargeExtraspecial/S97RForm2.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LargeExtraspecial/S97RForm2.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/T2K/Bundle.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/T2K/Bundle.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LargeExtraspecial/TI75Form2.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LargeExtraspecial/TI75Form2.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GF2Type/SmithTypeE/E7/PartC.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GF2Type/SmithTypeE/E7/PartC.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Quasithin/Vol2/Ch11SecAKE13.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Quasithin/Vol2/Ch11SecAKE13.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/Sec66Plane.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/Sec66Plane.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/SOLT/Final.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/SOLT/Final.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/RepresentationTheory/GrothendieckGroup/Quiver/Multiplicity.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/RepresentationTheory/GrothendieckGroup/Quiver/Multiplicity.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Category/GradedModuleCat/CartanMap/Idempotent/Head.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Category/GradedModuleCat/CartanMap/Idempotent/Head.lean"
+      },
+      {
+        "repo": "linglib-community/linglib",
+        "path": "Studies/ZwickyPullum1983.lean",
+        "url": "https://github.com/linglib-community/linglib/blob/21610d34bbce06bfcf233ae596ddbb849ac440a2/Studies/ZwickyPullum1983.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Centralizer.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Centralizer.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LargeExtraspecial/TI75Bridge.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LargeExtraspecial/TI75Bridge.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/RankThree/PartOne/KF/F4Torus.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/RankThree/PartOne/KF/F4Torus.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/SimpleFromA.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/SimpleFromA.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Walter/Bender1970/S3/Setup.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Walter/Bender1970/S3/Setup.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/GF2Type/Smith1980Orth/TimGH74.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/GF2Type/Smith1980Orth/TimGH74.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Walter/Final.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Walter/Final.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/Sec4CaseIGold.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/Sec4CaseIGold.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/FinalNodeRest.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/FinalNodeRest.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/Timmesfeld/Bridge/Connectivity.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/Timmesfeld/Bridge/Connectivity.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/Sec4CaseIPlus.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/Sec4CaseIPlus.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/Sec4CaseIProps.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/Sec4CaseIProps.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LargeExtraspecial/S12InspP4Wire.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LargeExtraspecial/S12InspP4Wire.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LieType/Chevalley/RootOps/Check.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LieType/Chevalley/RootOps/Check.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/SixFourStd.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/SixFourStd.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/T2KR/Sec66Final.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/T2KR/Sec66Final.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "Certificates/Kernel/CosPresTab/F14982.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/Certificates/Kernel/CosPresTab/F14982.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Glauberman/ZStar/CharacterKernel.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Glauberman/ZStar/CharacterKernel.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "Theory/Character/Transport.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/Theory/Character/Transport.lean"
+      },
+      {
+        "repo": "linglib-community/linglib",
+        "path": "Studies/KalinBjorkmanEtAl2026.lean",
+        "url": "https://github.com/linglib-community/linglib/blob/21610d34bbce06bfcf233ae596ddbb849ac440a2/Studies/KalinBjorkmanEtAl2026.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/SixFourTail.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/SixFourTail.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/GLTheoremA/S4S/I264.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/GLTheoremA/S4S/I264.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/SixFourTail4.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/SixFourTail4.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/SixFourTail6.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/SixFourTail6.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/SixFourTail2.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/SixFourTail2.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/SixFourTail5.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/SixFourTail5.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Matrix.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/Algebra/Lie/F4/ShortRoot/Modular/Matrix.lean"
+      },
+      {
+        "repo": "TauCetiProject/TauCeti",
+        "path": "TauCeti/RepresentationTheory/Spin/Polarization/TypeB/LastFundamentalWeight.lean",
+        "url": "https://github.com/TauCetiProject/TauCeti/blob/ba1766da5d279edb37a2db145b05a0898733ce35/TauCeti/RepresentationTheory/Spin/Polarization/TypeB/LastFundamentalWeight.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LieType/Chevalley/RootOps/CertTools.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LieType/Chevalley/RootOps/CertTools.lean"
+      },
+      {
+        "repo": "bergmannjg/regex",
+        "path": "Regex/Syntax/Grammar/Basic.lean",
+        "url": "https://github.com/bergmannjg/regex/blob/5ac3ea900bb985f4e05bf2e676e152a16696b770/Regex/Syntax/Grammar/Basic.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/T75P/JCore.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/T75P/JCore.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/OddStandard/ThmCTSimple.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/OddStandard/ThmCTSimple.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/WeakClosure81/W183B2One.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/WeakClosure81/W183B2One.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/PaperSteps.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/PaperSteps.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/LocalAnalysis/GLTheoremA/CatC/KD264Alt.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/LocalAnalysis/GLTheoremA/CatC/KD264Alt.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/RankThree/CentralLiftU/UnitaryTriBasic.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/RankThree/CentralLiftU/UnitaryTriBasic.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/RankThree/GF2n/Stroth80/Sec37Certified.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/RankThree/GF2n/Stroth80/Sec37Certified.lean"
+      },
+      {
+        "repo": "Qiuzhen-CFSG/CFSG",
+        "path": "ABG/Recognition/ThreeLinearIndexBounds.lean",
+        "url": "https://github.com/Qiuzhen-CFSG/CFSG/blob/0c6635528a02dd46f2e93e2ade0c4ac647ad1eb7/ABG/Recognition/ThreeLinearIndexBounds.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/CGT6/SixFourOrders.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/CGT6/SixFourOrders.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/PushingUpLit/E3A/Main.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/PushingUpLit/E3A/Main.lean"
+      },
+      {
+        "repo": "AxiomMath/CFSG",
+        "path": "CFSG/CGT/Timmesfeld75/JLemma35.lean",
+        "url": "https://github.com/AxiomMath/CFSG/blob/69cb972f587a3ecc035e092253167ff2e303c962/CFSG/CGT/Timmesfeld75/JLemma35.lean"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "write_jny language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "total_count": 0,
+    "incomplete_results": false,
+    "items": [],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "write_table language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 1,
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "mocusez/arrow-lean",
+        "path": "SpecCoverage/Main.lean",
+        "url": "https://github.com/mocusez/arrow-lean/blob/28f7cace8a04b9eddd2b8ad2021cca84d07d7fc0/SpecCoverage/Main.lean"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "write_spice language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "total_count": 0,
+    "incomplete_results": false,
+    "items": [],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "\"$dff\" language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 0,
+    "total_count": 0,
+    "incomplete_results": false,
+    "items": [],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "\"netnames\" language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 52,
+    "total_count": 52,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/InvNet.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/InvNet.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/InvRaftHandler.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/InvRaftHandler.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/github_com/mit_pdos/etcd_grove/examples/common/Alloc.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/github_com/mit_pdos/etcd_grove/examples/common/Alloc.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Net.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Net.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/linkv3p/peerStep.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/linkv3p/peerStep.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__CutPeer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__CutPeer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__MendPeer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__MendPeer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__Process.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__Process.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__IsIDRemoved.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__IsIDRemoved.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__RaftHandler.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__RaftHandler.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/NetBridge.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/NetBridge.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__ReportSnapshot.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__ReportSnapshot.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/linkv3p/partitioner.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/linkv3p/partitioner.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/TransportFull.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/TransportFull.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/TransportState.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/TransportState.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/github_com/mit_pdos/etcd_grove/examples/common/Start.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/github_com/mit_pdos/etcd_grove/examples/common/Start.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__ReportUnreachable.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__ReportUnreachable.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__AddPeer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__AddPeer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__Handler.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__Handler.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__CutPeer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__CutPeer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/github_com/mit_pdos/etcd_grove/examples/authkv/MainAlloc.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/github_com/mit_pdos/etcd_grove/examples/authkv/MainAlloc.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__MendPeer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__MendPeer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__AddRemote.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__AddRemote.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__RemovePeer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__RemovePeer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__ActiveSince.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__ActiveSince.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__sendMergedSnap.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__sendMergedSnap.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/InvBoot.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/InvBoot.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/common/newServer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/common/newServer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__RemoveAllPeers.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__RemoveAllPeers.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Pipe.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Pipe.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/common/StartServer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/common/StartServer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/common/NewMember.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/common/NewMember.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/common/StartMember.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/common/StartMember.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/authkv/startServer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/authkv/startServer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/github_com/mit_pdos/etcd_grove/examples/linkv3p/Defs.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/github_com/mit_pdos/etcd_grove/examples/linkv3p/Defs.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/common/StartCompactingServer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/common/StartCompactingServer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/github_com/mit_pdos/etcd_grove/examples/linkv3p/startMember.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/github_com/mit_pdos/etcd_grove/examples/linkv3p/startMember.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/github_com/mit_pdos/etcd_grove/examples/common/Alloc3.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/github_com/mit_pdos/etcd_grove/examples/common/Alloc3.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__SendSnapshot.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__SendSnapshot.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/github_com/mit_pdos/etcd_grove/examples/common/Defs.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/github_com/mit_pdos/etcd_grove/examples/common/Defs.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/SnapApplyDefs.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/SnapApplyDefs.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/NewServer.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/NewServer.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/SnapApplyPost.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/SnapApplyPost.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/InvStart.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/InvStart.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__Start.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Transport__Start.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/InvApRes.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/InvApRes.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/InvApplyAll.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/InvApplyAll.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/github_com/mit_pdos/etcd_grove/examples/linkv3p/peerStep.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/github_com/mit_pdos/etcd_grove/examples/linkv3p/peerStep.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/SnapApplyWalk.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/SnapApplyWalk.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Stream.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/Stream.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__applySnapshot.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Spec/go_etcd_io/etcd/server/v3/etcdserver/EtcdServer__applySnapshot.lean"
+      },
+      {
+        "repo": "mit-pdos/etcd-grove",
+        "path": "Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/TransportHandler.lean",
+        "url": "https://github.com/mit-pdos/etcd-grove/blob/f96fa4f4ce3324dad6008eff0e9e90eacb75b9b9/Proof/go_etcd_io/etcd/server/v3/etcdserver/api/rafthttp/TransportHandler.lean"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "\"write_json\" language:Lean",
+    "page": 1,
+    "per_page": 100,
+    "returned": 4,
+    "total_count": 4,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "formalabstracts/formalabstracts",
+        "path": "src/tactic/fattribute.lean",
+        "url": "https://github.com/formalabstracts/formalabstracts/blob/b0173da1af45421239d44492eeecd54bf65ee0f6/src/tactic/fattribute.lean"
+      },
+      {
+        "repo": "androolloyd/octravpn",
+        "path": "proofs/lean/WireProtocol/V3Canonical.lean",
+        "url": "https://github.com/androolloyd/octravpn/blob/d84499a36a64dd7bb02401da5836caa1e6e2d50e/proofs/lean/WireProtocol/V3Canonical.lean"
+      },
+      {
+        "repo": "0118Add/OpenWrt-CI",
+        "path": "x86/diy/x86_lede/index_x86.htm.lean",
+        "url": "https://github.com/0118Add/OpenWrt-CI/blob/c7462113ecac668246e10324ce79d5f5c0696315/x86/diy/x86_lede/index_x86.htm.lean"
+      },
+      {
+        "repo": "stellar-registry/perch",
+        "path": "formal/PerchFormal/Canon.lean",
+        "url": "https://github.com/stellar-registry/perch/blob/2258433aa340428d65676cd269c8e4240674deb1/formal/PerchFormal/Canon.lean"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "\"yosys\" \"lean\" extension:py",
+    "page": 1,
+    "per_page": 100,
+    "returned": 100,
+    "total_count": 5712,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "bogdanvuk/pygears",
+        "path": "pygears/hdl/yosys.py",
+        "url": "https://github.com/bogdanvuk/pygears/blob/705b11ab6de79868b25753fa9d0ce7128791b346/pygears/hdl/yosys.py"
+      },
+      {
+        "repo": "lip6/coriolis",
+        "path": "cumulus/src/tools/yosys.py",
+        "url": "https://github.com/lip6/coriolis/blob/ac4ec53bbf43f3c965e1c1188bfa5ec50ef1587f/cumulus/src/tools/yosys.py"
+      },
+      {
+        "repo": "lip6/coriolis",
+        "path": "cumulus/src/designflow/yosys.py",
+        "url": "https://github.com/lip6/coriolis/blob/ac4ec53bbf43f3c965e1c1188bfa5ec50ef1587f/cumulus/src/designflow/yosys.py"
+      },
+      {
+        "repo": "lip6/alliance-check-toolkit",
+        "path": "bin/yosys.py",
+        "url": "https://github.com/lip6/alliance-check-toolkit/blob/44b1b9713d4f0052fb3255f210788c87b0f18783/bin/yosys.py"
+      },
+      {
+        "repo": "cfelton/rhea",
+        "path": "rhea/build/toolflow/yosys.py",
+        "url": "https://github.com/cfelton/rhea/blob/a442953d8641a0e9592287a2eebd92cb6f694ec4/rhea/build/toolflow/yosys.py"
+      },
+      {
+        "repo": "tweakoz/ork.build",
+        "path": "modules/dep/yosys.py",
+        "url": "https://github.com/tweakoz/ork.build/blob/5c251fe82dddd38ab1ff1dd8e001d4b228afc95f/modules/dep/yosys.py"
+      },
+      {
+        "repo": "MazherIqbal84/coriolis",
+        "path": "cumulus/src/designflow/yosys.py",
+        "url": "https://github.com/MazherIqbal84/coriolis/blob/74db79d36f22dbe1f5681c57ba834c06dd7f688d/cumulus/src/designflow/yosys.py"
+      },
+      {
+        "repo": "bat52/pueda",
+        "path": "src/pueda/yosys.py",
+        "url": "https://github.com/bat52/pueda/blob/a0dc1cf58e7c4448b18f1e3eee79b66789c14ac4/src/pueda/yosys.py"
+      },
+      {
+        "repo": "hughperkins/VeriGPU",
+        "path": "verigpu/run_yosys.py",
+        "url": "https://github.com/hughperkins/VeriGPU/blob/301c7cec9d5598d9c6854fac2314d7009f714760/verigpu/run_yosys.py"
+      },
+      {
+        "repo": "2AMLogic/gf180-dx7",
+        "path": "tools/exp_hsum_lec.py",
+        "url": "https://github.com/2AMLogic/gf180-dx7/blob/b3100631947a896e05519e8162e2730ee0cadb6b/tools/exp_hsum_lec.py"
+      },
+      {
+        "repo": "digama0/thinking-sand",
+        "path": "tools/rtlcheck.py",
+        "url": "https://github.com/digama0/thinking-sand/blob/5a24f5ea179ff5fbca24e01659f78a6330b846b1/tools/rtlcheck.py"
+      },
+      {
+        "repo": "Abner2111/vortex-tfg-2026",
+        "path": "ci/synth_gate.py",
+        "url": "https://github.com/Abner2111/vortex-tfg-2026/blob/ebc2d8bd412ec71e7b3491eb253f70438b5920d5/ci/synth_gate.py"
+      },
+      {
+        "repo": "openhwfoundation/core-et",
+        "path": "mk/yosys_report.py",
+        "url": "https://github.com/openhwfoundation/core-et/blob/c72b6a2fe4aaad5a9eef437776864ff71f4b55d7/mk/yosys_report.py"
+      },
+      {
+        "repo": "greenblat/vlsistuff",
+        "path": "pybin3/run_yosys_mvlg.py",
+        "url": "https://github.com/greenblat/vlsistuff/blob/cd7b74513123d729fb67286a3e6b1e9097986955/pybin3/run_yosys_mvlg.py"
+      },
+      {
+        "repo": "ekiwi/rtl-repair",
+        "path": "benchmarks/yosys.py",
+        "url": "https://github.com/ekiwi/rtl-repair/blob/846e58473d61111af5b8d626e2246be920567c39/benchmarks/yosys.py"
+      },
+      {
+        "repo": "kyal102/chipgate",
+        "path": "chipgate/yosys_flow.py",
+        "url": "https://github.com/kyal102/chipgate/blob/b1d77ddf105212b56066c4116845b38dbf013610/chipgate/yosys_flow.py"
+      },
+      {
+        "repo": "Zubax/holoso",
+        "path": "synth/flows/yosys.py",
+        "url": "https://github.com/Zubax/holoso/blob/4580d5816b4ff7e5a3ea690fa7293c70426ca95d/synth/flows/yosys.py"
+      },
+      {
+        "repo": "tomcoolpxl/cool8-cpu",
+        "path": "sim/synth.py",
+        "url": "https://github.com/tomcoolpxl/cool8-cpu/blob/72337e17a8f58822ef6c7e2bd818bd159a71fe7f/sim/synth.py"
+      },
+      {
+        "repo": "chanathipjjj444/CImple",
+        "path": "fpga/tb/check_synth.py",
+        "url": "https://github.com/chanathipjjj444/CImple/blob/00b9a2043d0aead8bff478ee9272b68ca22cbc80/fpga/tb/check_synth.py"
+      },
+      {
+        "repo": "trailofbits/verilog_tools",
+        "path": "verilog_tools/yosys/yosys.py",
+        "url": "https://github.com/trailofbits/verilog_tools/blob/1d301f3743bfa0bf18b5508d3d28bf96f4a04731/verilog_tools/yosys/yosys.py"
+      },
+      {
+        "repo": "unclesam79/MSc_project_3174433m",
+        "path": "netlistgen/cellcount.py",
+        "url": "https://github.com/unclesam79/MSc_project_3174433m/blob/b55fdade4b536beab6e131229ae4e3b8d4b2c4e8/netlistgen/cellcount.py"
+      },
+      {
+        "repo": "ErosSph/xiangshan2Lean",
+        "path": "scripts/yosys2lean.py",
+        "url": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys2lean.py"
+      },
+      {
+        "repo": "zslwyuan/AutoCellLibX",
+        "path": "flow/yosys_eval.py",
+        "url": "https://github.com/zslwyuan/AutoCellLibX/blob/6f309eb77d6665e19b1b6e7e7ca1571e1fcffa03/flow/yosys_eval.py"
+      },
+      {
+        "repo": "mtdykly/Yosys-Flow",
+        "path": "incremental/sequential.py",
+        "url": "https://github.com/mtdykly/Yosys-Flow/blob/c5413bd55b989fa804377ebb011b4f2a3c236cf6/incremental/sequential.py"
+      },
+      {
+        "repo": "ErosSph/xiangshan2Lean",
+        "path": "scripts/yosys_simulate.py",
+        "url": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys_simulate.py"
+      },
+      {
+        "repo": "olofk/edalize",
+        "path": "edalize/symbiyosys.py",
+        "url": "https://github.com/olofk/edalize/blob/9a6f648c596bfe74224ae82f529075e565d4182b/edalize/symbiyosys.py"
+      },
+      {
+        "repo": "fredrief/pade",
+        "path": "examples/utils/yosys.py",
+        "url": "https://github.com/fredrief/pade/blob/2e29f09500c6a9869d25941490578269a84eba80/examples/utils/yosys.py"
+      },
+      {
+        "repo": "36taransingh5-dotcom/aegisnoc",
+        "path": "scripts/run_formal.py",
+        "url": "https://github.com/36taransingh5-dotcom/aegisnoc/blob/0f5ce26bca54cdf2bc128d1d6865dc4d7ec17423/scripts/run_formal.py"
+      },
+      {
+        "repo": "sujeeth2003/rtl-digital-design",
+        "path": "tier4/asic/asic_flow.py",
+        "url": "https://github.com/sujeeth2003/rtl-digital-design/blob/407ebf4b0b29a0537fb6b5b3229e0fd80b0ee62c/tier4/asic/asic_flow.py"
+      },
+      {
+        "repo": "huawei-csl/spire-hdl",
+        "path": "src/spire/aig/aig_yosys.py",
+        "url": "https://github.com/huawei-csl/spire-hdl/blob/9e0cd85a24632edf588805410ef8d272d419d5a1/src/spire/aig/aig_yosys.py"
+      },
+      {
+        "repo": "PeterSafwatHBK/tl-verilog-tasks",
+        "path": "ripple/slice_split.py",
+        "url": "https://github.com/PeterSafwatHBK/tl-verilog-tasks/blob/1a00b06bdb354cbf3013f8cc08c4c798af67a41c/ripple/slice_split.py"
+      },
+      {
+        "repo": "tsfpga/tsfpga",
+        "path": "tsfpga/yosys/project.py",
+        "url": "https://github.com/tsfpga/tsfpga/blob/1137b9e5ccd341b58fb51e6a6290ceb5c8e587b3/tsfpga/yosys/project.py"
+      },
+      {
+        "repo": "Crypto-TII/FANNG-MPC",
+        "path": "Circuits/convert_yosys.py",
+        "url": "https://github.com/Crypto-TII/FANNG-MPC/blob/d2aa4ad268a2d27f9b9d2611290035dd2a7b32f6/Circuits/convert_yosys.py"
+      },
+      {
+        "repo": "JeromieHomie672/Direct_Mapped_Cache",
+        "path": "sim/cache/sweep_yosys.py",
+        "url": "https://github.com/JeromieHomie672/Direct_Mapped_Cache/blob/ebc013b97c5cb95ac6ab39d75019fcfe2a58b6a8/sim/cache/sweep_yosys.py"
+      },
+      {
+        "repo": "ErosSph/xiangshan2Lean",
+        "path": "scripts/yosys_hierarchy.py",
+        "url": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys_hierarchy.py"
+      },
+      {
+        "repo": "kh7272723-star/digital-front-end-skill",
+        "path": "scripts/yosys_extract.py",
+        "url": "https://github.com/kh7272723-star/digital-front-end-skill/blob/92c9780c71639123eae2709683643d4d2d22004e/scripts/yosys_extract.py"
+      },
+      {
+        "repo": "w531t4/fpga_led_display",
+        "path": "src/scripts/yosys_sdiff.py",
+        "url": "https://github.com/w531t4/fpga_led_display/blob/7ba06f8f6dd70ef95ebfeca1103158c1868886e0/src/scripts/yosys_sdiff.py"
+      },
+      {
+        "repo": "hyleelyh/CIMTinyTO",
+        "path": "scripts/parse_yosys_stat.py",
+        "url": "https://github.com/hyleelyh/CIMTinyTO/blob/0fa6c03038d4ff6b15cef9dd5f921282bfb1283b/scripts/parse_yosys_stat.py"
+      },
+      {
+        "repo": "KULeuven-COSIC/EVAL-HD",
+        "path": "yosys-bridge.py",
+        "url": "https://github.com/KULeuven-COSIC/EVAL-HD/blob/da52ce69262404b95e166096dbb28104833aef90/yosys-bridge.py"
+      },
+      {
+        "repo": "scale-lab/MetRex",
+        "path": "src/synth/yosys.py",
+        "url": "https://github.com/scale-lab/MetRex/blob/2257fdaa1e569f497bc1ca0efc6fb0e26f045e38/src/synth/yosys.py"
+      },
+      {
+        "repo": "pointerliu/SRepair",
+        "path": "rtl-repair/benchmarks/yosys.py",
+        "url": "https://github.com/pointerliu/SRepair/blob/95ae9ab4222083a74e81ae6eac6727c6e1e8319e/rtl-repair/benchmarks/yosys.py"
+      },
+      {
+        "repo": "hkust-zhiyao/SynCircuitData",
+        "path": "eval/parallel_yosys.py",
+        "url": "https://github.com/hkust-zhiyao/SynCircuitData/blob/f437abe3bdf1f60c14e80be68ec8703485809a8c/eval/parallel_yosys.py"
+      },
+      {
+        "repo": "bojieli/OpenTallas",
+        "path": "tools/yosys_pin.py",
+        "url": "https://github.com/bojieli/OpenTallas/blob/eba87c10258f47b9146adcf7b0f7c1467bed4aa6/tools/yosys_pin.py"
+      },
+      {
+        "repo": "Briarcresy/AES-128-Core-Iterative",
+        "path": "scripts/ecc_yosys.py",
+        "url": "https://github.com/Briarcresy/AES-128-Core-Iterative/blob/92449c3abd520f67a8b75df07260e2bb7a168336/scripts/ecc_yosys.py"
+      },
+      {
+        "repo": "Zubax/zkf",
+        "path": "synth/yosys.py",
+        "url": "https://github.com/Zubax/zkf/blob/6d879d47ef108fc2f99b17fd3c6bd901f0604d65/synth/yosys.py"
+      },
+      {
+        "repo": "Gaurang-5/adaptive-tensor-fabric",
+        "path": "tools/hardware_checks.py",
+        "url": "https://github.com/Gaurang-5/adaptive-tensor-fabric/blob/66638c1f7c2e6ada7d12c6c5b36b765856a4b243/tools/hardware_checks.py"
+      },
+      {
+        "repo": "Enter-tainer/verilog2nn",
+        "path": "verilog2nn/yosys_frontend.py",
+        "url": "https://github.com/Enter-tainer/verilog2nn/blob/b946fa9492239d089cb7b2f27243a7440134abf0/verilog2nn/yosys_frontend.py"
+      },
+      {
+        "repo": "0xtaruhi/fde-rs",
+        "path": "scripts/synth_yosys_fde.py",
+        "url": "https://github.com/0xtaruhi/fde-rs/blob/f6c1ec742ea4a8c7e2791b07c36fce1ca68300f3/scripts/synth_yosys_fde.py"
+      },
+      {
+        "repo": "masc-ucsc/livehd",
+        "path": "scripts/gen_cva6_wrappers.py",
+        "url": "https://github.com/masc-ucsc/livehd/blob/a4804183e4527b380e30f3e9bb472c9d3fb89f21/scripts/gen_cva6_wrappers.py"
+      },
+      {
+        "repo": "s3l1a/chip-soc",
+        "path": "scripts/synth_yosys.py",
+        "url": "https://github.com/s3l1a/chip-soc/blob/657c71f4344846fa6cc35fb2793b2e222f7d2dbc/scripts/synth_yosys.py"
+      },
+      {
+        "repo": "filipcrl/smolflow",
+        "path": "flow.py",
+        "url": "https://github.com/filipcrl/smolflow/blob/490f0d0330964af47eebff31c7ede514ed423f60/flow.py"
+      },
+      {
+        "repo": "scale-lab/Pluto",
+        "path": "core/synth/yosys.py",
+        "url": "https://github.com/scale-lab/Pluto/blob/ff0e2b4620488fd55d6fb51b0355820d90932722/core/synth/yosys.py"
+      },
+      {
+        "repo": "KairavKumar/LLM-Assisted-SAT-Equivalence-Checking",
+        "path": "src/yosys_json_to_bench.py",
+        "url": "https://github.com/KairavKumar/LLM-Assisted-SAT-Equivalence-Checking/blob/bc272506331b6723288d7e6052fa7d84e1f9413f/src/yosys_json_to_bench.py"
+      },
+      {
+        "repo": "huawei-noah/HEBO",
+        "path": "BOiLS/core/algos/utils.py",
+        "url": "https://github.com/huawei-noah/HEBO/blob/77636146d2a2208d971e589062d4ec3d050029f0/BOiLS/core/algos/utils.py"
+      },
+      {
+        "repo": "MMSalman26/SKY-Water-PDK-Compatible-Python-based-Custom-PnR-Tool",
+        "path": "pnr_tool/synth/yosys.py",
+        "url": "https://github.com/MMSalman26/SKY-Water-PDK-Compatible-Python-based-Custom-PnR-Tool/blob/d238a9bda6564584e1afaafe028d85678525a9f3/pnr_tool/synth/yosys.py"
+      },
+      {
+        "repo": "ErosSph/xiangshan2Lean",
+        "path": "scripts/fourstate2lean.py",
+        "url": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/fourstate2lean.py"
+      },
+      {
+        "repo": "kebag-logic/milan-fpga",
+        "path": "syn/resmap/yosys_sweep.py",
+        "url": "https://github.com/kebag-logic/milan-fpga/blob/1f29f189279f9fc0132f4918e47342b87d22f33a/syn/resmap/yosys_sweep.py"
+      },
+      {
+        "repo": "Lefteris-B/Chipathon_2026_Secure_agentic_chip_design",
+        "path": "chip_agent/tools/yosys.py",
+        "url": "https://github.com/Lefteris-B/Chipathon_2026_Secure_agentic_chip_design/blob/4a729d68ce36f7f43f45ee6f12b740b6d6233182/chip_agent/tools/yosys.py"
+      },
+      {
+        "repo": "akerlund/refuse",
+        "path": "src/refuse/yosys.py",
+        "url": "https://github.com/akerlund/refuse/blob/4a1f10cd87ffe5e0e1eb65d1f26403b4910881ae/src/refuse/yosys.py"
+      },
+      {
+        "repo": "Christian-Conti/VHDL-FastCheck",
+        "path": "src/yosys_runner.py",
+        "url": "https://github.com/Christian-Conti/VHDL-FastCheck/blob/e53414f68615498530125dd37886522880b20c53/src/yosys_runner.py"
+      },
+      {
+        "repo": "simra-tech/OpenADA",
+        "path": "src/openada/engines/yosys.py",
+        "url": "https://github.com/simra-tech/OpenADA/blob/ff9415e24fe6407820ca23147e3cf42625dd69b7/src/openada/engines/yosys.py"
+      },
+      {
+        "repo": "ErosSph/xiangshan2Lean",
+        "path": "scripts/yosys_runner.py",
+        "url": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys_runner.py"
+      },
+      {
+        "repo": "FPGAwars/apio",
+        "path": "apio/scons/scons_handler.py",
+        "url": "https://github.com/FPGAwars/apio/blob/38a4c55c8f4a2da0f5ac35d94fb4fa385b51baef/apio/scons/scons_handler.py"
+      },
+      {
+        "repo": "ajayasai/OpenTapeout",
+        "path": "scripts/qualify_yosys.py",
+        "url": "https://github.com/ajayasai/OpenTapeout/blob/cac82fb389d5d22c06a3759c60a89e1e501134fc/scripts/qualify_yosys.py"
+      },
+      {
+        "repo": "owizdom/rtl-impact",
+        "path": "rtl_impact/yosys.py",
+        "url": "https://github.com/owizdom/rtl-impact/blob/da38298f496f879ff0bb5f425569baaae3a71e51/rtl_impact/yosys.py"
+      },
+      {
+        "repo": "masc-ucsc/lhdtrack",
+        "path": "flows/syn_yosys_abc.py",
+        "url": "https://github.com/masc-ucsc/lhdtrack/blob/a2543289eb9fcc2358d56d77bec96da60e44bf47/flows/syn_yosys_abc.py"
+      },
+      {
+        "repo": "artic-plus/Buntan",
+        "path": "yosys_benchmarks.py",
+        "url": "https://github.com/artic-plus/Buntan/blob/8d963eb2311391911e556ee654f4074579779918/yosys_benchmarks.py"
+      },
+      {
+        "repo": "ranaumarnadeem/faultflow",
+        "path": "faultflow/scan/yosys.py",
+        "url": "https://github.com/ranaumarnadeem/faultflow/blob/30e5521741188eb9f53957e5fd1398ab7069b11c/faultflow/scan/yosys.py"
+      },
+      {
+        "repo": "alirafiqmalik/ENIGMA-Logic-Locking-Framework",
+        "path": "src/yosys.py",
+        "url": "https://github.com/alirafiqmalik/ENIGMA-Logic-Locking-Framework/blob/6e6efd16cb51e2007004eee2a34f02d485943584/src/yosys.py"
+      },
+      {
+        "repo": "shyba/VeryLogo",
+        "path": "stc/yosys_frontend.py",
+        "url": "https://github.com/shyba/VeryLogo/blob/993ec95d47ad0cb2394ed550d78b6f8852c9174f/stc/yosys_frontend.py"
+      },
+      {
+        "repo": "kebag-logic/milan-fpga",
+        "path": "syn/yosys/ooc_arms.py",
+        "url": "https://github.com/kebag-logic/milan-fpga/blob/1f29f189279f9fc0132f4918e47342b87d22f33a/syn/yosys/ooc_arms.py"
+      },
+      {
+        "repo": "m-labs/nmigen",
+        "path": "nmigen/back/verilog.py",
+        "url": "https://github.com/m-labs/nmigen/blob/6c5afdc3c37e82854b08861e8b6d95f644b45f6e/nmigen/back/verilog.py"
+      },
+      {
+        "repo": "ErosSph/xiangshan2Lean",
+        "path": "scripts/yosys_json.py",
+        "url": "https://github.com/ErosSph/xiangshan2Lean/blob/a1299b564831e571b9b80f816219ae06c91db342/scripts/yosys_json.py"
+      },
+      {
+        "repo": "zeroasiccorp/logikbench",
+        "path": "scripts/analyze_asic.py",
+        "url": "https://github.com/zeroasiccorp/logikbench/blob/58539b81d9c622a6b55a4cabde5d6b1288b9fe1e/scripts/analyze_asic.py"
+      },
+      {
+        "repo": "sbellem/smtmp",
+        "path": "Circuits/convert_yosys.py",
+        "url": "https://github.com/sbellem/smtmp/blob/d8bc74e910f531d9514ea267c29bb35a769a9de5/Circuits/convert_yosys.py"
+      },
+      {
+        "repo": "jyrj/crux",
+        "path": "src/crux/yosys_runner.py",
+        "url": "https://github.com/jyrj/crux/blob/692460bd3c562415ca4e1a33fa85274d26880609/src/crux/yosys_runner.py"
+      },
+      {
+        "repo": "mokshtheverma-max/signoff-gym",
+        "path": "sg/rtl/yosys.py",
+        "url": "https://github.com/mokshtheverma-max/signoff-gym/blob/3ef0d2319a04527cff95cb32e5208104342a3e36/sg/rtl/yosys.py"
+      },
+      {
+        "repo": "kev-cam/sv2ghdl",
+        "path": "yosys/xcheck.py",
+        "url": "https://github.com/kev-cam/sv2ghdl/blob/5d2291fd1fe71039b7174ccb00236e0de8721c25/yosys/xcheck.py"
+      },
+      {
+        "repo": "kev-cam/sv2ghdl",
+        "path": "yosys/json2bench.py",
+        "url": "https://github.com/kev-cam/sv2ghdl/blob/5d2291fd1fe71039b7174ccb00236e0de8721c25/yosys/json2bench.py"
+      },
+      {
+        "repo": "kebag-logic/milan-fpga",
+        "path": "syn/yosys/ooc_selftest.py",
+        "url": "https://github.com/kebag-logic/milan-fpga/blob/1f29f189279f9fc0132f4918e47342b87d22f33a/syn/yosys/ooc_selftest.py"
+      },
+      {
+        "repo": "premxai/AutoFab",
+        "path": "engine/yosys_io.py",
+        "url": "https://github.com/premxai/AutoFab/blob/df9fb3fc8e187cba79b1aedecb736b10c5acadc1/engine/yosys_io.py"
+      },
+      {
+        "repo": "LucaSain/MinecraftVerilog",
+        "path": "yosys_parser.py",
+        "url": "https://github.com/LucaSain/MinecraftVerilog/blob/95472071cf837953cf4800f874fd9e4d0be8fceb/yosys_parser.py"
+      },
+      {
+        "repo": "NellyW8/SymRTLO",
+        "path": "run_yosys.py",
+        "url": "https://github.com/NellyW8/SymRTLO/blob/fa9e27580a637e73c863e45a8e87dd6e894a30c1/run_yosys.py"
+      },
+      {
+        "repo": "paarth-juneja/hdl_code_enhancer",
+        "path": "orchestrator/adapters/yosys.py",
+        "url": "https://github.com/paarth-juneja/hdl_code_enhancer/blob/1c73d86152da580bfa9978388d3b18a859d79266/orchestrator/adapters/yosys.py"
+      },
+      {
+        "repo": "parasdewa/vlsi-toolkit",
+        "path": "toolkit/runners/yosys.py",
+        "url": "https://github.com/parasdewa/vlsi-toolkit/blob/9f199cd9daa6b830eae8c07d4ff2e17d77814cca/toolkit/runners/yosys.py"
+      },
+      {
+        "repo": "sriharshaduppalli/ChipSutra",
+        "path": "backend/yosys_flow.py",
+        "url": "https://github.com/sriharshaduppalli/ChipSutra/blob/551fd37f45b67cd0b49e8a6dffc719740675d71f/backend/yosys_flow.py"
+      },
+      {
+        "repo": "Logic-synthesis-Project/ROLS",
+        "path": "ROLS_main/ROLS_YOSYS.py",
+        "url": "https://github.com/Logic-synthesis-Project/ROLS/blob/3ad2471a6f0579ddb1008a68171bb642cff44f54/ROLS_main/ROLS_YOSYS.py"
+      },
+      {
+        "repo": "Jing-Wang-1999/ScaleBench",
+        "path": "scripts/verify_yosys.py",
+        "url": "https://github.com/Jing-Wang-1999/ScaleBench/blob/b5aa0dc93dc999c6d5e6382255c14efb2ba78d65/scripts/verify_yosys.py"
+      },
+      {
+        "repo": "psurply/ReGAL",
+        "path": "regal/synth/synth.py",
+        "url": "https://github.com/psurply/ReGAL/blob/b0634a64b141ed34969d8e3c54073da2904bb345/regal/synth/synth.py"
+      },
+      {
+        "repo": "phanrahan/magma",
+        "path": "tools/check_equiv.py",
+        "url": "https://github.com/phanrahan/magma/blob/0bad4eea699db19e34acf75fed40db92380f51f8/tools/check_equiv.py"
+      },
+      {
+        "repo": "QianLiu301/HdlFormalLLM",
+        "path": "src/yosys_analyzer.py",
+        "url": "https://github.com/QianLiu301/HdlFormalLLM/blob/85a55efbbaaa6d2a307e8f362efe1c1b48b17374/src/yosys_analyzer.py"
+      },
+      {
+        "repo": "Berketunc/Proof2Stim",
+        "path": "proof2stim/witness/yosys.py",
+        "url": "https://github.com/Berketunc/Proof2Stim/blob/f0407647314caec2dc816570fedd4a42a8f1f215/proof2stim/witness/yosys.py"
+      },
+      {
+        "repo": "deepai-org/loom",
+        "path": "scripts/yosys_to_loom_ir.py",
+        "url": "https://github.com/deepai-org/loom/blob/ea1770339296375988b42121db599b4cb36184d7/scripts/yosys_to_loom_ir.py"
+      },
+      {
+        "repo": "YosysHQ/icestorm",
+        "path": "icetime/mktest.py",
+        "url": "https://github.com/YosysHQ/icestorm/blob/ee340bb2cec60e0d01948076537a9bb3d08aea26/icetime/mktest.py"
+      },
+      {
+        "repo": "greenblat/vlsistuff",
+        "path": "pybin3/cleaning.py",
+        "url": "https://github.com/greenblat/vlsistuff/blob/cd7b74513123d729fb67286a3e6b1e9097986955/pybin3/cleaning.py"
+      },
+      {
+        "repo": "frankjinn/fuzzer",
+        "path": "do_eval_execperf_yosys.py",
+        "url": "https://github.com/frankjinn/fuzzer/blob/df0d404e9d3a00ecc8af81980e617dbf3800928b/do_eval_execperf_yosys.py"
+      },
+      {
+        "repo": "YosysHQ-GmbH/ivy",
+        "path": "src/yosys_ivy/solver/sby.py",
+        "url": "https://github.com/YosysHQ-GmbH/ivy/blob/03eba0f045e755b9e79cec17dfb8ad165fd5bb15/src/yosys_ivy/solver/sby.py"
+      },
+      {
+        "repo": "dancinlab/hexa-lang",
+        "path": "stdlib/chip/verify.py",
+        "url": "https://github.com/dancinlab/hexa-lang/blob/f40b1132162adead42249763b0f38666b5d93112/stdlib/chip/verify.py"
+      },
+      {
+        "repo": "jeras/synthesis-primitives",
+        "path": "syn/yosys/yosys.py",
+        "url": "https://github.com/jeras/synthesis-primitives/blob/acf9ba7b6241eb30dc444bf569cd24eb1b33ee16/syn/yosys/yosys.py"
+      },
+      {
+        "repo": "chipsalliance/fpga-tool-perf",
+        "path": "toolchains/nextpnr.py",
+        "url": "https://github.com/chipsalliance/fpga-tool-perf/blob/a4b5daffd42c08714b2eb6ab0843d1c69bae91f8/toolchains/nextpnr.py"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "\"cxxrtl\" \"lean\"",
+    "page": 1,
+    "per_page": 100,
+    "returned": 100,
+    "total_count": 940,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "YosysHQ/yosys",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "latentPrion/zambesii",
+        "path": "m4/cxxrtl-ctors.m4",
+        "url": "https://github.com/latentPrion/zambesii/blob/67ea81f94c16865cd9018f960e624b503379dda6/m4/cxxrtl-ctors.m4"
+      },
+      {
+        "repo": "tomverbeure/cxxrtl_eval",
+        "path": "cxxrtl/Makefile",
+        "url": "https://github.com/tomverbeure/cxxrtl_eval/blob/a8fbed97f8f55e5b89960eccac01cbf463a6d4b3/cxxrtl/Makefile"
+      },
+      {
+        "repo": "Digital-EDA/Digital-IDE",
+        "path": "src/simulation/commands.ts",
+        "url": "https://github.com/Digital-EDA/Digital-IDE/blob/9c18bc3b4450699fc03c2626b1b46f8217e97151/src/simulation/commands.ts"
+      },
+      {
+        "repo": "YosysHQ/yosys",
+        "path": "CHANGELOG",
+        "url": "https://github.com/YosysHQ/yosys/blob/63eecf3ddca2f143750f11e37ebd18ecb16b51c7/CHANGELOG"
+      },
+      {
+        "repo": "tomverbeure/tomverbeure.github.io",
+        "path": "_posts/2020-08-08-CXXRTL-the-New-Yosys-Simulation-Backend.md",
+        "url": "https://github.com/tomverbeure/tomverbeure.github.io/blob/253f7f8ab2e85961da0eee547d0c761babf1fa21/_posts/2020-08-08-CXXRTL-the-New-Yosys-Simulation-Backend.md"
+      },
+      {
+        "repo": "Wren6991/Hazard3",
+        "path": "doc/sections/release_notes.adoc",
+        "url": "https://github.com/Wren6991/Hazard3/blob/8af992930f71a69b0e06c38734c1094f41a05ca0/doc/sections/release_notes.adoc"
+      },
+      {
+        "repo": "thejefflarson/little-cpu",
+        "path": "docs/adr/0168-nanocpu-joins-riscv-formal-and-not-iverilog-or-cxxrtl-yet.md",
+        "url": "https://github.com/thejefflarson/little-cpu/blob/0ce429f7e884ecdb530cec7c469bbbe5bfec0f1d/docs/adr/0168-nanocpu-joins-riscv-formal-and-not-iverilog-or-cxxrtl-yet.md"
+      },
+      {
+        "repo": "Wren6991/Hazard3",
+        "path": "Contributing.md",
+        "url": "https://github.com/Wren6991/Hazard3/blob/8af992930f71a69b0e06c38734c1094f41a05ca0/Contributing.md"
+      },
+      {
+        "repo": "dan-rodrigues/icestation-32",
+        "path": "simulator/Makefile",
+        "url": "https://github.com/dan-rodrigues/icestation-32/blob/55214d79f74a547dedb54f99cb2fad431b7ac277/simulator/Makefile"
+      },
+      {
+        "repo": "dian-lun-lin/RTLflow-benchmarks",
+        "path": "spinal/cxxrtl/Makefile",
+        "url": "https://github.com/dian-lun-lin/RTLflow-benchmarks/blob/83ba6ff524cb5bbf74a38c128d10942ba07248f2/spinal/cxxrtl/Makefile"
+      },
+      {
+        "repo": "skyp0714/prefetchit",
+        "path": "llvm_prefetchit/scripts/platform/screens/run_cxxrtl.sh",
+        "url": "https://github.com/skyp0714/prefetchit/blob/9a6957728a777668114e3ae1f4d3a8119e8d6702/llvm_prefetchit/scripts/platform/screens/run_cxxrtl.sh"
+      },
+      {
+        "repo": "JulianKemmerer/PipelineC",
+        "path": "docs/SIM_DESIGN.md",
+        "url": "https://github.com/JulianKemmerer/PipelineC/blob/f12bfdbc5168249ad562f4d9b8ae8283aaf5dece/docs/SIM_DESIGN.md"
+      },
+      {
+        "repo": "comsec-group/cellift-yosys",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/comsec-group/cellift-yosys/blob/b38af3a24cc2c57451fe353dce6af4aaa1383afd/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "dan-rodrigues/icestation-32",
+        "path": "README.md",
+        "url": "https://github.com/dan-rodrigues/icestation-32/blob/55214d79f74a547dedb54f99cb2fad431b7ac277/README.md"
+      },
+      {
+        "repo": "megng1/simple-soc",
+        "path": "src/_cxxrtl/Makefile",
+        "url": "https://github.com/megng1/simple-soc/blob/acd721e0fef2405cb169f49a685fb08d89c06c5c/src/_cxxrtl/Makefile"
+      },
+      {
+        "repo": "x-epic/EpicFV",
+        "path": "src/yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/x-epic/EpicFV/blob/91c5513a8755fbd5877cb5b4c98a619658eedebd/src/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "noeamiot/aLEAKator",
+        "path": "cxxrtl/cxxrtl.h",
+        "url": "https://github.com/noeamiot/aLEAKator/blob/27b1d66ec0f918972bc93c4399c16052103e9836/cxxrtl/cxxrtl.h"
+      },
+      {
+        "repo": "JulianKemmerer/PipelineC-Graphics",
+        "path": "Makefile",
+        "url": "https://github.com/JulianKemmerer/PipelineC-Graphics/blob/94e961b5d53479456771a9c320976270e88498c7/Makefile"
+      },
+      {
+        "repo": "Kreijstal/AND-gate-cosim-madness",
+        "path": "cxxrtl/Makefile",
+        "url": "https://github.com/Kreijstal/AND-gate-cosim-madness/blob/c8bc643273ab0f41574d3892dd2e926b1d058b2b/cxxrtl/Makefile"
+      },
+      {
+        "repo": "toby-bro/VeriFuse",
+        "path": "internal/simulator/cxxrtl.go",
+        "url": "https://github.com/toby-bro/VeriFuse/blob/54186da725258bb4912d6b04199ba975fe57e983/internal/simulator/cxxrtl.go"
+      },
+      {
+        "repo": "DVLab-NTU/gv",
+        "path": "simulators/cxxrtl/Makefile",
+        "url": "https://github.com/DVLab-NTU/gv/blob/1d60d101c4031481f269161cc87a3e3b616737b2/simulators/cxxrtl/Makefile"
+      },
+      {
+        "repo": "comsec-group/mucfi",
+        "path": "mucfi_yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/comsec-group/mucfi/blob/ced1711084de49ca3257d5ff48d388fb7361b92b/mucfi_yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "Digital-EDA/Digital-IDE",
+        "path": "src/waveform/manager.ts",
+        "url": "https://github.com/Digital-EDA/Digital-IDE/blob/9c18bc3b4450699fc03c2626b1b46f8217e97151/src/waveform/manager.ts"
+      },
+      {
+        "repo": "kaxap/arl",
+        "path": "README-Verilog.md",
+        "url": "https://github.com/kaxap/arl/blob/1c16edd6dc877318c81608b655a3c16485b85c1d/README-Verilog.md"
+      },
+      {
+        "repo": "tomverbeure/cxxrtl_eval",
+        "path": "blink_vcd/Makefile",
+        "url": "https://github.com/tomverbeure/cxxrtl_eval/blob/a8fbed97f8f55e5b89960eccac01cbf463a6d4b3/blink_vcd/Makefile"
+      },
+      {
+        "repo": "tomverbeure/cxxrtl_eval",
+        "path": "blink_basic/Makefile",
+        "url": "https://github.com/tomverbeure/cxxrtl_eval/blob/a8fbed97f8f55e5b89960eccac01cbf463a6d4b3/blink_basic/Makefile"
+      },
+      {
+        "repo": "Wren6991/ChristmasSoC",
+        "path": "sim/tb/Makefile",
+        "url": "https://github.com/Wren6991/ChristmasSoC/blob/30a6b2ae5a068d51ecf44d8823df35d1333a2aa1/sim/tb/Makefile"
+      },
+      {
+        "repo": "tomverbeure/cxxrtl_eval",
+        "path": "blink_basic_vhdl/Makefile",
+        "url": "https://github.com/tomverbeure/cxxrtl_eval/blob/a8fbed97f8f55e5b89960eccac01cbf463a6d4b3/blink_basic_vhdl/Makefile"
+      },
+      {
+        "repo": "comsec-group/pathfinder",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/comsec-group/pathfinder/blob/bcb1e4851164fe62cbbf19cc5179c3f684fd4cd3/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "Kreijstal/AND-gate-cosim-madness",
+        "path": "cxxrtl_impl_verilatortb/Makefile",
+        "url": "https://github.com/Kreijstal/AND-gate-cosim-madness/blob/c8bc643273ab0f41574d3892dd2e926b1d058b2b/cxxrtl_impl_verilatortb/Makefile"
+      },
+      {
+        "repo": "Kreijstal/AND-gate-cosim-madness",
+        "path": "cxxrtl_impl_iverilogtb/Makefile",
+        "url": "https://github.com/Kreijstal/AND-gate-cosim-madness/blob/c8bc643273ab0f41574d3892dd2e926b1d058b2b/cxxrtl_impl_iverilogtb/Makefile"
+      },
+      {
+        "repo": "tomverbeure/cxxrtl_eval",
+        "path": "blink_introspect/Makefile",
+        "url": "https://github.com/tomverbeure/cxxrtl_eval/blob/a8fbed97f8f55e5b89960eccac01cbf463a6d4b3/blink_introspect/Makefile"
+      },
+      {
+        "repo": "JulianKemmerer/PipelineC",
+        "path": "docs/README.md",
+        "url": "https://github.com/JulianKemmerer/PipelineC/blob/f12bfdbc5168249ad562f4d9b8ae8283aaf5dece/docs/README.md"
+      },
+      {
+        "repo": "RAPcores/rapcores",
+        "path": "docs/dev.md",
+        "url": "https://github.com/RAPcores/rapcores/blob/649ed43611e343b1ccb3c69f81fd629684bfb433/docs/dev.md"
+      },
+      {
+        "repo": "mirekez/cpphdl",
+        "path": "tools/hdlcpp-word.py",
+        "url": "https://github.com/mirekez/cpphdl/blob/2bdf19e0c522fa464a59922714aa8ac5317c4404/tools/hdlcpp-word.py"
+      },
+      {
+        "repo": "lambdaconcept/lambdasoc",
+        "path": "lambdasoc/sim/platform.py",
+        "url": "https://github.com/lambdaconcept/lambdasoc/blob/6078eb378b9167a4943e52bec8ba7934f2ddc688/lambdasoc/sim/platform.py"
+      },
+      {
+        "repo": "mirekez/cpphdl",
+        "path": "tools/cpphdl-netlist.py",
+        "url": "https://github.com/mirekez/cpphdl/blob/2bdf19e0c522fa464a59922714aa8ac5317c4404/tools/cpphdl-netlist.py"
+      },
+      {
+        "repo": "tomverbeure/cxxrtl_eval",
+        "path": "compile_yosys.sh",
+        "url": "https://github.com/tomverbeure/cxxrtl_eval/blob/a8fbed97f8f55e5b89960eccac01cbf463a6d4b3/compile_yosys.sh"
+      },
+      {
+        "repo": "tomverbeure/pdm",
+        "path": "fpga/tb/spdif/Makefile",
+        "url": "https://github.com/tomverbeure/pdm/blob/0b2b4a17dc4af6b75664e6526abfddfaab16202d/fpga/tb/spdif/Makefile"
+      },
+      {
+        "repo": "ManticoreRTL/manticore-frontend",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/ManticoreRTL/manticore-frontend/blob/0cfe90a01630e44ca269201677f924fda00f15d7/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "JulianKemmerer/PipelineC",
+        "path": "docs/reset_planning.md",
+        "url": "https://github.com/JulianKemmerer/PipelineC/blob/f12bfdbc5168249ad562f4d9b8ae8283aaf5dece/docs/reset_planning.md"
+      },
+      {
+        "repo": "YosysHQ/test-actions",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/YosysHQ/test-actions/blob/6571c33f04937e97c67144a4cb3b77dd44ba2b7f/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "tomverbeure/cxxrtl_eval",
+        "path": "save_restore/Makefile",
+        "url": "https://github.com/tomverbeure/cxxrtl_eval/blob/a8fbed97f8f55e5b89960eccac01cbf463a6d4b3/save_restore/Makefile"
+      },
+      {
+        "repo": "os-fpga/yosys_rs",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/os-fpga/yosys_rs/blob/8ecee74c108105c449aebf0a8d7c248015c0e11d/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "amaranth-lang/amaranth-yosys",
+        "path": "build.sh",
+        "url": "https://github.com/amaranth-lang/amaranth-yosys/blob/1eb47338bf6032d2e3462ca793fa460d3d08b1dc/build.sh"
+      },
+      {
+        "repo": "cccrrrccc/VPR-Gym",
+        "path": "libs/EXTERNAL/libyosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/cccrrrccc/VPR-Gym/blob/67e048d8239af627cfdcd87b5d4b505a7a856ca0/libs/EXTERNAL/libyosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "JulianKemmerer/PipelineC",
+        "path": "src/VHDL.py",
+        "url": "https://github.com/JulianKemmerer/PipelineC/blob/f12bfdbc5168249ad562f4d9b8ae8283aaf5dece/src/VHDL.py"
+      },
+      {
+        "repo": "thejefflarson/little-cpu",
+        "path": "nano/tb.mk",
+        "url": "https://github.com/thejefflarson/little-cpu/blob/0ce429f7e884ecdb530cec7c469bbbe5bfec0f1d/nano/tb.mk"
+      },
+      {
+        "repo": "JulianKemmerer/PipelineC",
+        "path": "docs/pypeline_guide.md",
+        "url": "https://github.com/JulianKemmerer/PipelineC/blob/f12bfdbc5168249ad562f4d9b8ae8283aaf5dece/docs/pypeline_guide.md"
+      },
+      {
+        "repo": "RAPcores/rapcores",
+        "path": "Makefile",
+        "url": "https://github.com/RAPcores/rapcores/blob/649ed43611e343b1ccb3c69f81fd629684bfb433/Makefile"
+      },
+      {
+        "repo": "JulianKemmerer/PipelineC",
+        "path": "docs/pypeline_sim_DESIGN.md",
+        "url": "https://github.com/JulianKemmerer/PipelineC/blob/f12bfdbc5168249ad562f4d9b8ae8283aaf5dece/docs/pypeline_sim_DESIGN.md"
+      },
+      {
+        "repo": "Gy-Hu/ML4PDR",
+        "path": "utilis/yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/Gy-Hu/ML4PDR/blob/4959da6c8ce17ea96bf3e2e292a395187251e6db/utilis/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "chipsalliance/synlig",
+        "path": "src/Makefile",
+        "url": "https://github.com/chipsalliance/synlig/blob/2d838edc951fed056d2b5bf21a40ce1d161c24ba/src/Makefile"
+      },
+      {
+        "repo": "thejefflarson/little-cpu",
+        "path": "docs/adr/README.md",
+        "url": "https://github.com/thejefflarson/little-cpu/blob/0ce429f7e884ecdb530cec7c469bbbe5bfec0f1d/docs/adr/README.md"
+      },
+      {
+        "repo": "mcsaver/oscpu",
+        "path": "npc/rv64/model/build_cxxrtl.py",
+        "url": "https://github.com/mcsaver/oscpu/blob/d87592bae3e5835108b1ec670560d531a7fbb40b/npc/rv64/model/build_cxxrtl.py"
+      },
+      {
+        "repo": "jquepi/yosys-2",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/jquepi/yosys-2/blob/96d30605ea7b007187298387f69fba029636f5a9/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "sycuricon/yosys-diffift",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/sycuricon/yosys-diffift/blob/5d9afcea9579194318a07455a2c71b312b8819d8/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "encarsia-artifacts/encarsia-yosys",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/encarsia-artifacts/encarsia-yosys/blob/24b50664c20a32e3240aa7a48e4cdcd867e78ad4/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "m2kar/mirtl-yosys",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/m2kar/mirtl-yosys/blob/52b5529a3ed74e1e9db879958632306f2e29e167/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "povik/fold-yosys",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/povik/fold-yosys/blob/fb595a05454ea0fc2fcbcd60754c385586d64738/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "0xtaruhi/yosys-parallel",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/0xtaruhi/yosys-parallel/blob/9e59bcde59d09c162f5b9fd39c34eef4a435d86f/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "SJZbenxiaohai/my-yosys-project",
+        "path": "backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/SJZbenxiaohai/my-yosys-project/blob/62a383cd615dff83a8ba311c2edc5363ee3f7bc7/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "aaryangupta/pygmy-dev",
+        "path": "tools/quicklogic-yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/aaryangupta/pygmy-dev/blob/c4e083d9d5baba70d94670c95931583ce29fa3a0/tools/quicklogic-yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "JulianKemmerer/PipelineC",
+        "path": "docs/pipelinec_multiple_clock_domains.md",
+        "url": "https://github.com/JulianKemmerer/PipelineC/blob/f12bfdbc5168249ad562f4d9b8ae8283aaf5dece/docs/pipelinec_multiple_clock_domains.md"
+      },
+      {
+        "repo": "tomverbeure/cxxrtl_eval",
+        "path": "run.sh",
+        "url": "https://github.com/tomverbeure/cxxrtl_eval/blob/a8fbed97f8f55e5b89960eccac01cbf463a6d4b3/run.sh"
+      },
+      {
+        "repo": "galibert/retrofpga",
+        "path": "m68000/gen.py",
+        "url": "https://github.com/galibert/retrofpga/blob/2a0c36bedc7284870b013a8680f1c7100b32c205/m68000/gen.py"
+      },
+      {
+        "repo": "RCoeurjoly/LLM2FPGA",
+        "path": "docs/project-plan_v1",
+        "url": "https://github.com/RCoeurjoly/LLM2FPGA/blob/b6dc8abcc023e241016a1fe19564b0d5af0c25b4/docs/project-plan_v1"
+      },
+      {
+        "repo": "ZeayW/FPGA_emulation",
+        "path": "engines/yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/ZeayW/FPGA_emulation/blob/1b44cfbfc3081f7bdb08ab41a351c3ad37ed5a8c/engines/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "galibert/retrofpga",
+        "path": "via6522/gen.py",
+        "url": "https://github.com/galibert/retrofpga/blob/2a0c36bedc7284870b013a8680f1c7100b32c205/via6522/gen.py"
+      },
+      {
+        "repo": "smunaut/iCE40linux",
+        "path": "gateware/riscv_linux/Makefile",
+        "url": "https://github.com/smunaut/iCE40linux/blob/16bc38fd181ddba8074f68da162cc35a802ec84b/gateware/riscv_linux/Makefile"
+      },
+      {
+        "repo": "galibert/retrofpga",
+        "path": "overdrive/gen.py",
+        "url": "https://github.com/galibert/retrofpga/blob/2a0c36bedc7284870b013a8680f1c7100b32c205/overdrive/gen.py"
+      },
+      {
+        "repo": "IY2002/Beyond-Flatland",
+        "path": "yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/IY2002/Beyond-Flatland/blob/84ba44acf1bad597bc5a9d1f615415870e178a86/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "Kreijstal/AND-gate-cosim-madness",
+        "path": "verilator_impl_cxxrtltb/Makefile",
+        "url": "https://github.com/Kreijstal/AND-gate-cosim-madness/blob/c8bc643273ab0f41574d3892dd2e926b1d058b2b/verilator_impl_cxxrtltb/Makefile"
+      },
+      {
+        "repo": "Digital-EDA/Digital-IDE",
+        "path": "package.json",
+        "url": "https://github.com/Digital-EDA/Digital-IDE/blob/9c18bc3b4450699fc03c2626b1b46f8217e97151/package.json"
+      },
+      {
+        "repo": "GaloisInc/HARDENS",
+        "path": "Assurance.md",
+        "url": "https://github.com/GaloisInc/HARDENS/blob/e24bfdb0b03adc1c3c08c28e86fa63b91ea509c1/Assurance.md"
+      },
+      {
+        "repo": "XS-MLVP/UCAgent",
+        "path": "ucagent/server/static/surfer/surfer.js",
+        "url": "https://github.com/XS-MLVP/UCAgent/blob/2a174ca60de546af0b62d2962d31130b3b46cd11/ucagent/server/static/surfer/surfer.js"
+      },
+      {
+        "repo": "googleguru/vlsi-implementation",
+        "path": "tools/yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/googleguru/vlsi-implementation/blob/5c330847f8c4e0c47f1372a32beceae0643c3c8e/tools/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "Ge0Du/CE-357",
+        "path": "tools/yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/Ge0Du/CE-357/blob/8e810d94cf76a0284041f3b5051925d6baaa0647/tools/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "masc-ucsc/hlop",
+        "path": "benchref/sample/verilog_yosys/Makefile",
+        "url": "https://github.com/masc-ucsc/hlop/blob/3e90be765a75a5639c31ff08352e6033c0d83007/benchref/sample/verilog_yosys/Makefile"
+      },
+      {
+        "repo": "UDXS/floof",
+        "path": "rtl/makefile",
+        "url": "https://github.com/UDXS/floof/blob/8982b3be6f361a7ca0aebf1758bfe7cfa91794b9/rtl/makefile"
+      },
+      {
+        "repo": "fushen-aochi/eda-optimization-workbench",
+        "path": "yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/fushen-aochi/eda-optimization-workbench/blob/96a61487b2f006b92263104ab0f1f08c2b0450a8/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "tongzx/nt5src",
+        "path": "Source/XPSP1/NT/admin/netui/admin/user/bin/makefile",
+        "url": "https://github.com/tongzx/nt5src/blob/daad8a087a4e75422ec96b7911f1df4669989611/Source/XPSP1/NT/admin/netui/admin/user/bin/makefile"
+      },
+      {
+        "repo": "ElecGeek/PulsesDigital",
+        "path": "Makefile",
+        "url": "https://github.com/ElecGeek/PulsesDigital/blob/954e850ac1dd4b7c9e9c8a71197ec93fca720362/Makefile"
+      },
+      {
+        "repo": "tongzx/nt5src",
+        "path": "Source/XPSP1/NT/admin/netui/admin/server/bin/makefile",
+        "url": "https://github.com/tongzx/nt5src/blob/daad8a087a4e75422ec96b7911f1df4669989611/Source/XPSP1/NT/admin/netui/admin/server/bin/makefile"
+      },
+      {
+        "repo": "skyp0714/prefetchit",
+        "path": "README.md",
+        "url": "https://github.com/skyp0714/prefetchit/blob/9a6957728a777668114e3ae1f4d3a8119e8d6702/README.md"
+      },
+      {
+        "repo": "shazz/ZigMachine",
+        "path": "fpga/Makefile",
+        "url": "https://github.com/shazz/ZigMachine/blob/4886b2dcf4b25858d64cca89180bba01b0e34e64/fpga/Makefile"
+      },
+      {
+        "repo": "gmlarumbe/fpga",
+        "path": "fpga-yosys.el",
+        "url": "https://github.com/gmlarumbe/fpga/blob/08fcb62f585aec2b286ffa19540a152e953d2cde/fpga-yosys.el"
+      },
+      {
+        "repo": "tomverbeure/yosys_techmap_blog",
+        "path": "add_reduce.yosys",
+        "url": "https://github.com/tomverbeure/yosys_techmap_blog/blob/c72470f1e3de8efe609b4058e0f1d86e50fa75bd/add_reduce.yosys"
+      },
+      {
+        "repo": "Haxous742/3D-Posit-FPGA-Explorer",
+        "path": "LaZagna/OpenFPGA/yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/Haxous742/3D-Posit-FPGA-Explorer/blob/a68dbf358949a3f20a04075ffc60c7ca5ec40b08/LaZagna/OpenFPGA/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "XedaHQ/xeda",
+        "path": "src/xeda/data/agent/SKILL.md",
+        "url": "https://github.com/XedaHQ/xeda/blob/1141f5f58cd15fce9722871ee646de0993862849/src/xeda/data/agent/SKILL.md"
+      },
+      {
+        "repo": "XedaHQ/xeda",
+        "path": ".claude/skills/xeda/SKILL.md",
+        "url": "https://github.com/XedaHQ/xeda/blob/1141f5f58cd15fce9722871ee646de0993862849/.claude/skills/xeda/SKILL.md"
+      },
+      {
+        "repo": "XedaHQ/xeda",
+        "path": "CHANGELOG.md",
+        "url": "https://github.com/XedaHQ/xeda/blob/1141f5f58cd15fce9722871ee646de0993862849/CHANGELOG.md"
+      },
+      {
+        "repo": "noeamiot/aLEAKator",
+        "path": "libs/aleakator/manager.h",
+        "url": "https://github.com/noeamiot/aLEAKator/blob/27b1d66ec0f918972bc93c4399c16052103e9836/libs/aleakator/manager.h"
+      },
+      {
+        "repo": "noeamiot/aLEAKator",
+        "path": "CMakeLists.txt",
+        "url": "https://github.com/noeamiot/aLEAKator/blob/27b1d66ec0f918972bc93c4399c16052103e9836/CMakeLists.txt"
+      },
+      {
+        "repo": "R777777/Logic-Factory-MinAC_SC",
+        "path": "toolkit/yosys/backends/cxxrtl/cxxrtl_backend.cc",
+        "url": "https://github.com/R777777/Logic-Factory-MinAC_SC/blob/b8a97a164356863ce5c595e93f4d6cf8422837d4/toolkit/yosys/backends/cxxrtl/cxxrtl_backend.cc"
+      },
+      {
+        "repo": "thejefflarson/little-cpu",
+        "path": "CLAUDE.md",
+        "url": "https://github.com/thejefflarson/little-cpu/blob/0ce429f7e884ecdb530cec7c469bbbe5bfec0f1d/CLAUDE.md"
+      },
+      {
+        "repo": "m2kar/eda-issues",
+        "path": "yosys/5032.md",
+        "url": "https://github.com/m2kar/eda-issues/blob/070add767e8b97c5c0905f8800b321de7d76e64c/yosys/5032.md"
+      },
+      {
+        "repo": "kev-cam/nvc",
+        "path": "src/server.c",
+        "url": "https://github.com/kev-cam/nvc/blob/da8ece172ac8aa9a9e73dabfcf5860ee6fd9f467/src/server.c"
+      },
+      {
+        "repo": "thejefflarson/little-cpu",
+        "path": "Makefile",
+        "url": "https://github.com/thejefflarson/little-cpu/blob/0ce429f7e884ecdb530cec7c469bbbe5bfec0f1d/Makefile"
+      }
+    ],
+    "error": null
+  },
+  {
+    "kind": "code",
+    "query": "\"blif\" \"lean\"",
+    "page": 1,
+    "per_page": 100,
+    "returned": 100,
+    "total_count": 268288,
+    "incomplete_results": false,
+    "items": [
+      {
+        "repo": "lsils/benchmarks",
+        "path": "README.md",
+        "url": "https://github.com/lsils/benchmarks/blob/82d8cc6910419298e713a46644ed59fd3df53038/README.md"
+      },
+      {
+        "repo": "os-fpga/Raptor",
+        "path": "README.md",
+        "url": "https://github.com/os-fpga/Raptor/blob/a783c38932019ce35721f5bac13eaf98980631fe/README.md"
+      },
+      {
+        "repo": "os-fpga/Raptor",
+        "path": "etc/help.txt",
+        "url": "https://github.com/os-fpga/Raptor/blob/a783c38932019ce35721f5bac13eaf98980631fe/etc/help.txt"
+      },
+      {
+        "repo": "mario33881/blifparser",
+        "path": "README.md",
+        "url": "https://github.com/mario33881/blifparser/blob/1aa73ef248399d4bcc7840169435c412a99288b3/README.md"
+      },
+      {
+        "repo": "Yu-Maryland/FlowTune",
+        "path": "README.md",
+        "url": "https://github.com/Yu-Maryland/FlowTune/blob/19d95ed6e25f21b551fdc8ca52b64ef6394453f3/README.md"
+      },
+      {
+        "repo": "fxreichl/ciops",
+        "path": "README.md",
+        "url": "https://github.com/fxreichl/ciops/blob/e7d7bd76929e072dad16f6481fb48bc8be08fc13/README.md"
+      },
+      {
+        "repo": "icgrp/systolic_page_placer",
+        "path": "README.md",
+        "url": "https://github.com/icgrp/systolic_page_placer/blob/1f2222185b1eabb907e853efc609e758299adbe2/README.md"
+      },
+      {
+        "repo": "Zaneham/takahe",
+        "path": "README.md",
+        "url": "https://github.com/Zaneham/takahe/blob/e7123ea60269922acb283d576678a3aabe51f4f4/README.md"
+      },
+      {
+        "repo": "cda-tum/fiction",
+        "path": "docs/cli.md",
+        "url": "https://github.com/cda-tum/fiction/blob/891e3f3762234a8fa462983538a6d38d506f1d34/docs/cli.md"
+      },
+      {
+        "repo": "Yu-Maryland/Gamora",
+        "path": "README.md",
+        "url": "https://github.com/Yu-Maryland/Gamora/blob/344d5e4530072cd95a07f0557640ad641fd6cfcb/README.md"
+      },
+      {
+        "repo": "SJTU-ECTL/HEDALS",
+        "path": "README.md",
+        "url": "https://github.com/SJTU-ECTL/HEDALS/blob/a65716c31cc8fb6f6e4adfce79de3f95abd2de11/README.md"
+      },
+      {
+        "repo": "ssoelvsten/bdd-benchmark",
+        "path": "README.md",
+        "url": "https://github.com/ssoelvsten/bdd-benchmark/blob/3c521e16ada406d37ae5f960096a567a41df33b9/README.md"
+      },
+      {
+        "repo": "berandal666/Passwords",
+        "path": "myspace.txt",
+        "url": "https://github.com/berandal666/Passwords/blob/4b659ad887e27269a183bb8e561abe1820b4ec3e/myspace.txt"
+      },
+      {
+        "repo": "sharc-lab/LaZagna",
+        "path": "README.md",
+        "url": "https://github.com/sharc-lab/LaZagna/blob/44acf9d27ed01d4a7496773aa8663266c9b5a73b/README.md"
+      },
+      {
+        "repo": "hkustgz-zhang-lab/ABCPaperCheck",
+        "path": "README.md",
+        "url": "https://github.com/hkustgz-zhang-lab/ABCPaperCheck/blob/1eead1df9b9dbf92c94a46ba56c954085fc92c7f/README.md"
+      },
+      {
+        "repo": "os-fpga/FOEDAG_rs",
+        "path": "etc/help.txt",
+        "url": "https://github.com/os-fpga/FOEDAG_rs/blob/4bf64a11cf9d2920050728c84c1b01e7a06593a9/etc/help.txt"
+      },
+      {
+        "repo": "changmg/VACSEM",
+        "path": "README.md",
+        "url": "https://github.com/changmg/VACSEM/blob/b11ede7ab32d06b908c754cd44ad7bfe0e5da7f9/README.md"
+      },
+      {
+        "repo": "Mummanajagadeesh/inverter-rtl-2-gdsii",
+        "path": "README.md",
+        "url": "https://github.com/Mummanajagadeesh/inverter-rtl-2-gdsii/blob/5b2cfbb2adcbdc19500fa7514461c5080eae4f65/README.md"
+      },
+      {
+        "repo": "GITenberg/Geiriadur-Cymraeg-a-Saesneg-Byr_49685",
+        "path": "49685.txt",
+        "url": "https://github.com/GITenberg/Geiriadur-Cymraeg-a-Saesneg-Byr_49685/blob/d78b6d5901db1eee95329b78045bed8163d657aa/49685.txt"
+      },
+      {
+        "repo": "mackenzp/als",
+        "path": "README.md",
+        "url": "https://github.com/mackenzp/als/blob/43164873159d3a43fe54d2aa836dd54d5cd24309/README.md"
+      },
+      {
+        "repo": "wonks/plrg",
+        "path": "index.org",
+        "url": "https://github.com/wonks/plrg/blob/6de561d2926eb382d74da32eb5c52ce02818c26f/index.org"
+      },
+      {
+        "repo": "protire0821/k-input-LUT-Mapping",
+        "path": "README.md",
+        "url": "https://github.com/protire0821/k-input-LUT-Mapping/blob/90ed7b19d2b46106c4193e586f5730c054f6a8d7/README.md"
+      },
+      {
+        "repo": "Quentin-Tual/sdf-sim-demo",
+        "path": "README.md",
+        "url": "https://github.com/Quentin-Tual/sdf-sim-demo/blob/98811c956241237e0682a95de0ae04ba1293bd81/README.md"
+      },
+      {
+        "repo": "Yu-Maryland/BoolE",
+        "path": "README.md",
+        "url": "https://github.com/Yu-Maryland/BoolE/blob/d6680f2622a6e794faa35e59a701adf05441ae8c/README.md"
+      },
+      {
+        "repo": "Quentin-Tual/Netenos",
+        "path": "TODO.md",
+        "url": "https://github.com/Quentin-Tual/Netenos/blob/0491ccd4a93af7e6361e9b875b3a0df324cf220d/TODO.md"
+      },
+      {
+        "repo": "huawei-csl/rtlscout",
+        "path": "README.md",
+        "url": "https://github.com/huawei-csl/rtlscout/blob/0edbcad8266c6a038124d026fcb90269eb7c7c8d/README.md"
+      },
+      {
+        "repo": "QuantumSAT/sat_compil",
+        "path": "README.md",
+        "url": "https://github.com/QuantumSAT/sat_compil/blob/3c1a7ff3ff32f206f1697e6378e8ea3c06c703c8/README.md"
+      },
+      {
+        "repo": "adumont/hrm-cpu",
+        "path": "README.md",
+        "url": "https://github.com/adumont/hrm-cpu/blob/57713d4c58776b62826b93d70d7a3b103318e1a7/README.md"
+      },
+      {
+        "repo": "AlwaysWry/SRAM-IMC-logic-synthesis-tool",
+        "path": "readme.md",
+        "url": "https://github.com/AlwaysWry/SRAM-IMC-logic-synthesis-tool/blob/e0280af0c042d37094db65ae4439d7b9af984b95/readme.md"
+      },
+      {
+        "repo": "thoughtpolice/claap",
+        "path": "README.md",
+        "url": "https://github.com/thoughtpolice/claap/blob/4944b6c4ad6aff4097f8ef66231ce7d7a59f5ee7/README.md"
+      },
+      {
+        "repo": "scevans83/program-2-ec551",
+        "path": "README.md",
+        "url": "https://github.com/scevans83/program-2-ec551/blob/dc878fffb0ad81c35ed5c399c67eae0611939139/README.md"
+      },
+      {
+        "repo": "hsavit1/Awesome-React-Native-Education",
+        "path": "README.md",
+        "url": "https://github.com/hsavit1/Awesome-React-Native-Education/blob/3ad5ccb70299d6e68632c376733c901420d9475b/README.md"
+      },
+      {
+        "repo": "BrooksOlney/Tunable-FPGA-Bitstream-Obfuscation-Framework",
+        "path": "README.md",
+        "url": "https://github.com/BrooksOlney/Tunable-FPGA-Bitstream-Obfuscation-Framework/blob/0e9c213771037d3602c6bc37fbb142b1f3937747/README.md"
+      },
+      {
+        "repo": "qmkkk/CARS",
+        "path": "reports/0.md",
+        "url": "https://github.com/qmkkk/CARS/blob/c2bdd98cb50aef645fc610872c6d157bafb52909/reports/0.md"
+      },
+      {
+        "repo": "SJTU-ECTL/ALFANS-ER-EM",
+        "path": "main.cc",
+        "url": "https://github.com/SJTU-ECTL/ALFANS-ER-EM/blob/b3094e985d465430caa9c6c05c1aa4329462aa4f/main.cc"
+      },
+      {
+        "repo": "anassar/LBBDs",
+        "path": "README.md",
+        "url": "https://github.com/anassar/LBBDs/blob/81959f654c1a683aa52bdf0817062c461078d0d0/README.md"
+      },
+      {
+        "repo": "Ohpaipai/Latency-Constrained-Scheduling",
+        "path": "Readme.txt",
+        "url": "https://github.com/Ohpaipai/Latency-Constrained-Scheduling/blob/e857d31c9431a9c8f465a32cc2ca7bd22043c179/Readme.txt"
+      },
+      {
+        "repo": "NTU-ALComLab/ssatABC",
+        "path": "README.md",
+        "url": "https://github.com/NTU-ALComLab/ssatABC/blob/7a45d5dfcee712569017ff95eae940932bfd2d27/README.md"
+      },
+      {
+        "repo": "xxalenchenxx/EDA_Resource-Constrained-Scheduling",
+        "path": "ReadMe.md",
+        "url": "https://github.com/xxalenchenxx/EDA_Resource-Constrained-Scheduling/blob/48403b4170b056233bd7f8997d28ec7002555468/ReadMe.md"
+      },
+      {
+        "repo": "postlight/awesome-cms",
+        "path": "README.md",
+        "url": "https://github.com/postlight/awesome-cms/blob/dcf181452d1eebdb6af1cbf3fe7b88268d934131/README.md"
+      },
+      {
+        "repo": "changmg/ResubALS",
+        "path": "README.md",
+        "url": "https://github.com/changmg/ResubALS/blob/e45c6d8252e966e7fb2a32fe53ec2a508cc0488a/README.md"
+      },
+      {
+        "repo": "beyond1125/ICCAD_A",
+        "path": "partC.md",
+        "url": "https://github.com/beyond1125/ICCAD_A/blob/662caba7067726ebd102d0d1678e005261df32d5/partC.md"
+      },
+      {
+        "repo": "NTU-ALComLab/SharpSSAT",
+        "path": "README.md",
+        "url": "https://github.com/NTU-ALComLab/SharpSSAT/blob/ab06b954d3f89561b76de68a355290b411896d6b/README.md"
+      },
+      {
+        "repo": "ShangYangWu/CAD_MLBN",
+        "path": "README.md",
+        "url": "https://github.com/ShangYangWu/CAD_MLBN/blob/4f908b71cbeed13eadaa135e939ce9aba0bfde99/README.md"
+      },
+      {
+        "repo": "IY2002/Beyond-Flatland",
+        "path": "README.md",
+        "url": "https://github.com/IY2002/Beyond-Flatland/blob/84ba44acf1bad597bc5a9d1f615415870e178a86/README.md"
+      },
+      {
+        "repo": "qmkkk/CARS",
+        "path": "reports/2.md",
+        "url": "https://github.com/qmkkk/CARS/blob/c2bdd98cb50aef645fc610872c6d157bafb52909/reports/2.md"
+      },
+      {
+        "repo": "xxalenchenxx/Power-Optimized-Technology-Mapping-",
+        "path": "README.md",
+        "url": "https://github.com/xxalenchenxx/Power-Optimized-Technology-Mapping-/blob/3a3660a98170a01d0e724c2c2ecb6bdd4f5bfaca/README.md"
+      },
+      {
+        "repo": "AlexanderV/LogicalOptimizer",
+        "path": "README.md",
+        "url": "https://github.com/AlexanderV/LogicalOptimizer/blob/366bd1964be332de6d281d4e4099ae67c156d552/README.md"
+      },
+      {
+        "repo": "drpaj12/verdandiIII",
+        "path": "CLAUDE.md",
+        "url": "https://github.com/drpaj12/verdandiIII/blob/c75ea4672009da2c8fa52433bb619f530e3a3312/CLAUDE.md"
+      },
+      {
+        "repo": "Nozidoali/leap-backend",
+        "path": "README.md",
+        "url": "https://github.com/Nozidoali/leap-backend/blob/fe2deb64e242136a148ae763c44f45972d03ff2c/README.md"
+      },
+      {
+        "repo": "TheAhmadOsman/4o-ghibli-at-home",
+        "path": "README.md",
+        "url": "https://github.com/TheAhmadOsman/4o-ghibli-at-home/blob/ceaa8b1ba43a58ebc0a63f1847a3a4bd1e585854/README.md"
+      },
+      {
+        "repo": "uwgraphics/VEP2_TCP_SimpleText",
+        "path": "B0/B01638.txt",
+        "url": "https://github.com/uwgraphics/VEP2_TCP_SimpleText/blob/7f17f7ab87560c8ea24a82d35789a11fd7e03e53/B0/B01638.txt"
+      },
+      {
+        "repo": "m2kar/eda-issues",
+        "path": "yosys/3013.md",
+        "url": "https://github.com/m2kar/eda-issues/blob/070add767e8b97c5c0905f8800b321de7d76e64c/yosys/3013.md"
+      },
+      {
+        "repo": "AlexanderV/LogicalOptimizer",
+        "path": "doc/Spec.md",
+        "url": "https://github.com/AlexanderV/LogicalOptimizer/blob/366bd1964be332de6d281d4e4099ae67c156d552/doc/Spec.md"
+      },
+      {
+        "repo": "airjerry1216/Advanced-Logic-Synthesis",
+        "path": "README.md",
+        "url": "https://github.com/airjerry1216/Advanced-Logic-Synthesis/blob/1115c6af0f79167065051acfe291cbb99cff70e7/README.md"
+      },
+      {
+        "repo": "boolean-function-benchmarks/benchmarks",
+        "path": "README.md",
+        "url": "https://github.com/boolean-function-benchmarks/benchmarks/blob/d30b23004a45e0e8fb2e47613720d5a040fb6677/README.md"
+      },
+      {
+        "repo": "simonedimaria/Rock-Paper-Scissors-Verilog",
+        "path": "README.md",
+        "url": "https://github.com/simonedimaria/Rock-Paper-Scissors-Verilog/blob/1bbc9620a46840a0e6873cad6d8b857cf9122153/README.md"
+      },
+      {
+        "repo": "changmg/SimALS-MaxError",
+        "path": "README.md",
+        "url": "https://github.com/changmg/SimALS-MaxError/blob/ae1cbf56c13c9c59556134baa4d76623aac67bc5/README.md"
+      },
+      {
+        "repo": "Ethanm1250/EC551_Program1_Manfredi_Zhang",
+        "path": "README.md",
+        "url": "https://github.com/Ethanm1250/EC551_Program1_Manfredi_Zhang/blob/056cc61dee93ad5f80d78502957a343073f7f5be/README.md"
+      },
+      {
+        "repo": "Ohpaipai/Latency-Constrained-Scheduling",
+        "path": "README.md",
+        "url": "https://github.com/Ohpaipai/Latency-Constrained-Scheduling/blob/e857d31c9431a9c8f465a32cc2ca7bd22043c179/README.md"
+      },
+      {
+        "repo": "managedcode/Orleans.SignalR",
+        "path": "AGENTS.md",
+        "url": "https://github.com/managedcode/Orleans.SignalR/blob/0b48f7f9a8e06882be8fd55e7d8192e5ce7efc20/AGENTS.md"
+      },
+      {
+        "repo": "cheyu-cyber/Logic_Synthesis_Engine",
+        "path": "README.md",
+        "url": "https://github.com/cheyu-cyber/Logic_Synthesis_Engine/blob/0926f35f9f83c42efd4e74ad9fb6fd63958ae491/README.md"
+      },
+      {
+        "repo": "bodhi91/vtr-interposer-merge",
+        "path": "README.md",
+        "url": "https://github.com/bodhi91/vtr-interposer-merge/blob/ccbb9b31a03d37f94d764196b843a6d3c3ad27f5/README.md"
+      },
+      {
+        "repo": "zslwyuan/AutoCellLibX",
+        "path": "BUILDING.md",
+        "url": "https://github.com/zslwyuan/AutoCellLibX/blob/6f309eb77d6665e19b1b6e7e7ca1571e1fcffa03/BUILDING.md"
+      },
+      {
+        "repo": "qmkkk/Reusable-Exact-ApproxAdder-Verification",
+        "path": "README.md",
+        "url": "https://github.com/qmkkk/Reusable-Exact-ApproxAdder-Verification/blob/298d63664dd11c20d098b4f48176f2971e1e7f44/README.md"
+      },
+      {
+        "repo": "sylefeb/Silixel",
+        "path": "README.md",
+        "url": "https://github.com/sylefeb/Silixel/blob/340003dcaeb1e45ed8e10421b00c8e52e42ffa93/README.md"
+      },
+      {
+        "repo": "asyraffff/Open-Source-Ruby-and-Rails-Apps",
+        "path": "README.md",
+        "url": "https://github.com/asyraffff/Open-Source-Ruby-and-Rails-Apps/blob/bb925eed8188b3588324499467f1feb2804482db/README.md"
+      },
+      {
+        "repo": "abdullahsahruri/tlglock",
+        "path": "README.md",
+        "url": "https://github.com/abdullahsahruri/tlglock/blob/c2e719685b2a42486c17a8bbba851da1d1261ba7/README.md"
+      },
+      {
+        "repo": "etyloppihacilem/cg_tree_builder",
+        "path": "README.md",
+        "url": "https://github.com/etyloppihacilem/cg_tree_builder/blob/298b0aa956ffaed54a426f20c5b8ab03bf302574/README.md"
+      },
+      {
+        "repo": "zslwyuan/AutoCellLibX",
+        "path": "AGENTS.md",
+        "url": "https://github.com/zslwyuan/AutoCellLibX/blob/6f309eb77d6665e19b1b6e7e7ca1571e1fcffa03/AGENTS.md"
+      },
+      {
+        "repo": "CKBird1/mini-ls",
+        "path": "NOTES.md",
+        "url": "https://github.com/CKBird1/mini-ls/blob/3695364fb373c7fb15f6ad327e6c11c3717cbd53/NOTES.md"
+      },
+      {
+        "repo": "robtaylor/origin-shell",
+        "path": "HANDOFF.md",
+        "url": "https://github.com/robtaylor/origin-shell/blob/9f5dff373536735dc4760e46aa11ffe68209095f/HANDOFF.md"
+      },
+      {
+        "repo": "zeroasiccorp/wildebeest",
+        "path": "README.md",
+        "url": "https://github.com/zeroasiccorp/wildebeest/blob/676398124406ffc62a18dd0624471b950e18046f/README.md"
+      },
+      {
+        "repo": "rec0de/obdd-gen",
+        "path": "README.md",
+        "url": "https://github.com/rec0de/obdd-gen/blob/4c807663fc4adfa8a79caa45afff9614b12fc12b/README.md"
+      },
+      {
+        "repo": "cars-lab-repo/KGL",
+        "path": "README.md",
+        "url": "https://github.com/cars-lab-repo/KGL/blob/89fd5970b29134db24e962334ceab3748d1aa544/README.md"
+      },
+      {
+        "repo": "ssmiler/tfhe_lbf_eval",
+        "path": "README.md",
+        "url": "https://github.com/ssmiler/tfhe_lbf_eval/blob/65ff250419b06a1960bf608b73758dc017f45a7e/README.md"
+      },
+      {
+        "repo": "meilof/oblif",
+        "path": "README.md",
+        "url": "https://github.com/meilof/oblif/blob/ebb457be5f3753d6584ad1dd616dedd8b4035b70/README.md"
+      },
+      {
+        "repo": "vanever/ABC",
+        "path": "abc.rc",
+        "url": "https://github.com/vanever/ABC/blob/e2bfb56dbb3d8a938e3b6c15d4e91911184e1416/abc.rc"
+      },
+      {
+        "repo": "chaochao825/learnable_logic",
+        "path": "README.md",
+        "url": "https://github.com/chaochao825/learnable_logic/blob/99ab6441d014959b5a5a9c5e953c35152e3d3ebf/README.md"
+      },
+      {
+        "repo": "SujayAK/FPGA_Design_Fabric_Architecture",
+        "path": "README.md",
+        "url": "https://github.com/SujayAK/FPGA_Design_Fabric_Architecture/blob/20e674dce63c1868a486411e8765cfeff112b44e/README.md"
+      },
+      {
+        "repo": "rondlite/botland-minifier",
+        "path": "README.md",
+        "url": "https://github.com/rondlite/botland-minifier/blob/a478a232b8ce95a5db838ba831d194adb70defef/README.md"
+      },
+      {
+        "repo": "tutorial-openlane/tutorial-openlane",
+        "path": "README.md",
+        "url": "https://github.com/tutorial-openlane/tutorial-openlane/blob/d1354e04b3e0059c7fb29f99f5df41dedf27e681/README.md"
+      },
+      {
+        "repo": "akilaid/esp32-blifi-arduino",
+        "path": "README.md",
+        "url": "https://github.com/akilaid/esp32-blifi-arduino/blob/a6067e1d1cd75f73010ef1c5ebc622496bacd74e/README.md"
+      },
+      {
+        "repo": "schlarpc/re-shell",
+        "path": "CLAUDE.md",
+        "url": "https://github.com/schlarpc/re-shell/blob/fd9d8583d120d00874c38b6dc6d70565b41f8bb4/CLAUDE.md"
+      },
+      {
+        "repo": "vOzzT/EEL4334-Project1",
+        "path": "README.md",
+        "url": "https://github.com/vOzzT/EEL4334-Project1/blob/7f896ca76675c070f750a11fd0e82e23e2427be3/README.md"
+      },
+      {
+        "repo": "themoddedcube/fp4-multiplier",
+        "path": "SUMMARY.md",
+        "url": "https://github.com/themoddedcube/fp4-multiplier/blob/70e5bef2be6b9d89eca6bd033c2a9721bea6ae6a/SUMMARY.md"
+      },
+      {
+        "repo": "qmkkk/CARS",
+        "path": "README.md",
+        "url": "https://github.com/qmkkk/CARS/blob/c2bdd98cb50aef645fc610872c6d157bafb52909/README.md"
+      },
+      {
+        "repo": "Gy-Hu/Expr2Netlist",
+        "path": "README.md",
+        "url": "https://github.com/Gy-Hu/Expr2Netlist/blob/e3e41cbc52c616e6999ec2dd29d47192a9251dbe/README.md"
+      },
+      {
+        "repo": "AYUSHSHARMA9817/abc-ml-project",
+        "path": "report.md",
+        "url": "https://github.com/AYUSHSHARMA9817/abc-ml-project/blob/eb0328a2b7dc49147822bae5d21ae00dce198932/report.md"
+      },
+      {
+        "repo": "xanjohns/vtr-ccl",
+        "path": "echo.txt",
+        "url": "https://github.com/xanjohns/vtr-ccl/blob/531905abb5dbeea72dfa7e0640bc2cb3c648a119/echo.txt"
+      },
+      {
+        "repo": "submission0123/eclat-esterel",
+        "path": "README.md",
+        "url": "https://github.com/submission0123/eclat-esterel/blob/99e44343faeee1dda962a08f7389a3c4cee298e0/README.md"
+      },
+      {
+        "repo": "RichardLitt/low-resource-languages",
+        "path": "README.md",
+        "url": "https://github.com/RichardLitt/low-resource-languages/blob/66057f750594f1a4cffed9fb452179aa229e55f8/README.md"
+      },
+      {
+        "repo": "cjaneyes/10708-DynamicTopicSplitMerge",
+        "path": "log",
+        "url": "https://github.com/cjaneyes/10708-DynamicTopicSplitMerge/blob/4c6029ffd9494c60a45f75046e4139bfa33e011b/log"
+      },
+      {
+        "repo": "chun-ning/riscv-single-cycle-cpu",
+        "path": "README.md",
+        "url": "https://github.com/chun-ning/riscv-single-cycle-cpu/blob/5b98582e5ac129124c8e9461c051a906f8781c4d/README.md"
+      },
+      {
+        "repo": "themoddedcube/fp4-multiplier",
+        "path": "MEMORY.md",
+        "url": "https://github.com/themoddedcube/fp4-multiplier/blob/70e5bef2be6b9d89eca6bd033c2a9721bea6ae6a/MEMORY.md"
+      },
+      {
+        "repo": "robtaylor/origin-shell",
+        "path": "README.md",
+        "url": "https://github.com/robtaylor/origin-shell/blob/9f5dff373536735dc4760e46aa11ffe68209095f/README.md"
+      },
+      {
+        "repo": "beyond1125/ICCAD_A",
+        "path": "docs/TSD.md",
+        "url": "https://github.com/beyond1125/ICCAD_A/blob/662caba7067726ebd102d0d1678e005261df32d5/docs/TSD.md"
+      },
+      {
+        "repo": "freebirdyeah/ml_project_sem_V",
+        "path": "README.md",
+        "url": "https://github.com/freebirdyeah/ml_project_sem_V/blob/29315a2cb8e2e24c7a35f9a581ea142cd1fef7d4/README.md"
+      },
+      {
+        "repo": "wjrforcyber/CUDD",
+        "path": "README.md",
+        "url": "https://github.com/wjrforcyber/CUDD/blob/5bd28217087a566564766b516c5fc0a1b24c4fb5/README.md"
+      },
+      {
+        "repo": "paulveillard/cybersecurity-self-hosted",
+        "path": "README.md",
+        "url": "https://github.com/paulveillard/cybersecurity-self-hosted/blob/7acba97f63612c6640f6f41ccfe67b0e148c410b/README.md"
+      }
+    ],
+    "error": null
+  }
+]

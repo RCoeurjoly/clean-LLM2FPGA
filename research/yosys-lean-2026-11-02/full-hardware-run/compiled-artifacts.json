@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/tmp/llm2fpga-full-hardware-20261102/TinyStoriesFull.olean",
+    "bytes": 728251576,
+    "sha256": "47d560965e8df337871c61692a4b3bf3bf75966b43fdaf7b918167b914fbd134"
+  },
+  {
+    "path": "/tmp/llm2fpga-full-hardware-20261102/Chisel2Lean/Functional.olean",
+    "bytes": 2950216,
+    "sha256": "8072e44c3789cf04dd05776cf53f97850e777a9ac60f6811d1dfd9a03dbca507"
+  },
+  {
+    "path": "/tmp/llm2fpga-full-hardware-20261102/FullReset.lean",
+    "bytes": 2179,
+    "sha256": "c3790cc06e9fb7a35f97e354db58df60052bece26674be12a88c376ea9a984dc"
+  },
+  {
+    "path": "/tmp/llm2fpga-full-hardware-20261102/Functional.c",
+    "bytes": 1089400,
+    "sha256": "c8d0a9710ad932b3da0223c132248d9c2f139a0b83edd649f35db493a5755992"
+  },
+  {
+    "path": "/tmp/llm2fpga-full-hardware-20261102/FullReset.c",
+    "bytes": 55118,
+    "sha256": "5cfac13ec39f0b4f24f965712beb78d2218c77be930c3f697abec4a13ab4c6f7"
+  },
+  {
+    "path": "/tmp/llm2fpga-full-hardware-20261102/full-reset-lean",
+    "bytes": 143002952,
+    "sha256": "36f2c5c984f59fa39f7f9e338bb01db98e913a2bd46ea5c81fb9c1a39e546ca4"
+  }
+]

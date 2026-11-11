@@ -1,0 +1,29 @@
+Loom — a proof-carrying processor toolchain in Lean 4
+Copyright (c) 2026 Kevin Baragona
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this repository except in compliance with the License. You may
+obtain a copy of the License in the LICENSE file or at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+The Machines/ subtree (tapeout-bound RTL: machine specifications, EDSL
+cores, and their proofs) is additionally offered under the Solderpad
+Hardware License v2.1 (see Machines/LICENSE), a hardware-oriented
+wraparound of Apache 2.0. At your option you may treat that subtree as
+plain Apache 2.0.
+
+OUTPUT EXCEPTION
+----------------
+Verilog (or any other artifact) emitted by this toolchain from a user's
+own Design is the user's, unencumbered. The licenses above cover the
+toolchain and the designs contained in this repository — they do not
+reach through the emitter into your output. Output generated from the
+example designs in Machines/ carries those designs' license; output
+generated from your designs carries yours.
+
+PATENT PLEDGE
+-------------
+No patents are filed or planned on any technique in this project. This
+repository, its documentation, and the accompanying arXiv paper
+constitute intentional prior art.
