@@ -3,3 +3,29 @@
 /result-*
 __pycache__/
 *.pyc
+
+# Generated snapshots and toolchain archives.
+/snapshot/artifacts/
+/snapshot/deliverables/**/artifacts/
+/toolchain/closure.nar.gz
+/reference/*.bit
+
+# Large generated research exports and caches.
+/research/lean-repos-2026-11-01/active-keyword-matches.csv
+/research/lean-repos-2026-11-01/all-repositories.csv
+/research/lean-repos-2026-11-01/candidates.csv
+/research/lean-repos-2026-11-01/keyword-matches.csv
+/research/lean-repos-2026-11-01/report.html
+/research/lean-repos-2026-11-01/repositories.jsonl
+/research/yosys-lean-2026-11-02/formal-formats/source-tree-index.json.gz
+/research/yosys-lean-2026-11-02/full-hardware-run/02-normalize.log
+/research/yosys-lean-2026-11-02/full-hardware-run/03-functional-export.log
+/research/yosys-lean-2026-11-02/full-hardware-run/04-import.log.gz
+/research/yosys-lean-2026-11-02/full-hardware-run/import.json.gz
+/research/yosys-lean-2026-11-02/full-hardware-run/production-build.log.gz
+/research/yosys-lean-2026-11-02/inventory/github-evidence.json
+/research/yosys-lean-2026-11-02/netlist-formats/repos/ErosSph__xiangshan2Lean/tree.json
+/research/yosys-lean-2026-11-02/netlist-formats/repos/athanor-ai__ibex-athanor/tree.json
+/research/yosys-lean-2026-11-02/netlist-formats/repos/formalized-si__redstone-verify/tree.json
+/research/yosys-lean-2026-11-02/netlist-formats/repos/skyp0714__prefetchit/tree.json
+/research/yosys-lean-2026-11-02/netlist-formats/repos/thomasnormal__lean-surfaces/tree.json
