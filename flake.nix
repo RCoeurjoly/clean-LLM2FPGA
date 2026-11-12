@@ -35,6 +35,7 @@
       let
         tools = import ./nix/selected-toolchain.nix { inherit inputs system; };
         direct = import ./nix/direct { inherit inputs system tools; };
+        torchao = import ./nix/torchao { inherit inputs system tools; };
       in {
         packages = tools // {
           default = direct.stages.netlist;
@@ -52,8 +53,28 @@
           direct-dsp = direct.stages.dsp;
           direct-ram = direct.stages.ram;
           direct-netlist = direct.stages.netlist;
+          torchao-quantized = torchao.stages.quantized;
+          torchao-torch-ir = torchao.stages.torch-ir;
+          torchao-linalg = torchao.stages.linalg;
+          torchao-loops = torchao.stages.loops;
+          torchao-arithmetic = torchao.stages.arithmetic;
+          torchao-calyx = torchao.stages.calyx;
+          torchao-futil = torchao.stages.futil;
+          torchao-core-rtl = torchao.stages.core-rtl;
+          torchao-rtl = torchao.stages.rtl;
+          torchao-rtlil = torchao.stages.rtlil;
+          torchao-prepared = torchao.stages.prepared;
+          torchao-dsp = torchao.stages.dsp;
+          torchao-ram = torchao.stages.ram;
+          torchao-netlist = torchao.stages.netlist;
+          rtl-comparison = import ./nix/rtl-comparison.nix {
+            inherit inputs system;
+            baseline = direct.stages.rtl;
+            candidate = torchao.stages.rtl;
+          };
         };
         checks.direct-quantization = direct.check;
+        checks.torchao-quantization = torchao.check;
         checks.qparams = direct.qparamsCheck;
         checks.model-memory = direct.memoryCheck;
         checks.calyx-arithmetic = direct.arithmeticCheck;
